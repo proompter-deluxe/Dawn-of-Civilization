@@ -268,18 +268,11 @@
 			<Button>,Art/Interface/Buttons/Civics/Bureaucracy.dds</Button>
 			<iAnarchyLength>1</iAnarchyLength>
 			<Upkeep>UPKEEP_HIGH</Upkeep>
-			<iCapitalBuildingProductionModifier>25</iCapitalBuildingProductionModifier>
 			<CapitalYieldModifiers>
 				<iYield>0</iYield>
 				<iYield>50</iYield>
 				<iYield>50</iYield>
 			</CapitalYieldModifiers>
-			<Hurrys>
-				<Hurry>
-					<HurryType>HURRY_GOLD_BUILDINGS</HurryType>
-					<bHurry>1</bHurry>
-				</Hurry>
-			</Hurrys>
 		</CivicInfo>
 		<CivicInfo>
 			<CivicOptionType>CIVICOPTION_LEGITIMACY</CivicOptionType>
@@ -581,6 +574,16 @@
 					<iHappinessChange>1</iHappinessChange>
 				</FeatureHappinessChange>
 			</FeatureHappinessChanges>
+			<SpecialistTypeExtraYields>
+				<SpecialistTypeExtraYield>
+					<SpecialistType>SPECIALIST_MERCHANT</SpecialistType>
+					<YieldChanges>
+						<iYield>0</iYield>
+						<iYield>0</iYield>
+						<iYield>1</iYield>
+					</YieldChanges>
+				</SpecialistTypeExtraYield>
+			</SpecialistTypeExtraYields>
 		</CivicInfo>
 		<CivicInfo>
 			<CivicOptionType>CIVICOPTION_ECONOMY</CivicOptionType>
@@ -663,28 +666,11 @@
 			<Button>,Art/Interface/Buttons/Civics/State_Property.dds</Button>
 			<iAnarchyLength>1</iAnarchyLength>
 			<Upkeep>UPKEEP_MEDIUM</Upkeep>
+			<iCapitalBuildingProductionModifier>25</iCapitalBuildingProductionModifier>
 			<SpecialistExtraYields>
 				<iYield>0</iYield>
 				<iYield>1</iYield>
 			</SpecialistExtraYields>
-			<BuildingProductionModifiers>
-				<BuildingProductionModifier>
-					<BuildingType>BUILDINGCLASS_FACTORY</BuildingType>
-					<iProductionModifier>100</iProductionModifier>
-				</BuildingProductionModifier>
-				<BuildingProductionModifier>
-					<BuildingType>BUILDINGCLASS_COAL_PLANT</BuildingType>
-					<iProductionModifier>100</iProductionModifier>
-				</BuildingProductionModifier>
-				<BuildingProductionModifier>
-					<BuildingType>BUILDINGCLASS_HYDRO_PLANT</BuildingType>
-					<iProductionModifier>100</iProductionModifier>
-				</BuildingProductionModifier>
-				<BuildingProductionModifier>
-					<BuildingType>BUILDINGCLASS_ELECTRICAL_GRID</BuildingType>
-					<iProductionModifier>100</iProductionModifier>
-				</BuildingProductionModifier>
-			</BuildingProductionModifiers>
 			<ImprovementYieldChanges>
 				<ImprovementYieldChange>
 					<ImprovementType>IMPROVEMENT_WORKSHOP</ImprovementType>
@@ -721,7 +707,6 @@
 			<iAnarchyLength>1</iAnarchyLength>
 			<Upkeep>UPKEEP_HIGH</Upkeep>
 			<iCorporationUnhappinessModifier>-50</iCorporationUnhappinessModifier>
-			<iProcessModifier>100</iProcessModifier>
 			<SpecialistExtraYields>
 				<iYield>0</iYield>
 				<iYield>0</iYield>
@@ -736,6 +721,12 @@
 					</YieldChanges>
 				</SpecialistTypeExtraYield>
 			</SpecialistTypeExtraYields>
+			<Hurrys>
+				<Hurry>
+					<HurryType>HURRY_GOLD_BUILDINGS</HurryType>
+					<bHurry>1</bHurry>
+				</Hurry>
+			</Hurrys>
 		</CivicInfo>
 		<CivicInfo>
 			<CivicOptionType>CIVICOPTION_RELIGION</CivicOptionType>
@@ -987,15 +978,32 @@
 			<iAnarchyLength>1</iAnarchyLength>
 			<Upkeep>UPKEEP_MEDIUM</Upkeep>
 			<bNoForeignTrade>1</bNoForeignTrade>
-			<SpecialistExtraYields>
-				<iYield>1</iYield>
-			</SpecialistExtraYields>
 			<CommerceModifiers>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>25</iCommerce>
 			</CommerceModifiers>
+			<SpecialistTypeExtraYields>
+				<SpecialistTypeExtraYield>
+					<SpecialistType>SPECIALIST_ARTIST</SpecialistType>
+					<YieldChanges>
+						<iYield>1</iYield>
+					</YieldChanges>
+				</SpecialistTypeExtraYield>
+				<SpecialistTypeExtraYield>
+					<SpecialistType>SPECIALIST_MERCHANT</SpecialistType>
+					<YieldChanges>
+						<iYield>1</iYield>
+					</YieldChanges>
+				</SpecialistTypeExtraYield>
+				<SpecialistTypeExtraYield>
+					<SpecialistType>SPECIALIST_STATESMAN</SpecialistType>
+					<YieldChanges>
+						<iYield>1</iYield>
+					</YieldChanges>
+				</SpecialistTypeExtraYield>
+			</SpecialistTypeExtraYields>
 		</CivicInfo>
 		<CivicInfo>
 			<CivicOptionType>CIVICOPTION_TERRITORY</CivicOptionType>
