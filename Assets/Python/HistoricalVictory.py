@@ -214,7 +214,7 @@ dGoals = {
 	),
 	iChinaS: (
 		FirstDiscover(iCompass, iPaper, iGunpowder, iPrinting),
-		ALL( # treasure ships
+		All( # treasure ships
 			Control(
 				plots.region(rKorea),
 				plots.region(rIndochina),
@@ -227,6 +227,7 @@ dGoals = {
 					(plots.regions(*lIndia).named(INDIA), 1),
 					(plots.regions(*lAfrica).named(AFRICA), 1),
 			),
+			by=1435,
 		),
 		GoldenAges(4, by=1900),
 	),
