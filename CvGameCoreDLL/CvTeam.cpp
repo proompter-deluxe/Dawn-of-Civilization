@@ -2758,7 +2758,7 @@ int CvTeam::getCivilizationResearchModifier() const
 		if (GET_PLAYER(getLeaderID()).getCurrentEra() == ERA_MEDIEVAL) iCivModifier += 20;
 		if (GET_PLAYER(getLeaderID()).getCurrentEra() >= ERA_RENAISSANCE) iCivModifier += 30;
 	}
-	else if (GET_PLAYER(getLeaderID()).getCivilizationType() == SOUTHERN_CHINA)
+	else if (GET_PLAYER(getLeaderID()).getCivilizationType() == YANGTZE_CHINA)
 	{
 		if (GET_PLAYER(getLeaderID()).getCurrentEra() == ERA_MEDIEVAL) iCivModifier += 20;
 		if (GET_PLAYER(getLeaderID()).getCurrentEra() >= ERA_RENAISSANCE) iCivModifier += 30;

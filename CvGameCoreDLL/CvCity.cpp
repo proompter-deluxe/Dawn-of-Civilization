@@ -325,7 +325,7 @@ void CvCity::init(int iID, PlayerTypes eOwner, int iX, int iY, bool bBumpUnits, 
 	}
 
 	// Leoreth: Chinese UP: +25% food kept on city growth
-	if (getCivilizationType() == SOUTHERN_CHINA)
+	if (getCivilizationType() == YANGTZE_CHINA)
 	{
 		changeMaxFoodKeptPercent(25);
 	}

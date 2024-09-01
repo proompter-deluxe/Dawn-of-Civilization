@@ -941,6 +941,7 @@ def specificName(iPlayer):
 	bTheocracy = civic.iLegitimacy == iTheocracy or civic.iReligion == iFanaticism
 	bResurrected = data.civs[iPlayer].iResurrections > 0
 	bCapitulated = isCapitulated(iPlayer)
+	bMonarchy = not isCommunist(iPlayer) and not isFascist(iPlayer) and not isRepublic(iPlayer)
 	iAnarchyTurns = data.civs[iPlayer].iAnarchyTurns
 	iEra = pPlayer.getCurrentEra()
 	iGameEra = game.getCurrentEra()
@@ -955,12 +956,8 @@ def specificName(iPlayer):
 				return "TXT_KEY_CIV_CHINA_MING"
 
 	if iCiv == iChinaS:
-		if bEmpire:
-			if iEra == iMedieval and turn() >= year(900):
-				return "TXT_KEY_CIV_SOUTHERN_CHINA_SONG"
-
-			if iEra == iRenaissance and turn() >= year(1400):
-				return "TXT_KEY_CIV_SOUTHERN_CHINA_MING"
+		if bEmpire or bMonarchy:
+			return "TXT_KEY_CIV_YANGTZE_CHINA_DEFAULT"
 	
 	elif iCiv == iNubia:
 		if iEra <= iClassical:
@@ -1256,10 +1253,10 @@ def specificAdjective(iPlayer):
 	elif iCiv == iChinaS:
 		if bMonarchy:
 			if iEra == iMedieval and turn() >= year(900):
-				return "TXT_KEY_CIV_SOUTHERN_CHINA_SONG"
+				return "TXT_KEY_CIV_YANGTZE_CHINA_SONG"
 
 			if iEra == iRenaissance and turn() >= year(1400):
-				return "TXT_KEY_CIV_SOUTHERN_CHINA_MING"
+				return "TXT_KEY_CIV_YANGTZE_CHINA_MING"
 			
 	elif iCiv == iBabylonia:
 		if bCityStates and not bEmpire:

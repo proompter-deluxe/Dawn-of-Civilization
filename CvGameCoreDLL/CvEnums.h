@@ -1182,7 +1182,7 @@ enum CivilizationTypes		// Exposed to Python
 	CARTHAGE,
 	CELTS,
 	CHINA, 
-	SOUTHERN_CHINA,
+	YANGTZE_CHINA,
 	COLOMBIA,
 	DRAVIDIA,
 	EGYPT,

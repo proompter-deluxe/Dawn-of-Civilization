@@ -24318,7 +24318,7 @@ EraTypes CvPlayer::getSoundtrackEra()
 			switch (getCivilizationType())
 			{
 			case CHINA:
-			case SOUTHERN_CHINA:
+			case YANGTZE_CHINA:
 			case MONGOLS:
 			case JAPAN:
 			case KOREA:

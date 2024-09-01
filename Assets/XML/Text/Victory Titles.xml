@@ -227,14 +227,31 @@
 	
 	<TEXT>
 		<Tag>TXT_KEY_VICTORY_TITLE_CHI1</Tag>
+		<English>The Three Departments and Six Ministries</English>
+		<French>The Three Departments and Six Ministries</French>
+		<German>The Three Departments and Six Ministries</German>
+		<Italian>The Three Departments and Six Ministries</Italian>
+		<Spanish>The Three Departments and Six Ministries</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_VICTORY_TITLE_CHI2</Tag>
+		<English>The empire, long divided, must unite</English>
+		<French>The empire, long divided, must unite</French>
+		<German>The empire, long divided, must unite</German>
+		<Italian>The empire, long divided, must unite</Italian>
+		<Spanish>The empire, long divided, must unite</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_VICTORY_TITLE_CHI3</Tag>
 		<English>Mandate of Heaven</English>
 		<French>Le mandat du Ciel </French>
 		<German>Mandat des Himmels</German>
 		<Italian>Mandate of Heaven</Italian>
 		<Spanish>Mandate of Heaven</Spanish>
 	</TEXT>
+
 	<TEXT>
-		<Tag>TXT_KEY_VICTORY_TITLE_CHI2</Tag>
+		<Tag>TXT_KEY_VICTORY_TITLE_CHS1</Tag>
 		<English>The Four Great Inventions</English>
 		<French>Les quatre grandes inventions </French>
 		<German>Die Vier Gro&#223;en Erfindungen</German>
@@ -242,7 +259,15 @@
 		<Spanish>The Four Great Inventions</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_VICTORY_TITLE_CHI3</Tag>
+		<Tag>TXT_KEY_VICTORY_TITLE_CHS2</Tag>
+		<English>The Treasure Fleets</English>
+		<French>The Treasure Fleets</French>
+		<German>The Treasure Fleets</German>
+		<Italian>The Treasure Fleets</Italian>
+		<Spanish>The Treasure Fleets</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_VICTORY_TITLE_CHS3</Tag>
 		<English>Ten Thousand Years</English>
 		<French>Dix mille ans </French>
 		<German>Zehntausend Jahre</German>

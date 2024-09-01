@@ -1349,30 +1349,30 @@
 			<CivilizationActionSound>AS3D_CHINA_ORDER</CivilizationActionSound>
 		</CivilizationInfo>
 		<CivilizationInfo>
-			<Type>CIVILIZATION_SOUTHERN_CHINA</Type>
-			<Description>TXT_KEY_CIV_SOUTHERN_CHINA_DESC</Description>
-			<ShortDescription>TXT_KEY_CIV_SOUTHERN_CHINA_SHORT_DESC</ShortDescription>
-			<Adjective>TXT_KEY_CIV_SOUTHERN_CHINA_ADJECTIVE</Adjective>
+			<Type>CIVILIZATION_YANGTZE_CHINA</Type>
+			<Description>TXT_KEY_CIV_YANGTZE_CHINA_DESC</Description>
+			<ShortDescription>TXT_KEY_CIV_YANGTZE_CHINA_SHORT_DESC</ShortDescription>
+			<Adjective>TXT_KEY_CIV_YANGTZE_CHINA_ADJECTIVE</Adjective>
 			<Civilopedia>TXT_KEY_CIV_CHINA_PEDIA</Civilopedia>
 			<DefaultPlayerColor>PLAYERCOLOR_MIDDLE_GREEN</DefaultPlayerColor>
 			<ArtDefineTag>ART_DEF_CIVILIZATION_CHINA</ArtDefineTag>
 			<ArtStyleType>ARTSTYLE_ASIAN</ArtStyleType>
 			<UnitArtStyleType>UNIT_ARTSTYLE_ASIAN</UnitArtStyleType>
 			<PaganReligion>PAGAN_RELIGION_SHENDAO</PaganReligion>
-			<Impact>IMPACT_CRITICAL</Impact>
+			<Impact>IMPACT_SIGNIFICANT</Impact>
 			<Identifier>CHS</Identifier>
-			<StartingYear>220</StartingYear>
+			<StartingYear>200</StartingYear>
 			<LoadingTimes>
-				<LoadingTime>4</LoadingTime>
+				<LoadingTime>5</LoadingTime>
 				<LoadingTime>0</LoadingTime>
 				<LoadingTime>0</LoadingTime>
 			</LoadingTimes>
 			<Rating>
 				<Trade>3</Trade>
-				<Production>4</Production>
+				<Production>3</Production>
 				<Culture>4</Culture>
-				<Growth>3</Growth>
-				<Start>2</Start>
+				<Growth>4</Growth>
+				<Start>3</Start>
 			</Rating>
 			<bPlayable>1</bPlayable>
 			<bAIPlayable>1</bAIPlayable>
