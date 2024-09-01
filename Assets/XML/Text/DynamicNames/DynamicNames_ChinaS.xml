@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- China -->
+<Civ4GameText xmlns="http://www.firaxis.com">
+	<TEXT>
+		<Tag>TXT_KEY_CIV_CHINA_SOUTH_DESC</Tag>
+		<English>The Yangtze Chinese</English>
+		<French>
+			<Text>Les Chinois du Yangtze</Text>
+			<Gender>Male</Gender>
+			<Plural>1</Plural>
+		</French>
+		<German>The Yangtze Chinese</German>
+		<Italian>The Yangtze Chinese</Italian>
+		<Spanish>The Yangtze Chinese</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_CHINA_SOUTH_PEOPLES</Tag>
+		<English>Yangtze Peoples</English>
+		<French>
+			<Text>Han du Yangtze</Text>
+			<Gender>Female</Gender>
+			<Plural>1</Plural>
+		</French>
+		<German>
+			<Text>Yangtze v&#246;lker:Yangtze v&#246;lker:Yangtze v&#246;lkern</Text>
+			<Gender>Female:Female:Female</Gender>
+			<Plural>1:1:1</Plural>
+		</German>
+		<Italian>
+			<Text>Popoli Yangtze</Text>
+			<Gender>Male</Gender>
+			<Plural>1</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Pueblos Yangtze</Text>
+			<Gender>Male</Gender>
+			<Plural>1</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_CHINA_SOUTH_DEFAULT</Tag>
+		<English>Kingdom of Wu</English>
+		<French>
+			<Text>Royaume de Wu</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>Kingdom of Wu</German>
+		<Italian>Kingdom of Wu</Italian>
+		<Spanish>Kingdom of Wu</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_CHINA_SOUTH_FASCIST</Tag>
+		<English>Republic of China</English>
+		<French>
+			<Text>Nation de Chine</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>Nation of %s1</German>
+		<Italian>Nation of %s1</Italian>
+		<Spanish>Nation of %s1</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_CHINA_SOUTH_ZHOU</Tag>
+		<English>Zhou</English>
+		<French>Zhou</French>
+		<German>Zhou</German>
+		<Italian>Zhou</Italian>
+		<Spanish>Zhou</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_CHINA_SOUTH_HAN</Tag>
+		<English>Han</English>
+		<French>
+			<Text>Han</Text>
+			<Gender>Female</Gender>
+			<Plural>1</Plural>
+		</French>
+		<German>Han</German>
+		<Italian>
+			<Text>Han</Text>
+			<Gender>Male</Gender>
+			<Plural>1</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Han</Text>
+			<Gender>Male</Gender>
+			<Plural>1</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_CHINA_SOUTH_SONG</Tag>
+		<English>Southern Song</English>
+		<French>Song du sud</French>
+		<German>Sudliche Song</German>
+		<Italian>Song meridionali</Italian>
+		<Spanish>Song meridional</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_CHINA_SOUTH_MING</Tag>
+		<English>Southern Ming</English>
+		<French>Ming du sud</French>
+		<German>Southern Ming</German>
+		<Italian>Southern Ming</Italian>
+		<Spanish>Southern Ming</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_CHINESE_SOUTH_VASSAL</Tag>
+		<English>Tributary Southern %s4 State</English>
+		<French>
+			<Text>&#201;tat %s4 tributaire</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Tributstaat %s3:Tributstaat %s3:Tributstaat %s3</Text>
+			<Gender>Male:Male:Male</Gender>
+			<Plural>0:0:0</Plural>
+		</German>
+		<Italian>
+			<Text>Stato %s4 Tributario</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Estado %s4 Tributario</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_CHINA_SOUTH_SHORT_DESC</Tag>
+		<English>Southern China</English>
+		<French>
+			<Text>Chine du sud</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Sudliche China</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Cina meridionale</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>China meridional</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_CHINA_SOUTH_ADJECTIVE</Tag>
+		<English>
+			<Text>South Chinese</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</English>
+		<French>
+			<Text>Sud-Chinois</Text>
+			<Gender>Male</Gender>
+			<Plural>1</Plural>
+		</French>
+		<German> <!-- FIXME-->
+			<Text>Chinesisch:chinesischen:chinesische</Text>
+			<Gender>Neuter:Neuter:Neuter</Gender>
+			<Plural>0:0:0</Plural>
+		</German>
+		<Italian> <!-- FIXME-->
+			<Text>Cinese:Cinese:Cinesi:Cinesi</Text>
+			<Gender>Male:Female:Male:Female</Gender>
+			<Plural>0:0:1:1</Plural>
+		</Italian>
+		<Spanish> <!-- FIXME-->
+			<Text>chino:china:chinos:chinas</Text>
+			<Gender>Male:Female:Male:Female</Gender>
+			<Plural>0:0:1:1</Plural>
+		</Spanish>
+	</TEXT>
+</Civ4GameText>

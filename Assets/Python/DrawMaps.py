@@ -8,9 +8,9 @@ from pathlib import Path
 iWorldX = 150
 iWorldY = 80
 
-iNumCivs = 68
+iNumCivs = 69
 (iAmerica, iArabia, iArgentina, iAssyria, iAztecs, iBabylonia, iBrazil, iBurma, iByzantium, iCanada, 
-iCarthage, iCelts, iChina, iColombia, iDravidia, iEgypt, iEngland, iEthiopia, iFrance, iGermany, 
+iCarthage, iCelts, iChina, iChinaS, iColombia, iDravidia, iEgypt, iEngland, iEthiopia, iFrance, iGermany, 
 iGreece, iHarappa, iHittites, iHolyRome, iInca, iIndia, iIran, iItaly, iJapan, iJava, 
 iKhmer, iCongo, iKorea, iKushans, iMalays, iMali, iMaya, iMexico, iMongols, iMoors, 
 iMughals, iNativeAmericans, iNetherlands, iNorse, iNubia, iOttomans, iPersia, iPoland, iPolynesia, iPortugal, 
@@ -46,6 +46,7 @@ dCivNames = {
 	iCanada: "Canada",
 	iPhoenicia: "Phoenicia",
 	iChina: "China",
+	iChinaS: "Southern_China",
 	iColombia: "Colombia",
 	iEgypt: "Egypt",
 	iEngland: "England",
@@ -120,6 +121,7 @@ iEgypt :		((78, 41),	(80, 44)),
 iBabylonia :	((88, 45),	(90, 48)),
 iHarappa :		((99, 45),	(102, 47)),
 iChina :		((120, 51),	(126, 56)),
+iChinaS :		((117, 42),	(131, 50)),
 iGreece :		((74, 49),	(80, 53)),
 iIndia :		((107, 44),	(111, 46)),
 iPhoenicia :	((84, 47),	(85, 49)),
@@ -171,6 +173,7 @@ iEgypt :	[(80, 43), (80, 44)],
 iBabylonia: [(88, 45)],
 iHarappa :	[(99, 46), (99, 47), (101, 45), (102, 45), (102, 46)],
 iChina :	[(120, 54), (120, 55), (120, 56), (121, 54), (121, 55), (121, 56), (126, 51)],
+iChinaS :	[(117, 42), (117, 43), (117, 44), (118, 42), (118, 43), (119, 42), (117, 50), (122, 50), (123, 50), (124, 50), (125, 50), (126, 50)],
 iGreece :	[(74, 53), (80, 53)],
 iPhoenicia :[(85, 47)],
 iPersia :	[(94, 48), (94, 49), (94, 50), (95, 46), (95, 47), (95, 48), (95, 49), (95, 50)],

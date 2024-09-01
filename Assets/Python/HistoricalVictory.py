@@ -64,6 +64,8 @@ BRITAIN = "TXT_KEY_VICTORY_NAME_BRITAIN"
 CARIBBEAN = "TXT_KEY_VICTORY_NAME_CARIBBEAN"
 CAUCASUS = "TXT_KEY_VICTORY_NAME_CAUCASUS"
 CHINA = "TXT_KEY_VICTORY_NAME_CHINA"
+CHINA_NORTH = "TXT_KEY_VICTORY_NAME_CHINA_NORTH"
+CHINA_SOUTH = "TXT_KEY_VICTORY_NAME_CHINA_SOUTH"
 DECCAN = "TXT_KEY_VICTORY_NAME_DECCAN"
 EASTER_ISLAND = "TXT_KEY_VICTORY_NAME_EASTER_ISLAND"
 EASTERN_EUROPE = "TXT_KEY_VICTORY_NAME_EASTERN_EUROPE"
@@ -107,6 +109,7 @@ SOUTH_AMERICA = "TXT_KEY_VICTORY_NAME_SOUTH_AMERICA"
 SOUTH_ASIA = "TXT_KEY_VICTORY_NAME_SOUTH_ASIA"
 SOUTH_CENTRAL_AMERICA = "TXT_KEY_VICTORY_NAME_SOUTH_CENTRAL_AMERICA"
 SRIVIJAYA = "TXT_KEY_VICTORY_NAME_SRIVIJAYA"
+TARIM_BASIN= "TXT_KEY_VICTORY_NAME_TARIM_BASIN"
 TRANSOXIANA = "TXT_KEY_VICTORY_NAME_TRANSOXIANA"
 WEST_AFRICA = "TXT_KEY_VICTORY_NAME_WEST_AFRICA"
 
@@ -200,9 +203,32 @@ dGoals = {
 		CitySpecialistCount(capital().named(CAPITAL), great_people(), 3, by=-600),
 	),
 	iChina: (
-		BuildingCount((iConfucianCathedral, 4), (iTaoistCathedral, 3), by=1000),
+		SpecialistCount(sum(iSpecialistStatesman), 40, by=180),
+		Control(
+			plots.region(rNorthChina).named(CHINA_NORTH),
+			plots.region(rSouthChina).named(CHINA_SOUTH),
+			plots.region(rTarimBasin).named(TARIM_BASIN),
+			by=900,
+		),
+		BuildingCount((iConfucianCathedral, 4), (iTaoistCathedral, 4), by=1350),
+	),
+	iChinaS: (
 		FirstDiscover(iCompass, iPaper, iGunpowder, iPrinting),
-		GoldenAges(4, by=1800),
+		ALL( # treasure ships
+			Control(
+				plots.region(rKorea),
+				plots.region(rIndochina),
+				plots.region(rIndonesia),
+				plots.region(rDravida),
+				subject=VASSALS,
+				at=1435,
+			),
+			CityCount(
+					(plots.regions(*lIndia).named(INDIA), 1),
+					(plots.regions(*lAfrica).named(AFRICA), 1),
+			),
+		),
+		GoldenAges(4, by=1900),
 	),
 	iHittites: (
 		ResourceCount(sum(iCopper, iIron), 4, by=-900),

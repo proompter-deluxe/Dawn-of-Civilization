@@ -23,6 +23,8 @@ LEADER_DATES = {
 	iQinShiHuang: -220,
 	iTaizong: 630,
 	iHongwu: 1370,
+	iSunQuan: 200,
+	iGaozong: 1120,
 	iMursili: -1600,
 	iPericles: -450,
 	iAlexanderTheGreat: -330,

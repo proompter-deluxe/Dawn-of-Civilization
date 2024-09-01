@@ -2398,6 +2398,7 @@ UnitTypes CvCityAI::AI_bestUnit(bool bAsync, AdvisorTypes eIgnoreAdvisor, UnitAI
 		aiUnitAIVal[UNITAI_EXPLORE_SEA] /= 2;
 		break;
 	case CHINA:
+	case SOUTHERN_CHINA:
 		aiUnitAIVal[UNITAI_EXPLORE] /= 4;
 		aiUnitAIVal[UNITAI_EXPLORE_SEA] /= 5;
 		aiUnitAIVal[UNITAI_COUNTER] /= 2;
@@ -3999,7 +4000,7 @@ int CvCityAI::AI_buildingValueThreshold(BuildingTypes eBuilding, int iFocusFlags
 					}
 					if (kBuilding.getRiverPlotYieldChange(iI) > 0)
 					{
-						if (getCivilizationType() == CHINA && iI == 2)
+						if (iI == 2 && getCivilizationType() == CHINA || getCivilizationType() == SOUTHERN_CHINA)
 						{
 							iTempValue += 100;
 						}

@@ -1908,6 +1908,16 @@
 			<Button>Art/Structures/Buildings/Taixue/taixue.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_CHINESE_COMMANDERY</Type>
+			<LSystem>LSYSTEM_2x2</LSystem>
+			<bAnimated>0</bAnimated>
+			<fScale>1.0</fScale>
+			<fInterfaceScale>0.9</fInterfaceScale>
+			<NIF>Art/Structures/Buildings/china_commandery/asian_tax.nif</NIF>
+			<KFM/>
+			<Button>Art/Structures/Buildings/china_commandery/china_commandery.dds</Button>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_INDIAN_STEPWELL</Type>
 			<LSystem>LSYSTEM_3x3</LSystem>
 			<bAnimated>0</bAnimated>

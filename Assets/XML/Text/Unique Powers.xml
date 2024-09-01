@@ -226,20 +226,36 @@
 		<Spanish>Units in forests heal at the same rate as in friendly cities</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UP_CHI_TITLE</Tag>
+		<Tag>TXT_KEY_UP_CHS_TITLE</Tag>
 		<English>The Power of Myriads:</English>
-		<French>Le pouvoir des myriades :</French>
+		<French>Le pouvoir des myriades:</French>
 		<German>Die Macht der Myriaden:</German>
 		<Italian>Il potere del invenzione:</Italian>
 		<Spanish>El poder del invento:</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UP_CHI</Tag>
+		<Tag>TXT_KEY_UP_CHS</Tag>
 		<English>Cities keep an additional 25% [ICON_FOOD] after growing</English>
 		<French>Les villes conservent 25 % [ICON_FOOD] de plus apr&#232;s la croissance</French>
 		<German>St&#228;dte behalten zus&#228;tzliche 25% [ICON_FOOD] nach dem Wachsen</German>
 		<Italian>Velocit&#224; di addestramento 1,5X per le unit&#224; da mischia e con armi da fuoco</Italian>
 		<Spanish>Velocidad de entrenamiento de unidades de cuerpo a cuerpo y con armas de p&#243;lvora multiplicada x1,5</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UP_CHI_TITLE</Tag>
+		<English>Filial and Incorrupt:</English>
+		<French>Filial and Incorrupt:</French>
+		<German>Filial and Incorrupt:</German>
+		<Italian>Filial and Incorrupt:</Italian>
+		<Spanish>Filial and Incorrupt:</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UP_CHI</Tag>
+		<English>Free statesmen in the capital</English>
+		<French>Free statesmen in the capital</French>
+		<German>Free statesmen in the capital</German>
+		<Italian>Free statesmen in the capital</Italian>
+		<Spanish>Free statesmen in the capital</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UP_COL_TITLE</Tag>

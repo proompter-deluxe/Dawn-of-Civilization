@@ -2885,6 +2885,22 @@
 		<Spanish></Spanish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_VICTORY_NAME_CHINA_NORTH</Tag>
+		<English>Northern China</English>
+		<French></French>
+		<German></German>
+		<Italian></Italian>
+		<Spanish></Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_VICTORY_NAME_CHINA_SOUTH</Tag>
+		<English>Southern China</English>
+		<French></French>
+		<German></German>
+		<Italian></Italian>
+		<Spanish></Spanish>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_VICTORY_NAME_DECCAN</Tag>
 		<English>the Deccan</English>
 		<French></French>
@@ -3223,6 +3239,14 @@
 	<TEXT>
 		<Tag>TXT_KEY_VICTORY_NAME_SRIVIJAYA</Tag>
 		<English>Srivijaya</English>
+		<French></French>
+		<German></German>
+		<Italian></Italian>
+		<Spanish></Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_VICTORY_NAME_TARIM_BASIN</Tag>
+		<English>the Tarim Basin</English>
 		<French></French>
 		<German></German>
 		<Italian></Italian>

@@ -13,9 +13,9 @@ iWorldY = 80
 iNumPlayers = gc.getMAX_PLAYERS()
 
 # civilizations, not players
-iNumCivs = 68
+iNumCivs = 69
 (iAmerica, iArabia, iArgentina, iAssyria, iAztecs, iBabylonia, iBrazil, iBurma, iByzantium, iCanada, 
-iCarthage, iCelts, iChina, iColombia, iDravidia, iEgypt, iEngland, iEthiopia, iFrance, iGermany, 
+iCarthage, iCelts, iChina, iChinaS, iColombia, iDravidia, iEgypt, iEngland, iEthiopia, iFrance, iGermany, 
 iGreece, iHarappa, iHittites, iHolyRome, iInca, iIndia, iIran, iItaly, iJapan, iJava, 
 iKhmer, iCongo, iKorea, iKushans, iMalays, iMali, iMaya, iMexico, iMongols, iMoors, 
 iMughals, iNativeAmericans, iNetherlands, iNorse, iNubia, iOttomans, iPersia, iPoland, iPolynesia, iPortugal, 
@@ -47,6 +47,7 @@ lBirthOrder = [
 	iKorea,
 	iKhmer,
 	iMali,
+	iChinaS,
 	iByzantium,
 	iFrance,
 	iMalays,
@@ -101,7 +102,7 @@ iNumCivGroups = 6
 
 dCivGroups = {
 iCivGroupEurope : [iGreece, iRome, iCelts, iByzantium, iFrance, iNorse, iSpain, iEngland, iHolyRome, iRus, iItaly, iPoland, iPortugal, iSweden, iRussia, iNetherlands, iGermany],
-iCivGroupAsia : [iIndia, iChina, iHarappa, iPolynesia, iPersia, iJapan, iDravidia, iKushans, iKorea, iKhmer, iMalays, iJava, iTibet, iBurma, iVietnam, iMongols, iMughals, iThailand, iRussia, iTurks],
+iCivGroupAsia : [iIndia, iChina, iChinaS, iHarappa, iPolynesia, iPersia, iJapan, iDravidia, iKushans, iKorea, iKhmer, iMalays, iJava, iTibet, iBurma, iVietnam, iMongols, iMughals, iThailand, iRussia, iTurks],
 iCivGroupMiddleEast : [iEgypt, iBabylonia, iAssyria, iHittites, iPersia, iKushans, iByzantium, iArabia, iMoors, iSwahili, iOttomans, iCarthage, iTurks, iIran],
 iCivGroupMediterranean : [iEgypt, iGreece, iPhoenicia, iRome, iByzantium, iFrance, iArabia, iMoors, iSpain, iPortugal, iItaly, iOttomans],
 iCivGroupAfrica : [iEgypt, iNubia, iCarthage, iEthiopia, iMali, iMoors, iSwahili, iCongo],
@@ -116,7 +117,7 @@ iNumTechGroups = 4
 dTechGroups = {
 iTechGroupWestern : [iRome, iGreece, iCelts, iByzantium, iFrance, iNorse, iSpain, iEngland, iHolyRome, iRus, iPoland, iPortugal, iItaly, iSweden, iRussia, iNetherlands, iGermany, iAmerica, iArgentina, iMexico, iColombia, iBrazil, iCanada],
 iTechGroupMiddleEast : [iEgypt, iBabylonia, iHarappa, iAssyria, iHittites, iNubia, iIndia, iCarthage, iPersia, iEthiopia, iKushans, iMali, iArabia, iMoors, iSwahili, iOttomans, iMughals, iDravidia, iCongo, iTurks, iIran],
-iTechGroupFarEast : [iChina, iKorea, iKhmer, iMalays, iJapan, iJava, iTibet, iBurma, iVietnam, iMongols, iThailand],
+iTechGroupFarEast : [iChina, iChinaS, iKorea, iKhmer, iMalays, iJapan, iJava, iTibet, iBurma, iVietnam, iMongols, iThailand],
 iTechGroupNativeAmerica : [iPolynesia, iMaya, iToltecs, iInca, iAztecs],
 }
 
@@ -189,8 +190,13 @@ lNeighbours = [
 	(iChina, iKorea),
 	(iChina, iTurks),
 	(iChina, iTibet),
-	(iChina, iBurma),
 	(iChina, iMongols),
+	(iChinaS, iVietnam),
+	(iChinaS, iJapan),
+	(iChinaS, iKorea),
+	(iChinaS, iTibet),
+	(iChinaS, iBurma),
+	(iChinaS, iMongols),
 	(iHittites, iGreece),
 	(iHittites, iCarthage),
 	(iHittites, iPersia),
@@ -437,6 +443,7 @@ iToltecs : -200,
 iKushans : -135,
 iKorea : -50,
 iKhmer : 50,
+iChinaS: 200,
 iMali : 300,
 iByzantium : 330,
 iFrance : 496,
@@ -486,6 +493,7 @@ iBabylonia : -539,
 iHarappa : -1700,
 iAssyria : -609,
 iChina : 1127,
+iChinaS : 1660,
 iHittites : -900,
 iNubia : 1518,
 iGreece : -146,
@@ -533,6 +541,7 @@ iEgypt : [(900, 1300), (1800, 2020)],
 iBabylonia : [(-3000, -500)],
 iAssyria : [(-3000, -600)],
 iChina : [(600, 2020)],
+iChinaS : [(910, 1660)],
 iHittites : [(-1800, -800)],
 iNubia : [(500, 1500)],
 iGreece : [(1800, 2020)],
@@ -588,6 +597,7 @@ dAggressionLevel = CivDict({
 iBabylonia : 1,
 iAssyria : 2,
 iChina : 1,
+iChinaS : 2,
 iHittites : 2,
 iNubia : 1,
 iGreece : 2,
@@ -635,6 +645,7 @@ iBabylonia: 50,
 iHarappa: 50,
 iAssyria: 50,
 iChina: 40,
+iChinaS: 50,
 iHittites: 50,
 iNubia: 20,
 iGreece: 50,
@@ -698,6 +709,7 @@ iBabylonia : 40,
 iHarappa : 0,
 iAssyria : 40,
 iChina : 100,
+iChinaS : 80,
 iHittites : 0,
 iNubia : 20,
 iGreece : 60,
@@ -759,6 +771,7 @@ iBabylonia : 30,
 iHarappa : 30,
 iAssyria : 25,
 iChina : 30,
+iChinaS : 30,
 iHittites : 30,
 iNubia : 30,
 iGreece : 35,
@@ -946,8 +959,8 @@ iNumBonusVarieties = 19
 iGemsEmeralds, iSheepLlama, iSheepBlack, iCowBrown, iPigFurry, iIvoryAfrican, iCitrusOranges, iCrabShrimp) = range(iNumBonuses, iNumBonuses + iNumBonusVarieties)
 
 
-iNumBuildings = 139
-(iPalace, iBarracks, iKalliu, iSoldattorp, iIkhanda, iGranary, iTannery, iPaganTemple, iWeaver, iMbwadi, 
+iNumBuildings = 141
+(iPalace, iChineseUniquePowerPalace, iBarracks, iKalliu, iSoldattorp, iIkhanda, iGranary, iCommandery, iTannery, iPaganTemple, iWeaver, iMbwadi, 
 iMonument, iObelisk, iMenhir, iStele, iCandi, iEdict, iMalae, iMudbrickPyramid, iTotemPole, iWalls, 
 iDun, iStable, iOrtege, iLibrary, iEdubba, iTaixue, iKyaung, iCalmecac, iHarbor, iAqueduct, 
 iQanat, iBaray, iNoria, iStepwell, iTheatre, iOdeon, iWaterPuppetTheatre, iHippodrome, iPavilion, iArena, 
@@ -1132,9 +1145,9 @@ iVictorySecularism = 11
 
 
 #leaders
-iNumLeaders = 137
+iNumLeaders = 140
 (iLeaderBarbarian, iNativeLeader, iIndependentLeader, iRamesses, iCleopatra, iBaibars, iNasser, iSargon, iHammurabi, iWentAntu,
-iAshurbanipal, iQinShiHuang, iTaizong, iHongwu, iMao, iMursili, iPericles, iAlexanderTheGreat, iGeorge, iAsoka, 
+iAshurbanipal, iQinShiHuang, iTaizong, iHongwu, iMao, iSunQuan, iGaozong, iChiangKaishek, iMursili, iPericles, iAlexanderTheGreat, iGeorge, iAsoka, 
 iChandragupta, iShivaji, iGandhi, iHiram, iHannibal, iTaharqa, iAhoeitu, iCyrus, iDarius, iKhosrow, 
 iBrennus, iJuliusCaesar, iAugustus, iPacal, iRajendra, iKrishnaDevaRaya, iEzana, iZaraYaqob, iMenelik, iTopiltzin, 
 iKanishka, iWangKon, iSejong, iSuryavarman, iMansaMusa, iJustinian, iBasil, iCharlemagne, iLouis, iNapoleon, 
@@ -1150,6 +1163,7 @@ iBolivar, iPedro, iVargas, iMacDonald, iTrudeau, iBoudica, iSittingBull) = range
 
 dResurrectionLeaders = CivDict({
 	iChina : iHongwu,
+	iChinaS: iGaozong,
 	iIndia : iShivaji,
 	iEgypt : iBaibars,
 })

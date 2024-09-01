@@ -282,6 +282,14 @@
 		<Spanish>Gothic</Spanish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_ADJECTIVE_HAN</Tag>
+		<English>Han</English>
+		<French>Han</French>
+		<German>Han</German>
+		<Italian>Han</Italian>
+		<Spanish>Han</Spanish>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_ADJECTIVE_HAUSA</Tag>
 		<English>Hausa</English>
 		<French>Hausa</French>
@@ -601,6 +609,14 @@
 		<Italian>Purepecha</Italian>
 		<Spanish>Purepecha</Spanish>
 	</TEXT>
+		<TEXT>
+		<Tag>TXT_KEY_ADJECTIVE_QI</Tag>
+		<English>Qi</English>
+		<French>Qi</French>
+		<German>Qi</German>
+		<Italian>Qi</Italian>
+		<Spanish>Qi</Spanish>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_ADJECTIVE_RAJPUT</Tag>
 		<English>Rajput</English>
@@ -849,6 +865,14 @@
 		<Italian>Wolof</Italian>
 		<Spanish>Wolof</Spanish>
 	</TEXT>
+		<TEXT>
+		<Tag>TXT_KEY_ADJECTIVE_QIANG</Tag>
+		<English>Qiang</English>
+		<French>Qiang</French>
+		<German>Qiang</German>
+		<Italian>Qiang</Italian>
+		<Spanish>Qiang</Spanish>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_ADJECTIVE_XIONGNU</Tag>
 		<English>Xiongnu</English>
@@ -856,6 +880,14 @@
 		<German>Xiongnu</German>
 		<Italian>Xiongnu</Italian>
 		<Spanish>Xiongnu</Spanish>
+	</TEXT>
+		<TEXT>
+		<Tag>TXT_KEY_ADJECTIVE_YELLOW_TURBAN</Tag>
+		<English>Yellow Turban Rebellion</English>
+		<French>Yellow Turban Rebellion</French>
+		<German>Yellow Turban Rebellion</German>
+		<Italian>Yellow Turban Rebellion</Italian>
+		<Spanish>Yellow Turban Rebellion</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_ADJECTIVE_YEMENI</Tag>

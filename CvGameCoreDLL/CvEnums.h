@@ -1182,6 +1182,7 @@ enum CivilizationTypes		// Exposed to Python
 	CARTHAGE,
 	CELTS,
 	CHINA, 
+	SOUTHERN_CHINA,
 	COLOMBIA,
 	DRAVIDIA,
 	EGYPT,
@@ -1270,6 +1271,10 @@ enum LeaderHeadTypes			// Exposed to Python
 	TAIZONG,
 	HONGWU,
 	MAO,
+
+	SUN_QUAN,
+	GAOZONG,
+	CHIANG_KAISHEK,
 
 	MURSILI,
 

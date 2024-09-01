@@ -2326,7 +2326,7 @@ BeginPlot
 		CityOwner=CIVILIZATION_CHINA
 		CityName=Chengdu
 		CityPopulation=4
-		BuildingType=BUILDING_GRANARY
+		BuildingType=BUILDING_CHINESE_COMMANDERY
 		BuildingType=BUILDING_DUJIANGYAN
 		ReligionType=RELIGION_CONFUCIANISM
 		BeginCulture
@@ -2533,8 +2533,8 @@ BeginPlot
 		CityPopulation=7
 		BuildingType=BUILDING_PALACE
 		BuildingType=BUILDING_BARRACKS
-		BuildingType=BUILDING_GRANARY
-		BuildingType=BUILDING_CHINESE_TAIXUE
+		BuildingType=BUILDING_CHINESE_COMMANDERY
+		BuildingType=BUILDING_LIBRARY
 		BuildingType=BUILDING_FORGE
 		BuildingType=BUILDING_CONFUCIAN_TEMPLE
 		BuildingType=BUILDING_TERRACOTTA_ARMY
@@ -2661,8 +2661,8 @@ BeginPlot
 		CityOwner=CIVILIZATION_CHINA
 		CityName=Guangzhou
 		CityPopulation=2
-		BuildingType=BUILDING_GRANARY
-		BuildingType=BUILDING_CHINESE_TAIXUE
+		BuildingType=BUILDING_CHINESE_COMMANDERY
+		BuildingType=BUILDING_LIBRARY
 		BuildingType=BUILDING_BUDDHIST_TEMPLE
 		ReligionType=RELIGION_BUDDHISM
 		BeginCulture
@@ -2682,8 +2682,8 @@ BeginPlot
 		CityOwner=CIVILIZATION_CHINA
 		CityName=Kaifeng
 		CityPopulation=4
-		BuildingType=BUILDING_GRANARY
-		BuildingType=BUILDING_CHINESE_TAIXUE
+		BuildingType=BUILDING_CHINESE_COMMANDERY
+		BuildingType=BUILDING_LIBRARY
 		BuildingType=BUILDING_MARKET
 		BuildingType=BUILDING_CONFUCIAN_TEMPLE
 		BuildingType=BUILDING_CONFUCIAN_SHRINE
@@ -2721,8 +2721,8 @@ BeginPlot
 		CityOwner=CIVILIZATION_CHINA
 		CityName=Zhuojun
 		CityPopulation=3
-		BuildingType=BUILDING_GRANARY
-		BuildingType=BUILDING_CHINESE_TAIXUE
+		BuildingType=BUILDING_CHINESE_COMMANDERY
+		BuildingType=BUILDING_LIBRARY
 		BuildingType=BUILDING_BUDDHIST_TEMPLE
 		BuildingType=BUILDING_CONFUCIAN_TEMPLE
 		BuildingType=BUILDING_TAOIST_TEMPLE
@@ -2774,8 +2774,8 @@ BeginPlot
 		CityOwner=CIVILIZATION_CHINA
 		CityName=Ye
 		CityPopulation=2
-		BuildingType=BUILDING_GRANARY
-		BuildingType=BUILDING_CHINESE_TAIXUE
+		BuildingType=BUILDING_CHINESE_COMMANDERY
+		BuildingType=BUILDING_LIBRARY
 		ReligionType=RELIGION_CONFUCIANISM
 		BeginCulture
 			Civilization=CIVILIZATION_CHINA, Culture=25
@@ -2794,8 +2794,8 @@ BeginPlot
 		CityOwner=CIVILIZATION_CHINA
 		CityName=Hangzhou
 		CityPopulation=3
-		BuildingType=BUILDING_GRANARY
-		BuildingType=BUILDING_CHINESE_TAIXUE
+		BuildingType=BUILDING_CHINESE_COMMANDERY
+		BuildingType=BUILDING_LIBRARY
 		BuildingType=BUILDING_HARBOR
 		BuildingType=BUILDING_CONFUCIAN_TEMPLE
 		ReligionType=RELIGION_BUDDHISM
@@ -2818,7 +2818,7 @@ BeginPlot
 		CityName=Liaoyang
 		CityPopulation=2
 		BuildingType=BUILDING_BARRACKS
-		BuildingType=BUILDING_GRANARY
+		BuildingType=BUILDING_CHINESE_COMMANDERY
 		ReligionType=RELIGION_CONFUCIANISM
 		ReligionType=RELIGION_TAOISM
 		BeginCulture

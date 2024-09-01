@@ -866,6 +866,42 @@
 		<Spanish>Tang Taizong</Spanish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_LEADER_SUN_QUAN</Tag>
+		<English>Sun Quan</English>
+		<French>
+			<Text>Sun Quan</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>Sun Quan</German>
+		<Italian>Sun Quan</Italian>
+		<Spanish>Sun Quan</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_LEADER_GAOZONG</Tag>
+		<English>Gaozong</English>
+		<French>
+			<Text>Gaozong</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>Gaozong</German>
+		<Italian>Gaozong</Italian>
+		<Spanish>Gaozong</Spanish>
+	</TEXT>
+		<TEXT>
+		<Tag>TXT_KEY_LEADER_CHIANG_KAISHEK</Tag>
+		<English>Chiang Kai-shek</English>
+		<French>
+			<Text>Chiang Kai-shek</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>Chiang Kai-shek</German>
+		<Italian>Chiang Kai-shek</Italian>
+		<Spanish>Chiang Kai-shek</Spanish>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_LEADER_ODA_NOBUNAGA</Tag>
 		<English>Oda Nobunaga</English>
 		<French>

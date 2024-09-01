@@ -25,6 +25,7 @@ dLanguages = CivDict({
 	iHarappa: [iLangIndian],
 	iAssyria: [iLangBabylonian],
 	iChina: [iLangChinese],
+	iChinaS : [iLangChinese],
 	iHittites: [iLangHittite, iLangBabylonian],
 	iNubia: [iLangNubian, iLangEgyptian],
 	iGreece: [iLangGreek],
