@@ -957,10 +957,10 @@ def specificName(iPlayer):
 	if iCiv == iChinaS:
 		if bEmpire:
 			if iEra == iMedieval and turn() >= year(900):
-				return "TXT_KEY_CIV_CHINA_SOUTH_SONG"
+				return "TXT_KEY_CIV_SOUTHERN_CHINA_SONG"
 
 			if iEra == iRenaissance and turn() >= year(1400):
-				return "TXT_KEY_CIV_CHINA_SOUTH_MING"
+				return "TXT_KEY_CIV_SOUTHERN_CHINA_MING"
 	
 	elif iCiv == iNubia:
 		if iEra <= iClassical:
@@ -1256,10 +1256,10 @@ def specificAdjective(iPlayer):
 	elif iCiv == iChinaS:
 		if bMonarchy:
 			if iEra == iMedieval and turn() >= year(900):
-				return "TXT_KEY_CIV_CHINA_SOUTH_SONG"
+				return "TXT_KEY_CIV_SOUTHERN_CHINA_SONG"
 
 			if iEra == iRenaissance and turn() >= year(1400):
-				return "TXT_KEY_CIV_CHINA_SOUTH_MING"
+				return "TXT_KEY_CIV_SOUTHERN_CHINA_MING"
 			
 	elif iCiv == iBabylonia:
 		if bCityStates and not bEmpire:

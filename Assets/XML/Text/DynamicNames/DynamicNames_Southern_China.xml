@@ -2,7 +2,7 @@
 <!-- China -->
 <Civ4GameText xmlns="http://www.firaxis.com">
 	<TEXT>
-		<Tag>TXT_KEY_CIV_CHINA_SOUTH_DESC</Tag>
+		<Tag>TXT_KEY_CIV_SOUTHERN_CHINA_DESC</Tag>
 		<English>The Yangtze Chinese</English>
 		<French>
 			<Text>Les Chinois du Yangtze</Text>
@@ -14,7 +14,7 @@
 		<Spanish>The Yangtze Chinese</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CIV_CHINA_SOUTH_PEOPLES</Tag>
+		<Tag>TXT_KEY_CIV_SOUTHERN_CHINA_PEOPLES</Tag>
 		<English>Yangtze Peoples</English>
 		<French>
 			<Text>Han du Yangtze</Text>
@@ -38,7 +38,7 @@
 		</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CIV_CHINA_SOUTH_DEFAULT</Tag>
+		<Tag>TXT_KEY_CIV_SOUTHERN_CHINA_DEFAULT</Tag>
 		<English>Kingdom of Wu</English>
 		<French>
 			<Text>Royaume de Wu</Text>
@@ -50,7 +50,7 @@
 		<Spanish>Kingdom of Wu</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CIV_CHINA_SOUTH_FASCIST</Tag>
+		<Tag>TXT_KEY_CIV_SOUTHERN_CHINA_FASCIST</Tag>
 		<English>Republic of China</English>
 		<French>
 			<Text>Nation de Chine</Text>
@@ -62,7 +62,7 @@
 		<Spanish>Nation of %s1</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CIV_CHINA_SOUTH_ZHOU</Tag>
+		<Tag>TXT_KEY_CIV_SOUTHERN_CHINA_ZHOU</Tag>
 		<English>Zhou</English>
 		<French>Zhou</French>
 		<German>Zhou</German>
@@ -70,7 +70,7 @@
 		<Spanish>Zhou</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CIV_CHINA_SOUTH_HAN</Tag>
+		<Tag>TXT_KEY_CIV_SOUTHERN_CHINA_HAN</Tag>
 		<English>Han</English>
 		<French>
 			<Text>Han</Text>
@@ -90,7 +90,7 @@
 		</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CIV_CHINA_SOUTH_SONG</Tag>
+		<Tag>TXT_KEY_CIV_SOUTHERN_CHINA_SONG</Tag>
 		<English>Southern Song</English>
 		<French>Song du sud</French>
 		<German>Sudliche Song</German>
@@ -98,7 +98,7 @@
 		<Spanish>Song meridional</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CIV_CHINA_SOUTH_MING</Tag>
+		<Tag>TXT_KEY_CIV_SOUTHERN_CHINA_MING</Tag>
 		<English>Southern Ming</English>
 		<French>Ming du sud</French>
 		<German>Southern Ming</German>
@@ -130,7 +130,7 @@
 		</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CIV_CHINA_SOUTH_SHORT_DESC</Tag>
+		<Tag>TXT_KEY_CIV_SOUTHERN_CHINA_SHORT_DESC</Tag>
 		<English>Southern China</English>
 		<French>
 			<Text>Chine du sud</Text>
@@ -154,7 +154,7 @@
 		</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CIV_CHINA_SOUTH_ADJECTIVE</Tag>
+		<Tag>TXT_KEY_CIV_SOUTHERN_CHINA_ADJECTIVE</Tag>
 		<English>
 			<Text>South Chinese</Text>
 			<Gender>Male</Gender>

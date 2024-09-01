@@ -1349,10 +1349,10 @@
 			<CivilizationActionSound>AS3D_CHINA_ORDER</CivilizationActionSound>
 		</CivilizationInfo>
 		<CivilizationInfo>
-			<Type>CIVILIZATION_CHINA_SOUTH</Type>
-			<Description>TXT_KEY_CIV_CHINA_SOUTH_DESC</Description>
-			<ShortDescription>TXT_KEY_CIV_CHINA_SOUTH_SHORT_DESC</ShortDescription>
-			<Adjective>TXT_KEY_CIV_CHINA_SOUTH_ADJECTIVE</Adjective>
+			<Type>CIVILIZATION_SOUTHERN_CHINA</Type>
+			<Description>TXT_KEY_CIV_SOUTHERN_CHINA_DESC</Description>
+			<ShortDescription>TXT_KEY_CIV_SOUTHERN_CHINA_SHORT_DESC</ShortDescription>
+			<Adjective>TXT_KEY_CIV_SOUTHERN_CHINA_ADJECTIVE</Adjective>
 			<Civilopedia>TXT_KEY_CIV_CHINA_PEDIA</Civilopedia>
 			<DefaultPlayerColor>PLAYERCOLOR_MIDDLE_GREEN</DefaultPlayerColor>
 			<ArtDefineTag>ART_DEF_CIVILIZATION_CHINA</ArtDefineTag>
