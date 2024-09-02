@@ -2150,7 +2150,7 @@ def leader(iPlayer):
 
 		if bResurrected: return iGaozong
 		
-		if year() >= year(900): return iGaozong
+		if year() >= year(1120): return iGaozong
 
 	elif iCiv == iBabylonia:
 		if year() >= year(-1600): return iHammurabi
