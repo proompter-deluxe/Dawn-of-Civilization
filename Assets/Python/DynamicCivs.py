@@ -955,6 +955,9 @@ def specificName(iPlayer):
 			
 			if iEra == iRenaissance and turn() >= year(1400):
 				return "TXT_KEY_CIV_CHINA_MING"
+		
+		if iEra < iMedieval or scenario() < i600AD:
+			return "TXT_KEY_CIV_CHINA_WEI_KINGDOM"
 
 	if iCiv == iChinaS:
 		if not bEmpire and bMonarchy:
@@ -1243,7 +1246,9 @@ def specificAdjective(iPlayer):
 				return "TXT_KEY_CIV_CHINA_SUI"
 			
 			if iEra == iClassical:
-				if year() >= year(0):
+				if year() >= year(220):
+					return "TXT_KEY_CIV_CHINA_WEI"
+				if year() >= year(-200):
 					return "TXT_KEY_CIV_CHINA_HAN"
 				
 				return "TXT_KEY_CIV_CHINA_QIN"

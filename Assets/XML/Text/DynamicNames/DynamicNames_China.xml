@@ -110,6 +110,22 @@
 		<Spanish>Qin</Spanish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_CIV_CHINA_WEI</Tag>
+		<English>Wei</English>
+		<French>Wei</French>
+		<German>Wei</German>
+		<Italian>Wei</Italian>
+		<Spanish>Wei</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_CHINA_WEI_KINGDOM</Tag>
+		<English>Kingdom of Wei</English>
+		<French>Kingdom of Wei</French>
+		<German>Kingdom of Wei</German>
+		<Italian>Kingdom of Wei</Italian>
+		<Spanish>Kingdom of Wei</Spanish>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_CIV_CHINA_SUI</Tag>
 		<English>Sui</English>
 		<French>Sui</French>
