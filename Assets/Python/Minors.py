@@ -446,7 +446,7 @@ minor_cities = [
 	MinorCity(-2100, iBarbarian, (118, 49), "Sanxingdui", iPopulation=2, iCiv=iChina, units={iDefend: 1, iBase: 1}, adjective="TXT_KEY_ADJECTIVE_SHU"),
 	MinorCity(-2100, iBarbarian, (119, 55), "Qiang", iPopulation=1, iCiv=iChina, units={iDefend: 1, iAttack: 1}, adjective="TXT_KEY_ADJECTIVE_QIANG"),
 	MinorCity(-2050, iIndependent, (126, 53), "Linzi", iPopulation=1, iCiv=iChina, units={iBase: 1}, adjective="TXT_KEY_ADJECTIVE_QI"),
-	MinorCity(-2050, iIndependent, (124, 51), "Yangzhai", iPopulation=1, iCiv=iChina, units={iBase: 1}, adjective="TXT_KEY_ADJECTIVE_HAN"),
+	MinorCity(-2050, iIndependent2, (124, 51), "Yangzhai", iPopulation=1, iCiv=iChina, units={iBase: 1}, adjective="TXT_KEY_ADJECTIVE_HAN"),
 	MinorCity(-1600, iIndependent, (84, 45), "Yerushalayim", iPopulation=2, iCiv=iBabylonia, units={iDefend: 3}, adjective="TXT_KEY_ADJECTIVE_ISRAELITE"),
 	MinorCity(-1200, iIndependent2, (105, 46), "Indraprastha", iPopulation=1, iCiv=iIndia, units={iDefend: 1, iAttack: 1}, bIgnoreRuins=True, condition=lambda: player(iIndia).isHuman(), adjective="TXT_KEY_ADJECTIVE_VEDIC"),
 	MinorCity(-1200, iIndependent2, (81, 53), "Sfard", iPopulation=2, iCiv=iGreece, units={iDefend: 2}, condition=lambda: not player(iHittites).isExisting(), adjective="TXT_KEY_ADJECTIVE_LYDIAN"),
