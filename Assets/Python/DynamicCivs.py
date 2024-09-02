@@ -446,6 +446,7 @@ dEmpireThreshold = {
 	iPolynesia : 3,
 	iDravidia : 3,
 	iKorea : 4,
+	iChinaS: 9,
 	iTibet : 2,
 	iMoors : 3,
 	iHolyRome : 3,
@@ -956,7 +957,7 @@ def specificName(iPlayer):
 				return "TXT_KEY_CIV_CHINA_MING"
 
 	if iCiv == iChinaS:
-		if bEmpire or bMonarchy:
+		if not bEmpire and bMonarchy:
 			return "TXT_KEY_CIV_YANGTZE_CHINA_DEFAULT"
 	
 	elif iCiv == iNubia:
@@ -1230,7 +1231,7 @@ def specificAdjective(iPlayer):
 			if iReligion == iHinduism:
 				return "TXT_KEY_CIV_INDIA_GUPTA"
 			
-	elif iCiv == iChina:
+	elif iCiv == iChina or iCiv == iChinaS and bEmpire:
 		if bMonarchy:
 			if iEra >= iMedieval:
 				if tPlayer.isHasTech(iPaper) and tPlayer.isHasTech(iGunpowder):
@@ -1257,6 +1258,8 @@ def specificAdjective(iPlayer):
 
 			if iEra == iRenaissance and turn() >= year(1400):
 				return "TXT_KEY_CIV_YANGTZE_CHINA_MING"
+
+			return "TXT_KEY_CIV_YANGTZE_CHINA_WU"
 			
 	elif iCiv == iBabylonia:
 		if bCityStates and not bEmpire:

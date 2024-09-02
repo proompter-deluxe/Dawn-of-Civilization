@@ -282,7 +282,7 @@
 		<Spanish>Gothic</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_ADJECTIVE_HAN</Tag>
+		<Tag>TXT_KEY_ADJECTIVE_WEI</Tag>
 		<English>Han</English>
 		<French>Han</French>
 		<German>Han</German>
@@ -881,7 +881,15 @@
 		<Italian>Xiongnu</Italian>
 		<Spanish>Xiongnu</Spanish>
 	</TEXT>
-		<TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_ADJECTIVE_XIANBEI</Tag>
+		<English>Xianbei</English>
+		<French>Xianbei</French>
+		<German>Xianbei</German>
+		<Italian>Xianbei</Italian>
+		<Spanish>Xianbei</Spanish>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_ADJECTIVE_YELLOW_TURBAN</Tag>
 		<English>Yellow Turban Rebellion</English>
 		<French>Yellow Turban Rebellion</French>

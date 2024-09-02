@@ -98,6 +98,14 @@
 		<Spanish>Southern Ming</Spanish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_CIV_YANGTZE_CHINA_WU</Tag>
+		<English>Wu</English>
+		<French>Wu</French>
+		<German>Wu</German>
+		<Italian>Wu</Italian>
+		<Spanish>Wu</Spanish>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_CIV_CHINESE_SOUTH_VASSAL</Tag>
 		<English>Tributary Yangtze %s4 State</English>
 		<French>
