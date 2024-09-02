@@ -51,15 +51,15 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIV_CHINA_DEFAULT</Tag>
-		<English>Middle Kingdom of %s1</English>
+		<English>Middle Kingdom of China</English>
 		<French>
 			<Text>Empire du Milieu</Text>
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>Middle Kingdom of %s1</German>
-		<Italian>Middle Kingdom of %s1</Italian>
-		<Spanish>Middle Kingdom of %s1</Spanish>
+		<German>Middle Kingdom of China</German>
+		<Italian>Middle Kingdom of China</Italian>
+		<Spanish>Middle Kingdom of China</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIV_CHINA_FASCIST</Tag>
