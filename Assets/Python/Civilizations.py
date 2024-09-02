@@ -200,6 +200,7 @@ lCivilizations = [
 		iChina,
 		iGold=50,
 		lCivics=[iDespotism],
+		lEnemies=[iIndependent, iIndependent2],
 		techs=techs.column(1).without(iSailing).including(iSmelting, iLeverage, iProperty, iCeremony)
 	),
 	Civilization(
