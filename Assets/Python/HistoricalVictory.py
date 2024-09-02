@@ -203,7 +203,7 @@ dGoals = {
 		CitySpecialistCount(capital().named(CAPITAL), great_people(), 3, by=-600),
 	),
 	iChina: (
-		SpecialistCount(sum(iSpecialistStatesman), 40, by=180),
+		SpecialistCount(sum(iSpecialistStatesman, iSpecialistGreatStatesman), 40, by=180),
 		Control(
 			plots.region(rNorthChina).named(CHINA_NORTH),
 			plots.region(rSouthChina).named(CHINA_SOUTH),
