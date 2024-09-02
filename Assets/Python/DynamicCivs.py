@@ -446,6 +446,7 @@ dEmpireThreshold = {
 	iPolynesia : 3,
 	iDravidia : 3,
 	iKorea : 4,
+	iChina: 5,
 	iChinaS: 9,
 	iTibet : 2,
 	iMoors : 3,
@@ -952,11 +953,11 @@ def specificName(iPlayer):
 		if bEmpire:
 			if iEra >= iIndustrial or scenario() == i1700AD:
 				return "TXT_KEY_CIV_CHINA_QING"
-			
+
 			if iEra == iRenaissance and turn() >= year(1400):
 				return "TXT_KEY_CIV_CHINA_MING"
-		
-		if iEra < iMedieval or scenario() < i600AD:
+
+		if iEra < iMedieval and turn() >= year(220) and not scenario() >= i600AD:
 			return "TXT_KEY_CIV_CHINA_WEI_KINGDOM"
 
 	if iCiv == iChinaS:
@@ -1246,6 +1247,8 @@ def specificAdjective(iPlayer):
 				return "TXT_KEY_CIV_CHINA_SUI"
 			
 			if iEra == iClassical:
+				if year() >= year(600):
+					return "TXT_KEY_CIV_CHINA_SUI"
 				if year() >= year(220):
 					return "TXT_KEY_CIV_CHINA_WEI"
 				if year() >= year(-200):
