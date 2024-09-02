@@ -15,7 +15,7 @@ dRelocatedCapitals = CivDict({
 })
 
 dCapitalInfrastructure = CivDict({
-	iPhoenicia : (3, [], []),
+	iPhoenicia : (3, [iHarbor], []),
 	iByzantium : (5, [iBarracks, iWalls, iLibrary, iMarket, iGranary, iHarbor, iForge], [temple]),
 	iPortugal : (5, [iLibrary, iMarket, iHarbor, iLighthouse, iForge, iWalls], [temple]),
 	iItaly : (7, [iLibrary, iMarket, iArtStudio, iAqueduct, iJail, iWalls], [temple]),
@@ -147,30 +147,39 @@ def placeGoodyHuts(iGameTurn):
 				for tTL, tBR in scenario_definition.lTribalVillages:
 					placeTribalVillage(tTL, tBR)
 
-
-@handler("BeginGameTurn")
-def createCarthaginianSettler(iGameTurn):
-	if not player(iPhoenicia).isHuman() and iGameTurn == year(-820) - (data.iSeed % 10):
-		makeUnit(iPhoenicia, iSettler, tCarthage)
-		makeUnits(iPhoenicia, iArcher, tCarthage, 2)
-		makeUnits(iPhoenicia, iWorker, tCarthage, 2)
-		makeUnits(iPhoenicia, iWarElephant, tCarthage, 2)
-
-
 # TODO: revisit how this works
 @handler("BeginGameTurn")
 def checkEarlyColonists():
-	dEarlyColonistYears = {
-		-850 : iGreece,
-		-700 : iCarthage,
-		-400 : iRome,
-	}
-	
-	iYear = game.getGameTurnYear()
-	if iYear in dEarlyColonistYears:
-		iCiv = dEarlyColonistYears[iYear]
-		giveEarlyColonists(iCiv)
-		
+	if year().between(-850, -300): # early exit
+		# a bit primitive list of if's
+		# but this list shouldn't grow beyond 10 entries
+		# and only gets checked in antiquity, 
+		# so it shouldn't be a problem performance-wise
+
+		offset = turns(data.iSeed % 5)
+
+		# the foundation of Carthage
+		if year() == year(-810) - offset:
+			pPlayer = player(iPhoenicia)
+			if pPlayer.isExisting() and not pPlayer.isHuman():
+				message(active(), 'TXT_KEY_EVENT_EARLY_COLONIZERS', adjective(pPlayer))
+				makeUnit(iPhoenicia, iSettler, tCarthage)
+				makeUnits(iPhoenicia, iArcher, tCarthage, 2)
+				makeUnits(iPhoenicia, iWorker, tCarthage, 2)
+				makeUnits(iPhoenicia, iWarElephant, tCarthage, 2)
+		elif year() == year(-750) - offset:
+			giveEarlyColonists(iGreece)
+		elif year() == year(-700) - offset:
+			giveEarlyColonists(iPhoenicia)
+		# give Carthage an extra colonist for Iberia, directly (without galley)
+		elif year() == year(-550) - offset:
+			pPlayer = player(iPhoenicia)
+			if pPlayer.isExisting() and not pPlayer.isHuman():
+				message(active(), 'TXT_KEY_EVENT_EARLY_COLONIZERS', adjective(pPlayer))
+				makeUnit(iPhoenicia, iSettler, tGades)
+				makeUnit(iPhoenicia, iArcher, tGades)
+		elif year() == year(-350) - offset:
+			giveEarlyColonists(iRome)
 		
 @handler("BeginGameTurn")
 def checkLateColonists():
@@ -580,17 +589,16 @@ def giveEarlyColonists(iCiv):
 	pPlayer = player(iCiv)
 	
 	if pPlayer.isExisting() and not pPlayer.isHuman():
+		message(active(), 'TXT_KEY_EVENT_EARLY_COLONIZERS', adjective(pPlayer))
 		capital = pPlayer.getCapitalCity()
-
-		if iCiv == iRome:
-			capital = cities.owner(iCiv).region(rIberia).random()
-			
 		if capital:
 			tSeaPlot = findSeaPlots(capital, 1, iCiv)
 			if tSeaPlot:
 				makeUnit(iCiv, iGalley, tSeaPlot, UnitAITypes.UNITAI_SETTLER_SEA)
 				makeUnit(iCiv, iSettler, tSeaPlot)
 				makeUnit(iCiv, iArcher, tSeaPlot)
+			else:
+				message(active(), 'WARNING: could not find sea plot for early colonizers')
 
 
 def giveColonists(iPlayer):
