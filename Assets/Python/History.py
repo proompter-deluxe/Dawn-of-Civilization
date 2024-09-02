@@ -178,6 +178,7 @@ def checkEarlyColonists():
 				message(active(), 'TXT_KEY_EVENT_EARLY_COLONIZERS', adjective(pPlayer))
 				makeUnit(iPhoenicia, iSettler, tGades)
 				makeUnit(iPhoenicia, iArcher, tGades)
+				makeUnit(iPhoenicia, iWorker, tCarthage)
 		elif year() == year(-350) - offset:
 			giveEarlyColonists(iRome)
 		
