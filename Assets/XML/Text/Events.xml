@@ -6922,4 +6922,12 @@
 		<Italian>[PARAGRAPH:1]To complete this quest, you must construct %d1 [COLOR_BUILDING_TEXT]Wharfs[COLOR_REVERT] in your various coastal cities. You will also have to build %d2 [COLOR_UNIT_TEXT]Caravels[COLOR_REVERT].[PARAGRAPH:1]You will fail this quest if a rival civilization completes it first, or if you reach the Industrial Era without having met the conditions.</Italian>
 		<Spanish>[PARAGRAPH:1]To complete this quest, you must construct %d1 [COLOR_BUILDING_TEXT]Wharfs[COLOR_REVERT] in your various coastal cities. You will also have to build %d2 [COLOR_UNIT_TEXT]Caravels[COLOR_REVERT].[PARAGRAPH:1]You will fail this quest if a rival civilization completes it first, or if you reach the Industrial Era without having met the conditions.</Spanish>
 	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_EVENT_EARLY_COLONIZERS</Tag>
+		<English>Citizens of the %s1 civilization are leaving their home city to seek a better life in a new colony.</English>
+		<French>Citizens of the %s1 civilization are leaving their home city to seek a better life in a new colony.</French>
+		<German>Citizens of the %s1 civilization are leaving their home city to seek a better life in a new colony.</German>
+		<Italian>Citizens of the %s1 civilization are leaving their home city to seek a better life in a new colony.</Italian>
+		<Spanish>Citizens of the %s1 civilization are leaving their home city to seek a better life in a new colony.</Spanish>
+	</TEXT>
 </Civ4GameText>
