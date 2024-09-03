@@ -163,9 +163,9 @@ def checkEarlyColonists():
 			pPlayer = player(iPhoenicia)
 			if pPlayer.isExisting() and not pPlayer.isHuman():
 				message(active(), 'TXT_KEY_EVENT_EARLY_COLONIZERS', adjective(pPlayer))
-				makeUnit(iPhoenicia, iSettler, tCarthage)
+				makeUnit(iPhoenicia, iSettler, tCarthage, UnitAITypes.UNITAI_SETTLE)
 				makeUnits(iPhoenicia, iArcher, tCarthage, 2)
-				makeUnits(iPhoenicia, iWorker, tCarthage, 2)
+				makeUnits(iPhoenicia, iWorker, tCarthage, 2, UnitAITypes.UNITAI_WORKER)
 				makeUnits(iPhoenicia, iWarElephant, tCarthage, 2)
 		elif year() == year(-750) - offset:
 			giveEarlyColonists(iGreece)
@@ -176,9 +176,9 @@ def checkEarlyColonists():
 			pPlayer = player(iPhoenicia)
 			if pPlayer.isExisting() and not pPlayer.isHuman():
 				message(active(), 'TXT_KEY_EVENT_EARLY_COLONIZERS', adjective(pPlayer))
-				makeUnit(iPhoenicia, iSettler, tGades)
+				makeUnit(iPhoenicia, iSettler, tGades, UnitAITypes.UNITAI_SETTLE)
 				makeUnit(iPhoenicia, iArcher, tGades)
-				makeUnit(iPhoenicia, iWorker, tCarthage)
+				makeUnit(iPhoenicia, iWorker, tCarthage, UnitAITypes.UNITAI_WORKER)
 		elif year() == year(-350) - offset:
 			giveEarlyColonists(iRome)
 		
