@@ -312,7 +312,7 @@ lCivilizations = [
 		iGold=150,
 		iAdvancedStartPoints=100,
 		lCivics=[iMonarchy, iCasteSystem, iRedistribution, iSyncretism, iHegemony],
-		techs=techs.column(4).including(iGeneralship, iEngineering, iPhilosophy)
+		techs=techs.column(4).including(iGeneralship, iEngineering, iPhilosophy, iCurrency)
 	),
 	Civilization(
 		iMali,
