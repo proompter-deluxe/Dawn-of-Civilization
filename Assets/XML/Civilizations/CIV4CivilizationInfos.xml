@@ -1359,7 +1359,7 @@
 			<ArtStyleType>ARTSTYLE_ASIAN</ArtStyleType>
 			<UnitArtStyleType>UNIT_ARTSTYLE_ASIAN</UnitArtStyleType>
 			<PaganReligion>PAGAN_RELIGION_SHENDAO</PaganReligion>
-			<Impact>IMPACT_SIGNIFICANT</Impact>
+			<Impact>IMPACT_LIMITED</Impact>
 			<Identifier>CHS</Identifier>
 			<StartingYear>200</StartingYear>
 			<LoadingTimes>
@@ -2517,7 +2517,7 @@
 			<ArtStyleType>ARTSTYLE_MIDDLE_EAST</ArtStyleType>
 			<UnitArtStyleType>UNIT_ARTSTYLE_MIDDLE_EASTERN</UnitArtStyleType>
 			<PaganReligion>PAGAN_RELIGION_ANUNNAKI</PaganReligion>
-			<Impact>IMPACT_LIMITED</Impact>
+			<Impact>IMPACT_SIGNIFICANT</Impact>
 			<Identifier>HIT</Identifier>
 			<StartingYear>-1800</StartingYear>
 			<LoadingTimes>
@@ -5157,7 +5157,7 @@
 			<ArtStyleType>ARTSTYLE_EUROPEAN</ArtStyleType>
 			<UnitArtStyleType>UNIT_ARTSTYLE_EUROPEAN</UnitArtStyleType>
 			<PaganReligion>PAGAN_RELIGION_RODNOVERY</PaganReligion>
-			<Impact>IMPACT_LIMITED</Impact>
+			<Impact>IMPACT_SIGNIFICANT</Impact>
 			<Identifier>POL</Identifier>
 			<StartingYear>1025</StartingYear>
 			<LoadingTimes>
@@ -5645,7 +5645,7 @@
 			<ArtStyleType>ARTSTYLE_EUROPEAN</ArtStyleType>
 			<UnitArtStyleType>UNIT_ARTSTYLE_EUROPEAN</UnitArtStyleType>
 			<PaganReligion>PAGAN_RELIGION_RODNOVERY</PaganReligion>
-			<Impact>IMPACT_SIGNIFICANT</Impact>
+			<Impact>IMPACT_LIMITED</Impact>
 			<Identifier>UKR</Identifier>
 			<StartingYear>880</StartingYear>
 			<LoadingTimes>
