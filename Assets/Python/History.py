@@ -173,9 +173,11 @@ def checkEarlyColonists():
 			giveEarlyColonists(iPhoenicia)
 		# Phoenicia often refuses to settle spain, and so I must force the issue
 		elif year() == year(-550): # - offset: --> no offset, since we spawn the city in -570
-			flipCity(tGades, False, True, iPhoenicia)
-			makeUnits(iPhoenicia, iWorker, tGades, 1, UnitAITypes.UNITAI_WORKER)
-			makeUnits(iPhoenicia, iArcher, tGades, 1, UnitAITypes.UNITAI_CITY_DEFENSE)
+			pPlayer = player(iPhoenicia)
+			if pPlayer.isExisting() and not pPlayer.isHuman():
+				flipCity(tGades, False, True, iPhoenicia)
+				makeUnits(iPhoenicia, iWorker, tGades, 1, UnitAITypes.UNITAI_WORKER)
+				makeUnits(iPhoenicia, iArcher, tGades, 1, UnitAITypes.UNITAI_CITY_DEFENSE)
 		elif year() == year(-350) - offset:
 			giveEarlyColonists(iRome)
 		
