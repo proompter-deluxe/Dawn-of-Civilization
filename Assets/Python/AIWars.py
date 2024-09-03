@@ -19,7 +19,7 @@ tRomeCarthageTL = (60, 45)
 tRomeCarthageBR = (70, 49)
 
 iRomeGreeceYear = -150
-tRomeGreeceTL = (73, 49)
+tRomeGreeceTL = (73, 48)
 tRomeGreeceBR = (78, 56)
 
 iRomeMesopotamiaYear = -100
