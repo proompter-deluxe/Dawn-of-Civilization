@@ -32,7 +32,7 @@ tRomeAnatoliaBR = (88, 55)
 
 iRomeCeltiaYear = -50
 tRomeCeltiaTL = (56, 55)
-tRomeCeltiaBR = (64, 62)
+tRomeCeltiaBR = (67, 62)
 
 iRomeEgyptYear = 0
 tRomeEgyptTL = (76, 40)
