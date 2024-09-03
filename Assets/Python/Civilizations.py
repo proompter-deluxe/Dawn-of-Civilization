@@ -311,7 +311,7 @@ lCivilizations = [
 	Civilization(
 		iChinaS,
 		iGold=150,
-		iAdvancedStartPoints=100,
+		iAdvancedStartPoints=60,
 		lCivics=[iMonarchy, iCasteSystem, iRedistribution, iSyncretism, iHegemony],
 		techs=techs.column(4).including(iGeneralship, iEngineering, iPhilosophy, iCurrency, iAesthetics, iScholarship)
 	),
