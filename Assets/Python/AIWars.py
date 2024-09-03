@@ -92,6 +92,12 @@ tMongolsPersiaBR = (98, 52)
 
 tConquestMongolsPersia = (13, iMongols, iTurks, tMongolsPersiaTL, tMongolsPersiaBR, 7, iMongolsPersiaYear, 10)
 
+iChinaIndiesYear = -240
+tChinaIndiesTL = (118, 49)
+tChinaIndiesBR = (126, 56)
+
+tConquestChinaIndependents = (14, iChina, iIndependent, tChinaIndiesTL, tChinaIndiesBR, 3, iChinaIndiesYear, 10)
+
 lConquests = [
 	tConquestRomeCarthage, 
 	tConquestRomeGreece, 
@@ -106,6 +112,7 @@ lConquests = [
 	tConquestTurksAnatolia, 
 	tConquestEnglandIreland,
 	tConquestMongolsPersia,
+	tConquestChinaIndependents
 ]
 
 
