@@ -3909,7 +3909,7 @@ void CvCity::hurry(HurryTypes eHurry)
 	changeProduction(hurryProduction(eHurry));
 
 	// Leoreth: remember if a unit is being hurried to apply the mercenary promotion, includes Phoenician UP
-	if (isProductionUnit() && iHurryGold > 0 && getCivilizationType() != PHOENICIA)
+	if (isProductionUnit() && iHurryGold > 0 && getCivilizationType() != CARTHAGE)
 	{
 		setUnitHurried(getProductionUnit(), true);
 	}
@@ -5141,7 +5141,7 @@ int CvCity::determineArtStyleType() const
 			{
 				return GC.getCivilizationInfo(ARABIA).getArtStyleType();
 			}
-			return GC.getCivilizationInfo(PHOENICIA).getArtStyleType();
+			return GC.getCivilizationInfo(CARTHAGE).getArtStyleType();
 		case REGION_MESOPOTAMIA:
 			if (isHasReligion(ISLAM))
 			{
@@ -6155,7 +6155,7 @@ int CvCity::getHurryGold(HurryTypes eHurry, int iHurryCost) const
 	iGold = (iHurryCost * GC.getHurryInfo(eHurry).getGoldPerProduction());
 	
 	// Phoenician UP: -50% mercenary cost
-	if (getCivilizationType() == PHOENICIA && GC.getHurryInfo(eHurry).isUnits())
+	if (getCivilizationType() == CARTHAGE && GC.getHurryInfo(eHurry).isUnits())
 	{
 		iGold /= 2;
 	}

@@ -508,7 +508,7 @@ dStartingLeaders = [
 	iNubia : iTaharqa,
 	iGreece : iPericles,
 	iPersia : iCyrus,
-	iPhoenicia : iHiram,
+	iCarthage : iHiram,
 	iPolynesia : iAhoeitu,
 	iRome : iJuliusCaesar,
 	iCelts : iBrennus,

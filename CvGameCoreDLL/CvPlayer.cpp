@@ -6417,7 +6417,7 @@ bool CvPlayer::canConstruct(BuildingTypes eBuilding, bool bContinue, bool bTestV
 
 		else if (isHumanVictoryWonder(eBuilding, MEZQUITA, MOORS)) return false;
 
-		else if (isHumanVictoryWonder(eBuilding, GREAT_COTHON, PHOENICIA)) return false;
+		else if (isHumanVictoryWonder(eBuilding, GREAT_COTHON, CARTHAGE)) return false;
 
 		else if (isHumanVictoryWonder(eBuilding, TEMPLE_OF_KUKULKAN, MAYA)) return false;
 
@@ -12226,7 +12226,7 @@ void CvPlayer::applyCivilization(CivilizationTypes eCivilization, int iChange)
 	int iI;
 
 	// Phoenician UP: can always hurry units
-	if (eCivilization == PHOENICIA)
+	if (eCivilization == CARTHAGE)
 	{
 		changeHurryCount((HurryTypes)1, iChange);
 	}

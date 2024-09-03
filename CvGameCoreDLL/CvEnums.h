@@ -1179,7 +1179,7 @@ enum CivilizationTypes		// Exposed to Python
 	BYZANTIUM, 
 	CANADA,
 
-	PHOENICIA,
+	CARTHAGE,
 	CELTS,
 	CHINA, 
 	YANGTZE_CHINA,
