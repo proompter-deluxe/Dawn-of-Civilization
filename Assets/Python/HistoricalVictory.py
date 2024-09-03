@@ -191,7 +191,7 @@ dGoals = {
 		All(
 			CityCaptureGold(250),
 			UnitLevelCount(3, 5),
-			by=-1200,
+			by=-900,
 		),
 		Control(
 			plots.region(rMesopotamia).named(MESOPOTAMIA),
@@ -200,7 +200,7 @@ dGoals = {
 			plots.region(rEgypt).named(EGYPT),
 			by=-900,
 		),
-		CitySpecialistCount(capital().named(CAPITAL), great_people(), 3, by=-600),
+		CitySpecialistCount(capital().named(CAPITAL), great_people(), 3, by=-550),
 	),
 	iChina: (
 		SpecialistCount(sum(iSpecialistStatesman, iSpecialistGreatStatesman), 40, by=180),

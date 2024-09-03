@@ -195,7 +195,7 @@ lCivilizations = [
 	Civilization(
 		iAssyria,
 		lEnemies=[iBabylonia],
-		techs=techs.column(1).including(iSmelting)
+		techs=techs.column(2).without(iRiding, iSeafaring).including(iAlloys, iWriting)
 	),
 	Civilization(
 		iChina,
@@ -620,8 +620,10 @@ lCivilizations = [
 dStartingUnits = CivDict({
 	iAssyria: {
 		iSettle: 1,
-		iWork: 1,
-		iBase: 1,
+		iWork: 2,
+		iDefend: 1,
+		iCounter: 3,
+		iSiege: 3,
 	},
 	iChina: {
 		iSettle: 1,
@@ -1115,8 +1117,9 @@ dStartingUnits = CivDict({
 
 dExtraAIUnits = CivDict({
 	iAssyria : {
-		iAttack: 3,
-		iSiegeRam: 5,
+		iDefend: 1,
+		iCounter: 3,
+		iSiege: 2,
 	},
 	iHittites  : {
 		iAttack: 2,
