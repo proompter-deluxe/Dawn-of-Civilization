@@ -1179,7 +1179,6 @@ enum CivilizationTypes		// Exposed to Python
 	BYZANTIUM, 
 	CANADA,
 
-	PHOENICIA,
 	CELTS,
 	CHINA, 
 	COLOMBIA,
@@ -1219,6 +1218,7 @@ enum CivilizationTypes		// Exposed to Python
 	NUBIA,
 	OTTOMANS,
 	PERSIA,
+	PHOENICIA,
 	POLAND,
 	POLYNESIA,
 	PORTUGAL,
