@@ -39,7 +39,7 @@ tRomeEgyptTL = (76, 40)
 tRomeEgyptBR = (82, 45)
 
 # following setup: iPlayer, iPreferredTarget, TL, BR, iNumTargets, iStartYear, iTurnInterval
-tConquestRomeCarthage = (0, iRome, iCarthage, tRomeCarthageTL, tRomeCarthageBR, 2, iRomeCarthageYear, 10)
+tConquestRomeCarthage = (0, iRome, iPhoenicia, tRomeCarthageTL, tRomeCarthageBR, 2, iRomeCarthageYear, 10)
 tConquestRomeGreece = (1, iRome, iGreece, tRomeGreeceTL, tRomeGreeceBR, 2, iRomeGreeceYear, 10)
 tConquestRomeAnatolia = (2, iRome, iGreece, tRomeAnatoliaTL, tRomeAnatoliaBR, 3, iRomeAnatoliaYear, 10)
 tConquestRomeCelts = (3, iRome, iCelts, tRomeCeltiaTL, tRomeCeltiaBR, 2, iRomeCeltiaYear, 10)

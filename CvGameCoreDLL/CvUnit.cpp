@@ -14422,7 +14422,7 @@ int CvUnit::getOriginalArtStyle(const CvPlot* pPlot) const
 		}
 		else
 		{
-			return GC.getCivilizationInfo(CARTHAGE).getUnitArtStyleType();
+			return GC.getCivilizationInfo(PHOENICIA).getUnitArtStyleType();
 		}
 	case REGION_FRANCE:
 	case REGION_QUEBEC:
@@ -14446,7 +14446,7 @@ int CvUnit::getOriginalArtStyle(const CvPlot* pPlot) const
 	case REGION_MESOPOTAMIA:
 		return GC.getCivilizationInfo(BABYLONIA).getUnitArtStyleType();
 	case REGION_LEVANT:
-		return GC.getCivilizationInfo(CARTHAGE).getUnitArtStyleType();
+		return GC.getCivilizationInfo(PHOENICIA).getUnitArtStyleType();
 	case REGION_ARABIA:
 		return GC.getCivilizationInfo(ARABIA).getUnitArtStyleType();
 	case REGION_EGYPT:

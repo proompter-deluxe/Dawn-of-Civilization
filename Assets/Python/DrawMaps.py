@@ -10,7 +10,7 @@ iWorldY = 80
 
 iNumCivs = 69
 (iAmerica, iArabia, iArgentina, iAssyria, iAztecs, iBabylonia, iBrazil, iBurma, iByzantium, iCanada, 
-iCarthage, iCelts, iChina, iChinaS, iColombia, iDravidia, iEgypt, iEngland, iEthiopia, iFrance, iGermany, 
+iPhoenicia, iCelts, iChina, iChinaS, iColombia, iDravidia, iEgypt, iEngland, iEthiopia, iFrance, iGermany, 
 iGreece, iHarappa, iHittites, iHolyRome, iInca, iIndia, iIran, iItaly, iJapan, iJava, 
 iKhmer, iCongo, iKorea, iKushans, iMalays, iMali, iMaya, iMexico, iMongols, iMoors, 
 iMughals, iNativeAmericans, iNetherlands, iNorse, iNubia, iOttomans, iPersia, iPoland, iPolynesia, iPortugal, 

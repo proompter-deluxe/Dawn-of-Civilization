@@ -904,7 +904,7 @@ iIndia : {
 		"Ravindra Kaushik", # 20th
 	],
 },
-iCarthage : {
+iPhoenicia : {
 	iGreatProphet : [
 		"Sakun-yaton", # unknown date
 		"fJezebel", # 9th BC

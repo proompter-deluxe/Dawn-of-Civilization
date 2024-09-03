@@ -15,14 +15,12 @@ iNumPlayers = gc.getMAX_PLAYERS()
 # civilizations, not players
 iNumCivs = 69
 (iAmerica, iArabia, iArgentina, iAssyria, iAztecs, iBabylonia, iBrazil, iBurma, iByzantium, iCanada, 
-iCarthage, iCelts, iChina, iChinaS, iColombia, iDravidia, iEgypt, iEngland, iEthiopia, iFrance, iGermany, 
+iCelts, iChina, iChinaS, iColombia, iDravidia, iEgypt, iEngland, iEthiopia, iFrance, iGermany, 
 iGreece, iHarappa, iHittites, iHolyRome, iInca, iIndia, iIran, iItaly, iJapan, iJava, 
 iKhmer, iCongo, iKorea, iKushans, iMalays, iMali, iMaya, iMexico, iMongols, iMoors, 
-iMughals, iNativeAmericans, iNetherlands, iNorse, iNubia, iOttomans, iPersia, iPoland, iPolynesia, iPortugal, 
+iMughals, iNativeAmericans, iNetherlands, iNorse, iNubia, iOttomans, iPersia, iPhoenicia, iPoland, iPolynesia, iPortugal, 
 iRome, iRus, iRussia, iSpain, iSumeria, iSwahili, iSweden, iThailand, iTibet, iToltecs, 
 iTurks, iVietnam, iZulu, iIndependent, iIndependent2, iNative, iMinor, iBarbarian) = tuple(Civ(i) for i in range(iNumCivs))
-
-iPhoenicia = iCarthage
 
 lBirthOrder = [
 	iEgypt,
@@ -34,7 +32,7 @@ lBirthOrder = [
 	iNubia,
 	iGreece,
 	iIndia,
-	iCarthage,
+	iPhoenicia,
 	iPolynesia,
 	iPersia,
 	iCelts,
@@ -103,9 +101,9 @@ iNumCivGroups = 6
 dCivGroups = {
 iCivGroupEurope : [iGreece, iRome, iCelts, iByzantium, iFrance, iNorse, iSpain, iEngland, iHolyRome, iRus, iItaly, iPoland, iPortugal, iSweden, iRussia, iNetherlands, iGermany],
 iCivGroupAsia : [iIndia, iChina, iChinaS, iHarappa, iPolynesia, iPersia, iJapan, iDravidia, iKushans, iKorea, iKhmer, iMalays, iJava, iTibet, iBurma, iVietnam, iMongols, iMughals, iThailand, iRussia, iTurks],
-iCivGroupMiddleEast : [iEgypt, iBabylonia, iAssyria, iHittites, iPersia, iKushans, iByzantium, iArabia, iMoors, iSwahili, iOttomans, iCarthage, iTurks, iIran],
+iCivGroupMiddleEast : [iEgypt, iBabylonia, iAssyria, iHittites, iPersia, iKushans, iByzantium, iArabia, iMoors, iSwahili, iOttomans, iPhoenicia, iTurks, iIran],
 iCivGroupMediterranean : [iEgypt, iGreece, iPhoenicia, iRome, iByzantium, iFrance, iArabia, iMoors, iSpain, iPortugal, iItaly, iOttomans],
-iCivGroupAfrica : [iEgypt, iNubia, iCarthage, iEthiopia, iMali, iMoors, iSwahili, iCongo],
+iCivGroupAfrica : [iEgypt, iNubia, iPhoenicia, iEthiopia, iMali, iMoors, iSwahili, iCongo],
 iCivGroupAmerica : [iMaya, iToltecs, iInca, iAztecs, iAmerica, iArgentina, iMexico, iColombia, iBrazil, iCanada],
 }
 
@@ -116,7 +114,7 @@ iNumTechGroups = 4
 
 dTechGroups = {
 iTechGroupWestern : [iRome, iGreece, iCelts, iByzantium, iFrance, iNorse, iSpain, iEngland, iHolyRome, iRus, iPoland, iPortugal, iItaly, iSweden, iRussia, iNetherlands, iGermany, iAmerica, iArgentina, iMexico, iColombia, iBrazil, iCanada],
-iTechGroupMiddleEast : [iEgypt, iBabylonia, iHarappa, iAssyria, iHittites, iNubia, iIndia, iCarthage, iPersia, iEthiopia, iKushans, iMali, iArabia, iMoors, iSwahili, iOttomans, iMughals, iDravidia, iCongo, iTurks, iIran],
+iTechGroupMiddleEast : [iEgypt, iBabylonia, iHarappa, iAssyria, iHittites, iNubia, iIndia, iPhoenicia, iPersia, iEthiopia, iKushans, iMali, iArabia, iMoors, iSwahili, iOttomans, iMughals, iDravidia, iCongo, iTurks, iIran],
 iTechGroupFarEast : [iChina, iChinaS, iKorea, iKhmer, iMalays, iJapan, iJava, iTibet, iBurma, iVietnam, iMongols, iThailand],
 iTechGroupNativeAmerica : [iPolynesia, iMaya, iToltecs, iInca, iAztecs],
 }
@@ -150,7 +148,7 @@ lNeighbours = [
 	(iEgypt, iNubia),
 	(iEgypt, iGreece),
 	(iEgypt, iPersia),
-	(iEgypt, iCarthage),
+	(iEgypt, iPhoenicia),
 	(iEgypt, iRome),
 	(iEgypt, iEthiopia),
 	(iEgypt, iByzantium),
@@ -165,7 +163,7 @@ lNeighbours = [
 	(iBabylonia, iArabia),
 	(iBabylonia, iOttomans),
 	(iBabylonia, iMongols),
-	(iBabylonia, iCarthage),
+	(iBabylonia, iPhoenicia),
 	(iBabylonia, iByzantium),
 	(iBabylonia, iIran),
 	(iHarappa, iIndia),
@@ -176,7 +174,7 @@ lNeighbours = [
 	(iHarappa, iMughals),
 	(iHarappa, iIran),
 	(iAssyria, iHittites),
-	(iAssyria, iCarthage),
+	(iAssyria, iPhoenicia),
 	(iAssyria, iGreece),
 	(iAssyria, iPersia),
 	(iAssyria, iByzantium),
@@ -198,7 +196,7 @@ lNeighbours = [
 	(iChinaS, iBurma),
 	(iChinaS, iMongols),
 	(iHittites, iGreece),
-	(iHittites, iCarthage),
+	(iHittites, iPhoenicia),
 	(iHittites, iPersia),
 	(iHittites, iCelts),
 	(iHittites, iByzantium),
@@ -206,7 +204,7 @@ lNeighbours = [
 	(iHittites, iOttomans),
 	(iHittites, iIran),
 	(iGreece, iPersia),
-	(iGreece, iCarthage),
+	(iGreece, iPhoenicia),
 	(iGreece, iRome),
 	(iGreece, iCelts),
 	(iGreece, iByzantium),
@@ -222,14 +220,14 @@ lNeighbours = [
 	(iIndia, iBurma),
 	(iIndia, iMughals),
 	(iIndia, iIran),
-	(iCarthage, iRome),
-	(iCarthage, iSpain),
-	(iCarthage, iMali),
-	(iCarthage, iPersia),
-	(iCarthage, iArabia),
-	(iCarthage, iMoors),
-	(iCarthage, iOttomans),
-	(iCarthage, iItaly),
+	(iPhoenicia, iRome),
+	(iPhoenicia, iSpain),
+	(iPhoenicia, iMali),
+	(iPhoenicia, iPersia),
+	(iPhoenicia, iArabia),
+	(iPhoenicia, iMoors),
+	(iPhoenicia, iOttomans),
+	(iPhoenicia, iItaly),
 	(iNubia, iEthiopia),
 	(iNubia, iArabia),
 	(iPersia, iRome),

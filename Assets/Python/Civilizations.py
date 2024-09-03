@@ -1603,7 +1603,7 @@ dTechPreferences = {
 		iTheology: -20,
 		iCivilService: -20,
 	},
-	iCarthage : {
+	iPhoenicia : {
 		iNavigation: 40,
 		iRiding: 30,
 		iCurrency: 30,
@@ -2068,7 +2068,7 @@ dBuildingPreferences = {
 		iParthenon: -30,
 		iStatueOfZeus: -20,
 	},
-	iCarthage : {
+	iPhoenicia : {
 		iGreatCothon: 30,
 		iGreatLighthouse: 15,
 		iColossus: 15,
