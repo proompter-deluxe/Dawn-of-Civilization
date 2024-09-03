@@ -193,11 +193,6 @@ lCivilizations = [
 		techs=techs.of(iTanning, iMining, iPottery, iAgriculture)
 	),
 	Civilization(
-		iAssyria,
-		lEnemies=[iBabylonia],
-		techs=techs.column(2).without(iRiding, iSeafaring).including(iAlloys, iWriting)
-	),
-	Civilization(
 		iChina,
 		iGold=50,
 		lCivics=[iDespotism],
@@ -221,6 +216,12 @@ lCivilizations = [
 		iGold=100,
 		lCivics=[iRepublic, iSlavery, iDeification],
 		techs=techs.column(2).including(iAlloys, iWriting)
+	),
+	Civilization(
+		iAssyria,
+		lEnemies=[iBabylonia],
+		lCivics=[iDespotism, iSlavery, iDeification],
+		techs=techs.column(2).without(iRiding, iSeafaring).including(iWriting)
 	),
 	Civilization(
 		iIndia,
