@@ -212,7 +212,7 @@ dGoals = {
 		),
 		BuildingCount((iConfucianCathedral, 4), (iTaoistCathedral, 4), by=1350),
 	),
-	iYangtzeChina: (
+	iChinaS: (
 		FirstDiscover(iCompass, iPaper, iGunpowder, iPrinting),
 		All( # treasure ships
 			Control(

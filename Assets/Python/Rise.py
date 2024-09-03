@@ -73,12 +73,12 @@ lAlwaysClear = [
 ]
 
 lBirthWars = [
-	(iYangtzeChina, iChina),
+	(iChinaS, iChina),
 	(iArabia, iEgypt),
 	(iArabia, iBabylonia),
 	(iArabia, iPersia),
 	(iMongols, iChina),
-	(iMongols, iYangtzeChina),
+	(iMongols, iChinaS),
 	(iOttomans, iByzantium),
 ]
 

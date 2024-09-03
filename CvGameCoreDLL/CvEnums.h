@@ -1182,6 +1182,7 @@ enum CivilizationTypes		// Exposed to Python
 	PHOENICIA,
 	CELTS,
 	CHINA, 
+	YANGTZE_CHINA,
 	COLOMBIA,
 	DRAVIDIA,
 	EGYPT,
@@ -1236,7 +1237,6 @@ enum CivilizationTypes		// Exposed to Python
 
 	TURKS,
 	VIETNAM,
-	YANGTZE_CHINA,
 	ZULU,
 	INDEPENDENT,
 	INDEPENDENT2,

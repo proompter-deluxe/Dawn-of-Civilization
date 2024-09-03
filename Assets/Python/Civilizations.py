@@ -308,7 +308,7 @@ lCivilizations = [
 		techs=techs.column(4).without(iNavigation).including(iEngineering)
 	),
 	Civilization(
-		iYangtzeChina,
+		iChinaS,
 		iGold=150,
 		iAdvancedStartPoints=100,
 		lCivics=[iMonarchy, iCasteSystem, iRedistribution, iSyncretism, iHegemony],
@@ -752,7 +752,7 @@ dStartingUnits = CivDict({
 		iMissionary: 1,
 		iWorkerSea: 1,
 	},
-	iYangtzeChina: {
+	iChinaS: {
 		iSettle: 1,
 		iWork: 2,
 		iDefend: 2,
@@ -1541,7 +1541,7 @@ dTechPreferences = {
 		iDivination: -20,
 		iSailing: -20,	
 	},
-	iYangtzeChina : {
+	iChinaS : {
 		iAesthetics: 40,
 		iContract: 40,
 		iGunpowder: 20,
@@ -2020,7 +2020,7 @@ dBuildingPreferences = {
 		iBorobudur: -30,
 		iBrandenburgGate: -30,
 	},
-	iYangtzeChina : {
+	iChinaS : {
 		iGreatWall: 80,
 		iForbiddenPalace: 20,
 		iGrandCanal: 40,

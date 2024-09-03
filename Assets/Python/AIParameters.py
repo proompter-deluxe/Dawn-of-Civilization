@@ -54,7 +54,7 @@ iAmerica : 3,
 dReligiousTolerance = CivDict({
 iEgypt : 4,
 iChina : 4,
-iYangtzeChina: 4,
+iChinaS: 4,
 iHarappa : 4,
 iGreece : 2,
 iIndia : 4,
