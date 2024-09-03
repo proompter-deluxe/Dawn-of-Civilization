@@ -448,6 +448,13 @@ def romanRelations(iPlayer):
 		iRomePlayer = slot(iRome)
 		player(iRomePlayer).AI_changeMemoryCount(iPlayer, MemoryTypes.MEMORY_EVENT_GOOD_TO_US, 4)
 
+# Northern China is upset at the south for rejecting imperial rule in Chang'an / Luoyang
+# This is to prevent the two Chinas from getting friendly and tech trading etc
+@handler("birth")
+def chineseRelations(iPlayer):
+	if civ(iPlayer) == iChinaS and player(iChina).isExisting():
+		iChinaPlayer = slot(iChina)
+		player(iChinaPlayer).AI_changeMemoryCount(iPlayer, MemoryTypes.MEMORY_EVENT_BAD_TO_US, 2)
 
 @handler("birth")
 def stabilizeAustria(iPlayer):
