@@ -456,7 +456,7 @@ def romanRelations(iPlayer):
 def chineseRelations(iPlayer):
 	if civ(iPlayer) == iChinaS and player(iChina).isExisting():
 		iChinaPlayer = slot(iChina)
-		player(iChinaPlayer).AI_changeMemoryCount(iPlayer, MemoryTypes.MEMORY_EVENT_BAD_TO_US, 2)
+		player(iChinaPlayer).AI_changeMemoryCount(iPlayer, MemoryTypes.MEMORY_EVENT_BAD_TO_US, 4)
 
 @handler("birth")
 def stabilizeAustria(iPlayer):
