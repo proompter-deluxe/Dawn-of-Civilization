@@ -51,7 +51,7 @@ dSpecificVassalTitles = deepdict({
 		iTurks : "TXT_KEY_CIV_CHINESE_TURKS",
 		iMongols : "TXT_KEY_CIV_CHINESE_MONGOLIA",
 	},
-	iChinaS : {
+	iYangtzeChina : {
 		iKorea : "TXT_KEY_CIV_CHINESE_KOREA",
 		iTurks : "TXT_KEY_CIV_CHINESE_TURKS",
 		iMongols : "TXT_KEY_CIV_CHINESE_MONGOLIA",
@@ -314,7 +314,7 @@ dForeignAdjectives = deepdict({
 		iOttomans : "TXT_KEY_CIV_CHINESE_ADJECTIVE_OTTOMANS",
 		iTibet : "TXT_KEY_CIV_CHINESE_ADJECTIVE_TIBET",
 	},
-	iChinaS : {
+	iYangtzeChina : {
 		iEgypt : "TXT_KEY_CIV_CHINESE_ADJECTIVE_EGYPT",
 		iIndia : "TXT_KEY_CIV_CHINESE_ADJECTIVE_INDIA",
 		iBabylonia : "TXT_KEY_CIV_CHINESE_ADJECTIVE_BABYLONIA",
@@ -342,7 +342,7 @@ dForeignNames = deepdict({
 	iRome : {
 		iEgypt : "TXT_KEY_CIV_ROMAN_NAME_EGYPT",
 		iChina : "TXT_KEY_CIV_ROMAN_NAME_CHINA",
-		iChinaS : "TXT_KEY_CIV_ROMAN_NAME_CHINA",
+		iYangtzeChina : "TXT_KEY_CIV_ROMAN_NAME_CHINA",
 		iBabylonia : "TXT_KEY_CIV_ROMAN_NAME_BABYLONIA",
 		iGreece : "TXT_KEY_CIV_ROMAN_NAME_GREECE",
 		iPersia : "TXT_KEY_CIV_ROMAN_NAME_PERSIA",
@@ -384,7 +384,7 @@ dForeignNames = deepdict({
 	},
 	iTibet : {
 		iChina : "TXT_KEY_CIV_TIBETAN_NAME_CHINA",
-		iChinaS : "TXT_KEY_CIV_TIBETAN_NAME_CHINA",
+		iYangtzeChina : "TXT_KEY_CIV_TIBETAN_NAME_CHINA",
 		iIndia : "TXT_KEY_CIV_TIBETAN_NAME_INDIA",
 		iTurks : "TXT_KEY_CIV_TIBETAN_NAME_TURKS",
 		iMongols : "TXT_KEY_CIV_TIBETAN_NAME_MONGOLIA",
@@ -430,13 +430,13 @@ dForeignNames = deepdict({
 	},
 })
 
-lRepublicOf = [iEgypt, iIndia, iChina, iChinaS, iPersia, iJapan, iEthiopia, iKorea, iNorse, iTurks, iTibet, iKhmer, iHolyRome, iMali, iPoland, iMughals, iOttomans, iThailand, iIran]
+lRepublicOf = [iEgypt, iIndia, iChina, iYangtzeChina, iPersia, iJapan, iEthiopia, iKorea, iNorse, iTurks, iTibet, iKhmer, iHolyRome, iMali, iPoland, iMughals, iOttomans, iThailand, iIran]
 lRepublicAdj = [iBabylonia, iRome, iMoors, iSpain, iFrance, iPortugal, iInca, iItaly, iAztecs, iArgentina]
 
 lSocialistRepublicOf = [iEgypt, iMoors, iHolyRome, iBrazil, iNorse, iColombia]
 lSocialistRepublicAdj = [iPersia, iTurks, iItaly, iAztecs, iIran, iArgentina]
 
-lPeoplesRepublicOf = [iIndia, iChina, iChinaS, iPolynesia, iJapan, iTibet, iMali, iPoland, iMughals, iThailand, iCongo]
+lPeoplesRepublicOf = [iIndia, iChina, iYangtzeChina, iPolynesia, iJapan, iTibet, iMali, iPoland, iMughals, iThailand, iCongo]
 lPeoplesRepublicAdj = [iDravidia, iByzantium, iMongols]
 
 lIslamicRepublicOf = [iIndia, iPersia, iMali, iMughals, iIran]
@@ -447,7 +447,7 @@ dEmpireThreshold = {
 	iDravidia : 3,
 	iKorea : 4,
 	iChina: 5,
-	iChinaS: 9,
+	iYangtzeChina: 9,
 	iTibet : 2,
 	iMoors : 3,
 	iHolyRome : 3,
@@ -503,7 +503,7 @@ dStartingLeaders = [
 	iHarappa : iWentAntu,
 	iAssyria : iAshurbanipal,
 	iChina : iQinShiHuang,
-	iChinaS : iSunQuan,
+	iYangtzeChina : iSunQuan,
 	iHittites : iMursili,
 	iNubia : iTaharqa,
 	iGreece : iPericles,
@@ -562,12 +562,12 @@ dStartingLeaders = [
 # 600 AD
 {
 	iChina : iTaizong,
-	iChinaS: iGaozong,
+	iYangtzeChina: iGaozong,
 },
 # 1700 AD
 {
 	iChina : iHongwu,
-	iChinaS: iGaozong,
+	iYangtzeChina: iGaozong,
 	iIndia : iShivaji,
 	iDravidia : iKrishnaDevaRaya,
 	iKorea : iSejong,
@@ -960,7 +960,7 @@ def specificName(iPlayer):
 		if iEra < iMedieval and turn() >= year(220) and not scenario() >= i600AD:
 			return "TXT_KEY_CIV_CHINA_WEI_KINGDOM"
 
-	if iCiv == iChinaS:
+	if iCiv == iYangtzeChina:
 		if not bEmpire and bMonarchy:
 			return "TXT_KEY_CIV_YANGTZE_CHINA_DEFAULT"
 	
@@ -1235,7 +1235,7 @@ def specificAdjective(iPlayer):
 			if iReligion == iHinduism:
 				return "TXT_KEY_CIV_INDIA_GUPTA"
 			
-	elif iCiv == iChina or iCiv == iChinaS and bEmpire:
+	elif iCiv == iChina or iCiv == iYangtzeChina and bEmpire:
 		if bMonarchy:
 			if iEra >= iMedieval:
 				if tPlayer.isHasTech(iPaper) and tPlayer.isHasTech(iGunpowder):
@@ -1259,7 +1259,7 @@ def specificAdjective(iPlayer):
 			return "TXT_KEY_CIV_CHINA_ZHOU"
 
 
-	elif iCiv == iChinaS:
+	elif iCiv == iYangtzeChina:
 		if bMonarchy:
 			if iEra == iMedieval and turn() >= year(900):
 				return "TXT_KEY_CIV_YANGTZE_CHINA_SONG"
@@ -1682,7 +1682,7 @@ def specificTitle(iPlayer, lPreviousOwners=[]):
 		if iEra <= iClassical:
 			return "TXT_KEY_CIV_INDIA_MAHAJANAPADAS"
 			
-	elif iCiv == iChina or iCiv == iChinaS:
+	elif iCiv == iChina or iCiv == iYangtzeChina:
 		if bEmpire:
 			if iEra >= iIndustrial or scenario() == i1700AD:
 				return "TXT_KEY_EMPIRE_OF"
@@ -2145,7 +2145,7 @@ def leader(iPlayer):
 		
 		if iEra >= iMedieval: return iTaizong
 
-	elif iCiv == iChinaS:
+	elif iCiv == iYangtzeChina:
 		if iEra >= iIndustrial: return iChiangKaishek
 
 		if bResurrected: return iGaozong

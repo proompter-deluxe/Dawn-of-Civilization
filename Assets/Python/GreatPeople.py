@@ -430,7 +430,7 @@ iChina : {
 		"fZheng Pingru", # 20th
 	],
 },
-iChinaS : {
+iYangtzeChina : {
 	iGreatProphet : [
 		"Lao Tzu", # 6th BC
 		"Kong Fuzi", # 5th BC

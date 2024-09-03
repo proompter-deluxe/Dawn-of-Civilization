@@ -171,7 +171,7 @@ def onVassalState(iMaster, iVassal, bVassal, bCapitulated):
 		if iVassalCiv == iInca:
 			setPeriod(iInca, iPeriodPeru)
 		
-		if iVassalCiv == iChina or iVassalCiv == iChinaS:
+		if iVassalCiv == iChina or iVassalCiv == iYangtzeChina:
 			if bCapitulated and iMasterCiv == iMongols:
 				setPeriod(iMongols, iPeriodYuan)
 			
