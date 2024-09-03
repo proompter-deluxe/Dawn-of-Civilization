@@ -2171,7 +2171,7 @@ def leader(iPlayer):
 			return iDarius
 			
 	elif iCiv == iPhoenicia:
-		if capital.getRegionID() not in [rMesopotamia, rAnatolia]: return iHannibal
+		if capital.getRegionID() not in [rMesopotamia, rAnatolia, rLevant]: return iHannibal
 		
 	elif iCiv == iRome:
 		if bEmpire or not bCityStates: return iAugustus
