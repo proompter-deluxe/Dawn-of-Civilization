@@ -51,6 +51,8 @@ lAndeanRoadExceptions = [(28, 33), (21, 32)]
 iCanadianNorthSouthBorder = 62
 iCanadianEastWestBorder = 8
 
+# Assyria conquest goal: to own Elam (the region around Susa)
+tElam = ((92, 45), (93, 47))
 
 ### Tiles ###
 
@@ -70,6 +72,7 @@ tMemel = (76, 66)
 tRome = (68, 53)
 tPersepolis = (94, 45)
 tStockholm = (73, 71)
+tSusa = (92, 46)
 tTenochtitlan = (17, 43)
 tThebes = (80, 41)
 tTokyo = (140, 54)

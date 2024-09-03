@@ -70,6 +70,7 @@ DECCAN = "TXT_KEY_VICTORY_NAME_DECCAN"
 EASTER_ISLAND = "TXT_KEY_VICTORY_NAME_EASTER_ISLAND"
 EASTERN_EUROPE = "TXT_KEY_VICTORY_NAME_EASTERN_EUROPE"
 EGYPT = "TXT_KEY_VICTORY_NAME_EGYPT"
+ELAM = "TXT_KEY_VICTORY_NAME_ELAM"
 EUROPE = "TXT_KEY_VICTORY_NAME_EUROPE"
 GAUL = "TXT_KEY_VICTORY_NAME_GAUL"
 GRAN_COLOMBIA = "TXT_KEY_VICTORY_NAME_GRAN_COLOMBIA"
@@ -189,16 +190,16 @@ dGoals = {
 	),
 	iAssyria: (
 		All(
-			CityCaptureGold(250),
+			CityCaptureGold(200),
 			UnitLevelCount(3, 5),
 			by=-900,
 		),
 		Control(
 			plots.region(rMesopotamia).named(MESOPOTAMIA),
-			plots.region(rPersia).named(PERSIA),
+			plots.rectangle(tElam).named(ELAM),
 			plots.region(rLevant).named(LEVANT),
 			plots.region(rEgypt).named(EGYPT),
-			by=-900,
+			by=-600,
 		),
 		CitySpecialistCount(capital().named(CAPITAL), great_people(), 3, by=-550),
 	),
