@@ -1112,6 +1112,9 @@ dStartingUnits = CivDict({
 }, {})
 
 dExtraAIUnits = CivDict({
+	iChina : {
+		iDefend: 1,
+	},
 	iIndia : {
 		iHarass: 1,
 		iAttack: 1,
