@@ -443,7 +443,7 @@ minor_cities = [
 	MinorCity(-3000, iIndependent2, (92, 46), "Shushan", iPopulation=1, iCiv=iBabylonia, units={iDefend: 1}, iCulture=10, adjective="TXT_KEY_ADJECTIVE_ELAMITE"),
 	# MinorCity(-3000, iIndependent, (90, 45), "Unug", iPopulation=1, iCiv=iBabylonia, units={iDefend: 2}, iCulture=10, adjective="TXT_KEY_ADJECTIVE_SUMERIAN"),
 	MinorCity(-2600, iIndependent2, (86, 50), "Halab", iPopulation=1, iCiv=iAssyria, units={iDefend: 1, iWork: 1}, iCulture=10, adjective="TXT_KEY_ADJECTIVE_MARIOTE"),
-	MinorCity(-2050, iIndependent, (118, 49), "Sanxingdui", iPopulation=1, iCiv=iChina, units={iDefend: 1, iBase: 1, iAttack: 1}, adjective="TXT_KEY_ADJECTIVE_SHU"),
+	MinorCity(-2050, iIndependent, (118, 49), "Sanxingdui", iPopulation=1, iCiv=iChina, units={iBase: 2}, adjective="TXT_KEY_ADJECTIVE_SHU"),
 	MinorCity(-1830, iBarbarian, (124, 52), "Daliang", iPopulation=2, iCiv=iChina, units={iDefend: 1, iBase: 1,}, adjective="TXT_KEY_ADJECTIVE_WEI"),
 	MinorCity(-1830, iIndependent, (127, 53), "Jimo", iPopulation=1, iCiv=iChina, units={iDefend: 1}, adjective="TXT_KEY_ADJECTIVE_QI"),
 	MinorCity(-1600, iIndependent, (84, 45), "Yerushalayim", iPopulation=2, iCiv=iBabylonia, units={iDefend: 3}, adjective="TXT_KEY_ADJECTIVE_ISRAELITE"),
@@ -508,7 +508,7 @@ barbarians = [
 	Barbarians(-1400, -800, {iChariot: 1, iLightSwordsman: 1}, ((98, 42), (109, 51)), 10, INVADERS, target_area=((99, 41), (113, 46)), adjective="TXT_KEY_ADJECTIVE_VEDIC"),
 	Barbarians(-1250, -1150, {iAxeman: 3}, ((78, 44), (85, 52)), 1, CLOSE_INVADERS, target_area=((77, 41), (91, 54)), adjective="TXT_KEY_ADJECTIVE_SEA_PEOPLES"),
 	Barbarians(-1200, -900, {iVulture: 2}, ((87, 44), (91, 52)), 10, INVADERS, adjective="TXT_KEY_ADJECTIVE_KASSITE"),
-	Barbarians(-1000, -100, {iSkirmisher: 1, iAxeman: 1}, ((120, 42), (129, 50)), 6, MINORS, adjective="TXT_KEY_ADJECTIVE_YUE"),
+	Barbarians(-1000, -100, {iSkirmisher: 1, iAxeman: 1}, ((120, 42), (129, 50)), 7, MINORS, adjective="TXT_KEY_ADJECTIVE_YUE"),
 	Barbarians(-1200, -500, {iSkirmisher: 1}, ((84, 44), (88, 52)), 10, NOMADS, target_area=((84, 44), (91, 52)), adjective="TXT_KEY_ADJECTIVE_ARAMEAN"),
 	Barbarians(-1100, -600, {iLightSwordsman: 1}, ((79, 51), (84, 55)), 10, MINORS, adjective="TXT_KEY_ADJECTIVE_PHRYGIAN"),
 	Barbarians(-1000, -600, {iHorseman: 1}, ((85, 54), (92, 60)), 10, INVADERS, target_area=((83, 44), (91, 52)), adjective="TXT_KEY_ADJECTIVE_CIMMERIAN"),
@@ -533,7 +533,7 @@ barbarians = [
 	Barbarians(-200, 300, {iCamelRider: 1}, ((56, 39), (71, 44)), 9, NOMADS, target_area=((54, 34), (76, 48)), adjective="TXT_KEY_ADJECTIVE_BERBER"),
 	Barbarians(-200, 700, {iWarElephant: 1}, ((103, 37), (118, 42)), 10, MINORS, adjective="TXT_KEY_ADJECTIVE_HINDI"),
 	Barbarians(-200, 700, {iWarGalley: 1}, ((84, 22), (95, 37)), 18, PIRATES, adjective="TXT_KEY_ADJECTIVE_SOMALI"),
-	Barbarians(-100, 150, {iSkirmisher: 1, iLightSwordsman: 1}, ((120, 42), (129, 50)), 8, MINORS, adjective="TXT_KEY_ADJECTIVE_YUE"), # reduce intensity during "Han golden age"
+	Barbarians(-100, 150, {iSkirmisher: 1, iLightSwordsman: 1}, ((120, 42), (129, 50)), 9, MINORS, adjective="TXT_KEY_ADJECTIVE_YUE"), # reduce intensity during "Han golden age"
 	Barbarians(-100, 400, {iHorseArcher: 2}, ((79, 58), (88, 63)), 8, NOMADS, target_area=((65, 50), (84, 58)), adjective="TXT_KEY_ADJECTIVE_SARMATIAN"),
 	Barbarians(-50, 700, {iWarGalley: 1}, ((54, 42), (69, 50)), 18, PIRATES, adjective="TXT_KEY_ADJECTIVE_BARBARY"),
 	Barbarians(0, 200, {iAxeman: 2}, ((101, 37), (112, 45)), 8, MINORS, adjective="TXT_KEY_ADJECTIVE_HINDI"),
