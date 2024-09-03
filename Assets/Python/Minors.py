@@ -475,6 +475,8 @@ minor_cities = [
 	MinorCity(840, iIndependent, (54, 65), u"Áth Cliath", iPopulation=1, iCiv=iCelts, units={iDefend: 2}, adjective="TXT_KEY_ADJECTIVE_IRISH"),
 	MinorCity(880, iIndependent2, (74, 59), "Buda", iPopulation=3, iCiv=iHolyRome, units={iHarass: 5}, adjective="TXT_KEY_ADJECTIVE_MAGYAR"),
 	MinorCity(900, iNative, (27, 28), u"Túcume", iPopulation=1, iCiv=iInca, units={iDefend: 1}, adjective="TXT_KEY_ADJECTIVE_CHIMU"),
+	MinorCity(900, iNative, (81, 62), u"Kænugarðr", iPopulation=2, iCiv=iRus, units={iDefend: 2}, condition=lambda: not player(iRus).isExisting(), adjective="TXT_KEY_CIV_RUS_ADJECTIVE"),
+	MinorCity(900, iNative, (82, 68), u"Holmgarðr", iPopulation=2, iCiv=iRus, units={iDefend: 2}, condition=lambda: not player(iRus).isExisting(), adjective="TXT_KEY_CIV_RUS_ADJECTIVE"),
 	MinorCity(900, iNative, (28, 25), "Chan Chan", iPopulation=2, iCiv=iInca, units={iDefend: 1}, adjective="TXT_KEY_ADJECTIVE_CHIMU"),
 	MinorCity(900, iIndependent, (87, 29), "Muqdisho", iPopulation=3, iCiv=iSwahili, units={iDefend: 2}, adjective="TXT_KEY_ADJECTIVE_SOMALI"),
 	MinorCity(900, iNative, (79, 18), "Zimbabwe", iPopulation=2, units={iDefend: 1}, adjective="TXT_KEY_ADJECTIVE_SHONA"),
