@@ -510,7 +510,7 @@ barbarians = [
 	Barbarians(-1200, -900, {iVulture: 2}, ((87, 44), (91, 52)), 10, INVADERS, adjective="TXT_KEY_ADJECTIVE_KASSITE"),
 	Barbarians(-1000, -100, {iSkirmisher: 1, iAxeman: 1}, ((120, 42), (129, 50)), 7, MINORS, adjective="TXT_KEY_ADJECTIVE_YUE"),
 	Barbarians(-1200, -500, {iSkirmisher: 1}, ((84, 44), (88, 52)), 10, NOMADS, target_area=((84, 44), (91, 52)), adjective="TXT_KEY_ADJECTIVE_ARAMEAN"),
-	Barbarians(-1100, -600, {iLightSwordsman: 1}, ((79, 51), (84, 55)), 10, MINORS, adjective="TXT_KEY_ADJECTIVE_PHRYGIAN"),
+	Barbarians(-1100, -600, {iLightSwordsman: 1, iAxeman: 1}, ((79, 51), (84, 55)), 6, MINORS, adjective="TXT_KEY_ADJECTIVE_PHRYGIAN"),
 	Barbarians(-1000, -600, {iHorseman: 1}, ((85, 54), (92, 60)), 10, INVADERS, target_area=((83, 44), (91, 52)), adjective="TXT_KEY_ADJECTIVE_CIMMERIAN"),
 	Barbarians(-1000, 400, {iMedjay: 1}, ((78, 35),	(82, 40)), 8, MINORS, iAlternativeCiv=iNubia, adjective="TXT_KEY_ADJECTIVE_NUBIAN"),
 	Barbarians(-400, -100, {iHorseman: 2}, ((78, 57), (102, 63)), 8, NOMADS, target_area=((83, 44), (104, 57)), adjective="TXT_KEY_ADJECTIVE_SCYTHIAN"),
