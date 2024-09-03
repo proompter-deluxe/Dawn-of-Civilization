@@ -171,14 +171,11 @@ def checkEarlyColonists():
 			giveEarlyColonists(iGreece)
 		elif year() == year(-700) - offset:
 			giveEarlyColonists(iPhoenicia)
-		# give Carthage an extra colonist for Iberia, directly (without galley)
-		elif year() == year(-550) - offset:
-			pPlayer = player(iPhoenicia)
-			if pPlayer.isExisting() and not pPlayer.isHuman():
-				message(active(), 'TXT_KEY_EVENT_EARLY_COLONIZERS', adjective(pPlayer))
-				makeUnit(iPhoenicia, iSettler, tGades, UnitAITypes.UNITAI_SETTLE)
-				makeUnit(iPhoenicia, iArcher, tGades)
-				makeUnit(iPhoenicia, iWorker, tCarthage, UnitAITypes.UNITAI_WORKER)
+		# Phoenicia often refuses to settle spain, and so I must force the issue
+		elif year() == year(-550): # - offset: --> no offset, since we spawn the city in -570
+			flipCity(tGades, False, True, iPhoenicia)
+			makeUnits(iPhoenicia, iWorker, tGades, 1, UnitAITypes.UNITAI_WORKER)
+			makeUnits(iPhoenicia, iArcher, tGades, 1, UnitAITypes.UNITAI_CITY_DEFENSE)
 		elif year() == year(-350) - offset:
 			giveEarlyColonists(iRome)
 		
