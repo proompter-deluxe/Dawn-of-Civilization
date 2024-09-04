@@ -94,7 +94,7 @@ tConquestMongolsPersia = (13, iMongols, iTurks, tMongolsPersiaTL, tMongolsPersia
 
 iChinaIndiesYear = -240
 tChinaIndiesTL = (118, 49)
-tChinaIndiesBR = (126, 56)
+tChinaIndiesBR = (128, 56)
 
 tConquestChinaIndependents = (14, iChina, iIndependent, tChinaIndiesTL, tChinaIndiesBR, 3, iChinaIndiesYear, 10)
 
