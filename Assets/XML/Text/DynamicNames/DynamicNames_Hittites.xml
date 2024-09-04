@@ -41,4 +41,12 @@
 		<Italian>%s2 Empire</Italian>
 		<Spanish>%s2 Empire</Spanish>
 	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_HITTITES_PHRYGIAN_ADJECTIVE</Tag>
+		<English>Phrygian</English>
+		<French>Phrygian</French>
+		<German>Phrygian</German>
+		<Italian>Phrygian</Italian>
+		<Spanish>Phrygian</Spanish>
+	</TEXT>
 </Civ4GameText>
