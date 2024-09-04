@@ -1319,7 +1319,11 @@ def specificAdjective(iPlayer):
 				return "TXT_KEY_CIV_PERSIA_QAJAR"
 	
 			return "TXT_KEY_CIV_PERSIA_PAHLAVI"
-				
+
+	elif iCiv == iPhoenicia:
+		if iReligion == iIslam and isCurrentCapital(iPlayer, "Carthage", "Tunis"):
+			return "TXT_KEY_CIV_CARTHAGE_TUNIS_EMIRATE"
+
 	elif iCiv == iPolynesia:
 		if isCurrentCapital(iPlayer, "Manu'a"):
 			return "TXT_KEY_CIV_POLYNESIA_TUI_MANUA"
@@ -1692,7 +1696,7 @@ def specificTitle(iPlayer, lPreviousOwners=[]):
 				return "TXT_KEY_EMPIRE_OF"
 				
 			return "TXT_KEY_EMPIRE_ADJECTIVE"
-			
+
 	elif iCiv == iBabylonia:
 		if bCityStates and not bEmpire:
 			return "TXT_KEY_CITY_STATES_ADJECTIVE"
@@ -1715,6 +1719,9 @@ def specificTitle(iPlayer, lPreviousOwners=[]):
 			return "TXT_KEY_EMPIRE_ADJECTIVE"
 			
 	elif iCiv == iPhoenicia:
+		if iReligion == iIslam and isCurrentCapital(iPlayer, "Carthage", "Tunis"):
+			return "TXT_KEY_CIV_CARTHAGE_TUNIS_ADJECTIVE"
+
 		if bEmpire:
 			return "TXT_KEY_EMPIRE_ADJECTIVE"
 			
