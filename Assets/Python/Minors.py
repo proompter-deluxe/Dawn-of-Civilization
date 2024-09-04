@@ -518,7 +518,7 @@ barbarians = [
 	Barbarians(-400, -100, {iHorseman: 2}, ((78, 57), (102, 63)), 8, NOMADS, target_area=((83, 44), (104, 57)), adjective="TXT_KEY_ADJECTIVE_SCYTHIAN"),
 	# Barbarians(-650, -50, {iGallicWarrior: 1}, ((56, 55), (75, 61)), 6, INVADERS, target_area=((64, 49), (79, 57))),
 	# Barbarians(-650, -50, {iAxeman: 1}, ((69, 56), (78, 61)), 8, INVADERS, target_area=((73, 49), (84, 55)), adjective="TXT_KEY_ADJECTIVE_GALATIAN"),
-	Barbarians(-650, -50, {iLightSwordsman: 1}, ((54, 50), (58, 54)), 12, NATIVES, target_area=((54, 48), (62, 54)), adjective="TXT_KEY_ADJECTIVE_CELTIBERIAN"),
+	Barbarians(-650, -50, {iLightSwordsman: 1}, ((54, 50), (58, 54)), 12, INVADERS, target_area=((54, 48), (62, 54)), adjective="TXT_KEY_ADJECTIVE_CELTIBERIAN"),
 	Barbarians(-500, 200, {iSkirmisher: 1}, ((105, 39), (111, 43)), 10, NATIVES, iOwner=iNative, adjective="TXT_KEY_ADJECTIVE_GIRIJAN"),
 	Barbarians(-500, 0, {iAxeman: 1}, ((101, 37), (112, 45)), 8, MINORS, adjective="TXT_KEY_ADJECTIVE_HINDI"),
 	Barbarians(-400, 200, {iNumidianCavalry: 1}, ((57, 43), (66, 47)), 9, NOMADS, target_area=((57, 43), (70, 48))),
