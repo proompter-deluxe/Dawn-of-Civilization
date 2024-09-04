@@ -563,7 +563,7 @@ iJapan : [(1800, 2020)],
 iNorse : [(1520, 2020)],
 iTurks : [(1350, 1500)],
 iArabia : [(1900, 2020)],
-iMoors : [(1000, 2020)],
+iMoors : [(1220, 2020)], # Marinids / Ziyanids
 iJava : [(720, 1755), (1900, 2020)],
 iSpain : [(1700, 2020)],
 iEngland : [(1700, 2020)],
