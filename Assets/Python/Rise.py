@@ -36,6 +36,7 @@ lExpansionCivs = [
 ]
 
 lIndependenceCivs = [
+	iChinaS,
 	iByzantium,
 	iArgentina,
 	iMexico,
