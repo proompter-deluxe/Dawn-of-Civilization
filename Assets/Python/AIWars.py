@@ -295,6 +295,9 @@ def spawnConquerors(iPlayer, iPreferredTarget, tTL, tBR, iNumTargets, iYear, iIn
 			iExtra += 1
 			
 		if not player(iPlayer).isHuman():
+			# we want to be sure that the AI can fund these conquerors for at least a few turns
+			player(iPlayer).changeGold(20)
+			
 			if iCiv == iMongols:
 				iExtra += 1
 		
