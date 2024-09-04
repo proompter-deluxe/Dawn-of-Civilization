@@ -518,7 +518,7 @@ iTurks : 1507,
 iArabia : 900,
 iTibet : 1500,
 iMoors : 1050,
-iJava: 1755,
+iJava: 1645, # the decline of Sultanate of Mataram started then, even if the end was in 1755
 iBurma : 1885,
 iRus : 1240,
 iSwahili : 1513,

@@ -3243,7 +3243,7 @@
 			<ArtStyleType>ARTSTYLE_ASIAN</ArtStyleType>
 			<UnitArtStyleType>UNIT_ARTSTYLE_ASIAN</UnitArtStyleType>
 			<PaganReligion>PAGAN_RELIGION_VEDISM</PaganReligion>
-			<Impact>IMPACT_SIGNIFICANT</Impact>
+			<Impact>IMPACT_LIMITED</Impact>
 			<Identifier>JAV</Identifier>
 			<StartingYear>716</StartingYear>
 			<LoadingTimes>
