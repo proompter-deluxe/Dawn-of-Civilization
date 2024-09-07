@@ -3,5 +3,6 @@
 	<Define>
 		<DefineName>DAWN_OF_CIV_MOD_VERSION</DefineName>
 		<DefineTextVal>1.17.5</DefineTextVal>
+		<DefineTextVal>1.17.4-214</DefineTextVal>
 	</Define>
 </Civ4Defines>
