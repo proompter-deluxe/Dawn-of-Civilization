@@ -2182,6 +2182,8 @@ def leader(iPlayer):
 			return iDarius
 			
 	elif iCiv == iPhoenicia:
+		if iEra >= iMedieval & iReligion == iIslam: return iAbuFaris
+
 		if capital.getRegionID() not in [rMesopotamia, rAnatolia, rLevant]: return iHannibal
 		
 	elif iCiv == iRome:

@@ -14,6 +14,18 @@
 		<Spanish>Abbas I</Spanish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_LEADER_ABU_FARIS</Tag>
+		<English>Abu Faris Abd al-Aziz II</English>
+		<French>
+			<Text>Abu Faris Abd al-Aziz IIe</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>Abu Faris Abd al-Aziz II</German>
+		<Italian>Abu Faris Abd al-Aziz II</Italian>
+		<Spanish>Abu Faris Abd al-Aziz II</Spanish>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_LEADER_AFONSO</Tag>
 		<English>Afonso Henriques</English>
 		<French>

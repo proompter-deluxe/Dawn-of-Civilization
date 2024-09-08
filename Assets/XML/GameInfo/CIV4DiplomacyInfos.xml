@@ -1273,6 +1273,10 @@
 							<bLeaderType>1</bLeaderType>
 						</Leader>
 						<Leader>
+							<LeaderType>LEADER_ABU_FARIS</LeaderType>
+							<bLeaderType>1</bLeaderType>
+						</Leader>
+						<Leader>
 							<LeaderType>LEADER_GUSTAV</LeaderType>
 							<bLeaderType>1</bLeaderType>
 						</Leader>

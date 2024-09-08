@@ -34,6 +34,7 @@ LEADER_DATES = {
 	iGandhi: 1930,
 	iHiram: -980,
 	iHannibal: -210,
+	iAbuFaris: 1394,
 	iTaharqa: -690,
 	iAhoeitu: 900,
 	iCyrus: -550,
