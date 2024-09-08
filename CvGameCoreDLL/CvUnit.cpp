@@ -6726,7 +6726,7 @@ bool CvUnit::canInfiltrate(const CvPlot* pPlot, bool bTestVisible) const
 	}
 
 	CvCity* pCity = pPlot->getPlotCity();
-	if (pCity == NULL || pCity->isBarbarian()) //Rhye - add minors here?
+	if (pCity == NULL || pCity->isBarbarian() || GET_PLAYER(pCity->getOwnerINLINE()).isMinorCiv())
 	{
 		return false;
 	}
@@ -15007,7 +15007,7 @@ bool CvUnit::canRebuild(const CvPlot* pPlot) const
 			{
 				if (GET_PLAYER(getOwnerINLINE()).getCurrentEra() >= kBuilding.getFreeStartEra())
 				{
-					if (!pCity->isHasRealBuilding(eBuilding) && pCity->canConstruct(eBuilding))
+					if (!pCity->isHasRealBuilding(eBuilding) && pCity->canConstruct(eBuilding, true))
 					{
 						return true;
 					}
