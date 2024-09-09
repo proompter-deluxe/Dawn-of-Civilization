@@ -259,7 +259,7 @@ dGoals = {
 			plots.region(rMesopotamia),
 			plots.region(rPersia),
 			plots.region(rEgypt),
-			at=-330,
+			at=-320,
 		),
 		Wonders(iParthenon, iColossus, iStatueOfZeus, iTempleOfArtemis, by=-250),
 	),
