@@ -246,6 +246,7 @@ lCivilizations = [
 		iGold=200,
 		iAdvancedStartPoints=200,
 		iStateReligion=iZoroastrianism,
+		lEnemies=[iAssyria, iHittites],
 		lCivics=[iMonarchy, iManorialism, iRedistribution, iClergy],
 		techs=techs.column(3).including(iBloomery, iPriesthood).without(iSeafaring, iShipbuilding)
 	),
