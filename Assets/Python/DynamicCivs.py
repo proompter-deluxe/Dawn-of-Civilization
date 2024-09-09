@@ -2146,9 +2146,7 @@ def leader(iPlayer):
 		if isCommunist(iPlayer) or isRepublic(iPlayer) and iEra >= iIndustrial: return iMao		
 
 		if iEra >= iRenaissance and year() >= year(1400): return iHongwu
-	
-		if bResurrected: return iHongwu
-		
+			
 		if scenario() >= i1700AD: return iHongwu
 		
 		if iEra >= iMedieval: return iTaizong
