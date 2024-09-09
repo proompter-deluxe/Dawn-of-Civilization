@@ -1138,6 +1138,12 @@ dExtraAIUnits = CivDict({
 		iAttack: 1,
 		iDefend: 1,
 	},
+	iPersia: {
+		iShock: 2,
+		iAttack: 2,
+		iSiege: 4,
+		iHarass: 2,
+	}
 	iJapan: {
 		iDefend: 2,
 		iAttack: 3,
@@ -1216,9 +1222,7 @@ dAdditionalUnits = CivDict({
 		iAttack: 4,
 	},
 	iPersia: {
-		iShock: 4,
-		iSiege: 4,
-		iHarass: 2,
+		iAttack: 4,
 	},
 	iPhoenicia: {
 		iHarass: 1,
