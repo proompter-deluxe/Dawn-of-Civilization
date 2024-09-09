@@ -595,7 +595,7 @@ iCanada : [(1867, 2020)],
 
 dAggressionLevel = CivDict({
 iBabylonia : 1,
-iChina : 1,
+iChina : 2,
 iChinaS : 2,
 iHittites : 3,
 iNubia : 1,
