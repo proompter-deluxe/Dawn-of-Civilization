@@ -247,7 +247,7 @@ lCivilizations = [
 		iAdvancedStartPoints=200,
 		iStateReligion=iZoroastrianism,
 		lCivics=[iMonarchy, iManorialism, iRedistribution, iClergy],
-		techs=techs.column(3).including(iBloomery, iPriesthood).without(iSeafaring, iShipbuilding)
+		techs=techs.column(3).including(iBloomery, iPriesthood, iMathematics).without(iSeafaring, iShipbuilding)
 	),
 	Civilization(
 		iCelts,
@@ -679,10 +679,12 @@ dStartingUnits = CivDict({
 		iWorkerSea: 1,
 	},
 	iPersia: {
-		iSettle: 3,
+		iSettle: 4,
 		iWork: 3,
 		iDefend: 3,
-		iShock: 2,
+		iShock: 4,
+		iSiege: 2,
+		iHarass: 2,
 		# 1 War Elephant
 	},
 	iCelts: {
@@ -1214,8 +1216,9 @@ dAdditionalUnits = CivDict({
 		iAttack: 4,
 	},
 	iPersia: {
-		iAttack: 4,
+		iShock: 4,
 		iSiege: 4,
+		iHarass: 2,
 	},
 	iPhoenicia: {
 		iHarass: 1,

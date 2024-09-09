@@ -5036,7 +5036,7 @@
 			<PaganReligion>PAGAN_RELIGION_MAZDAISM</PaganReligion>
 			<Impact>IMPACT_CRITICAL</Impact>
 			<Identifier>PER</Identifier>
-			<StartingYear>-650</StartingYear>
+			<StartingYear>-660</StartingYear>
 			<LoadingTimes>
 				<LoadingTime>1</LoadingTime>
 				<LoadingTime>0</LoadingTime>

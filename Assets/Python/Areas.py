@@ -49,7 +49,7 @@ iMali :			(58, 35), # Djenne
 iPoland :		(74, 61), # Krakow
 iPortugal :		(54, 50), # Lisboa
 iInca :			(31, 24), # Cuzco
-iItaly :		(67, 55), # Florence
+iItaly :		(66, 57), # Milan
 iMongols :		(119, 61), # Karakorum
 iAztecs :		(17, 43), # Tenochtitlan
 iMughals : 		(105, 46), # Delhi
