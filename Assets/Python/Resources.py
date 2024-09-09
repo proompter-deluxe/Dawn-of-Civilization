@@ -262,6 +262,8 @@ dSpawnResourcesDict = {
 }
 
 dRemovedResourcesDict = {
+	(78, 48)  : -1100,# Olives in Crete, Bronze Age collapse
+	(78, 49)  : -1100,# Fish in Crete, Bronze Age collapse
 	(88, 51)  : -200, # Olives in Assyria
 	(75, 51)  :  -50, # Silver in Greece
 	(77, 55)  :  -50, # Gold in Macedonia

@@ -35085,11 +35085,13 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=78,y=48
+	BonusType=BONUS_OLIVES
 	TerrainType=TERRAIN_PLAINS
 	PlotType=2
 EndPlot
 BeginPlot
 	x=78,y=49
+	BonusType=BONUS_FISH
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
