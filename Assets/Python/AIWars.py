@@ -22,7 +22,7 @@ iRomeGreeceYear = -150
 tRomeGreeceTL = (73, 48)
 tRomeGreeceBR = (78, 56)
 
-iRomeMesopotamiaYear = -100
+iRomeMesopotamiaYear = -75
 tRomeMesopotamiaTL = (82, 44)
 tRomeMesopotamiaBR = (90, 50)
 
@@ -30,11 +30,11 @@ iRomeAnatoliaYear = -100
 tRomeAnatoliaTL = (79, 51)
 tRomeAnatoliaBR = (88, 55)
 
-iRomeCeltiaYear = -50
+iRomeCeltiaYear = -60
 tRomeCeltiaTL = (56, 55)
 tRomeCeltiaBR = (67, 62)
 
-iRomeEgyptYear = 0
+iRomeEgyptYear = -10
 tRomeEgyptTL = (76, 40)
 tRomeEgyptBR = (82, 45)
 
@@ -47,7 +47,7 @@ tConquestRomeEgypt = (4, iRome, iEgypt, tRomeEgyptTL, tRomeEgyptBR, 3, iRomeEgyp
 
 iAlexanderYear = -340
 tGreeceMesopotamiaTL = (81, 45)
-tGreeceMesopotamiaBR = (90, 55)
+tGreeceMesopotamiaBR = (90, 52)
 tGreeceEgyptTL = (76, 40)
 tGreeceEgyptBR = (82, 45)
 tGreecePersiaTL = (91, 43)
@@ -55,7 +55,7 @@ tGreecePersiaBR = (97, 52)
 
 tConquestGreeceMesopotamia = (5, iGreece, iBabylonia, tGreeceMesopotamiaTL, tGreeceMesopotamiaBR, 3, iAlexanderYear, 20)
 tConquestGreeceEgypt = (6, iGreece, iEgypt, tGreeceEgyptTL, tGreeceEgyptBR, 3, iAlexanderYear, 20)
-tConquestGreecePersia = (7, iGreece, iPersia, tGreecePersiaTL, tGreecePersiaBR, 3, iAlexanderYear, 20)
+tConquestGreecePersia = (7, iGreece, iPersia, tGreecePersiaTL, tGreecePersiaBR, 3, iAlexanderYear + 15, 20)
 
 iCholaSumatraYear = 1030
 tCholaSumatraTL = (115, 26)
