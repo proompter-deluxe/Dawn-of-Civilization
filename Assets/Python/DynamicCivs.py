@@ -444,21 +444,18 @@ lIslamicRepublicOf = [iIndia, iPersia, iMali, iMughals, iIran]
 dEmpireThreshold = {
 	iPhoenicia : 4,
 	iPolynesia : 3,
-	iDravidia : 3,
+	iPersia: 7,
+	iDravidia : 4,
 	iKorea : 4,
 	iChina: 5,
 	iChinaS: 9,
 	iTibet : 2,
-	iMoors : 3,
+	iMoors : 4,
 	iHolyRome : 3,
-	iPoland : 3,
 	iInca : 3,
 	iMongols : 8,
 	iMughals : 6,
-	iItaly : 4,
 	iRussia : 8,
-	iIran : 4,
-	iGermany : 4,
 }
 
 lChristianity = [iCatholicism, iOrthodoxy, iProtestantism]
