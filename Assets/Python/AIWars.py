@@ -45,7 +45,7 @@ tConquestRomeAnatolia = (2, iRome, iGreece, tRomeAnatoliaTL, tRomeAnatoliaBR, 3,
 tConquestRomeCelts = (3, iRome, iCelts, tRomeCeltiaTL, tRomeCeltiaBR, 2, iRomeCeltiaYear, 10)
 tConquestRomeEgypt = (4, iRome, iEgypt, tRomeEgyptTL, tRomeEgyptBR, 3, iRomeEgyptYear, 10)
 
-iAlexanderYear = -340
+iAlexanderYear = -330
 tGreeceMesopotamiaTL = (81, 45)
 tGreeceMesopotamiaBR = (90, 52)
 tGreeceEgyptTL = (76, 40)
