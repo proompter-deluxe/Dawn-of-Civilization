@@ -256,10 +256,10 @@ lCivilizations = [
 	),
 	Civilization(
 		iRome,
-		iGold=100,
-		iAdvancedStartPoints=200,
+		iGold=200,
+		iAdvancedStartPoints=300,
 		lCivics=[iRepublic, iSlavery, iRedistribution],
-		techs=techs.column(4).without(iRiding, iShipbuilding, iNavigation)
+		techs=techs.column(4).including(iGeneralship, iCurrency).without(iRiding, iShipbuilding, iNavigation)
 	),
 	Civilization(
 		iMaya,
@@ -696,7 +696,8 @@ dStartingUnits = CivDict({
 		iSettle: 3,
 		iWork: 3,
 		iDefend: 3,
-		iAttack: 6,
+		iAttack: 8,
+		iSiege: 2,
 		iSettleSea: 2,
 		iFerry: 1,
 		iWorkerSea: 1,

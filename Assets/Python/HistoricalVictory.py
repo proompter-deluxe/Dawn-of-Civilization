@@ -324,7 +324,7 @@ dGoals = {
 		ReligionSpreadCount(sum(iOrthodoxy, iCatholicism).separated(OR), 12, by=1000),
 	),
 	iRome: (
-		BuildingCount((iBarracks, 8), (iAqueduct, 6), (iArena, 5), (iForum, 4), by=-50),
+		BuildingCount((iBarracks, 8), (iAqueduct, 6), (iArena, 5), (iForum, 4), by=100),
 		CityCount(
 			(plots.region(rIberia), 2),
 			(plots.region(rFrance).named(GAUL), 3),
@@ -333,7 +333,7 @@ dGoals = {
 			(plots.regions(rGreece, rAnatolia).named(ANATOLIA), 4),
 			(plots.region(rEgypt).named(EGYPT), 3),
 			(plots.region(rLevant), 2),
-			at=100,
+			at=200,
 		),
 		FirstDiscover(iArchitecture, iPolitics, iScholarship, iMachinery, iCivilService),
 	),
