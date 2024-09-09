@@ -5649,7 +5649,7 @@
 			<ArtStyleType>ARTSTYLE_EUROPEAN</ArtStyleType>
 			<UnitArtStyleType>UNIT_ARTSTYLE_EUROPEAN</UnitArtStyleType>
 			<PaganReligion>PAGAN_RELIGION_RODNOVERY</PaganReligion>
-			<Impact>IMPACT_LIMITED</Impact>
+			<Impact>IMPACT_SIGNIFICANT</Impact>
 			<Identifier>UKR</Identifier>
 			<StartingYear>880</StartingYear>
 			<LoadingTimes>
