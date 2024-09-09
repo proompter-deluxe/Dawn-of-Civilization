@@ -233,7 +233,7 @@ lCivilizations = [
 	Civilization(
 		iPhoenicia,
 		iGold=200,
-		iAdvancedStartPoints=60,
+		iAdvancedStartPoints=90,
 		lCivics=[iRepublic, iSlavery],
 		techs=techs.column(2).including(iAlloys, iWriting, iShipbuilding)
 	),
@@ -666,7 +666,7 @@ dStartingUnits = CivDict({
 	},
 	iPhoenicia: {
 		iSettle: 1,
-		iWork: 2,
+		iWork: 3,
 		iDefend: 1,
 		iCounter: 1,
 		iSettleSea: 1,

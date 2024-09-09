@@ -1022,7 +1022,7 @@
 			<PaganReligion>PAGAN_RELIGION_BAALISM</PaganReligion>
 			<Impact>IMPACT_CRITICAL</Impact>
 			<Identifier>CAR</Identifier>
-			<StartingYear>-1200</StartingYear>
+			<StartingYear>-1100</StartingYear>
 			<LoadingTimes>
 				<LoadingTime>1</LoadingTime>
 				<LoadingTime>0</LoadingTime>
