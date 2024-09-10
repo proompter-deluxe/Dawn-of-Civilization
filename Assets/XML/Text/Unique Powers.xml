@@ -251,11 +251,11 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UP_CHI</Tag>
-		<English>Free statesmen in the capital</English>
-		<French>Free statesmen in the capital</French>
-		<German>Free statesmen in the capital</German>
-		<Italian>Free statesmen in the capital</Italian>
-		<Spanish>Free statesmen in the capital</Spanish>
+		<English>+1 commerce per statesman + free statesmen in the capital</English>
+		<French>+1 commerce per statesman + free statesmen in the capital</French>
+		<German>+1 commerce per statesman + free statesmen in the capital</German>
+		<Italian>+1 commerce per statesman + free statesmen in the capital</Italian>
+		<Spanish>+1 commerce per statesman + free statesmen in the capital</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UP_COL_TITLE</Tag>
