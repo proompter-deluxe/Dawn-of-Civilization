@@ -202,8 +202,9 @@ def checkRaiders():
 @handler("BeginGameTurn")
 def createSilkRoute():
 	if year() == year(-75):
-		for plot in plots.of(lSilkRoute):
-			plot.setRouteType(iRouteRoad)
+		if not player(iChina).isHuman():
+			for plot in plots.of(lSilkRoute):
+				plot.setRouteType(iRouteRoad)
 
 
 ### FIRST CONTACT ###
