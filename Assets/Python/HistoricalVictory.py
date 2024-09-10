@@ -204,7 +204,12 @@ dGoals = {
 		CitySpecialistCount(capital().named(CAPITAL), great_people(), 3, by=-550),
 	),
 	iChina: (
-		RouteConnection([iRouteRoad], plots.region(rNorthChina), plots.region(rAnatolia), by=200),
+		All(
+			DefeatedUnits(civs(iBarbarian, iIndependent, iIndependent2), 30),
+			AttitudeCount(AttitudeTypes.ATTITUDE_PLEASED, 1, civs=group(iCivGroupEurope).named(EUROPE)),
+			NoCityLost(),
+			by=200,
+		),
 		Control(
 			plots.region(rNorthChina).named(CHINA_NORTH),
 			plots.region(rSouthChina).named(CHINA_SOUTH),
@@ -303,7 +308,10 @@ dGoals = {
 		Wonder(iMoaiStatues, by=1200),
 	),
 	iPersia: (
-		RouteConnection([iRouteRoad], city(tPersepolis).named(PERSEPOLIS), plots.region(rAnatolia), by=-500),
+		Control(
+			plots.region(rGreece), 
+			by=-450,
+		),
 		BuildingCount(wonders(), 10, by=-300),
 		PopulationPercent(35, at=-300),
 	),

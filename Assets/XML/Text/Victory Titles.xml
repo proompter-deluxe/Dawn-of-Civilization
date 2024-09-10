@@ -227,11 +227,11 @@
 	
 	<TEXT>
 		<Tag>TXT_KEY_VICTORY_TITLE_CHI1</Tag>
-		<English>The Three Departments and Six Ministries</English>
-		<French>The Three Departments and Six Ministries</French>
-		<German>The Three Departments and Six Ministries</German>
-		<Italian>The Three Departments and Six Ministries</Italian>
-		<Spanish>The Three Departments and Six Ministries</Spanish>
+		<English>The Western Regions</English>
+		<French>The Western Regions</French>
+		<German>The Western Regions</German>
+		<Italian>The Western Regions</Italian>
+		<Spanish>The Western Regions</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_VICTORY_TITLE_CHI2</Tag>
@@ -927,11 +927,11 @@
 	
 	<TEXT>
 		<Tag>TXT_KEY_VICTORY_TITLE_PER1</Tag>
-		<English>Royal Road</English>
-		<French>Royal Road</French>
-		<German>Royal Road</German>
-		<Italian>Royal Road</Italian>
-		<Spanish>Royal Road</Spanish>
+		<English>The Persian Wars</English>
+		<French>The Persian Wars</French>
+		<German>The Persian Wars</German>
+		<Italian>The Persian Wars</Italian>
+		<Spanish>The Persian Wars</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_VICTORY_TITLE_PER2</Tag>
