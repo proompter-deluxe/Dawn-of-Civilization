@@ -1776,6 +1776,7 @@ dTechPreferences = {
 		iFirearms: -50,
 		iCompanies: -50,
 		iPaper: -20,
+		iCompass: -30,
 	},
 	iTibet : {
 		iPhilosophy: 30,
