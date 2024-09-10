@@ -488,17 +488,13 @@ iCanada : 1867,
 lBirthCivs = dBirth.keys()
 
 dFall = CivDict({
-iEgypt : -343,
-iBabylonia : -539,
+iEgypt : -1150, # Egypt never regained its relevance after the Bronze Age Collapse
+iBabylonia : -1155, # Neo-Babylonia was a short lived affair, it can exist if Babylonia respawns, but it shouldn't be super stable
 iHarappa : -1700,
-iAssyria : -609,
-iChina : 1127,
-iChinaS : 500,
+iAssyria : -631, # end of Ashurbanipal's reign
 iHittites : -1180,
 iNubia : 1518,
-iGreece : -146,
 iIndia : 600,
-iPhoenicia : -146,
 iPolynesia : 1200,
 iPersia : 651,
 iCelts : 1169,
@@ -512,8 +508,7 @@ iMalays : 1511,
 iKorea : 1255,
 iKhmer : 1200,
 iMali : 1600,
-iByzantium : 1204,
-iNorse : 1300,
+iByzantium : 1400,
 iTurks : 1507,
 iArabia : 900,
 iTibet : 1500,
