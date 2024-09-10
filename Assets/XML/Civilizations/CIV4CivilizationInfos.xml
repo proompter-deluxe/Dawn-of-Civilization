@@ -1359,7 +1359,7 @@
 			<Adjective>TXT_KEY_CIV_YANGTZE_CHINA_ADJECTIVE</Adjective>
 			<Civilopedia>TXT_KEY_CIV_CHINA_PEDIA</Civilopedia>
 			<DefaultPlayerColor>PLAYERCOLOR_MIDDLE_GREEN</DefaultPlayerColor>
-			<ArtDefineTag>ART_DEF_CIVILIZATION_CHINA</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_CIVILIZATION_YANGTZE_CHINA</ArtDefineTag>
 			<ArtStyleType>ARTSTYLE_ASIAN</ArtStyleType>
 			<UnitArtStyleType>UNIT_ARTSTYLE_ASIAN</UnitArtStyleType>
 			<PaganReligion>PAGAN_RELIGION_SHENDAO</PaganReligion>
