@@ -1412,6 +1412,9 @@ def specificAdjective(iPlayer):
 			return "TXT_KEY_CIV_MOORS_MOROCCAN"
 			
 	elif iCiv == iSpain:
+		if not player(iMoors).isExisting() and iEra >= iMedieval:
+			return "TXT_KEY_ADJECTIVE_VISIGOTHIC"
+
 		bSpain = not player(iMoors).isExisting() or not player(iMoors).getCapitalCity() in plots.region(rIberia)
 	
 		if bSpain:
@@ -1716,7 +1719,7 @@ def specificTitle(iPlayer, lPreviousOwners=[]):
 			return "TXT_KEY_EMPIRE_ADJECTIVE"
 			
 	elif iCiv == iPhoenicia:
-		if iReligion == iIslam and isCurrentCapital(iPlayer, "Carthage", "Tunis"):
+		if iReligion == iIslam and isCurrentCapital(iPlayer, "Qart-Hadasht"):
 			return "TXT_KEY_CIV_CARTHAGE_TUNIS_ADJECTIVE"
 
 		if bEmpire:

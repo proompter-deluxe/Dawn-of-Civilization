@@ -332,6 +332,13 @@ lCivilizations = [
 		techs=techs.column(5).including(iArchitecture, iPolitics, iEthics)
 	),
 	Civilization(
+		iSpain,
+		iGold=100,
+		iStateReligion=iCatholicism,
+		lCivics=[iMonarchy, iManorialism, iMerchantTrade, iClergy, iHegemony],
+		techs=techs.column(5).including(iNobility, iPolitics).without(iMedicine, iPhilosophy)
+	),
+	Civilization(
 		iFrance,
 		iGold=100,
 		iStateReligion=iCatholicism,
@@ -398,14 +405,6 @@ lCivilizations = [
 		iStateReligion=iHinduism,
 		lCivics=[iDespotism, iCitizenship, iCasteSystem, iMerchantTrade, iDeification, iThalassocracy],
 		techs=techs.column(6).without(iNobility, iPolitics, iScholarship)
-	),
-	Civilization(
-		iSpain,
-		iGold=200,
-		iAdvancedStartPoints=100,
-		iStateReligion=iCatholicism,
-		lCivics=[iMonarchy, iVassalage, iManorialism, iMerchantTrade, iClergy, iHegemony],
-		techs=techs.column(6).including(iFeudalism, iAlchemy, iGuilds)
 	),
 	Civilization(
 		iEngland,
@@ -788,7 +787,8 @@ dStartingUnits = CivDict({
 		iWork: 2,
 		iDefend: 2,
 		iCounter: 2,
-		iAttack: 2,
+		iAttack: 4,
+		iShock: 1,
 		iMissionary: 1,
 	},
 	iMalays: {
@@ -868,7 +868,6 @@ dStartingUnits = CivDict({
 		iSettle: 2,
 		iWork: 2,
 		iDefend: 2,
-		iAttack: 4,
 		iMissionary: 1,
 	},
 	iEngland: {
@@ -1172,6 +1171,11 @@ dExtraAIUnits = CivDict({
 	iJava: {
 		iCityAttack: 2,
 	},
+	iMoors: {
+		iAttack: 3,
+		iSiege: 3,
+		iHarass: 3,
+	}, 
 	iEngland: {
 		iAttack: 2,
 		iShock: 2,

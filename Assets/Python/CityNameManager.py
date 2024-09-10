@@ -88,6 +88,7 @@ dCapitals = {
 	iPoland : ["Kowno", "Medvegalis", "Wilno", "Ryga"],
 	iRussia : ["Moskva", "Kiev"],
 	iNetherlands : ["Brussels", "Antwerpen"], # TODO: no matches for Brussels
+	iPhoenicia: ["Qart-Hadasht"]
 }
 
 
@@ -3826,6 +3827,7 @@ tRenames = (
 	"Winchester"	:	"Winchester",
 	"Winnipeg"		:	"Winnipeg",
 	"York"			:	"York",
+	"Qart-Hadasht"	:	"Carthage",
 },
 #Language: German
 {

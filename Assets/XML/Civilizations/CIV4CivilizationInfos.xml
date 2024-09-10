@@ -5837,7 +5837,7 @@
 			<PaganReligion>PAGAN_RELIGION_DRUIDISM</PaganReligion>
 			<Impact>IMPACT_CRITICAL</Impact>
 			<Identifier>SPA</Identifier>
-			<StartingYear>722</StartingYear>
+			<StartingYear>526</StartingYear>
 			<LoadingTimes>
 				<LoadingTime>6</LoadingTime>
 				<LoadingTime>1</LoadingTime>
