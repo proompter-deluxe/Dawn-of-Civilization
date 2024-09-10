@@ -122,6 +122,28 @@ BeginPlot
 	EndCity
 EndPlot
 BeginPlot
+	x=54,y=53
+	RouteType=ROUTE_ROAD
+	BeginUnit
+		UnitType=UNIT_CROSSBOWMAN
+		UnitOwner=CIVILIZATION_SPAIN
+	EndUnit
+	BeginCity
+		CityOwner=CIVILIZATION_SPAIN
+		CityName=Santiago de Compostela
+		CityPopulation=2
+		BuildingType=BUILDING_GRANARY
+		BuildingType=BUILDING_HARBOR
+		ReligionType=RELIGION_CATHOLICISM
+		BeginCulture
+			Civilization=CIVILIZATION_SPAIN, Culture=10
+		EndCulture
+		YearFounded=-40
+		YearAcquired=400
+		PreviousOwner=CIVILIZATION_ROME
+	EndCity
+EndPlot
+BeginPlot
 	x=54,y=65
 	RouteType=ROUTE_ROAD
 	BeginUnit
@@ -178,6 +200,44 @@ BeginPlot
 		BeginCulture
 			Civilization=CIVILIZATION_INDEPENDENT, Culture=10
 		EndCulture
+	EndCity
+EndPlot
+BeginPlot
+	x=57,y=52
+	RouteType=ROUTE_ROAD
+	BeginUnit
+		UnitType=UNIT_CROSSBOWMAN
+		UnitOwner=CIVILIZATION_SPAIN
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_WORKER
+		UnitOwner=CIVILIZATION_SPAIN
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_WORKER
+		UnitOwner=CIVILIZATION_SPAIN
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_SWORDSMAN
+		UnitOwner=CIVILIZATION_SPAIN
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_SWORDSMAN
+		UnitOwner=CIVILIZATION_SPAIN
+	EndUnit
+	BeginCity
+		CityOwner=CIVILIZATION_SPAIN
+		CityName=Madrid
+		CityPopulation=3
+		BuildingType=BUILDING_GRANARY
+		BuildingType=BUILDING_PALACE
+		ReligionType=RELIGION_CATHOLICISM
+		BeginCulture
+			Civilization=CIVILIZATION_SPAIN, Culture=10
+		EndCulture
+		YearFounded=-40
+		YearAcquired=400
+		PreviousOwner=CIVILIZATION_ROME
 	EndCity
 EndPlot
 BeginPlot
@@ -261,10 +321,10 @@ BeginPlot
 	RouteType=ROUTE_ROAD
 	BeginUnit
 		UnitType=UNIT_CROSSBOWMAN
-		UnitOwner=CIVILIZATION_INDEPENDENT2
+		UnitOwner=CIVILIZATION_SPAIN
 	EndUnit
 	BeginCity
-		CityOwner=CIVILIZATION_INDEPENDENT2
+		CityOwner=CIVILIZATION_SPAIN
 		CityName=Barcelona
 		CityPopulation=2
 		BuildingType=BUILDING_GRANARY
@@ -272,7 +332,7 @@ BeginPlot
 		ReligionType=RELIGION_JUDAISM
 		ReligionType=RELIGION_CATHOLICISM
 		BeginCulture
-			Civilization=CIVILIZATION_INDEPENDENT2, Culture=10
+			Civilization=CIVILIZATION_SPAIN, Culture=10
 		EndCulture
 		YearFounded=-300
 		YearAcquired=400
@@ -360,10 +420,10 @@ BeginPlot
 	RouteType=ROUTE_ROAD
 	BeginUnit
 		UnitType=UNIT_CROSSBOWMAN
-		UnitOwner=CIVILIZATION_FRANCE
+		UnitOwner=CIVILIZATION_INDEPENDENT
 	EndUnit
 	BeginCity
-		CityOwner=CIVILIZATION_FRANCE
+		CityOwner=CIVILIZATION_INDEPENDENT
 		CityName=Marseille
 		CityPopulation=2
 		BuildingType=BUILDING_GRANARY
@@ -371,7 +431,7 @@ BeginPlot
 		ReligionType=RELIGION_JUDAISM
 		ReligionType=RELIGION_CATHOLICISM
 		BeginCulture
-			Civilization=CIVILIZATION_FRANCE, Culture=10
+			Civilization=CIVILIZATION_INDEPENDENT, Culture=10
 		EndCulture
 		YearFounded=-600
 		YearAcquired=400

@@ -83,6 +83,13 @@ lCivilizations = [
 		techs=techs.column(6).without(iSteel, iArtisanry, iPolitics)
 	),
 	Civilization(
+		iSpain,
+		iGold=100,
+		iStateReligion=iCatholicism,
+		lCivics=[iMonarchy, iManorialism, iMerchantTrade, iClergy],
+		techs=techs.column(6).without(iSteel, iArtisanry, iPolitics)
+	),
+	Civilization(
 		iMalays,
 		iGold=100,
 		iStateReligion=iBuddhism,
