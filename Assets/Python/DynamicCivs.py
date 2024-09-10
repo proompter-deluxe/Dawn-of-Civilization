@@ -1318,7 +1318,7 @@ def specificAdjective(iPlayer):
 			return "TXT_KEY_CIV_PERSIA_PAHLAVI"
 
 	elif iCiv == iPhoenicia:
-		if iReligion == iIslam and isCurrentCapital(iPlayer, "Carthage", "Tunis"):
+		if iReligion == iIslam and isCurrentCapital(iPlayer, "Qart-Hadasht"):
 			return "TXT_KEY_CIV_CARTHAGE_TUNIS_EMIRATE"
 
 	elif iCiv == iPolynesia:
