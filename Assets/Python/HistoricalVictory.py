@@ -204,7 +204,7 @@ dGoals = {
 		CitySpecialistCount(capital().named(CAPITAL), great_people(), 3, by=-550),
 	),
 	iChina: (
-		SpecialistCount(sum(iSpecialistStatesman, iSpecialistGreatStatesman), 20, by=180),
+		RouteConnection([iRouteRoad], plots.region(rNorthChina), plots.region(rAnatolia), by=200),
 		Control(
 			plots.region(rNorthChina).named(CHINA_NORTH),
 			plots.region(rSouthChina).named(CHINA_SOUTH),
