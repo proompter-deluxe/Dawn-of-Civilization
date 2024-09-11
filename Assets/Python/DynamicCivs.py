@@ -928,9 +928,11 @@ def peoplesName(iPlayer):
 	
 def islamicName(iPlayer):
 	pPlayer = player(iPlayer)
+	civic = civics(iPlayer)
 
 	iReligion = pPlayer.getStateReligion()
 	bEmpire = isEmpire(iPlayer)
+	bTheocracy = civic.iLegitimacy == iTheocracy or civic.iReligion == iFanaticism
 
 	if iReligion == iIslam:
 		if bTheocracy:
