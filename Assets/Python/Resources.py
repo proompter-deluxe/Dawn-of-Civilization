@@ -330,7 +330,7 @@ dCivGroupResourcesDict = {
 	(60, 56) : (iCivGroupMediterranean, iWine, 600),
 	(63, 59) : (iCivGroupMediterranean, iWine, 600),
 	(65, 60) : (iCivGroupMediterranean, iWine, 600),
-	(72, 59) : (iCivGroupMediterranean, iWine, 600),
+	(71, 59) : (iCivGroupMediterranean, iWine, 600),
 }
 
 

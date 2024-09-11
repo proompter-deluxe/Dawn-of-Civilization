@@ -1184,11 +1184,11 @@ dExtraAIUnits = CivDict({
 		iCounter: 2,
 	},
 	iMongols: {
-		iDefend: 2,
-		iAttack: 2,
-		iShock: 10,
-		iSiege: 6,
-		iHarass: 5,
+		iDefend: 3,
+		iAttack: 3,
+		iShock: 14,
+		iSiege: 8,
+		iHarass: 7,
 		iExplore: 2,
 	},
 	iInca: {
@@ -1576,7 +1576,8 @@ dTechPreferences = {
 		iLogistics: -40,
 		iCombinedArms: -40,
 		iDivination: -20,
-		iSailing: -20,	
+		iSailing: -20,
+		iCartography: -40,
 	},
 	iChinaS : {
 		iAesthetics: 40,
@@ -1601,7 +1602,8 @@ dTechPreferences = {
 		iLogistics: -40,
 		iCombinedArms: -40,
 		iDivination: -20,
-		iSailing: -20,	
+		iSailing: -20,
+		iCartography: -40,
 	},
 	iHittites: {
 		iBloomery: 50,
