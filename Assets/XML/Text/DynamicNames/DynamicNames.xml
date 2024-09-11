@@ -335,6 +335,30 @@
 		</Spanish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_EMIRATE_OF</Tag>
+		<English>Emirate of %s1</English>
+		<French>
+			<Text>&#201;mirat de %s1</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Emirat von %s1:Emirat von %s1:Emirat von %s1</Text>
+			<Gender>Neuter:Neuter:Neuter</Gender>
+			<Plural>0:0:0</Plural>
+		</German>
+		<Italian>
+			<Text>Emirato di %s1</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Emirato de %s1</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>	
+	<TEXT>
 		<Tag>TXT_KEY_CALIPHATE_OF</Tag>
 		<English>Caliphate of %s1</English>
 		<French>

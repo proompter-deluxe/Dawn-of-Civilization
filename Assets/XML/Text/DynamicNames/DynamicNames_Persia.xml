@@ -150,6 +150,14 @@
 		<Spanish>Pahlavi</Spanish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_CIV_PERSIA_SAFFARID</Tag>
+		<English>Saffarid</English>
+		<French>Saffarid</French>
+		<German>Saffarid</German>
+		<Italian>Saffarid</Italian>
+		<Spanish>Saffarid</Spanish>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_CIV_PERSIAN_VASSAL</Tag>
 		<English>Satrapy of %s1</English>
 		<French>

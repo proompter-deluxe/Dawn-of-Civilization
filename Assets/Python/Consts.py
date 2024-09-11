@@ -141,7 +141,7 @@ iTan = 90
 iLime = 100
 
 # scripted conquerors
-iNumConquests = 15
+iNumConquests = 18
 
 lNeighbours = [
 	(iEgypt, iBabylonia),
@@ -510,7 +510,7 @@ iKhmer : 1200,
 iMali : 1600,
 iByzantium : 1400,
 iTurks : 1507,
-iArabia : 900,
+iArabia : 1250,
 iTibet : 1500,
 iMoors : 1150,
 iJava: 1645, # the decline of Sultanate of Mataram started then, even if the end was in 1755
@@ -532,9 +532,9 @@ dNeighbours = dictFromEdges(lBirthCivs, lNeighbours)
 dInfluences = dictFromEdges(lBirthCivs, lInfluences)
 
 dResurrections = CivDict({
-iEgypt : [(900, 1300), (1800, 2020)],
+iEgypt : [(870, 1300), (1800, 2020)],
 iBabylonia : [(-3000, -630)],
-iAssyria : [(-1450, -650)],
+iAssyria : [(-1450, -650), (900, 1000)],
 iChina : [(580, 1127), (1600, 2020)],
 iChinaS : [(910, 1550), (1850, 1920)],
 iHittites : [(-1800, -750)],
@@ -542,7 +542,7 @@ iNubia : [(500, 1500)],
 iGreece : [(1800, 2020)],
 iIndia : [(1600, 1800), (1900, 2020)],
 iPhoenicia : [(1200, 1500), (1950, 2020)],
-iPersia : [(220, 580)],
+iPersia : [(220, 580), (870, 1000)],
 iCelts : [(400, 1150), (1850, 2020)],
 iRome : [(-338, 450)],
 iMaya : [(0, 800)],

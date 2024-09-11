@@ -282,6 +282,14 @@
 		<Spanish>%s1 has fielded an army to conquer our civilization!</Spanish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_UP_CONQUESTS_TARGET_ALL</Tag>
+		<English>%s1 has fielded an army to conquer %s2!</English>
+		<French>%s1 a lev&#233; une arm&#233;e pour conqu&#233;rir notre civilisation !</French>
+		<German>%s1 hat eine Armee zum Angriff auf unsere Zivilisation zusammengestellt!</German>
+		<Italian>%s1 has fielded an army to conquer our civilization!</Italian>
+		<Spanish>%s1 has fielded an army to conquer our civilization!</Spanish>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_UP_DRA_TITLE</Tag>
 		<English>The Power of Trade Guilds:</English>
 		<French>The Power of Trade Guilds:</French>
