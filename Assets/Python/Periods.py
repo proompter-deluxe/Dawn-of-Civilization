@@ -9,7 +9,7 @@ dEvacuatePeriods = {
 }
 
 dPeriods600AD = {
-	iPhoenicia : iPeriodCarthage,
+	iPhoenicia : iPeriodTunisia,
 	iCelts : iPeriodInsularCelts,
 }
 
@@ -56,6 +56,7 @@ dPeriodNames = {
 	iPeriodPakistan:				"Pakistan",
 	iPeriodOttomanConstantinople:	"Ottoman_Constantinople",
 	iPeriodModernGermany:			"Modern_Germany",
+	iPeriodTunisia:					"Tunisia",
 }
 
 
@@ -93,6 +94,8 @@ def onBirth(iPlayer):
 		setPeriod(iCelts, iPeriodInsularCelts)
 	elif iCiv == iGermany:
 		setPeriod(iHolyRome, iPeriodAustria)
+	elif iCiv == iArabia:
+		setPeriod(iPhoenicia, iPeriodTunisia)
 
 
 @handler("collapse")

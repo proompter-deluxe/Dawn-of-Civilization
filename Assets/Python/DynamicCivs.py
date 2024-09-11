@@ -685,6 +685,9 @@ def onPeriodChange(iPlayer, iPeriod):
 		if iPeriod == iPeriodCarthage:
 			checkNameChange(iPlayer)
 			checkAdjectiveChange(iPlayer)
+		elif iPeriod == iPeriodTunisia:
+			checkNameChange(iPlayer)
+			checkAdjectiveChange(iPlayer)
 	
 	if iCiv == iNorse:
 		if iPeriod == iPeriodDenmark:

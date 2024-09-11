@@ -141,7 +141,7 @@ iTan = 90
 iLime = 100
 
 # scripted conquerors
-iNumConquests = 18
+iNumConquests = 23
 
 lNeighbours = [
 	(iEgypt, iBabylonia),
@@ -494,6 +494,7 @@ iHarappa : -1700,
 iAssyria : -631, # end of Ashurbanipal's reign
 iHittites : -1180,
 iNubia : 1518,
+iChinaS: 580,
 iIndia : 600,
 iPolynesia : 1200,
 iPersia : 651,
@@ -1164,12 +1165,12 @@ dResurrectionLeaders = CivDict({
 })
 
 # update DLL constants when this changes
-iNumPeriods = 22
+iNumPeriods = 23
 (iPeriodMing, iPeriodMaratha, iPeriodModernGreece, iPeriodCarthage, iPeriodInsularCelts,
 iPeriodVijayanagara, iPeriodByzantineConstantinople, iPeriodSeljuks, iPeriodMeiji, iPeriodDenmark, 
 iPeriodNorway, iPeriodUzbeks, iPeriodSaudi, iPeriodMorocco, iPeriodAustria, 
 iPeriodYuan, iPeriodPeru, iPeriodLateInca, iPeriodModernItaly, iPeriodPakistan, 
-iPeriodOttomanConstantinople, iPeriodModernGermany) = range(iNumPeriods)
+iPeriodOttomanConstantinople, iPeriodModernGermany, iPeriodTunisia) = range(iNumPeriods)
 
 iNumImpacts = 5
 (iImpactMarginal, iImpactLimited, iImpactSignificant, iImpactCritical, iImpactPlayer) = range(iNumImpacts)
