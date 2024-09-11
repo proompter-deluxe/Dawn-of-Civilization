@@ -75,7 +75,7 @@ iPeriodMaratha :		(105, 46),	# Delhi
 iPeriodCarthage : 		(67, 48),	# Carthage
 iPeriodInsularCelts :	(54, 65),	# Dublin
 iPeriodVijayanagara :	(106, 37),	# Vijayanagara
-iPeriodAustria :		(71, 59),	# Vienna
+iPeriodAustria :		(72, 59),	# Vienna
 }
 
 # new capital locations if changed during the game
