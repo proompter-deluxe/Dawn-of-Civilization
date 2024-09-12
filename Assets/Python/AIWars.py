@@ -291,9 +291,11 @@ def checkConquest(tConquest, tPrereqConquest = (), bInvertPrereqConquestConditio
 		return
 	
 	if tPrereqConquest and not bInvertPrereqConquestCondition and not isConquered(tPrereqConquest):
+		#message(active(), 'Failing to start conquest from %s1 because prereq conquest not met.', name(iPlayer))
 		return
 
 	if tPrereqConquest and bInvertPrereqConquestCondition and isConquered(tPrereqConquest):
+		#message(active(), 'INVERTED CONQUEST CONDITION: Failing to start conquest from %s1 because prereq conquest is met.', name(iPlayer))
 		return
 	
 	#if iCiv == iSpain and (iPreferredTarget < 0 or player(iPreferredTarget).isHuman()):
@@ -312,10 +314,11 @@ def warnConquest(iPlayer, iCiv, iPreferredTargetCiv, tTL, tBR):
 
 
 def isConquered(tConquest):
-	iID, iPlayer, iPreferredTarget, tTL, tBR, iNumTargets, iYear, iIntervalTurns = tConquest
-
+	iID, iCiv, iPreferredTargetCiv, tTL, tBR, iNumTargets, iYear, iIntervalTurns = tConquest
+	
+	iPlayer = slot(iCiv)
 	iNumMinorCities = 0
-	lAreaCities = cities.start(tTL).end(tBR)
+	lAreaCities = cities.rectangle(tTL, tBR)
 
 	# if empty, assume conquered
 	if len(lAreaCities) == 0: return True

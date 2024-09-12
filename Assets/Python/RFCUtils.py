@@ -382,7 +382,7 @@ def getColonialTargets(iPlayer, bEmpty=False):
 	
 	return targetCities
 	
-# used: History
+# used: History --> not used anymore
 def getBorderPlots(iPlayer, tTL, tBR, iDirection = DirectionTypes.NO_DIRECTION, iNumPlots = 1):
 	dMetrics = {
 		DirectionTypes.NO_DIRECTION : lambda plot: 0,
