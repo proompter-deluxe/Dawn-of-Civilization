@@ -388,7 +388,7 @@ def spawnConquerors(iPlayer, iPreferredTarget, tTL, tBR, iNumTargets, iWarPlan =
 			# we want to be sure that the AI can fund these conquerors for at least a few turns
 			player(iPlayer).changeGold(20)
 			
-			if iCiv == iMongols:
+			if iCiv == iMongols or iCiv == iTurks or iCiv == iArabia:
 				iExtra += 1
 		
 		tPlot = findNearestLandPlot(city, iPlayer)
