@@ -131,6 +131,12 @@ tSouthChinaBR = (131, 50)
 
 tConquestSuiUnification = (18, iChina, iChinaS, tSouthChinaTL, tSouthChinaBR, 3, iSuiUnificationYear, 10)
 
+iArabCarthageConquestYear = 690
+tTunisiaTL = (66, 44)
+tTunisiaBR = (69, 48)
+
+tConquestArabiaCarthage = (23, iArabia, iPhoenicia, tTunisiaTL, tTunisiaBR, 3, iArabCarthageConquestYear, 10)
+
 lConquests = [
 	tConquestRomeCarthageInSpain,
 	tConquestRomeCarthage, 
@@ -154,6 +160,7 @@ lConquests = [
 	tConquestHolyRomeCrusades,
 	tConquestEnglandCrusades,
 	tConquestSuiUnification,
+	tConquestArabiaCarthage,
 ]
 
 
