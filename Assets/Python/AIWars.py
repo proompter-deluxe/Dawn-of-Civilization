@@ -7,8 +7,6 @@ from Resurrection import getResurrectionTechs
 
 ### Constants ###
 
-# FIXME: redo how the IDs are assigned so we don't need to increment numConquests
-
 iMinIntervalEarly = 10
 iMaxIntervalEarly = 20
 iMinIntervalLate = 40
@@ -133,8 +131,6 @@ tSouthChinaBR = (131, 50)
 
 tConquestSuiUnification = (18, iChina, iChinaS, tSouthChinaTL, tSouthChinaBR, 3, iSuiUnificationYear, 10)
 
-# increment iNumConquests in Consts.py when adding to the list above
-# current number: 23
 lConquests = [
 	tConquestRomeCarthageInSpain,
 	tConquestRomeCarthage, 
@@ -272,6 +268,9 @@ def checkConquest(tConquest, tPrereqConquest = (), bInvertPrereqConquestConditio
 	if team(iPlayer).isAVassal():
 		return
 	
+	if not iID in data.lConquest:
+		data.lConquest[iID] = False
+
 	if data.lConquest[iID]:
 		return
 
