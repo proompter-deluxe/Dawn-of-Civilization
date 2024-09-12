@@ -621,6 +621,12 @@ def onRespawn(iPlayer):
 	checkName(iPlayer)
 	checkLeader(iPlayer)
 
+	# Sassanid revival
+	if civ(iPlayer) == iPersia and year() <= year(600):
+		makeUnits(iPlayer, iSavaran, tPersepolis, 5, UnitAITypes.UNITAI_ATTACK_CITY)
+		makeUnits(iPlayer, iSwordsman, tPersepolis, 3, UnitAITypes.UNITAI_ATTACK_CITY)
+		makeUnits(iPlayer, iCatapult, tPersepolis, 3, UnitAITypes.UNITAI_ATTACK_CITY)
+
 @handler("vassalState")	
 def onVassalState(iMaster, iVassal):
 	iMasterCiv = civ(iMaster)
