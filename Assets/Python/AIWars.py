@@ -137,6 +137,12 @@ tTunisiaBR = (69, 48)
 
 tConquestArabiaCarthage = (23, iArabia, iPhoenicia, tTunisiaTL, tTunisiaBR, 3, iArabCarthageConquestYear, 10)
 
+iArabPersiaConquestYear = 650
+tArabsPersiaTL = (92, 43)
+tArabsPersiaBR = (95, 50)
+
+tConquestArabiaPersia = (24, iArabia, iPersia, tArabsPersiaTL, tArabsPersiaBR, 2, iArabPersiaConquestYear, 10)
+
 lConquests = [
 	tConquestRomeCarthageInSpain,
 	tConquestRomeCarthage, 
@@ -161,6 +167,7 @@ lConquests = [
 	tConquestEnglandCrusades,
 	tConquestSuiUnification,
 	tConquestArabiaCarthage,
+	tConquestArabiaPersia,
 ]
 
 
