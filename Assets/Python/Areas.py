@@ -332,6 +332,7 @@ iPeriodModernGermany :			[(69, 61)],
 ### Respawn area ###
 
 dRespawnArea = CivDict({
+iAssyria :	((85, 49),	(90, 51)),
 iEgypt :	((76, 39),	(83, 45)),
 iChina :	((120, 51),	(129, 58)),
 iChinaS :	((124, 43),	(131, 50)),
