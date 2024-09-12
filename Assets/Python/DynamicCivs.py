@@ -894,9 +894,6 @@ def name(iPlayer, bIgnoreVassal = False):
 		
 	sSpecificName = specificName(iPlayer)
 	if sSpecificName: return sSpecificName
-
-	sIslamicName = islamicName(iPlayer)
-	if sIslamicName: return sIslamicName
 	
 	sDefaultInsertName = dDefaultInsertNames.get(iCiv)
 	if sDefaultInsertName: return sDefaultInsertName
@@ -934,22 +931,6 @@ def republicName(iPlayer):
 	
 def peoplesName(iPlayer):
 	return desc(iPlayer, key(iPlayer, "PEOPLES"))
-	
-def islamicName(iPlayer):
-	pPlayer = player(iPlayer)
-	civic = civics(iPlayer)
-
-	iReligion = pPlayer.getStateReligion()
-	bEmpire = isEmpire(iPlayer)
-	bTheocracy = civic.iLegitimacy == iTheocracy or civic.iReligion == iFanaticism
-
-	if iReligion == iIslam:
-		if bTheocracy:
-			return "TXT_KEY_CALIPHATE_OF"
-		if bEmpire:
-			return "TXT_KEY_SULTANATE_OF"
-		else:
-			return "TXT_KEY_EMIRATE_OF"
 
 def specificName(iPlayer):
 	iCiv = civ(iPlayer)
@@ -1116,7 +1097,7 @@ def specificName(iPlayer):
 			return "TXT_KEY_CIV_SPAIN_CASTILE"
 			
 	elif iCiv == iFrance:
-		if iEra == iMedieval and not player(iHolyRome).isExisting():
+		if iEra < iRenaissance and not player(iHolyRome).isExisting():
 			return "TXT_KEY_CIV_FRANCE_FRANCIA"
 			
 	elif iCiv == iEngland:
@@ -1327,7 +1308,7 @@ def specificAdjective(iPlayer):
 			return "TXT_KEY_CIV_ASSYRIA_HAMDANID"
 
 	elif iCiv == iPersia:
-		if iReligion == iIslam:
+		if iReligion == iIslam and iEra < iRenaissance:
 			return "TXT_KEY_CIV_PERSIA_SAFFARID"
 
 		if pPlayer.isStateReligion() and iReligion < 0:
@@ -1557,12 +1538,37 @@ def title(iPlayer):
 	if isRepublic(iPlayer):
 		sRepublicTitle = republicTitle(iPlayer)
 		if sRepublicTitle: return sRepublicTitle
+
+	# don't need to check for islam, the function will do this
+	sIslamicTitle = islamicTitle(iPlayer)
+	if sIslamicTitle: return sIslamicTitle
 		
 	sSpecificTitle = specificTitle(iPlayer)
 	if sSpecificTitle: return sSpecificTitle
 	
 	return defaultTitle(iPlayer)
-	
+
+def islamicTitle(iPlayer):
+	pPlayer = player(iPlayer)
+	civic = civics(iPlayer)
+	iCiv = civ(iPlayer)
+
+	iReligion = pPlayer.getStateReligion()
+	bEmpire = isEmpire(iPlayer)
+	bTheocracy = civic.iLegitimacy == iTheocracy or civic.iReligion == iFanaticism
+
+	# some civs have their own nomenclature, like Shahdom for Iran/Persia
+	if iCiv == iIran or iCiv == iPersia or iCiv == iOttomans:
+		return
+
+	if iReligion == iIslam:
+		if bTheocracy:
+			return "TXT_KEY_CALIPHATE_OF"
+		if bEmpire:
+			return "TXT_KEY_SULTANATE_OF"
+		else:
+			return "TXT_KEY_EMIRATE_OF"
+
 def vassalTitle(iPlayer, iMaster):
 	iMasterCiv = civ(iMaster)
 	iCiv = civ(iPlayer)
@@ -1682,9 +1688,6 @@ def specificTitle(iPlayer, lPreviousOwners=[]):
 
 	if iCiv == iEgypt:
 		if bResurrected or scenario() >= i600AD:
-			if iReligion == iIslam:
-				if bTheocracy: return "TXT_KEY_CALIPHATE_ADJECTIVE"
-				return "TXT_KEY_SULTANATE_ADJECTIVE"
 			return "TXT_KEY_KINGDOM_ADJECTIVE"
 			
 		if slot(iGreece) in lPreviousOwners:
@@ -1692,9 +1695,6 @@ def specificTitle(iPlayer, lPreviousOwners=[]):
 			
 		if bCityStates:
 			return "TXT_KEY_CIV_EGYPT_NOMES"
-		
-		if iReligion == iIslam:
-			return "TXT_KEY_SULTANATE_OF"
 		
 		if iReligion in [iOrthodoxy, iCatholicism, iProtestantism]:
 			return "TXT_KEY_CIV_EGYPT_COPTIC"
@@ -1707,10 +1707,7 @@ def specificTitle(iPlayer, lPreviousOwners=[]):
 		if iEra == iClassical:
 			return "TXT_KEY_CIV_EGYPT_NEW_KINGDOM"
 			
-	elif iCiv == iIndia:
-		if iReligion == iIslam:
-			return "TXT_KEY_SULTANATE_OF"
-			
+	elif iCiv == iIndia:	
 		if bEmpire:
 			return "TXT_KEY_EMPIRE_ADJECTIVE"
 			
@@ -1792,8 +1789,6 @@ def specificTitle(iPlayer, lPreviousOwners=[]):
 			return "TXT_KEY_EMPIRE_OF"
 			
 	elif iCiv == iDravidia:
-		if iReligion == iIslam:
-			return "TXT_KEY_SULTANATE_ADJECTIVE"
 	
 		if getColumn(iPlayer) >= 9:
 			return "TXT_KEY_KINGDOM_OF"
@@ -1804,9 +1799,6 @@ def specificTitle(iPlayer, lPreviousOwners=[]):
 	elif iCiv == iEthiopia:
 		if bCityStates:
 			return "TXT_KEY_CITY_STATES_ADJECTIVE"
-	
-		if iReligion == iIslam:
-			return "TXT_KEY_SULTANATE_ADJECTIVE"
 	
 		if bEmpire:
 			return "TXT_KEY_EMPIRE_ADJECTIVE"
@@ -1826,10 +1818,7 @@ def specificTitle(iPlayer, lPreviousOwners=[]):
 		if iReligion >= 0:
 			return "TXT_KEY_KINGDOM_OF"
 			
-	elif iCiv == iByzantium:
-		if iReligion == iIslam:
-			return "TXT_KEY_SULTANATE_OF"
-			
+	elif iCiv == iByzantium:	
 		if not bEmpire and location(capital) != location(plots.capital(iCiv)):
 			if capital.getRegionID() == rAnatolia:
 				return "TXT_KEY_EMPIRE_OF"
@@ -1867,12 +1856,6 @@ def specificTitle(iPlayer, lPreviousOwners=[]):
 			if not isControlled(iPlayer, plots.core(iPersia)):
 				return "TXT_KEY_CIV_TURKS_KHANATE_OF"
 				
-			if iReligion == iIslam:
-				if isControlled(iPlayer, plots.core(iPersia)):
-					return "TXT_KEY_SULTANATE_ADJECTIVE"
-			
-				return "TXT_KEY_SULTANATE_OF"
-				
 			return "TXT_KEY_KINGDOM_OF"
 			
 		if bEmpire:
@@ -1881,9 +1864,6 @@ def specificTitle(iPlayer, lPreviousOwners=[]):
 	elif iCiv == iArabia:
 		if bResurrected:
 			return "TXT_KEY_KINGDOM_OF"
-			
-		if iReligion == iIslam and (bTheocracy or controlsHolyCity(iPlayer, iIslam)):
-			return "TXT_KEY_CALIPHATE_ADJECTIVE"
 			
 	elif iCiv == iTibet:
 		if bEmpire:
@@ -1903,26 +1883,10 @@ def specificTitle(iPlayer, lPreviousOwners=[]):
 		if bCityStates:
 			return "TXT_KEY_CIV_MOORS_TAIFAS"
 			
-		if iReligion == iIslam and capital in plots.region(rIberia):
-			if bEmpire:
-				return "TXT_KEY_CALIPHATE_OF"
-				
-			return "TXT_KEY_EMIRATE_OF"
-			
-		if bEmpire and iEra <= iRenaissance:
-			if iReligion == iIslam and bTheocracy:
-				return "TXT_KEY_CALIPHATE_ADJECTIVE"
-				
-			return "TXT_KEY_EMPIRE_ADJECTIVE"
-			
-	elif iCiv == iJava:
-		if iReligion == iIslam:
-			return "TXT_KEY_SULTANATE_OF"
+		if iReligion != iIslam and bEmpire:
+			return "TXT_KEY_EMPIRE_ADJECTIVE"	
 			
 	elif iCiv == iSpain:
-		if iReligion == iIslam:
-			return "TXT_KEY_SULTANATE_OF"
-			
 		if bEmpire and iEra > iMedieval:
 			return "TXT_KEY_EMPIRE_ADJECTIVE"
 			
