@@ -82,6 +82,7 @@ lBirthWars = [
 	(iMongols, iChina),
 	(iMongols, iChinaS),
 	(iOttomans, iByzantium),
+	(iMoors, iSpain),
 ]
 
 
