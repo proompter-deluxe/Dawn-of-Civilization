@@ -7,6 +7,8 @@ from Resurrection import getResurrectionTechs
 
 ### Constants ###
 
+# FIXME: redo how the IDs are assigned so we don't need to increment numConquests
+
 iMinIntervalEarly = 10
 iMaxIntervalEarly = 20
 iMinIntervalLate = 40
