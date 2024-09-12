@@ -111,24 +111,28 @@ def onResurrection(iPlayer):
 	if iCiv == iGreece:
 		setPeriod(iGreece, iPeriodModernGreece)
 	
-	if iCiv == iChina:
+	elif iCiv == iChina:
 		if year() > year(dBirth[iMongols]):
 			setPeriod(iChina, iPeriodMing)
 	
-	if iCiv == iIndia:
+	elif iCiv == iIndia:
 		if year() < year(1900):
 			setPeriod(iIndia, iPeriodMaratha)
 		else:
 			setPeriod(iIndia, -1)
 	
-	if iCiv == iCelts:
+	elif iCiv == iCelts:
 		setPeriod(iCelts, iPeriodInsularCelts)
 	
-	if iCiv == iArabia:
+	elif iCiv == iArabia:
 		setPeriod(iArabia, iPeriodSaudi)
 		
-	if iCiv == iMongols:
+	elif iCiv == iMongols:
 		setPeriod(iCiv, -1)
+
+	elif iCiv == iPhoenicia:
+		if game.isReligionFounded(iIslam):
+			setPeriod(iPhoenicia, iPeriodTunisia)
 
 
 @handler("cityAcquired")
@@ -161,7 +165,9 @@ def onCityBuilt(city):
 	iOwnerCiv = civ(iOwner)
 
 	if iOwnerCiv == iPhoenicia:
-		if city.getRegionID in lEurope + lAfrica:
+		if player(iOwnerCiv).getPeriod() == iPeriodTunisia:
+			return
+		elif city.getRegionID in lEurope + lAfrica:
 			setPeriod(iPhoenicia, iPeriodCarthage)
 
 
@@ -185,16 +191,18 @@ def onCapitalMoved(city):
 	iOwnerCiv = civ(iOwner)
 	
 	if iOwnerCiv == iPhoenicia:
-		if city.getRegionID() in lEurope + lAfrica:
+		if player(iOwnerCiv).getPeriod() == iPeriodTunisia:
+			return
+		elif city.getRegionID() in lEurope + lAfrica:
 			setPeriod(iPhoenicia, iPeriodCarthage)
 		else:
 			setPeriod(iPhoenicia, -1)
 	
-	if iOwnerCiv == iNorse:
+	elif iOwnerCiv == iNorse:
 		if player(iOwner).getCurrentEra() >= iRenaissance:
 			setPeriod(iNorse, getNorsePeriod(iOwner))
 	
-	if iOwnerCiv == iMoors:
+	elif iOwnerCiv == iMoors:
 		if player(iOwner).getCurrentEra() >= iIndustrial and city.getRegionID() != rIberia:
 			setPeriod(iMoors, iPeriodMorocco)
 

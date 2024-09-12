@@ -686,8 +686,8 @@ def onPeriodChange(iPlayer, iPeriod):
 			checkNameChange(iPlayer)
 			checkAdjectiveChange(iPlayer)
 		elif iPeriod == iPeriodTunisia:
-			checkNameChange(iPlayer)
-			checkAdjectiveChange(iPlayer)
+			setShort(iPlayer, text("TXT_KEY_CIV_CARTHAGE_TUNIS"))
+			setAdjective(iPlayer, text("TXT_KEY_CIV_CARTHAGE_TUNIS_ADJECTIVE"))
 	
 	if iCiv == iNorse:
 		if iPeriod == iPeriodDenmark:
@@ -1347,7 +1347,7 @@ def specificAdjective(iPlayer):
 			return "TXT_KEY_CIV_PERSIA_PAHLAVI"
 
 	elif iCiv == iPhoenicia:
-		if iReligion == iIslam and isCurrentCapital(iPlayer, "Qart-Hadasht"):
+		if player(iCiv).getPeriod() == iPeriodTunisia:
 			return "TXT_KEY_CIV_CARTHAGE_TUNIS_ADJECTIVE"
 
 	elif iCiv == iPolynesia:
@@ -2208,7 +2208,11 @@ def leader(iPlayer):
 			return iDarius
 			
 	elif iCiv == iPhoenicia:
-		if bResurrected and game.isReligionFounded(iIslam): return iAbuFaris
+		if player(iCiv).getPeriod() == iPeriodTunisia: return iAbuFaris
+
+		if iReligion == iIslam and player(iCiv).getPeriod() != iPeriodTunisia:
+			game.setPeriod(iCiv, iPeriodTunisia)
+			return iAbuFaris
 
 		if capital.getRegionID() not in [rMesopotamia, rAnatolia, rLevant]: return iHannibal
 		
