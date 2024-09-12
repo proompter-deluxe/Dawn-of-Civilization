@@ -508,7 +508,7 @@ iKhmer : 1200,
 iMali : 1600,
 iByzantium : 1400,
 iTurks : 1507,
-iArabia : 1250,
+iArabia : 1200,
 iTibet : 1500,
 iMoors : 1150,
 iJava: 1645, # the decline of Sultanate of Mataram started then, even if the end was in 1755
