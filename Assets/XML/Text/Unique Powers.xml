@@ -251,11 +251,11 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UP_CHI</Tag>
-		<English>+1 commerce per statesman and free statesmen in the capital</English>
-		<French>+1 commerce per statesman and free statesmen in the capital</French>
-		<German>+1 commerce per statesman and free statesmen in the capital</German>
-		<Italian>+1 commerce per statesman and free statesmen in the capital</Italian>
-		<Spanish>+1 commerce per statesman and free statesmen in the capital</Spanish>
+		<English>+1 [ICON_COMMERCE] per statesman and free statesmen in the capital</English>
+		<French>+1 [ICON_COMMERCE] per statesman and free statesmen in the capital</French>
+		<German>+1 [ICON_COMMERCE] per statesman and free statesmen in the capital</German>
+		<Italian>+1 [ICON_COMMERCE] per statesman and free statesmen in the capital</Italian>
+		<Spanish>+1 [ICON_COMMERCE] per statesman and free statesmen in the capital</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UP_COL_TITLE</Tag>
