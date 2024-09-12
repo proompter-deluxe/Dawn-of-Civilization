@@ -462,7 +462,7 @@ minor_cities = [
 	MinorCity(-200, iIndependent, (125, 43), "Panyu", iPopulation=2, iCiv=iChina, units={iDefend: 2}, adjective="TXT_KEY_ADJECTIVE_NANYUE"),
 	MinorCity(-150, iIndependent2, (112, 57), "Jiaohe", iPopulation=1, iCiv=iChina, units={iHarass: 1}, adjective="TXT_KEY_ADJECTIVE_TOCHARIAN"),
 	MinorCity(-75, iIndependent, (105, 55), "Kash", iPopulation=2, iCiv=iKushans, units={iDefend: 1}, adjective="TXT_KEY_ADJECTIVE_UIGHUR"),
-	MinorCity(0, iIndependent2, (58, 64), "Londinion", iPopulation=1, iCiv=iCelts, units={iDefend: 1}, adjective="TXT_KEY_ADJECTIVE_CELTIC"),
+	MinorCity(-50, iIndependent2, (58, 64), "Londinion", iPopulation=1, iCiv=iCelts, units={iDefend: 1}, adjective="TXT_KEY_ADJECTIVE_CELTIC"),
 	MinorCity(190, iIndependent2, (123, 39), "Indrapura", iPopulation=3, iCiv=iChina, units={iDefend: 3}, bUnique=False, adjective="TXT_KEY_ADJECTIVE_CHAM"),
 	MinorCity(300, iIndependent2, (89, 37), "Sana'a", iPopulation=2, iCiv=iEthiopia, units={iDefend: 2}, adjective="TXT_KEY_ADJECTIVE_YEMENI"),
 	MinorCity(400, iIndependent2, (118, 45), "Dali", iPopulation=4, iCiv=iChina, units={iDefend: 3, iShock: 1}, adjective="TXT_KEY_ADJECTIVE_BAI"),
