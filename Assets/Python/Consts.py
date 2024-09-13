@@ -532,7 +532,7 @@ dInfluences = dictFromEdges(lBirthCivs, lInfluences)
 
 dResurrections = CivDict({
 iEgypt : [(870, 1300), (1800, 2020)],
-iBabylonia : [(-3000, -630)],
+iBabylonia : [(-3000, -1450), (-700, -630)],
 iAssyria : [(-1450, -650), (900, 1000)],
 iChina : [(580, 1127), (1600, 2020)],
 iChinaS : [(910, 1550), (1850, 1920)],
