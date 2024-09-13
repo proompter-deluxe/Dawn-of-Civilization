@@ -638,7 +638,10 @@ def onVassalState(iMaster, iVassal):
 		data.civs[iVassal].iResurrections += 1
 		checkNameChange(iVassal)
 		checkAdjectiveChange(iVassal)
-		
+
+	if iVassalCiv == iPhoenicia and (player(iVassalCiv).getStateReligion() == iIslam or player(iMasterCiv).getStateReligion() == iIslam):
+		game.setPeriod(iVassalCiv, iPeriodTunisia)
+	
 	checkName(iVassal)
 
 @handler("playerChangeStateReligion")
