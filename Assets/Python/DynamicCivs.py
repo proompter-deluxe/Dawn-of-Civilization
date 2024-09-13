@@ -1600,6 +1600,10 @@ def vassalTitle(iPlayer, iMaster):
 	sSpecificTitle = dSpecificVassalTitles[iMasterCiv].get(iCiv)
 	if sSpecificTitle: return sSpecificTitle
 
+	# if no specific title and master is islamic, use the generic "emirate of"
+	if player(iMasterCiv).getStateReligion() == iIslam:
+		return dMasterTitles[iArabia]
+
 	sMasterTitle = dMasterTitles.get(iMasterCiv)
 	if sMasterTitle: return sMasterTitle
 		
