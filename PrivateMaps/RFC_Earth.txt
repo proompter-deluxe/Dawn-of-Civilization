@@ -36520,7 +36520,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=81,y=44
-	TerrainType=TERRAIN_DESERT
+	TerrainType=TERRAIN_SEMIDESERT
 	PlotType=2
 EndPlot
 BeginPlot
