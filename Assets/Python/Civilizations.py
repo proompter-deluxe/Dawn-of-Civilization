@@ -621,6 +621,7 @@ dStartingUnits = CivDict({
 	iAssyria: {
 		iSettle: 1,
 		iWork: 2,
+		iBase: 2,
 		iDefend: 1,
 		iCounter: 3,
 		iSiege: 3,
