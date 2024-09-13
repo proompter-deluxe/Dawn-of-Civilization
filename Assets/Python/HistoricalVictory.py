@@ -191,7 +191,7 @@ dGoals = {
 	iAssyria: (
 		All(
 			UnitLevelCount(3, 8),
-			by=-750,
+			by=-700,
 		),
 		Control(
 			plots.region(rMesopotamia).named(MESOPOTAMIA),
