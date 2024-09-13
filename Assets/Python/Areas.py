@@ -7,7 +7,7 @@ lPeakExceptions = [(31, 13), (32, 19), (27, 29), (88, 47), (40, 66)]
 
 dCapitals = CivDict({
 iEgypt :		(79, 43), # Memphis
-iBabylonia :	(89, 47), # Babylon
+iBabylonia :	(90, 45), # Ur (aka Uru)
 iHarappa :		(102, 47), # Harappa
 iAssyria :		(89, 50), # Ash-shur
 iChina :		(121, 52), # Chang'an

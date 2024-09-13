@@ -178,7 +178,7 @@ dGoals = {
 		FirstDiscover(iConstruction, iArithmetics, iWriting, iCalendar, iContract),
 		CityBuildingCount(city(tBabylon).named(BABYLON), wonders(), 3, by=-850),
 		All(
-			CityPopulation(city(tBabylon).named(BABYLON), 12),
+			PopulationCount(12),
 			CityCultureLevel(city(tBabylon).named(BABYLON), iCultureLevelRefined),
 			by=-700,
 		),

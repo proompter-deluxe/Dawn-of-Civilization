@@ -9,6 +9,7 @@ from Scenarios import SCENARIOS
 
 
 dRelocatedCapitals = CivDict({
+	iBabylonia: tBabylon,
 	iPhoenicia : tCarthage,
 	iMongols : tBeijing,
 	iOttomans : tConstantinople

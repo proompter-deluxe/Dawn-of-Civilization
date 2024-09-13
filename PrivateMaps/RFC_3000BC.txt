@@ -29,7 +29,7 @@ BeginPlot
 	EndUnit
 EndPlot
 BeginPlot
-	x=89,y=47
+	x=90,y=45
 	BeginUnit
 		UnitType=UNIT_MILITIA
 		UnitOwner=CIVILIZATION_BABYLONIA

@@ -40208,6 +40208,7 @@ BeginPlot
 	x=89,y=45
 	FeatureType=FEATURE_FLOOD_PLAINS, FeatureVariety=0
 	TerrainType=TERRAIN_DESERT
+	BonusType=BONUS_WHEAT
 	PlotType=2
 EndPlot
 BeginPlot
