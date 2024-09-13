@@ -191,8 +191,8 @@ dGoals = {
 	iAssyria: (
 		All(
 			CityCaptureGold(200),
-			UnitLevelCount(3, 5),
-			by=-900,
+			UnitLevelCount(3, 8),
+			by=-800,
 		),
 		Control(
 			plots.region(rMesopotamia).named(MESOPOTAMIA),
