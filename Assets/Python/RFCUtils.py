@@ -727,8 +727,9 @@ def canRespawn(iCiv):
 		return False
 		
 	# check if only recently died, excepting Persia as an emirate respawn
-	if iCiv == iPersia and year().between(870, 1000) and data.civs[iCiv].iLastTurnAlive > turn() - turns(5):
-		return False
+	if iCiv == iPersia and year().between(870, 1000):
+		if data.civs[iCiv].iLastTurnAlive > turn() - turns(5):
+			return False
 	elif data.civs[iCiv].iLastTurnAlive > turn() - turns(20):
 		return False
 	
