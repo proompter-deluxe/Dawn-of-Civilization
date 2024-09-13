@@ -141,7 +141,13 @@ iArabPersiaConquestYear = 650
 tArabsPersiaTL = (92, 43)
 tArabsPersiaBR = (95, 50)
 
-tConquestArabiaPersia = (24, iArabia, iPersia, tArabsPersiaTL, tArabsPersiaBR, 2, iArabPersiaConquestYear, 10)
+tConquestArabiaPersia = (24, iArabia, iPersia, tArabsPersiaTL, tArabsPersiaBR, 3, iArabPersiaConquestYear, 10)
+
+iArabSindConquestYear = 710
+tArabsSindTL = (98, 42)
+tArabsSindBR = (102, 47)
+
+tConquestArabiaSind = (25, iArabia, iKushans, tArabsSindTL, tArabsSindBR, 2, iArabSindConquestYear, 15)
 
 lConquests = [
 	tConquestRomeCarthageInSpain,
@@ -168,6 +174,7 @@ lConquests = [
 	tConquestSuiUnification,
 	tConquestArabiaCarthage,
 	tConquestArabiaPersia,
+	tConquestArabiaSind
 ]
 
 
@@ -223,6 +230,8 @@ def checkConquests():
 		elif tConquest[0] == tConquestRomeCarthage[0]:
 			# Rome needs Spain before attacking North Africa
 			checkConquest(tConquest, tConquestRomeCarthageInSpain)
+		elif tConquest[0] == tConquestArabiaSind[0]:
+			checkConquest(tConquest, tConquestArabiaPersia)
 		else:
 			checkConquest(tConquest)
 		
