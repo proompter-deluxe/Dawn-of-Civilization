@@ -190,7 +190,6 @@ dGoals = {
 	),
 	iAssyria: (
 		All(
-			CityCaptureGold(200),
 			UnitLevelCount(3, 8),
 			by=-750,
 		),
