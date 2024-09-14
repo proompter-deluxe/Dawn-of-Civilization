@@ -1358,7 +1358,7 @@
 			<ShortDescription>TXT_KEY_CIV_YANGTZE_CHINA_SHORT_DESC</ShortDescription>
 			<Adjective>TXT_KEY_CIV_YANGTZE_CHINA_ADJECTIVE</Adjective>
 			<Civilopedia>TXT_KEY_CIV_CHINA_PEDIA</Civilopedia>
-			<DefaultPlayerColor>PLAYERCOLOR_MIDDLE_GREEN</DefaultPlayerColor>
+			<DefaultPlayerColor>PLAYERCOLOR_GREEN_AND_WHITE</DefaultPlayerColor>
 			<ArtDefineTag>ART_DEF_CIVILIZATION_YANGTZE_CHINA</ArtDefineTag>
 			<ArtStyleType>ARTSTYLE_ASIAN</ArtStyleType>
 			<UnitArtStyleType>UNIT_ARTSTYLE_ASIAN</UnitArtStyleType>
