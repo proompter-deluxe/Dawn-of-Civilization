@@ -289,10 +289,16 @@
 			<TextColorType>COLOR_PLAYER_LIGHT_BLACK_TEXT</TextColorType>
 		</PlayerColorInfo>
 		<PlayerColorInfo>
-			<Type>PLAYERCOLOR_GREEN_AND_WHITE</Type> <!-- South China -->
+			<Type>PLAYERCOLOR_GREEN_AND_WHITE</Type>
 			<ColorTypePrimary>COLOR_PLAYER_DARK_GREEN</ColorTypePrimary>
 			<ColorTypeSecondary>COLOR_PLAYER_WHITE</ColorTypeSecondary>
 			<TextColorType>COLOR_PLAYER_WHITE_TEXT</TextColorType>
+		</PlayerColorInfo>
+		<PlayerColorInfo>
+			<Type>PLAYERCOLOR_GREEN_AND_WHITE_GREEN_TEXT</Type> <!-- South China -->
+			<ColorTypePrimary>COLOR_PLAYER_DARK_GREEN</ColorTypePrimary>
+			<ColorTypeSecondary>COLOR_PLAYER_WHITE</ColorTypeSecondary>
+			<TextColorType>COLOR_PLAYER_DARK_GREEN</TextColorType>
 		</PlayerColorInfo>
 		<PlayerColorInfo>
 			<Type>PLAYERCOLOR_CYAN_AND_GRAY</Type>
