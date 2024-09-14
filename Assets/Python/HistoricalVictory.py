@@ -198,7 +198,7 @@ dGoals = {
 			plots.rectangle(tElam).named(ELAM),
 			plots.region(rLevant).named(LEVANT),
 			plots.region(rEgypt).named(EGYPT),
-			by=-600,
+			by=-650,
 		),
 		CitySpecialistCount(capital().named(CAPITAL), great_people(), 3, by=-550),
 	),
