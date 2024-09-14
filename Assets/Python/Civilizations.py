@@ -1141,7 +1141,7 @@ dExtraAIUnits = CivDict({
 	},
 	iPersia: {
 		iShock: 2,
-		iAttack: 2,
+		iCounter: 2,
 		iSiege: 4,
 		iHarass: 2,
 	},
@@ -1472,7 +1472,7 @@ def createSpecificUnits(iPlayer, tile):
 	
 	if iCiv == iPersia:
 		makeUnits(iPlayer, iImmortal, tile, 4, UnitAITypes.UNITAI_ATTACK)
-		makeUnit(iPlayer, iWarElephant, tile)
+		# makeUnit(iPlayer, iWarElephant, tile)
 	if iCiv == iKorea:
 		makeUnit(iPlayer, iConfucianMissionary, tile)
 	elif iCiv == iDravidia:
