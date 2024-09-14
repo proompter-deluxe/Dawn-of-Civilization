@@ -539,7 +539,7 @@ barbarians = [
 	Barbarians(-200, 300, {iCamelRider: 1}, ((56, 39), (71, 44)), 9, NOMADS, target_area=((54, 34), (76, 48)), adjective="TXT_KEY_ADJECTIVE_BERBER"),
 	Barbarians(-200, 700, {iWarElephant: 1}, ((103, 37), (118, 42)), 10, MINORS, adjective="TXT_KEY_ADJECTIVE_HINDI"),
 	Barbarians(-200, 700, {iWarGalley: 1}, ((84, 22), (95, 37)), 18, PIRATES, adjective="TXT_KEY_ADJECTIVE_SOMALI"),
-	Barbarians(-100, 150, {iSkirmisher: 1, iLightSwordsman: 1}, ((120, 42), (129, 50)), 9, MINORS, adjective="TXT_KEY_ADJECTIVE_YUE"), # reduce intensity during "Han golden age"
+	Barbarians(-100, 150, {iSkirmisher: 1, iLightSwordsman: 1}, ((120, 42), (129, 48)), 9, MINORS, adjective="TXT_KEY_ADJECTIVE_YUE"), # reduce intensity during "Han golden age"
 	Barbarians(-100, 400, {iHorseArcher: 2}, ((79, 58), (88, 63)), 8, NOMADS, target_area=((65, 50), (84, 58)), adjective="TXT_KEY_ADJECTIVE_SARMATIAN"),
 	Barbarians(-50, 700, {iWarGalley: 1}, ((54, 42), (69, 50)), 18, PIRATES, adjective="TXT_KEY_ADJECTIVE_BARBARY"),
 	Barbarians(0, 200, {iAxeman: 2}, ((101, 37), (112, 45)), 8, MINORS, adjective="TXT_KEY_ADJECTIVE_HINDI"),
@@ -549,7 +549,7 @@ barbarians = [
 	Barbarians(100, 500, {iHorseArcher: 3}, ((113, 55), (131, 63)), 7, NOMADS, target_area=((117, 46), (129, 61)), adjective="TXT_KEY_ADJECTIVE_XIANBEI", promotions=(iDesertAdaptation, iSteppeAdaptation)),
 	Barbarians(100, 650, {iSwordsman: 2}, ((64, 59), (75, 65)), 6, INVADERS, target_area=((58, 52), (71, 62)), adjective="TXT_KEY_ADJECTIVE_GERMANIC"),
 	Barbarians(100, 600, {iHolkan: 1}, ((19, 38), (25, 44)), 6, NATIVES, adjective="TXT_KEY_ADJECTIVE_MAYA"),
-	Barbarians(150, 450, {iSkirmisher: 1, iLightSwordsman: 2}, ((120, 42), (129, 50)), 6, MINORS, adjective="TXT_KEY_ADJECTIVE_YUE"), # intensify during crisis period (although it should be fully settled by now)
+	Barbarians(150, 450, {iSkirmisher: 1, iLightSwordsman: 2}, ((120, 42), (129, 48)), 6, MINORS, adjective="TXT_KEY_ADJECTIVE_YUE"), # intensify during crisis period (although it should be fully settled by now)
 	Barbarians(200, 1100, {iSwordsman: 1}, ((113, 47), (117, 54)), 10, MINORS, target_area=((112, 57), (123, 56)), adjective="TXT_KEY_ADJECTIVE_TIBETAN"),
 	Barbarians(175, 205, {iLightSwordsman: 3, iSwordsman: 2, iSkirmisher: 1}, ((123, 50), (127, 55)), 1, CLOSE_INVADERS, target_area=((121, 49), (127, 53)), adjective="TXT_KEY_ADJECTIVE_YELLOW_TURBAN"),
 	Barbarians(200, 500, {iSwordsman: 2}, ((101, 37), (112, 45)), 8, MINORS, adjective="TXT_KEY_ADJECTIVE_HINDI"),
@@ -564,7 +564,7 @@ barbarians = [
 	Barbarians(350, 450, {iHorseArcher: 5}, ((61, 57), (77, 62)), 2, INVADERS, target_area=((57, 51), (79, 61)), adjective="TXT_KEY_ADJECTIVE_HUNNIC"),
 	Barbarians(350, 600, {iDogSoldier: 1}, ((11, 44), (19, 51)), 10, NOMADS, iOwner=iNative, target_area=((14, 40), (23, 45)), adjective="TXT_KEY_ADJECTIVE_NAHUA"),
 	Barbarians(400, 550, {iGalley: 1, iSwordsman: 2}, ((62, 46), (71, 50)), 4, SEA_INVADERS, target_area=((62, 46), (71, 55)), adjective="TXT_KEY_ADJECTIVE_VANDAL"),
-	Barbarians(400, 1000, {iSkirmisher: 2, iSwordsman: 1}, ((120, 42), (129, 50)), 8, MINORS, adjective="TXT_KEY_ADJECTIVE_YUE"),
+	Barbarians(400, 1000, {iSkirmisher: 2, iSwordsman: 1}, ((120, 42), (129, 48)), 8, MINORS, adjective="TXT_KEY_ADJECTIVE_YUE"),
 	Barbarians(400, 1200, {iSwordsman: 2}, ((118, 43), (122, 47)), 12, MINORS, adjective="TXT_KEY_ADJECTIVE_BAI"),
 	Barbarians(500, 800, {iHorseArcher: 2}, ((105, 54), (123, 61)), 12, NOMADS, target_area=((117, 46), (129, 59)), adjective="TXT_KEY_ADJECTIVE_UIGHUR", promotions=(iDesertAdaptation, iSteppeAdaptation)),
 	Barbarians(400, 900, {iHorseArcher: 3}, ((113, 55), (128, 62)), 9, INVADERS, target_area=((117, 46), (129, 59)), adjective="TXT_KEY_ADJECTIVE_KHITAN", promotions=(iDesertAdaptation, iSteppeAdaptation)),
