@@ -1265,10 +1265,10 @@ def specificAdjective(iPlayer):
 
 	elif iCiv == iChinaS:
 		if bMonarchy:
-			if iEra == iMedieval and turn() >= year(900):
+			if iEra == iMedieval and tPlayer.isHasTech(iPaper) and tPlayer.isHasTech(iGunpowder):
 				return "TXT_KEY_CIV_YANGTZE_CHINA_SONG"
 
-			if iEra == iRenaissance:
+			if iEra >= iRenaissance:
 				return "TXT_KEY_CIV_YANGTZE_CHINA_MING"
 
 			return "TXT_KEY_CIV_YANGTZE_CHINA_WU"
@@ -1686,6 +1686,8 @@ def specificTitle(iPlayer, lPreviousOwners=[]):
 	iEra = pPlayer.getCurrentEra()
 	iGameEra = game.getCurrentEra()
 	bWar = isAtWar(iPlayer)
+	bMonarchy = not (isCommunist(iPlayer) or isFascist(iPlayer) or isRepublic(iPlayer))
+
 
 	if iCiv == iEgypt:
 		if bResurrected or scenario() >= i600AD:
@@ -1720,16 +1722,32 @@ def specificTitle(iPlayer, lPreviousOwners=[]):
 		
 		if iEra <= iClassical:
 			return "TXT_KEY_CIV_INDIA_MAHAJANAPADAS"
+
+	elif iCiv == iChina:
+		if bMonarchy:
+			if bEmpire:
+				if year() >= year(1600) or scenario() == i1700AD:
+					return "TXT_KEY_EMPIRE_OF"
+				if iEra == iClassical and year() >= year(220) and year() < year(580):
+					return "TXT_KEY_EMPIRE_OF"
+				return "TXT_KEY_EMPIRE_ADJECTIVE"
+
+			if iEra == iClassical:
+				if year() >= year(220) and year() < year(580):
+					return "TXT_KEY_KINGDOM_OF" # Kingdom of Wei
+			return "TXT_KEY_KINGDOM_ADJECTIVE"
+
+	elif iCiv == iChinaS:
+		if bMonarchy:
+			if bEmpire:				
+				if iEra == iRenaissance:
+					return "TXT_KEY_EMPIRE_OF"
+				return "TXT_KEY_EMPIRE_ADJECTIVE"
+
+			if iEra <= iMedieval and not (tPlayer.isHasTech(iPaper) and tPlayer.isHasTech(iGunpowder)):
+				return "TXT_KEY_KINGDOM_OF" # "Kingdom of Wu"
+			return "TXT_KEY_KINGDOM_ADJECTIVE"
 			
-	elif iCiv == iChina or iCiv == iChinaS:
-		if bEmpire:
-			if iEra >= iIndustrial or scenario() == i1700AD:
-				return "TXT_KEY_EMPIRE_OF"
-			
-			if iEra == iRenaissance and year() >= year(1400):
-				return "TXT_KEY_EMPIRE_OF"
-				
-			return "TXT_KEY_EMPIRE_ADJECTIVE"
 
 	elif iCiv == iBabylonia:
 		if bCityStates and not bEmpire:
