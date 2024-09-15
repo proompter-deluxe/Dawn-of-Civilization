@@ -39,15 +39,27 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIV_YANGTZE_CHINA_DEFAULT</Tag>
-		<English>Kingdom of Wu</English>
+		<English>Kingdom of %s1</English>
 		<French>
-			<Text>Royaume de Wu</Text>
+			<Text>Royaume de %s1</Text>
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>Kingdom of Wu</German>
-		<Italian>Kingdom of Wu</Italian>
-		<Spanish>Kingdom of Wu</Spanish>
+		<German>
+			<Text>K&#246;nigreich %s1:K&#246;nigreich %s1:K&#246;nigreich %s1</Text>
+			<Gender>Neuter:Neuter:Neuter</Gender>
+			<Plural>0:0:0</Plural>
+		</German>
+		<Italian>
+			<Text>Regno del %s1</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Reino de %s1</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIV_YANGTZE_CHINA_FASCIST</Tag>

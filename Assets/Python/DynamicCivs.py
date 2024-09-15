@@ -964,16 +964,10 @@ def specificName(iPlayer):
 			if year() >= year(1600) or scenario() == i1700AD:
 				return "TXT_KEY_CIV_CHINA_QING"
 
-		if iEra < iMedieval and year() >= year(220) and not scenario() >= i600AD:
-			return "TXT_KEY_CIV_CHINA_WEI_KINGDOM"
-
 	elif iCiv == iChinaS:
 		if bEmpire:
 			if iEra == iRenaissance:
 				return "TXT_KEY_CIV_CHINA_MING"
-
-		if not bEmpire and bMonarchy and year() >= year(900) and not scenario() >= i600AD:
-			return "TXT_KEY_CIV_YANGTZE_CHINA_DEFAULT"
 	
 	elif iCiv == iNubia:
 		if iEra <= iClassical:
@@ -1246,7 +1240,7 @@ def specificAdjective(iPlayer):
 			if iReligion == iHinduism:
 				return "TXT_KEY_CIV_INDIA_GUPTA"
 			
-	elif iCiv == iChina or iCiv == iChinaS and bEmpire:
+	elif iCiv == iChina or (iCiv == iChinaS and bEmpire):
 		if bMonarchy:
 			if iEra >= iMedieval:
 				if tPlayer.isHasTech(iPaper) and tPlayer.isHasTech(iGunpowder):
