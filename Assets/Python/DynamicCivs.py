@@ -1723,18 +1723,20 @@ def specificTitle(iPlayer, lPreviousOwners=[]):
 		if iEra <= iClassical:
 			return "TXT_KEY_CIV_INDIA_MAHAJANAPADAS"
 
+	# adjectives, titles and names should be unified into one functon per civ
+	# it would make it easier to track all the dynamic names
 	elif iCiv == iChina:
 		if bMonarchy:
 			if bEmpire:
 				if year() >= year(1600) or scenario() == i1700AD:
 					return "TXT_KEY_EMPIRE_OF"
 				if iEra == iClassical and year() >= year(220) and year() < year(580):
-					return "TXT_KEY_EMPIRE_OF"
+					return "TXT_KEY_EMPIRE_OF_ADJECTIVE" # Empire of Wei, using adjective aka %s2
 				return "TXT_KEY_EMPIRE_ADJECTIVE"
 
 			if iEra == iClassical:
 				if year() >= year(220) and year() < year(580):
-					return "TXT_KEY_KINGDOM_OF" # Kingdom of Wei
+					return "TXT_KEY_KINGDOM_OF_ADJECTIVE" # Kingdom of Wei, using adjective aka %s2
 			return "TXT_KEY_KINGDOM_ADJECTIVE"
 
 	elif iCiv == iChinaS:
@@ -1745,7 +1747,7 @@ def specificTitle(iPlayer, lPreviousOwners=[]):
 				return "TXT_KEY_EMPIRE_ADJECTIVE"
 
 			if iEra <= iMedieval and not (tPlayer.isHasTech(iPaper) and tPlayer.isHasTech(iGunpowder)):
-				return "TXT_KEY_KINGDOM_OF" # "Kingdom of Wu"
+				return "TXT_KEY_KINGDOM_OF_ADJECTIVE" # "Kingdom of Wu", using adjective aka %s2
 			return "TXT_KEY_KINGDOM_ADJECTIVE"
 			
 

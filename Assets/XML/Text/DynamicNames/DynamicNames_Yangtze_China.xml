@@ -39,24 +39,24 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIV_YANGTZE_CHINA_DEFAULT</Tag>
-		<English>Kingdom of %s1</English>
+		<English>Kingdom of %s2</English>
 		<French>
-			<Text>Royaume de %s1</Text>
+			<Text>Royaume de %s2</Text>
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
 		<German>
-			<Text>K&#246;nigreich %s1:K&#246;nigreich %s1:K&#246;nigreich %s1</Text>
+			<Text>K&#246;nigreich %s2:K&#246;nigreich %s2:K&#246;nigreich %s2</Text>
 			<Gender>Neuter:Neuter:Neuter</Gender>
 			<Plural>0:0:0</Plural>
 		</German>
 		<Italian>
-			<Text>Regno del %s1</Text>
+			<Text>Regno del %s2</Text>
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</Italian>
 		<Spanish>
-			<Text>Reino de %s1</Text>
+			<Text>Reino de %s2</Text>
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</Spanish>
