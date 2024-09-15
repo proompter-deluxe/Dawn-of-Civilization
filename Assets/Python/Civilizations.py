@@ -315,7 +315,7 @@ lCivilizations = [
 		iAdvancedStartPoints=60,
 		lCivics=[iMonarchy, iCasteSystem, iRedistribution, iSyncretism, iHegemony],
 		lEnemies=[iChina, iIndependent, iIndependent2],
-		techs=techs.column(5).including(iArtisanry, iScholarship)
+		techs=techs.column(5).including(iArtisanry, iScholarship, iPolitics, iAlchemy)
 	),
 	Civilization(
 		iMali,
