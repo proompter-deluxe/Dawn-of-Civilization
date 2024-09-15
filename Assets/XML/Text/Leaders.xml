@@ -891,15 +891,15 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_LEADER_GAOZONG</Tag>
-		<English>Gaozong</English>
+		<English>Song Gaozong</English>
 		<French>
-			<Text>Gaozong</Text>
+			<Text>Song Gaozong</Text>
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>Gaozong</German>
-		<Italian>Gaozong</Italian>
-		<Spanish>Gaozong</Spanish>
+		<German>Song Gaozong</German>
+		<Italian>Song Gaozong</Italian>
+		<Spanish>Song Gaozong</Spanish>
 	</TEXT>
 		<TEXT>
 		<Tag>TXT_KEY_LEADER_CHIANG_KAISHEK</Tag>
