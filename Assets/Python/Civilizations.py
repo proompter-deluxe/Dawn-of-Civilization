@@ -197,7 +197,7 @@ lCivilizations = [
 		iGold=50,
 		lCivics=[iDespotism],
 		lEnemies=[iIndependent, iIndependent2],
-		techs=techs.column(1).without(iSailing).including(iSmelting, iLeverage, iProperty, iCeremony)
+		techs=techs.column(1).without(iSailing).including(iSmelting, iProperty, iCeremony)
 	),
 	Civilization(
 		iHittites,
