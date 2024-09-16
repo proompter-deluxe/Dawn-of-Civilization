@@ -1133,6 +1133,7 @@ dExtraAIUnits = CivDict({
 	iChina : {
 		iDefend: 1,
 		iCounter: 1,
+		iWork: 1,
 	},
 	iIndia : {
 		iHarass: 1,
