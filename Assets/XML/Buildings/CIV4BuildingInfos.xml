@@ -9336,7 +9336,7 @@
 			<ConstructSound>AS2D_BUILD_PARTHENON</ConstructSound>
 			<BonusProductionModifiers>
 				<BonusProductionModifier>
-					<BonusType>BONUS_MARBLE</BonusType>
+					<BonusType>BONUS_STONE</BonusType>
 					<iProductonModifier>100</iProductonModifier>
 				</BonusProductionModifier>
 			</BonusProductionModifiers>
