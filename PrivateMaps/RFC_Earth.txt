@@ -53407,13 +53407,13 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=118,y=54
-	BonusType=BONUS_COPPER
+	BonusType=BONUS_RARE_EARTHS
 	TerrainType=TERRAIN_STEPPE
 	PlotType=1
 EndPlot
 BeginPlot
 	x=118,y=55
-	BonusType=BONUS_RARE_EARTHS
+	BonusType=BONUS_HORSE
 	TerrainType=TERRAIN_STEPPE
 	PlotType=2
 EndPlot
@@ -53868,7 +53868,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=119,y=52
-	BonusType=BONUS_IRON
+	BonusType=BONUS_COPPER
 	FeatureType=FEATURE_FOREST, FeatureVariety=1
 	TerrainType=TERRAIN_PLAINS
 	PlotType=1
@@ -56704,6 +56704,7 @@ EndPlot
 BeginPlot
 	x=125,y=53
 	TerrainType=TERRAIN_PLAINS
+	BonusType=BONUS_IRON
 	PlotType=1
 EndPlot
 BeginPlot
@@ -57142,6 +57143,7 @@ EndPlot
 BeginPlot
 	x=126,y=49
 	TerrainType=TERRAIN_GRASS
+	BonusType=BONUS_COPPER
 	PlotType=1
 EndPlot
 BeginPlot
