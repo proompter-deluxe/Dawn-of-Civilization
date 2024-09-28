@@ -1557,7 +1557,7 @@ def islamicTitle(iPlayer):
 	bTheocracy = civic.iLegitimacy == iTheocracy or civic.iReligion == iFanaticism
 
 	# some civs have their own nomenclature, like Shahdom for Iran/Persia
-	if iCiv == iIran or iCiv == iPersia or iCiv == iOttomans:
+	if iCiv == iIran or iCiv == iPersia or iCiv == iOttomans or iCiv == iMongols:
 		return
 
 	if iReligion == iIslam:
