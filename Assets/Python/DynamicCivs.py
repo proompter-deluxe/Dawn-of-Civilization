@@ -50,11 +50,13 @@ dSpecificVassalTitles = deepdict({
 		iKorea : "TXT_KEY_CIV_CHINESE_KOREA",
 		iTurks : "TXT_KEY_CIV_CHINESE_TURKS",
 		iMongols : "TXT_KEY_CIV_CHINESE_MONGOLIA",
+		iChinaS: "TXT_KEY_CIV_CHINA_SOUTH_VASSAL_OF_NORTH",
 	},
 	iChinaS : {
 		iKorea : "TXT_KEY_CIV_CHINESE_KOREA",
 		iTurks : "TXT_KEY_CIV_CHINESE_TURKS",
 		iMongols : "TXT_KEY_CIV_CHINESE_MONGOLIA",
+		iChina: "TXT_KEY_CIV_CHINA_NORTH_VASSAL_OF_SOUTH",
 	},
 	iGreece : {
 		iIndia : "TXT_KEY_CIV_GREEK_INDIA",
@@ -2003,7 +2005,7 @@ def specificTitle(iPlayer, lPreviousOwners=[]):
 			return "TXT_KEY_EMPIRE_ADJECTIVE"
 			
 	elif iCiv == iMongols:
-		if capital.getRegionID() == rPersia:
+		if capital.getRegionID() == rPersia or iReligion == iIslam:
 			return "TXT_KEY_CIV_MONGOLIA_ILKHANATE"
 	
 		if bEmpire:
@@ -2062,9 +2064,17 @@ def specificTitle(iPlayer, lPreviousOwners=[]):
 				
 			return "TXT_KEY_SULTANATE_ADJECTIVE"
 			
-		if bEmpire:
-			return "TXT_KEY_EMPIRE_ADJECTIVE"
-			
+	if bEmpire:
+		return "TXT_KEY_EMPIRE_ADJECTIVE"
+	elif iCiv == iSwahili:
+		if iReligion == iIslam:
+			if bTheocracy:
+				return "TXT_KEY_CALIPHATE_ADJECTIVE"
+			if bEmpire:
+				return "TXT_KEY_SULTANATE_ADJECTIVE"
+			else:
+				return "TXT_KEY_EMIRATE_ADJECTIVE"
+
 	elif iCiv == iThailand:
 		if iEra >= iIndustrial and bEmpire:
 			return "TXT_KEY_EMPIRE_OF"

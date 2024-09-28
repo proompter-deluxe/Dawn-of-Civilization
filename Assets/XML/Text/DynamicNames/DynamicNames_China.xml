@@ -246,6 +246,22 @@
 		<Spanish>Haixi</Spanish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_CIV_CHINA_SOUTH_VASSAL_OF_NORTH</Tag>
+		<English>Southern Commanderies</English>
+		<French>Southern Commanderies</French>
+		<German>Southern Commanderies</German>
+		<Italian>Southern Commanderies</Italian>
+		<Spanish>Southern Commanderies</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_CHINA_NORTH_VASSAL_OF_SOUTH</Tag>
+		<English>Northern Commanderies</English>
+		<French>Northern Commanderies</French>
+		<German>Northern Commanderies</German>
+		<Italian>Northern Commanderies</Italian>
+		<Spanish>Northern Commanderies</Spanish>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_CIV_CHINESE_ADJECTIVE_INDIA</Tag>
 		<English>Shendu</English>
 		<French>
