@@ -1810,6 +1810,7 @@ dTechPreferences = {
 	
 		iExploration: -40,
 		iGuilds: -40,
+		iPrinting: -20,
 	},
 	iSpain : {
 		iCartography: 100,
