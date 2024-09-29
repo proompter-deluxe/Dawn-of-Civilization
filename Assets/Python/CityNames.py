@@ -17,7 +17,7 @@ iLangJapanese, iLangKhmer, iLangKorean, iLangLatin, iLangMande,
 iLangMayan, iLangMongolian, iLangNahuatl, iLangNorse, iLangNubian, 
 iLangPersian, iLangPhoenician, iLangPolish, iLangPolynesian, iLangPortuguese, 
 iLangQuechua, iLangRussian, iLangSpanish, iLangSwedish, iLangThai, 
-iLangTibetan, iLangTurkish, iLangVietnamese,iLangLatePersian) = range(iNumLanguages)
+iLangTibetan, iLangTurkish, iLangVietnamese,iLangFarsi) = range(iNumLanguages)
 
 dLanguages = CivDict({
 	iEgypt:	[iLangEgyptian],
@@ -72,7 +72,7 @@ dLanguages = CivDict({
 	iRussia: [iLangRussian],
 	iOttomans: [iLangTurkish, iLangArabic],
 	iCongo: [iLangCongolese],
-	iIran: [iLangLatePersian, iLangPersian, iLangArabic],
+	iIran: [iLangFarsi, iLangPersian, iLangArabic],
 	iNetherlands: [iLangDutch],
 	iGermany: [iLangGerman],
 	iAmerica: [iLangAmerican, iLangEnglish],
@@ -134,7 +134,7 @@ dLanguageNames = {
 	iLangTibetan: "Tibetan",
 	iLangTurkish: "Turkish",
 	iLangVietnamese: "Vietnamese",
-	iLangLatePersian: "Farsi",
+	iLangFarsi: "Farsi",
 }
 
 dTranslations = dict((iLanguage, FileDict("Translations/%s.csv" % dLanguageNames[iLanguage])) for iLanguage in range(iNumLanguages))
@@ -261,7 +261,7 @@ def getSpecialLanguages(identifier):
 		if player(iCiv).getPeriod() == iPeriodTunisia:
 			return [iLangArabic]
 	elif iCiv == iPersia and player(identifier).getStateReligion() == iIslam:
-		return [iLangLatePersian,iLangArabic]
+		return [iLangFarsi,iLangArabic]
 	
 	return None
 
