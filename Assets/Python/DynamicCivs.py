@@ -457,7 +457,6 @@ dEmpireThreshold = {
 	iHolyRome : 3,
 	iInca : 3,
 	iMongols : 8,
-	iMughals : 6,
 	iRussia : 8,
 }
 
@@ -860,7 +859,7 @@ def getEmpireThreshold(iPlayer):
 	if iCiv == iRome and not player(iByzantium).isExisting():
 		return 7
 		
-	return 5
+	return 6
 	
 def isAtWar(iPlayer):
 	for iTarget in players.major():
@@ -1859,7 +1858,7 @@ def specificTitle(iPlayer, lPreviousOwners=[]):
 			return "TXT_KEY_CIV_NORSE_NORSE_KINGDOMS"
 			
 		if bEmpire:
-			if iEra <= iMedieval:
+			if iEra <= iMedieval and not player(iSweden).isExisting():
 				return "TXT_KEY_CIV_NORSE_KALMAR_UNION"
 				
 			if iEra == iRenaissance:

@@ -94,9 +94,6 @@ def onBirth(iPlayer):
 		setPeriod(iCelts, iPeriodInsularCelts)
 	elif iCiv == iGermany:
 		setPeriod(iHolyRome, iPeriodAustria)
-	elif iCiv == iArabia:
-		setPeriod(iPhoenicia, iPeriodTunisia)
-
 
 @handler("collapse")
 def onCollapse(iPlayer):

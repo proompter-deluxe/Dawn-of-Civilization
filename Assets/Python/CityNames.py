@@ -8,7 +8,7 @@ from Events import handler
 
 ### CONSTANTS ###
 
-iNumLanguages = 43
+iNumLanguages = 44
 (iLangAmerican, iLangArabic, iLangBabylonian, iLangBurmese, iLangByzantine, 
 iLangCeltic, iLangChinese, iLangCongolese, iLangDutch, iLangEgyptian, 
 iLangEgyptianArabic, iLangEnglish, iLangEthiopian, iLangFrench, iLangGerman, 
@@ -17,7 +17,7 @@ iLangJapanese, iLangKhmer, iLangKorean, iLangLatin, iLangMande,
 iLangMayan, iLangMongolian, iLangNahuatl, iLangNorse, iLangNubian, 
 iLangPersian, iLangPhoenician, iLangPolish, iLangPolynesian, iLangPortuguese, 
 iLangQuechua, iLangRussian, iLangSpanish, iLangSwedish, iLangThai, 
-iLangTibetan, iLangTurkish, iLangVietnamese) = range(iNumLanguages)
+iLangTibetan, iLangTurkish, iLangVietnamese,iLangLatePersian) = range(iNumLanguages)
 
 dLanguages = CivDict({
 	iEgypt:	[iLangEgyptian],
@@ -64,7 +64,7 @@ dLanguages = CivDict({
 	iPortugal: [iLangPortuguese, iLangSpanish],
 	iInca: [iLangQuechua],
 	iItaly: [iLangItalian],
-	iMongols: [iLangMongolian, iLangTurkish, iLangChinese],
+	iMongols: [iLangMongolian, iLangTurkish, iLangChinese, iLangPersian],
 	iAztecs: [iLangNahuatl],
 	iMughals: [iLangPersian, iLangArabic, iLangIndian],
 	iThailand: [iLangThai, iLangKhmer, iLangIndonesian],
@@ -72,7 +72,7 @@ dLanguages = CivDict({
 	iRussia: [iLangRussian],
 	iOttomans: [iLangTurkish, iLangArabic],
 	iCongo: [iLangCongolese],
-	iIran: [iLangArabic, iLangPersian],
+	iIran: [iLangLatePersian, iLangPersian, iLangArabic],
 	iNetherlands: [iLangDutch],
 	iGermany: [iLangGerman],
 	iAmerica: [iLangAmerican, iLangEnglish],
@@ -82,7 +82,6 @@ dLanguages = CivDict({
 	iBrazil: [iLangPortuguese, iLangSpanish],
 	iCanada: [iLangAmerican, iLangEnglish, iLangFrench],
 }, [])
-
 
 ### CSV CITY NAME MAP ###
 
@@ -135,6 +134,7 @@ dLanguageNames = {
 	iLangTibetan: "Tibetan",
 	iLangTurkish: "Turkish",
 	iLangVietnamese: "Vietnamese",
+	iLangLatePersian: "Farsi",
 }
 
 dTranslations = dict((iLanguage, FileDict("Translations/%s.csv" % dLanguageNames[iLanguage])) for iLanguage in range(iNumLanguages))
@@ -254,10 +254,14 @@ def getSpecialLanguages(identifier):
 	if iCiv == iEgypt:
 		if player(identifier).getStateReligion() == iIslam:
 			return [iLangEgyptianArabic, iLangArabic]
-	
 	elif iCiv == iInca:
 		if data.civs[iCiv].iResurrections > 0:
 			return [iLangSpanish]
+	elif iCiv == iPhoenicia:
+		if player(iCiv).getPeriod() == iPeriodTunisia:
+			return [iLangArabic]
+	elif iCiv == iPersia and player(identifier).getStateReligion() == iIslam:
+		return [iLangLatePersian,iLangArabic]
 	
 	return None
 

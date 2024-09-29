@@ -5,6 +5,8 @@ from Locations import *
 
 from Events import handler
 
+# THIS FILE HAS BEEN MADE OBSOLETE
+# I will delete this file when all the names have been transferred over
 
 iNumLanguages = 41
 (iLangEgyptian, iLangEgyptianArabic, iLangIndian, iLangChinese, iLangTibetan, 

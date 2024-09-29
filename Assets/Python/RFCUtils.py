@@ -1072,11 +1072,12 @@ def getPrevalentReligion(area, iStateReligionPlayer=None):
 	return -1
 
 # used: DynamicCivs, Periods
+# simplified: this is a simple string check
+# just make sure the names correspond to the names given by the civ...
 def isCurrentCapital(iPlayer, *names):
 	capital = player(iPlayer).getCapitalCity()
 	if not capital: return False
-	
-	return any(location(capital) in data.dCapitalLocations[name] for name in names)
+	return any(capital.getName() == name for name in names)
 
 # used: Rise, Scenarios
 def convertSurroundingPlotCulture(iPlayer, plots):
