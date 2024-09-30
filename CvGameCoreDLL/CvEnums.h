@@ -1175,6 +1175,7 @@ enum CivilizationTypes		// Exposed to Python
 	AZTECS,
 	BABYLONIA,
 	BRAZIL,
+	BULGARIA,
 	BURMA,
 	BYZANTIUM, 
 	CANADA,
@@ -1351,6 +1352,8 @@ enum LeaderHeadTypes			// Exposed to Python
 
 	SONGTSEN,
 	LOBSANG_GYATSO,
+
+	SIMEON,
 
 	RAHMAN,
 	YAQUB,

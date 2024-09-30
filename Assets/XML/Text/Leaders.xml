@@ -1294,6 +1294,14 @@
 		<Spanish>Christian IV</Spanish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_LEADER_SIMEON</Tag>
+		<English>Simeon I</English>
+		<French>Simeon I</French>
+		<German>Simeon I</German>
+		<Italian>Simeon I</Italian>
+		<Spanish>Simeon I</Spanish>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_LEADER_</Tag>
 		<English></English>
 		<French></French>

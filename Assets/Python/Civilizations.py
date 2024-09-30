@@ -391,6 +391,13 @@ lCivilizations = [
 		techs=techs.column(5).including(iNobility, iScholarship, iEthics)
 	),
 	Civilization(
+		iBulgaria,
+		iGold=50,
+		iAdvancedStartPoints=25,
+		lCivics=[iDespotism, iSlavery, iMerchantTrade, iHegemony],
+		techs=techs.column(5).including(iNobility).without(iWriting, iLiterature, iPriesthood, iEngineering, iAesthetics, iLaw, iPhilosophy, iShipbuilding, iNavigation)
+	),
+	Civilization(
 		iMoors,
 		iGold=200,
 		iAdvancedStartPoints=150,
@@ -873,6 +880,12 @@ dStartingUnits = CivDict({
 		iDefend: 2,
 		iMissionary: 1,
 	},
+	iBulgaria: {
+		iSettle: 2,
+		iWork: 2,
+		iDefend: 2,
+		iHarass: 4,
+	},
 	iEngland: {
 		iSettle: 2,
 		iWork: 2,
@@ -1294,6 +1307,10 @@ dAdditionalUnits = CivDict({
 		iShock: 1,
 	},
 	iTibet: {
+		iHarass: 2,
+	},
+	iBulgaria: {
+		iDefend: 1,
 		iHarass: 2,
 	},
 	iKhmer: {
@@ -1856,6 +1873,9 @@ dTechPreferences = {
 	iRus : {
 		iCompass: 30,
 		iCommune: 20,
+	},
+	iBulgaria : {
+		iOptics: -5,
 	},
 	iVietnam : {
 		iPrinting: 20,

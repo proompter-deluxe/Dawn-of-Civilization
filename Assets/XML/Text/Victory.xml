@@ -3276,7 +3276,14 @@
 		<Italian></Italian>
 		<Spanish></Spanish>
 	</TEXT>
-	
+	<TEXT>
+		<Tag>TXT_KEY_VICTORY_NAME_GREECE</Tag>
+		<English>Greece</English>
+		<French></French>
+		<German></German>
+		<Italian></Italian>
+		<Spanish></Spanish>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_VICTORY_NAME_ANDEAN_COAST</Tag>
 		<English>the Andean Coast</English>

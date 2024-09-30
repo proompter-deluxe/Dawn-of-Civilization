@@ -3757,5 +3757,15 @@
 			<KFM/>
 			<Button>Art/Structures/Wonders/GreatAdobeMosque/Djenne.dds</Button>
 		</BuildingArtInfo>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_BULGARIAN_STAN</Type>
+			<LSystem>LSYSTEM_2x2</LSystem>
+			<bAnimated>0</bAnimated>
+			<fScale>0.88</fScale>
+			<fInterfaceScale>0.78</fInterfaceScale>
+			<NIF>Art/Structures/Buildings/Bulgarian_Stan/Yurt_Ger.nif</NIF>
+			<KFM/>
+			<Button>,-,Art/Interface/Buttons/Warlords_Atlas_1.dds,2,3</Button>
+		</BuildingArtInfo>
 	</BuildingArtInfos>
 </Civ4ArtDefines>

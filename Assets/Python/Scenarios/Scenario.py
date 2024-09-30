@@ -69,6 +69,7 @@ LEADER_DATES = {
 	iTamerlane: 1370,
 	iHarun: 790,
 	iSaladin: 1180,
+	iSimeon: 893,
 	iSongtsen: 620,
 	iLobsangGyatso: 1650,
 	iRahman: 920,

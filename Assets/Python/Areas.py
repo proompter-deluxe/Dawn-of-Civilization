@@ -67,6 +67,7 @@ iMexico :		(17, 43), # Mexico City
 iColombia :		(30, 34), # Bogota
 iBrazil :		(44, 20), # Rio de Janeiro
 iCanada :		(31, 61), # Montreal
+iBulgaria:      (77, 56), # Tarnovo (also Pliska, rename later)
 })
 
 dPeriodCapitals = {
@@ -144,6 +145,7 @@ iMexico :		((9, 41),	(23, 49)),
 iColombia :		((26, 31),	(36, 38)),
 iBrazil :		((40, 16),	(49, 31)),
 iCanada : 		((6, 59),	(37, 68)),
+iBulgaria:      ((73, 55),  (78, 58)),
 })
 
 dExtendedBirthArea = CivDict({
@@ -259,6 +261,7 @@ iMexico :		((14, 41),	(19, 44)),
 iColombia :		((28, 34),	(30, 38)),
 iBrazil :		((42, 19),	(47, 25)),
 iCanada :		((26, 59),	(37, 62)),
+iBulgaria:      ((73, 55),  (78, 58)),
 })
 
 dCoreAreaExceptions = CivDict({

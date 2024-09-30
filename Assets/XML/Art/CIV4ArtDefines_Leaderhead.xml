@@ -1150,5 +1150,13 @@
 			<NoShaderNIF>Art/Leaderheads/osman_as_abu_faris/Stuyvesant.nif</NoShaderNIF>
 			<BackgroundKFM>Art/leaderheads/osman_as_abu_faris/louis_xiv_bg.kfm</BackgroundKFM>
 		</LeaderheadArtInfo>
+		<LeaderheadArtInfo>
+			<Type>ART_DEF_LEADER_SIMEON</Type>
+			<Button>Art/Leaderheads/Simeon_I/btn_lh_bulgaria_simeon.dds</Button>
+			<NIF>Art/Leaderheads/Simeon_I/putin.nif</NIF>
+			<KFM>Art/Leaderheads/Simeon_I/putin.kfm</KFM>
+			<NoShaderNIF>Art/Leaderheads/Simeon_I/putin.nif</NoShaderNIF>
+			<BackgroundKFM>Art/Leaderheads/Simeon_I/putin_bg.kfm</BackgroundKFM>
+		</LeaderheadArtInfo>
 	</LeaderheadArtInfos>
 </Civ4ArtDefines>

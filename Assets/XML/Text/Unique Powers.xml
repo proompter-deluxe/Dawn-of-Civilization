@@ -258,6 +258,22 @@
 		<Spanish>+1 [ICON_COMMERCE] per statesman and free statesmen in the capital</Spanish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_UP_BUL_TITLE</Tag>
+		<English>The Power of Maneouvre:</English>
+		<French>Le Pouvoir de la maneouvre:</French>
+		<German>The Power of Maneouvre:</German>
+		<Italian>The Power of Maneouvre:</Italian>
+		<Spanish>The Power of Maneouvre::</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UP_BUL</Tag>
+		<English>Free disengage promotion for units</English>
+		<French>Free disengage promotion for units</French>
+		<German>Free disengage promotion for units</German>
+		<Italian>Free disengage promotion for units</Italian>
+		<Spanish>Free disengage promotion for units</Spanish>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_UP_COL_TITLE</Tag>
 		<English>The Power of the Liberator:</English>
 		<French>Le pouvoir du lib&#233;rateur :</French>

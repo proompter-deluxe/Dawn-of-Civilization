@@ -1426,4 +1426,29 @@
 		<Italian>Sola Scriptura</Italian>
 		<Spanish>Sola Scriptura</Spanish>
 	</TEXT>
+
+	<TEXT>
+		<Tag>TXT_KEY_VICTORY_TITLE_BUL1</Tag>
+		<English>Steppe Heritage</English>
+		<French>Steppe Heritage</French>
+		<German>Steppe Heritage</German>
+		<Italian>Steppe Heritage</Italian>
+		<Spanish>Steppe Heritage</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_VICTORY_TITLE_BUL2</Tag>
+		<English>Autocephalous</English>
+		<French>Autocephalous</French>
+		<German>Autocephalous</German>
+		<Italian>Autocephalous</Italian>
+		<Spanish>Autocephalous</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_VICTORY_TITLE_BUL3</Tag>
+		<English>Bulwark of Europe</English>
+		<French>Bulwark of Europe</French>
+		<German>Bulwark of Europe</German>
+		<Italian>Bulwark of Europe</Italian>
+		<Spanish>Bulwark of Europe</Spanish>
+	</TEXT>
 </Civ4GameText>

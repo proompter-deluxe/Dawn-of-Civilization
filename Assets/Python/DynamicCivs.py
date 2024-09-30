@@ -525,6 +525,7 @@ dStartingLeaders = [
 	iTurks : iBumin,
 	iArabia : iHarun,
 	iTibet : iSongtsen,
+	iBulgaria: iSimeon,
 	iKhmer : iSuryavarman,
 	iMoors : iRahman,
 	iJava : iHayamWuruk,

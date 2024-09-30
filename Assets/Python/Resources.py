@@ -259,6 +259,7 @@ dSpawnResourcesDict = {
 	(61, 66)  : (iNetherlands, iFish),
 	(15, 47)  : (iMexico,      iIron),
 	(48, 21)  : (iBrazil,      iFish),
+	(78, 57)  : (iBulgaria,    iHorse),
 }
 
 dRemovedResourcesDict = {

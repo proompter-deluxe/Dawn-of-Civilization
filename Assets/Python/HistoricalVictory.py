@@ -112,6 +112,7 @@ SRIVIJAYA = "TXT_KEY_VICTORY_NAME_SRIVIJAYA"
 TARIM_BASIN= "TXT_KEY_VICTORY_NAME_TARIM_BASIN"
 TRANSOXIANA = "TXT_KEY_VICTORY_NAME_TRANSOXIANA"
 WEST_AFRICA = "TXT_KEY_VICTORY_NAME_WEST_AFRICA"
+GREECE = "TXT_KEY_VICTORY_NAME_GREECE"
 
 # area descriptors
 ANDEAN_COAST = "TXT_KEY_VICTORY_NAME_ANDEAN_COAST"
@@ -612,6 +613,25 @@ dGoals = {
 			TradeGold(600),
 			by=1450,
 		),
+	),
+	iBulgaria: (
+		All(
+			PillageCount(20, by=900),
+			Control(
+				plots.regions(rPonticSteppe).named(PONTIC_STEPPE),
+				plots.regions(rBalkans).named(BALKANS),
+				plots.regions(rGreece).named(GREECE),
+				by=1250,
+			),
+		),
+		All(
+			Discover(iWriting, by=750),
+			Discover(iLiterature, by=900),
+			BuildingCount(iOrthodoxCathedral, 2, by=1000),
+			SpecialistCount(iSpecialistGreatProphet, 2, by=1250),
+			SpecialistCount(iSpecialistGreatArtist, 2, by=1250),
+		),
+		AreaNoStateReligion(plots.regions(*lEuropeProper).named(EUROPE), iIslam, at=1500),		
 	),
 	iVietnam: (
 		GreatGenerals(2, by=1500),
