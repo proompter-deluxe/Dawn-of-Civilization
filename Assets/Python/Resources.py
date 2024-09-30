@@ -70,7 +70,7 @@ dResourcesDict = {
 	(90, 19)  : (400,   iBanana),   # Madagascar
 	(90, 18)  : (400,   iSugar),	# Madagascar
 	(99, 43)  : (400,   iCotton),   # Sindh
-	(78, 56)  : (550,   iSilk),     # Thrace
+	(79, 53)  : (550,   iSilk),     # Anatolia
 	(92, 47)  : (600,   iCitrus),   # Persia
 	(81, 30)  : (600,   iBanana),   # Central Africa
 	(76, 27)  : (600,   iBanana),   # Central Africa
