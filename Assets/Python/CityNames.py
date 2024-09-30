@@ -8,7 +8,7 @@ from Events import handler
 
 ### CONSTANTS ###
 
-iNumLanguages = 44
+iNumLanguages = 45
 (iLangAmerican, iLangArabic, iLangBabylonian, iLangBurmese, iLangByzantine, 
 iLangCeltic, iLangChinese, iLangCongolese, iLangDutch, iLangEgyptian, 
 iLangEgyptianArabic, iLangEnglish, iLangEthiopian, iLangFrench, iLangGerman, 
@@ -17,7 +17,7 @@ iLangJapanese, iLangKhmer, iLangKorean, iLangLatin, iLangMande,
 iLangMayan, iLangMongolian, iLangNahuatl, iLangNorse, iLangNubian, 
 iLangPersian, iLangPhoenician, iLangPolish, iLangPolynesian, iLangPortuguese, 
 iLangQuechua, iLangRussian, iLangSpanish, iLangSwedish, iLangThai, 
-iLangTibetan, iLangTurkish, iLangVietnamese,iLangFarsi) = range(iNumLanguages)
+iLangTibetan, iLangTurkish, iLangVietnamese, iLangFarsi, iLangRuthenian) = range(iNumLanguages)
 
 dLanguages = CivDict({
 	iEgypt:	[iLangEgyptian],
@@ -30,10 +30,10 @@ dLanguages = CivDict({
 	iNubia: [iLangNubian, iLangEgyptian],
 	iGreece: [iLangGreek],
 	iIndia: [iLangIndian],
-	iPhoenicia: [iLangPhoenician],
+	iPhoenicia: [iLangPhoenician, iLangGreek],
 	iPolynesia: [iLangPolynesian],
 	iPersia: [iLangPersian],
-	iRome: [iLangLatin],
+	iRome: [iLangLatin, iLangGreek],
 	iCelts: [iLangCeltic],
 	iMaya: [iLangMayan, iLangNahuatl],
 	iDravidia: [iLangIndian],
@@ -41,7 +41,7 @@ dLanguages = CivDict({
 	iToltecs: [iLangNahuatl],
 	iKushans: [iLangIndian, iLangGreek, iLangTurkish],
 	iKorea: [iLangKorean, iLangChinese],
-	iByzantium: [iLangByzantine],
+	iByzantium: [iLangByzantine, iLangLatin, iLangGreek],
 	iMalays: [iLangIndonesian, iLangKhmer],
 	iJapan: [iLangJapanese],
 	iNorse: [iLangNorse],
@@ -57,7 +57,7 @@ dLanguages = CivDict({
 	iHolyRome: [iLangGerman],
 	iBurma: [iLangBurmese, iLangIndian],
 	iVietnam: [iLangVietnamese, iLangChinese],
-	iRus: [iLangRussian],
+	iRus: [iLangRuthenian, iLangRussian],
 	iSwahili: [iLangArabic],
 	iMali: [iLangMande],
 	iPoland: [iLangPolish, iLangRussian], 
@@ -135,6 +135,7 @@ dLanguageNames = {
 	iLangTurkish: "Turkish",
 	iLangVietnamese: "Vietnamese",
 	iLangFarsi: "Farsi",
+	iLangRuthenian: "Ruthenian"
 }
 
 dTranslations = dict((iLanguage, FileDict("Translations/%s.csv" % dLanguageNames[iLanguage])) for iLanguage in range(iNumLanguages))
