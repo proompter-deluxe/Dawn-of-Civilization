@@ -625,7 +625,7 @@ dGoals = {
 			),
 		),
 		All(
-			Discover(iWriting, by=750),
+			Discover(iWriting, by=780),
 			Discover(iLiterature, by=900),
 			BuildingCount(iOrthodoxCathedral, 2, by=1000),
 			SpecialistCount(iSpecialistGreatProphet, 2, by=1250),
