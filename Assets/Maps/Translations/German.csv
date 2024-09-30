@@ -10,9 +10,7 @@ Bordeaux,Bordeaux
 Bruxelles,Brüssel
 Bremen,Bremen
 Brest-Litowsk,Brest-Litowsk
-Byzantion,Byzanz
 Coburg,Coburg
-Gdansk,Danzig
 Dilli,Delhi
 Den Haag,Den Haag
 Dobruja,Dobrudscha
@@ -48,7 +46,7 @@ Klagenfurt,Klagenfurt
 Cluj-Napoca,Klausenburg
 Venezuela,Klein-Venedig
 Kolomea,Kolomea
-Constantinopolis,Konstantinopel
+Byzantium,Konstantinopel
 Konstanz,Konstanz
 Roskilde,Kopenhagen
 Kraków,Krakau
@@ -106,7 +104,7 @@ Trieste,Triest
 Tripolis,Tripolis
 Qingdao,Tsingtau
 Torino,Turin
-Tver',Twer
+Tver,Twer
 Utrecht,Utrecht
 Venezia,Venedig
 Warszawa,Warschau
@@ -115,3 +113,6 @@ Vyborg,Wiborg
 Wien,Wien
 Vilnius,Wilna
 Zadar,Zadar
+Odesa,Odessa
+Danzig,Danzig
+Marienburg,Marienburg
