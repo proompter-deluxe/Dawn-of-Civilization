@@ -550,7 +550,7 @@ barbarians = [
 	Barbarians(50, 250, {iHorseArcher: 1, iAxeman: 1}, ((117, 53), (119, 56)), 6, INVADERS, target_area=((118, 52), (121, 54)), adjective="TXT_KEY_ADJECTIVE_QIANG"),
 	Barbarians(50, 100, {iHorseArcher: 3}, ((125, 60), (131, 63)), 6, NOMADS, target_area=((123, 55), (129, 61)), adjective="TXT_KEY_ADJECTIVE_XIANBEI", promotions=(iDesertAdaptation, iSteppeAdaptation)),
 	Barbarians(100, 500, {iHorseArcher: 3}, ((113, 55), (131, 63)), 7, NOMADS, target_area=((117, 46), (129, 61)), adjective="TXT_KEY_ADJECTIVE_XIANBEI", promotions=(iDesertAdaptation, iSteppeAdaptation)),
-	Barbarians(100, 650, {iSwordsman: 2}, ((64, 59), (75, 65)), 6, INVADERS, target_area=((58, 52), (71, 62)), adjective="TXT_KEY_ADJECTIVE_GERMANIC"),
+	Barbarians(100, 500, {iSwordsman: 2}, ((64, 59), (75, 65)), 5, INVADERS, target_area=((58, 52), (71, 62)), adjective="TXT_KEY_ADJECTIVE_GERMANIC"),
 	Barbarians(100, 600, {iHolkan: 1}, ((19, 38), (25, 44)), 6, NATIVES, adjective="TXT_KEY_ADJECTIVE_MAYA"),
 	Barbarians(150, 450, {iSkirmisher: 1, iLightSwordsman: 2}, ((120, 42), (129, 48)), 6, MINORS, adjective="TXT_KEY_ADJECTIVE_YUE"), # intensify during crisis period (although it should be fully settled by now)
 	Barbarians(200, 1100, {iSwordsman: 1}, ((113, 47), (117, 54)), 10, MINORS, target_area=((112, 57), (123, 56)), adjective="TXT_KEY_ADJECTIVE_TIBETAN"),
@@ -575,7 +575,7 @@ barbarians = [
 	Barbarians(500, 1000, {iSkirmisher: 1}, ((137, 56), (140, 62)), 16, NATIVES, target_area=((134, 49), (140, 55)), adjective="TXT_KEY_ADJECTIVE_EMISHI"),
 	Barbarians(500, 1800, {iNativeRaider: 2, iNativeArcher: 1, iNativeWarrior: 2}, ((62, 24), (77, 33)), 16, NATIVES, iOwner=iNative, adjective="TXT_KEY_ADJECTIVE_BANTU"),
 	Barbarians(500, 1900, {iNativeRaider: 2}, ((69, 19), (78, 32)), 10, NATIVES, iOwner=iNative, adjective="TXT_KEY_ADJECTIVE_BANTU"),
-	Barbarians(550, 650, {iHorseArcher: 4, iSwordsman: 2}, ((70, 57), (80, 62)), 4, INVADERS, target_area=((65, 55), (79, 62)), adjective="TXT_KEY_ADJECTIVE_AVAR"),
+	Barbarians(550, 650, {iHorseArcher: 4, iSwordsman: 2}, ((70, 57), (80, 62)), 4, INVADERS, target_area=((65, 52), (72, 59)), adjective="TXT_KEY_ADJECTIVE_AVAR"),
 	Barbarians(600, 1000, {iSwordsman: 4, iAxeman: 2}, ((68, 60), (77, 65)), 10, NOMADS, target_area=((65, 51), (79, 57)), adjective="TXT_KEY_ADJECTIVE_SLAVIC"),
 	Barbarians(600, 1000, {iHolkan: 1}, ((19, 38), (25, 44)), 4, NATIVES, adjective="TXT_KEY_ADJECTIVE_MAYA"),
 	Barbarians(600, 900, {iDogSoldier: 1, iJaguar: 2}, ((11, 44), (19, 51)), 14, NOMADS, iOwner=iNative, target_area=((14, 40), (23, 45)), adjective="TXT_KEY_ADJECTIVE_NAHUA"),
