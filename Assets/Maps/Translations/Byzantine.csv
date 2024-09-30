@@ -37,9 +37,7 @@ Al-Qahirah,Kairo
 Kaisareia,Kaisareia
 Kyiv,Kiova
 Konstantia,Konstantia
-Byzantion,Konstantinoupolis
-Constantinopolis,Konstantinoupolis
-Istanbul,Konstantinoupolis
+Byzantium,Konstantinoupolis
 Melitene,Malateia
 Malvasia,Monemvasia
 Menefer,Memphis
@@ -62,7 +60,6 @@ Smyrna,Smyrna
 Split,Spolato
 Syrakousai,Syrakousa
 Tarsos,Tarsos
-Thessalonike,Thessalonike
 Tbilisi,Tiphlis
 Trapezon,Trapezounta
 Tripolis,Tripolis
@@ -87,3 +84,6 @@ Hangmatana,Ecbatana
 Nishapur,Susia
 Taucheira,Tocra
 Ilion,Abydos
+Amphipolis,Thessaloniki
+Venezia,Ravenna
+Thatta,Patala

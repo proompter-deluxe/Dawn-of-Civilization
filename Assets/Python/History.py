@@ -93,8 +93,14 @@ def buildFoundedCapitalInfrastructure(city):
 
 @handler("cityBuilt")
 def createEgyptianDefenses(city):
-	if civ(city) == iEgypt and player(city.getOwner()).getNumCities() == 2 and player(iNubia).isHuman():
+	if civ(city) == iEgypt and player(iNubia).isHuman() and player(city.getOwner()).getNumCities() == 2:
 		makeUnit(city.getOwner(), iArcher, city)
+
+# give pre-Christian Norse a better chance at city culture expansion
+@handler("cityBuilt")
+def createNorseTemple(city):
+	if civ(city) == iNorse and not player(city).isHuman() and player(city).getStateReligion() == -1:
+		city.setHasRealBuilding(iPaganTemple, True)
 	
 	
 @handler("cityBuilt")

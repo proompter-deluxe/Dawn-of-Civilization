@@ -857,7 +857,7 @@ def getEmpireThreshold(iPlayer):
 		return 4
 	
 	if iCiv == iRome and not player(iByzantium).isExisting():
-		return 7
+		return 10
 		
 	return 6
 	
@@ -1025,14 +1025,19 @@ def specificName(iPlayer):
 			if not isCurrentCapital(iPlayer, "Konstantinoupolis"):
 				return capitalName(iPlayer)
 			
-	elif iCiv == iNorse:	
-		if isCurrentCapital(iPlayer, "Oslo", "Nidaros"):
-			return "TXT_KEY_CIV_NORSE_NORWAY"
-			
-		if isCurrentCapital(iPlayer, "Roskilde"):
+	elif iCiv == iNorse:
+		bOwnNorway = cities.region(rNorway) <= cities.region(rNorway).owner(iPlayer)
+		bOwnDenmark = cities.region(rDenmark) <= cities.region(rDenmark).owner(iPlayer)
+		bOwnSweden = cities.region(rSweden) <= cities.region(rSweden).owner(iPlayer)
+		
+		if bOwnDenmark and bOwnSweden and bOwnNorway:
+			return "TXT_KEY_CIV_NORSE_SCANDINAVIA"
+		if bOwnDenmark and bOwnNorway:
+			return "TXT_KEY_CIV_NORSE_DENMARK_NORWAY"
+		if bOwnDenmark:
 			return "TXT_KEY_CIV_NORSE_DENMARK"
-			
-		return "TXT_KEY_CIV_NORSE_SCANDINAVIA"
+		if bOwnNorway:
+			return "TXT_KEY_CIV_NORSE_NORWAY"
 		
 	elif iCiv == iTurks:
 		if capital in plots.regions(rCaucasus, rPonticSteppe):
@@ -1856,13 +1861,17 @@ def specificTitle(iPlayer, lPreviousOwners=[]):
 				
 		if iReligion < 0 and iEra < iRenaissance:
 			return "TXT_KEY_CIV_NORSE_NORSE_KINGDOMS"
-			
+		
+
+		bOwnNorway = cities.region(rNorway) <= cities.region(rNorway).owner(iPlayer)
+		bOwnDenmark = cities.region(rDenmark) <= cities.region(rDenmark).owner(iPlayer)
+		bOwnSweden = cities.region(rSweden) <= cities.region(rSweden).owner(iPlayer)
+		
+		if bOwnDenmark and bOwnSweden and bOwnNorway:
+			return "TXT_KEY_CIV_NORSE_KALMAR_UNION"
+
 		if bEmpire:
-			if iEra <= iMedieval and not player(iSweden).isExisting():
-				return "TXT_KEY_CIV_NORSE_KALMAR_UNION"
-				
-			if iEra == iRenaissance:
-				return "TXT_KEY_EMPIRE_ADJECTIVE"
+			return "TXT_KEY_EMPIRE_ADJECTIVE"
 				
 	elif iCiv == iTurks:
 		if bCityStates:
@@ -2238,10 +2247,14 @@ def leader(iPlayer):
 		if iEra >= iRenaissance: return iKrishnaDevaRaya
 		
 	elif iCiv == iByzantium:
-		if year() >= year(1000): return iBasil
+		if year() >= year(976): return iBasil
 		
 	elif iCiv == iNorse:
 		if iEra >= iGlobal: return iGerhardsen
+
+		if iEra >= iRenaissance: return iChristian
+
+		if iReligion in lChristianity or year() >= year(1000): return iChristian
 		
 	elif iCiv == iTurks:
 		if bResurrected: return iTamerlane
@@ -2290,12 +2303,16 @@ def leader(iPlayer):
 		
 		if scenario() == i1700AD: return iFrancis
 		
+		if player(iCiv).getPeriod() == iPeriodAustria: return iFrancis
+
 		if iEra >= iRenaissance: return iCharles
 			
-	elif iCiv == iPoland:
-		if iEra >= iGlobal: return iWalesa
-		
+	elif iCiv == iPoland:		
 		if isFascist(iPlayer) or isCommunist(iPlayer): return iPilsudski
+
+		if iEra >= iGlobal: return iWalesa
+
+		if iEra >= iIndustrial: return iPilsudski
 	
 		if iEra >= iRenaissance: return iSobieski
 		
@@ -2312,7 +2329,7 @@ def leader(iPlayer):
 		if bResurrected and year() >= year(1600): return iCastilla
 	
 	elif iCiv == iItaly:
-		if isFascist(iPlayer): return iMussolini
+		if isFascist(iPlayer) or isCommunist(iPlayer): return iMussolini
 	
 		if iEra >= iIndustrial: return iCavour
 		

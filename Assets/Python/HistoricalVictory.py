@@ -102,7 +102,6 @@ PERU = "TXT_KEY_VICTORY_NAME_PERU"
 PHILIPPINES = "TXT_KEY_VICTORY_NAME_PHILIPPINES"
 PONTIC_STEPPE = "TXT_KEY_VICTORY_NAME_PONTIC_STEPPE"
 PUNJAB = "TXT_KEY_VICTORY_NAME_PUNJAB"
-SCANDINAVIA = "TXT_KEY_VICTORY_NAME_SCANDINAVIA"
 SIBERIA = "TXT_KEY_VICTORY_NAME_SIBERIA"
 SIBERIAN_COAST = "TXT_KEY_VICTORY_NAME_SIBERIAN_COAST"
 SOUTH_AFRICA = "TXT_KEY_VICTORY_NAME_SOUTH_AFRICA"
@@ -737,7 +736,8 @@ dGoals = {
 			plots.region(rCentralEurope),
 			plots.region(rFrance),
 			plots.region(rBritain),
-			plots.region(rScandinavia),
+			plots.region(rDenmark),
+			plots.region(rNorway),
 			plots.regions(rPoland, rBaltics, rRuthenia).named(EASTERN_EUROPE),
 			at=1940,
 		),

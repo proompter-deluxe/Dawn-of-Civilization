@@ -19605,7 +19605,7 @@
 			<iVassalPowerModifier>20</iVassalPowerModifier>
 			<iFreedomAppreciation>10</iFreedomAppreciation>
 			<FavoriteCivic>CIVIC_DESPOTISM</FavoriteCivic>
-			<FavoriteReligion>RELIGION_CATHOLICISM</FavoriteReligion>
+			<FavoriteReligion>NONE</FavoriteReligion>
 			<Traits/>
 			<Flavors>
 				<Flavor>
@@ -32842,7 +32842,7 @@
 			<iVassalPowerModifier>0</iVassalPowerModifier>
 			<iFreedomAppreciation>10</iFreedomAppreciation>
 			<FavoriteCivic>CIVIC_THALASSOCRACY</FavoriteCivic>
-			<FavoriteReligion>RELIGION_CATHOLICISM</FavoriteReligion>
+			<FavoriteReligion>NONE</FavoriteReligion>
 			<Traits/>
 			<Flavors>
 				<Flavor>

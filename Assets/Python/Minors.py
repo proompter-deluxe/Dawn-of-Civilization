@@ -470,7 +470,7 @@ minor_cities = [
 	MinorCity(500, iIndependent2, (123, 25), "Sunda Kelapa", iPopulation=3, iCiv=iMalays, units={iDefend: 2}, adjective="TXT_KEY_ADJECTIVE_SUNDANESE"),
 	MinorCity(500, iIndependent, (69, 56), "Venexia", iPopulation=5, iCiv=iRome, units={iDefend: 3}, adjective="TXT_KEY_ADJECTIVE_VENETIAN"),
 	MinorCity(500, iBarbarian, (54, 53), "Bracara", iPopulation=2, iCiv=iSpain, units={iDefend: 3}, adjective="TXT_KEY_ADJECTIVE_GERMANIC"),
-	MinorCity(650, iBarbarian, (66, 65), "Bornhoved", iPopulation=2, iCiv=iHolyRome, units={iDefend: 2, iAttack: 4}, adjective="TXT_KEY_ADJECTIVE_GERMANIC"),
+	MinorCity(650, iIndependent2, (66, 65), "Bornhoved", iPopulation=2, iCiv=iHolyRome, units={iAttack: 2}, adjective="TXT_KEY_ADJECTIVE_GERMANIC"),
 	MinorCity(700, iNative, (34, 22), "Tiwanaku", iPopulation=1, iCiv=iInca, adjective="TXT_KEY_ADJECTIVE_AYMARA"),
 	MinorCity(700, iIndependent2, (71, 36), "Njimi", iPopulation=1, iCiv=iArabia, units={iHarass: 1}, adjective="TXT_KEY_ADJECTIVE_KANURI"),
 	MinorCity(750, iIndependent, (91, 60), "Atil", iPopulation=2, iCiv=iTurks, units={iHarass: 3}, adjective="TXT_KEY_ADJECTIVE_KHAZAR"),
