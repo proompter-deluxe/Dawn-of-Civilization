@@ -1042,7 +1042,7 @@ def specificName(iPlayer):
 			return "TXT_KEY_CIV_NORSE_NORWAY"
 		
 	elif iCiv == iTurks:
-		if capital in plots.regions(rCaucasus, rPonticSteppe):
+		if capital in plots.regions(rCaucasus, rPonticSteppe, rCrimea):
 			return "TXT_KEY_CIV_TURKS_KHAZARIA"
 	
 		if capital in plots.region(rAnatolia):
@@ -1136,7 +1136,7 @@ def specificName(iPlayer):
 			return capitalName(iPlayer)
 			
 	elif iCiv == iRussia:
-		if not (bEmpire and iEra >= iRenaissance) and not isControlled(iPlayer, plots.regions(rRuthenia, rPonticSteppe, rEuropeanArctic), 5):
+		if not (bEmpire and iEra >= iRenaissance) and not isControlled(iPlayer, plots.regions(rRuthenia, rPonticSteppe, rCrimea, rEuropeanArctic), 5):
 			if not bCityStates and isCurrentCapital(iPlayer, "Moskva"):
 				return "TXT_KEY_CIV_RUSSIA_MUSCOVY"
 				
@@ -1384,7 +1384,7 @@ def specificAdjective(iPlayer):
 		if bResurrected:
 			return "TXT_KEY_CIV_TURKS_TIMURID"
 	
-		if capital in plots.regions(rCaucasus, rPonticSteppe):
+		if capital in plots.regions(rCaucasus, rPonticSteppe, rCrimea):
 			return "TXT_KEY_CIV_TURKS_KHAZAR"
 		
 		if isControlled(iPlayer, plots.regions(rPersia, rKhorasan)):
@@ -2058,7 +2058,7 @@ def specificTitle(iPlayer, lPreviousOwners=[]):
 				
 				return "TXT_KEY_CIV_RUSSIA_RUS"
 			
-		if isControlled(iPlayer, plots.regions(rRuthenia, rPonticSteppe, rEuropeanArctic), 5):
+		if isControlled(iPlayer, plots.regions(rRuthenia, rPonticSteppe, rCrimea, rEuropeanArctic), 5):
 			return "TXT_KEY_CIV_RUSSIA_TSARDOM_OF"
 		
 		if isCurrentCapital(iPlayer, "Kiev"):

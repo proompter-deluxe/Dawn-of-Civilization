@@ -2714,6 +2714,14 @@
 		<Italian></Italian>
 		<Spanish></Spanish>
 	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_VICTORY_NAME_TARNOVO</Tag>
+		<English>Tarnovo</English>
+		<French></French>
+		<German></German>
+		<Italian></Italian>
+		<Spanish></Spanish>
+	</TEXT>
 	
 	<TEXT>
 		<Tag>TXT_KEY_VICTORY_NAME_CAPITAL</Tag>
@@ -3279,6 +3287,14 @@
 	<TEXT>
 		<Tag>TXT_KEY_VICTORY_NAME_GREECE</Tag>
 		<English>Greece</English>
+		<French></French>
+		<German></German>
+		<Italian></Italian>
+		<Spanish></Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_VICTORY_NAME_CRIMEA</Tag>
+		<English>Crimea</English>
 		<French></French>
 		<German></German>
 		<Italian></Italian>

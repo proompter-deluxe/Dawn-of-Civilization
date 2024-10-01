@@ -41,6 +41,7 @@ PERSEPOLIS = "TXT_KEY_VICTORY_NAME_PERSEPOLIS"
 TENOCHTITLAN = "TXT_KEY_VICTORY_NAME_TENOCHTITLAN"
 TOLLAN = "TXT_KEY_VICTORY_NAME_TOLLAN"
 VIENNA = "TXT_KEY_VICTORY_NAME_VIENNA"
+TARNOVO = "TXT_KEY_VICTORY_NAME_TARNOVO"
 
 # city descriptors
 ANOTHER_CAPITAL = "TXT_KEY_VICTORY_NAME_ANOTHER_CAPITAL"
@@ -113,6 +114,7 @@ TARIM_BASIN= "TXT_KEY_VICTORY_NAME_TARIM_BASIN"
 TRANSOXIANA = "TXT_KEY_VICTORY_NAME_TRANSOXIANA"
 WEST_AFRICA = "TXT_KEY_VICTORY_NAME_WEST_AFRICA"
 GREECE = "TXT_KEY_VICTORY_NAME_GREECE"
+CRIMEA = "TXT_KEY_VICTORY_CRIMEA"
 
 # area descriptors
 ANDEAN_COAST = "TXT_KEY_VICTORY_NAME_ANDEAN_COAST"
@@ -619,18 +621,16 @@ dGoals = {
 			PillageCount(10, by=900),
 			RazeCount(2, by=900),
 			Control(
-				plots.regions(rPonticSteppe).named(PONTIC_STEPPE),
+				plots.regions(rCrimea).named(CRIMEA),
 				plots.regions(rBalkans).named(BALKANS),
-				plots.regions(rGreece).named(GREECE),
-				by=1250,
+				by=1280,
 			),
 		),
 		All(
 			Discover(iWriting, by=780),
 			Discover(iLiterature, by=900),
-			BuildingCount(iOrthodoxCathedral, 2, by=1000),
-			SpecialistCount(iSpecialistGreatProphet, 2, by=1250),
-			SpecialistCount(iSpecialistGreatArtist, 2, by=1250),
+			BuildingCount(iOrthodoxCathedral, 1, by=1280),
+			CitySpecialistCount(start(iBulgaria).named(TARNOVO), great_people(), 2, at=1280),
 		),
 		AreaNoStateReligion(plots.regions(*lEuropeProper).named(EUROPE), iIslam, at=1500),		
 	),
@@ -716,7 +716,7 @@ dGoals = {
 			Control(
 				plots.region(rAnatolia),
 				plots.region(rCaucasus).named(CAUCASUS),
-				plots.region(rPonticSteppe).named(PONTIC_STEPPE),
+				plots.region(rCrimea).named(PONTIC_STEPPE),
 				plots.region(rLevant).named(LEVANT),
 				plots.region(rMesopotamia),
 				plots.region(rArabia),

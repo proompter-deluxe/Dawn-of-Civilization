@@ -12130,6 +12130,7 @@ int CvPlot::getRegionGroup() const
 	case REGION_NORWAY:	
 	case REGION_RUTHENIA:
 	case REGION_PONTIC_STEPPE:
+	case REGION_CRIMEA:
 	case REGION_URALS:
 		return REGION_GROUP_EUROPE;
 	case REGION_ANATOLIA:

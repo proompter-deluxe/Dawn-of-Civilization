@@ -5207,6 +5207,7 @@ int CvCity::determineArtStyleType() const
 		case REGION_AMUR:
 		case REGION_CENTRAL_ASIAN_STEPPE:
 		case REGION_PONTIC_STEPPE:
+		case REGION_CRIMEA:
 			return GC.getCivilizationInfo(MONGOLS).getArtStyleType();
 		}
 		
