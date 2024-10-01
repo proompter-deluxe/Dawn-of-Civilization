@@ -250,7 +250,7 @@ def getNorsePeriod(iPlayer):
 	
 	for city in cities.owner(iPlayer):
 		if city.getName() == "Roskilde":
-			city.setName("København", False)
+			city.setName("Kobenhavn", False)
 
 	if capital:
 		if capital in plots.regions(rNorway):
