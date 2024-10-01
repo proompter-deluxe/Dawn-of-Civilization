@@ -76,6 +76,9 @@ dResourcesDict = {
 	(76, 27)  : (600,   iBanana),   # Central Africa
 	(75, 31)  : (600,   iBanana),   # Central Africa
 	(0, 43)   : (600,   iSugar),	# Hawaii
+	(78, 57)  : (670,   iHorse),	# Bulgaria
+	(76, 56)  : (670,   iSheep),	# Bulgaria
+	(74, 57)  : (670,   iSheep),	# Bulgaria
 	(62, 48)  : (700,   iCitrus),   # Algeria
 	(57, 46)  : (700,   iCitrus),   # Morocco
 	(57, 48)  : (700,   iCitrus),   # Andalusia
@@ -259,7 +262,6 @@ dSpawnResourcesDict = {
 	(61, 66)  : (iNetherlands, iFish),
 	(15, 47)  : (iMexico,      iIron),
 	(48, 21)  : (iBrazil,      iFish),
-	(78, 57)  : (iBulgaria,    iHorse),
 }
 
 dRemovedResourcesDict = {
