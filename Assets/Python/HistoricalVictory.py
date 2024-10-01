@@ -616,7 +616,8 @@ dGoals = {
 	),
 	iBulgaria: (
 		All(
-			PillageCount(20, by=900),
+			PillageCount(10, by=900),
+			RazeCount(2, by=900),
 			Control(
 				plots.regions(rPonticSteppe).named(PONTIC_STEPPE),
 				plots.regions(rBalkans).named(BALKANS),
