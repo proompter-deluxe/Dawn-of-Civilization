@@ -709,6 +709,8 @@ iBrazil: 40,
 iCanada: 40,
 }, 0)
 
+# the probability out of 100 (and other factors like "Nationalism")
+# that once every 10 turns, the civ is cleared for respawn
 dResurrectionProbability = CivDict({
 iEgypt : 75,
 iBabylonia : 40,

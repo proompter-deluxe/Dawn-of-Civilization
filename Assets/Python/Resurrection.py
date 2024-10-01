@@ -35,7 +35,7 @@ def checkResurrection():
 				resurrectionCities = getResurrectionCities(iCiv)
 				if canResurrectFromCities(iCiv, resurrectionCities):
 					doResurrection(iCiv, resurrectionCities)
-					return
+					# return # let's not limit it to 1. If it's possible, it's possible!
 					
 		# otherwise minimum amount of cities and random chance are required
 		for iCiv in possibleResurrections:
@@ -43,7 +43,7 @@ def checkResurrection():
 				resurrectionCities = getResurrectionCities(iCiv)
 				if canResurrectFromCities(iCiv, resurrectionCities):
 					doResurrection(iCiv, resurrectionCities)
-					return
+					# return # let's not limit it to 1. If it's possible, it's possible!
 
 
 @handler("releasedCivilization")
