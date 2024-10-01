@@ -248,10 +248,9 @@ def onTechAcquired(iTech, iTeam, iPlayer):
 def getNorsePeriod(iPlayer):
 	capital = player(iPlayer).getCapitalCity()
 	
-	cl = PyPlayer(i).getCityList()
-	for c in cl:
-		if c.getName() == "Roskilde":
-			c.setName("København", False)
+	for city in cities.owner(iPlayer):
+		if city.getName() == "Roskilde":
+			city.setName("København", False)
 
 	if capital:
 		if capital in plots.regions(rNorway):
