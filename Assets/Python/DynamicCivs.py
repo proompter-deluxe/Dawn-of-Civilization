@@ -1432,7 +1432,7 @@ def specificAdjective(iPlayer):
 			return "TXT_KEY_CIV_MOORS_MOROCCAN"
 			
 	elif iCiv == iSpain:
-		if not player(iMoors).isExisting() and data.civs[iMoors].iResurrections == 0:
+		if year() < year(dBirth[iMoors]):
 			return "TXT_KEY_ADJECTIVE_VISIGOTHIC"
 
 		bSpain = not player(iMoors).isExisting() or not player(iMoors).getCapitalCity() in plots.region(rIberia)
@@ -1451,7 +1451,7 @@ def specificAdjective(iPlayer):
 			return "TXT_KEY_CIV_SPAIN_CASTILIAN"
 			
 	elif iCiv == iFrance:
-		if iEra == iMedieval and not player(iHolyRome).isExisting():
+		if year() < year(dBirth[iHolyRome]):
 			return "TXT_KEY_CIV_FRANCE_FRANKISH"
 	
 	elif iCiv == iKhmer:
