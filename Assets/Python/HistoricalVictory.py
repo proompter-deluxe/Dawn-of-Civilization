@@ -716,7 +716,7 @@ dGoals = {
 			Control(
 				plots.region(rAnatolia),
 				plots.region(rCaucasus).named(CAUCASUS),
-				plots.region(rCrimea).named(PONTIC_STEPPE),
+				plots.region(rCrimea).named(CRIMEA),
 				plots.region(rLevant).named(LEVANT),
 				plots.region(rMesopotamia),
 				plots.region(rArabia),
@@ -759,7 +759,7 @@ dGoals = {
 			plots.region(rBritain),
 			plots.region(rDenmark),
 			plots.region(rNorway),
-			plots.regions(rPoland, rBaltics, rRuthenia).named(EASTERN_EUROPE),
+			plots.regions(rPoland, rBaltics, rRuthenia, rCrimea).named(EASTERN_EUROPE),
 			at=1940,
 		),
 		EraFirstDiscover((iIndustrial, 8), (iGlobal, 8)),
