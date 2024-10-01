@@ -60,14 +60,14 @@ iSweden : 		(73, 71), # Birka
 iCongo : 		(71, 25), # Mbanza Kongo
 iIran : 		(93, 48), # Esfahan
 iNetherlands :	(62, 64), # Amsterdam
-iGermany : 		(69, 63), # Berlin
+iGermany : 		(70, 64), # Berlin
 iAmerica :		(29, 54), # Washington
 iArgentina :	(38, 13), # Buenos Aires
 iMexico :		(17, 43), # Mexico City
 iColombia :		(30, 34), # Bogota
 iBrazil :		(44, 20), # Rio de Janeiro
 iCanada :		(31, 61), # Montreal
-iBulgaria:      (77, 56), # Tarnovo (also Pliska, rename later)
+iBulgaria:      (77, 56), # Tarnovo
 })
 
 dPeriodCapitals = {
