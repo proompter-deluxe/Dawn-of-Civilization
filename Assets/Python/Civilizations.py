@@ -1226,6 +1226,11 @@ dExtraAIUnits = CivDict({
 	iInca: {
 		iCityAttack: 2,
 	},
+	iOttomans: {
+		iAttack: 3,
+		iShock: 1,
+		iSiege: 1,
+	},
 	iRussia: {
 		iWork: 2,
 		iSiege: 2,
