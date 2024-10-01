@@ -803,8 +803,9 @@ def desc(iPlayer, sTextKey=str("%s1")):
 
 def capitalName(iPlayer):
 	capital = player(iPlayer).getCapitalCity()
+	iCiv = civ(iPlayer)
 	if capital: 
-		sCapitalName = cn.translateName(iEngland, capital.getName())
+		sCapitalName = cn.translateName(iCiv, capital.getName())
 		if sCapitalName: 
 			return sCapitalName
 		
