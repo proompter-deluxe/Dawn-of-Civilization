@@ -834,7 +834,7 @@ def toggleStabilityOverlay(iPlayer = -1):
 
 	bDebug = game.isDebugMode()
 
-	othercivs = civs.major().without(iPlayer).where(lambda iCiv: player(iCiv).isAlive() or canEverRespawn(iCiv))
+	# othercivs = civs.major().without(iPlayer).where(lambda iCiv: player(iCiv).isAlive() or canEverRespawn(iCiv))
 
 	# apply the highlight
 	for plot in plots.all().land():
