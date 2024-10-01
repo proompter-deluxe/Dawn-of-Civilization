@@ -73,4 +73,88 @@
 		<Italian>Bulgaria</Italian>
 		<Spanish>Bulgaria</Spanish>
 	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_SERBIA_SHORT_DESC</Tag>
+		<English>Serbia</English>
+		<French>
+			<Text>Serbie</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>Serbia</German>
+		<Italian>Serbia</Italian>
+		<Spanish>Serbia</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_SERBIA_ADJECTIVE</Tag>
+		<English>Serbian</English>
+		<French>
+			<Text>serbe:serbe:serbes:serbes</Text>
+			<Gender>Male:Female:Male:Female</Gender>
+			<Plural>0:0:1:1</Plural>
+		</French>
+		<German>Serbian</German>
+		<Italian>Serbian</Italian>
+		<Spanish>Serbian</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_CROATIA_SHORT_DESC</Tag>
+		<English>Croatia</English>
+		<French>
+			<Text>Croatie</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>Croatia</German>
+		<Italian>Croatia</Italian>
+		<Spanish>Croatia</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_CROATIA_ADJECTIVE</Tag>
+		<English>Croatian</English>
+		<French>
+			<Text>croate:croate:croates:croates</Text>
+			<Gender>Male:Female:Male:Female</Gender>
+			<Plural>0:0:1:1</Plural>
+		</French>
+		<German>Croatian</German>
+		<Italian>Croatian</Italian>
+		<Spanish>Croatian</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_BULGARIA_RUMELIA</Tag>
+		<English>Rumelia</English>
+		<French>
+			<Text>Rumelia</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>Rumelia</German>
+		<Italian>Rumelia</Italian>
+		<Spanish>Rumelia</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_BULGARIA_RUMELIA_ADJECTIVE</Tag>
+		<English>Rumelian</English>
+		<French>
+			<Text>rumelien:rumelienne:rumeliens:rumeliennes</Text>
+			<Gender>Male:Female:Male:Female</Gender>
+			<Plural>0:0:1:1</Plural>
+		</French>
+		<German>Rumelian</German>
+		<Italian>Rumelian</Italian>
+		<Spanish>Rumelian</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_OTTOMAN_BULGARIA_RUMELIA</Tag>
+		<English>Eyalet of Rumelia</English>
+		<French>
+			<Text>Rumelia</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>Eyalet of Rumelia</German>
+		<Italian>Eyalet of Rumelia</Italian>
+		<Spanish>Eyalet of  Rumelia</Spanish>
+	</TEXT>
 </Civ4GameText>

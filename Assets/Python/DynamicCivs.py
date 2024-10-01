@@ -206,6 +206,7 @@ dSpecificVassalTitles = deepdict({
 		iByzantium : "TXT_KEY_CIV_OTTOMAN_BYZANTIUM",
 		iArabia : "TXT_KEY_CIV_OTTOMAN_ARABIA",
 		iRussia : "TXT_KEY_CIV_OTTOMAN_RUSSIA",
+		iBulgaria: "TXT_KEY_CIV_OTTOMAN_BULGARIA_RUMELIA"
 	},
 	iNetherlands : {
 		iMali : "TXT_KEY_CIV_DUTCH_MALI",
@@ -458,6 +459,7 @@ dEmpireThreshold = {
 	iInca : 3,
 	iMongols : 8,
 	iRussia : 8,
+	iBulgaria: 4,
 }
 
 lChristianity = [iCatholicism, iOrthodoxy, iProtestantism]
@@ -1026,6 +1028,18 @@ def specificName(iPlayer):
 	
 			if not isCurrentCapital(iPlayer, "Konstantinoupolis"):
 				return capitalName(iPlayer)
+
+	elif iCiv == iBulgaria:
+		if iReligion == iIslam:
+			return "TXT_KEY_CIV_BULGARIA_RUMELIA"
+		
+		if isCurrentCapital(iPlayer, "Ras"):
+			return "TXT_KEY_CIV_SERBIA_SHORT_DESC"
+
+		if isCurrentCapital(iPlayer, "Zadar"):
+			return "TXT_KEY_CIV_CROATIA_SHORT_DESC"
+
+		return "TXT_KEY_CIV_BULGARIA_SHORT_DESC"
 			
 	elif iCiv == iNorse:
 		bOwnNorway = cities.region(rNorway) <= cities.region(rNorway).owner(iPlayer)
@@ -1379,6 +1393,18 @@ def specificAdjective(iPlayer):
 			
 		if bEmpire and controlsCity(iPlayer, location(plots.capital(iRome))):
 			return infos.civ(iRome).getAdjective(0)
+
+	elif iCiv == iBulgaria:
+		if iReligion == iIslam:
+			return "TXT_KEY_CIV_BULGARIA_RUMELIA_ADJECTIVE"
+		
+		if isCurrentCapital(iPlayer, "Ras"):
+			return "TXT_KEY_CIV_SERBIA_ADJECTIVE"
+
+		if isCurrentCapital(iPlayer, "Zadar"):
+			return "TXT_KEY_CIV_CROATIA_ADJECTIVE"
+
+		return "TXT_KEY_CIV_BULGARIA_ADJECTIVE"
 			
 	elif iCiv == iTurks:
 		if bResurrected:
@@ -2063,7 +2089,11 @@ def specificTitle(iPlayer, lPreviousOwners=[]):
 		
 		if isCurrentCapital(iPlayer, "Kiev"):
 			return "TXT_KEY_CIV_RUSSIA_GRAND_PRINCIPALITY"
-			
+	
+	elif iCiv == iBulgaria:
+		if bEmpire:
+			return "TXT_KEY_CIV_RUSSIA_TSARDOM_OF"
+
 	elif iCiv == iOttomans:
 		if iReligion == iIslam:
 			if bTheocracy and game.getHolyCity(iIslam) and game.getHolyCity(iIslam).getOwner() == iPlayer:
