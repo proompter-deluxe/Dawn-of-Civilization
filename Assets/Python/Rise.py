@@ -772,8 +772,7 @@ class Birth(object):
 			
 		if self.iPlayer < 0:
 			self.canceled = True
-			log.rise("BIRTH CANCELED: no free slot found for %s", infos.civ(self.iCiv).getText())
-			return
+			message(active(), "BIRTH CANCELED: no free slot found for %s", infos.civ(self.iCiv).getText(), color=iRed, force=True)
 		
 		self.updateCivilization()
 		self.updateStartingLocation()
