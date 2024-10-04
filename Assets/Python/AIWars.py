@@ -393,7 +393,7 @@ def spawnConquerors(iPlayer, iPreferredTarget, tTL, tBR, iNumTargets, iWarPlan =
 		message(active(), 'TXT_KEY_UP_CONQUESTS_TARGET_ALL', name(iPlayer), name(iOwner))
 	
 	iExtra = 0
-	if iEra >= iMedieval:
+	if iEra >= iMedieval or iCiv == iArabia:
 		iExtra += 1
 
 	for city in targetCities:	
