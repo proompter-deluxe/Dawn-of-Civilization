@@ -122,8 +122,8 @@ tHolyLandTL = (84, 44)
 tHolyLandBR = (85, 51)
 
 tConquestFranceCrusades = (15, iFrance, iArabia, tHolyLandTL, tHolyLandBR, 2, iFranceCrusadesYear, 10)
-tConquestHolyRomeCrusades = (16, iHolyRome, iArabia, tHolyLandTL, tHolyLandBR, 1, iHolyRomeCrusadesYear, 5)
-tConquestEnglandCrusades = (17, iEngland, iArabia, tHolyLandTL, tHolyLandBR, 1, iEnglandCrusadesYear, 5)
+tConquestHolyRomeCrusades = (16, iHolyRome, iMamluks, tHolyLandTL, tHolyLandBR, 1, iHolyRomeCrusadesYear, 5)
+tConquestEnglandCrusades = (17, iEngland, iMamluks, tHolyLandTL, tHolyLandBR, 1, iEnglandCrusadesYear, 5)
 
 iSuiUnificationYear = 588
 tSouthChinaTL = (124, 43)
@@ -370,6 +370,10 @@ def conquerorWar(iPlayer, iTarget, iWarPlan):
 	
 def spawnConquerors(iPlayer, iPreferredTarget, tTL, tBR, iNumTargets, iWarPlan = WarPlanTypes.WARPLAN_TOTAL):
 	iCiv = civ(iPlayer)
+	pPlayer = player(iPlayer)
+	
+	iEra = pPlayer.getCurrentEra()
+	iGameEra = game.getCurrentEra()
 	
 	if not player(iPlayer).isExisting():
 		for iTech in getResurrectionTechs(iPlayer):
@@ -387,39 +391,37 @@ def spawnConquerors(iPlayer, iPreferredTarget, tTL, tBR, iNumTargets, iWarPlan =
 		conquerorWar(iPlayer, iOwner, iWarPlan)
 		message(iOwner, 'TXT_KEY_UP_CONQUESTS_TARGET', name(iPlayer))
 		message(active(), 'TXT_KEY_UP_CONQUESTS_TARGET_ALL', name(iPlayer), name(iOwner))
-		
-	for city in targetCities:
-		iExtra = 0
-		if active() not in [iPlayer, city.getOwner()]: 
-			iExtra += 1
-			
+	
+	iExtra = 0
+	if iEra >= iMedieval:
+		iExtra += 1
+
+	for city in targetCities:	
 		if not player(iPlayer).isHuman():
 			# we want to be sure that the AI can fund these conquerors for at least a few turns
 			player(iPlayer).changeGold(20)
-			
-			if iCiv == iMongols or iCiv == iTurks or iCiv == iArabia:
-				iExtra += 1
 		
 		tPlot = findNearestLandPlot(city, iPlayer)
 		
 		if iCiv == iGreece:
-			makeUnits(iPlayer, iCatapult, tPlot, 2 + min(1, iExtra), UnitAITypes.UNITAI_ATTACK_CITY)
-			makeUnits(iPlayer, iHoplite, tPlot, 3 + iExtra, UnitAITypes.UNITAI_ATTACK_CITY)
-			makeUnits(iPlayer, iCompanion, tPlot, 2 + min(1, iExtra), UnitAITypes.UNITAI_ATTACK_CITY)
+			makeUnits(iPlayer, iCatapult, tPlot, 3, UnitAITypes.UNITAI_ATTACK_CITY)
+			makeUnits(iPlayer, iHoplite, tPlot, 3, UnitAITypes.UNITAI_ATTACK_CITY)
+			makeUnits(iPlayer, iCompanion, tPlot, 3, UnitAITypes.UNITAI_ATTACK_CITY)
 			makeUnits(iPlayer, iArcher, tPlot, 1)
 		else:
 			dConquestUnits = {
-				iCityAttack: 2 + iExtra + max(0, iExtra-2),
-				iCitySiege: 1 + min(1, iExtra),
+				iCityAttack: 2 + iExtra,
+				iCitySiege: 2 + iExtra,
 				iDefend: 1,
 			}
 			createRoleUnits(iPlayer, tPlot, dConquestUnits.items())
 
-		if iCiv in [iSpain, iEngland]:
-			createRoleUnit(iPlayer, tPlot, iShockCity, 2*iExtra)
+		if iCiv in [iSpain, iEngland, iHolyRome, iFrance, iPoland, iPortugal, iItaly, iNorse, iRus, iRussia, iSweden]:
+			createRoleUnit(iPlayer, tPlot, iShockCity, 2)
+			createRoleUnit(iPlayer, tPlot, iCounter, 2)
 			
-		if iCiv == iTurks:
-			createRoleUnit(iPlayer, tPlot, iShockCity, 2+iExtra)
+		if iCiv in [iTurks, iMongols]:
+			createRoleUnit(iPlayer, tPlot, iShockCity, 2)
 
 
 def declareWar(iPlayer, iTarget, iWarPlan):
