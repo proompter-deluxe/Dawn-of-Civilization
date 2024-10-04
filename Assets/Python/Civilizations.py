@@ -394,6 +394,7 @@ lCivilizations = [
 		iBulgaria,
 		iGold=50,
 		iAdvancedStartPoints=25,
+		lEnemies=[iByzantium],
 		lCivics=[iDespotism, iSlavery, iMerchantTrade, iHegemony],
 		techs=techs.column(5).including(iNobility).without(iWriting, iLiterature, iPriesthood, iEngineering, iAesthetics, iLaw, iPhilosophy, iShipbuilding, iNavigation)
 	),
