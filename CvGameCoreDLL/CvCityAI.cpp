@@ -2504,6 +2504,7 @@ UnitTypes CvCityAI::AI_bestUnit(bool bAsync, AdvisorTypes eIgnoreAdvisor, UnitAI
 		aiUnitAIVal[UNITAI_ATTACK_CITY] *= 3;
 		break;
 	case ARABIA:
+	case MAMLUKS:
 		aiUnitAIVal[UNITAI_ATTACK] *= 2;
 		aiUnitAIVal[UNITAI_CITY_DEFENSE] *= 3;
 		aiUnitAIVal[UNITAI_CITY_DEFENSE] /= 2;

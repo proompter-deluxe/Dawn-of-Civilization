@@ -84,6 +84,7 @@ dSpecificVassalTitles = deepdict({
 	},
 	iByzantium : {
 		iEgypt : "TXT_KEY_CIV_BYZANTINE_EGYPT",
+		iMamluks : "TXT_KEY_CIV_BYZANTINE_EGYPT",
 		iBabylonia : "TXT_KEY_CIV_BYZANTINE_BABYLONIA",
 		iGreece : "TXT_KEY_CIV_BYZANTINE_GREECE",
 		iPhoenicia : "TXT_KEY_CIV_BYZANTINE_CARTHAGE",
