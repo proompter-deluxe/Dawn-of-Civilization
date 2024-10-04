@@ -175,15 +175,15 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIV_BYZANTINE_GREECE</Tag>
-		<English>Exarchate of Achaia</English>
+		<English>Theme of Hellas</English>
 		<French>
-			<Text>Exarchat d'Acha&#239;e</Text>
+			<Text>Th&#232;me d'H&#233;llas</Text>
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>Exarchate of Achaia</German>
-		<Italian>Exarchate of Achaia</Italian>
-		<Spanish>Exarchate of Achaia</Spanish>
+		<German>Theme of Hellas</German>
+		<Italian>Theme of Hellas</Italian>
+		<Spanish>Theme of Hellas</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIV_BYZANTINE_CARTHAGE</Tag>
@@ -232,6 +232,18 @@
 		<German>Exarchate of Spania</German>
 		<Italian>Exarchate of Spania</Italian>
 		<Spanish>Exarchate of Spania</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_BYZANTINE_BULGARIA</Tag>
+		<English>Theme of Boulgaria</English>
+		<French>
+			<Text>Th&#232;me de Boulgarie</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>Theme of Boulgaria</German>
+		<Italian>Theme of Boulgaria</Italian>
+		<Spanish>Theme of Boulgaria</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIV_BYZANTIUM_ADJECTIVE</Tag>

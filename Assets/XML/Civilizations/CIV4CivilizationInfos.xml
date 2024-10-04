@@ -4014,11 +4014,11 @@
 			<CivilizationActionSound>AS3D_MALI_ORDER</CivilizationActionSound>
 		</CivilizationInfo>
 		<CivilizationInfo>
-			<Type>CIVILIZATION_MAMLUKS</Type>
-			<Description>TXT_KEY_CIV_ARAB_EGYPT_DESC</Description>
-			<ShortDescription>TXT_KEY_CIV_ARAB_EGYPT_SHORT_DESC</ShortDescription>
-			<Adjective>TXT_KEY_CIV_ARAB_EGYPT_ADJECTIVE</Adjective>
-			<Civilopedia>TXT_KEY_CIV_ARAB_EGYPT_PEDIA</Civilopedia>
+			<Type>CIVILIZATION_MAMLUKS</Type> <!-- MISR -->
+			<Description>TXT_KEY_CIV_MISR_DESC</Description>
+			<ShortDescription>TXT_KEY_CIV_MISR_SHORT_DESC</ShortDescription>
+			<Adjective>TXT_KEY_CIV_MISR_ADJECTIVE</Adjective>
+			<Civilopedia>TXT_KEY_CIV_MISR_PEDIA</Civilopedia>
 			<DefaultPlayerColor>PLAYERCOLOR_YELLOW</DefaultPlayerColor>
 			<ArtDefineTag>ART_DEF_CIVILIZATION_MAMLUK</ArtDefineTag>
 			<ArtStyleType>ARTSTYLE_MIDDLE_EAST</ArtStyleType>
@@ -4026,10 +4026,10 @@
 			<PaganReligion>PAGAN_RELIGION_PESEDJET</PaganReligion>
 			<Impact>IMPACT_SIGNIFICANT</Impact>
 			<Identifier>MAM</Identifier>
-			<StartingYear>1171</StartingYear>
+			<StartingYear>970</StartingYear>
 			<LoadingTimes>
-				<LoadingTime>12</LoadingTime>
-				<LoadingTime>6</LoadingTime>
+				<LoadingTime>10</LoadingTime>
+				<LoadingTime>5</LoadingTime>
 				<LoadingTime>0</LoadingTime>
 			</LoadingTimes>
 			<Rating>

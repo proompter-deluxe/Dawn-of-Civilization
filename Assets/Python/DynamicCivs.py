@@ -90,6 +90,7 @@ dSpecificVassalTitles = deepdict({
 		iPersia : "TXT_KEY_CIV_BYZANTINE_PERSIA",
 		iRome : "TXT_KEY_CIV_BYZANTINE_ROME",
 		iSpain : "TXT_KEY_CIV_BYZANTINE_SPAIN",
+		iBulgaria: "TXT_KEY_CIV_BYZANTINE_BULGARIA",
 	},
 	iNorse : {
 		iEngland : "TXT_KEY_CIV_NORSE_ENGLAND",
@@ -1239,16 +1240,18 @@ def specificAdjective(iPlayer):
 	
 	if iCiv == iMamluks:
 		if not bMonarchy or bResurrected or iEra >= iIndustrial:
-			return "TXT_KEY_CIV_EGYPT_ADJECTIVE"
+			return "TXT_KEY_CIV_MISR_ADJECTIVE_MODERN"
 
 		if bMonarchy:
 			if tPlayer.isHasTech(iGunpowder):
-				return "TXT_KEY_CIV_EGYPT_MAMLUK"
+				return "TXT_KEY_CIV_MISR_MAMLUK"
 	
 			if player(iArabia).isExisting():
-				return "TXT_KEY_CIV_EGYPT_FATIMID"
+				return "TXT_KEY_CIV_MISR_FATIMID"
 		
-			return "TXT_KEY_CIV_EGYPT_AYYUBID"
+			return "TXT_KEY_CIV_MISR_AYYUBID"
+		
+		return "TXT_KEY_CIV_MISR_ADJECTIVE"
 			
 	elif iCiv == iIndia:
 		if bMonarchy and not bCityStates and (iEra >= iMedieval or bEmpire):

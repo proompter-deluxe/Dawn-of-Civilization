@@ -201,7 +201,7 @@ iArgentina :	[(33, 17), (34, 17), (35, 17), (36, 17), (37, 17), (38, 17), (39, 1
 
 dCoreArea = CivDict({
 iEgypt :		((78, 41),	(80, 44)),
-iMamluks :	    ((76, 39),	(83, 45)), #FIXME_MAMLUKS investigate this area
+iMamluks :	    ((74, 39),	(83, 45)), 
 iBabylonia :	((88, 45),	(90, 48)),
 iHarappa :		((99, 45),	(102, 47)),
 iAssyria :		((88, 49),	(90, 51)),
@@ -267,7 +267,7 @@ iBulgaria:      ((73, 55),  (78, 58)),
 
 dCoreAreaExceptions = CivDict({
 iEgypt :	[(80, 43), (80, 44)],
-iMamluks :	[(83, 43), (83, 44), (83, 45)], #FIXME_MAMLUKS investigate this area
+iMamluks :	[(83, 44), (83, 45)],
 iBabylonia: [(88, 45)],
 iHarappa :	[(99, 46), (99, 47), (101, 45), (102, 45), (102, 46)],
 iChina :	[(120, 54), (120, 55), (120, 56), (121, 54), (121, 55), (121, 56), (126, 51)],

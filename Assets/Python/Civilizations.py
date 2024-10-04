@@ -459,6 +459,14 @@ lCivilizations = [
 		lCivics=[iElective, iCitizenship, iSlavery, iMerchantTrade, iClergy, iThalassocracy],
 		techs=techs.column(6).including(iGuilds, iAlchemy)
 	),
+		Civilization(
+		iMamluks,
+		iGold=200,
+		iAdvancedStartPoints=50,
+		iStateReligion=iIslam,
+		lCivics=[iMonarchy, iVassalage, iSlavery, iMerchantTrade, iFanaticism, iHegemony],
+		techs=techs.column(6).including(iFeudalism, iFortification, iTheology, iDoctrine)
+	),
 	Civilization(
 		iPoland,
 		iGold=100,
@@ -488,14 +496,6 @@ lCivilizations = [
 		iStateReligion=iCatholicism,
 		lCivics=[iRepublic, iCitizenship, iManorialism, iMerchantTrade, iClergy],
 		techs=techs.column(7).including(iCommune, iPaper, iCompass, iDoctrine)
-	),
-	Civilization(
-		iMamluks,
-		iGold=200,
-		iAdvancedStartPoints=50,
-		iStateReligion=iIslam,
-		lCivics=[iMonarchy, iVassalage, iSlavery, iMerchantTrade, iClergy, iHegemony],
-		techs=techs.column(7).including(iPaper, iCompass, iDoctrine)
 	),
 	Civilization(
 		iMongols,
@@ -945,6 +945,15 @@ dStartingUnits = CivDict({
 		iSkirmish: 2,
 		iExploreSea: 1,
 		iSettleSea: 2,
+		iMissionary: 1,
+	},
+	iMamluks: {
+		iSettle: 2,
+		iWork: 2,
+		iDefend: 3,
+		iShock: 4,
+		iAttack: 2,
+		iSiege: 1,
 		iMissionary: 1,
 	},
 	iPoland: {

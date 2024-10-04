@@ -119,7 +119,7 @@ plot_colors = {
 
 dCoreArea = {
 iEgypt :		((78, 41),	(80, 44)),
-iMamluks :	    ((76, 39),	(83, 45)), #FIXME_MAMLUKS investigate this area
+iMamluks :	    ((74, 39),	(83, 45)), 
 iBabylonia :	((88, 45),	(90, 48)),
 iHarappa :		((99, 45),	(102, 47)),
 iChina :		((120, 51),	(126, 56)),
@@ -172,7 +172,7 @@ iCanada :		((26, 59),	(37, 62)),
 
 dCoreAreaExceptions = {
 iEgypt :	[(80, 43), (80, 44)],
-iMamluks :	[(83, 43), (83, 44), (83, 45)], #FIXME_MAMLUKS investigate this area
+iMamluks :	[(83, 44), (83, 45)],
 iBabylonia: [(88, 45)],
 iHarappa :	[(99, 46), (99, 47), (101, 45), (102, 45), (102, 46)],
 iChina :	[(120, 54), (120, 55), (120, 56), (121, 54), (121, 55), (121, 56), (126, 51)],
