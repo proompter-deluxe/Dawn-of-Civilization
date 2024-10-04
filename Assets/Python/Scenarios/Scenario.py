@@ -15,7 +15,6 @@ START_HISTORY = -3000
 LEADER_DATES = {
 	iRamesses: -1300,
 	iCleopatra: -50,
-	iBaibars: 1260,
 	iSargon: -2400,
 	iHammurabi: -1800,
 	iWentAntu: -2000,
@@ -69,6 +68,7 @@ LEADER_DATES = {
 	iTamerlane: 1370,
 	iHarun: 790,
 	iSaladin: 1180,
+	iBaibars: 1260,
 	iSimeon: 893,
 	iSongtsen: 620,
 	iLobsangGyatso: 1650,

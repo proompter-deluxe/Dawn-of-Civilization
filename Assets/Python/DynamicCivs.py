@@ -244,6 +244,7 @@ dMasterTitles = {
 	iByzantium : "TXT_KEY_CIV_BYZANTINE_VASSAL",
 	iTurks : "TXT_KEY_CIV_TURKIC_VASSAL",
 	iArabia : "TXT_KEY_CIV_ARABIAN_VASSAL",
+	iMamluks: "TXT_KEY_CIV_ARABIAN_VASSAL",
 	iTibet : "TXT_KEY_CIV_TIBETAN_VASSAL",
 	iMoors : "TXT_KEY_CIV_ARABIAN_VASSAL",
 	iSpain : "TXT_KEY_CIV_SPANISH_VASSAL",
@@ -436,7 +437,7 @@ dForeignNames = deepdict({
 lRepublicOf = [iEgypt, iIndia, iChina, iChinaS, iPersia, iJapan, iEthiopia, iKorea, iNorse, iTurks, iTibet, iKhmer, iHolyRome, iMali, iPoland, iMughals, iOttomans, iThailand, iIran]
 lRepublicAdj = [iBabylonia, iRome, iMoors, iSpain, iFrance, iPortugal, iInca, iItaly, iAztecs, iArgentina]
 
-lSocialistRepublicOf = [iEgypt, iMoors, iHolyRome, iBrazil, iNorse, iColombia]
+lSocialistRepublicOf = [iEgypt, iMamluks, iMoors, iHolyRome, iBrazil, iNorse, iColombia]
 lSocialistRepublicAdj = [iPersia, iTurks, iItaly, iAztecs, iIran, iArgentina]
 
 lPeoplesRepublicOf = [iIndia, iChina, iChinaS, iPolynesia, iJapan, iTibet, iMali, iPoland, iMughals, iThailand, iCongo]
@@ -560,6 +561,7 @@ dStartingLeaders = [
 	iColombia : iBolivar,
 	iBrazil : iPedro,
 	iCanada : iMacDonald,
+	iMamluks: iSaladin,
 },
 # 600 AD
 {
@@ -589,6 +591,7 @@ dStartingLeaders = [
 	iRussia : iPeter,
 	iOttomans : iSuleiman,
 	iNetherlands : iWilliam,
+	iMamluks: iBaibars,
 }]
 
 ### Event handlers
@@ -599,9 +602,6 @@ def setup():
 	
 	if iScenario == i600AD:
 		data.civs[iChina].iAnarchyTurns += 3
-		
-	elif iScenario == i1700AD:
-		data.civs[iEgypt].iResurrections += 1
 	
 @handler("playerCivAssigned")
 def initName(iPlayer):
@@ -1237,16 +1237,18 @@ def specificAdjective(iPlayer):
 	
 	bMonarchy = not isCommunist(iPlayer) and not isFascist(iPlayer) and not isRepublic(iPlayer)
 	
-	if iCiv == iEgypt:
+	if iCiv == iMamluks:
+		if not bMonarchy or bResurrected or iEra >= iIndustrial:
+			return "TXT_KEY_CIV_EGYPT_ADJECTIVE"
+
 		if bMonarchy:
-			if bResurrected:
-				if tPlayer.isHasTech(iGunpowder):
-					return "TXT_KEY_CIV_EGYPT_MAMLUK"
+			if tPlayer.isHasTech(iGunpowder):
+				return "TXT_KEY_CIV_EGYPT_MAMLUK"
+	
+			if player(iArabia).isExisting():
+				return "TXT_KEY_CIV_EGYPT_FATIMID"
 		
-				if player(iArabia).isExisting():
-					return "TXT_KEY_CIV_EGYPT_FATIMID"
-			
-				return "TXT_KEY_CIV_EGYPT_AYYUBID"
+			return "TXT_KEY_CIV_EGYPT_AYYUBID"
 			
 	elif iCiv == iIndia:
 		if bMonarchy and not bCityStates and (iEra >= iMedieval or bEmpire):
@@ -1682,10 +1684,12 @@ def republicTitle(iPlayer):
 	if iCiv == iColombia:
 		if isControlled(iPlayer, plots.regions(rNewGranada, rAndes)):
 			return "TXT_KEY_CIV_COLOMBIA_FEDERATION_ANDES"
-			
+	
+	if iCiv == iMamluks: return key(iPLayer, "ARAB_REPUBLIC_OF")
+
 	if pPlayer.getStateReligion() == iIslam:
 		if iCiv == iOttomans: return key(iPlayer, "ISLAMIC_REPUBLIC")
-
+		
 		return "TXT_KEY_ISLAMIC_REPUBLIC_OF"
 
 		
@@ -1722,11 +1726,7 @@ def specificTitle(iPlayer, lPreviousOwners=[]):
 	bWar = isAtWar(iPlayer)
 	bMonarchy = not (isCommunist(iPlayer) or isFascist(iPlayer) or isRepublic(iPlayer))
 
-
-	if iCiv == iEgypt:
-		if bResurrected or scenario() >= i600AD:
-			return "TXT_KEY_KINGDOM_ADJECTIVE"
-			
+	if iCiv == iEgypt:	
 		if slot(iGreece) in lPreviousOwners:
 			return "TXT_KEY_CIV_EGYPT_PTOLEMAIC"
 			
@@ -2195,12 +2195,13 @@ def leader(iPlayer):
 	iEra = pPlayer.getCurrentEra()
 	iGameEra = game.getCurrentEra()
 	
-	if iCiv == iEgypt:
+	if iCiv == iEgypt:		
+		if getColumn(iPlayer) >= 4: return iCleopatra
+
+	elif iCiv == iMamluks:
 		if not bMonarchy and iEra >= iGlobal: return iNasser
 		
-		if bResurrected or scenario() >= i600AD: return iBaibars
-		
-		if getColumn(iPlayer) >= 4: return iCleopatra
+		if tPlayer.isHasTech(iGunpowder): return iBaibars
 		
 	elif iCiv == iIndia:
 		if not bMonarchy and iEra >= iGlobal: return iGandhi
@@ -2295,8 +2296,7 @@ def leader(iPlayer):
 	
 		if year() >= year(1000) or pPlayer.getPeriod() == iPeriodSeljuks: return iAlpArslan
 		
-	elif iCiv == iArabia:
-		if year() >= year(1000): return iSaladin
+	#elif iCiv == iArabia:
 		
 	elif iCiv == iTibet:
 		if year() >= year(1500): return iLobsangGyatso

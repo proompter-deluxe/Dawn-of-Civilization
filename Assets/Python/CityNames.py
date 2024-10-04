@@ -81,7 +81,8 @@ dLanguages = CivDict({
 	iColombia: [iLangSpanish],
 	iBrazil: [iLangPortuguese, iLangSpanish],
 	iCanada: [iLangAmerican, iLangEnglish, iLangFrench],
-	iBulgaria: [iLangRuthenian, iLangByzantine, iLangRussian] # Bulgarian/Balkans language later
+	iBulgaria: [iLangRuthenian, iLangByzantine, iLangRussian], # Bulgarian/Balkans language later
+	iMamluks: [iLangEgyptianArabic, iLangArabic],
 }, [])
 
 ### CSV CITY NAME MAP ###
@@ -253,17 +254,14 @@ def getSpecialLanguages(identifier):
 	if player(identifier).getID() < 0:
 		return None
 	
-	if iCiv == iEgypt:
-		if player(identifier).getStateReligion() == iIslam:
-			return [iLangEgyptianArabic, iLangArabic]
-	elif iCiv == iInca:
+	if iCiv == iInca:
 		if data.civs[iCiv].iResurrections > 0:
 			return [iLangSpanish]
 	elif iCiv == iPhoenicia:
 		if player(iCiv).getPeriod() == iPeriodTunisia:
 			return [iLangArabic]
 	elif iCiv == iPersia and player(identifier).getStateReligion() == iIslam:
-		return [iLangFarsi,iLangArabic]
+		return [iLangFarsi, iLangArabic, iLangPersian]
 	
 	return None
 

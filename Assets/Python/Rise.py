@@ -30,6 +30,7 @@ lExpansionCivs = [
 	iTurks,
 	iArabia,
 	iSpain,
+	iMamluks,
 	iMongols,
 	iMughals,
 	iOttomans,
@@ -66,6 +67,7 @@ dClearedForBirth = {
 	iAztecs: iToltecs,
 	iRussia: iRus,
 	iMexico: iAztecs,
+	iMamluks: iEgypt,
 }
 
 lAlwaysClear = [

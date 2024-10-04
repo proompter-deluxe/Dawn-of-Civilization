@@ -123,9 +123,6 @@ def isResurrected(iPlayer):
 	return data.civs[iPlayer].iResurrections > 0
 
 def getLanguages(iCiv):
-	if iCiv == iEgypt and player(iCiv).getStateReligion() == iIslam:
-		return [iLangEgyptianArabic, iLangArabian]
-		
 	iPeriod = player(iCiv).getPeriod()
 	if (iCiv, iPeriod) in dPeriodLanguages:
 		return dPeriodLanguages[(iCiv, iPeriod)]
@@ -383,9 +380,6 @@ def onRevolution(iPlayer):
 		applyCommunistNames(iPlayer)
 	else:
 		revertCommunistNames(iPlayer)
-
-	if civ(iPlayer) == iEgypt:
-		updateCityNames(iPlayer)
 	
 
 #@handler("greatPersonBorn")

@@ -80,4 +80,5 @@ iThailand : 4,
 iNetherlands : 4,
 iAmerica : 4,
 iCanada : 4,
+iMamluks: 2,
 }, default=3)

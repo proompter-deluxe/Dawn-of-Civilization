@@ -89,6 +89,7 @@ MANCHURIA = "TXT_KEY_VICTORY_NAME_MANCHURIA"
 MARQUESAS = "TXT_KEY_VICTORY_NAME_MARQUESAS"
 MEDITERRANEAN = "TXT_KEY_VICTORY_NAME_MEDITERRANEAN"
 MESOPOTAMIA = "TXT_KEY_VICTORY_NAME_MESOPOTAMIA"
+MIDDLE_EAST = "TXT_KEY_VICTORY_NAME_MIDDLE_EAST"
 NEAR_EAST = "TXT_KEY_VICTORY_NAME_NEAR_EAST"
 NEW_ZEALAND = "TXT_KEY_VICTORY_NAME_NEW_ZEALAND"
 NORTH_AFRICA = "TXT_KEY_VICTORY_NAME_NORTH_AFRICA"
@@ -149,6 +150,7 @@ CHRISTIAN = "TXT_KEY_VICTORY_NAME_CHRISTIAN"
 EUROPEAN = "TXT_KEY_VICTORY_NAME_EUROPEAN"
 EUROPEAN_CIVILIZATION = "TXT_KEY_VICTORY_NAME_EUROPEAN_CIVILIZATION"
 LOCAL = "TXT_KEY_VICTORY_NAME_LOCAL"
+MIDDLE_EASTERN = "TXT_KEY_VICTORY_NAME_MIDDLE_EASTERN"
 
 # separators
 OR = "TXT_KEY_OR"
@@ -528,7 +530,7 @@ dGoals = {
 			plots.regions(rLevant, rMesopotamia).named(MESOPOTAMIA),
 			plots.regions(rPersia, rKhorasan).named(PERSIA),
 			subject=VASSALS,
-			at=1300,
+			at=1350,
 		),
 		ReligionSpreadPercent(iIslam, 30),
 	),
@@ -667,6 +669,23 @@ dGoals = {
 		Wonders(iSanMarcoBasilica, iSistineChapel, iSantaMariaDelFiore, by=1500),
 		CultureLevelCityCount(iCultureLevelInfluential, 3, by=1600),
 		AreaPercent(plots.all().adjacent_region(rMediterraneanSea).named(MEDITERRANEAN), 65, by=1930),
+	),
+	iMamluks: (
+		All(
+			AreaNoStateReligion(plots.regions(rEgypt, rLevant, rMesopotamia, rArabia).named(MIDDLE_EAST), iCatholicism),
+			AreaNoStateReligion(plots.regions(rEgypt, rLevant, rMesopotamia, rArabia).named(MIDDLE_EAST), iOrthodoxy),
+			AllowOnly(plots.regions(rEgypt, rLevant, rMesopotamia, rArabia).named(MIDDLE_EAST), group(iCivGroupMiddleEast).named(MIDDLE_EASTERN)),
+			at=1300,	
+		),
+		All(
+			OpenBorderCount(8, at=1500),
+			TradeRouteCommerce(1600, by=1500),
+		),
+		# Mirror the England UHV
+		All(
+			RouteConnection([iRouteRailroad], plots.regions(rEgypt).coastal().named(EGYPT), plots.regions(rCape).named(SOUTH_AFRICA)),
+			by=1880,
+		),
 	),
 	iMongols: (
 		Control(plots.regions(rNorthChina, rSouthChina).named(CHINA), at=1350),

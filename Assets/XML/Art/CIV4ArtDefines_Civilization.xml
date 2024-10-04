@@ -73,6 +73,12 @@
 			<bWhiteFlag>0</bWhiteFlag>
 		</CivilizationArtInfo>
 		<CivilizationArtInfo>
+			<Type>ART_DEF_CIVILIZATION_MAMLUK</Type>
+			<Button>Art/Interface/Buttons/Civilizations/mamluks.dds</Button>
+			<Path>Art/Interface/TeamColor/FlagDECAL_Mamluks.dds</Path>
+			<bWhiteFlag>0</bWhiteFlag>
+		</CivilizationArtInfo>
+		<CivilizationArtInfo>
 			<Type>ART_DEF_CIVILIZATION_ENGLAND</Type>
 			<Button>Art/Interface/Buttons/Civilizations/England.dds</Button>
 			<Path>Art/Interface/TeamColor/FlagDECAL_lions.dds</Path>

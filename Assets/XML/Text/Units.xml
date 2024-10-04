@@ -3620,6 +3620,18 @@
 		<Portuguese>[TAB]The Bulgars were highly skilled in the equestrian arts. Their army mainly consisted of horseman because of their high skill. Every Bulgar horseman had high discipline and had several horses. However, only a single horse could be used for wartime matters, and it was forbidden to do anything else with it. It is believed that the Bulgars were the first who brought the stirrups to Europe. This gave them advantages above the other European armies of this time. The Bulgars could use bows still mounted on horses. Swords and spears were also used in war. The stirrups also increased the stability and speed of the rider.</Portuguese>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_UNIT_MAMLUK_CAVALRY</Tag>
+		<English>Mamluk Cavalry</English>
+		<French>
+			<Text>Chevalier Mamluk</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>Mamluk Cavalry</German>
+		<Italian>Mamluk Cavalry</Italian>
+		<Spanish>Mamluk Cavalry</Spanish>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_UNIT_</Tag>
 		<English></English>
 		<French></French>

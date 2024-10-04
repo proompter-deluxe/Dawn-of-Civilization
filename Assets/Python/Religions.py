@@ -27,6 +27,7 @@ iCongo		: 80,
 iGermany	: 25,
 iNetherlands: 10,
 iAmerica	: 20,
+iMamluks	: 80,
 }, 50)
 
 def getCatholicPreference(iPlayer):

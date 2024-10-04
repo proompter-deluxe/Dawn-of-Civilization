@@ -2158,6 +2158,87 @@ iArabia : {
 		"Ali Hassan al-Majid", # 20th
 	],
 },
+iMamluks : { # taken from Arabia. Need to define its own / split the list based on origin
+	iGreatProphet : [
+		"Al-Baqilanni", # 10th
+		"Ibn al-Jawzi", # 12th
+		iRenaissance,
+		"Al-Suyuti", # 15th
+		"Abdullah ibn Alawi al-Haddad", # 17th
+		"Muhammad ibn Abd al-Wahhab", # 18th
+		iIndustrial, 
+		"Muhammad Abduh", # 19th
+		"Abd al-Rahman al-Kawakibi", # 19th
+	],
+	iGreatArtist : [
+		"Ibn Muqla", # 10th
+		"Ibn al-Nadim", # 10th
+		"Al-Mutanabbi", # 10th
+		"Muhammad ibn al-Zayn", # 14th
+		iRenaissance,
+		"Ibn Furtu", # 16th
+		iGlobal,
+		"Muhammad al-Maghut", # 20th
+	],
+	iGreatScientist : [
+		"Al-Farabi", # 10th
+		"Ibrahim ibn Sinan", # 10th
+		"Ibn al-Jazzar", # 10th
+		"Ibn al-Haytam", # 11th
+		"Ibn al-Nafis", # 13th
+		iGlobal, 
+		"Abdul Jabbar Abdullah", # 20th
+		"Ahmed Zewail", # 20th
+	],
+	iGreatMerchant : [
+		"Ibn Hawqal", # 10th
+		"Abu'l Abbas al-Hijazi", # 12th
+		"Yaqut al-Hamawi", # 13th
+		iRenaissance,
+		"Ahmad ibn Majid", # 15th
+		"Sulaiman Al Mahri", # 16th
+		iIndustrial, 
+		"David Sassoon", # 19th
+		"Sassoon Eskell", # 19th
+		iGlobal, 
+		"Mohammed bin Awad bin Laden", # 20th
+	],
+	iGreatEngineer : [
+		"Ibn Wahshiyah", # 10th
+		"fMariam al-Astrulabi", # 10th
+		"Al-Jazari", # 12th
+		iGlobal,
+		"Hassan Fathy", # 20th
+		"fZaha Hadid", # 20th
+	],
+	iGreatStatesman : [
+		"Al-Mawardi", # 11th
+		"Izz al-Din Usama", # 12th
+		iRenaissance,
+		"Muhammad ibn Saud", # 18th
+		iIndustrial,
+		"Hussein bin Ali", # 19th
+		iGlobal,
+		"Zayed bin Sultan Al Nahyan", # 20th
+		"Yasser Arafat", # 20th
+		"Hisham Nazer", # 20th
+	],
+	iGreatGeneral : [
+		"Nur ad-Din Zengi", # 12th
+		iRenaissance,
+		"Rahmah ibn Jabir Al Jalhami", # 18th
+		iGlobal, 
+		"Yusuf al-'Azma", # 20th
+		"Abd al-Karim Qasim", # 20th
+	],
+	iGreatSpy : [
+		"fSitt al-Mulk", # 11th
+		"Hassan-i Sabbah", # 11th (also Persian)
+		"Rashid ad-Din Sinan", # 12th
+		iGlobal, 
+		"Ali Hassan al-Majid", # 20th
+	],
+},
 iTibet : {
 	iGreatProphet : [
 		"Gendun Drup", # 15th

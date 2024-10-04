@@ -490,6 +490,14 @@ lCivilizations = [
 		techs=techs.column(7).including(iCommune, iPaper, iCompass, iDoctrine)
 	),
 	Civilization(
+		iMamluks,
+		iGold=200,
+		iAdvancedStartPoints=50,
+		iStateReligion=iIslam,
+		lCivics=[iMonarchy, iVassalage, iSlavery, iMerchantTrade, iClergy, iHegemony],
+		techs=techs.column(7).including(iPaper, iCompass, iDoctrine)
+	),
+	Civilization(
 		iMongols,
 		iGold=250,
 		iAdvancedStartPoints=50,
@@ -1821,6 +1829,10 @@ dTechPreferences = {
 		iPaper: -20,
 		iCompass: -30,
 	},
+	iMamluks : {
+		iFinance: -50,
+		iCompanies: -50,
+	},
 	iTibet : {
 		iPhilosophy: 30,
 		iEngineering: 20,
@@ -2054,6 +2066,7 @@ dDefaultWonderPreferences = {
 	iIndia: -15,
 	iRome: -20,
 	iArabia: -15,
+	iMamluks: -15,
 	iJava: -15,
 	iFrance: -12,
 	iKhmer: -15,
@@ -2269,6 +2282,18 @@ dBuildingPreferences = {
 		iCERN: 15,
 	},
 	iArabia: {
+		iSpiralMinaret: 40,
+		iDomeOfTheRock: 40,
+		iHouseOfWisdom: 40,
+		iBurjKhalifa: 40,
+		iAlamut: 30,
+	
+		iTopkapiPalace: -80,
+		iMezquita: -50,
+		iUniversityOfSankore: -30,
+		iGreatAdobeMosque: -30,
+	},
+	iMamluks: {
 		iSpiralMinaret: 40,
 		iDomeOfTheRock: 40,
 		iHouseOfWisdom: 40,

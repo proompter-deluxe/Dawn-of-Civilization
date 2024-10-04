@@ -68,6 +68,7 @@ iColombia :		(30, 34), # Bogota
 iBrazil :		(44, 20), # Rio de Janeiro
 iCanada :		(31, 61), # Montreal
 iBulgaria:      (77, 56), # Tarnovo
+iMamluks :	    (79, 43),	# Cairo
 })
 
 dPeriodCapitals = {
@@ -90,7 +91,6 @@ iOttomans :	(79, 55),	# Istanbul
 
 # new capital locations on respawn
 dRespawnCapitals = CivDict({
-iEgypt :	(79, 43),	# Cairo
 iChina :	(125, 56),	# Beijing
 iIndia :	(105, 46),	# Delhi
 iPersia :	(93, 48),	# Esfahan
@@ -201,6 +201,7 @@ iArgentina :	[(33, 17), (34, 17), (35, 17), (36, 17), (37, 17), (38, 17), (39, 1
 
 dCoreArea = CivDict({
 iEgypt :		((78, 41),	(80, 44)),
+iMamluks :	    ((76, 39),	(83, 45)), #FIXME_MAMLUKS investigate this area
 iBabylonia :	((88, 45),	(90, 48)),
 iHarappa :		((99, 45),	(102, 47)),
 iAssyria :		((88, 49),	(90, 51)),
@@ -266,6 +267,7 @@ iBulgaria:      ((73, 55),  (78, 58)),
 
 dCoreAreaExceptions = CivDict({
 iEgypt :	[(80, 43), (80, 44)],
+iMamluks :	[(83, 43), (83, 44), (83, 45)], #FIXME_MAMLUKS investigate this area
 iBabylonia: [(88, 45)],
 iHarappa :	[(99, 46), (99, 47), (101, 45), (102, 45), (102, 46)],
 iChina :	[(120, 54), (120, 55), (120, 56), (121, 54), (121, 55), (121, 56), (126, 51)],
@@ -336,7 +338,6 @@ iPeriodModernGermany :			[(69, 61)],
 
 dRespawnArea = CivDict({
 iAssyria :	((85, 49),	(90, 51)),
-iEgypt :	((76, 39),	(83, 45)),
 iChina :	((120, 51),	(129, 58)),
 iChinaS :	((124, 43),	(131, 50)),
 iIndia :	((103, 37),	(110, 46)),
@@ -352,7 +353,6 @@ iPersia :   ((92, 43),	(95, 50)),
 })
 
 dRespawnAreaExceptions = CivDict({
-iEgypt :	[(83, 43), (83, 44), (83, 45)],
 iChinaS :	[(124, 50), (125, 50), (126, 50)],
 iIndia :	[(103, 43), (103, 44), (103, 45), (103, 46), (104, 46)],
 iByzantium :[(76, 51), (84, 51), (85, 51), (86, 51), (86, 52), (87, 51), (87, 52)],

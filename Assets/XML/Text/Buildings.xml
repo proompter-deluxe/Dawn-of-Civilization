@@ -3122,6 +3122,14 @@
 		<Spanish>Katorga</Spanish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_BUILDING_QALAAT</Tag>
+		<English>Qalaat</English>
+		<French>Qalaat</French>
+		<German>Qalaat</German>
+		<Italian>Qalaat</Italian>
+		<Spanish>Qalaat</Spanish>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CELTIC_MENHIR</Tag>
 		<English>Menhir</English>
 		<French>Menhir</French>

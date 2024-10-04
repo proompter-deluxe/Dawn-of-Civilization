@@ -1137,4 +1137,20 @@
 		<Italian>5X oro ottenuto dai saccheggi</Italian>
 		<Spanish>Se obtiene oro x5 del pillaje</Spanish>
 	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UP_MAM_TITLE</Tag>
+		<English>The Power of Slave Soldiers:</English>
+		<French>The Power of Slave Soldiers:</French>
+		<German>The Power of Slave Soldiers:</German>
+		<Italian>The Power of Slave Soldiers:</Italian>
+		<Spanish>The Power of Slave Soldiers:</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UP_MAM</Tag>
+		<English>All land units start with Combat I promotion, but have increased upkeep</English>
+		<French>All land units start with Combat I promotion, but have increased upkeep</French>
+		<German>All land units start with Combat I promotion, but have increased upkeep</German>
+		<Italian>All land units start with Combat I promotion, but have increased upkeep</Italian>
+		<Spanish>All land units start with Combat I promotion, but have increased upkeep</Spanish>
+	</TEXT>
 </Civ4GameText>

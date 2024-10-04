@@ -523,6 +523,30 @@
 		</Spanish>
 	</TEXT>
 	<TEXT>
+		<Tag>ARAB_REPUBLIC_OF</Tag>
+		<English>Arab Republic of %s1</English>
+		<French>
+			<Text>R&#233;publique arabe d'%s1</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Arabische Republik %s1:Arabische Republik %s1:Arabischen Republik %s1</Text>
+			<Gender>Female:Female:Female</Gender>
+			<Plural>0:0:0</Plural>
+		</German>
+		<Italian>
+			<Text>Repubblica Araba d'%s1</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Rep&#250;blica Araba de %s1</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_ISLAMIC_REPUBLIC_ADJECTIVE</Tag>
 		<English>%s2 Islamic Republic</English>
 		<French>

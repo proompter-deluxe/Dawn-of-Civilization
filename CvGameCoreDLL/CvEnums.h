@@ -1209,6 +1209,7 @@ enum CivilizationTypes		// Exposed to Python
 	KUSHANS,
 	MALAYS,
 	MALI,
+	MAMLUKS,
 	MAYA,
 	MEXICO,
 	MONGOLS,
@@ -1258,8 +1259,6 @@ enum LeaderHeadTypes			// Exposed to Python
 
 	RAMESSES,
 	HATSHEPSUT,
-	BAIBARS,
-	NASSER,
 
 	GILGAMESH,
 	HAMMURABI,
@@ -1348,7 +1347,10 @@ enum LeaderHeadTypes			// Exposed to Python
 	TAMERLANE,
 
 	HARUN,
+	
 	SALADIN,
+	BAIBARS,
+	NASSER,
 
 	SONGTSEN,
 	LOBSANG_GYATSO,
