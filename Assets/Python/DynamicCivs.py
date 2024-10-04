@@ -975,6 +975,10 @@ def specificName(iPlayer):
 			if iEra == iRenaissance:
 				return "TXT_KEY_CIV_CHINA_MING"
 	
+	elif iCiv == iMamluks:
+		if not bMonarchy or bResurrected or iEra >= iIndustrial:
+			return "TXT_KEY_CIV_MISR_SHORT_DESC_MODERN"
+
 	elif iCiv == iNubia:
 		if iEra <= iClassical:
 			return "TXT_KEY_CIV_NUBIA_KUSH"
@@ -1598,12 +1602,20 @@ def islamicTitle(iPlayer):
 		return
 
 	if iReligion == iIslam:
-		if bTheocracy:
-			return "TXT_KEY_CALIPHATE_OF"
-		if bEmpire:
-			return "TXT_KEY_SULTANATE_OF"
+		if iCiv in [iSwahili, iAssyria]:
+			if bTheocracy:
+				return "TXT_KEY_CALIPHATE_ADJECTIVE"
+			if bEmpire:
+				return "TXT_KEY_SULTANATE_ADJECTIVE"
+			else:
+				return "TXT_KEY_EMIRATE_ADJECTIVE"
 		else:
-			return "TXT_KEY_EMIRATE_OF"
+			if bTheocracy:
+				return "TXT_KEY_CALIPHATE_OF"
+			if bEmpire:
+				return "TXT_KEY_SULTANATE_OF"
+			else:
+				return "TXT_KEY_EMIRATE_OF"
 
 def vassalTitle(iPlayer, iMaster):
 	iMasterCiv = civ(iMaster)
@@ -1629,9 +1641,6 @@ def vassalTitle(iPlayer, iMaster):
 	if iMasterCiv == iEngland and iCiv == iMughals:
 		if not player(iIndia).isExisting():
 			return dSpecificVassalTitles[iEngland][iIndia]
-	
-	if iMasterCiv == iEgypt and player(iMasterCiv).getStateReligion() == iIslam:
-		return dMasterTitles[iArabia]
 
 	sSpecificTitle = dSpecificVassalTitles[iMasterCiv].get(iCiv)
 	if sSpecificTitle: return sSpecificTitle
@@ -2107,16 +2116,8 @@ def specificTitle(iPlayer, lPreviousOwners=[]):
 				
 			return "TXT_KEY_SULTANATE_ADJECTIVE"
 			
-	if bEmpire:
-		return "TXT_KEY_EMPIRE_ADJECTIVE"
-	elif iCiv == iSwahili:
-		if iReligion == iIslam:
-			if bTheocracy:
-				return "TXT_KEY_CALIPHATE_ADJECTIVE"
-			if bEmpire:
-				return "TXT_KEY_SULTANATE_ADJECTIVE"
-			else:
-				return "TXT_KEY_EMIRATE_ADJECTIVE"
+		if bEmpire:
+			return "TXT_KEY_EMPIRE_ADJECTIVE"
 
 	elif iCiv == iThailand:
 		if iEra >= iIndustrial and bEmpire:
