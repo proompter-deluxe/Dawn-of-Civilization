@@ -7,7 +7,7 @@ BeginGame
 	GameTurn=0
 	StartYear=-3000
 	Description=TXT_KEY_RHYES_WB_DESC
-	ModPath=Mods\RFC Dawn of Civilization Cross Overhaul
+	ModPath=Mods\DoC-Cross-Overhaul
 EndGame
 
 BeginMap
