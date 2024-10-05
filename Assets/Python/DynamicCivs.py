@@ -1251,7 +1251,7 @@ def specificAdjective(iPlayer):
 			if tPlayer.isHasTech(iGunpowder):
 				return "TXT_KEY_CIV_MISR_MAMLUK"
 	
-			if player(iArabia).isExisting():
+			if player(iArabia).isExisting() and data.civs[iArabia].iResurrections == 0:
 				return "TXT_KEY_CIV_MISR_FATIMID"
 		
 			return "TXT_KEY_CIV_MISR_AYYUBID"
@@ -1603,7 +1603,7 @@ def islamicTitle(iPlayer):
 		return
 
 	if iReligion == iIslam:
-		if iCiv in [iSwahili, iAssyria, iMamluks]:
+		if iCiv in [iSwahili, iAssyria, iMamluks, iArabia, iMughals]:
 			if bTheocracy:
 				return "TXT_KEY_CALIPHATE_ADJECTIVE"
 			if bEmpire:
@@ -2077,11 +2077,6 @@ def specificTitle(iPlayer, lPreviousOwners=[]):
 		if bResurrected:
 			if bEmpire:
 				return "TXT_KEY_EMPIRE_OF"
-				
-			return "TXT_KEY_SULTANATE_OF"
-	
-		if not bEmpire and not tPlayer.isHasTech(iFirearms):
-			return "TXT_KEY_SULTANATE_OF"
 		
 	elif iCiv == iRussia:
 		if bEmpire and iEra >= iRenaissance:
