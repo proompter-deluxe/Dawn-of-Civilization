@@ -1,4 +1,6 @@
-﻿RFC Dawn of Civilization Cross Overhaul
+﻿Old, obsolete document (at the moment)
+
+RFC Dawn of Civilization
 Complete List of Features (as of version 1.17)
 
 The modmod is based on RFC Epic/Marathon 1.21 and therefore includes all features of RFC v1.187 for BtS unless otherwise noted.

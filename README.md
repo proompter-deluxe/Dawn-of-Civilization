@@ -1,8 +1,10 @@
-# Dawn of Civilization
+# Dawn of Civilization Cross Overhaul
 
-The Dawn of Civilization mod for Civilization IV: Beyond the Sword, based on the popular Rhye's and Fall of Civilization mod.
+The Dawn of Civilization: "Cross Overhaul" mod for Civilization IV: Beyond the Sword, based on the popular Rhye's and Fall of Civilization mod.
 
 ## Overview
+
+This is a submod of RFC Dawn of Civilization, adding new civilizations and an overhaul of spawn dates, barbarians, minors, conquerors and many more features.
 
 Rhye's and Fall of Civilization is one of the most popular mods for Civilization IV: Beyond the Sword. 
 Rhye's and Fall intends to turn Civilization into a history simulator: the game is played on a realistic map of the world, civilizations start at historically accurate dates, the AI is encouraged to behave historically, and players can win the games by completing their historical victory.
@@ -17,7 +19,7 @@ For more information, you can also go to the [main thread on the development for
 
 ## Installation
 
-If you just want to play, you only need to clone this repo into your mod folder (Beyond the Sword/Mods/) and rename it to "RFC Dawn of Civilization Cross Overhaul".
+If you just want to play, you only need to clone this repo into your mod folder (Beyond the Sword/Mods/) and rename it to "DoC-Cross-Overhaul".
 
 ## Main Features
 
