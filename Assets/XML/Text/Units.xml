@@ -1470,6 +1470,18 @@
 		<Spanish>[COLOR_UNIT_TEXT]Religious Persecutors[COLOR_REVERT] can remove non-state religions from a city.</Spanish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_UNIT_ROMAN_WORKER</Tag>
+		<English>Roman Worker</English>
+		<French>
+			<Text>Ouvrier romain</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>Roman Worker</German>
+		<Italian>Roman Worker</Italian>
+		<Spanish>Roman Worker</Spanish>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_UNIT_PHOENICIAN_BIREME</Tag>
 		<English>Bireme</English>
 		<French>Bir&#232;me</French>

@@ -5772,6 +5772,10 @@
 					<UnitClassType>UNITCLASS_CATAPULT</UnitClassType>
 					<UnitType>UNIT_ROMAN_BALLISTA</UnitType>
 				</Unit>
+				<Unit>
+					<UnitClassType>UNITCLASS_WORKER</UnitClassType>
+					<UnitType>UNIT_ROMAN_WORKER</UnitType>
+				</Unit>
 			</Units>
 			<FreeUnitClasses>
 				<FreeUnitClass>
