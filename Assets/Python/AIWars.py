@@ -408,6 +408,15 @@ def spawnConquerors(iPlayer, iPreferredTarget, tTL, tBR, iNumTargets, iWarPlan =
 			makeUnits(iPlayer, iHoplite, tPlot, 3, UnitAITypes.UNITAI_ATTACK_CITY)
 			makeUnits(iPlayer, iCompanion, tPlot, 3, UnitAITypes.UNITAI_ATTACK_CITY)
 			makeUnits(iPlayer, iArcher, tPlot, 1)
+		elif iCiv in [iSpain, iEngland, iHolyRome, iFrance, iPoland, iPortugal, iItaly, iNorse, iRus, iRussia, iSweden]:
+			dConquestUnits = {
+				iCityAttack: 1 + iExtra,
+				iCitySiege: 2 + iExtra,
+				iDefend: 1,
+				iShockCity: 1 + iExtra,
+				iCounter: 1 + iExtra,
+			}
+			createRoleUnits(iPlayer, tPlot, dConquestUnits.items())
 		else:
 			dConquestUnits = {
 				iCityAttack: 2 + iExtra,
@@ -415,13 +424,9 @@ def spawnConquerors(iPlayer, iPreferredTarget, tTL, tBR, iNumTargets, iWarPlan =
 				iDefend: 1,
 			}
 			createRoleUnits(iPlayer, tPlot, dConquestUnits.items())
-
-		if iCiv in [iSpain, iEngland, iHolyRome, iFrance, iPoland, iPortugal, iItaly, iNorse, iRus, iRussia, iSweden]:
-			createRoleUnit(iPlayer, tPlot, iShockCity, 2)
-			createRoleUnit(iPlayer, tPlot, iCounter, 2)
-			
-		if iCiv in [iTurks, iMongols]:
-			createRoleUnit(iPlayer, tPlot, iShockCity, 2)
+	
+			if iCiv in [iTurks, iMongols]:
+				createRoleUnit(iPlayer, tPlot, iShockCity, 2)
 
 
 def declareWar(iPlayer, iTarget, iWarPlan):

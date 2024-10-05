@@ -4068,6 +4068,10 @@
 					<UnitClassType>UNITCLASS_LANCER</UnitClassType>
 					<UnitType>UNIT_MAMLUK_CAVALRY</UnitType>
 				</Unit>
+				<Unit>
+					<UnitClassType>UNITCLASS_CROSSBOWMAN</UnitClassType>
+					<UnitType>UNIT_MAMLUK_NAFFATUN</UnitType>
+				</Unit>
 			</Units>
 			<FreeUnitClasses>
 				<FreeUnitClass>

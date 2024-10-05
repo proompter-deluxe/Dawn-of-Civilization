@@ -1603,7 +1603,7 @@ def islamicTitle(iPlayer):
 		return
 
 	if iReligion == iIslam:
-		if iCiv in [iSwahili, iAssyria]:
+		if iCiv in [iSwahili, iAssyria, iMamluks]:
 			if bTheocracy:
 				return "TXT_KEY_CALIPHATE_ADJECTIVE"
 			if bEmpire:

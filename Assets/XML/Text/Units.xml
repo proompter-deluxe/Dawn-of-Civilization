@@ -3632,6 +3632,18 @@
 		<Spanish>Mamluk Cavalry</Spanish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_UNIT_MAMLUK_NAFFATUN</Tag>
+		<English>Naffatun</English>
+		<French>
+			<Text>Naffatun</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>Naffatun</German>
+		<Italian>Naffatun</Italian>
+		<Spanish>Naffatun</Spanish>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_UNIT_</Tag>
 		<English></English>
 		<French></French>
