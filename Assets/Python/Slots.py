@@ -93,21 +93,10 @@ def getImpact(iCiv):
 def isOutdated(iCiv):
 	if year() < year(dFall[iCiv]):
 		return False
-
-	lResurrections = dResurrections[iCiv]
-	if not lResurrections:
-		return True
 	
-	iFirstResurrectionStart = lResurrections[0][0]
-	iLastResurrectionEnd = lResurrections[-1][1]
-		
-	if iLastResurrectionEnd < 2020:
+	# give an extra 100 year window after resurrection for relevance
+	if any(year().between(iStart, iEnd + 100) for iStart, iEnd in dResurrections[iCiv]):
 		return True
-		
-	if iFirstResurrectionStart > dFall[iCiv]:
-		return True
-	
-	return False
 
 def getNextBirth():
 	lUpcomingCivs = [iCiv for iCiv, iYear in dBirth.items() if turn() < year(iYear) - turns(5)]

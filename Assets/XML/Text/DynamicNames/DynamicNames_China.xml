@@ -3,9 +3,9 @@
 <Civ4GameText xmlns="http://www.firaxis.com">
 	<TEXT>
 		<Tag>TXT_KEY_CIV_CHINA_DESC</Tag>
-		<English>The Chinese</English>
+		<English>The Yellow River Chinese</English>
 		<French>
-			<Text>Les Chinois</Text>
+			<Text>Les Chinois du fleuve Jaune</Text>
 			<Gender>Male</Gender>
 			<Plural>1</Plural>
 		</French>
@@ -27,9 +27,9 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIV_CHINA_PEOPLES</Tag>
-		<English>Han Peoples</English>
+		<English>Yellow River Peoples</English>
 		<French>
-			<Text>Peuplades Han</Text>
+			<Text>Peuplades du fleuve Jaune</Text>
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
@@ -51,15 +51,27 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIV_CHINA_DEFAULT</Tag>
-		<English>Middle Kingdom of %s1</English>
+		<English>Kingdom of %s1</English>
 		<French>
-			<Text>Empire du Milieu</Text>
+			<Text>Royaume de %s1</Text>
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>Middle Kingdom of %s1</German>
-		<Italian>Middle Kingdom of %s1</Italian>
-		<Spanish>Middle Kingdom of %s1</Spanish>
+		<German>
+			<Text>K&#246;nigreich %s1:K&#246;nigreich %s1:K&#246;nigreich %s1</Text>
+			<Gender>Neuter:Neuter:Neuter</Gender>
+			<Plural>0:0:0</Plural>
+		</German>
+		<Italian>
+			<Text>Regno del %s1</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Reino de %s1</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIV_CHINA_FASCIST</Tag>
@@ -108,6 +120,22 @@
 		<German>Qin</German>
 		<Italian>Qin</Italian>
 		<Spanish>Qin</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_CHINA_WEI</Tag>
+		<English>Wei</English>
+		<French>Wei</French>
+		<German>Wei</German>
+		<Italian>Wei</Italian>
+		<Spanish>Wei</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_CHINA_WEI_KINGDOM</Tag>
+		<English>Kingdom of Wei</English>
+		<French>Kingdom of Wei</French>
+		<German>Kingdom of Wei</German>
+		<Italian>Kingdom of Wei</Italian>
+		<Spanish>Kingdom of Wei</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIV_CHINA_SUI</Tag>
@@ -216,6 +244,22 @@
 		<German>Haixi</German>
 		<Italian>Haixi</Italian>
 		<Spanish>Haixi</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_CHINA_SOUTH_VASSAL_OF_NORTH</Tag>
+		<English>Southern Commanderies</English>
+		<French>Southern Commanderies</French>
+		<German>Southern Commanderies</German>
+		<Italian>Southern Commanderies</Italian>
+		<Spanish>Southern Commanderies</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_CHINA_NORTH_VASSAL_OF_SOUTH</Tag>
+		<English>Northern Commanderies</English>
+		<French>Northern Commanderies</French>
+		<German>Northern Commanderies</German>
+		<Italian>Northern Commanderies</Italian>
+		<Spanish>Northern Commanderies</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIV_CHINESE_ADJECTIVE_INDIA</Tag>

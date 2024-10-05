@@ -623,6 +623,30 @@
 			<BackgroundKFM>Art/Leaderheads/Hongwu/Tachnechobrus_Background.kfm</BackgroundKFM>
 		</LeaderheadArtInfo>
 		<LeaderheadArtInfo>
+			<Type>ART_DEF_LEADER_SUN_QUAN</Type>
+			<Button>Art/Leaderheads/Sun_Quan_aka_Yu/Yu.dds</Button>
+			<NIF>Art/Leaderheads/Sun_Quan_aka_Yu/yu.nif</NIF>
+			<KFM>Art/Leaderheads/Sun_Quan_aka_Yu/wang_kon.kfm</KFM>
+			<NoShaderNIF>Art/Leaderheads/Sun_Quan_aka_Yu/yu.nif</NoShaderNIF>
+			<BackgroundKFM>Art/Leaderheads/Sun_Quan_aka_Yu/Wang_Kon_BG.kfm</BackgroundKFM>
+		</LeaderheadArtInfo>
+		<LeaderheadArtInfo>
+			<Type>ART_DEF_LEADER_GAOZONG</Type>
+			<Button>Art/Leaderheads/Song_Gaozong/gaozong_btn.dds</Button>
+			<NIF>Art/Leaderheads/Song_Gaozong/qin_shi_huang.nif</NIF>
+			<KFM>Art/Leaderheads/Song_Gaozong/qin_shi_huang.kfm</KFM>
+			<NoShaderNIF>Art/Leaderheads/Song_Gaozong/qin_shi_huang.nif</NoShaderNIF>
+			<BackgroundKFM>Art/Leaderheads/Song_Gaozong/Tachnechobrus_Background.kfm</BackgroundKFM>
+		</LeaderheadArtInfo>
+		<LeaderheadArtInfo>
+			<Type>ART_DEF_LEADER_CHIANG_KAISHEK</Type>
+			<Button>Art/Leaderheads/Chiang_Kai_shek/Chiang_BT.dds</Button>
+			<NIF>Art/Leaderheads/Chiang_Kai_shek/Chiang.nif</NIF>
+			<KFM>Art/Leaderheads/Chiang_Kai_shek/Tachnechobrus.kfm</KFM>
+			<NoShaderNIF>Art/Leaderheads/Chiang_Kai_shek/Tachnechobrus_Background.nif</NoShaderNIF>
+			<BackgroundKFM>Art/Leaderheads/Chiang_Kai_shek/Tachnechobrus_Background.kfm</BackgroundKFM>
+		</LeaderheadArtInfo>
+		<LeaderheadArtInfo>
 			<Type>ART_DEF_LEADER_HAYAW_WURUK</Type>
 			<Button>Art/leaderheads/HayamWuruk/hayam_btn.dds</Button>
 			<NIF>art/leaderheads/HayamWuruk/HayamWuruk.nif</NIF>
@@ -1117,6 +1141,22 @@
 			<KFM>Art/Leaderheads/Christian/Peter.kfm</KFM>
 			<NoShaderNIF>Art/Leaderheads/Christian/Peter.nif</NoShaderNIF>
 			<BackgroundKFM>Art/leaderheads/Christian/charles de gaulle_bg.kfm</BackgroundKFM>
+		</LeaderheadArtInfo>
+		<LeaderheadArtInfo>
+			<Type>ART_DEF_LEADER_ABU_FARIS</Type>
+			<Button>Art/Leaderheads/osman_as_abu_faris/osman.dds</Button>
+			<NIF>Art/Leaderheads/osman_as_abu_faris/Stuyvesant.nif</NIF>
+			<KFM>Art/Leaderheads/osman_as_abu_faris/Stuyvesant.kfm</KFM>
+			<NoShaderNIF>Art/Leaderheads/osman_as_abu_faris/Stuyvesant.nif</NoShaderNIF>
+			<BackgroundKFM>Art/leaderheads/osman_as_abu_faris/louis_xiv_bg.kfm</BackgroundKFM>
+		</LeaderheadArtInfo>
+		<LeaderheadArtInfo>
+			<Type>ART_DEF_LEADER_SIMEON</Type>
+			<Button>Art/Leaderheads/Simeon_I/btn_lh_bulgaria_simeon.dds</Button>
+			<NIF>Art/Leaderheads/Simeon_I/putin.nif</NIF>
+			<KFM>Art/Leaderheads/Simeon_I/putin.kfm</KFM>
+			<NoShaderNIF>Art/Leaderheads/Simeon_I/putin.nif</NoShaderNIF>
+			<BackgroundKFM>Art/Leaderheads/Simeon_I/putin_bg.kfm</BackgroundKFM>
 		</LeaderheadArtInfo>
 	</LeaderheadArtInfos>
 </Civ4ArtDefines>

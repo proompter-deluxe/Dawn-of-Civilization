@@ -382,7 +382,7 @@ def getColonialTargets(iPlayer, bEmpty=False):
 	
 	return targetCities
 	
-# used: History
+# used: History --> not used anymore
 def getBorderPlots(iPlayer, tTL, tBR, iDirection = DirectionTypes.NO_DIRECTION, iNumPlots = 1):
 	dMetrics = {
 		DirectionTypes.NO_DIRECTION : lambda plot: 0,
@@ -726,8 +726,11 @@ def canRespawn(iCiv):
 	if player(iCiv).isAlive():
 		return False
 		
-	# check if only recently died
-	if data.civs[iCiv].iLastTurnAlive > turn() - turns(20):
+	# check if only recently died, excepting Persia as an emirate respawn
+	if iCiv == iPersia and year().between(870, 1000):
+		if data.civs[iCiv].iLastTurnAlive > turn() - turns(5):
+			return False
+	elif data.civs[iCiv].iLastTurnAlive > turn() - turns(20):
 		return False
 	
 	# check if the civ can be reborn at this date
@@ -753,6 +756,9 @@ def canRespawn(iCiv):
 	# Mexico cannot respawn if Aztecs are alive and vice versa
 	if exclusive(iCiv, iAztecs, iMexico):
 		return False
+
+	if exclusive(iCiv, iEgypt, iMamluks):
+		return False
 	
 	# India cannot respawn when Mughals are alive (not vice versa -> Pakistan)
 	if iCiv == iIndia and player(iMughals).isAlive():
@@ -760,7 +766,7 @@ def canRespawn(iCiv):
 	
 	# Exception during Japanese UHV
 	if player(iJapan).isHuman() and year().between(1920, 1945):
-		if iCiv in [iChina, iKorea, iMalays, iJava, iThailand]:
+		if iCiv in [iChina, iChinaS, iKorea, iMalays, iJava, iThailand]:
 			return False
 			
 	return True
@@ -831,7 +837,7 @@ def toggleStabilityOverlay(iPlayer = -1):
 
 	bDebug = game.isDebugMode()
 
-	othercivs = civs.major().without(iPlayer).where(lambda iCiv: player(iCiv).isAlive() or canEverRespawn(iCiv))
+	# othercivs = civs.major().without(iPlayer).where(lambda iCiv: player(iCiv).isAlive() or canEverRespawn(iCiv))
 
 	# apply the highlight
 	for plot in plots.all().land():
@@ -1069,11 +1075,12 @@ def getPrevalentReligion(area, iStateReligionPlayer=None):
 	return -1
 
 # used: DynamicCivs, Periods
+# simplified: this is a simple string check
+# just make sure the names correspond to the names given by the civ...
 def isCurrentCapital(iPlayer, *names):
 	capital = player(iPlayer).getCapitalCity()
 	if not capital: return False
-	
-	return any(location(capital) in data.dCapitalLocations[name] for name in names)
+	return any(capital.getName() == name for name in names)
 
 # used: Rise, Scenarios
 def convertSurroundingPlotCulture(iPlayer, plots):

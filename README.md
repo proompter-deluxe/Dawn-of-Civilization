@@ -17,11 +17,7 @@ For more information, you can also go to the [main thread on the development for
 
 ## Installation
 
-If you just want to play, you only need to clone this repo into your mod folder (Beyond the Sword/Mods/) and rename it to "RFC Dawn of Civilization".
-
-Alternate ways to get the mod:
-* [Installer for DoC including Modules](https://sourceforge.net/projects/dawnofciv/files/Install%20Dawn%20of%20Civilization.exe/download)
-* [Installer for DoC without Modules](https://sourceforge.net/projects/dawnofciv/files/Install%20Dawn%20of%20Civilization%20Core.exe/download)
+If you just want to play, you only need to clone this repo into your mod folder (Beyond the Sword/Mods/) and rename it to "RFC Dawn of Civilization Cross Overhaul".
 
 ## Main Features
 

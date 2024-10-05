@@ -8,7 +8,7 @@ import os
 
 EXPORT_MAPS_PATH = "Assets/Maps"
 
-IMAGE_LOCATION = os.getcwd() + "\Mods\\RFC Dawn of Civilization\\Export"
+IMAGE_LOCATION = os.getcwd() + "\Mods\\RFC Dawn of Civilization Cross Overhaul\\Export"
 iLongestName = len("Netherlands") #Netherlands currently has the longest civ name
 
 gc = CyGlobalContext()

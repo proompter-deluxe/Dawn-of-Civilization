@@ -41,4 +41,12 @@
 		<Italian>%s2 Empire</Italian>
 		<Spanish>%s2 Empire</Spanish>
 	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_ASSYRIA_HAMDANID</Tag>
+		<English>Hamdanid</English>
+		<French>Hamdanid</French>
+		<German>Hamdanid</German>
+		<Italian>Hamdanid</Italian>
+		<Spanish>Hamdanid</Spanish>
+	</TEXT>
 </Civ4GameText>

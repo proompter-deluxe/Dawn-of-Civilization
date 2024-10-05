@@ -31,19 +31,23 @@ def checkResurrection():
 		
 		# civs entirely controlled by minors will always respawn
 		for iCiv in possibleResurrections:
+			if not isResurrectionPossible():
+				return
 			if cities.respawn(iCiv).all(is_minor):
 				resurrectionCities = getResurrectionCities(iCiv)
 				if canResurrectFromCities(iCiv, resurrectionCities):
 					doResurrection(iCiv, resurrectionCities)
-					return
+					# return # let's not limit it to 1. If it's possible, it's possible!
 					
 		# otherwise minimum amount of cities and random chance are required
 		for iCiv in possibleResurrections:
+			if not isResurrectionPossible():
+				return
 			if rand(100) - iNationalismModifier + 10 < dResurrectionProbability[iCiv]:
 				resurrectionCities = getResurrectionCities(iCiv)
 				if canResurrectFromCities(iCiv, resurrectionCities):
 					doResurrection(iCiv, resurrectionCities)
-					return
+					# return # let's not limit it to 1. If it's possible, it's possible!
 
 
 @handler("releasedCivilization")
@@ -150,7 +154,7 @@ def canResurrectFromCities(iCiv, resurrectionCities):
 def doResurrection(iCiv, lCityList, bAskFlip=True, bDisplay=False):
 	iPlayer = findSlot(iCiv)
 	if iPlayer == -1:
-		log.rise("RESURRECTION ABORTED: NO FREE SLOT FOR: %s", infos.civ(iCiv).getText())
+		message(active(), "RESURRECTION ABORTED: NO FREE SLOT FOR: %s", infos.civ(iCiv).getText(), color=iRed, force=True)
 		return
 
 	updateCivilization(iPlayer, iCiv)

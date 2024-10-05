@@ -5,6 +5,8 @@ from Locations import *
 
 from Events import handler
 
+# THIS FILE HAS BEEN MADE OBSOLETE
+# I will delete this file when all the names have been transferred over
 
 iNumLanguages = 41
 (iLangEgyptian, iLangEgyptianArabic, iLangIndian, iLangChinese, iLangTibetan, 
@@ -22,6 +24,7 @@ iEgypt : [iLangEgyptian],
 iBabylonia : [iLangBabylonian],
 iHarappa : [iLangHarappan, iLangIndian],
 iChina : [iLangChinese],
+iChinaS : [iLangChinese],
 iGreece : [iLangGreek],
 iIndia : [iLangIndian],
 iPhoenicia : [iLangPhoenician],
@@ -35,7 +38,7 @@ iKorea : [iLangKorean, iLangChinese],
 iByzantium : [iLangByzantine, iLangLatin],
 iJapan : [iLangJapanese],
 iNorse : [iLangNorse],
-iTurks : [iLangTurkish, iLangArabian, iLangPersian],
+iTurks : [iLangTurkish, iLangFarsi, iLangArabian],
 iArabia : [iLangArabian],
 iTibet : [iLangTibetan, iLangChinese],
 iKhmer : [iLangKhmer, iLangIndonesian],
@@ -51,12 +54,12 @@ iInca : [iLangQuechua],
 iItaly : [iLangItalian],
 iMongols : [iLangMongolian, iLangTurkish, iLangChinese],
 iAztecs : [iLangAztec, iLangMayan],
-iMughals : [iLangPersian, iLangArabian, iLangIndian],
+iMughals : [iLangFarsi, iLangArabian, iLangIndian],
 iRussia : [iLangRussian],
 iOttomans : [iLangTurkish, iLangArabian],
 iThailand : [iLangThai, iLangKhmer, iLangIndonesian],
 iCongo : [iLangCongolese],
-iIran : [iLangArabian, iLangPersian],
+iIran : [iLangFarsi, iLangArabian, iLangPersian],
 iNetherlands : [iLangDutch],
 iGermany : [iLangPrussian, iLangGerman],
 iAmerica : [iLangAmerican, iLangEnglish],
@@ -87,6 +90,7 @@ dCapitals = {
 	iPoland : ["Kowno", "Medvegalis", "Wilno", "Ryga"],
 	iRussia : ["Moskva", "Kiev"],
 	iNetherlands : ["Brussels", "Antwerpen"], # TODO: no matches for Brussels
+	iPhoenicia: ["Qart-Hadasht"]
 }
 
 
@@ -119,9 +123,6 @@ def isResurrected(iPlayer):
 	return data.civs[iPlayer].iResurrections > 0
 
 def getLanguages(iCiv):
-	if iCiv == iEgypt and player(iCiv).getStateReligion() == iIslam:
-		return [iLangEgyptianArabic, iLangArabian]
-		
 	iPeriod = player(iCiv).getPeriod()
 	if (iCiv, iPeriod) in dPeriodLanguages:
 		return dPeriodLanguages[(iCiv, iPeriod)]
@@ -379,9 +380,6 @@ def onRevolution(iPlayer):
 		applyCommunistNames(iPlayer)
 	else:
 		revertCommunistNames(iPlayer)
-
-	if civ(iPlayer) == iEgypt:
-		updateCityNames(iPlayer)
 	
 
 #@handler("greatPersonBorn")
@@ -3825,6 +3823,7 @@ tRenames = (
 	"Winchester"	:	"Winchester",
 	"Winnipeg"		:	"Winnipeg",
 	"York"			:	"York",
+	"Qart-Hadasht"	:	"Carthage",
 },
 #Language: German
 {

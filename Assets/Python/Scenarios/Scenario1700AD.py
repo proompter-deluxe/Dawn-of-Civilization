@@ -284,8 +284,8 @@ scenario1700AD = Scenario(
 			lSeaAreas=[((79, 23), (97, 32))],
 		),
 		iCivGroupMiddleEast: Revealed(
-			lLandRegions=lMiddleEast + lIndia + lNorthAfrica + [rSahel, rSahara, rEthiopia, rHornOfAfrica, rSwahiliCoast, rIberia, rItaly, rBalkans],
-			lCoastRegions=lEastAsia + lCentralAmerica + [rCape, rBritain, rIreland, rFrance, rLowerGermany, rScandinavia, rPonticSteppe, rAtlanticSeaboard, rMaritimes, rDeepSouth, rBrazil],
+			lLandRegions=lMiddleEast + lIndia + lNorthAfrica + [rSahel, rSahara, rEthiopia, rHornOfAfrica, rSwahiliCoast, rIberia, rItaly, rBalkans, rPonticSteppe],
+			lCoastRegions=lEastAsia + lCentralAmerica + [rCape, rBritain, rIreland, rFrance, rLowerGermany, rDenmark, rNorway, rSweden, rCrimea, rAtlanticSeaboard, rMaritimes, rDeepSouth, rBrazil],
 			lSeaAreas=[((79, 23), (97, 32))],
 		),
 		iCivGroupAfrica: Revealed(

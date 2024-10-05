@@ -13,3 +13,9 @@ UpgradeLog.XML
 *.opensdf
 *.sdf
 *.suo
+Assets/Maps/Settler/.~lock.*.csv\#
+Assets/Maps/Settler/Period/.~lock.*.csv\#
+Assets/Maps/War/.~lock.*.csv\#
+Assets/Maps/War/Period/.~lock.*.csv\#
+RFC Dawn of Civilization Cross Overhaul.ini.bak
+*.csv#

@@ -5914,7 +5914,7 @@ int CvPlot::determineVariety(FeatureTypes eFeature) const
 			{
 				return 2; // snowy
 			}
-			else if (getRegionID() == REGION_SCANDINAVIA)
+			else if (getRegionID() == REGION_NORWAY || getRegionID() == REGION_SWEDEN)
 			{
 				if (getLatitude() >= 78)
 				{
@@ -5939,7 +5939,9 @@ int CvPlot::determineVariety(FeatureTypes eFeature) const
 				return 4; // hybrid
 			case REGION_POLAND:
 			case REGION_BALTICS:
-			case REGION_SCANDINAVIA:
+			case REGION_DENMARK:
+			case REGION_SWEDEN:
+			case REGION_NORWAY:
 			case REGION_RUTHENIA:
 			case REGION_URALS:
 			case REGION_MANCHURIA:
@@ -12123,9 +12125,12 @@ int CvPlot::getRegionGroup() const
 	case REGION_GREECE:
 	case REGION_POLAND:
 	case REGION_BALTICS:
-	case REGION_SCANDINAVIA:
+	case REGION_DENMARK:
+	case REGION_SWEDEN:
+	case REGION_NORWAY:	
 	case REGION_RUTHENIA:
 	case REGION_PONTIC_STEPPE:
+	case REGION_CRIMEA:
 	case REGION_URALS:
 		return REGION_GROUP_EUROPE;
 	case REGION_ANATOLIA:

@@ -38,6 +38,18 @@
 		<Spanish>Esmpire of %s1</Spanish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_EMPIRE_OF_ADJECTIVE</Tag>
+		<English>Empire of %s2</English>
+		<French>
+			<Text>Empire de %s2</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>Empire of %s2</German>
+		<Italian>Empire of %s2</Italian>
+		<Spanish>Esmpire of %s2</Spanish>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_EMPIRE_ADJECTIVE</Tag>
 		<English>%s2 Empire</English>
 		<French>
@@ -81,6 +93,30 @@
 		</Italian>
 		<Spanish>
 			<Text>Reino de %s1</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_KINGDOM_OF_ADJECTIVE</Tag>
+		<English>Kingdom of %s2</English>
+		<French>
+			<Text>Royaume de %s2</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>K&#246;nigreich %s2:K&#246;nigreich %s2:K&#246;nigreich %s2</Text>
+			<Gender>Neuter:Neuter:Neuter</Gender>
+			<Plural>0:0:0</Plural>
+		</German>
+		<Italian>
+			<Text>Regno del %s2</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Reino de %s2</Text>
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</Spanish>
@@ -359,6 +395,54 @@
 		</Spanish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_EMIRATE_OF</Tag>
+		<English>Emirate of %s1</English>
+		<French>
+			<Text>&#201;mirat de %s1</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Emirat von %s1:Emirat von %s1:Emirat von %s1</Text>
+			<Gender>Neuter:Neuter:Neuter</Gender>
+			<Plural>0:0:0</Plural>
+		</German>
+		<Italian>
+			<Text>Emirato di %s1</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Emirato de %s1</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_EMIRATE_ADJECTIVE</Tag>
+		<English>%s2 Emirate</English>
+		<French>
+			<Text>&#201;mirat %s2</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>%s2 Emirat:%s2 Emirat:%s2 Emirat</Text>
+			<Gender>Neuter:Neuter:Neuter</Gender>
+			<Plural>0:0:0</Plural>
+		</German>
+		<Italian>
+			<Text>Emirato %s2</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Emirato %s2</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>	
+	<TEXT>
 		<Tag>TXT_KEY_SULTANATE_ADJECTIVE</Tag>
 		<English>%s2 Sultanate</English>
 		<French>
@@ -434,6 +518,30 @@
 		</Italian>
 		<Spanish>
 			<Text>Rep&#250;blica Isl&#225;mica de %s1</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>ARAB_REPUBLIC_OF</Tag>
+		<English>Arab Republic of %s1</English>
+		<French>
+			<Text>R&#233;publique arabe d'%s1</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Arabische Republik %s1:Arabische Republik %s1:Arabischen Republik %s1</Text>
+			<Gender>Female:Female:Female</Gender>
+			<Plural>0:0:0</Plural>
+		</German>
+		<Italian>
+			<Text>Repubblica Araba d'%s1</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Rep&#250;blica Araba de %s1</Text>
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</Spanish>

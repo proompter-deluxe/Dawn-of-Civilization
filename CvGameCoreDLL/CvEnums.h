@@ -1175,6 +1175,7 @@ enum CivilizationTypes		// Exposed to Python
 	AZTECS,
 	BABYLONIA,
 	BRAZIL,
+	BULGARIA,
 	BURMA,
 	BYZANTIUM, 
 	CANADA,
@@ -1182,6 +1183,7 @@ enum CivilizationTypes		// Exposed to Python
 	CARTHAGE,
 	CELTS,
 	CHINA, 
+	YANGTZE_CHINA,
 	COLOMBIA,
 	DRAVIDIA,
 	EGYPT,
@@ -1207,6 +1209,7 @@ enum CivilizationTypes		// Exposed to Python
 	KUSHANS,
 	MALAYS,
 	MALI,
+	MAMLUKS,
 	MAYA,
 	MEXICO,
 	MONGOLS,
@@ -1256,8 +1259,6 @@ enum LeaderHeadTypes			// Exposed to Python
 
 	RAMESSES,
 	HATSHEPSUT,
-	BAIBARS,
-	NASSER,
 
 	GILGAMESH,
 	HAMMURABI,
@@ -1270,6 +1271,10 @@ enum LeaderHeadTypes			// Exposed to Python
 	TAIZONG,
 	HONGWU,
 	MAO,
+
+	SUN_QUAN,
+	GAOZONG,
+	CHIANG_KAISHEK,
 
 	MURSILI,
 
@@ -1342,10 +1347,15 @@ enum LeaderHeadTypes			// Exposed to Python
 	TAMERLANE,
 
 	HARUN,
+	
 	SALADIN,
+	BAIBARS,
+	NASSER,
 
 	SONGTSEN,
 	LOBSANG_GYATSO,
+
+	SIMEON,
 
 	RAHMAN,
 	YAQUB,

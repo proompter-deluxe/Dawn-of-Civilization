@@ -12252,6 +12252,50 @@ void CvPlayer::applyCivilization(CivilizationTypes eCivilization, int iChange)
 	{
 		GET_TEAM(getTeam()).changeTerrainTradeCount(TERRAIN_DESERT, iChange);
 	}
+
+	// Bulgarian UP: free disengage for all land units
+	if (eCivilization == BULGARIA)
+	{
+		for (int i = 0; i < GC.getNumUnitClassInfos(); i++)
+		{
+			UnitTypes eUnit = (UnitTypes)GC.getUnitClassInfo((UnitClassTypes)i).getDefaultUnitIndex();
+			if (GC.getUnitInfo(eUnit).getCombat() > 0 && GC.getUnitInfo(eUnit).getDomainType() == DOMAIN_LAND)
+			{
+				setFreePromotion((UnitClassTypes)i, PROMOTION_DISENGAGE1, iChange > 0);
+			}
+		}
+
+		int iLoop;
+		for (CvUnit* pLoopUnit = firstUnit(&iLoop); NULL != pLoopUnit; pLoopUnit = nextUnit(&iLoop))
+		{
+			if (pLoopUnit->canFight() && pLoopUnit->getDomainType() == DOMAIN_LAND)
+			{
+				pLoopUnit->setHasPromotion(PROMOTION_DISENGAGE1, iChange > 0);
+			}
+		}
+	}
+
+	// Mamluk UP: free combat I for all land units
+	if (eCivilization == MAMLUKS)
+	{
+		for (int i = 0; i < GC.getNumUnitClassInfos(); i++)
+		{
+			UnitTypes eUnit = (UnitTypes)GC.getUnitClassInfo((UnitClassTypes)i).getDefaultUnitIndex();
+			if (GC.getUnitInfo(eUnit).getCombat() > 0 && GC.getUnitInfo(eUnit).getDomainType() == DOMAIN_LAND)
+			{
+				setFreePromotion((UnitClassTypes)i, PROMOTION_COMBAT1, iChange > 0);
+			}
+		}
+
+		int iLoop;
+		for (CvUnit* pLoopUnit = firstUnit(&iLoop); NULL != pLoopUnit; pLoopUnit = nextUnit(&iLoop))
+		{
+			if (pLoopUnit->canFight() && pLoopUnit->getDomainType() == DOMAIN_LAND)
+			{
+				pLoopUnit->setHasPromotion(PROMOTION_COMBAT1, iChange > 0);
+			}
+		}
+	}
 }
 
 
@@ -24321,6 +24365,7 @@ EraTypes CvPlayer::getSoundtrackEra()
 			switch (getCivilizationType())
 			{
 			case CHINA:
+			case YANGTZE_CHINA:
 			case MONGOLS:
 			case JAPAN:
 			case KOREA:

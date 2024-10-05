@@ -325,7 +325,7 @@ void CvCity::init(int iID, PlayerTypes eOwner, int iX, int iY, bool bBumpUnits, 
 	}
 
 	// Leoreth: Chinese UP: +25% food kept on city growth
-	if (getCivilizationType() == CHINA)
+	if (getCivilizationType() == YANGTZE_CHINA)
 	{
 		changeMaxFoodKeptPercent(25);
 	}
@@ -2399,7 +2399,7 @@ bool CvCity::canConstruct(BuildingTypes eBuilding, bool bContinue, bool bTestVis
 			return false;
 		}
 
-		if (getRegionID() == REGION_SCANDINAVIA)
+		if (getRegionID() == REGION_SWEDEN || getRegionID() == REGION_DENMARK || getRegionID() == REGION_NORWAY)
 		{
 			return false;
 		}
@@ -5116,7 +5116,9 @@ int CvCity::determineArtStyleType() const
 		case REGION_GREECE:
 			return GC.getCivilizationInfo(ROME).getArtStyleType();
 		case REGION_BALTICS:
-		case REGION_SCANDINAVIA:
+		case REGION_DENMARK:
+		case REGION_SWEDEN:
+		case REGION_NORWAY:
 			return GC.getCivilizationInfo(NORSE).getArtStyleType();
 		case REGION_RUTHENIA:
 		case REGION_EUROPEAN_ARCTIC:
@@ -5205,6 +5207,7 @@ int CvCity::determineArtStyleType() const
 		case REGION_AMUR:
 		case REGION_CENTRAL_ASIAN_STEPPE:
 		case REGION_PONTIC_STEPPE:
+		case REGION_CRIMEA:
 			return GC.getCivilizationInfo(MONGOLS).getArtStyleType();
 		}
 		

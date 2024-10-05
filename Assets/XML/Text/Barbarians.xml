@@ -10,6 +10,14 @@
 		<Spanish>Akan</Spanish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_ADJECTIVE_ALMORAVID</Tag>
+		<English>Almoravid</English>
+		<French>Almoravid</French>
+		<German>Almoravid</German>
+		<Italian>Almoravid</Italian>
+		<Spanish>Almoravid</Spanish>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_ADJECTIVE_ARAMEAN</Tag>
 		<English>Aramean</English>
 		<French>Aramean</French>
@@ -282,12 +290,28 @@
 		<Spanish>Gothic</Spanish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_ADJECTIVE_WEI</Tag>
+		<English>Wei</English>
+		<French>Wei</French>
+		<German>Wei</German>
+		<Italian>Wei</Italian>
+		<Spanish>Wei</Spanish>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_ADJECTIVE_HAUSA</Tag>
 		<English>Hausa</English>
 		<French>Hausa</French>
 		<German>Hausa</German>
 		<Italian>Hausa</Italian>
 		<Spanish>Hausa</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_ADJECTIVE_LITHUANIAN</Tag>
+		<English>Lithuanian</English>
+		<French>Lithuanian</French>
+		<German>Lithuanian</German>
+		<Italian>Lithuanian</Italian>
+		<Spanish>Lithuanian</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_ADJECTIVE_HINDI</Tag>
@@ -601,6 +625,14 @@
 		<Italian>Purepecha</Italian>
 		<Spanish>Purepecha</Spanish>
 	</TEXT>
+		<TEXT>
+		<Tag>TXT_KEY_ADJECTIVE_QI</Tag>
+		<English>Qi</English>
+		<French>Qi</French>
+		<German>Qi</German>
+		<Italian>Qi</Italian>
+		<Spanish>Qi</Spanish>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_ADJECTIVE_RAJPUT</Tag>
 		<English>Rajput</English>
@@ -849,6 +881,14 @@
 		<Italian>Wolof</Italian>
 		<Spanish>Wolof</Spanish>
 	</TEXT>
+		<TEXT>
+		<Tag>TXT_KEY_ADJECTIVE_QIANG</Tag>
+		<English>Qiang</English>
+		<French>Qiang</French>
+		<German>Qiang</German>
+		<Italian>Qiang</Italian>
+		<Spanish>Qiang</Spanish>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_ADJECTIVE_XIONGNU</Tag>
 		<English>Xiongnu</English>
@@ -856,6 +896,22 @@
 		<German>Xiongnu</German>
 		<Italian>Xiongnu</Italian>
 		<Spanish>Xiongnu</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_ADJECTIVE_XIANBEI</Tag>
+		<English>Xianbei</English>
+		<French>Xianbei</French>
+		<German>Xianbei</German>
+		<Italian>Xianbei</Italian>
+		<Spanish>Xianbei</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_ADJECTIVE_YELLOW_TURBAN</Tag>
+		<English>Yellow Turban Rebellion</English>
+		<French>Yellow Turban Rebellion</French>
+		<German>Yellow Turban Rebellion</German>
+		<Italian>Yellow Turban Rebellion</Italian>
+		<Spanish>Yellow Turban Rebellion</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_ADJECTIVE_YEMENI</Tag>

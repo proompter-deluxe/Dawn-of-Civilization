@@ -14,6 +14,18 @@
 		<Spanish>Abbas I</Spanish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_LEADER_ABU_FARIS</Tag>
+		<English>Abu Faris Abd al-Aziz II</English>
+		<French>
+			<Text>Abu Faris Abd al-Aziz IIe</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>Abu Faris Abd al-Aziz II</German>
+		<Italian>Abu Faris Abd al-Aziz II</Italian>
+		<Spanish>Abu Faris Abd al-Aziz II</Spanish>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_LEADER_AFONSO</Tag>
 		<English>Afonso Henriques</English>
 		<French>
@@ -866,6 +878,42 @@
 		<Spanish>Tang Taizong</Spanish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_LEADER_SUN_QUAN</Tag>
+		<English>Sun Quan</English>
+		<French>
+			<Text>Sun Quan</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>Sun Quan</German>
+		<Italian>Sun Quan</Italian>
+		<Spanish>Sun Quan</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_LEADER_GAOZONG</Tag>
+		<English>Song Gaozong</English>
+		<French>
+			<Text>Song Gaozong</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>Song Gaozong</German>
+		<Italian>Song Gaozong</Italian>
+		<Spanish>Song Gaozong</Spanish>
+	</TEXT>
+		<TEXT>
+		<Tag>TXT_KEY_LEADER_CHIANG_KAISHEK</Tag>
+		<English>Chiang Kai-shek</English>
+		<French>
+			<Text>Chiang Kai-shek</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>Chiang Kai-shek</German>
+		<Italian>Chiang Kai-shek</Italian>
+		<Spanish>Chiang Kai-shek</Spanish>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_LEADER_ODA_NOBUNAGA</Tag>
 		<English>Oda Nobunaga</English>
 		<French>
@@ -1244,6 +1292,14 @@
 		<German>Christian IV</German>
 		<Italian>Christian IV</Italian>
 		<Spanish>Christian IV</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_LEADER_SIMEON</Tag>
+		<English>Simeon I</English>
+		<French>Simeon I</French>
+		<German>Simeon I</German>
+		<Italian>Simeon I</Italian>
+		<Spanish>Simeon I</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_LEADER_</Tag>

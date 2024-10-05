@@ -8,7 +8,7 @@ BeginGame
 	GameTurn=0
 	StartYear=-3000
 	Description=TXT_KEY_RHYES_WB_DESC
-	ModPath=Mods\RFC Dawn of Civilization
+	ModPath=Mods\RFC Dawn of Civilization Cross Overhaul
 EndGame
 
 BeginMap
@@ -25004,7 +25004,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=56,y=48
-	BonusType=BONUS_WINE
 	TerrainType=TERRAIN_PLAINS
 	PlotType=2
 EndPlot
@@ -25446,6 +25445,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=57,y=48
+	BonusType=BONUS_WINE
 	TerrainType=TERRAIN_PLAINS
 	PlotType=2
 EndPlot
@@ -26456,6 +26456,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=59,y=66
+	BonusType=BONUS_FISH
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -26892,6 +26893,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=60,y=63
+	BonusType=BONUS_FISH
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -26902,7 +26904,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=60,y=65
-	BonusType=BONUS_FISH
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -33664,7 +33665,6 @@ BeginPlot
 	x=75,y=54
 	RiverNSDirection=2
 	isWOfRiver
-	BonusType=BONUS_SHEEP
 	TerrainType=TERRAIN_PLAINS
 	PlotType=2
 EndPlot
@@ -34138,6 +34138,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=76,y=54
+	BonusType=BONUS_SHEEP
 	TerrainType=TERRAIN_PLAINS
 	PlotType=2
 EndPlot
@@ -35085,11 +35086,13 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=78,y=48
+	BonusType=BONUS_OLIVES
 	TerrainType=TERRAIN_PLAINS
 	PlotType=2
 EndPlot
 BeginPlot
 	x=78,y=49
+	BonusType=BONUS_FISH
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -35593,6 +35596,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=79,y=48
+	BonusType=BONUS_CLAM
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -36517,7 +36521,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=81,y=44
-	TerrainType=TERRAIN_DESERT
+	TerrainType=TERRAIN_SEMIDESERT
 	PlotType=2
 EndPlot
 BeginPlot
@@ -40205,6 +40209,7 @@ BeginPlot
 	x=89,y=45
 	FeatureType=FEATURE_FLOOD_PLAINS, FeatureVariety=0
 	TerrainType=TERRAIN_DESERT
+	BonusType=BONUS_WHEAT
 	PlotType=2
 EndPlot
 BeginPlot
@@ -53403,13 +53408,13 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=118,y=54
-	BonusType=BONUS_COPPER
+	BonusType=BONUS_RARE_EARTHS
 	TerrainType=TERRAIN_STEPPE
 	PlotType=1
 EndPlot
 BeginPlot
 	x=118,y=55
-	BonusType=BONUS_RARE_EARTHS
+	BonusType=BONUS_HORSE
 	TerrainType=TERRAIN_STEPPE
 	PlotType=2
 EndPlot
@@ -53864,7 +53869,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=119,y=52
-	BonusType=BONUS_IRON
+	BonusType=BONUS_COPPER
 	FeatureType=FEATURE_FOREST, FeatureVariety=1
 	TerrainType=TERRAIN_PLAINS
 	PlotType=1
@@ -56160,6 +56165,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=124,y=41
+	BonusType=BONUS_RARE_EARTHS
 	FeatureType=FEATURE_RAINFOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=1
@@ -56181,7 +56187,7 @@ BeginPlot
 	x=124,y=44
 	isNOfRiver
 	RiverWEDirection=1
-	BonusType=BONUS_RARE_EARTHS
+	BonusType=BONUS_IRON
 	FeatureType=FEATURE_FOREST, FeatureVariety=3
 	TerrainType=TERRAIN_GRASS
 	PlotType=1
@@ -56699,6 +56705,7 @@ EndPlot
 BeginPlot
 	x=125,y=53
 	TerrainType=TERRAIN_PLAINS
+	BonusType=BONUS_IRON
 	PlotType=1
 EndPlot
 BeginPlot
@@ -57137,6 +57144,7 @@ EndPlot
 BeginPlot
 	x=126,y=49
 	TerrainType=TERRAIN_GRASS
+	BonusType=BONUS_COPPER
 	PlotType=1
 EndPlot
 BeginPlot

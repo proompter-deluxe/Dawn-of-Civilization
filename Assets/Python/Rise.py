@@ -30,12 +30,14 @@ lExpansionCivs = [
 	iTurks,
 	iArabia,
 	iSpain,
+	iMamluks,
 	iMongols,
 	iMughals,
 	iOttomans,
 ]
 
 lIndependenceCivs = [
+	iChinaS,
 	iByzantium,
 	iArgentina,
 	iMexico,
@@ -65,6 +67,7 @@ dClearedForBirth = {
 	iAztecs: iToltecs,
 	iRussia: iRus,
 	iMexico: iAztecs,
+	iMamluks: iEgypt,
 }
 
 lAlwaysClear = [
@@ -73,11 +76,16 @@ lAlwaysClear = [
 ]
 
 lBirthWars = [
+	(iPersia, iAssyria),
+	(iPersia, iBabylonia),
 	(iArabia, iEgypt),
 	(iArabia, iBabylonia),
 	(iArabia, iPersia),
 	(iMongols, iChina),
+	(iMongols, iChinaS),
 	(iOttomans, iByzantium),
+	(iOttomans, iBulgaria),
+	(iMoors, iSpain),
 ]
 
 
@@ -500,8 +508,7 @@ class Birth(object):
 				plot.resetBirthProtected()
 				
 	def assignAdditionalTechs(self):
-		if self.iCiv == iChina and scenario() == i3000BC and not self.isHuman():
-			self.team.setHasTech(iAlloys, True, self.iPlayer, False, False)
+		return
 	
 	def assignAttributes(self):
 		# civilization attributes
@@ -767,8 +774,7 @@ class Birth(object):
 			
 		if self.iPlayer < 0:
 			self.canceled = True
-			log.rise("BIRTH CANCELED: no free slot found for %s", infos.civ(self.iCiv).getText())
-			return
+			message(active(), "BIRTH CANCELED: no free slot found for %s", infos.civ(self.iCiv).getText(), color=iRed, force=True)
 		
 		self.updateCivilization()
 		self.updateStartingLocation()

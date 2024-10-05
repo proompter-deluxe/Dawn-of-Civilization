@@ -1,4 +1,4 @@
-﻿RFC Dawn of Civilization
+﻿RFC Dawn of Civilization Cross Overhaul
 Complete List of Features (as of version 1.17)
 
 The modmod is based on RFC Epic/Marathon 1.21 and therefore includes all features of RFC v1.187 for BtS unless otherwise noted.
@@ -347,7 +347,7 @@ CIVILISATIONS
     * Unique Building: Obelisk (Monument): +1 Priest slot, +25% culture
     * Unique Power: enables Monarchy, Redistribution and Deification
 * China
-    * Spawn: 2070 AD at Chang'an
+    * Spawn: 2070 BC at Chang'an
     * Leaders: Qin Shi Huang, Tang Taizong, Hongwu, Mao Zedong
     * Color: Light Yellow / Black
     * Unique Unit: Cho-Ko-Nu (Crossbowman): +1 first strike, causes collateral damage, +25% against light cavalry

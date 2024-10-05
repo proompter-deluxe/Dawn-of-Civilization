@@ -61,9 +61,21 @@
 			<bWhiteFlag>0</bWhiteFlag>
 		</CivilizationArtInfo>
 		<CivilizationArtInfo>
+			<Type>ART_DEF_CIVILIZATION_YANGTZE_CHINA</Type>
+			<Button>Art/Interface/Buttons/Civilizations/yangtze_china.dds</Button>
+			<Path>Art/Interface/TeamColor/FlagDECAL_RoC_Sun.dds</Path>
+			<bWhiteFlag>0</bWhiteFlag>
+		</CivilizationArtInfo>
+		<CivilizationArtInfo>
 			<Type>ART_DEF_CIVILIZATION_EGYPT</Type>
 			<Button>,Art/Interface/Buttons/Civilizations/Egypt.dds,Art/Interface/Buttons/Civics_Civilizations_Religions_Atlas.dds,6,5</Button>
 			<Path>Art/Interface/TeamColor/FlagDECAL_EyeOfRa.dds</Path>
+			<bWhiteFlag>0</bWhiteFlag>
+		</CivilizationArtInfo>
+		<CivilizationArtInfo>
+			<Type>ART_DEF_CIVILIZATION_MAMLUK</Type>
+			<Button>Art/Interface/Buttons/Civilizations/mamluks.dds</Button>
+			<Path>Art/Interface/TeamColor/FlagDECAL_Mamluks.dds</Path>
 			<bWhiteFlag>0</bWhiteFlag>
 		</CivilizationArtInfo>
 		<CivilizationArtInfo>
@@ -406,6 +418,12 @@
 			<Type>ART_DEF_CIVILIZATION_SWEDEN</Type>
 			<Button>Art/Interface/Buttons/Civilizations/Sweden.dds</Button>
 			<Path>Art/Interface/TeamColor/FlagDECAL_Trekronor.dds</Path>
+			<bWhiteFlag>0</bWhiteFlag>
+		</CivilizationArtInfo>
+		<CivilizationArtInfo>
+			<Type>ART_DEF_CIVILIZATION_BULGARIA</Type>
+			<Button>,-,Art/Interface/Buttons/RFCE_Atlas_civilizations.dds,3,1</Button>
+			<Path>Art/Interface/TeamColor/FlagDECAL_Bulgaria.dds</Path>
 			<bWhiteFlag>0</bWhiteFlag>
 		</CivilizationArtInfo>
 	</CivilizationArtInfos>

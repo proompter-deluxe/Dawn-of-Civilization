@@ -106,6 +106,14 @@
 		<Spanish>It is the year 1700 AD. After the Ming Dynasty has collapsed under peasant revolts, the Jurchens of Manchuria have conquered China and established the Qing Dynasty. With Manchuria and Tibet under imperial control, China has reached the greatest extent in history, and the rule of the Kangxi Emperor promises another golden era.</Spanish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_DOM_YANGTZE_CHINA</Tag>
+		<English>It is the year 200 AD. Following barbarian invasions and the Yellow Turban Rebellion, The Han dynasty has lost the Mandate of Heaven, and the emperors are no more than puppets in the hands of scheming warlords. It is up you, Sun Quan, to reclaim Heaven's favour and reunify China!</English>
+		<French>Placeholder TXT_KEY_DOM_YANGTZE_CHINA</French>
+		<German>Placeholder TXT_KEY_DOM_YANGTZE_CHINA</German>
+		<Italian>Placeholder TXT_KEY_DOM_YANGTZE_CHINA</Italian>
+		<Spanish>Placeholder TXT_KEY_DOM_YANGTZE_CHINA</Spanish>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_DOM_COLOMBIA</Tag>
 		<English>It is the year 1814 AD. War in Europe weakened their grip on Latin America, and new ideas of nationalism and democracy raised calls for self-determination in New Granada. With the victories of Sim&#243;n Bol&#237;var in Venezuela, the way has been paved for Colombian independence.</English>
 		<French>It is the year 1814 AD. War in Europe weakened their grip on Latin America, and new ideas of nationalism and democracy raised calls for self-determination in New Granada. With the victories of Sim&#243;n Bol&#237;var in Venezuela, the way has been paved for Colombian independence.</French>
@@ -467,11 +475,11 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DOM_ROME</Tag>
-		<English>It is the year 753 BC. The Latin people have just founded the city of Rome. Situated at a favorable position and governed by a superior political system, it is fated to control the whole Italian peninsula. Most of its neighboring regions in Europe are still barbaric and uncivilized. The city of Carthage is its only rival on the way to rule and civilize the whole Mediterranean.</English>
-		<French>Nous sommes en l'an 753 av. J.-C. Les Latins viennent de fonder la ville de Rome. Sa situation g&#233;ographique et son syst&#232;me politique sup&#233;rieur destinent la cit&#233; &#224; dominer toute la p&#233;ninsule italienne. Les r&#233;gions avoisinantes en Europe sont encore barbares et peu civilis&#233;es, et la cit&#233; de Carthage est la seule vraie rivale de Rome pour le contr&#244;le de toute la M&#233;diterran&#233;e.</French>
-		<German>It is the year 753 BC. The Latin people have just founded the city of Rome. Situated at a favorable position and governed by a superior political system, it is fated to control the whole Italian peninsula. Most of its neighboring regions in Europe are still barbaric and uncivilized. The city of Carthage is its only rival on the way to rule and civilize the whole Mediterranean.</German>
-		<Italian>It is the year 753 BC. The Latin people have just founded the city of Rome. Situated at a favorable position and governed by a superior political system, it is fated to control the whole Italian peninsula. Most of its neighboring regions in Europe are still barbaric and uncivilized. The city of Carthage is its only rival on the way to rule and civilize the whole Mediterranean.</Italian>
-		<Spanish>It is the year 753 BC. The Latin people have just founded the city of Rome. Situated at a favorable position and governed by a superior political system, it is fated to control the whole Italian peninsula. Most of its neighboring regions in Europe are still barbaric and uncivilized. The city of Carthage is its only rival on the way to rule and civilize the whole Mediterranean.</Spanish>
+		<English>It is the year 338 BC. Following the Latin Wars, the city-state of Rome now occupies a preeminent position in central Italy, and is poised to extend itself into Magna Graecia to the south, against the Gauls to the north, and with the Carthaginians for control of the seas.</English>
+		<French>It is the year 338 BC. Following the Latin Wars, the city-state of Rome now occupies a preeminent position in central Italy, and is poised to extend itself into Magna Graecia to the south, against the Gauls to the north, and with the Carthaginians for control of the seas.</French>
+		<German>It is the year 338 BC. Following the Latin Wars, the city-state of Rome now occupies a preeminent position in central Italy, and is poised to extend itself into Magna Graecia to the south, against the Gauls to the north, and with the Carthaginians for control of the seas.</German>
+		<Italian>It is the year 338 BC. Following the Latin Wars, the city-state of Rome now occupies a preeminent position in central Italy, and is poised to extend itself into Magna Graecia to the south, against the Gauls to the north, and with the Carthaginians for control of the seas.</Italian>
+		<Spanish>It is the year 338 BC. Following the Latin Wars, the city-state of Rome now occupies a preeminent position in central Italy, and is poised to extend itself into Magna Graecia to the south, against the Gauls to the north, and with the Carthaginians for control of the seas.</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DOM_RUSSIA</Tag>
@@ -592,5 +600,22 @@
 		<German>It is the year 1700 AD. The Kingdom of Sweden is the most formidable of the Scandinavian powers and has managed to establish an empire by acquiring Finland. Still, its expansion has also created enemies, and rivals like Denmark-Norway, Poland and especially Russia might seek to curb Swedish power ...</German>
 		<Italian>It is the year 1700 AD. The Kingdom of Sweden is the most formidable of the Scandinavian powers and has managed to establish an empire by acquiring Finland. Still, its expansion has also created enemies, and rivals like Denmark-Norway, Poland and especially Russia might seek to curb Swedish power ...</Italian>
 		<Spanish>It is the year 1700 AD. The Kingdom of Sweden is the most formidable of the Scandinavian powers and has managed to establish an empire by acquiring Finland. Still, its expansion has also created enemies, and rivals like Denmark-Norway, Poland and especially Russia might seek to curb Swedish power ...</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DOM_BULGARIA</Tag>
+		<English>After years of travel across the steppe braving snow and heat, across mountains and through swamps, you and your followers have finally reached the northern borders of the Eastern Roman Empire. Tired of traveling with no home, you gather your people for one last push, to cross the Danube river and to challenge the mighty Empire itself; to claim this land as yours forever.</English>
+		<French>After years of travel across the steppe braving snow and heat, across mountains and through swamps, you and your followers have finally reached the northern borders of the Eastern Roman Empire. Tired of traveling with no home, you gather your people for one last push, to cross the Danube river and to challenge the mighty Empire itself; to claim this land as yours forever.</French>
+		<German>After years of travel across the steppe braving snow and heat, across mountains and through swamps, you and your followers have finally reached the northern borders of the Eastern Roman Empire. Tired of traveling with no home, you gather your people for one last push, to cross the Danube river and to challenge the mighty Empire itself; to claim this land as yours forever.</German>
+		<Italian>After years of travel across the steppe braving snow and heat, across mountains and through swamps, you and your followers have finally reached the northern borders of the Eastern Roman Empire. Tired of traveling with no home, you gather your people for one last push, to cross the Danube river and to challenge the mighty Empire itself; to claim this land as yours forever.</Italian>
+		<Spanish>After years of travel across the steppe braving snow and heat, across mountains and through swamps, you and your followers have finally reached the northern borders of the Eastern Roman Empire. Tired of traveling with no home, you gather your people for one last push, to cross the Danube river and to challenge the mighty Empire itself; to claim this land as yours forever.</Spanish>
+		<Portuguese>After years of travel across the steppe braving snow and heat, across mountains and through swamps, you and your followers have finally reached the northern borders of the Eastern Roman Empire. Tired of traveling with no home, you gather your people for one last push, to cross the Danube river and to challenge the mighty Empire itself; to claim this land as yours forever.</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DOM_MISR</Tag>
+		<English>It is the year 970 AD. Under your command, the Fatimid army has conquered Egypt. Abbasid central authority is weakening, and various outsiders are threatening to overrun the region. You must make ready for these threats to the Muslim world.</English>
+		<French>It is the year 970 AD. Under your command, the Fatimid army has conquered Egypt. Abbasid central authority is weakening, and various outsiders are threatening to overrun the region. You must make ready for these threats to the Muslim world.</French>
+		<German>It is the year 970 AD. Under your command, the Fatimid army has conquered Egypt. Abbasid central authority is weakening, and various outsiders are threatening to overrun the region. You must make ready for these threats to the Muslim world.</German>
+		<Italian>It is the year 970 AD. Under your command, the Fatimid army has conquered Egypt. Abbasid central authority is weakening, and various outsiders are threatening to overrun the region. You must make ready for these threats to the Muslim world.</Italian>
+		<Spanish>It is the year 970 AD. Under your command, the Fatimid army has conquered Egypt. Abbasid central authority is weakening, and various outsiders are threatening to overrun the region. You must make ready for these threats to the Muslim world.</Spanish>
 	</TEXT>
 </Civ4GameText>

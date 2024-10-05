@@ -430,6 +430,180 @@ iChina : {
 		"fZheng Pingru", # 20th
 	],
 },
+iChinaS : {
+	iGreatProphet : [
+		"Lao Tzu", # 6th BC
+		"Kong Fuzi", # 5th BC
+		"Meng Zi", # 4th BC
+		"Zhuangzi", # 4th BC
+		"Han Fei", # 3rd BC
+		iMedieval,
+		"Bodhidharma", # 6th
+		"Bukong", # 8th
+		"fLin Moniang", # 10th
+		"Wang Chongyang", # 12th
+		"fSun Bu'er", # 12th
+		"Zhu Xi", # 12th
+		"Qiu Chuji", # 12th
+		iRenaissance, 
+		"Wang Yangming", # 16th
+		iIndustrial, 
+		"Hong Xiuquan", # 19th
+		"Wang Jueyi", # 19th
+		iGlobal,
+		"Xiong Shili", # 20th
+		"Sheng Yen", # 20th
+		"Li Hongzhi", # 20th
+	],
+	iGreatArtist : [
+		"Ling Lun", # legendary
+		iClassical,
+		"Li Bo", # 8th BC
+		"Du Fu", # 8th BC
+		"Wang Xizhi", # 4th BC
+		"fCai Wenji", # 1st
+		"Gu Kaizhi", # 4th
+		iMedieval,
+		"Yan Liben", # 7th
+		"Han Yu", # 8th
+		"Fan Kuan", # 10th
+		"Su Shi", # 11th 
+		"fLi Qingzhao", # 12th
+		"Huang Gongwang", # 14th
+		"Luo Guanzhong", # 14th
+		iRenaissance,
+		"Tang Yin", # 15th
+		"Wu Cheng'en", # 16th
+		"Cao Xueqin", # 18th
+		iGlobal,
+		"Qi Baishi", # 20th
+		"Lu Xun", # 20th
+		"Xu Beihong", # 20th
+		"Lin Yutang", # 20th
+		"Wu Guanzhong", # 20th
+	],
+	iGreatScientist : [
+		"Li Fan", # 1st
+		"fBan Zhao", # 1st
+		"Liu Hui", # 3rd
+		"Zu Chongzhi", # 5th
+		iMedieval,
+		"Shen Kuo", # 11th
+		"Zhu Shijie", # 14th
+		iRenaissance,
+		"Li Shizhen", # 16th
+		"fTan Yunxian", # 16th
+		"Xu Guangqi", # 17th
+		"Song Yingxing", # 17th
+		"fWang Zhenyi", # 18th
+		iGlobal,
+		"Li Siguang", # 20th
+		"fWu Jianxiong", # 20th
+		"Yang Zhenning", # 20th
+		"fTu Youyou", # 20th
+		"Li Yuanzhe", # 20th
+	],
+	iGreatMerchant : [
+		"Zhang Qian", # 2nd BC
+		"Faxian", # 4th
+		iMedieval,
+		"Xuanzang", # 7th
+		"Li Chun'an", # 10th
+		"Wang Anshi", # 11th
+		iRenaissance,
+		"Zheng He", # 15th
+		"Yishiha", # 15th
+		"Pan Qiguan", # 18th
+		iIndustrial,
+		"Wu Bingjian", # 19th
+		"Sheng Xuanhuai", # 19th
+		iGlobal,
+		"Zeng Junchen", # 20th
+		"Deng Xiaoping", # 20th
+	],
+	iGreatEngineer : [
+		"fLeizu", # 27th BC
+		iClassical,
+		"Lu Ban", # 5th BC
+		"Li Bing", # 3rd BC
+		"Cai Lun", # 1st
+		"Zhang Heng", # 2nd
+		"Ma Jun", # 3rd
+		iMedieval,
+		"Yi Xing", # 8th
+		"Yu Hao", # 10th
+		"Zhang Sixun", # 10th
+		"Bi Sheng", # 11th
+		"Su Song", # 11th
+		"Wang Zhen", # 14th
+		iGlobal,
+		"Liang Sicheng", # 20th
+		"fLin Huiyin", # 20th
+		"Ieoh Ming Pei", # 20th
+		"fLin Lanying", # 20th
+		"Charles Kao Kuen", # 20th
+	],
+	iGreatStatesman : [
+		"Gongsun Yang", # 4th BC
+		"Li Si", # 3rd BC
+		"Xiao He", # 2nd BC
+		iMedieval,
+		"Fang Xuanling", # 7th
+		"fWu Zetian", # 7th
+		"Di Renjie", # 7th
+		"fShangguan Wan'er", # 7th
+		"Fan Zhongyan", # 11th
+		"Liu Bowen", # 14th
+		iRenaissance,
+		"Zhang Juzheng", # 16th
+		"Zhang Tingyu", # 18th
+		iIndustrial,
+		"Lin Zexu", # 19th
+		"Li Hongzhang", # 19th
+		"Sun Yat-sen", # 19th
+		iGlobal,
+		"Zhou Enlai", # 20th
+		"fJiang Qing", # 20th
+	],
+	iGreatGeneral : [
+		"fFu Hao", # 13th BC
+		iClassical,
+		"Sun Tzu", # 6th BC
+		"Cao Cao", # 2nd
+		"Zhuge Liang", # 3rd
+		iMedieval,
+		"fPingyang Gongzhu", # 7th
+		"Guo Ziyi", # 8th
+		"Yue Fei", # 12th
+		iRenaissance,
+		"Qi Jiguang", # 16th
+		"fQin Liangyu", # 17th
+		"Shi Lang", # 17th
+		iIndustrial,
+		"fChing Shih", # 19th
+		"Zeng Guofan", # 19th
+		"Zuo Zongtang", # 19th
+		iGlobal,
+		"Zhang Zuolin", # 20th
+		"Zhu De", # 20th
+		"Chiang Kai-shek", # 20th
+		"Peng Dehuai", # 20th
+	],
+	iGreatSpy : [
+		"Zhou Xing", # 7th
+		"Lai Junchen", # 7th
+		"Yang Xian", # 14th
+		iRenaissance,
+		"Liu Jin", # 15th
+		"Wei Zhongxian", # 16th
+		iGlobal,
+		"Dai Li", # 20th
+		"Kang Sheng", # 20th
+		"fXu Lai", # 20th
+		"Li Bai", # 20th
+		"fZheng Pingru", # 20th
+	],
+},
 iGreece : {
 	iGreatProphet : [
 		"fEritha", # 12th BC
@@ -1969,6 +2143,87 @@ iArabia : {
 		"Muawiyah", # 7th
 		"Amr ibn al-As", # 7th
 		"fKhawla bint al-Azwar", # 7th
+		"Nur ad-Din Zengi", # 12th
+		iRenaissance,
+		"Rahmah ibn Jabir Al Jalhami", # 18th
+		iGlobal, 
+		"Yusuf al-'Azma", # 20th
+		"Abd al-Karim Qasim", # 20th
+	],
+	iGreatSpy : [
+		"fSitt al-Mulk", # 11th
+		"Hassan-i Sabbah", # 11th (also Persian)
+		"Rashid ad-Din Sinan", # 12th
+		iGlobal, 
+		"Ali Hassan al-Majid", # 20th
+	],
+},
+iMamluks : { # taken from Arabia. Need to define its own / split the list based on origin
+	iGreatProphet : [
+		"Al-Baqilanni", # 10th
+		"Ibn al-Jawzi", # 12th
+		iRenaissance,
+		"Al-Suyuti", # 15th
+		"Abdullah ibn Alawi al-Haddad", # 17th
+		"Muhammad ibn Abd al-Wahhab", # 18th
+		iIndustrial, 
+		"Muhammad Abduh", # 19th
+		"Abd al-Rahman al-Kawakibi", # 19th
+	],
+	iGreatArtist : [
+		"Ibn Muqla", # 10th
+		"Ibn al-Nadim", # 10th
+		"Al-Mutanabbi", # 10th
+		"Muhammad ibn al-Zayn", # 14th
+		iRenaissance,
+		"Ibn Furtu", # 16th
+		iGlobal,
+		"Muhammad al-Maghut", # 20th
+	],
+	iGreatScientist : [
+		"Al-Farabi", # 10th
+		"Ibrahim ibn Sinan", # 10th
+		"Ibn al-Jazzar", # 10th
+		"Ibn al-Haytam", # 11th
+		"Ibn al-Nafis", # 13th
+		iGlobal, 
+		"Abdul Jabbar Abdullah", # 20th
+		"Ahmed Zewail", # 20th
+	],
+	iGreatMerchant : [
+		"Ibn Hawqal", # 10th
+		"Abu'l Abbas al-Hijazi", # 12th
+		"Yaqut al-Hamawi", # 13th
+		iRenaissance,
+		"Ahmad ibn Majid", # 15th
+		"Sulaiman Al Mahri", # 16th
+		iIndustrial, 
+		"David Sassoon", # 19th
+		"Sassoon Eskell", # 19th
+		iGlobal, 
+		"Mohammed bin Awad bin Laden", # 20th
+	],
+	iGreatEngineer : [
+		"Ibn Wahshiyah", # 10th
+		"fMariam al-Astrulabi", # 10th
+		"Al-Jazari", # 12th
+		iGlobal,
+		"Hassan Fathy", # 20th
+		"fZaha Hadid", # 20th
+	],
+	iGreatStatesman : [
+		"Al-Mawardi", # 11th
+		"Izz al-Din Usama", # 12th
+		iRenaissance,
+		"Muhammad ibn Saud", # 18th
+		iIndustrial,
+		"Hussein bin Ali", # 19th
+		iGlobal,
+		"Zayed bin Sultan Al Nahyan", # 20th
+		"Yasser Arafat", # 20th
+		"Hisham Nazer", # 20th
+	],
+	iGreatGeneral : [
 		"Nur ad-Din Zengi", # 12th
 		iRenaissance,
 		"Rahmah ibn Jabir Al Jalhami", # 18th

@@ -30,7 +30,8 @@ tEraAdministrationModifier = (
 )
 
 dCivilizationAdministrationModifier = CivDict({
-	iChina: -100,
+	iChina: -80,
+	iChinaS: -100,
 	iNubia: -100,
 	iRome: 50,
 }, 0)
@@ -307,7 +308,7 @@ def determineStabilityThreshold(iPlayer, iCurrentLevel):
 	if isDecline(iPlayer): 
 		iThreshold += 10
 		
-		# not that decline already reduces impact by 1
+		# note that decline already reduces impact by 1
 		if getImpact(iPlayer) == iImpactMarginal:
 			iThreshold += 5
 	

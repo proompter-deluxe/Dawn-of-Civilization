@@ -7,7 +7,7 @@ BeginGame
 	GameTurn=0
 	StartYear=-3000
 	Description=TXT_KEY_RHYES_WB_DESC
-	ModPath=Mods\RFC Dawn of Civilization
+	ModPath=Mods\RFC Dawn of Civilization Cross Overhaul
 EndGame
 
 BeginMap
@@ -29,7 +29,7 @@ BeginPlot
 	EndUnit
 EndPlot
 BeginPlot
-	x=89,y=47
+	x=90,y=45
 	BeginUnit
 		UnitType=UNIT_MILITIA
 		UnitOwner=CIVILIZATION_BABYLONIA

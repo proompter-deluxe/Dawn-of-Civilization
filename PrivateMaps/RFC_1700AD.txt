@@ -8,7 +8,7 @@ BeginGame
 	GameTurn=321
 	StartYear=-3000
 	Description=TXT_KEY_RHYES_WB_DESC
-	ModPath=Mods\RFC Dawn of Civilization
+	ModPath=Mods\RFC Dawn of Civilization Cross Overhaul
 EndGame
 
 BeginMap
@@ -2631,6 +2631,10 @@ BeginPlot
 	ImprovementType=IMPROVEMENT_TOWN
 EndPlot
 BeginPlot
+	x=59,y=66
+	ImprovementType=IMPROVEMENT_FISHING_BOATS
+EndPlot
+BeginPlot
 	x=59,y=68
 	ImprovementType=IMPROVEMENT_FISHING_BOATS
 EndPlot
@@ -2754,7 +2758,7 @@ BeginPlot
 	ImprovementType=IMPROVEMENT_VILLAGE
 EndPlot
 BeginPlot
-	x=60,y=65
+	x=60,y=63
 	ImprovementType=IMPROVEMENT_FISHING_BOATS
 EndPlot
 BeginPlot

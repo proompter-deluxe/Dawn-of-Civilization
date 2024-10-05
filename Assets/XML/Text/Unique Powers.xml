@@ -75,11 +75,11 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UP_ASS_TITLE</Tag>
-		<English>The Power of the First Empire:</English>
-		<French>The Power of the First Empire:</French>
-		<German>The Power of the First Empire:</German>
-		<Italian>The Power of the First Empire:</Italian>
-		<Spanish>The Power of the First Empire:</Spanish>
+		<English>The Power of Brutality:</English>
+		<French>The Power of Brutality:</French>
+		<German>The Power of Brutality:</German>
+		<Italian>The Power of Brutality:</Italian>
+		<Spanish>The Power of Brutality:</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UP_ASS</Tag>
@@ -226,20 +226,52 @@
 		<Spanish>Units in forests heal at the same rate as in friendly cities</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UP_CHI_TITLE</Tag>
+		<Tag>TXT_KEY_UP_CHS_TITLE</Tag>
 		<English>The Power of Myriads:</English>
-		<French>Le pouvoir des myriades :</French>
+		<French>Le pouvoir des myriades:</French>
 		<German>Die Macht der Myriaden:</German>
 		<Italian>Il potere del invenzione:</Italian>
 		<Spanish>El poder del invento:</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UP_CHI</Tag>
+		<Tag>TXT_KEY_UP_CHS</Tag>
 		<English>Cities keep an additional 25% [ICON_FOOD] after growing</English>
 		<French>Les villes conservent 25 % [ICON_FOOD] de plus apr&#232;s la croissance</French>
 		<German>St&#228;dte behalten zus&#228;tzliche 25% [ICON_FOOD] nach dem Wachsen</German>
 		<Italian>Velocit&#224; di addestramento 1,5X per le unit&#224; da mischia e con armi da fuoco</Italian>
 		<Spanish>Velocidad de entrenamiento de unidades de cuerpo a cuerpo y con armas de p&#243;lvora multiplicada x1,5</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UP_CHI_TITLE</Tag>
+		<English>Filial and Incorrupt:</English>
+		<French>Filial and Incorrupt:</French>
+		<German>Filial and Incorrupt:</German>
+		<Italian>Filial and Incorrupt:</Italian>
+		<Spanish>Filial and Incorrupt:</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UP_CHI</Tag>
+		<English>+1 [ICON_COMMERCE] per statesman and free statesmen in the capital</English>
+		<French>+1 [ICON_COMMERCE] per statesman and free statesmen in the capital</French>
+		<German>+1 [ICON_COMMERCE] per statesman and free statesmen in the capital</German>
+		<Italian>+1 [ICON_COMMERCE] per statesman and free statesmen in the capital</Italian>
+		<Spanish>+1 [ICON_COMMERCE] per statesman and free statesmen in the capital</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UP_BUL_TITLE</Tag>
+		<English>The Power of Maneouvre:</English>
+		<French>Le Pouvoir de la maneouvre:</French>
+		<German>The Power of Maneouvre:</German>
+		<Italian>The Power of Maneouvre:</Italian>
+		<Spanish>The Power of Maneouvre::</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UP_BUL</Tag>
+		<English>Free disengage promotion for units</English>
+		<French>Free disengage promotion for units</French>
+		<German>Free disengage promotion for units</German>
+		<Italian>Free disengage promotion for units</Italian>
+		<Spanish>Free disengage promotion for units</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UP_COL_TITLE</Tag>
@@ -260,6 +292,14 @@
 	<TEXT>
 		<Tag>TXT_KEY_UP_CONQUESTS_TARGET</Tag>
 		<English>%s1 has fielded an army to conquer our civilization!</English>
+		<French>%s1 a lev&#233; une arm&#233;e pour conqu&#233;rir notre civilisation !</French>
+		<German>%s1 hat eine Armee zum Angriff auf unsere Zivilisation zusammengestellt!</German>
+		<Italian>%s1 has fielded an army to conquer our civilization!</Italian>
+		<Spanish>%s1 has fielded an army to conquer our civilization!</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UP_CONQUESTS_TARGET_ALL</Tag>
+		<English>%s1 has fielded an army to conquer %s2!</English>
 		<French>%s1 a lev&#233; une arm&#233;e pour conqu&#233;rir notre civilisation !</French>
 		<German>%s1 hat eine Armee zum Angriff auf unsere Zivilisation zusammengestellt!</German>
 		<Italian>%s1 has fielded an army to conquer our civilization!</Italian>
@@ -1096,5 +1136,21 @@
 		<German>Zus&#228;tzliches gold durch Pl&#252;nderung von St&#228;dten und Verbesserungen und das Versenken von Schiffen w&#228;hrend des Mittelalters</German>
 		<Italian>5X oro ottenuto dai saccheggi</Italian>
 		<Spanish>Se obtiene oro x5 del pillaje</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UP_MAM_TITLE</Tag>
+		<English>The Power of Slave Soldiers:</English>
+		<French>The Power of Slave Soldiers:</French>
+		<German>The Power of Slave Soldiers:</German>
+		<Italian>The Power of Slave Soldiers:</Italian>
+		<Spanish>The Power of Slave Soldiers:</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UP_MAM</Tag>
+		<English>All land units start with Combat I promotion, but have increased upkeep</English>
+		<French>All land units start with Combat I promotion, but have increased upkeep</French>
+		<German>All land units start with Combat I promotion, but have increased upkeep</German>
+		<Italian>All land units start with Combat I promotion, but have increased upkeep</Italian>
+		<Spanish>All land units start with Combat I promotion, but have increased upkeep</Spanish>
 	</TEXT>
 </Civ4GameText>

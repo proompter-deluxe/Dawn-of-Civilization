@@ -1470,6 +1470,18 @@
 		<Spanish>[COLOR_UNIT_TEXT]Religious Persecutors[COLOR_REVERT] can remove non-state religions from a city.</Spanish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_UNIT_ROMAN_WORKER</Tag>
+		<English>Roman Worker</English>
+		<French>
+			<Text>Ouvrier romain</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>Roman Worker</German>
+		<Italian>Roman Worker</Italian>
+		<Spanish>Roman Worker</Spanish>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_UNIT_PHOENICIAN_BIREME</Tag>
 		<English>Bireme</English>
 		<French>Bir&#232;me</French>
@@ -3596,6 +3608,52 @@
 		<German>Lantaka</German>
 		<Italian>Lantaka</Italian>
 		<Spanish>Lantaka</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_BULGARIAN_KONNIK</Tag>
+		<English>Konnik</English>
+		<French>Konnik</French>
+		<German>
+			<Text>Konnik:Konniks:Konnik:Konnik:Konniks:Konniks:Konniks:Konniks</Text>
+			<Gender>male:male:male:male:male:male:male:male</Gender>
+			<Plural>0:0:0:0:1:1:1:1</Plural>
+		</German>
+		<Italian>Konnik</Italian>
+		<Spanish>Konnik</Spanish>
+		<Portuguese>Konnik</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_BULGARIA_KONNIK_PEDIA</Tag>
+		<English>[TAB]The Bulgars were highly skilled in the equestrian arts. Their army mainly consisted of horseman because of their high skill. Every Bulgar horseman had high discipline and had several horses. However, only a single horse could be used for wartime matters, and it was forbidden to do anything else with it. It is believed that the Bulgars were the first who brought the stirrups to Europe. This gave them advantages above the other European armies of this time. The Bulgars could use bows still mounted on horses. Swords and spears were also used in war. The stirrups also increased the stability and speed of the rider.</English>
+		<French>[TAB]Le Bulgars &#195;&#169;taient fortement habile dans les arts &#195;&#169;questres. Leur arm&#195;&#169;e s'est principalement compos&#195;&#169;e du cavalier en raison de leur comp&#195;&#169;tence &#195;&#169;lev&#195;&#169;e. Chaque cavalier de Bulgar a eu la discipline &#195;&#169;lev&#195;&#169;e et a eu plusieurs chevaux. Cependant, seulement un cheval simple pourrait &#195;&#170;tre employ&#195;&#169; pour des sujets de temps de guerre, et on l'a interdit de faire toute autre chose avec lui. On le croit que le Bulgars &#195;&#169;taient le premier qui a apport&#195;&#169; les &#195;&#169;triers &#195;&#160; l'Europe. Ceci leur a donn&#195;&#169; des avantages au-dessus des autres arm&#195;&#169;es europ&#195;&#169;ennes de ce temps. Le Bulgars a pu employer des arcs toujours mont&#195;&#169;s sur des chevaux. Des &#195;&#169;p&#195;&#169;es et les lances ont &#195;&#169;t&#195;&#169; &#195;&#169;galement utilis&#195;&#169;es dans la guerre. Les &#195;&#169;triers ont &#195;&#169;galement augment&#195;&#169; la stabilit&#195;&#169; et la vitesse du cavalier.</French>
+		<German>[TAB]Die Bulgaren waren in den Reiterk&#252;nsten in hohem Grade erfahren. Ihre Armee bestand haupts&#195;&#164;chlich aus Reiter wegen ihrer hohen F&#195;&#164;higkeit. Jeder Bulgar Reiter hatte hohe Disziplin und hatte einige Pferde. Jedoch nur ein einzelnes Pferd k&#195;&#182;nnte f&#195;&#188;r Kriegangelegenheiten benutzt werden, und es war verboten, um noch etwas mit ihm zu tun. Es wird geglaubt, da&#195;&#159; das Bulgars das erste waren, wer die Steigb&#195;&#188;gel zu Europa holte. Dieses gab ihnen Vorteile &#195;&#188;ber den anderen europ&#195;&#164;ischen Armeen dieser Zeit. Das Bulgars konnte die B&#195;&#182;gen benutzen, die noch an den Pferden angebracht wurden. Klingen und Stangen wurden auch im Krieg benutzt. Die Steigb&#195;&#188;gel erh&#195;&#182;hten auch die Stabilit&#195;&#164;t und die Geschwindigkeit des Mitfahrers.</German>
+		<Italian>[TAB]Il Bulgars era altamente esperto nelle arti equestrian. Il loro esercito pricipalmente ha consistito del horseman a causa dell'loro elevata specializzazione. Ogni horseman di Bulgar ha avuto alta disciplina ed ha avuto parecchi cavalli. Tuttavia, soltanto un singolo cavallo potrebbe essere usato per gli argomenti di wartime ed &#195;&#168; stato proibito a per fargli niente altro con. Si crede che il Bulgars sia stato il primo chi ha portato le staffe ad Europa. Ci&#195;&#178; ha dato loro i vantaggi sopra gli altri eserciti europei di questo tempo. Il Bulgars ha potuto usare gli archi ancora montati sui cavalli. Le spade ed i germogli inoltre sono stati utilizzati nella guerra. Le staffe inoltre hanno aumentato la stabilit&#195;&#160; e la velocit&#195;&#160; del rider.</Italian>
+		<Spanish>[TAB]El Bulgars era altamente experto en los artes ecuestres. Su ej&#195;&#169;rcito consisti&#195;&#179; en principalmente el jinete debido a su alta habilidad. Cada jinete de Bulgar ten&#195;&#173;a alta disciplina y ten&#195;&#173;a varios caballos. Sin embargo, solamente un solo caballo podr&#195;&#173;a ser utilizado para las materias del tiempo de guerra, y fue prohibido para hacer todo lo dem&#195;&#161;s con &#195;&#169;l. Se cree que el Bulgars era el primer qui&#195;&#169;n trajo los estribos a Europa. Esto les dio ventajas sobre los otros ej&#195;&#169;rcitos europeos de este tiempo. El Bulgars pod&#195;&#173;a utilizar los arcos todav&#195;&#173;a montados en caballos. Las espadas y las lanzas tambi&#195;&#169;n fueron utilizadas en guerra. Los estribos tambi&#195;&#169;n aumentaron la estabilidad y la velocidad del jinete.</Spanish>
+		<Portuguese>[TAB]The Bulgars were highly skilled in the equestrian arts. Their army mainly consisted of horseman because of their high skill. Every Bulgar horseman had high discipline and had several horses. However, only a single horse could be used for wartime matters, and it was forbidden to do anything else with it. It is believed that the Bulgars were the first who brought the stirrups to Europe. This gave them advantages above the other European armies of this time. The Bulgars could use bows still mounted on horses. Swords and spears were also used in war. The stirrups also increased the stability and speed of the rider.</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_MAMLUK_CAVALRY</Tag>
+		<English>Mamluk Cavalry</English>
+		<French>
+			<Text>Chevalier Mamluk</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>Mamluk Cavalry</German>
+		<Italian>Mamluk Cavalry</Italian>
+		<Spanish>Mamluk Cavalry</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_MAMLUK_NAFFATUN</Tag>
+		<English>Naffatun</English>
+		<French>
+			<Text>Naffatun</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>Naffatun</German>
+		<Italian>Naffatun</Italian>
+		<Spanish>Naffatun</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_</Tag>

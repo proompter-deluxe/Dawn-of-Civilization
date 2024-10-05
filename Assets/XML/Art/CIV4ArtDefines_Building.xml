@@ -67,6 +67,16 @@
 			<Button>,Art/Interface/Buttons/Buildings/Castle.dds,Art/Interface/Buttons/Buildings_Atlas.dds,2,8</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_QALAAT</Type>
+			<LSystem>LSYSTEM_3x3</LSystem>
+			<bAnimated>0</bAnimated>
+			<fScale>1.38</fScale>
+			<fInterfaceScale>0.5</fInterfaceScale>
+			<NIF>Art/Structures/Buildings/qalaat_Military_Encampments/Military_Encampments.nif</NIF>
+			<KFM/>
+			<Button>Art/Structures/Buildings/qalaat_Military_Encampments/qalaat.dds</Button>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_SPANISH_CITADEL</Type>
 			<LSystem>LSYSTEM_3x3</LSystem>
 			<bAnimated>0</bAnimated>
@@ -1908,6 +1918,16 @@
 			<Button>Art/Structures/Buildings/Taixue/taixue.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_CHINESE_COMMANDERY</Type>
+			<LSystem>LSYSTEM_2x2</LSystem>
+			<bAnimated>0</bAnimated>
+			<fScale>0.7</fScale>
+			<fInterfaceScale>0.5</fInterfaceScale>
+			<NIF>Art/Structures/Buildings/china_commandery/asian_tax.nif</NIF>
+			<KFM/>
+			<Button>Art/Structures/Buildings/china_commandery/china_commandery.dds</Button>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_INDIAN_STEPWELL</Type>
 			<LSystem>LSYSTEM_3x3</LSystem>
 			<bAnimated>0</bAnimated>
@@ -3746,6 +3766,16 @@
 			<NIF>Art/Structures/Wonders/GreatAdobeMosque/med_african_palace.nif</NIF>
 			<KFM/>
 			<Button>Art/Structures/Wonders/GreatAdobeMosque/Djenne.dds</Button>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_BULGARIAN_STAN</Type>
+			<LSystem>LSYSTEM_2x2</LSystem>
+			<bAnimated>0</bAnimated>
+			<fScale>0.88</fScale>
+			<fInterfaceScale>0.78</fInterfaceScale>
+			<NIF>Art/Structures/Buildings/Bulgarian_Stan/Yurt_Ger.nif</NIF>
+			<KFM/>
+			<Button>,-,Art/Interface/Buttons/Warlords_Atlas_1.dds,2,3</Button>
 		</BuildingArtInfo>
 	</BuildingArtInfos>
 </Civ4ArtDefines>

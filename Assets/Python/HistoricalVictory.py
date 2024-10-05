@@ -41,6 +41,7 @@ PERSEPOLIS = "TXT_KEY_VICTORY_NAME_PERSEPOLIS"
 TENOCHTITLAN = "TXT_KEY_VICTORY_NAME_TENOCHTITLAN"
 TOLLAN = "TXT_KEY_VICTORY_NAME_TOLLAN"
 VIENNA = "TXT_KEY_VICTORY_NAME_VIENNA"
+TARNOVO = "TXT_KEY_VICTORY_NAME_TARNOVO"
 
 # city descriptors
 ANOTHER_CAPITAL = "TXT_KEY_VICTORY_NAME_ANOTHER_CAPITAL"
@@ -64,10 +65,13 @@ BRITAIN = "TXT_KEY_VICTORY_NAME_BRITAIN"
 CARIBBEAN = "TXT_KEY_VICTORY_NAME_CARIBBEAN"
 CAUCASUS = "TXT_KEY_VICTORY_NAME_CAUCASUS"
 CHINA = "TXT_KEY_VICTORY_NAME_CHINA"
+CHINA_NORTH = "TXT_KEY_VICTORY_NAME_CHINA_NORTH"
+CHINA_SOUTH = "TXT_KEY_VICTORY_NAME_CHINA_SOUTH"
 DECCAN = "TXT_KEY_VICTORY_NAME_DECCAN"
 EASTER_ISLAND = "TXT_KEY_VICTORY_NAME_EASTER_ISLAND"
 EASTERN_EUROPE = "TXT_KEY_VICTORY_NAME_EASTERN_EUROPE"
 EGYPT = "TXT_KEY_VICTORY_NAME_EGYPT"
+ELAM = "TXT_KEY_VICTORY_NAME_ELAM"
 EUROPE = "TXT_KEY_VICTORY_NAME_EUROPE"
 GAUL = "TXT_KEY_VICTORY_NAME_GAUL"
 GRAN_COLOMBIA = "TXT_KEY_VICTORY_NAME_GRAN_COLOMBIA"
@@ -85,6 +89,7 @@ MANCHURIA = "TXT_KEY_VICTORY_NAME_MANCHURIA"
 MARQUESAS = "TXT_KEY_VICTORY_NAME_MARQUESAS"
 MEDITERRANEAN = "TXT_KEY_VICTORY_NAME_MEDITERRANEAN"
 MESOPOTAMIA = "TXT_KEY_VICTORY_NAME_MESOPOTAMIA"
+MIDDLE_EAST = "TXT_KEY_VICTORY_NAME_MIDDLE_EAST"
 NEAR_EAST = "TXT_KEY_VICTORY_NAME_NEAR_EAST"
 NEW_ZEALAND = "TXT_KEY_VICTORY_NAME_NEW_ZEALAND"
 NORTH_AFRICA = "TXT_KEY_VICTORY_NAME_NORTH_AFRICA"
@@ -99,7 +104,6 @@ PERU = "TXT_KEY_VICTORY_NAME_PERU"
 PHILIPPINES = "TXT_KEY_VICTORY_NAME_PHILIPPINES"
 PONTIC_STEPPE = "TXT_KEY_VICTORY_NAME_PONTIC_STEPPE"
 PUNJAB = "TXT_KEY_VICTORY_NAME_PUNJAB"
-SCANDINAVIA = "TXT_KEY_VICTORY_NAME_SCANDINAVIA"
 SIBERIA = "TXT_KEY_VICTORY_NAME_SIBERIA"
 SIBERIAN_COAST = "TXT_KEY_VICTORY_NAME_SIBERIAN_COAST"
 SOUTH_AFRICA = "TXT_KEY_VICTORY_NAME_SOUTH_AFRICA"
@@ -107,8 +111,11 @@ SOUTH_AMERICA = "TXT_KEY_VICTORY_NAME_SOUTH_AMERICA"
 SOUTH_ASIA = "TXT_KEY_VICTORY_NAME_SOUTH_ASIA"
 SOUTH_CENTRAL_AMERICA = "TXT_KEY_VICTORY_NAME_SOUTH_CENTRAL_AMERICA"
 SRIVIJAYA = "TXT_KEY_VICTORY_NAME_SRIVIJAYA"
+TARIM_BASIN= "TXT_KEY_VICTORY_NAME_TARIM_BASIN"
 TRANSOXIANA = "TXT_KEY_VICTORY_NAME_TRANSOXIANA"
 WEST_AFRICA = "TXT_KEY_VICTORY_NAME_WEST_AFRICA"
+GREECE = "TXT_KEY_VICTORY_NAME_GREECE"
+CRIMEA = "TXT_KEY_VICTORY_NAME_CRIMEA"
 
 # area descriptors
 ANDEAN_COAST = "TXT_KEY_VICTORY_NAME_ANDEAN_COAST"
@@ -143,6 +150,7 @@ CHRISTIAN = "TXT_KEY_VICTORY_NAME_CHRISTIAN"
 EUROPEAN = "TXT_KEY_VICTORY_NAME_EUROPEAN"
 EUROPEAN_CIVILIZATION = "TXT_KEY_VICTORY_NAME_EUROPEAN_CIVILIZATION"
 LOCAL = "TXT_KEY_VICTORY_NAME_LOCAL"
+MIDDLE_EASTERN = "TXT_KEY_VICTORY_NAME_MIDDLE_EASTERN"
 
 # separators
 OR = "TXT_KEY_OR"
@@ -174,7 +182,7 @@ dGoals = {
 		FirstDiscover(iConstruction, iArithmetics, iWriting, iCalendar, iContract),
 		CityBuildingCount(city(tBabylon).named(BABYLON), wonders(), 3, by=-850),
 		All(
-			CityPopulation(city(tBabylon).named(BABYLON), 12),
+			PopulationCount(12),
 			CityCultureLevel(city(tBabylon).named(BABYLON), iCultureLevelRefined),
 			by=-700,
 		),
@@ -186,23 +194,50 @@ dGoals = {
 	),
 	iAssyria: (
 		All(
-			CityCaptureGold(250),
-			UnitLevelCount(3, 5),
-			by=-1200,
+			UnitLevelCount(3, 8),
+			by=-700,
 		),
 		Control(
 			plots.region(rMesopotamia).named(MESOPOTAMIA),
-			plots.region(rPersia).named(PERSIA),
+			plots.rectangle(tElam).named(ELAM),
 			plots.region(rLevant).named(LEVANT),
 			plots.region(rEgypt).named(EGYPT),
-			by=-900,
+			by=-650,
 		),
-		CitySpecialistCount(capital().named(CAPITAL), great_people(), 3, by=-600),
+		BuildingCount(iLibrary, 7, by=-550),
 	),
 	iChina: (
-		BuildingCount((iConfucianCathedral, 4), (iTaoistCathedral, 3), by=1000),
+		All(
+			DefeatedUnits(civs(iBarbarian, iIndependent, iIndependent2), 30),
+			AttitudeCount(AttitudeTypes.ATTITUDE_PLEASED, 1, civs=group(iCivGroupEurope).named(EUROPE)),
+			NoCityLost(),
+			by=200,
+		),
+		Control(
+			plots.region(rNorthChina).named(CHINA_NORTH),
+			plots.region(rSouthChina).named(CHINA_SOUTH),
+			plots.region(rTarimBasin).named(TARIM_BASIN),
+			by=900,
+		),
+		BuildingCount((iConfucianCathedral, 4), (iTaoistCathedral, 4), by=1350),
+	),
+	iChinaS: (
 		FirstDiscover(iCompass, iPaper, iGunpowder, iPrinting),
-		GoldenAges(4, by=1800),
+		All( # treasure ships
+			Control(
+				plots.region(rKorea),
+				plots.region(rIndochina),
+				plots.region(rIndonesia),
+				subject=VASSALS,
+				at=1450,
+			),
+			CityCount(
+					(plots.regions(*lIndia).named(INDIA), 1),
+					(plots.regions(*lAfrica).named(AFRICA), 1),
+			),
+			by=1550,
+		),
+		GoldenAges(4, by=1900),
 	),
 	iHittites: (
 		ResourceCount(sum(iCopper, iIron), 4, by=-900),
@@ -231,7 +266,7 @@ dGoals = {
 			plots.region(rMesopotamia),
 			plots.region(rPersia),
 			plots.region(rEgypt),
-			at=-330,
+			at=-320,
 		),
 		Wonders(iParthenon, iColossus, iStatueOfZeus, iTempleOfArtemis, by=-250),
 	),
@@ -275,7 +310,10 @@ dGoals = {
 		Wonder(iMoaiStatues, by=1200),
 	),
 	iPersia: (
-		RouteConnection([iRouteRoad], city(tPersepolis).named(PERSEPOLIS), plots.region(rAnatolia), by=-500),
+		Control(
+			plots.region(rGreece), 
+			by=-450,
+		),
 		BuildingCount(wonders(), 10, by=-300),
 		PopulationPercent(35, at=-300),
 	),
@@ -296,7 +334,7 @@ dGoals = {
 		ReligionSpreadCount(sum(iOrthodoxy, iCatholicism).separated(OR), 12, by=1000),
 	),
 	iRome: (
-		BuildingCount((iBarracks, 8), (iAqueduct, 6), (iArena, 5), (iForum, 4), by=-50),
+		BuildingCount((iBarracks, 8), (iAqueduct, 6), (iArena, 5), (iForum, 4), by=100),
 		CityCount(
 			(plots.region(rIberia), 2),
 			(plots.region(rFrance).named(GAUL), 3),
@@ -305,7 +343,7 @@ dGoals = {
 			(plots.regions(rGreece, rAnatolia).named(ANATOLIA), 4),
 			(plots.region(rEgypt).named(EGYPT), 3),
 			(plots.region(rLevant), 2),
-			at=100,
+			at=200,
 		),
 		FirstDiscover(iArchitecture, iPolitics, iScholarship, iMachinery, iCivilService),
 	),
@@ -492,7 +530,7 @@ dGoals = {
 			plots.regions(rLevant, rMesopotamia).named(MESOPOTAMIA),
 			plots.regions(rPersia, rKhorasan).named(PERSIA),
 			subject=VASSALS,
-			at=1300,
+			at=1350,
 		),
 		ReligionSpreadPercent(iIslam, 30),
 	),
@@ -580,6 +618,24 @@ dGoals = {
 			by=1450,
 		),
 	),
+	iBulgaria: (
+		All(
+			PillageCount(10, by=900),
+			RazeCount(2, by=900),
+			Control(
+				plots.regions(rCrimea).named(CRIMEA),
+				plots.regions(rBalkans).named(BALKANS),
+				by=1280,
+			),
+		),
+		All(
+			Discover(iWriting, by=780),
+			Discover(iLiterature, by=900),
+			BuildingCount(iOrthodoxCathedral, 1, by=1280),
+			CitySpecialistCount(start(iBulgaria).named(TARNOVO), great_people(), 2, at=1280),
+		),
+		AreaNoStateReligion(plots.regions(*lEuropeProper).named(EUROPE), iIslam, at=1500),		
+	),
 	iVietnam: (
 		GreatGenerals(2, by=1500),
 		BuildingCount(iConfucianCathedral, 1, by=1600),
@@ -613,6 +669,23 @@ dGoals = {
 		Wonders(iSanMarcoBasilica, iSistineChapel, iSantaMariaDelFiore, by=1500),
 		CultureLevelCityCount(iCultureLevelInfluential, 3, by=1600),
 		AreaPercent(plots.all().adjacent_region(rMediterraneanSea).named(MEDITERRANEAN), 65, by=1930),
+	),
+	iMamluks: (
+		All(
+			AreaNoStateReligion(plots.regions(rEgypt, rLevant, rMesopotamia, rArabia).named(MIDDLE_EAST), iCatholicism),
+			AreaNoStateReligion(plots.regions(rEgypt, rLevant, rMesopotamia, rArabia).named(MIDDLE_EAST), iOrthodoxy),
+			AllowOnly(plots.regions(rEgypt, rLevant, rMesopotamia, rArabia).named(MIDDLE_EAST), group(iCivGroupMiddleEast).named(MIDDLE_EASTERN)),
+			at=1300,	
+		),
+		All(
+			OpenBorderCount(8, at=1500),
+			TradeRouteCommerce(1600, by=1500),
+		),
+		# Mirror the England UHV
+		All(
+			RouteConnection([iRouteRailroad], plots.regions(rEgypt).coastal().named(EGYPT), plots.regions(rCape).named(SOUTH_AFRICA)),
+			by=1880,
+		),
 	),
 	iMongols: (
 		Control(plots.regions(rNorthChina, rSouthChina).named(CHINA), at=1350),
@@ -662,7 +735,7 @@ dGoals = {
 			Control(
 				plots.region(rAnatolia),
 				plots.region(rCaucasus).named(CAUCASUS),
-				plots.region(rPonticSteppe).named(PONTIC_STEPPE),
+				plots.region(rCrimea).named(CRIMEA),
 				plots.region(rLevant).named(LEVANT),
 				plots.region(rMesopotamia),
 				plots.region(rArabia),
@@ -703,8 +776,9 @@ dGoals = {
 			plots.region(rCentralEurope),
 			plots.region(rFrance),
 			plots.region(rBritain),
-			plots.region(rScandinavia),
-			plots.regions(rPoland, rBaltics, rRuthenia).named(EASTERN_EUROPE),
+			plots.region(rDenmark),
+			plots.region(rNorway),
+			plots.regions(rPoland, rBaltics, rRuthenia, rCrimea).named(EASTERN_EUROPE),
 			at=1940,
 		),
 		EraFirstDiscover((iIndustrial, 8), (iGlobal, 8)),

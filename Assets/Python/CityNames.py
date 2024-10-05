@@ -8,7 +8,7 @@ from Events import handler
 
 ### CONSTANTS ###
 
-iNumLanguages = 43
+iNumLanguages = 45
 (iLangAmerican, iLangArabic, iLangBabylonian, iLangBurmese, iLangByzantine, 
 iLangCeltic, iLangChinese, iLangCongolese, iLangDutch, iLangEgyptian, 
 iLangEgyptianArabic, iLangEnglish, iLangEthiopian, iLangFrench, iLangGerman, 
@@ -17,7 +17,7 @@ iLangJapanese, iLangKhmer, iLangKorean, iLangLatin, iLangMande,
 iLangMayan, iLangMongolian, iLangNahuatl, iLangNorse, iLangNubian, 
 iLangPersian, iLangPhoenician, iLangPolish, iLangPolynesian, iLangPortuguese, 
 iLangQuechua, iLangRussian, iLangSpanish, iLangSwedish, iLangThai, 
-iLangTibetan, iLangTurkish, iLangVietnamese) = range(iNumLanguages)
+iLangTibetan, iLangTurkish, iLangVietnamese, iLangFarsi, iLangRuthenian) = range(iNumLanguages)
 
 dLanguages = CivDict({
 	iEgypt:	[iLangEgyptian],
@@ -25,14 +25,15 @@ dLanguages = CivDict({
 	iHarappa: [iLangIndian],
 	iAssyria: [iLangBabylonian],
 	iChina: [iLangChinese],
+	iChinaS : [iLangChinese],
 	iHittites: [iLangHittite, iLangBabylonian],
 	iNubia: [iLangNubian, iLangEgyptian],
 	iGreece: [iLangGreek],
 	iIndia: [iLangIndian],
-	iPhoenicia: [iLangPhoenician],
+	iPhoenicia: [iLangPhoenician, iLangGreek],
 	iPolynesia: [iLangPolynesian],
 	iPersia: [iLangPersian],
-	iRome: [iLangLatin],
+	iRome: [iLangLatin, iLangGreek],
 	iCelts: [iLangCeltic],
 	iMaya: [iLangMayan, iLangNahuatl],
 	iDravidia: [iLangIndian],
@@ -40,7 +41,7 @@ dLanguages = CivDict({
 	iToltecs: [iLangNahuatl],
 	iKushans: [iLangIndian, iLangGreek, iLangTurkish],
 	iKorea: [iLangKorean, iLangChinese],
-	iByzantium: [iLangByzantine],
+	iByzantium: [iLangByzantine, iLangLatin, iLangGreek],
 	iMalays: [iLangIndonesian, iLangKhmer],
 	iJapan: [iLangJapanese],
 	iNorse: [iLangNorse],
@@ -56,14 +57,14 @@ dLanguages = CivDict({
 	iHolyRome: [iLangGerman],
 	iBurma: [iLangBurmese, iLangIndian],
 	iVietnam: [iLangVietnamese, iLangChinese],
-	iRus: [iLangRussian],
+	iRus: [iLangRuthenian, iLangRussian],
 	iSwahili: [iLangArabic],
 	iMali: [iLangMande],
 	iPoland: [iLangPolish, iLangRussian], 
 	iPortugal: [iLangPortuguese, iLangSpanish],
 	iInca: [iLangQuechua],
 	iItaly: [iLangItalian],
-	iMongols: [iLangMongolian, iLangTurkish, iLangChinese],
+	iMongols: [iLangMongolian, iLangTurkish, iLangChinese, iLangPersian],
 	iAztecs: [iLangNahuatl],
 	iMughals: [iLangPersian, iLangArabic, iLangIndian],
 	iThailand: [iLangThai, iLangKhmer, iLangIndonesian],
@@ -71,7 +72,7 @@ dLanguages = CivDict({
 	iRussia: [iLangRussian],
 	iOttomans: [iLangTurkish, iLangArabic],
 	iCongo: [iLangCongolese],
-	iIran: [iLangArabic, iLangPersian],
+	iIran: [iLangFarsi, iLangPersian, iLangArabic],
 	iNetherlands: [iLangDutch],
 	iGermany: [iLangGerman],
 	iAmerica: [iLangAmerican, iLangEnglish],
@@ -80,8 +81,9 @@ dLanguages = CivDict({
 	iColombia: [iLangSpanish],
 	iBrazil: [iLangPortuguese, iLangSpanish],
 	iCanada: [iLangAmerican, iLangEnglish, iLangFrench],
+	iBulgaria: [iLangRuthenian, iLangByzantine, iLangRussian], # Bulgarian/Balkans language later
+	iMamluks: [iLangEgyptianArabic, iLangArabic],
 }, [])
-
 
 ### CSV CITY NAME MAP ###
 
@@ -134,6 +136,8 @@ dLanguageNames = {
 	iLangTibetan: "Tibetan",
 	iLangTurkish: "Turkish",
 	iLangVietnamese: "Vietnamese",
+	iLangFarsi: "Farsi",
+	iLangRuthenian: "Ruthenian"
 }
 
 dTranslations = dict((iLanguage, FileDict("Translations/%s.csv" % dLanguageNames[iLanguage])) for iLanguage in range(iNumLanguages))
@@ -250,13 +254,14 @@ def getSpecialLanguages(identifier):
 	if player(identifier).getID() < 0:
 		return None
 	
-	if iCiv == iEgypt:
-		if player(identifier).getStateReligion() == iIslam:
-			return [iLangEgyptianArabic, iLangArabic]
-	
-	elif iCiv == iInca:
+	if iCiv == iInca:
 		if data.civs[iCiv].iResurrections > 0:
 			return [iLangSpanish]
+	elif iCiv == iPhoenicia:
+		if player(iCiv).getPeriod() == iPeriodTunisia:
+			return [iLangArabic]
+	elif iCiv == iPersia and player(identifier).getStateReligion() == iIslam:
+		return [iLangFarsi, iLangArabic, iLangPersian]
 	
 	return None
 

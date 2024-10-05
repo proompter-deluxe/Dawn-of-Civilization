@@ -115,15 +115,15 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_REGION_11</Tag>
-		<English>Scandinavia</English>
+		<English>Sweden</English>
 		<French>
-			<Text>Scandinavie</Text>
+			<Text>Su&#232;de</Text>
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>Skandinavien</German>
-		<Italian>Scandinavia</Italian>
-		<Spanish>Scandinavia</Spanish>
+		<German>Sweden</German>
+		<Italian>Sweden</Italian>
+		<Spanish>Sweden</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_REGION_12</Tag>
@@ -773,7 +773,30 @@
 		<Italian>Hindu Kush</Italian>
 		<Spanish>Hindu Kush</Spanish>
 	</TEXT>
-	
+	<TEXT>
+		<Tag>TXT_KEY_REGION_83</Tag>
+		<English>Denmark</English>
+		<French>Danemark</French>
+		<German>Denmark</German>
+		<Italian>Denmark</Italian>
+		<Spanish>Denmark</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_REGION_84</Tag>
+		<English>Norway</English>
+		<French>Norv&#232;ge</French>
+		<German>Norway</German>
+		<Italian>Norway</Italian>
+		<Spanish>Norway</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_REGION_85</Tag>
+		<English>Crimea</English>
+		<French>Crim&#233;e</French>
+		<German>Crimea</German>
+		<Italian>Crimea</Italian>
+		<Spanish>Crimea</Spanish>
+	</TEXT>
 	
 	<TEXT>
 		<Tag>TXT_KEY_REGION_100</Tag>

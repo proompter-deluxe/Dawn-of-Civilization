@@ -1,4 +1,4 @@
-RFC Dawn of Civilization Version 1.0
+RFC Dawn of Civilization Cross Overhaul Version 1.0
 by Leoreth (civfanatics.com)
 
 This is a modmod for Rhye's and Fall of Civilization.
@@ -23,7 +23,7 @@ II.2. Civilization changes
 
 # Another inspiration that comes from RFCC is to replace Carthage with the Phoenicians, spawning in Sur in 1200 BC. The main reason is Carthage's history as Phoenicia's colony. I adopted Corossol's UU, the Bireme (a galley that can cross enemy territory and gets +25% against other ancient naval units), but also changed the UB to a Glassmith. This Forge replacement adds an additional trade route at a loss of production bonuses and represents Phoenicia's achievements in the early production of colored glass.
 # The Netherlands now spawn in 1500 AD with appropriate techs (including Optics and all requirements for Astronomy). This is the earliest time that's historically possible, since there was no independent Dutch state until the 16th century. Their late spawn also helps the gameplay of medieval Europe because of reduced messiness. Unhistorical, but common occurances such as Dutch Groningen in Jutland are now impossible, as Germany now tends to settle Hamburg or Kiel.
-# The Vikings now spawn at Oslo instead of Nidaros/Trondheim. This was to make them more involved into European politics (not sure if that worked), and to help them with city placement, especially in southern Scandinavia. And there really is a Stockholm, Kalmar or Göteborg more often (still no Viking Copenhagen, though).
+# The Vikings now spawn at Oslo instead of Nidaros/Trondheim. This was to make them more involved into European politics (not sure if that worked), and to help them with city placement, especially in southern Scandinavia. And there really is a Stockholm, Kalmar or Gï¿½teborg more often (still no Viking Copenhagen, though).
 # The Viking dynamic civilization names now change to Sweden after entering the Renaissance.
 
 II.3. Unit changes
@@ -74,7 +74,7 @@ II.6. Leaderhead changes
 # Germany: added Charles V (personality Charlemagne) to represent medieval/renaissance Germany. Thus: Charles V -> Frederick -> Bismarck
 # Russia: added Ivan IV (personality: Alexander) to represent medieval Russia. Thus: Ivan IV -> Peter -> Catherine -> Stalin
 # Portugal: added Afonso Henriques to represent medieval Portugal. Thus: Afonso -> Joao
-# Turkey: added Mustafa Kemal Atatürk to represent modern Turkey. Thus: Mehmed -> Suleiman -> Atatürk
+# Turkey: added Mustafa Kemal Atatï¿½rk to represent modern Turkey. Thus: Mehmed -> Suleiman -> Atatï¿½rk
 
 II.7. Graphic changes
 
@@ -167,7 +167,7 @@ Most of this mod was done by others and I was only the one who patched it togeth
 # Panopticon for his Reformation mod as well as the help and code for leaderhead switches
 # Corossol for his inspiration and provided code I could take a look at ;) as well as the Bireme graphics (courtesy Ancient Mediterranean mod) and those related to Zoroastrianism (buildings and buttons)
 # The development team of RFC Europe for the Culverin graphics and button (cannon in RFCE) and the Bireme button (Venetian Galleas in RFCE), as well as several civic images
-# Ekmek (Akbar, Meiji, Dido/Elishat, Atatürk leaderheads)
+# Ekmek (Akbar, Meiji, Dido/Elishat, Atatï¿½rk leaderheads)
 # Amra (Akbar leaderhead)
 # Methyl Orange (Jimmu leaderhead)
 # bernie14 (Haile Selassie leaderhead)
@@ -184,4 +184,4 @@ V. Contact
 If you'd like to contact me, you can do so by sending a PM to my account on civfanatics.com (Leoreth), sending an Email to daniel.guen@yahoo.de, or by visiting the thread dedicated to this mod in the RFC modmods subforum on civfanatics, http://forums.civfanatics.com/forumdisplay.php?f=330.
 Criticism, error reports, suggestions, hate, praise - everything is welcome *g*
 
-I hope you enjoy RFC Dawn of Civilization :)
+I hope you enjoy RFC Dawn of Civilization Cross Overhaul :)

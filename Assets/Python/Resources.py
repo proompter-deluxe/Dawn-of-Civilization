@@ -70,12 +70,15 @@ dResourcesDict = {
 	(90, 19)  : (400,   iBanana),   # Madagascar
 	(90, 18)  : (400,   iSugar),	# Madagascar
 	(99, 43)  : (400,   iCotton),   # Sindh
-	(78, 56)  : (550,   iSilk),     # Thrace
+	(79, 53)  : (550,   iSilk),     # Anatolia
 	(92, 47)  : (600,   iCitrus),   # Persia
 	(81, 30)  : (600,   iBanana),   # Central Africa
 	(76, 27)  : (600,   iBanana),   # Central Africa
 	(75, 31)  : (600,   iBanana),   # Central Africa
 	(0, 43)   : (600,   iSugar),	# Hawaii
+	(77, 57)  : (660,   iHorse),	# Bulgaria
+	(76, 56)  : (660,   iSheep),	# Bulgaria
+	(74, 57)  : (660,   iSheep),	# Bulgaria
 	(62, 48)  : (700,   iCitrus),   # Algeria
 	(57, 46)  : (700,   iCitrus),   # Morocco
 	(57, 48)  : (700,   iCitrus),   # Andalusia
@@ -262,6 +265,9 @@ dSpawnResourcesDict = {
 }
 
 dRemovedResourcesDict = {
+	(89, 45)  : -1500,# Wheat in Sumeria, Gulf Coast sea level changes affects Ur/Uruk/Eridu area
+	(78, 48)  : -1100,# Olives in Crete, Bronze Age collapse
+	(78, 49)  : -1100,# Fish in Crete, Bronze Age collapse
 	(88, 51)  : -200, # Olives in Assyria
 	(75, 51)  :  -50, # Silver in Greece
 	(77, 55)  :  -50, # Gold in Macedonia
@@ -328,7 +334,7 @@ dCivGroupResourcesDict = {
 	(60, 56) : (iCivGroupMediterranean, iWine, 600),
 	(63, 59) : (iCivGroupMediterranean, iWine, 600),
 	(65, 60) : (iCivGroupMediterranean, iWine, 600),
-	(72, 59) : (iCivGroupMediterranean, iWine, 600),
+	(71, 59) : (iCivGroupMediterranean, iWine, 600),
 }
 
 

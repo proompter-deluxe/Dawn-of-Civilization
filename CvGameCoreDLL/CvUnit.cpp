@@ -14431,7 +14431,9 @@ int CvUnit::getOriginalArtStyle(const CvPlot* pPlot) const
 	case REGION_CENTRAL_EUROPE:
 	case REGION_POLAND:
 		return GC.getCivilizationInfo(HOLY_ROME).getUnitArtStyleType();
-	case REGION_SCANDINAVIA:
+	case REGION_DENMARK:
+	case REGION_SWEDEN:
+	case REGION_NORWAY:
 	case REGION_BALTICS:
 		return GC.getCivilizationInfo(NORSE).getUnitArtStyleType();
 	case REGION_RUTHENIA:

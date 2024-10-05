@@ -15,14 +15,17 @@ iThreshold = 100
 iMinValue = 30
 
 iRomeCarthageYear = -220
-tRomeCarthageTL = (60, 45)
+tRomeCarthageTL = (60, 44)
 tRomeCarthageBR = (70, 49)
 
-iRomeGreeceYear = -150
-tRomeGreeceTL = (73, 49)
-tRomeGreeceBR = (78, 56)
+tRomeSpainTL = (56, 48)
+tRomeSpainBR = (61, 53)
 
-iRomeMesopotamiaYear = -100
+iRomeGreeceYear = -150
+tRomeGreeceTL = (74, 49)
+tRomeGreeceBR = (78, 55)
+
+iRomeMesopotamiaYear = -75
 tRomeMesopotamiaTL = (82, 44)
 tRomeMesopotamiaBR = (90, 50)
 
@@ -30,37 +33,50 @@ iRomeAnatoliaYear = -100
 tRomeAnatoliaTL = (79, 51)
 tRomeAnatoliaBR = (88, 55)
 
-iRomeCeltiaYear = -50
+iRomeCeltiaYear = -60
 tRomeCeltiaTL = (56, 55)
-tRomeCeltiaBR = (64, 62)
+tRomeCeltiaBR = (67, 62)
 
-iRomeEgyptYear = 0
+iRomeEgyptYear = -10
 tRomeEgyptTL = (76, 40)
 tRomeEgyptBR = (82, 45)
 
+iRomeBritainYear = 50
+tRomeBritainTL = (55, 62)
+tRomeBritainBR = (59, 67)
+
 # following setup: iPlayer, iPreferredTarget, TL, BR, iNumTargets, iStartYear, iTurnInterval
-tConquestRomeCarthage = (0, iRome, iCarthage, tRomeCarthageTL, tRomeCarthageBR, 2, iRomeCarthageYear, 10)
+tConquestRomeCarthageInSpain = (22, iRome, iCarthage, tRomeSpainTL, tRomeSpainBR, 3, iRomeCarthageYear, 10)
+tConquestRomeCarthage = (0, iRome, iCarthage, tRomeCarthageTL, tRomeCarthageBR, 4, iRomeCarthageYear + 10, 30)
 tConquestRomeGreece = (1, iRome, iGreece, tRomeGreeceTL, tRomeGreeceBR, 2, iRomeGreeceYear, 10)
-tConquestRomeAnatolia = (2, iRome, iGreece, tRomeAnatoliaTL, tRomeAnatoliaBR, 3, iRomeAnatoliaYear, 10)
+tConquestRomeAnatolia = (2, iRome, iGreece, tRomeAnatoliaTL, tRomeAnatoliaBR, 3, iRomeAnatoliaYear, 20)
 tConquestRomeCelts = (3, iRome, iCelts, tRomeCeltiaTL, tRomeCeltiaBR, 2, iRomeCeltiaYear, 10)
 tConquestRomeEgypt = (4, iRome, iEgypt, tRomeEgyptTL, tRomeEgyptBR, 3, iRomeEgyptYear, 10)
+tConquestRomeBritain = (21, iRome, iCelts, tRomeBritainTL, tRomeBritainBR, 2, iRomeBritainYear, 20)
 
-iAlexanderYear = -340
-tGreeceMesopotamiaTL = (81, 45)
-tGreeceMesopotamiaBR = (90, 55)
+iAlexanderYear = -330
+tGreeceAnatoliaTL = (79, 51) 
+tGreeceAnatoliaBR = (86, 53) # ignore the top 2 rows of Anatolia
+tGreeceLevantTL = (83, 44)
+tGreeceLevantBR = (86, 51)
+tGreeceMesopotamiaTL = (86, 44)
+tGreeceMesopotamiaBR = (90, 50)
 tGreeceEgyptTL = (76, 40)
 tGreeceEgyptBR = (82, 45)
 tGreecePersiaTL = (91, 43)
 tGreecePersiaBR = (97, 52)
 
-tConquestGreeceMesopotamia = (5, iGreece, iBabylonia, tGreeceMesopotamiaTL, tGreeceMesopotamiaBR, 3, iAlexanderYear, 20)
-tConquestGreeceEgypt = (6, iGreece, iEgypt, tGreeceEgyptTL, tGreeceEgyptBR, 3, iAlexanderYear, 20)
-tConquestGreecePersia = (7, iGreece, iPersia, tGreecePersiaTL, tGreecePersiaBR, 3, iAlexanderYear, 20)
+tConquestGreeceAnatolia = (19, iGreece, iPersia, tGreeceAnatoliaTL, tGreeceAnatoliaBR, 10, iAlexanderYear, 10)
+tConquestGreeceLevant = (20, iGreece, iPersia, tGreeceLevantTL, tGreeceLevantBR, 10, iAlexanderYear + 1, 20)
+tConquestGreeceEgypt = (6, iGreece, iEgypt, tGreeceEgyptTL, tGreeceEgyptBR, 10, iAlexanderYear + 2, 20)
+tConquestGreeceMesopotamia = (5, iGreece, iPersia, tGreeceMesopotamiaTL, tGreeceMesopotamiaBR, 10, iAlexanderYear + 3, 20)
+tConquestGreecePersia = (7, iGreece, iPersia, tGreecePersiaTL, tGreecePersiaBR, 10, iAlexanderYear + 4, 30)
 
 iCholaSumatraYear = 1030
 tCholaSumatraTL = (115, 26)
 tCholaSumatraBR = (121, 31)
 
+# currently inactive
 tConquestCholaSumatra = (8, iDravidia, iMalays, tCholaSumatraTL, tCholaSumatraBR, 1, iCholaSumatraYear, 10)
 
 iSpainMoorsYear = 1200
@@ -92,20 +108,73 @@ tMongolsPersiaBR = (98, 52)
 
 tConquestMongolsPersia = (13, iMongols, iTurks, tMongolsPersiaTL, tMongolsPersiaBR, 7, iMongolsPersiaYear, 10)
 
+iChinaIndiesYear = -240
+tChinaIndiesTL = (118, 49)
+tChinaIndiesBR = (128, 56)
+
+tConquestChinaIndependents = (14, iChina, iIndependent, tChinaIndiesTL, tChinaIndiesBR, 3, iChinaIndiesYear, 20)
+
+iFranceCrusadesYear = 1090
+iHolyRomeCrusadesYear = 1190
+iEnglandCrusadesYear = 1190
+
+tHolyLandTL = (84, 44)
+tHolyLandBR = (85, 51)
+
+tConquestFranceCrusades = (15, iFrance, iArabia, tHolyLandTL, tHolyLandBR, 2, iFranceCrusadesYear, 10)
+tConquestHolyRomeCrusades = (16, iHolyRome, iMamluks, tHolyLandTL, tHolyLandBR, 1, iHolyRomeCrusadesYear, 5)
+tConquestEnglandCrusades = (17, iEngland, iMamluks, tHolyLandTL, tHolyLandBR, 1, iEnglandCrusadesYear, 5)
+
+iSuiUnificationYear = 588
+tSouthChinaTL = (124, 43)
+tSouthChinaBR = (131, 50)
+
+tConquestSuiUnification = (18, iChina, iChinaS, tSouthChinaTL, tSouthChinaBR, 3, iSuiUnificationYear, 10)
+
+iArabCarthageConquestYear = 690
+tTunisiaTL = (66, 44)
+tTunisiaBR = (69, 48)
+
+tConquestArabiaCarthage = (23, iArabia, iPhoenicia, tTunisiaTL, tTunisiaBR, 3, iArabCarthageConquestYear, 10)
+
+iArabPersiaConquestYear = 650
+tArabsPersiaTL = (92, 43)
+tArabsPersiaBR = (95, 50)
+
+tConquestArabiaPersia = (24, iArabia, iPersia, tArabsPersiaTL, tArabsPersiaBR, 3, iArabPersiaConquestYear, 10)
+
+iArabSindConquestYear = 710
+tArabsSindTL = (98, 42)
+tArabsSindBR = (102, 47)
+
+tConquestArabiaSind = (25, iArabia, iKushans, tArabsSindTL, tArabsSindBR, 2, iArabSindConquestYear, 15)
+
 lConquests = [
+	tConquestRomeCarthageInSpain,
 	tConquestRomeCarthage, 
 	tConquestRomeGreece, 
 	tConquestRomeAnatolia, 
 	tConquestRomeCelts, 
-	tConquestRomeEgypt, 
+	tConquestRomeEgypt,
+	tConquestRomeBritain,
+	tConquestGreeceAnatolia,
+	tConquestGreeceLevant,
 	tConquestGreeceMesopotamia, 
 	tConquestGreeceEgypt, 
 	tConquestGreecePersia, 
-	tConquestSpainMoors, 
+	#tConquestSpainMoors, # --> now that Moors have Almoravid barbarians to contend with, we don't need this
 	tConquestTurksPersia, 
 	tConquestTurksAnatolia, 
 	tConquestEnglandIreland,
 	tConquestMongolsPersia,
+	tConquestChinaIndependents,
+	tConquestFranceCrusades,
+	tConquestHolyRomeCrusades,
+	tConquestEnglandCrusades,
+	tConquestSuiUnification,
+	tConquestArabiaCarthage,
+	tConquestArabiaPersia,
+	tConquestArabiaSind
 ]
 
 
@@ -141,8 +210,30 @@ def startMinorWars(iGameTurn):
 
 @handler("BeginGameTurn")
 def checkConquests():
+	# if this gets much bigger, convert to dict
 	for tConquest in lConquests:
-		checkConquest(tConquest)
+		if tConquest[0] == tConquestGreeceLevant[0]:
+			# before "Alexander" can conquer the Levant, he has to conquer Anatolia
+			checkConquest(tConquest, tConquestGreeceAnatolia)
+		elif tConquest[0] == tConquestGreeceEgypt[0] or tConquest[0] == tConquestGreeceMesopotamia[0] :
+			# before "Alexander" can conquer Egypt or Mesopotamia, he has to conquer the Levant
+			checkConquest(tConquest, tConquestGreeceLevant)
+		elif tConquest[0] == tConquestGreecePersia[0]:
+			# before "Alexander" can conquer Persia, he has to conquer Mesopotamia
+			checkConquest(tConquest, tConquestGreeceMesopotamia)
+		elif tConquest[0] == tConquestHolyRomeCrusades[0] or tConquest[0] == tConquestEnglandCrusades[0]:
+			# Don't launch "Third Crusade" if Holy Land still firmly under French control
+			checkConquest(tConquest, tConquestFranceCrusades, True)
+		elif tConquest[0] == tConquestRomeAnatolia[0]:
+			# Rome needs Greece before Anatolia
+			checkConquest(tConquest, tConquestRomeGreece)
+		elif tConquest[0] == tConquestRomeCarthage[0]:
+			# Rome needs Spain before attacking North Africa
+			checkConquest(tConquest, tConquestRomeCarthageInSpain)
+		elif tConquest[0] == tConquestArabiaSind[0]:
+			checkConquest(tConquest, tConquestArabiaPersia)
+		else:
+			checkConquest(tConquest)
 		
 		
 @handler("BeginGameTurn")
@@ -184,15 +275,13 @@ def resetAggressionLevel(bWar, iTeam, iOtherTeam):
 		data.players[iOtherTeam].iAggressionLevel = 0
 
 		
-def checkConquest(tConquest, tPrereqConquest = (), iWarPlan = WarPlanTypes.WARPLAN_TOTAL):
+def checkConquest(tConquest, tPrereqConquest = (), bInvertPrereqConquestCondition = False, iWarPlan = WarPlanTypes.WARPLAN_TOTAL):
 	iID, iCiv, iPreferredTargetCiv, tTL, tBR, iNumTargets, iYear, iIntervalTurns = tConquest
 	
 	iPlayer = slot(iCiv)
 	if iPlayer < 0:
 		return
 		
-	iPreferredTarget = slot(iPreferredTargetCiv)
-
 	if player(iPlayer).isHuman():
 		return
 		
@@ -202,18 +291,12 @@ def checkConquest(tConquest, tPrereqConquest = (), iWarPlan = WarPlanTypes.WARPL
 	if team(iPlayer).isAVassal():
 		return
 	
+	if not iID in data.lConquest:
+		data.lConquest[iID] = False
+
 	if data.lConquest[iID]:
 		return
-		
-	if iPreferredTarget >= 0 and player(iPreferredTarget).isExisting() and team(iPreferredTarget).isVassal(iPlayer):
-		return
-	
-	if tPrereqConquest and not isConquered(tPrereqConquest):
-		return
-	
-	if iCiv == iSpain and (iPreferredTarget < 0 or player(iPreferredTarget).isHuman()):
-		return
-	
+
 	iStartTurn = year(iYear) + turns(data.iSeed % 10 - 5)
 	
 	if turn() == iStartTurn - turns(5):
@@ -222,10 +305,26 @@ def checkConquest(tConquest, tPrereqConquest = (), iWarPlan = WarPlanTypes.WARPL
 	if turn() < player(iCiv).getLastBirthTurn() + turns(3): 
 		return
 	
-	if not (iStartTurn <= turn() <= iStartTurn + iIntervalTurns):
+	if not (iStartTurn <= turn() <= iStartTurn + turns(iIntervalTurns)):
+		return
+		
+	iPreferredTarget = slot(iPreferredTargetCiv)
+
+	if iPreferredTarget >= 0 and player(iPreferredTarget).isExisting() and team(iPreferredTarget).isVassal(iPlayer):
 		return
 	
-	spawnConquerors(iPlayer, iPreferredTarget, tTL, tBR, iNumTargets, iYear, iIntervalTurns, iWarPlan)
+	if tPrereqConquest and not bInvertPrereqConquestCondition and not isConquered(tPrereqConquest):
+		#message(active(), 'Failing to start conquest from %s1 because prereq conquest not met.', name(iPlayer))
+		return
+
+	if tPrereqConquest and bInvertPrereqConquestCondition and isConquered(tPrereqConquest):
+		#message(active(), 'INVERTED CONQUEST CONDITION: Failing to start conquest from %s1 because prereq conquest is met.', name(iPlayer))
+		return
+	
+	#if iCiv == iSpain and (iPreferredTarget < 0 or player(iPreferredTarget).isHuman()):
+	#	return
+	
+	spawnConquerors(iPlayer, iPreferredTarget, tTL, tBR, iNumTargets, iWarPlan)
 	data.lConquest[iID] = True
 
 
@@ -238,10 +337,16 @@ def warnConquest(iPlayer, iCiv, iPreferredTargetCiv, tTL, tBR):
 
 
 def isConquered(tConquest):
-	iID, iPlayer, iPreferredTarget, tTL, tBR, iNumTargets, iYear, iIntervalTurns = tConquest
-
+	iID, iCiv, iPreferredTargetCiv, tTL, tBR, iNumTargets, iYear, iIntervalTurns = tConquest
+	
+	iPlayer = slot(iCiv)
 	iNumMinorCities = 0
-	for city in cities.start(tTL).end(tBR):
+	lAreaCities = cities.rectangle(tTL, tBR)
+
+	# if empty, assume conquered
+	if len(lAreaCities) == 0: return True
+
+	for city in lAreaCities:
 		if city.getOwner() in players.minor(): iNumMinorCities += 1
 		elif city.getOwner() != iPlayer: return False
 		
@@ -263,8 +368,12 @@ def conquerorWar(iPlayer, iTarget, iWarPlan):
 		declareWar(iPlayer, iTarget, iWarPlan)
 
 	
-def spawnConquerors(iPlayer, iPreferredTarget, tTL, tBR, iNumTargets, iYear, iIntervalTurns, iWarPlan = WarPlanTypes.WARPLAN_TOTAL):
+def spawnConquerors(iPlayer, iPreferredTarget, tTL, tBR, iNumTargets, iWarPlan = WarPlanTypes.WARPLAN_TOTAL):
 	iCiv = civ(iPlayer)
+	pPlayer = player(iPlayer)
+	
+	iEra = pPlayer.getCurrentEra()
+	iGameEra = game.getCurrentEra()
 	
 	if not player(iPlayer).isExisting():
 		for iTech in getResurrectionTechs(iPlayer):
@@ -281,33 +390,43 @@ def spawnConquerors(iPlayer, iPreferredTarget, tTL, tBR, iNumTargets, iYear, iIn
 	for iOwner in owners:
 		conquerorWar(iPlayer, iOwner, iWarPlan)
 		message(iOwner, 'TXT_KEY_UP_CONQUESTS_TARGET', name(iPlayer))
-		
-	for city in targetCities:
-		iExtra = 0
-		if active() not in [iPlayer, city.getOwner()]: 
-			iExtra += 1
-			
+		message(active(), 'TXT_KEY_UP_CONQUESTS_TARGET_ALL', name(iPlayer), name(iOwner))
+	
+	iExtra = 0
+	if iEra >= iMedieval or iCiv == iArabia:
+		iExtra += 1
+
+	for city in targetCities:	
 		if not player(iPlayer).isHuman():
-			if iCiv == iMongols:
-				iExtra += 1
+			# we want to be sure that the AI can fund these conquerors for at least a few turns
+			player(iPlayer).changeGold(20)
 		
 		tPlot = findNearestLandPlot(city, iPlayer)
 		
-		dConquestUnits = {
-			iCityAttack: 2 + iExtra + max(0, iExtra-2),
-			iCitySiege: 1 + min(1, iExtra),
-			iDefend: 1,
-		}
-		createRoleUnits(iPlayer, tPlot, dConquestUnits.items())
-		
 		if iCiv == iGreece:
-			makeUnit(iPlayer, iCompanion, tPlot, UnitAITypes.UNITAI_ATTACK_CITY)
-		
-		if iCiv in [iSpain, iEngland]:
-			createRoleUnit(iPlayer, tPlot, iShockCity, 2*iExtra)
-			
-		if iCiv == iTurks:
-			createRoleUnit(iPlayer, tPlot, iShockCity, 2+iExtra)
+			makeUnits(iPlayer, iCatapult, tPlot, 2, UnitAITypes.UNITAI_ATTACK_CITY)
+			makeUnits(iPlayer, iHoplite, tPlot, 3, UnitAITypes.UNITAI_ATTACK_CITY)
+			makeUnits(iPlayer, iCompanion, tPlot, 2, UnitAITypes.UNITAI_ATTACK_CITY)
+			makeUnits(iPlayer, iArcher, tPlot, 1)
+		elif iCiv in [iSpain, iEngland, iHolyRome, iFrance, iPoland, iPortugal, iItaly, iNorse, iRus, iRussia, iSweden]:
+			dConquestUnits = {
+				iCityAttack: 1 + iExtra,
+				iCitySiege: 2 + iExtra,
+				iDefend: 1,
+				iShockCity: 1 + iExtra,
+				iCounter: 1 + iExtra,
+			}
+			createRoleUnits(iPlayer, tPlot, dConquestUnits.items())
+		else:
+			dConquestUnits = {
+				iCityAttack: 2 + iExtra,
+				iCitySiege: 2 + iExtra,
+				iDefend: 1,
+			}
+			createRoleUnits(iPlayer, tPlot, dConquestUnits.items())
+	
+			if iCiv in [iTurks, iMongols]:
+				createRoleUnit(iPlayer, tPlot, iShockCity, 2)
 
 
 def declareWar(iPlayer, iTarget, iWarPlan):
