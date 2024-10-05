@@ -404,9 +404,9 @@ def spawnConquerors(iPlayer, iPreferredTarget, tTL, tBR, iNumTargets, iWarPlan =
 		tPlot = findNearestLandPlot(city, iPlayer)
 		
 		if iCiv == iGreece:
-			makeUnits(iPlayer, iCatapult, tPlot, 3, UnitAITypes.UNITAI_ATTACK_CITY)
+			makeUnits(iPlayer, iCatapult, tPlot, 2, UnitAITypes.UNITAI_ATTACK_CITY)
 			makeUnits(iPlayer, iHoplite, tPlot, 3, UnitAITypes.UNITAI_ATTACK_CITY)
-			makeUnits(iPlayer, iCompanion, tPlot, 3, UnitAITypes.UNITAI_ATTACK_CITY)
+			makeUnits(iPlayer, iCompanion, tPlot, 2, UnitAITypes.UNITAI_ATTACK_CITY)
 			makeUnits(iPlayer, iArcher, tPlot, 1)
 		elif iCiv in [iSpain, iEngland, iHolyRome, iFrance, iPoland, iPortugal, iItaly, iNorse, iRus, iRussia, iSweden]:
 			dConquestUnits = {
