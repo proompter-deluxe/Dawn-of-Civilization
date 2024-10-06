@@ -35517,7 +35517,7 @@
 			<ArtDefineTag>ART_DEF_LEADER_SALADIN</ArtDefineTag>
 			<iWonderConstructRand>40</iWonderConstructRand>
 			<iBaseAttitude>0</iBaseAttitude>
-			<iBasePeaceWeight>4</iBasePeaceWeight>
+			<iBasePeaceWeight>3</iBasePeaceWeight>
 			<iPeaceWeightRand>3</iPeaceWeightRand>
 			<iWarmongerRespect>1</iWarmongerRespect>
 			<iEspionageWeight>100</iEspionageWeight>
@@ -35526,19 +35526,19 @@
 			<iTechTradeKnownPercent>25</iTechTradeKnownPercent>
 			<iMaxGoldTradePercent>5</iMaxGoldTradePercent>
 			<iMaxGoldPerTurnTradePercent>10</iMaxGoldPerTurnTradePercent>
-			<iMaxWarRand>200</iMaxWarRand>
+			<iMaxWarRand>100</iMaxWarRand>
 			<iMaxWarNearbyPowerRatio>110</iMaxWarNearbyPowerRatio>
 			<iMaxWarDistantPowerRatio>80</iMaxWarDistantPowerRatio>
-			<iMaxWarMinAdjacentLandPercent>0</iMaxWarMinAdjacentLandPercent>
-			<iLimitedWarRand>100</iLimitedWarRand>
+			<iMaxWarMinAdjacentLandPercent>2</iMaxWarMinAdjacentLandPercent>
+			<iLimitedWarRand>90</iLimitedWarRand>
 			<iLimitedWarPowerRatio>100</iLimitedWarPowerRatio>
-			<iDogpileWarRand>50</iDogpileWarRand>
+			<iDogpileWarRand>30</iDogpileWarRand>
 			<iMakePeaceRand>10</iMakePeaceRand>
 			<iDeclareWarTradeRand>40</iDeclareWarTradeRand>
 			<iDemandRebukedSneakProb>0</iDemandRebukedSneakProb>
 			<iDemandRebukedWarProb>25</iDemandRebukedWarProb>
 			<iRazeCityProb>0</iRazeCityProb>
-			<iBuildUnitProb>25</iBuildUnitProb>
+			<iBuildUnitProb>40</iBuildUnitProb>
 			<iBaseAttackOddsChange>0</iBaseAttackOddsChange>
 			<iAttackOddsChangeRand>8</iAttackOddsChangeRand>
 			<iWorseRankDifferenceAttitudeChange>0</iWorseRankDifferenceAttitudeChange>
@@ -36073,7 +36073,7 @@
 			<ArtDefineTag>ART_DEF_LEADER_BAIBARS</ArtDefineTag>
 			<iWonderConstructRand>10</iWonderConstructRand>
 			<iBaseAttitude>0</iBaseAttitude>
-			<iBasePeaceWeight>4</iBasePeaceWeight>
+			<iBasePeaceWeight>2</iBasePeaceWeight>
 			<iPeaceWeightRand>3</iPeaceWeightRand>
 			<iWarmongerRespect>1</iWarmongerRespect>
 			<iEspionageWeight>100</iEspionageWeight>
@@ -36082,20 +36082,20 @@
 			<iTechTradeKnownPercent>40</iTechTradeKnownPercent>
 			<iMaxGoldTradePercent>5</iMaxGoldTradePercent>
 			<iMaxGoldPerTurnTradePercent>10</iMaxGoldPerTurnTradePercent>
-			<iMaxWarRand>100</iMaxWarRand>
-			<iMaxWarNearbyPowerRatio>110</iMaxWarNearbyPowerRatio>
-			<iMaxWarDistantPowerRatio>70</iMaxWarDistantPowerRatio>
-			<iMaxWarMinAdjacentLandPercent>1</iMaxWarMinAdjacentLandPercent>
-			<iLimitedWarRand>100</iLimitedWarRand>
-			<iLimitedWarPowerRatio>100</iLimitedWarPowerRatio>
+			<iMaxWarRand>60</iMaxWarRand>
+			<iMaxWarNearbyPowerRatio>115</iMaxWarNearbyPowerRatio>
+			<iMaxWarDistantPowerRatio>90</iMaxWarDistantPowerRatio>
+			<iMaxWarMinAdjacentLandPercent>2</iMaxWarMinAdjacentLandPercent>
+			<iLimitedWarRand>70</iLimitedWarRand>
+			<iLimitedWarPowerRatio>110</iLimitedWarPowerRatio>
 			<iDogpileWarRand>25</iDogpileWarRand>
 			<iMakePeaceRand>60</iMakePeaceRand>
 			<iDeclareWarTradeRand>50</iDeclareWarTradeRand>
 			<iDemandRebukedSneakProb>10</iDemandRebukedSneakProb>
 			<iDemandRebukedWarProb>25</iDemandRebukedWarProb>
 			<iRazeCityProb>0</iRazeCityProb>
-			<iBuildUnitProb>40</iBuildUnitProb>
-			<iBaseAttackOddsChange>2</iBaseAttackOddsChange>
+			<iBuildUnitProb>35</iBuildUnitProb>
+			<iBaseAttackOddsChange>3</iBaseAttackOddsChange>
 			<iAttackOddsChangeRand>8</iAttackOddsChangeRand>
 			<iWorseRankDifferenceAttitudeChange>0</iWorseRankDifferenceAttitudeChange>
 			<iBetterRankDifferenceAttitudeChange>2</iBetterRankDifferenceAttitudeChange>
