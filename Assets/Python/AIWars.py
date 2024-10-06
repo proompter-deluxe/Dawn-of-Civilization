@@ -119,7 +119,7 @@ iHolyRomeCrusadesYear = 1190
 iEnglandCrusadesYear = 1190
 
 tHolyLandTL = (84, 44)
-tHolyLandBR = (85, 51)
+tHolyLandBR = (86, 51)
 
 tConquestFranceCrusades = (15, iFrance, iArabia, tHolyLandTL, tHolyLandBR, 2, iFranceCrusadesYear, 10)
 tConquestHolyRomeCrusades = (16, iHolyRome, iMamluks, tHolyLandTL, tHolyLandBR, 1, iHolyRomeCrusadesYear, 5)
