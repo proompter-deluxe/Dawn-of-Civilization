@@ -779,6 +779,29 @@ EndPlot
 BeginPlot
 	x=75,y=54
 	RouteType=ROUTE_ROMAN_ROAD
+	BeginUnit
+		UnitType=UNIT_SPEARMAN
+		UnitOwner=CIVILIZATION_BYZANTIUM
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_ARCHER
+		UnitOwner=CIVILIZATION_BYZANTIUM
+	EndUnit
+	BeginCity
+		CityOwner=CIVILIZATION_BYZANTIUM
+		CityName=Thessaloniki
+		CityPopulation=4
+		BuildingType=BUILDING_GRANARY
+		BuildingType=BUILDING_ORTHODOX_MONASTERY
+		ReligionType=RELIGION_ORTHODOXY
+		BeginCulture
+			Civilization=CIVILIZATION_BYZANTIUM, Culture=50
+		EndCulture
+		YearFounded=-320
+		YearAcquired=330
+		PreviousOwner=CIVILIZATION_GREECE
+		PreviousOwner=CIVILIZATION_ROME
+	EndCity
 EndPlot
 BeginPlot
 	x=76,y=51
@@ -797,7 +820,7 @@ BeginPlot
 	EndUnit
 	BeginCity
 		CityOwner=CIVILIZATION_BYZANTIUM
-		CityName=Athinai
+		CityName=Athina
 		CityPopulation=2
 		BuildingType=BUILDING_GRANARY
 		BuildingType=BUILDING_LIBRARY
@@ -818,29 +841,6 @@ EndPlot
 BeginPlot
 	x=76,y=54
 	RouteType=ROUTE_ROMAN_ROAD
-	BeginUnit
-		UnitType=UNIT_SPEARMAN
-		UnitOwner=CIVILIZATION_BYZANTIUM
-	EndUnit
-	BeginUnit
-		UnitType=UNIT_ARCHER
-		UnitOwner=CIVILIZATION_BYZANTIUM
-	EndUnit
-	BeginCity
-		CityOwner=CIVILIZATION_BYZANTIUM
-		CityName=Thessaloníkeia
-		CityPopulation=4
-		BuildingType=BUILDING_GRANARY
-		BuildingType=BUILDING_ORTHODOX_MONASTERY
-		ReligionType=RELIGION_ORTHODOXY
-		BeginCulture
-			Civilization=CIVILIZATION_BYZANTIUM, Culture=50
-		EndCulture
-		YearFounded=-320
-		YearAcquired=330
-		PreviousOwner=CIVILIZATION_GREECE
-		PreviousOwner=CIVILIZATION_ROME
-	EndCity
 EndPlot
 BeginPlot
 	x=76,y=55
@@ -983,11 +983,19 @@ BeginPlot
 		UnitOwner=CIVILIZATION_BYZANTIUM
 	EndUnit
 	BeginUnit
+		UnitType=UNIT_BYZANTINE_CATAPHRACT
+		UnitOwner=CIVILIZATION_BYZANTIUM
+	EndUnit
+	BeginUnit
 		UnitType=UNIT_SPEARMAN
 		UnitOwner=CIVILIZATION_BYZANTIUM
 	EndUnit
 	BeginUnit
 		UnitType=UNIT_SPEARMAN
+		UnitOwner=CIVILIZATION_BYZANTIUM
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_ARCHER
 		UnitOwner=CIVILIZATION_BYZANTIUM
 	EndUnit
 	BeginUnit
