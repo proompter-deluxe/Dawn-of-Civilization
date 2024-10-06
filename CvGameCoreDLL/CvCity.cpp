@@ -5070,14 +5070,11 @@ int CvCity::determineArtStyleType() const
 		case REGION_MESOAMERICA:
 		case REGION_CENTRAL_AMERICA:
 		case REGION_CARIBBEAN:
+		case REGION_GROUP_NORTH_AMERICA:
 			return GC.getCivilizationInfo(AZTECS).getArtStyleType();
 		}
 
-		if (eRegionGroup == REGION_GROUP_NORTH_AMERICA)
-		{
-			return GC.getCivilizationInfo(NATIVE_AMERICANS).getArtStyleType();
-		}
-		else if (eRegionGroup == REGION_GROUP_SOUTH_AMERICA)
+		if (eRegionGroup == REGION_GROUP_SOUTH_AMERICA)
 		{
 			return GC.getCivilizationInfo(INCA).getArtStyleType();
 		}

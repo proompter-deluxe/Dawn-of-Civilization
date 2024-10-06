@@ -8,13 +8,13 @@ from pathlib import Path
 iWorldX = 150
 iWorldY = 80
 
-iNumCivs = 71
+iNumCivs = 69
 (iAmerica, iArabia, iArgentina, iAssyria, iAztecs, iBabylonia, iBrazil, iBulgaria, iBurma, iByzantium, iCanada, 
 iCarthage, iCelts, iChina, iChinaS, iColombia, iDravidia, iEgypt, iEngland, iEthiopia, iFrance, iGermany, 
 iGreece, iHarappa, iHittites, iHolyRome, iInca, iIndia, iIran, iItaly, iJapan, iJava, 
 iKhmer, iCongo, iKorea, iKushans, iMalays, iMali, iMamluks, iMaya, iMexico, iMongols, iMoors, 
-iMughals, iNativeAmericans, iNetherlands, iNorse, iNubia, iOttomans, iPersia, iPoland, iPolynesia, iPortugal, 
-iRome, iRus, iRussia, iSpain, iSumeria, iSwahili, iSweden, iThailand, iTibet, iToltecs, 
+iMughals, iNetherlands, iNorse, iNubia, iOttomans, iPersia, iPoland, iPolynesia, iPortugal, 
+iRome, iRus, iRussia, iSpain, iSwahili, iSweden, iThailand, iTibet, iToltecs, 
 iTurks, iVietnam, iZulu, iIndependent, iIndependent2, iNative, iMinor, iBarbarian) = range(iNumCivs)
 
 iNumRegions = 86

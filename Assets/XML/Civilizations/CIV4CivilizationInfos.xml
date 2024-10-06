@@ -4661,7 +4661,7 @@
 			<CivilizationSelectionSound>AS3D_PERSIA_SELECT</CivilizationSelectionSound>
 			<CivilizationActionSound>AS3D_PERSIA_ORDER</CivilizationActionSound>
 		</CivilizationInfo>
-		<CivilizationInfo>
+		<!-- <CivilizationInfo>
 			<Type>CIVILIZATION_NATIVE_AMERICA</Type>
 			<Description>TXT_KEY_CIV_NATIVE_AMERICA_DESC</Description>
 			<ShortDescription>TXT_KEY_CIV_NATIVE_AMERICA_SHORT_DESC</ShortDescription>
@@ -4772,7 +4772,7 @@
 			<DerivativeCiv>CIVILIZATION_AMERICA</DerivativeCiv>
 			<CivilizationSelectionSound>AS3D_NATIVE_AMERICA_SELECT</CivilizationSelectionSound>
 			<CivilizationActionSound>AS3D_NATIVE_AMERICA_ORDER</CivilizationActionSound>
-		</CivilizationInfo>
+		</CivilizationInfo> -->
 		<CivilizationInfo>
 			<Type>CIVILIZATION_NETHERLANDS</Type>
 			<Description>TXT_KEY_CIV_NETHERLANDS_DESC</Description>
@@ -6107,7 +6107,7 @@
 			<CivilizationSelectionSound>AS3D_SPAIN_SELECT</CivilizationSelectionSound>
 			<CivilizationActionSound>AS3D_SPAIN_ORDER</CivilizationActionSound>
 		</CivilizationInfo>
-		<CivilizationInfo>
+		<!-- <CivilizationInfo>
 			<Type>CIVILIZATION_SUMERIA</Type>
 			<Description>TXT_KEY_CIV_SUMERIA_DESC</Description>
 			<ShortDescription>TXT_KEY_CIV_SUMERIA_SHORT_DESC</ShortDescription>
@@ -6194,7 +6194,7 @@
 			<DerivativeCiv>CIVILIZATION_BABYLONIA</DerivativeCiv>
 			<CivilizationSelectionSound>AS3D_SUMERIA_SELECT</CivilizationSelectionSound>
 			<CivilizationActionSound>AS3D_SUMERIA_ORDER</CivilizationActionSound>
-		</CivilizationInfo>
+		</CivilizationInfo> -->
 		<CivilizationInfo>
 			<Type>CIVILIZATION_SWAHILI</Type>
 			<Description>TXT_KEY_CIV_SWAHILI_DESC</Description>

@@ -1216,7 +1216,6 @@ enum CivilizationTypes		// Exposed to Python
 	MOORS,
 
 	MUGHALS,
-	NATIVE_AMERICANS,
 	NETHERLANDS,
 	NORSE,
 	NUBIA,
@@ -1230,7 +1229,6 @@ enum CivilizationTypes		// Exposed to Python
 	RUS,
 	RUSSIA,
 	SPAIN,
-	SUMERIA,
 	SWAHILI,
 	SWEDEN,
 	THAILAND,
