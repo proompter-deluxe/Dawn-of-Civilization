@@ -68,7 +68,7 @@ iArgentina : [iLangSpanish],
 iColombia : [iLangSpanish],
 iBrazil : [iLangPortuguese, iLangSpanish],
 iCanada : [iLangAmerican, iLangEnglish],
-iCelts : [iLangCeltic],
+iCelts : [iLangCeltic, iLangGreek],
 }, [])
 
 dPeriodLanguages = {
