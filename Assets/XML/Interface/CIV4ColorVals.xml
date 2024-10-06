@@ -736,6 +736,20 @@
 			<fAlpha>1.00</fAlpha>
 		</ColorVal>
 		<ColorVal>
+			<Type>COLOR_PLAYER_VIVID_YELLOW</Type>
+			<fRed>0.996</fRed>
+			<fGreen>0.773</fGreen>
+			<fBlue>0.047</fBlue>
+			<fAlpha>1.00</fAlpha>
+		</ColorVal>
+		<ColorVal>
+			<Type>COLOR_PLAYER_VIVID_YELLOW_TEXT</Type>
+			<fRed>0.996</fRed>
+			<fGreen>0.796</fGreen>
+			<fBlue>0.145</fBlue>
+			<fAlpha>1.00</fAlpha>
+		</ColorVal>
+		<ColorVal>
 			<Type>COLOR_PLAYER_LIGHT_GREEN</Type>
 			<fRed>0.50</fRed>
 			<fGreen>1.00</fGreen>

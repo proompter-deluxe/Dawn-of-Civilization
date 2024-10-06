@@ -13,6 +13,8 @@ iWorldY = 80
 iNumPlayers = gc.getMAX_PLAYERS()
 
 # civilizations, not players
+# also increment iNUmCivs in DrawMaps.py (and add the civ identifier in the list as well)
+# also increment NUM_CIVS in CvRhyes.h
 iNumCivs = 69
 (iAmerica, iArabia, iArgentina, iAssyria, iAztecs, iBabylonia, iBrazil, iBulgaria, iBurma, iByzantium, iCanada, 
 iCarthage, iCelts, iChina, iChinaS, iColombia, iDravidia, iEgypt, iEngland, iEthiopia, iFrance, iGermany, 
