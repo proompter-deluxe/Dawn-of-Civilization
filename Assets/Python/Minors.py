@@ -455,6 +455,7 @@ minor_cities = [
 	MinorCity(-680, iIndependent, (92, 50), "Hagmatana", iPopulation=2, iCiv=iAssyria, units={iDefend: 2, iShock: 2}, iCulture=10, adjective="TXT_KEY_ADJECTIVE_MEDIAN"),
 	MinorCity(-600, iIndependent, (97, 53), "Margu", iPopulation=1, iCiv=iPersia, units={iDefend: 1}, adjective="TXT_KEY_ADJECTIVE_SOGDIAN"),
 	MinorCity(-570, iIndependent2, tGades, "Gadir", iPopulation=2, iCiv=iPhoenicia, units={iDefend: 1}, condition=lambda: player(iPhoenicia).isExisting() and not player(iPhoenicia).isHuman(),  adjective="TXT_KEY_CIV_PHOENICIA_ADJECTIVE"),
+	MinorCity(-500, iIndependent2, (68, 53), "Roma", iPopulation=3, iCiv=iGreece, units={iDefend: 1, iCounter: 2, iWork: 1}, adjective="TXT_KEY_CIV_ROME_ADJECTIVE"),
 	MinorCity(-500, iNative, (19, 41), "Danibaan", iPopulation=2, iCiv=iMaya, units={iSkirmish: 1}, adjective="TXT_KEY_ADJECTIVE_ZAPOTEC"),
 	MinorCity(-490, iBarbarian, (66, 57), "Melpum", iPopulation=2, iCiv=iCelts, units={iHarass: 2}, adjective="TXT_KEY_ADJECTIVE_CELTIC"),
 	MinorCity(-280, iBarbarian, (57, 52), "Vaccaei", iPopulation=1, iCiv=iCelts, units={iSkirmish: 1}, adjective="TXT_KEY_ADJECTIVE_CELTIBERIAN"),
