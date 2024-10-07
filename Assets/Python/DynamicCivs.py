@@ -1447,7 +1447,7 @@ def specificAdjective(iPlayer):
 			if not bEmpire:
 				return "TXT_KEY_CIV_ARABIA_RASHIDUN"
 				
-			if isCurrentCapital(iPlayer, "Dimashq"):
+			if year() < year(dBirth[iMoors]):
 				return "TXT_KEY_CIV_ARABIA_UMMAYAD"
 				
 			return "TXT_KEY_CIV_ARABIA_ABBASID"
