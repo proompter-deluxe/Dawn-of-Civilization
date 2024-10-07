@@ -869,10 +869,10 @@ iMacedon: 30,
 
 dMaxColonists = CivDict({
 iSweden : 1,
-iSpain : 7,
-iFrance : 5,
-iEngland : 6,
-iPortugal : 6, 
+iSpain : 8,
+iFrance : 7,
+iEngland : 10,
+iPortugal : 7, 
 iNetherlands : 6,
 iGermany : 2
 })
