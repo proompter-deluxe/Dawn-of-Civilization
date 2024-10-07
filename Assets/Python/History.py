@@ -197,8 +197,6 @@ def checkEarlyColonists():
 				flipCity(tGades, False, True, iPhoenicia)
 				makeUnits(iPhoenicia, iWorker, tGades, 1, UnitAITypes.UNITAI_WORKER)
 				makeUnits(iPhoenicia, iArcher, tGades, 1, UnitAITypes.UNITAI_CITY_DEFENSE)
-		elif year() == year(-350) - offset:
-			giveEarlyColonists(iRome)
 		
 @handler("BeginGameTurn")
 def checkLateColonists():
