@@ -356,7 +356,7 @@ def isConquered(tConquest):
 
 	for city in lAreaCities:
 		if city.getOwner() in players.minor(): iNumMinorCities += 1
-		elif city.getOwner() != iPlayer: return False
+		elif city.getOwner() != iPlayer and not team(city).isVassal(iPlayer): return False
 		
 	if 2 * iNumMinorCities > len(lAreaCities): return False
 	
