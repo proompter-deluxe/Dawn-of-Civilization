@@ -81,7 +81,7 @@ dResourcesDict = {
 	(74, 57)  : (660,   iSheep),	# Bulgaria
 	(62, 48)  : (700,   iCitrus),   # Algeria
 	(57, 46)  : (700,   iCitrus),   # Morocco
-	(57, 48)  : (700,   iCitrus),   # Andalusia
+	(57, 49)  : (700,   iCitrus),   # Andalusia
 	(59, 50)  : (700,   iCitrus),   # Andalusia
 	(89, 46)  : (700,   iSugar),	# Mesopotamia
 	(78, 41)  : (700,   iSugar),	# Egypt
