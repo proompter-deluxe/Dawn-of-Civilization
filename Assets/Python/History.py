@@ -464,6 +464,12 @@ def removeOrthodoxyFromAnatolia(iPlayer):
 
 @handler("birth")
 def romanRelations(iPlayer):
+
+	# Rome should dislike Celts on spawn, due to perception of barbarian status + their historical sack of Rome
+	if civ(iPlayer) == iRome and player(iCelts).isExisting():
+		iRomePlayer = slot(iRome)
+		player(iRomePlayer).AI_changeMemoryCount(iCelts, MemoryTypes.MEMORY_EVENT_BAD_TO_US, 4)
+
 	if civ(iPlayer) == iByzantium and player(iRome).isExisting():
 		iRomePlayer = slot(iRome)
 		player(iRomePlayer).AI_changeMemoryCount(iPlayer, MemoryTypes.MEMORY_EVENT_GOOD_TO_US, 4)
