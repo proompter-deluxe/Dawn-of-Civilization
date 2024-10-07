@@ -148,7 +148,7 @@ tConquestArabiaSind = (25, iArabia, iKushans, tArabsSindTL, tArabsSindBR, 2, iAr
 
 iAssyriaLevantConquestYear = -900
 
-tConquestAssyriaLevant = (26, iAssyria, iPhoenicia, tGreeceLevantTL, tGreeceLevantBR, 1, iArabSindConquestYear, 5)
+tConquestAssyriaLevant = (26, iAssyria, iPhoenicia, tGreeceLevantTL, tGreeceLevantBR, 1, iAssyriaLevantConquestYear, 5)
 
 lConquests = [
 	tConquestRomeCarthageInSpain,
