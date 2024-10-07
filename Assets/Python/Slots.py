@@ -31,7 +31,20 @@ def availableSlot(iSlot):
 		return False
 	
 	return True
+
+def slotCivsToString():
+	civs = "Total slots: %s. List: " % iNumPlayers
+	for iSlot in range(iNumPlayers):
+		civ = civ(iSlot)
+		if civ is None:
+			civs += "None, "
+		elif civ == -1:
+			civs += "-1, "
+		else:
+			civs += infos.civ(civ).getText() + ", "
 	
+	return civs
+
 def addPlayer(iPlayer, iCiv, iBirthTurn=-1, bAlive=False, bMinor=False):
 	game.addPlayer(iPlayer, 0, iCiv, iBirthTurn, bAlive, bMinor)
 	data.dSlots[iCiv] = iPlayer
