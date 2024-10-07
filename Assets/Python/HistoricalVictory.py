@@ -262,10 +262,11 @@ dGoals = {
 		FirstDiscover(iMathematics, iLiterature, iAesthetics, iPhilosophy, iMedicine),
 		CityCount(
 			(plots.region(rIberia), 1),
+			(plots.region(rItaly), 1),
 			(plots.region(rFrance).named(GAUL), 1),
-			(plots.regions(rAnatolia), 2),
+			(plots.regions(rAnatolia), 1),
 			(plots.region(rEgypt).named(EGYPT), 1),
-			(plots.region(rLevant), 2),
+			(plots.regions(rCrimea), 1),
 			at=-400,
 		),
 		Wonders(iParthenon, iColossus, iStatueOfZeus, iTempleOfArtemis, by=-250),
