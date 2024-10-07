@@ -497,38 +497,28 @@ def stabilizeAustria(iPlayer):
 def createArabArmies(iPlayer):
 	if civ(iPlayer) == iArabia:
 		bBaghdad = civ(plot(tBaghdad)) == iArabia
-		bCairo = civ(plot(tCairo)) == iArabia
+		bTyre = civ(plot(tTyre)) == iArabia
 
-		lCities = []
+		iHeartlandCities = plots.regions(rMesopotamia, rLevant, rEgypt).cities().count()
 
+		lCities = []	
 		if bBaghdad: lCities.append(tBaghdad)
-		if bCairo: lCities.append(tCairo)
+		if bTyre: lCities.append(tTyre) # founded by Phoenicians as capital
 
 		tCapital = random_entry(lCities)
 
 		if tCapital:
+			relocateCapital(iArabia, tCapital)
 			if not player(iArabia).isHuman():
-				relocateCapital(iArabia, tCapital)
 				makeUnits(iArabia, iMobileGuard, tCapital, 3)
 				makeUnits(iArabia, iGhazi, tCapital, 2)
+				makeUnits(iArabia, iSpearman, tCapital, 2)
 			makeUnits(iArabia, iMobileGuard, tCapital, 2)
 			makeUnits(iArabia, iGhazi, tCapital, 2)
-
-		if bBaghdad:
-			makeUnit(iArabia, iSettler, tBaghdad)
-			makeUnit(iArabia, iWorker, tBaghdad)
-
-		if bCairo:
-			makeUnit(iArabia, iSettler, tCairo)
-			makeUnit(iArabia, iWorker, tCairo)
 			
-		if len(lCities) < 2:
-			makeUnits(iArabia, iSettler, tMecca, 2 - len(lCities))
-			makeUnits(iArabia, iWorker, tMecca, 2 - len(lCities))
+		makeUnits(iArabia, iSettler, max(0, tMecca, 7 - iHeartlandCities))
+		makeUnits(iArabia, iWorker, max(0, tMecca, 10 - iHeartlandCities))
 
-		if not player(iArabia).isHuman() and bBaghdad:
-			makeUnits(iArabia, iSpearman, tBaghdad, 2)
-	
 
 @handler("flip")
 def flipMoorishMaghreb(iPlayer):
