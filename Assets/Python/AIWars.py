@@ -49,7 +49,7 @@ tRomeBritainBR = (59, 67)
 tConquestRomeCarthageInSpain = (22, iRome, iCarthage, tRomeSpainTL, tRomeSpainBR, 3, iRomeCarthageYear, 10)
 tConquestRomeCarthage = (0, iRome, iCarthage, tRomeCarthageTL, tRomeCarthageBR, 4, iRomeCarthageYear + 10, 30)
 tConquestRomeGreece = (1, iRome, iGreece, tRomeGreeceTL, tRomeGreeceBR, 2, iRomeGreeceYear, 10)
-tConquestRomeAnatolia = (2, iRome, iGreece, tRomeAnatoliaTL, tRomeAnatoliaBR, 3, iRomeAnatoliaYear, 20)
+tConquestRomeAnatolia = (2, iRome, iMacedon, tRomeAnatoliaTL, tRomeAnatoliaBR, 3, iRomeAnatoliaYear, 20)
 tConquestRomeCelts = (3, iRome, iCelts, tRomeCeltiaTL, tRomeCeltiaBR, 2, iRomeCeltiaYear, 10)
 tConquestRomeEgypt = (4, iRome, iEgypt, tRomeEgyptTL, tRomeEgyptBR, 3, iRomeEgyptYear, 10)
 tConquestRomeBritain = (21, iRome, iCelts, tRomeBritainTL, tRomeBritainBR, 2, iRomeBritainYear, 20)
@@ -66,11 +66,11 @@ tGreeceEgyptBR = (82, 45)
 tGreecePersiaTL = (91, 43)
 tGreecePersiaBR = (97, 52)
 
-tConquestGreeceAnatolia = (19, iGreece, iPersia, tGreeceAnatoliaTL, tGreeceAnatoliaBR, 10, iAlexanderYear, 10)
-tConquestGreeceLevant = (20, iGreece, iPersia, tGreeceLevantTL, tGreeceLevantBR, 10, iAlexanderYear + 1, 20)
-tConquestGreeceEgypt = (6, iGreece, iEgypt, tGreeceEgyptTL, tGreeceEgyptBR, 10, iAlexanderYear + 2, 20)
-tConquestGreeceMesopotamia = (5, iGreece, iPersia, tGreeceMesopotamiaTL, tGreeceMesopotamiaBR, 10, iAlexanderYear + 3, 20)
-tConquestGreecePersia = (7, iGreece, iPersia, tGreecePersiaTL, tGreecePersiaBR, 10, iAlexanderYear + 4, 30)
+tConquestMacedonAnatolia = (19, iMacedon, iPersia, tGreeceAnatoliaTL, tGreeceAnatoliaBR, 10, iAlexanderYear, 10)
+tConquestMacedonLevant = (20, iMacedon, iPersia, tGreeceLevantTL, tGreeceLevantBR, 10, iAlexanderYear + 1, 20)
+tConquestMacedonEgypt = (6, iMacedon, iEgypt, tGreeceEgyptTL, tGreeceEgyptBR, 10, iAlexanderYear + 2, 20)
+tConquestMacedonMesopotamia = (5, iMacedon, iPersia, tGreeceMesopotamiaTL, tGreeceMesopotamiaBR, 10, iAlexanderYear + 3, 20)
+tConquestMacedonPersia = (7, iMacedon, iPersia, tGreecePersiaTL, tGreecePersiaBR, 10, iAlexanderYear + 4, 30)
 
 iCholaSumatraYear = 1030
 tCholaSumatraTL = (115, 26)
@@ -157,11 +157,11 @@ lConquests = [
 	tConquestRomeCelts, 
 	tConquestRomeEgypt,
 	tConquestRomeBritain,
-	tConquestGreeceAnatolia,
-	tConquestGreeceLevant,
-	tConquestGreeceMesopotamia, 
-	tConquestGreeceEgypt, 
-	tConquestGreecePersia, 
+	tConquestMacedonAnatolia,
+	tConquestMacedonLevant,
+	tConquestMacedonMesopotamia, 
+	tConquestMacedonEgypt, 
+	tConquestMacedonPersia, 
 	#tConquestSpainMoors, # --> now that Moors have Almoravid barbarians to contend with, we don't need this
 	tConquestTurksPersia, 
 	tConquestTurksAnatolia, 
@@ -212,15 +212,15 @@ def startMinorWars(iGameTurn):
 def checkConquests():
 	# if this gets much bigger, convert to dict
 	for tConquest in lConquests:
-		if tConquest[0] == tConquestGreeceLevant[0]:
+		if tConquest[0] == tConquestMacedonLevant[0]:
 			# before "Alexander" can conquer the Levant, he has to conquer Anatolia
-			checkConquest(tConquest, tConquestGreeceAnatolia)
-		elif tConquest[0] == tConquestGreeceEgypt[0] or tConquest[0] == tConquestGreeceMesopotamia[0] :
+			checkConquest(tConquest, tConquestMacedonAnatolia)
+		elif tConquest[0] == tConquestMacedonEgypt[0] or tConquest[0] == tConquestMacedonMesopotamia[0] :
 			# before "Alexander" can conquer Egypt or Mesopotamia, he has to conquer the Levant
-			checkConquest(tConquest, tConquestGreeceLevant)
-		elif tConquest[0] == tConquestGreecePersia[0]:
+			checkConquest(tConquest, tConquestMacedonLevant)
+		elif tConquest[0] == tConquestMacedonPersia[0]:
 			# before "Alexander" can conquer Persia, he has to conquer Mesopotamia
-			checkConquest(tConquest, tConquestGreeceMesopotamia)
+			checkConquest(tConquest, tConquestMacedonMesopotamia)
 		elif tConquest[0] == tConquestHolyRomeCrusades[0] or tConquest[0] == tConquestEnglandCrusades[0]:
 			# Don't launch "Third Crusade" if Holy Land still firmly under French control
 			checkConquest(tConquest, tConquestFranceCrusades, True)
@@ -403,9 +403,10 @@ def spawnConquerors(iPlayer, iPreferredTarget, tTL, tBR, iNumTargets, iWarPlan =
 		
 		tPlot = findNearestLandPlot(city, iPlayer)
 		
-		if iCiv == iGreece:
+		if iCiv == iMacedon:
 			makeUnits(iPlayer, iCatapult, tPlot, 2, UnitAITypes.UNITAI_ATTACK_CITY)
-			makeUnits(iPlayer, iHoplite, tPlot, 3, UnitAITypes.UNITAI_ATTACK_CITY)
+			makeUnits(iPlayer, iPhalanx, tPlot, 2, UnitAITypes.UNITAI_ATTACK_CITY)
+			makeUnits(iPlayer, iHoplite, tPlot, 1, UnitAITypes.UNITAI_ATTACK_CITY)
 			makeUnits(iPlayer, iCompanion, tPlot, 2, UnitAITypes.UNITAI_ATTACK_CITY)
 			makeUnits(iPlayer, iArcher, tPlot, 1)
 		elif iCiv in [iSpain, iEngland, iHolyRome, iFrance, iPoland, iPortugal, iItaly, iNorse, iRus, iRussia, iSweden]:

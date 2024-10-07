@@ -1207,6 +1207,7 @@ enum CivilizationTypes		// Exposed to Python
 	CONGO,
 	KOREA,
 	KUSHANS,
+	MACEDON,
 	MALAYS,
 	MALI,
 	MAMLUKS,

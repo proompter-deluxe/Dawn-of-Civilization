@@ -8,11 +8,11 @@ from pathlib import Path
 iWorldX = 150
 iWorldY = 80
 
-iNumCivs = 69
+iNumCivs = 70
 (iAmerica, iArabia, iArgentina, iAssyria, iAztecs, iBabylonia, iBrazil, iBulgaria, iBurma, iByzantium, iCanada, 
 iCarthage, iCelts, iChina, iChinaS, iColombia, iDravidia, iEgypt, iEngland, iEthiopia, iFrance, iGermany, 
 iGreece, iHarappa, iHittites, iHolyRome, iInca, iIndia, iIran, iItaly, iJapan, iJava, 
-iKhmer, iCongo, iKorea, iKushans, iMalays, iMali, iMamluks, iMaya, iMexico, iMongols, iMoors, 
+iKhmer, iCongo, iKorea, iKushans, iMacedon, iMalays, iMali, iMamluks, iMaya, iMexico, iMongols, iMoors, 
 iMughals, iNetherlands, iNorse, iNubia, iOttomans, iPersia, iPoland, iPolynesia, iPortugal, 
 iRome, iRus, iRussia, iSpain, iSwahili, iSweden, iThailand, iTibet, iToltecs, 
 iTurks, iVietnam, iZulu, iIndependent, iIndependent2, iNative, iMinor, iBarbarian) = range(iNumCivs)
@@ -86,6 +86,7 @@ dCivNames = {
 	iTurks: "Turkestan",
 	iNorse: "Norse",
 	iMamluks: "Mamluks",
+	iMacedon: "Macedonia",
 }
 
 dReligionNames = {
@@ -168,6 +169,7 @@ iMexico :		((14, 41),	(19, 44)),
 iColombia :		((28, 34),	(30, 38)),
 iBrazil :		((42, 19),	(47, 25)),
 iCanada :		((26, 59),	(37, 62)),
+iMacedon:       ((73, 53),  (79, 55)),
 }
 
 dCoreAreaExceptions = {

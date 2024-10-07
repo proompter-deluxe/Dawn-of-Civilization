@@ -734,6 +734,138 @@ iGreece : {
 		"Alexandros Papagos", # 20th
 	],
 },
+
+iMacedon : { # TODO Macedonian or Macedonian-sponsored GP only. Remove duplicates from Greece list 
+	iGreatProphet : [
+		"fEritha", # 12th BC
+		iClassical,
+		"Herakleitos", # 6th BC
+		"Anacharsis", # 6th BC
+		"Parmenides", # 5th BC
+		"Philolaos", # 5th BC
+		"fDiotima", # 5th BC
+		"Epikouros", # 4th BC
+		iIndustrial,
+		"Emmanuel Metaxakis", # 19th
+		iGlobal,
+		"Georgios Karslidis", # 20th
+		"Arsenios Eznepidis", # 20th
+		"Porphyrios Bairaktaris", # 20th
+	],
+	iGreatArtist : [
+		"Homeros", # 8th BC
+		iClassical,
+		"fSappho", # 6th BC
+		"Exekias", # 6th BC
+		"Sophokles", # 5th BC
+		"Thoukydides", # 5th BC
+		"Euripides", # 5th BC
+		"Herodotos", # 5th BC
+		"Aischylos", # 5th BC
+		"Pheidias", # 5th BC
+		"Anyte Tegeatis", # 3rd BC
+		iIndustrial,
+		"Dionysios Solomos", # 19th
+		"Georgios Jakobides", # 19th
+		iGlobal,
+		"Nikos Kazantzakis", # 20th
+		"fMaria Callas", # 20th
+		"Odysseas Elytis", # 20th
+		"Iannis Xenakis", # 20th
+		"Mikis Theodorakis", # 20th
+	],
+	iGreatScientist : [
+		"Pythagoras", # 6th BC
+		"Sokrates", # 5th BC
+		"Demokritos", # 5th BC
+		"Anaxagoras", # 5th BC
+		"Hippokrates", # 5th BC
+		"Aristoteles", # 4th BC
+		"Platon", # 4th BC
+		"Eukleides", # 3rd BC
+		"Eratosthenes", # 3rd BC
+		"Galenos", # 2nd BC
+		"fAglaonike", # 2nd BC
+		"fHypatia", # 4th
+		iIndustrial,
+		"Eugenios Voulgaris", # 18th
+		iGlobal,
+		"Konstantinos Karatheodori", # 20th
+		"Georgios Papanikolaou", # 20th
+		"Fotis Kafatos", # 20th
+	],
+	iGreatMerchant : [
+		"Kolaios", # 7th BC
+		"Sostratos", # 6th BC
+		"Pytheas", # 4th BC
+		"Androsthenes", # 4th BC
+		"Megasthenes", # 4th BC
+		"Hippalos", # 1st BC
+		"Heroides Attikos", # 2nd
+		iIndustrial,
+		"fManto Mavrogenous", # 19th
+		"Evangelos Zappas", # 19th
+		iGlobal,
+		"Aristotelis Onasis", # 20th
+		"Stavros Niarchos", # 20th
+		"fArianna Stasinopoulou", # 20th
+	],
+	iGreatEngineer : [
+		"Thales", # 6th BC
+		"Empedokles", # 5th BC
+		"Zenon", # 4th BC
+		"Satyros", # 4th BC
+		"Archimedes", # 3rd BC
+		"Sostratos", # 3rd BC
+		"Heron", # 1st
+		iIndustrial,
+		"Ernestos Tsiller", # 19th
+		iGlobal,
+		"Alexandros Issigonis", # 20th
+		"Ioannis Travlos", # 20th
+		"Ioannis Argyris", # 20th
+	],
+	iGreatStatesman : [
+		"Lykourgos", # 9th BC
+		iClassical,
+		"Solon", # 6th BC
+		"Kleisthenes", # 6th BC
+		"fGorgo", # 5th BC
+		"Alkibiades", # 5th BC
+		"Aresteides", # 5th BC
+		"Kimon", # 5th BC
+		"Epaminondas", # 4th BC
+		"Isokrates", # 4th BC
+		iIndustrial,
+		"Adamantios Korais", # 19th
+		"Ioannis Kapodistrias", # 19th
+		"Eleftherios Venizelos", # 19th
+		iGlobal,
+		"Ioannis Metaxas", # 20th
+		"Konstantinos Karamanlis", # 20th
+		"Michael Christodoulou Mouskos", # 20th
+		"Andreas Papandreou", # 20th
+	],
+	iGreatGeneral : [
+		"Hektor", # legendary
+		iClassical,
+		"Leonidas", # 6th BC
+		"Themistokles", # 5th BC
+		"Lysandros", # 5th BC
+		"Philippos", # 4th BC
+		"fArtemisia", # 4th BC
+		"Pyrrhos", # 3rd BC
+		"Antiochos Megas", # 3rd BC
+		iIndustrial,
+		"fLaskarina Bouboulina", # 19th
+		"Alexandros Ypsilantis", # 19th
+		"Theodoros Kolokotronis", # 19th
+		iGlobal,
+		"Konstantinos Bakopoulos", # 20th
+		"Alexandros Papagos", # 20th
+	],
+},
+
 iIndia : {
 	iGreatProphet : [
 		"Mahavira", # 6th BC

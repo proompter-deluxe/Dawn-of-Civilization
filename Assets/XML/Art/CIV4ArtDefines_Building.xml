@@ -3777,5 +3777,15 @@
 			<KFM/>
 			<Button>,-,Art/Interface/Buttons/Warlords_Atlas_1.dds,2,3</Button>
 		</BuildingArtInfo>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_HELLENISTIC_COLONY</Type>
+			<LSystem>LSYSTEM_2x2</LSystem>
+			<bAnimated>0</bAnimated>
+			<fScale>1.0</fScale>
+			<fInterfaceScale>1.0</fInterfaceScale>
+			<NIF>Art/Structures/Buildings/Military_Encampment/Military_Encampment.nif</NIF>
+			<KFM/>
+			<Button>Art/Interface/Buttons/Buildings/hellenistic_colony.dds</Button>
+		</BuildingArtInfo>
 	</BuildingArtInfos>
 </Civ4ArtDefines>

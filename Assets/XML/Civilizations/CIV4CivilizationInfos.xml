@@ -2429,10 +2429,6 @@
 					<UnitClassType>UNITCLASS_SPEARMAN</UnitClassType>
 					<UnitType>UNIT_GREEK_HOPLITE</UnitType>
 				</Unit>
-				<Unit>
-					<UnitClassType>UNITCLASS_HORSEMAN</UnitClassType>
-					<UnitType>UNIT_GREEK_COMPANION</UnitType>
-				</Unit>
 			</Units>
 			<FreeUnitClasses>
 				<FreeUnitClass>
@@ -2457,10 +2453,6 @@
 				<CivicType>CIVIC_KINSHIP</CivicType>
 			</InitialCivics>
 			<Leaders>
-				<Leader>
-					<LeaderName>LEADER_ALEXANDER</LeaderName>
-					<bLeaderAvailability>1</bLeaderAvailability>
-				</Leader>
 				<Leader>
 					<LeaderName>LEADER_PERICLES</LeaderName>
 					<bLeaderAvailability>1</bLeaderAvailability>
@@ -3796,6 +3788,132 @@
 			<DerivativeCiv>CIVILIZATION_INDIA</DerivativeCiv>
 			<CivilizationSelectionSound>AS3D_INDIA_SELECT</CivilizationSelectionSound>
 			<CivilizationActionSound>AS3D_INDIA_ORDER</CivilizationActionSound>
+		</CivilizationInfo>
+		<CivilizationInfo>
+			<Type>CIVILIZATION_MACEDON</Type>
+			<Description>TXT_KEY_CIV_MACEDON_DESC</Description>
+			<ShortDescription>TXT_KEY_CIV_MACEDON_SHORT_DESC</ShortDescription>
+			<Adjective>TXT_KEY_CIV_MACEDON_ADJECTIVE</Adjective>
+			<Civilopedia>TXT_KEY_CIV_MACEDON_PEDIA</Civilopedia>
+			<DefaultPlayerColor>PLAYERCOLOR_DARK_PURPLE_GOLD</DefaultPlayerColor>
+			<ArtDefineTag>ART_DEF_CIVILIZATION_MACEDON</ArtDefineTag>
+			<ArtStyleType>ARTSTYLE_GRECO_ROMAN</ArtStyleType>
+			<UnitArtStyleType>UNIT_ARTSTYLE_GRECO_ROMAN</UnitArtStyleType>
+			<PaganReligion>PAGAN_RELIGION_OLYMPIANISM</PaganReligion>
+			<Impact>IMPACT_CRITICAL</Impact>
+			<Identifier>MCD</Identifier>
+			<StartingYear>-475</StartingYear>
+			<LoadingTimes>
+				<LoadingTime>2</LoadingTime>
+				<LoadingTime>0</LoadingTime>
+				<LoadingTime>0</LoadingTime>
+			</LoadingTimes>
+			<Rating>
+				<Trade>3</Trade>
+				<Production>3</Production>
+				<Culture>4</Culture>
+				<Growth>2</Growth>
+				<Start>2</Start>
+			</Rating>
+			<bPlayable>1</bPlayable>
+			<bAIPlayable>1</bAIPlayable>
+			<Cities>
+				<City>Megara</City>
+				<City>Olympia</City>
+				<City>Argos</City>
+				<City>Phocaea</City>
+				<City>Rhodos</City>
+				<City>Thebai</City>
+				<City>Thermopylae</City>
+				<City>Pharsalos</City>
+				<City>Eretria</City>
+				<City>Marathon</City>
+				<City>Artemision</City>
+				<City>Sicyon</City>
+				<City>Gortyn</City>
+				<City>Mytilene</City>
+				<City>Tegea</City>
+				<City>Argos Orestikon</City>
+				<City>Dion</City>
+				<City>Amphipolis</City>
+				<City>Thasos</City>
+				<City>Potidaea</City>
+				<City>Buthrotos</City>
+				<City>Olynthos</City>
+				<City>Eordaea</City>
+				<City>Serrai</City>
+				<City>Lynkestis</City>
+				<City>Crestone</City>
+				<City>Stageira</City>
+				<City>Aeani</City>
+				<City>Methoni</City>
+				<City>Ichnai</City>
+				<City>Liti</City>
+				<City>Thermai</City>
+				<City>Idomenai</City>
+				<City>Leivithra</City>
+				<City>Kalindoia</City>
+				<City>Arethousa</City>
+				<City>Argilos</City>
+				<City>Galipsos</City>
+				<City>Mieza</City>
+				<City>Kyrros</City>
+				<City>Kozani</City>
+				<City>Naussa</City>
+				<City>Palatitsa</City>
+				<City>Florina</City>
+			</Cities>
+			<Buildings>
+				<Building>
+					<BuildingClassType>BUILDINGCLASS_BARRACKS</BuildingClassType>
+					<BuildingType>BUILDING_HELLENISTIC_COLONY</BuildingType>
+				</Building>
+				<Building>
+					<BuildingClassType>BUILDINGCLASS_PAGAN_TEMPLE</BuildingClassType>
+					<BuildingType>BUILDING_OLYMPIAN_TEMPLE</BuildingType>
+				</Building>
+			</Buildings>
+			<Units>
+				<Unit>
+					<UnitClassType>UNITCLASS_SPEARMAN</UnitClassType>
+					<UnitType>UNIT_MACEDON_PHALANX</UnitType>
+				</Unit>
+				<Unit>
+					<UnitClassType>UNITCLASS_HORSEMAN</UnitClassType>
+					<UnitType>UNIT_GREEK_COMPANION</UnitType>
+				</Unit>
+			</Units>
+			<FreeUnitClasses>
+				<FreeUnitClass>
+					<UnitClassType>UNITCLASS_SETTLER</UnitClassType>
+					<iFreeUnits>1</iFreeUnits>
+				</FreeUnitClass>
+			</FreeUnitClasses>
+			<FreeBuildingClasses>
+				<FreeBuildingClass>
+					<BuildingClassType>BUILDINGCLASS_PALACE</BuildingClassType>
+					<bFreeBuildingClass>1</bFreeBuildingClass>
+				</FreeBuildingClass>
+			</FreeBuildingClasses>
+			<FreeTechs/>
+			<DisableTechs/>
+			<InitialCivics>
+				<CivicType>CIVIC_CHIEFDOM</CivicType>
+				<CivicType>CIVIC_PERSONALISM</CivicType>
+				<CivicType>CIVIC_TRADITIONALISM</CivicType>
+				<CivicType>CIVIC_RECIPROCITY</CivicType>
+				<CivicType>CIVIC_ANIMISM</CivicType>
+				<CivicType>CIVIC_KINSHIP</CivicType>
+			</InitialCivics>
+			<Leaders>
+				<Leader>
+					<LeaderName>LEADER_ALEXANDER</LeaderName>
+					<bLeaderAvailability>1</bLeaderAvailability>
+				</Leader>
+			</Leaders>
+			<DerivativeCiv>CIVILIZATION_BYZANTIUM</DerivativeCiv>
+			<CivilizationSelectionSound>AS3D_GREECE_SELECT</CivilizationSelectionSound>
+			<CivilizationActionSound>AS3D_GREECE_ORDER</CivilizationActionSound>
 		</CivilizationInfo>
 		<CivilizationInfo>
 			<Type>CIVILIZATION_MALAYS</Type>

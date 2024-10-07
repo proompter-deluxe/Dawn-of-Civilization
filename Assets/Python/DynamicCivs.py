@@ -58,10 +58,13 @@ dSpecificVassalTitles = deepdict({
 		iMongols : "TXT_KEY_CIV_CHINESE_MONGOLIA",
 		iChina: "TXT_KEY_CIV_CHINA_NORTH_VASSAL_OF_SOUTH",
 	},
+	iMacedon : {
+		iIndia : "TXT_KEY_CIV_MACEDON_INDIA",
+		iEgypt : "TXT_KEY_CIV_MACEDON_EGYPT",
+		iPersia : "TXT_KEY_CIV_MACEDON_PERSIA",
+		iRome : "TXT_KEY_CIV_GREEK_ROME",
+	},
 	iGreece : {
-		iIndia : "TXT_KEY_CIV_GREEK_INDIA",
-		iEgypt : "TXT_KEY_CIV_GREEK_EGYPT",
-		iPersia : "TXT_KEY_CIV_GREEK_PERSIA",
 		iRome : "TXT_KEY_CIV_GREEK_ROME",
 	},
 	iIndia : {
@@ -87,6 +90,7 @@ dSpecificVassalTitles = deepdict({
 		iMamluks : "TXT_KEY_CIV_BYZANTINE_EGYPT",
 		iBabylonia : "TXT_KEY_CIV_BYZANTINE_BABYLONIA",
 		iGreece : "TXT_KEY_CIV_BYZANTINE_GREECE",
+		iMacedon: "TXT_KEY_CIV_BYZANTINE_MACEDON",
 		iPhoenicia : "TXT_KEY_CIV_BYZANTINE_CARTHAGE",
 		iPersia : "TXT_KEY_CIV_BYZANTINE_PERSIA",
 		iRome : "TXT_KEY_CIV_BYZANTINE_ROME",
@@ -564,6 +568,7 @@ dStartingLeaders = [
 	iBrazil : iPedro,
 	iCanada : iMacDonald,
 	iMamluks: iSaladin,
+	iMacedon: iAlexanderTheGreat,
 },
 # 600 AD
 {
@@ -984,10 +989,6 @@ def specificName(iPlayer):
 		if iEra <= iClassical:
 			return "TXT_KEY_CIV_NUBIA_KUSH"
 			
-	elif iCiv == iGreece:
-		if not bCityStates and bEmpire and iEra <= iClassical:
-			return "TXT_KEY_CIV_GREECE_MACEDONIA"
-			
 	elif iCiv == iPolynesia:
 		if isCurrentCapital(iPlayer, "Kaua'i", "O'ahu", "Maui"):
 			return "TXT_KEY_CIV_POLYNESIA_HAWAII"
@@ -1319,9 +1320,6 @@ def specificAdjective(iPlayer):
 	elif iCiv == iGreece:
 		if iEra == iAncient:
 			return "TXT_KEY_CIV_GREECE_MYCENAEAN"
-	
-		if not bCityStates and bEmpire and iEra <= iClassical:
-			return "TXT_KEY_CIV_GREECE_MACEDONIAN"
 			
 	elif iCiv == iIran:
 		if bEmpire:
@@ -1740,7 +1738,7 @@ def specificTitle(iPlayer, lPreviousOwners=[]):
 	bMonarchy = not (isCommunist(iPlayer) or isFascist(iPlayer) or isRepublic(iPlayer))
 
 	if iCiv == iEgypt:	
-		if slot(iGreece) in lPreviousOwners:
+		if slot(iMacedon) in lPreviousOwners:
 			return "TXT_KEY_CIV_EGYPT_PTOLEMAIC"
 			
 		if bCityStates:
@@ -2233,10 +2231,6 @@ def leader(iPlayer):
 		if iEra >= iIndustrial: return iGeorge
 		
 		if bResurrected and getColumn(iPlayer) >= 11: return iGeorge
-	
-		if bEmpire: return iAlexanderTheGreat
-		
-		if not bCityStates: return iAlexanderTheGreat
 		
 	elif iCiv == iIran:
 		if iEra >= iGlobal: return iKhomeini

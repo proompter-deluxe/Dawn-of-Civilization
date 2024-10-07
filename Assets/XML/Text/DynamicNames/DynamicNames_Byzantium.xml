@@ -186,6 +186,18 @@
 		<Spanish>Theme of Hellas</Spanish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_CIV_BYZANTINE_MACEDON</Tag>
+		<English>Theme of Thrace</English>
+		<French>
+			<Text>Th&#232;me de Thrace</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>Theme of Thrace</German>
+		<Italian>Theme of Thrace</Italian>
+		<Spanish>Theme of Thrace</Spanish>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_CIV_BYZANTINE_CARTHAGE</Tag>
 		<English>Exarchate of Africa</English>
 		<French>

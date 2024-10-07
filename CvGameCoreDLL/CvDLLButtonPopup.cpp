@@ -1670,6 +1670,12 @@ bool CvDLLButtonPopup::launchChangeCivicsPopup(CvPopup* pPopup, CvPopupInfo &inf
 		return false;
 	}
 
+	// suppress for Macedon due to their UP
+	if (eCivicType == NO_CIVIC && GC.getGameINLINE().getActiveCivilizationType() == MACEDON)
+	{
+		return false;
+	}
+
 	if (eCivicType != NO_CIVIC)
 	{
 		for (int iI = 0; iI < GC.getNumCivicOptionInfos(); iI++)

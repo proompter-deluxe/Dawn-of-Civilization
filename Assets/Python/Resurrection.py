@@ -154,7 +154,7 @@ def canResurrectFromCities(iCiv, resurrectionCities):
 def doResurrection(iCiv, lCityList, bAskFlip=True, bDisplay=False):
 	iPlayer = findSlot(iCiv)
 	if iPlayer == -1:
-		message(active(), "RESURRECTION ABORTED: NO FREE SLOT FOR: %s", infos.civ(iCiv).getText(), color=iRed, force=True)
+		message(active(), "RESURRECTION ABORTED: NO FREE SLOT FOR: ID %s, text: %s" % (iCiv, infos.civ(iCiv).getText()), color=iRed, force=True)
 		return
 
 	updateCivilization(iPlayer, iCiv)

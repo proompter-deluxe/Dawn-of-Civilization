@@ -1153,4 +1153,20 @@
 		<Italian>All land units start with Combat I promotion, but have increased upkeep</Italian>
 		<Spanish>All land units start with Combat I promotion, but have increased upkeep</Spanish>
 	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UP_MCD_TITLE</Tag>
+		<English>The Power of Generalship:</English>
+		<French>The Power of Generalship:</French>
+		<German>The Power of Generalship:</German>
+		<Italian>The Power of Generalship:</Italian>
+		<Spanish>The Power of Generalship:</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UP_MCD</Tag>
+		<English>Start with the Stratocracy civic and a free Great General</English>
+		<French>Start with the Stratocracy civic and a free Great General</French>
+		<German>Start with the Stratocracy civic and a free Great General</German>
+		<Italian>Start with the Stratocracy civic and a free Great General</Italian>
+		<Spanish>Start with the Stratocracy civic and a free Great General</Spanish>
+	</TEXT>
 </Civ4GameText>

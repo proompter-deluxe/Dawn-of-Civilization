@@ -519,6 +519,20 @@
 			<fAlpha>1.00</fAlpha>
 		</ColorVal>
 		<ColorVal>
+			<Type>COLOR_PLAYER_MACEDON_PURPLE</Type>
+			<fRed>0.70</fRed>
+			<fGreen>0.42</fGreen>
+			<fBlue>0.83</fBlue>
+			<fAlpha>1.00</fAlpha>
+		</ColorVal>
+		<ColorVal>
+			<Type>COLOR_PLAYER_MACEDON_PURPLE_TEXT</Type>
+			<fRed>0.63</fRed>
+			<fGreen>0.37</fGreen>
+			<fBlue>0.74</fBlue>
+			<fAlpha>1.00</fAlpha>
+		</ColorVal>
+		<ColorVal>
 			<Type>COLOR_PLAYER_DARK_RED</Type>
 			<fRed>0.62</fRed>
 			<fGreen>0.00</fGreen>

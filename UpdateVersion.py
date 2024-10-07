@@ -17,9 +17,9 @@ if __name__ == "__main__":
 			new_version = version
 
 			if len(args) > 0 and args[0] == 'major':
-				new_version = f"{int(major)+1}.{minor}.{subminor}"
+				new_version = f"{int(major)+1}.0.0"
 			elif len(args) > 0 and args[0] == 'minor':
-				new_version = f"{major}.{int(minor)+1}.{subminor}"
+				new_version = f"{major}.{int(minor)+1}.0"
 			else:
 				new_version = f"{major}.{minor}.{int(subminor)+1}"
 

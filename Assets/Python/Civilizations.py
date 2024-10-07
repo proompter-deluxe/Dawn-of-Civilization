@@ -250,6 +250,13 @@ lCivilizations = [
 		techs=techs.column(3).including(iBloomery, iPriesthood, iMathematics).without(iSeafaring, iShipbuilding)
 	),
 	Civilization(
+		iMacedon,
+		iGold=50,
+		iAdvancedStartPoints=100,
+		lCivics=[iMonarchy, iRedistribution, iSlavery, iDeification, iStratocracy],
+		techs=techs.column(3).including(iBloomery, iMathematics).without(iShipbuilding)
+	),
+	Civilization(
 		iCelts,
 		techs=techs.column(2).including(iAlloys),
 		lCivics=[iMonarchy],
@@ -460,7 +467,7 @@ lCivilizations = [
 		lCivics=[iElective, iCitizenship, iSlavery, iMerchantTrade, iClergy, iThalassocracy],
 		techs=techs.column(6).including(iGuilds, iAlchemy)
 	),
-		Civilization(
+	Civilization(
 		iMamluks,
 		iGold=200,
 		iAdvancedStartPoints=50,
@@ -668,8 +675,7 @@ dStartingUnits = CivDict({
 		iWork: 2,
 		iSettleSea: 1,
 		iBase: 2,
-		iAttack: 2,
-		iCityAttack: 1,
+		iDefend: 1,
 		iWorkerSea: 1,
 	},
 	iIndia: {
@@ -702,6 +708,14 @@ dStartingUnits = CivDict({
 		iSiege: 2,
 		iHarass: 2,
 		# 1 War Elephant
+	},
+	iMacedon: {
+		iSettle: 1,
+		iWork: 2,
+		iDefend: 3,
+		iCounter: 3,
+		iShock: 2,
+		iSiege: 2,
 	},
 	iCelts: {
 		iSettle: 3,
@@ -1177,6 +1191,10 @@ dExtraAIUnits = CivDict({
 		iSiege: 4,
 		iHarass: 2,
 	},
+	iMacedon: {
+		iCounter: 1,
+		iShock: 1,
+	},
 	iRome: {
 		iWork: 3,
 	},
@@ -1281,7 +1299,7 @@ dAdditionalUnits = CivDict({
 		iAttack: 1,
 	},
 	iGreece: {
-		iAttack: 4,
+		iDefend: 2,
 	},
 	iPersia: {
 		iAttack: 4,
@@ -1489,7 +1507,8 @@ dStartingExperience = CivDict({
 }, {})
 
 dAlwaysTrain = CivDict({
-	iGreece: [iHoplite, iCatapult],
+	iGreece: [iHoplite],
+	iMacedon: [iPhalanx, iCatapult],
 	iPhoenicia: [iNumidianCavalry],
 	iDravidia: [iWarElephant],
 	iByzantium: [iLegion],
@@ -1681,10 +1700,20 @@ dTechPreferences = {
 		iMathematics: 40,
 		iNavigation: 40,
 		iBloomery: 40,
-		iMathematics: 30,
 		iCalendar: 20,
 		iWriting: 20,
 		iShipbuilding: 20,
+		iMedicine: 20,
+		iAesthetics: 20,
+		
+		iMachinery: -20,
+		iPaper: -20,
+		iPrinting: -20,
+		iTheology: -15,
+	},
+	iMacedon : {
+		iGeneralship: 40,
+		iCalendar: 20,
 		iMedicine: 20,
 		iAesthetics: 20,
 		
@@ -2074,6 +2103,7 @@ dDefaultWonderPreferences = {
 	iEgypt: -15,
 	iBabylonia: -40,
 	iGreece: -15,
+	iMacedon: -15,
 	iIndia: -15,
 	iRome: -20,
 	iArabia: -15,
@@ -2152,8 +2182,20 @@ dBuildingPreferences = {
 		iMountAthos: 20,
 		iHagiaSophia: 20,
 		iAlKhazneh: 15,
-		iGreatLibrary: 15,
-		iGreatLighthouse: 15,
+
+		iPyramids: -100,
+		iGreatCothon: -100,
+	},
+
+	iMacedon : {
+		iColossus: 15,
+		iTempleOfArtemis: 15,
+		iGreatMausoleum: 20,
+		iMountAthos: 20,
+		iHagiaSophia: 20,
+		iAlKhazneh: 15,
+		iGreatLibrary: 30,
+		iGreatLighthouse: 30,
 		
 		iPyramids: -100,
 		iGreatCothon: -100,

@@ -68,7 +68,8 @@ iColombia :		(30, 34), # Bogota
 iBrazil :		(44, 20), # Rio de Janeiro
 iCanada :		(31, 61), # Montreal
 iBulgaria:      (77, 56), # Tarnovo
-iMamluks :	    (79, 43),	# Cairo
+iMamluks :	    (79, 43), # Cairo
+iMacedon:       (75, 54), # Pella
 })
 
 dPeriodCapitals = {
@@ -263,6 +264,7 @@ iColombia :		((28, 34),	(30, 38)),
 iBrazil :		((42, 19),	(47, 25)),
 iCanada :		((26, 59),	(37, 62)),
 iBulgaria:      ((73, 55),  (78, 58)),
+iMacedon:       ((73, 53),  (79, 55)),
 })
 
 dCoreAreaExceptions = CivDict({

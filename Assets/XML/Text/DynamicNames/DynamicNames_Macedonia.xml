@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Greece -->
+<Civ4GameText xmlns="http://www.firaxis.com">
+	<TEXT>
+		<Tag>TXT_KEY_CIV_MACEDON_DESC</Tag>
+		<English>The Macedonians</English>
+		<French>
+			<Text>Les Mac&#233;doniens</Text>
+			<Gender>Male</Gender>
+			<Plural>1</Plural>
+		</French>
+		<German>The Macedonians</German>
+		<Italian>The Macedonians</Italian>
+		<Spanish>The Macedonians</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_MACEDON_SHORT_DESC</Tag>
+		<English>Macedon</English>
+		<French>
+			<Text>Mac&#233;doine</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>Macedon</German>
+		<Italian>Macedon</Italian>
+		<Spanish>Macedon</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_MACEDON_ADJECTIVE</Tag>
+		<English>Macedonian</English>
+		<French>
+			<Text>mac&#233;donien:mac&#233;donienne:mac&#233;doniens:mac&#233;doniennes</Text>
+			<Gender>Male:Female:Male:Female</Gender>
+			<Plural>0:0:1:1</Plural>
+		</French>
+		<German>Macedonian</German>
+		<Italian>Macedonian</Italian>
+		<Spanish>Macedonian</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_MACEDON_PEOPLES</Tag>
+		<English>Macedonian Peoples</English>
+		<French>
+			<Text>Peuplades mac&#233;doniennes</Text>
+			<Gender>Female</Gender>
+			<Plural>1</Plural>
+		</French>
+		<German>Macedonian Peoples</German>
+		<Italian>Macedonian Peoples</Italian>
+		<Spanish>Macedonian Peoples</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_MACEDON_DEFAULT</Tag>
+		<English>Kingdom of %s1</English>
+		<French>
+			<Text>Royaume de %s1</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>K&#246;nigreich %s1:K&#246;nigreich %s1:K&#246;nigreich %s1</Text>
+			<Gender>Neuter:Neuter:Neuter</Gender>
+			<Plural>0:0:0</Plural>
+		</German>
+		<Italian>
+			<Text>Regno del %s1</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Reino de %s1</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_MACEDON_PERSIA</Tag>
+		<English>Seleucid Empire</English>
+		<French>
+			<Text>Empire s&#233;leucide</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>Seleucid Empire</German>
+		<Italian>Seleucid Empire</Italian>
+		<Spanish>Seleucid Empire</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_MACEDON_EGYPT</Tag>
+		<English>Ptolemaic Kingdom</English>
+		<French>
+			<Text>Royaume lagide</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>Ptolemaic Kingdom</German>
+		<Italian>Ptolemaic Kingdom</Italian>
+		<Spanish>Ptolemaic Kingdom</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_MACEDON_INDIA</Tag>
+		<English>Greco-Bactrian Kingdom</English>
+		<French>
+			<Text>Royaume gr&#233;co-bactrien</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>Greco-Bactrian Kingdom</German>
+		<Italian>Greco-Bactrian Kingdom</Italian>
+		<Spanish>Greco-Bactrian Kingdom</Spanish>
+	</TEXT>
+</Civ4GameText>

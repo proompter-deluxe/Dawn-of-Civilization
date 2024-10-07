@@ -8193,6 +8193,15 @@ bool CvPlayer::canDoCivics(CivicTypes eCivic) const
 		}
 	}
 
+	// Macedonian UP: starts with Stratocracy
+	if (getCivilizationType() == MACEDON)
+	{
+		if (eCivic == CIVIC_STRATOCRACY)
+		{
+			return true;
+		}
+	}
+
 	if (!isHasCivicOption((CivicOptionTypes)(GC.getCivicInfo(eCivic).getCivicOptionType())) && !(GET_TEAM(getTeam()).isHasTech((TechTypes)(GC.getCivicInfo(eCivic).getTechPrereq()))))
 	{
 		return false;

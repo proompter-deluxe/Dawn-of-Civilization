@@ -146,42 +146,6 @@
 		</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CIV_GREEK_PERSIA</Tag>
-		<English>Seleucid Empire</English>
-		<French>
-			<Text>Empire s&#233;leucide</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<German>Seleucid Empire</German>
-		<Italian>Seleucid Empire</Italian>
-		<Spanish>Seleucid Empire</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CIV_GREEK_EGYPT</Tag>
-		<English>Ptolemaic Kingdom</English>
-		<French>
-			<Text>Royaume lagide</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<German>Ptolemaic Kingdom</German>
-		<Italian>Ptolemaic Kingdom</Italian>
-		<Spanish>Ptolemaic Kingdom</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CIV_GREEK_INDIA</Tag>
-		<English>Greco-Bactrian Kingdom</English>
-		<French>
-			<Text>Royaume gr&#233;co-bactrien</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<German>Greco-Bactrian Kingdom</German>
-		<Italian>Greco-Bactrian Kingdom</Italian>
-		<Spanish>Greco-Bactrian Kingdom</Spanish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_CIV_GREEK_ROME</Tag>
 		<English>Magna Graecia</English>
 		<French>
@@ -192,30 +156,6 @@
 		<German>Magna Graecia</German>
 		<Italian>Magna Graecia</Italian>
 		<Spanish>Magna Graecia</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CIV_GREECE_MACEDONIA</Tag>
-		<English>Macedonia</English>
-		<French>
-			<Text>Mac&#233;doine</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</French>
-		<German>Macedonia</German>
-		<Italian>Macedonia</Italian>
-		<Spanish>Macedonia</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CIV_GREECE_MACEDONIAN</Tag>
-		<English>Macedonian</English>
-		<French>
-			<Text>mac&#233;donien:mac&#233;donienne:mac&#233;doniens:mac&#233;doniennes</Text>
-			<Gender>Male:Female:Male:Female</Gender>
-			<Plural>0:0:1:1</Plural>
-		</French>
-		<German>Macedonian</German>
-		<Italian>Macedonian</Italian>
-		<Spanish>Macedonian</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIV_GREEK_NAME_TURKS</Tag>

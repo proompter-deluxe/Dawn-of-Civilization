@@ -2397,6 +2397,10 @@ UnitTypes CvCityAI::AI_bestUnit(bool bAsync, AdvisorTypes eIgnoreAdvisor, UnitAI
 		aiUnitAIVal[UNITAI_EXPLORE_SEA] *= 3;
 		aiUnitAIVal[UNITAI_EXPLORE_SEA] /= 2;
 		break;
+	case MACEDON:
+		aiUnitAIVal[UNITAI_ATTACK_CITY] *= 2;
+		aiUnitAIVal[UNITAI_ATTACK] *= 2;
+		break;
 	case CHINA:
 	case YANGTZE_CHINA:
 		aiUnitAIVal[UNITAI_EXPLORE] /= 4;

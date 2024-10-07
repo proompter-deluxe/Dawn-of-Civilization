@@ -260,6 +260,21 @@ dGoals = {
 	),
 	iGreece: (
 		FirstDiscover(iMathematics, iLiterature, iAesthetics, iPhilosophy, iMedicine),
+		CityCount(
+			(plots.region(rIberia), 1),
+			(plots.region(rFrance).named(GAUL), 1),
+			(plots.regions(rAnatolia), 2),
+			(plots.region(rEgypt).named(EGYPT), 1),
+			(plots.region(rLevant), 2),
+			at=-400,
+		),
+		Wonders(iParthenon, iColossus, iStatueOfZeus, iTempleOfArtemis, by=-250),
+	),
+	iMacedon: (
+		All(
+			UnitLevelCount(5, 1),
+			by=-360,
+		),
 		Control(
 			plots.region(rAnatolia),
 			plots.region(rLevant).named(LEVANT),
@@ -268,7 +283,18 @@ dGoals = {
 			plots.region(rEgypt),
 			at=-320,
 		),
-		Wonders(iParthenon, iColossus, iStatueOfZeus, iTempleOfArtemis, by=-250),
+		All (
+			Control(
+				plots.region(rAnatolia),
+				plots.region(rLevant).named(LEVANT),
+				plots.region(rMesopotamia),
+				plots.region(rPersia),
+				plots.region(rEgypt),
+				at=0,
+			),
+			CultureAmount(10000, at=0),
+		)
+		
 	),
 	iIndia: (
 		BuildingCount((iHinduShrine, 1), (iBuddhistShrine, 1), at=-100),
@@ -312,7 +338,7 @@ dGoals = {
 	iPersia: (
 		Control(
 			plots.region(rGreece), 
-			by=-450,
+			by=-480,
 		),
 		BuildingCount(wonders(), 10, by=-300),
 		PopulationPercent(35, at=-300),

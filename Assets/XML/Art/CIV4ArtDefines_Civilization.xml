@@ -109,6 +109,12 @@
 			<bWhiteFlag>0</bWhiteFlag>
 		</CivilizationArtInfo>
 		<CivilizationArtInfo>
+			<Type>ART_DEF_CIVILIZATION_MACEDON</Type>
+			<Button>Art/Interface/Buttons/civilizations/Macedon.dds</Button>
+			<Path>Art/Interface/TeamColor/FlagDECAL_Macedon.dds</Path>
+			<bWhiteFlag>0</bWhiteFlag>
+		</CivilizationArtInfo>
+		<CivilizationArtInfo>
 			<Type>ART_DEF_CIVILIZATION_HOLY_ROMAN</Type>
 			<Button>,Art/Interface/Buttons/Civilizations/Russia.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,4,4</Button>
 			<Path>Art/Interface/TeamColor/FlagDECAL_HolyRomanEmpire.dds</Path>

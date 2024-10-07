@@ -125,6 +125,59 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<BuildingClass>BUILDINGCLASS_BARRACKS</BuildingClass>
+			<Type>BUILDING_HELLENISTIC_COLONY</Type>
+			<Description>TXT_KEY_BUILDING_HELLENISTIC_COLONY</Description>
+			<Civilopedia>TXT_KEY_BUILDING_HELLENISTIC_COLONYS_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_HELLENISTIC_COLONY_STRATEGY</Strategy>
+			<Advisor>ADVISOR_MILITARY</Advisor>
+			<ArtDefineTag>ART_DEF_BUILDING_HELLENISTIC_COLONY</ArtDefineTag>
+			<bNeverCapture>1</bNeverCapture>
+			<iCost>40</iCost>
+			<iAdvancedStartCost>100</iAdvancedStartCost>
+			<iMinAreaSize>-1</iMinAreaSize>
+			<iAsset>2</iAsset>
+			<iPower>3</iPower>
+			<fVisibilityPriority>1.0</fVisibilityPriority>
+			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
+			<DomainFreeExperiences>
+				<DomainFreeExperience>
+					<DomainType>DOMAIN_LAND</DomainType>
+					<iExperience>3</iExperience>
+				</DomainFreeExperience>
+			</DomainFreeExperiences>
+			<SpecialistCounts>
+				<SpecialistCount>
+					<SpecialistType>SPECIALIST_ARTIST</SpecialistType>
+					<iSpecialistCount>1</iSpecialistCount>
+				</SpecialistCount>
+				<SpecialistCount>
+					<SpecialistType>SPECIALIST_STATESMAN</SpecialistType>
+					<iSpecialistCount>1</iSpecialistCount>
+				</SpecialistCount>
+			</SpecialistCounts>
+			<ObsoleteSafeCommerceChanges>
+				<iCommerce>0</iCommerce>
+				<iCommerce>0</iCommerce>
+				<iCommerce>1</iCommerce>
+			</ObsoleteSafeCommerceChanges>
+			<CommerceChangeDoubleTimes>
+				<iCommerce>0</iCommerce>
+				<iCommerce>0</iCommerce>
+				<iCommerce>1000</iCommerce>
+			</CommerceChangeDoubleTimes>
+			<Flavors>
+				<Flavor>
+					<FlavorType>FLAVOR_MILITARY</FlavorType>
+					<iFlavor>10</iFlavor>
+				</Flavor>
+				<Flavor>
+					<FlavorType>FLAVOR_CULTURE</FlavorType>
+					<iFlavor>3</iFlavor>
+				</Flavor>
+			</Flavors>
+		</BuildingInfo>
+		<BuildingInfo>
+			<BuildingClass>BUILDINGCLASS_BARRACKS</BuildingClass>
 			<Type>BUILDING_ASSYRIAN_KALLIU</Type>
 			<Description>TXT_KEY_BUILDING_ASSYRIAN_KALLIU</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ASSYRIAN_KALLIU_PEDIA</Civilopedia>

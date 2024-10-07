@@ -10,6 +10,7 @@ from Events import handler, popup_handler
 dCatholicPreference = CivDict({
 iEgypt		: 80,
 iGreece		: 80,
+iMacedon	: 80,
 iRome		: 95,
 iEthiopia	: 80,
 iByzantium	: 90,

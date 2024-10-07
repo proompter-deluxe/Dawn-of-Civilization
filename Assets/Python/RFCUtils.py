@@ -748,6 +748,9 @@ def canRespawn(iCiv):
 	# Greece cannot respawn when Byzantium is alive and vice versa
 	if exclusive(iCiv, iGreece, iByzantium):
 		return False
+
+	if exclusive(iCiv, iMacedon, iByzantium):
+		return False
 	
 	# Iran cannot respawn if Persia is alive and vice versa
 	if exclusive(iCiv, iPersia, iIran):

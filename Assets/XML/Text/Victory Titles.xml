@@ -274,6 +274,56 @@
 		<Italian>Ten Thousand Years</Italian>
 		<Spanish>Ten Thousand Years</Spanish>
 	</TEXT>
+
+	<TEXT>
+		<Tag>TXT_KEY_VICTORY_TITLE_MAM1</Tag>
+		<English>Expelling the Crusaders</English>
+		<French>Expelling the Crusaders</French>
+		<German>Expelling the Crusaders</German>
+		<Italian>Expelling the Crusaders</Italian>
+		<Spanish>Expelling the Crusaders</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_VICTORY_TITLE_MAM2</Tag>
+		<English>The Red Sea Trade Route</English>
+		<French>The Red Sea Trade Route</French>
+		<German>The Red Sea Trade Route</German>
+		<Italian>The Red Sea Trade Route</Italian>
+		<Spanish>The Red Sea Trade Route</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_VICTORY_TITLE_MAM3</Tag>
+		<English>Rhodes Rebuffed</English>
+		<French>Rhodes Rebuffed</French>
+		<German>Rhodes Rebuffed</German>
+		<Italian>Rhodes Rebuffed</Italian>
+		<Spanish>Rhodes Rebuffed</Spanish>
+	</TEXT>
+
+	<TEXT>
+		<Tag>TXT_KEY_VICTORY_TITLE_MCD1</Tag>
+		<English>The Silver Shields</English>
+		<French>The Silver Shields</French>
+		<German>The Silver Shields</German>
+		<Italian>The Silver Shields</Italian>
+		<Spanish>The Silver Shields</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_VICTORY_TITLE_MCD2</Tag>
+		<English>Alexander's Empire</English>
+		<French>L'empire d'Alexandre</French>
+		<German>Alexanders Reich</German>
+		<Italian>Alexander's Empire</Italian>
+		<Spanish>Alexander's Empire</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_VICTORY_TITLE_MCD3</Tag>
+		<English>The Flourishing of the Greek East</English>
+		<French>The Flourishing of the Greek East</French>
+		<German>The Flourishing of the Greek East</German>
+		<Italian>The Flourishing of the Greek East</Italian>
+		<Spanish>The Flourishing of the Greek East</Spanish>
+	</TEXT>
 	
 	<TEXT>
 		<Tag>TXT_KEY_VICTORY_TITLE_COL1</Tag>
@@ -435,11 +485,11 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_VICTORY_TITLE_GRE2</Tag>
-		<English>Alexander's Empire</English>
-		<French>L'empire d'Alexandre</French>
-		<German>Alexanders Reich</German>
-		<Italian>Alexander's Empire</Italian>
-		<Spanish>Alexander's Empire</Spanish>
+		<English>Mediterranean Colonizers</English>
+		<French>Mediterranean Colonizers</French>
+		<German>Mediterranean Colonizers</German>
+		<Italian>Mediterranean Colonizers</Italian>
+		<Spanish>Mediterranean Colonizers</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_VICTORY_TITLE_GRE3</Tag>

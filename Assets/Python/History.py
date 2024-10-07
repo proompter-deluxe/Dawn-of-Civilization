@@ -12,7 +12,8 @@ dRelocatedCapitals = CivDict({
 	iBabylonia: tBabylon,
 	iPhoenicia : tCarthage,
 	iMongols : tBeijing,
-	iOttomans : tConstantinople
+	iOttomans : tConstantinople,
+	iMacedon: tBabylon,
 })
 
 dCapitalInfrastructure = CivDict({
@@ -154,6 +155,12 @@ def placeGoodyHuts(iGameTurn):
 				for tTL, tBR in scenario_definition.lTribalVillages:
 					placeTribalVillage(tTL, tBR)
 
+# Macedonian UP, starts with great general (and Stratocracy)
+@handler("birth")
+def macedonSpawnGreatGeneral(iPlayer):
+	if civ(iPlayer) == iMacedon:
+		makeUnits(iMacedon, iGreatGeneral, tPella, 1)
+
 # TODO: revisit how this works
 @handler("BeginGameTurn")
 def checkEarlyColonists():
@@ -178,6 +185,11 @@ def checkEarlyColonists():
 			giveEarlyColonists(iGreece)
 		elif year() == year(-700) - offset:
 			giveEarlyColonists(iPhoenicia)
+			giveEarlyColonists(iGreece)
+		elif year() == year(-650) - offset:
+			giveEarlyColonists(iGreece)
+		elif year() == year(-600) - offset:
+			giveEarlyColonists(iGreece)	
 		# Phoenicia often refuses to settle spain, and so I must force the issue
 		elif year() == year(-550): # - offset: --> no offset, since we spawn the city in -570
 			pPlayer = player(iPhoenicia)
