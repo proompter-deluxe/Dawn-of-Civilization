@@ -45,6 +45,9 @@ def onBuildingBuilt(city, iBuilding):
 		
 	if iBuilding == iOrthodoxCathedral:
 		if game.isReligionFounded(iCatholicism): return
+
+		# if Cathedral is in Orthodox Core/Historical, don't found Catholicism
+		if plot(city).getSpreadFactor(iOrthodoxy) >= 3: return
 	
 		orthodoxHolyCity = game.getHolyCity(iOrthodoxy)
 	
@@ -105,32 +108,48 @@ def checkChristianity(iGameTurn):
 def checkSchism(iGameTurn):
 	if not game.isReligionFounded(iOrthodoxy): return
 	if game.isReligionFounded(iCatholicism): return
-	
 	if game.countReligionLevels(iOrthodoxy) < 10: return
+
+	# Do not schism until the Byzantines have had a chance to spawn and establish themselves
+	# Even if they don't actually spawn (e.g. if the human player is Rome and stable)
+	if year() < year(dBirth[iByzantium]) + turns(10): return
 	
-	religionCities = cities.all().religion(iOrthodoxy)
-	minorCities, majorCities = religionCities.split(is_minor)
+	orthodoxCities = cities.all().religion(iOrthodoxy)
 	
-	stateReligionCities, noStateReligionCities, differentStateReligionCities = majorCities.buckets(lambda city: player(city).getStateReligion() == iOrthodoxy, lambda city: player(city).getStateReligion() == -1)
-	
-	if stateReligionCities.count() <= 1: return
-	if not noStateReligionCities and not minorCities: return
-	
-	if stateReligionCities >= noStateReligionCities + minorCities: return
-	
-	orthodoxCapital = stateReligionCities.where(lambda city: city.isCapital()).maximum(lambda city: player(city).getScoreHistory(iGameTurn))
+	futureCatholicCities, nonCatholicLoyalCities = orthodoxCities.split(
+		lambda city: plot(city).getSpreadFactor(iCatholicism) >= RegionSpreadTypes.REGION_SPREAD_HISTORICAL and city.getOwner() != game.getHolyCity(iOrthodoxy).getOwner() and city.getOwner() != iByzantium
+	)
+
+	loyalOrthodoxCities, nonAlignedOrthodoxCities = nonCatholicLoyalCities.split(
+		lambda city: not is_minor(city) and plot(city).getSpreadFactor(iOrthodoxy) >= RegionSpreadTypes.REGION_SPREAD_HISTORICAL and player(city).getStateReligion() == iOrthodoxy
+	)
+
+	futureCatholicCitiesPop = futureCatholicCities.sum(lambda city: city.getPopulation())
+	loyalOrthodoxCitiesPop = loyalOrthodoxCities.sum(lambda city: city.getPopulation())
+	# nonAlignedOrthodoxCitiesPop = nonAlignedOrthodoxCities.sum(lambda city: city.getPopulation())
+	# nonCatholicLoyalCitiesPop = nonCatholicLoyalCities.sum(lambda city: city.getPopulation())
+
+	# for debugging purposes
+	# message(active(), 'Total orthodox cities: %s Future Catholic cities: (%s Pop: %s) Non-Catholic Loyal cities: (%s Pop %s) divided into two camps: Loyal Orthodox cities: (%s Pop: %s) and Non-Aligned Orthodox cities: (%s Pop: %s)' % (orthodoxCities.count(), futureCatholicCities.count(), futureCatholicCitiesPop, nonCatholicLoyalCities.count(), nonCatholicLoyalCitiesPop, loyalOrthodoxCities.count(), loyalOrthodoxCitiesPop, nonAlignedOrthodoxCities.count(), nonAlignedOrthodoxCitiesPop),color=iRed, force=True)
+
+	# as long as "historically orthodox" regions out-populate the catholic ones, do not Schism
+	if loyalOrthodoxCitiesPop >= futureCatholicCitiesPop: return
+
+	orthodoxCapital = loyalOrthodoxCities.where(lambda city: city.isCapital()).maximum(lambda city: player(city).getScoreHistory(iGameTurn))
 	if not orthodoxCapital:
 		orthodoxCapital = game.getHolyCity(iOrthodoxy)
 		
-	catholicCities = (noStateReligionCities + minorCities).without(orthodoxCapital)
-	catholicCapital = catholicCities.where(lambda city: plot(city).getSpreadFactor(iCatholicism) >= 3).maximum(lambda city: city.getPopulation())
+	# many different levels of fallbacks
+	catholicCapital = futureCatholicCities.where(lambda city: city.getOwner() != orthodoxCapital.getOwner()).maximum(lambda city: city.getPopulation())
 	if not catholicCapital:
-		catholicCapital = catholicCities.maximum(lambda city: city.getPopulation())
+		catholicCapital = nonAlignedOrthodoxCities.maximum(lambda city: city.getPopulation())
+	if not catholicCapital:
+		catholicCapital = loyalOrthodoxCities.where(lambda city: city.getOwner() != orthodoxCapital.getOwner()).maximum(lambda city: city.getPopulation())
+	if not catholicCapital:
+		return
 	
 	foundReligion(catholicCapital, iCatholicism)
-	
-	independentCities = differentStateReligionCities + minorCities
-	schism(orthodoxCapital, catholicCapital, noStateReligionCities, independentCities, message="TXT_KEY_SCHISM_MESSAGE")
+	schism(orthodoxCapital, catholicCapital, futureCatholicCities, nonAlignedOrthodoxCities, message="TXT_KEY_SCHISM_MESSAGE")
 
 
 @handler("BeginGameTurn")
