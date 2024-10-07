@@ -639,7 +639,7 @@ dUnitCostMods = CivDict({
 	iHarappa: 200,
 	iChina: 130,
 	iHittites: 100,
-	iNubia: 125,
+	iNubia: 130,
 	iGreece: 110,
 	iMacedon: 100,
 	iAssyria: 120,
