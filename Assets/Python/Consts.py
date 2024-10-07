@@ -514,7 +514,7 @@ iHarappa : -1700,
 iAssyria : -631, # end of Ashurbanipal's reign
 iHittites : -1180,
 iPhoenicia: 660,
-iNubia : 1518,
+iNubia : -150,
 iChinaS: 580,
 iIndia : 600,
 iPolynesia : 1200,
