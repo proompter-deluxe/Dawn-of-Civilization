@@ -1812,7 +1812,11 @@ def specificTitle(iPlayer, lPreviousOwners=[]):
 				return "TXT_KEY_CIV_GREECE_LEAGUE"
 				
 			return "TXT_KEY_CITY_STATES_ADJECTIVE"
-			
+
+	elif iCiv == iMacedon:
+		if bEmpire:
+			return "TXT_KEY_EMPIRE_ADJECTIVE"
+
 	elif iCiv == iPersia:
 		if bEmpire:
 			return "TXT_KEY_EMPIRE_ADJECTIVE"
@@ -1934,7 +1938,7 @@ def specificTitle(iPlayer, lPreviousOwners=[]):
 	elif iCiv == iArabia:
 		if bResurrected:
 			return "TXT_KEY_KINGDOM_OF"
-			
+
 	elif iCiv == iTibet:
 		if bEmpire:
 			return "TXT_KEY_EMPIRE_ADJECTIVE"
