@@ -118,12 +118,9 @@ iFranceCrusadesYear = 1090
 iHolyRomeCrusadesYear = 1190
 iEnglandCrusadesYear = 1190
 
-tHolyLandTL = (84, 44)
-tHolyLandBR = (86, 51)
-
-tConquestFranceCrusades = (15, iFrance, iArabia, tHolyLandTL, tHolyLandBR, 2, iFranceCrusadesYear, 10)
-tConquestHolyRomeCrusades = (16, iHolyRome, iMamluks, tHolyLandTL, tHolyLandBR, 1, iHolyRomeCrusadesYear, 5)
-tConquestEnglandCrusades = (17, iEngland, iMamluks, tHolyLandTL, tHolyLandBR, 1, iEnglandCrusadesYear, 5)
+tConquestFranceCrusades = (15, iFrance, iArabia, tGreeceLevantTL, tGreeceLevantBR, 2, iFranceCrusadesYear, 10)
+tConquestHolyRomeCrusades = (16, iHolyRome, iMamluks, tGreeceLevantTL, tGreeceLevantBR, 1, iHolyRomeCrusadesYear, 5)
+tConquestEnglandCrusades = (17, iEngland, iMamluks, tGreeceLevantTL, tGreeceLevantBR, 1, iEnglandCrusadesYear, 5)
 
 iSuiUnificationYear = 588
 tSouthChinaTL = (124, 43)
@@ -148,6 +145,10 @@ tArabsSindTL = (98, 42)
 tArabsSindBR = (102, 47)
 
 tConquestArabiaSind = (25, iArabia, iKushans, tArabsSindTL, tArabsSindBR, 2, iArabSindConquestYear, 15)
+
+iAssyriaLevantConquestYear = -900
+
+tConquestAssyriaLevant = (26, iAssyria, iPhoenicia, tGreeceLevantTL, tGreeceLevantBR, 1, iArabSindConquestYear, 5)
 
 lConquests = [
 	tConquestRomeCarthageInSpain,
@@ -174,7 +175,8 @@ lConquests = [
 	tConquestSuiUnification,
 	tConquestArabiaCarthage,
 	tConquestArabiaPersia,
-	tConquestArabiaSind
+	tConquestArabiaSind,
+	tConquestAssyriaLevant,
 ]
 
 

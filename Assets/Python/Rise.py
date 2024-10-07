@@ -78,6 +78,7 @@ lAlwaysClear = [
 ]
 
 lBirthWars = [
+	(iPhoenicia, iAssyria), # otherwise the Phoenician spawn protection is absurdly long
 	(iPersia, iAssyria),
 	(iPersia, iBabylonia),
 	(iArabia, iEgypt),
