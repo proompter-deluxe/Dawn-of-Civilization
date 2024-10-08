@@ -513,7 +513,7 @@ iBabylonia : -1155, # Neo-Babylonia was a short lived affair, it can exist if Ba
 iHarappa : -1700,
 iAssyria : -631, # end of Ashurbanipal's reign
 iHittites : -1180,
-iPhoenicia: 660,
+iPhoenicia: -150,
 iNubia : -150,
 iChinaS: 580,
 iIndia : 600,
