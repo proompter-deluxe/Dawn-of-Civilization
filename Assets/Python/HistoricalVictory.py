@@ -274,7 +274,8 @@ dGoals = {
 	iMacedon: (
 		All(
 			UnitCombatLevelCount(UnitCombatTypes.UNITCOMBAT_MELEE, 6, 1),
-			by=-360,
+			UnitCombatLevelCount(UnitCombatTypes.UNITCOMBAT_HEAVY_CAVALRY, 6, 1),
+			by=-320,
 		),
 		Control(
 			plots.region(rMesopotamia),
