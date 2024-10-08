@@ -34700,6 +34700,7 @@ BeginPlot
 	x=77,y=66
 	isNOfRiver
 	RiverWEDirection=3
+	BonusType=BONUS_DEER
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
