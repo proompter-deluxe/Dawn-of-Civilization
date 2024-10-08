@@ -998,7 +998,7 @@ iGemsEmeralds, iSheepLlama, iSheepBlack, iCowBrown, iPigFurry, iIvoryAfrican, iC
 
 
 iNumBuildings = 144
-(iPalace, iChineseUniquePowerPalace, iBarracks, iHellenicColony, iKalliu, iSoldattorp, iIkhanda, iGranary, iCommandery, iTannery, iPaganTemple, iWeaver, iStan, iMbwadi, 
+(iPalace, iChineseUniquePowerPalace, iBarracks, iHellenisticColony, iKalliu, iSoldattorp, iIkhanda, iGranary, iCommandery, iTannery, iPaganTemple, iWeaver, iStan, iMbwadi, 
 iMonument, iObelisk, iMenhir, iStele, iCandi, iEdict, iMalae, iMudbrickPyramid, iTotemPole, iWalls, 
 iDun, iStable, iOrtege, iLibrary, iEdubba, iTaixue, iKyaung, iCalmecac, iHarbor, iAqueduct, 
 iQanat, iBaray, iNoria, iStepwell, iTheatre, iOdeon, iWaterPuppetTheatre, iHippodrome, iPavilion, iArena, 
