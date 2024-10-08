@@ -277,7 +277,6 @@ dGoals = {
 			by=-360,
 		),
 		Control(
-			plots.region(rAnatolia),
 			plots.region(rLevant).named(LEVANT),
 			plots.region(rMesopotamia),
 			plots.region(rPersia),
