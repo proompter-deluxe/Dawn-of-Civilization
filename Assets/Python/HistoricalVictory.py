@@ -277,11 +277,8 @@ dGoals = {
 			by=-360,
 		),
 		Control(
-			plots.region(rLevant).named(LEVANT),
 			plots.region(rMesopotamia),
-			plots.region(rPersia),
-			plots.region(rEgypt),
-			at=-320,
+			by=-320
 		),
 		All (
 			Control(
@@ -291,6 +288,7 @@ dGoals = {
 				plots.region(rPersia),
 				plots.region(rEgypt),
 			),
+			CityBuilding(city(tBabylon).named(BABYLON), iPalace),
 			CultureAmount(10000),
 			at=1,
 		)
