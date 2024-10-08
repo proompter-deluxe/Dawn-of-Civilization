@@ -142,11 +142,11 @@ def checkSchism(iGameTurn):
 		orthodoxCapital = game.getHolyCity(iOrthodoxy)
 		
 	# many different levels of fallbacks
-	catholicCapital = futureCatholicCities.where(lambda city: city.getOwner() != orthodoxCapital.getOwner()).maximum(lambda city: city.getPopulation())
+	catholicCapital = futureCatholicCities.where(lambda city: city.getOwner() != orthodoxCapital.getOwner()).maximum(lambda city: player(city).getScoreHistory(iGameTurn))
 	if not catholicCapital:
-		catholicCapital = nonAlignedOrthodoxCities.maximum(lambda city: city.getPopulation())
+		catholicCapital = nonAlignedOrthodoxCities.maximum(lambda city: player(city).getScoreHistory(iGameTurn))
 	if not catholicCapital:
-		catholicCapital = loyalOrthodoxCities.where(lambda city: city.getOwner() != orthodoxCapital.getOwner()).maximum(lambda city: city.getPopulation())
+		catholicCapital = loyalOrthodoxCities.where(lambda city: city.getOwner() != orthodoxCapital.getOwner()).maximum(lambda city: player(city).getScoreHistory(iGameTurn))
 	if not catholicCapital:
 		return
 	
