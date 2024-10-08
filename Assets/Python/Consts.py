@@ -614,7 +614,7 @@ iColombia : [(1810, 2020)],
 iBrazil : [(1820, 2020)],
 iCanada : [(1867, 2020)],
 iMamluks: [(1800, 2020)],
-iMacedon: [(-650, -300)],
+iMacedon: [(-400, -150)],
 }, [])
 
 dAggressionLevel = CivDict({
@@ -797,7 +797,7 @@ iColombia : 80,
 iBrazil : 100,
 iCanada : 100,
 iMamluks: 70,
-iMacedon: 90,
+iMacedon: 70,
 })
 
 dPatienceThreshold = CivDict({
