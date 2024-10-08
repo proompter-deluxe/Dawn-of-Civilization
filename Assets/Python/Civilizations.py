@@ -235,6 +235,7 @@ lCivilizations = [
 		iGold=200,
 		iAdvancedStartPoints=90,
 		lCivics=[iRepublic, iSlavery],
+		lEnemies=[iAssyria], # otherwise the Phoenician spawn protection is absurdly long
 		techs=techs.column(2).including(iAlloys, iWriting, iShipbuilding)
 	),
 	Civilization(
