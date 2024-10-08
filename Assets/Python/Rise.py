@@ -715,11 +715,13 @@ class Birth(object):
 			if cities.birth(self.iCiv):
 				return False
 		
-		# Byzantium requires Rome to be alive and Greece to be dead (human Rome can avoid Byzantine spawn by being solid)
+		# Byzantium requires Rome to be alive and Greece (or Macedon) to be dead (human Rome can avoid Byzantine spawn by being solid)
 		if self.iCiv == iByzantium:
 			if not player(iRome).isExisting():
 				return False
 			elif player(iGreece).isExisting():
+				return False
+			elif player(iMacedon).isExisting():
 				return False
 			elif player(iRome).isHuman() and stability(iRome) == iStabilitySolid:
 				return False
