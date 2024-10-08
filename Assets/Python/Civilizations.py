@@ -1300,10 +1300,6 @@ dAdditionalUnits = CivDict({
 	iPersia: {
 		iAttack: 4,
 	},
-	iPhoenicia: {
-		iHarass: 1,
-		iShock: 1
-	},
 	iPolynesia: {
 		iBase: 2,
 	},
