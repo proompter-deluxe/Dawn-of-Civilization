@@ -90,8 +90,8 @@ tTurksPersiaTL = (91, 43)
 tTurksPersiaBR = (98, 52)
 
 iTurksAnatoliaYear = 1100
-tTurksAnatoliaTL = (80, 51)
-tTurksAnatoliaBR = (87, 55)
+tTurksAnatoliaTL = (81, 51)
+tTurksAnatoliaBR = (92, 55)
 
 tConquestTurksPersia = (10, iTurks, iArabia, tTurksPersiaTL, tTurksPersiaBR, 4, iTurksPersiaYear, 20)
 tConquestTurksAnatolia = (11, iTurks, iByzantium, tTurksAnatoliaTL, tTurksAnatoliaBR, 5, iTurksAnatoliaYear, 20)
