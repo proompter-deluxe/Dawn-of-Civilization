@@ -37,40 +37,40 @@ iRomeCeltiaYear = -60
 tRomeCeltiaTL = (56, 55)
 tRomeCeltiaBR = (67, 62)
 
+iRomeLevantYear = -75
 iRomeEgyptYear = -10
-tRomeEgyptTL = (76, 40)
-tRomeEgyptBR = (82, 45)
 
 iRomeBritainYear = 50
 tRomeBritainTL = (55, 62)
 tRomeBritainBR = (59, 67)
 
-# following setup: iPlayer, iPreferredTarget, TL, BR, iNumTargets, iStartYear, iTurnInterval
-tConquestRomeCarthageInSpain = (22, iRome, iCarthage, tRomeSpainTL, tRomeSpainBR, 3, iRomeCarthageYear, 10)
-tConquestRomeCarthage = (0, iRome, iCarthage, tRomeCarthageTL, tRomeCarthageBR, 4, iRomeCarthageYear + 20, 30)
-tConquestRomeGreece = (1, iRome, iGreece, tRomeGreeceTL, tRomeGreeceBR, 2, iRomeGreeceYear, 10)
-tConquestRomeAnatolia = (2, iRome, iMacedon, tRomeAnatoliaTL, tRomeAnatoliaBR, 3, iRomeAnatoliaYear, 20)
-tConquestRomeCelts = (3, iRome, iCelts, tRomeCeltiaTL, tRomeCeltiaBR, 2, iRomeCeltiaYear, 10)
-tConquestRomeEgypt = (4, iRome, iEgypt, tRomeEgyptTL, tRomeEgyptBR, 3, iRomeEgyptYear, 10)
-tConquestRomeBritain = (21, iRome, iCelts, tRomeBritainTL, tRomeBritainBR, 2, iRomeBritainYear, 20)
-
 iAlexanderYear = -330
 tGreeceAnatoliaTL = (79, 51) 
 tGreeceAnatoliaBR = (86, 53) # ignore the top 2 rows of Anatolia
-tGreeceLevantTL = (83, 44)
-tGreeceLevantBR = (86, 51)
+tLevantTL = (83, 44)
+tLevantBR = (86, 51)
 tGreeceMesopotamiaTL = (86, 44)
 tGreeceMesopotamiaBR = (90, 50)
-tGreeceEgyptTL = (76, 40)
-tGreeceEgyptBR = (82, 45)
+tEgyptTL = (76, 40)
+tEgyptBR = (82, 45)
 tGreecePersiaTL = (91, 43)
 tGreecePersiaBR = (97, 52)
 
+# following setup: iPlayer, iPreferredTarget, TL, BR, iNumTargets, iStartYear, iTurnInterval
 tConquestMacedonAnatolia = (19, iMacedon, iPersia, tGreeceAnatoliaTL, tGreeceAnatoliaBR, 10, iAlexanderYear, 10)
-tConquestMacedonLevant = (20, iMacedon, iPersia, tGreeceLevantTL, tGreeceLevantBR, 10, iAlexanderYear + 1, 20)
-tConquestMacedonEgypt = (6, iMacedon, iEgypt, tGreeceEgyptTL, tGreeceEgyptBR, 10, iAlexanderYear + 2, 20)
+tConquestMacedonLevant = (20, iMacedon, iPersia, tLevantTL, tLevantBR, 10, iAlexanderYear + 1, 20)
+tConquestMacedonEgypt = (6, iMacedon, iEgypt, tEgyptTL, tEgyptBR, 10, iAlexanderYear + 2, 20)
 tConquestMacedonMesopotamia = (5, iMacedon, iPersia, tGreeceMesopotamiaTL, tGreeceMesopotamiaBR, 10, iAlexanderYear + 3, 20)
 tConquestMacedonPersia = (7, iMacedon, iPersia, tGreecePersiaTL, tGreecePersiaBR, 10, iAlexanderYear + 4, 30)
+
+tConquestRomeCarthageInSpain = (22, iRome, iCarthage, tRomeSpainTL, tRomeSpainBR, 3, iRomeCarthageYear, 10)
+tConquestRomeCarthage = (0, iRome, iCarthage, tRomeCarthageTL, tRomeCarthageBR, 4, iRomeCarthageYear + 20, 30)
+tConquestRomeGreece = (1, iRome, iGreece, tRomeGreeceTL, tRomeGreeceBR, 2, iRomeGreeceYear, 10)
+tConquestRomeAnatolia = (2, iRome, iMacedon, tRomeAnatoliaTL, tRomeAnatoliaBR, 3, iRomeAnatoliaYear, 30)
+tConquestRomeLevant = (28, iRome, iMacedon, tLevantTL, tLevantBR, 2, iRomeLevantYear, 30)
+tConquestRomeCelts = (3, iRome, iCelts, tRomeCeltiaTL, tRomeCeltiaBR, 2, iRomeCeltiaYear, 10)
+tConquestRomeEgypt = (4, iRome, iEgypt, tEgyptTL, tEgyptBR, 3, iRomeEgyptYear, 10)
+tConquestRomeBritain = (21, iRome, iCelts, tRomeBritainTL, tRomeBritainBR, 2, iRomeBritainYear, 20)
 
 iCholaSumatraYear = 1030
 tCholaSumatraTL = (115, 26)
@@ -118,9 +118,9 @@ iFranceCrusadesYear = 1090
 iHolyRomeCrusadesYear = 1190
 iEnglandCrusadesYear = 1190
 
-tConquestFranceCrusades = (15, iFrance, iArabia, tGreeceLevantTL, tGreeceLevantBR, 2, iFranceCrusadesYear, 10)
-tConquestHolyRomeCrusades = (16, iHolyRome, iMamluks, tGreeceLevantTL, tGreeceLevantBR, 1, iHolyRomeCrusadesYear, 5)
-tConquestEnglandCrusades = (17, iEngland, iMamluks, tGreeceLevantTL, tGreeceLevantBR, 1, iEnglandCrusadesYear, 5)
+tConquestFranceCrusades = (15, iFrance, iArabia, tLevantTL, tLevantBR, 2, iFranceCrusadesYear, 10)
+tConquestHolyRomeCrusades = (16, iHolyRome, iMamluks, tLevantTL, tLevantBR, 1, iHolyRomeCrusadesYear, 5)
+tConquestEnglandCrusades = (17, iEngland, iMamluks, tLevantTL, tLevantBR, 1, iEnglandCrusadesYear, 5)
 
 iSuiUnificationYear = 588
 tSouthChinaTL = (124, 43)
@@ -148,7 +148,7 @@ tConquestArabiaSind = (25, iArabia, iKushans, tArabsSindTL, tArabsSindBR, 2, iAr
 
 iAssyriaLevantConquestYear = -900
 
-tConquestAssyriaLevant = (26, iAssyria, iPhoenicia, tGreeceLevantTL, tGreeceLevantBR, 1, iAssyriaLevantConquestYear, 5)
+tConquestAssyriaLevant = (26, iAssyria, iPhoenicia, tLevantTL, tLevantBR, 1, iAssyriaLevantConquestYear, 5)
 
 iPersiaLydiaConquestYear = -550
 
@@ -159,7 +159,8 @@ lConquests = [
 	tConquestRomeCarthageInSpain,
 	tConquestRomeCarthage, 
 	tConquestRomeGreece, 
-	tConquestRomeAnatolia, 
+	tConquestRomeAnatolia,
+	tConquestRomeLevant, 
 	tConquestRomeCelts, 
 	tConquestRomeEgypt,
 	tConquestRomeBritain,
@@ -232,8 +233,8 @@ def checkConquests():
 		elif tConquest[0] == tConquestHolyRomeCrusades[0] or tConquest[0] == tConquestEnglandCrusades[0]:
 			# Don't launch "Third Crusade" if Holy Land still firmly under French control
 			checkConquest(tConquest, tConquestFranceCrusades, True)
-		elif tConquest[0] == tConquestRomeAnatolia[0]:
-			# Rome needs Greece before Anatolia
+		elif tConquest[0] == tConquestRomeAnatolia[0] or tConquest[0] == tConquestRomeLevant:
+			# Rome needs Greece before Anatolia or Levant
 			checkConquest(tConquest, tConquestRomeGreece)
 		elif tConquest[0] == tConquestRomeCarthage[0]:
 			# Rome needs Spain before attacking North Africa
