@@ -273,7 +273,7 @@ dGoals = {
 	),
 	iMacedon: (
 		All(
-			UnitLevelCount(5, 1),
+			UnitCombatLevelCount(UnitCombatTypes.UNITCOMBAT_MELEE, 6, 1),
 			by=-360,
 		),
 		Control(
@@ -291,9 +291,9 @@ dGoals = {
 				plots.region(rMesopotamia),
 				plots.region(rPersia),
 				plots.region(rEgypt),
-				at=0,
 			),
-			CultureAmount(10000, at=0),
+			CultureAmount(10000),
+			at=1,
 		)
 		
 	),

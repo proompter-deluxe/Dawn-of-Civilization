@@ -1229,7 +1229,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_VICTORY_DESC_UNIT_COMBAT_LEVEL_COUNT</Tag>
-		<English>%s3 level %s2 %s1</English>
+		<English>%s3 of your %s1 at level %s2</English>
 		<French></French>
 		<German></German>
 		<Italian></Italian>
@@ -2016,7 +2016,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_VICTORY_PROGR_UNIT_COMBAT_LEVEL_COUNT</Tag>
-		<English>Level %s2 %s1</English>
+		<English>Level %s2 of type %s1</English>
 		<French></French>
 		<German></German>
 		<Italian></Italian>
@@ -2236,7 +2236,7 @@
 
 	<TEXT>
 		<Tag>TXT_KEY_VICTORY_NUMBER_1</Tag>
-		<English>a</English>
+		<English>one</English>
 		<French></French>
 		<German></German>
 		<Italian></Italian>
