@@ -1,9 +1,9 @@
 from Core import *
 from RFCUtils import *
+from Locations import *
 
 from Events import handler
 from Resurrection import getResurrectionTechs
-
 
 ### Constants ###
 
@@ -44,7 +44,7 @@ iRomeBritainYear = 50
 tRomeBritainTL = (55, 62)
 tRomeBritainBR = (59, 67)
 
-iAlexanderYear = -330
+iAlexanderYear = -335
 tGreeceAnatoliaTL = (79, 51) 
 tGreeceAnatoliaBR = (86, 53) # ignore the top 2 rows of Anatolia
 tLevantTL = (83, 44)
@@ -57,11 +57,11 @@ tGreecePersiaTL = (91, 43)
 tGreecePersiaBR = (97, 52)
 
 # following setup: iPlayer, iPreferredTarget, TL, BR, iNumTargets, iStartYear, iTurnInterval
-tConquestMacedonAnatolia = (19, iMacedon, iPersia, tGreeceAnatoliaTL, tGreeceAnatoliaBR, 10, iAlexanderYear, 10)
-tConquestMacedonLevant = (20, iMacedon, iPersia, tLevantTL, tLevantBR, 10, iAlexanderYear + 1, 20)
-tConquestMacedonEgypt = (6, iMacedon, iEgypt, tEgyptTL, tEgyptBR, 10, iAlexanderYear + 2, 20)
-tConquestMacedonMesopotamia = (5, iMacedon, iPersia, tGreeceMesopotamiaTL, tGreeceMesopotamiaBR, 10, iAlexanderYear + 3, 20)
-tConquestMacedonPersia = (7, iMacedon, iPersia, tGreecePersiaTL, tGreecePersiaBR, 10, iAlexanderYear + 4, 30)
+tConquestMacedonAnatolia = (19, iMacedon, iPersia, tGreeceAnatoliaTL, tGreeceAnatoliaBR, 3, iAlexanderYear, 10)
+tConquestMacedonLevant = (20, iMacedon, iPersia, tLevantTL, tLevantBR, 3, iAlexanderYear, 20)
+tConquestMacedonEgypt = (6, iMacedon, iEgypt, tEgyptTL, tEgyptBR, 3, iAlexanderYear, 20)
+tConquestMacedonMesopotamia = (5, iMacedon, iPersia, tGreeceMesopotamiaTL, tGreeceMesopotamiaBR, 3, iAlexanderYear, 20)
+tConquestMacedonPersia = (7, iMacedon, iPersia, tGreecePersiaTL, tGreecePersiaBR, 4, iAlexanderYear, 20)
 
 tConquestRomeCarthageInSpain = (22, iRome, iCarthage, tRomeSpainTL, tRomeSpainBR, 3, iRomeCarthageYear, 10)
 tConquestRomeCarthage = (0, iRome, iCarthage, tRomeCarthageTL, tRomeCarthageBR, 4, iRomeCarthageYear + 20, 30)
@@ -417,6 +417,21 @@ def spawnConquerors(iPlayer, iPreferredTarget, tTL, tBR, iNumTargets, iWarPlan =
 			makeUnits(iPlayer, iPhalanx, tPlot, 2, UnitAITypes.UNITAI_ATTACK_CITY)
 			makeUnits(iPlayer, iCompanion, tPlot, 2, UnitAITypes.UNITAI_ATTACK_CITY)
 			makeUnits(iPlayer, iArcher, tPlot, 1)
+
+			# if Macedon happens to control Greece proper, give them volunteers
+			# otherwise give them mercenaries
+			if civ(plot(tAthens)) == iMacedon:
+				units = makeUnits(iPlayer, iHoplite, tPlot, 1, UnitAITypes.UNITAI_ATTACK_CITY)
+			else:
+				units = makeUnits(iPlayer, iHoplite, tPlot, 1, UnitAITypes.UNITAI_ATTACK_CITY)
+				units.promotion(infos.type("PROMOTION_MERCENARY"))
+
+			# Tyre gets extra attackers, since it's a tough nut to crack and the site of a famous siege
+			if plot(city) == plot(tTyre):
+				makeUnits(iPlayer, iCatapult, tPlot, 2, UnitAITypes.UNITAI_ATTACK_CITY)
+				makeUnits(iPlayer, iHoplite, tPlot, 1, UnitAITypes.UNITAI_ATTACK_CITY)
+
+
 		elif iCiv in [iSpain, iEngland, iHolyRome, iFrance, iPoland, iPortugal, iItaly, iNorse, iRus, iRussia, iSweden]:
 			dConquestUnits = {
 				iCityAttack: 1 + iExtra,
