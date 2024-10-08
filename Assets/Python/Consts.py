@@ -996,7 +996,7 @@ iNumBonusVarieties = 19
 (iDyeCochineal, iDyeMurex, iDyeHenna, iSpicesCinnamon, iSpicesNutmeg, iSpicesSaffron, iSpicesVanilla, iGemsTurquoise, iGemsDiamonds, iGemsRuby, iGemsSapphire, 
 iGemsEmeralds, iSheepLlama, iSheepBlack, iCowBrown, iPigFurry, iIvoryAfrican, iCitrusOranges, iCrabShrimp) = range(iNumBonuses, iNumBonuses + iNumBonusVarieties)
 
-
+# if you increase this, increment BEGIN_WONDERS	in CvRhyes.h
 iNumBuildings = 144
 (iPalace, iChineseUniquePowerPalace, iBarracks, iHellenisticColony, iKalliu, iSoldattorp, iIkhanda, iGranary, iCommandery, iTannery, iPaganTemple, iWeaver, iStan, iMbwadi, 
 iMonument, iObelisk, iMenhir, iStele, iCandi, iEdict, iMalae, iMudbrickPyramid, iTotemPole, iWalls, 
