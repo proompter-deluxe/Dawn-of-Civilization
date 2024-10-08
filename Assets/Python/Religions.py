@@ -126,14 +126,16 @@ def checkSchism(iGameTurn):
 
 	futureCatholicCitiesPop = futureCatholicCities.sum(lambda city: city.getPopulation())
 	loyalOrthodoxCitiesPop = loyalOrthodoxCities.sum(lambda city: city.getPopulation())
-	# nonAlignedOrthodoxCitiesPop = nonAlignedOrthodoxCities.sum(lambda city: city.getPopulation())
+	nonAlignedOrthodoxCitiesPop = nonAlignedOrthodoxCities.sum(lambda city: city.getPopulation())
 	# nonCatholicLoyalCitiesPop = nonCatholicLoyalCities.sum(lambda city: city.getPopulation())
 
 	# for debugging purposes
 	# message(active(), 'Total orthodox cities: %s Future Catholic cities: (%s Pop: %s) Non-Catholic Loyal cities: (%s Pop %s) divided into two camps: Loyal Orthodox cities: (%s Pop: %s) and Non-Aligned Orthodox cities: (%s Pop: %s)' % (orthodoxCities.count(), futureCatholicCities.count(), futureCatholicCitiesPop, nonCatholicLoyalCities.count(), nonCatholicLoyalCitiesPop, loyalOrthodoxCities.count(), loyalOrthodoxCitiesPop, nonAlignedOrthodoxCities.count(), nonAlignedOrthodoxCitiesPop),color=iRed, force=True)
 
 	# as long as "historically orthodox" regions out-populate the catholic ones, do not Schism
-	if loyalOrthodoxCitiesPop >= futureCatholicCitiesPop: return
+	# non-Aligned Orthodox (i.e. Orthodox owned by Minors or non-Orthodox civs) count for a portion of their pop
+	# a lot of the non-Aligned are from the lands of the Arab conquest; Orthodoxy often disappears over time there
+	if loyalOrthodoxCitiesPop + nonAlignedOrthodoxCitiesPop / 3 >= futureCatholicCitiesPop: return
 
 	orthodoxCapital = loyalOrthodoxCities.where(lambda city: city.isCapital()).maximum(lambda city: player(city).getScoreHistory(iGameTurn))
 	if not orthodoxCapital:
