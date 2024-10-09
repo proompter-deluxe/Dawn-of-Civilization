@@ -767,7 +767,7 @@
 			<Description>TXT_KEY_TECH_BLOOMERY</Description>
 			<Civilopedia>TXT_KEY_TECH_BLOOMERY_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_MILITARY</Advisor>
-			<iCost>300</iCost>
+			<iCost>350</iCost>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
 			<Era>ERA_CLASSICAL</Era>
 			<iAsset>16</iAsset>
@@ -803,7 +803,7 @@
 			<Description>TXT_KEY_TECH_CEMENT</Description>
 			<Civilopedia>TXT_KEY_TECH_CEMENT_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_GROWTH</Advisor>
-			<iCost>275</iCost>
+			<iCost>330</iCost>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
 			<Era>ERA_CLASSICAL</Era>
 			<iAsset>16</iAsset>
@@ -836,7 +836,7 @@
 			<Description>TXT_KEY_TECH_MATHEMATICS</Description>
 			<Civilopedia>TXT_KEY_TECH_MATHEMATICS_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<iCost>275</iCost>
+			<iCost>330</iCost>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
 			<Era>ERA_CLASSICAL</Era>
 			<iAsset>16</iAsset>
@@ -877,7 +877,7 @@
 			<Description>TXT_KEY_TECH_CONTRACT</Description>
 			<Civilopedia>TXT_KEY_TECH_CONTRACT_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
-			<iCost>250</iCost>
+			<iCost>300</iCost>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
 			<Era>ERA_CLASSICAL</Era>
 			<iAsset>16</iAsset>
@@ -919,7 +919,7 @@
 			<Description>TXT_KEY_TECH_LITERATURE</Description>
 			<Civilopedia>TXT_KEY_TECH_LITERATURE_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_CULTURE</Advisor>
-			<iCost>300</iCost>
+			<iCost>360</iCost>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
 			<Era>ERA_CLASSICAL</Era>
 			<iAsset>16</iAsset>
@@ -1031,7 +1031,7 @@
 			<Description>TXT_KEY_TECH_GENERALSHIP</Description>
 			<Civilopedia>TXT_KEY_TECH_GENERALSHIP_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<iCost>350</iCost>
+			<iCost>400</iCost>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
 			<Era>ERA_CLASSICAL</Era>
 			<iAsset>20</iAsset>
@@ -1066,7 +1066,7 @@
 			<Description>TXT_KEY_TECH_ENGINEERING</Description>
 			<Civilopedia>TXT_KEY_TECH_ENGINEERING_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
-			<iCost>400</iCost>
+			<iCost>480</iCost>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
 			<Era>ERA_CLASSICAL</Era>
 			<iAsset>20</iAsset>
@@ -1101,7 +1101,7 @@
 			<Description>TXT_KEY_TECH_AESTHETICS</Description>
 			<Civilopedia>TXT_KEY_TECH_AESTHETICS_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_CULTURE</Advisor>
-			<iCost>350</iCost>
+			<iCost>420</iCost>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
 			<Era>ERA_CLASSICAL</Era>
 			<iAsset>20</iAsset>
@@ -1136,7 +1136,7 @@
 			<Description>TXT_KEY_TECH_CURRENCY</Description>
 			<Civilopedia>TXT_KEY_TECH_CURRENCY_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
-			<iCost>380</iCost>
+			<iCost>450</iCost>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
 			<Era>ERA_CLASSICAL</Era>
 			<iAsset>20</iAsset>
@@ -1169,7 +1169,7 @@
 			<Description>TXT_KEY_TECH_LAW</Description>
 			<Civilopedia>TXT_KEY_TECH_LAW_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
-			<iCost>380</iCost>
+			<iCost>450</iCost>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
 			<Era>ERA_CLASSICAL</Era>
 			<iAsset>20</iAsset>
@@ -1206,7 +1206,7 @@
 			<Description>TXT_KEY_TECH_PHILOSOPHY</Description>
 			<Civilopedia>TXT_KEY_TECH_PHILOSOPHY_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<iCost>400</iCost>
+			<iCost>480</iCost>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
 			<Era>ERA_CLASSICAL</Era>
 			<iAsset>20</iAsset>
@@ -1243,7 +1243,7 @@
 			<Description>TXT_KEY_TECH_MEDICINE</Description>
 			<Civilopedia>TXT_KEY_TECH_MEDICINE_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_GROWTH</Advisor>
-			<iCost>380</iCost>
+			<iCost>450</iCost>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
 			<Era>ERA_CLASSICAL</Era>
 			<iAsset>20</iAsset>
@@ -1285,7 +1285,7 @@
 			<Description>TXT_KEY_TECH_NOBILITY</Description>
 			<Civilopedia>TXT_KEY_TECH_NOBILITY_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_CULTURE</Advisor>
-			<iCost>550</iCost>
+			<iCost>650</iCost>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
 			<Era>ERA_CLASSICAL</Era>
 			<FirstFreeUnitClass>UNITCLASS_GREAT_GENERAL</FirstFreeUnitClass>
@@ -1322,7 +1322,7 @@
 			<Description>TXT_KEY_TECH_STEEL</Description>
 			<Civilopedia>TXT_KEY_TECH_STEEL_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_MILITARY</Advisor>
-			<iCost>500</iCost>
+			<iCost>600</iCost>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
 			<Era>ERA_CLASSICAL</Era>
 			<iAsset>24</iAsset>
@@ -1358,7 +1358,7 @@
 			<Description>TXT_KEY_TECH_ARCHITECTURE</Description>
 			<Civilopedia>TXT_KEY_TECH_ARCHITECTURE_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_CULTURE</Advisor>
-			<iCost>500</iCost>
+			<iCost>600</iCost>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
 			<Era>ERA_CLASSICAL</Era>
 			<iAsset>24</iAsset>
@@ -1391,7 +1391,7 @@
 			<Description>TXT_KEY_TECH_ARTISANRY</Description>
 			<Civilopedia>TXT_KEY_TECH_ARTISANRY_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
-			<iCost>450</iCost>
+			<iCost>500</iCost>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
 			<Era>ERA_CLASSICAL</Era>
 			<iAsset>24</iAsset>
@@ -1428,7 +1428,7 @@
 			<Description>TXT_KEY_TECH_POLITICS</Description>
 			<Civilopedia>TXT_KEY_TECH_POLITICS_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
-			<iCost>500</iCost>
+			<iCost>600</iCost>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
 			<Era>ERA_CLASSICAL</Era>
 			<iAsset>24</iAsset>
@@ -1462,7 +1462,7 @@
 			<Description>TXT_KEY_TECH_SCHOLARSHIP</Description>
 			<Civilopedia>TXT_KEY_TECH_SCHOLARSHIP_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<iCost>500</iCost>
+			<iCost>600</iCost>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
 			<Era>ERA_CLASSICAL</Era>
 			<iAsset>24</iAsset>
@@ -1499,7 +1499,7 @@
 			<Description>TXT_KEY_TECH_ETHICS</Description>
 			<Civilopedia>TXT_KEY_TECH_ETHICS_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_RELIGION</Advisor>
-			<iCost>450</iCost>
+			<iCost>600</iCost>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
 			<Era>ERA_CLASSICAL</Era>
 			<iAsset>24</iAsset>
