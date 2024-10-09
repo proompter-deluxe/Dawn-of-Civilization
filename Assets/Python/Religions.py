@@ -117,7 +117,8 @@ def checkSchism(iGameTurn):
 	orthodoxCities = cities.all().religion(iOrthodoxy)
 	
 	futureCatholicCities, nonCatholicLoyalCities = orthodoxCities.split(
-		lambda city: plot(city).getSpreadFactor(iCatholicism) >= RegionSpreadTypes.REGION_SPREAD_HISTORICAL and city.getOwner() != game.getHolyCity(iOrthodoxy).getOwner() and city.getOwner() != iByzantium
+		lambda city: plot(city).getSpreadFactor(iCatholicism) >= RegionSpreadTypes.REGION_SPREAD_HISTORICAL and city.getOwner() != game.getHolyCity(iOrthodoxy).getOwner() and city.getOwner() != iByzantium and
+		player(city).getStateReligion() != iIslam
 	)
 
 	loyalOrthodoxCities, nonAlignedOrthodoxCities = nonCatholicLoyalCities.split(
@@ -135,7 +136,7 @@ def checkSchism(iGameTurn):
 	# as long as "historically orthodox" regions out-populate the catholic ones, do not Schism
 	# non-Aligned Orthodox (i.e. Orthodox owned by Minors or non-Orthodox civs) count for a portion of their pop
 	# a lot of the non-Aligned are from the lands of the Arab conquest; Orthodoxy often disappears over time there
-	if loyalOrthodoxCitiesPop + nonAlignedOrthodoxCitiesPop / 2 >= futureCatholicCitiesPop: return
+	if loyalOrthodoxCitiesPop + nonAlignedOrthodoxCitiesPop / 3 >= futureCatholicCitiesPop: return
 
 	orthodoxCapital = loyalOrthodoxCities.where(lambda city: city.isCapital()).maximum(lambda city: player(city).getScoreHistory(iGameTurn))
 	if not orthodoxCapital:
