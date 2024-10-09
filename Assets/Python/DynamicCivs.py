@@ -988,7 +988,11 @@ def specificName(iPlayer):
 	elif iCiv == iNubia:
 		if iEra <= iClassical:
 			return "TXT_KEY_CIV_NUBIA_KUSH"
-			
+
+	elif iCiv == iPhoenicia:
+		if player(iCiv).getPeriod() == iPeriodTunisia:
+			return "TXT_KEY_CIV_CARTHAGE_TUNIS"
+
 	elif iCiv == iPolynesia:
 		if isCurrentCapital(iPlayer, "Kaua'i", "O'ahu", "Maui"):
 			return "TXT_KEY_CIV_POLYNESIA_HAWAII"
