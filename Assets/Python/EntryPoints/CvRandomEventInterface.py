@@ -2914,7 +2914,7 @@ def getHelpCrusadeAgainstAgainstHeathens(argsList):
 	return localText.getText("TXT_KEY_EVENT_WORLDNEWS_CRUSADE_GENERIC_YES_HELP")
 
 def canDoTriggerCrusadeAgainstOrthodox(argsList):
-	kTriggeredData = argsList[0]
+	kTriggeredData = argsList[1]
 	iPlayer = kTriggeredData.ePlayer
 
 	return cities.regions(rLevant, rEgypt, rBalkans, rGreece, rAnatolia).any(lambda city: (gc.getPlayer(city.getOwner()).isMinorCiv() and city.isHasReligion(iOrthodoxy)) or (gc.getPlayer(city.getOwner()).getStateReligion() == iOrthodoxy and not team(city).isVassal(iPlayer)))
