@@ -2874,7 +2874,7 @@ def canApplySportsLeagueDone3(argsList):
 
 ######## Cross' Crusade Variant ########
 
-# If Catholic nation between the discovery of Feudalism and the founding of Protestantism (Academia)
+# If Catholic nation between the discovery of Feudalism and the founding of Protestantism
 # Choice 1 randomly selects a Muslim or indy city in the Levant, Spain, Maghreb, Egypt, Balkans, Greece, Anatolia or Baltics and spawns conquerors
 # Choice 2 randomly selects an Orthodox city in those regions and spawns conquerors
 # Choice 3 declines, auto-selecting choice 1 for another Catholic civ
@@ -2886,6 +2886,9 @@ def canTriggerGenericCrusade(argsList):
 	kTriggeredData = argsList[0]
 	iPlayer = kTriggeredData.ePlayer
 	pPlayer = gc.getPlayer(iPlayer)
+
+	if gc.getGame().isReligionFounded(iProtestantism):
+		return
 
 	if team(iPlayer).isAVassal():
 		return
@@ -2909,6 +2912,12 @@ def doTriggerCrusadeAgainstAgainstHeathens(argsList):
 
 def getHelpCrusadeAgainstAgainstHeathens(argsList):
 	return localText.getText("TXT_KEY_EVENT_WORLDNEWS_CRUSADE_GENERIC_YES_HELP")
+
+def canDoTriggerCrusadeAgainstOrthodox(argsList):
+	kTriggeredData = argsList[0]
+	iPlayer = kTriggeredData.ePlayer
+
+	return cities.regions(rLevant, rEgypt, rBalkans, rGreece, rAnatolia).any(lambda city: (gc.getPlayer(city.getOwner()).isMinorCiv() and city.isHasReligion(iOrthodoxy)) or (gc.getPlayer(city.getOwner()).getStateReligion() == iOrthodoxy and not team(city).isVassal(iPlayer)))
 
 def doTriggerCrusadeAgainstOrthodox(argsList):
 	kTriggeredData = argsList[1]

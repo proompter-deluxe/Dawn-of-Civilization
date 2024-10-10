@@ -29419,7 +29419,7 @@
 			<bPickCity>0</bPickCity>
 			<bPickOtherPlayerCity>0</bPickOtherPlayerCity>
 			<bDeclareWar>0</bDeclareWar>
-			<iGold>0</iGold>
+			<iGold>-100</iGold>
 			<bGoldToPlayer>0</bGoldToPlayer>
 			<iRandomGold>0</iRandomGold>
 			<iCulture>0</iCulture>
@@ -29482,7 +29482,7 @@
 			<ClearEvents/>
 			<PythonCallback>doTriggerCrusadeAgainstOrthodox</PythonCallback>
 			<PythonExpireCheck/>
-			<PythonCanDo/>
+			<PythonCanDo>canDoTriggerCrusadeAgainstOrthodox</PythonCanDo>
 			<PythonHelp>getHelpCrusadeAgainstOrthodox</PythonHelp>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>100</iAIValue>
