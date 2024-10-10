@@ -6930,4 +6930,84 @@
 		<Italian>Citizens of the %s1 civilization are leaving their home city to seek a better life in a new colony.</Italian>
 		<Spanish>Citizens of the %s1 civilization are leaving their home city to seek a better life in a new colony.</Spanish>
 	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_EVENT_TRIGGER_CRUSADE_GENERIC</Tag>
+		<English>A Crusade has been called, and you have been chosen to lead it. Do you accept?</English>
+		<French></French>
+		<German></German>
+		<Italian></Italian>
+		<Spanish></Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_EVENT_CRUSADE_GENERIC_YES</Tag>
+		<English>Deus vult!</English>
+		<French></French>
+		<German></German>
+		<Italian></Italian>
+		<Spanish></Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_EVENT_CRUSADE_GENERIC_YES_DIVERT</Tag>
+		<English>Yes, but we should make a little detour...</English>
+		<French></French>
+		<German></German>
+		<Italian></Italian>
+		<Spanish></Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_EVENT_CRUSADE_GENERIC_NO_SELECT_ANOTHER</Tag>
+		<English>No, we are too occupied, let another lead the Crusade.</English>
+		<French></French>
+		<German></German>
+		<Italian></Italian>
+		<Spanish></Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_EVENT_WORLDNEWS_CRUSADE_GENERIC_YES</Tag>
+		<English>%s1 nobles have agreed to lead a new Crusade!</English>
+		<French></French>
+		<German></German>
+		<Italian></Italian>
+		<Spanish></Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_EVENT_WORLDNEWS_CRUSADE_GENERIC_YES_HELP</Tag>
+		<English>[ICON_BULLET]Receive an army outside a random Pagan or Muslim city in the Balkans, Baltics or Mediterranean and declare war on the owner of that city.</English>
+		<French></French>
+		<German></German>
+		<Italian></Italian>
+		<Spanish></Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_EVENT_WORLDNEWS_CRUSADE_GENERIC_YES_DIVERT</Tag>
+		<English>%s1 nobles have diverted the Crusade to attack an Orthodox city!</English>
+		<French></French>
+		<German></German>
+		<Italian></Italian>
+		<Spanish></Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_EVENT_WORLDNEWS_CRUSADE_GENERIC_YES_DIVERT_HELP</Tag>
+		<English>[ICON_BULLET]Pay to divert an your new crusading force outside a random Orthodox city in the Balkans or Mediterranean and declare war on the owner of that city.</English>
+		<French></French>
+		<German></German>
+		<Italian></Italian>
+		<Spanish></Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_EVENT_WORLDNEWS_CRUSADE_GENERIC_NO_SELECT_ANOTHER</Tag>
+		<English>%1 nobles have declined to lead the Crusade, and so other leaders were chosen.</English>
+		<French></French>
+		<German></German>
+		<Italian></Italian>
+		<Spanish></Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_EVENT_WORLDNEWS_CRUSADE_GENERIC_NO_SELECT_ANOTHER_HELP</Tag>
+		<English>[ICON_BULLET]Another civ receives an army to lead against Pagans or Muslims.</English>
+		<French></French>
+		<German></German>
+		<Italian></Italian>
+		<Spanish></Spanish>
+	</TEXT>
 </Civ4GameText>

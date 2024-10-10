@@ -16,6 +16,7 @@ from Religions import embraceReformation, tolerateReformation, counterReformatio
 
 from RFCUtils import *
 from Core import *
+from AIWars import spawnConquerors
 
 localText = CyTranslator()
 
@@ -2870,6 +2871,73 @@ def canApplySportsLeagueDone3(argsList):
 		(loopCity, iter) = player.nextCity(iter, false)
 			
 	return false
+
+######## Cross' Crusade Variant ########
+
+# If Catholic nation between the discovery of Feudalism and the founding of Protestantism (Academia)
+# Choice 1 randomly selects a Muslim or indy city in the Levant, Spain, Maghreb, Egypt, Balkans, Greece, Anatolia or Baltics and spawns conquerors
+# Choice 2 randomly selects an Orthodox city in those regions and spawns conquerors
+# Choice 3 declines, auto-selecting choice 1 for another Catholic civ
+
+# Will only trigger if there is a valid Muslim target. Without one, you can't divert it to an Orthodox city!
+# Baltic Crusades also depend on the existence of a Muslim state in the Mediterranean, but there almost always is one (Moors, Ayyubids/Mamluks, Abbasids, Turks, Ottomans)
+
+def canTriggerGenericCrusade(argsList):
+	kTriggeredData = argsList[0]
+	iPlayer = kTriggeredData.ePlayer
+	pPlayer = gc.getPlayer(iPlayer)
+
+	if team(iPlayer).isAVassal():
+		return
+
+	if gc.getGame().isOption(GameOptionTypes.GAMEOPTION_ONE_CITY_CHALLENGE) and pPlayer.isHuman():
+		return false
+
+	if pPlayer.getStateReligion() != iCatholicism:
+		return false
+
+	return cities.regions(rLevant, rIberia, rMaghreb, rEgypt, rBalkans, rGreece, rAnatolia, rBaltics).any(lambda city: gc.getPlayer(city.getOwner()).getStateReligion() == iIslam and not team(city).isVassal(iPlayer))
+
+def doTriggerCrusadeAgainstAgainstHeathens(argsList):
+	kTriggeredData = argsList[1]
+	iPlayer = kTriggeredData.ePlayer
+
+	targetCity = cities.regions(rLevant, rIberia, rMaghreb, rEgypt, rBalkans, rGreece, rAnatolia, rBaltics).where(lambda city: (gc.getPlayer(city.getOwner()).isMinorCiv() and not city.isHasReligion(iCatholicism) and not city.isHasReligion(iOrthodoxy)) or (gc.getPlayer(city.getOwner()).getStateReligion() == iIslam and not team(city).isVassal(iPlayer))).random()
+	targetLocation = location(targetCity)
+
+	spawnConquerors(iPlayer, -1, targetLocation, targetLocation, 1, WarPlanTypes.WARPLAN_TOTAL)
+
+def getHelpCrusadeAgainstAgainstHeathens(argsList):
+	return localText.getText("TXT_KEY_EVENT_WORLDNEWS_CRUSADE_GENERIC_YES_HELP")
+
+def doTriggerCrusadeAgainstOrthodox(argsList):
+	kTriggeredData = argsList[1]
+	iPlayer = kTriggeredData.ePlayer
+
+	targetCity = cities.regions(rLevant, rEgypt, rBalkans, rGreece, rAnatolia).where(lambda city: (gc.getPlayer(city.getOwner()).isMinorCiv() and city.isHasReligion(iOrthodoxy)) or (gc.getPlayer(city.getOwner()).getStateReligion() == iOrthodoxy and not team(city).isVassal(iPlayer))).random()
+	targetLocation = location(targetCity)
+
+	spawnConquerors(iPlayer, -1, targetLocation, targetLocation, 1, WarPlanTypes.WARPLAN_TOTAL)
+
+def getHelpCrusadeAgainstOrthodox(argsList):
+	return localText.getText("TXT_KEY_EVENT_WORLDNEWS_CRUSADE_GENERIC_YES_DIVERT_HELP")
+
+def doTriggerCrusadeAgainstAgainstHeathensWithAnotherCatholic(argsList):
+	kTriggeredData = argsList[1]
+	iSourcePlayer = kTriggeredData.ePlayer
+
+	iNewCrusadeLeader = group(iCivGroupEurope).where(lambda player: player.isAlive() and not player.isHuman() and player.getStateReligion() == iCatholicism and not team(iCiv).isAVassal() and player.getID() != iSourcePlayer).random()
+
+	if iNewCrusadeLeader is None:
+		return
+
+	targetCity = cities.regions(rLevant, rIberia, rMaghreb, rEgypt, rBalkans, rGreece, rAnatolia, rBaltics).where(lambda city: (gc.getPlayer(city.getOwner()).isMinorCiv() and not city.isHasReligion(iCatholicism) and not city.isHasReligion(iOrthodoxy)) or (gc.getPlayer(city.getOwner()).getStateReligion() == iIslam and not team(city).isVassal(iPlayer))).random()
+	targetLocation = location(targetCity)
+
+	spawnConquerors(iNewCrusadeLeader, -1, targetLocation, targetLocation, 1, WarPlanTypes.WARPLAN_TOTAL)
+
+def getHelpCrusadeAgainstAgainstHeathensWithAnotherCatholic(argsList):
+	return localText.getText("TXT_KEY_EVENT_WORLDNEWS_CRUSADE_GENERIC_NO_SELECT_ANOTHER_HELP")
 
 ######## CRUSADE ###########
 
