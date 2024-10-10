@@ -2440,5 +2440,10 @@ def leaderName(iPlayer):
 		if iLeader == iKrishnaDevaRaya:
 			if year() >= year(1700):
 				return "TXT_KEY_LEADER_TIPU_SULTAN"
-				
+
+	elif iCiv == iAssyria:
+		if iLeader == iAshurbanipal:
+			if data.civs[iPlayer].iResurrections > 0:
+				return "TXT_KEY_LEADER_NASIR_AL_DAWLA"
+
 	return None
