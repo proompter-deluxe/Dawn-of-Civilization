@@ -154,6 +154,16 @@ iPersiaLydiaConquestYear = -550
 
 tConquestPersiaLydia = (27, iPersia, iHittites, tRomeAnatoliaTL, tRomeAnatoliaBR, 2, iPersiaLydiaConquestYear, 5)
 
+tCarthageTL = (66, 47)
+tCarthageBR = (67, 48)
+iByzantiumCarthageConquestYear = 530
+tConquestByzantiumCarthage = (29, iByzantium, iBarbarian, tCarthageTL, tCarthageBR, 1, iByzantiumCarthageConquestYear, 5)
+
+tSicilyTL = (69, 48)
+tSicilyBR = (71, 52)
+tConquestByzantiumSicily = (30, iByzantium, iBarbarian, tSicilyTL, tSicilyBR, 2, iByzantiumCarthageConquestYear + 5, 5)
+
+tConquestByzantiumAndalusia = (31, iByzantium, iBarbarian, tSpainMoorsTL, tSpainMoorsBR, 1, iByzantiumCarthageConquestYear + 5, 5)
 
 lConquests = [
 	tConquestRomeCarthageInSpain,
@@ -175,17 +185,55 @@ lConquests = [
 	tConquestEnglandIreland,
 	tConquestMongolsPersia,
 	tConquestChinaIndependents,
-	#tConquestFranceCrusades,
-	#tConquestHolyRomeCrusades,
-	#tConquestEnglandCrusades,
+	#tConquestFranceCrusades, # if re-enabled make sure to not trigger on top of Catholic lands
+	#tConquestHolyRomeCrusades, # if re-enabled make sure to not trigger on top of Catholic lands
+	#tConquestEnglandCrusades, # if re-enabled make sure to not trigger on top of Catholic lands
 	tConquestSuiUnification,
 	tConquestArabiaCarthage,
 	tConquestArabiaPersia,
 	tConquestArabiaSind,
 	tConquestAssyriaLevant,
 	tConquestPersiaLydia,
+	tConquestByzantiumCarthage,
+	tConquestByzantiumSicily,
+	tConquestByzantiumAndalusia
 ]
 
+dConquestChecker = {
+	tConquestMacedonLevant[0]: lambda tConquest: checkConquest(tConquest, tConquestMacedonAnatolia),
+	tConquestMacedonEgypt[0]: lambda tConquest: checkConquest(tConquest, tConquestMacedonLevant),
+	tConquestMacedonMesopotamia[0]: lambda tConquest: checkConquest(tConquest, tConquestMacedonLevant),
+	tConquestMacedonPersia[0]: lambda tConquest: checkConquest(tConquest, tConquestMacedonMesopotamia),
+	tConquestRomeAnatolia[0]: lambda tConquest: checkConquest(tConquest, tConquestRomeGreece),
+	tConquestRomeLevant[0]: lambda tConquest: checkConquest(tConquest, tConquestRomeGreece),
+	tConquestRomeCarthage[0]: lambda tConquest: checkConquest(tConquest, tConquestRomeCarthageInSpain),
+	tConquestRomeBritain[0]: lambda tConquest: checkConquest(tConquest, tConquestRomeCelts),
+	tConquestArabiaSind[0]: lambda tConquest: checkConquest(tConquest, tConquestArabiaPersia),
+	tConquestByzantiumCarthage[0]: lambda tConquest: checkByzantiumConquestOfCarthage(tConquest),
+	tConquestByzantiumSicily[0]: lambda tConquest: checkByzantiumIfCarthageOwned(tConquest),
+	tConquestByzantiumAndalusia[0]: lambda tConquest: checkByzantiumIfCarthageOwned(tConquest),
+}
+
+def checkByzantiumConquestOfCarthage(tConquest):
+	if player(iByzantium).isAlive() and len(cities.region(rMaghreb).owner(iRome)) == 0 and len(cities.region(rMaghreb).owner(iPhoenicia)) == 0: 
+		checkConquest(tConquest)
+
+def checkByzantiumIfCarthageOwned(tConquest):
+	if not player(iRome).isAlive(): 
+		checkConquest(tConquest, tConquestByzantiumCarthage)
+
+@handler("BeginGameTurn")
+def checkConquests():
+	for tConquest in lConquests:
+		iID = tConquest[0]
+		if not iID in data.dHasConquestHappened:
+			data.dHasConquestHappened[iID] = False
+
+		if not data.dHasConquestHappened[iID]:
+			if iID in dConquestChecker: 
+				dConquestChecker[iID](tConquest)
+			else:
+				checkConquest(tConquest)	
 
 @handler("GameStart")
 def setup():
@@ -216,35 +264,7 @@ def startMinorWars(iGameTurn):
 		if iMinor:
 			minorWars(iMinor)
 
-
-@handler("BeginGameTurn")
-def checkConquests():
-	# if this gets much bigger, convert to dict
-	for tConquest in lConquests:
-		if tConquest[0] == tConquestMacedonLevant[0]:
-			# before "Alexander" can conquer the Levant, he has to conquer Anatolia
-			checkConquest(tConquest, tConquestMacedonAnatolia)
-		elif tConquest[0] == tConquestMacedonEgypt[0] or tConquest[0] == tConquestMacedonMesopotamia[0] :
-			# before "Alexander" can conquer Egypt or Mesopotamia, he has to conquer the Levant
-			checkConquest(tConquest, tConquestMacedonLevant)
-		elif tConquest[0] == tConquestMacedonPersia[0]:
-			# before "Alexander" can conquer Persia, he has to conquer Mesopotamia
-			checkConquest(tConquest, tConquestMacedonMesopotamia)
-		elif tConquest[0] == tConquestHolyRomeCrusades[0] or tConquest[0] == tConquestEnglandCrusades[0]:
-			# Don't launch "Third Crusade" if Holy Land still firmly under French control
-			checkConquest(tConquest, tConquestFranceCrusades, True)
-		elif tConquest[0] == tConquestRomeAnatolia[0] or tConquest[0] == tConquestRomeLevant:
-			# Rome needs Greece before Anatolia or Levant
-			checkConquest(tConquest, tConquestRomeGreece)
-		elif tConquest[0] == tConquestRomeCarthage[0]:
-			# Rome needs Spain before attacking North Africa
-			checkConquest(tConquest, tConquestRomeCarthageInSpain)
-		elif tConquest[0] == tConquestArabiaSind[0]:
-			checkConquest(tConquest, tConquestArabiaPersia)
-		else:
-			checkConquest(tConquest)
-		
-		
+	
 @handler("BeginGameTurn")
 def checkWarPlans(iGameTurn):		
 	if iGameTurn == data.iNextTurnAIWar:
@@ -287,6 +307,12 @@ def resetAggressionLevel(bWar, iTeam, iOtherTeam):
 def checkConquest(tConquest, tPrereqConquest = (), bInvertPrereqConquestCondition = False, iWarPlan = WarPlanTypes.WARPLAN_TOTAL):
 	iID, iCiv, iPreferredTargetCiv, tTL, tBR, iNumTargets, iYear, iIntervalTurns = tConquest
 	
+	if not iID in data.dHasConquestHappened:
+		data.dHasConquestHappened[iID] = False
+
+	if data.dHasConquestHappened[iID]:
+		return
+
 	iPlayer = slot(iCiv)
 	if iPlayer < 0:
 		return
@@ -298,12 +324,6 @@ def checkConquest(tConquest, tPrereqConquest = (), bInvertPrereqConquestConditio
 		return
 	
 	if team(iPlayer).isAVassal():
-		return
-	
-	if not iID in data.lConquest:
-		data.lConquest[iID] = False
-
-	if data.lConquest[iID]:
 		return
 
 	iStartTurn = year(iYear) + turns(data.iSeed % 10 - 5)
@@ -334,7 +354,7 @@ def checkConquest(tConquest, tPrereqConquest = (), bInvertPrereqConquestConditio
 	#	return
 	
 	spawnConquerors(iPlayer, iPreferredTarget, tTL, tBR, iNumTargets, iWarPlan)
-	data.lConquest[iID] = True
+	data.dHasConquestHappened[iID] = True
 
 
 def warnConquest(iPlayer, iCiv, iPreferredTargetCiv, tTL, tBR):

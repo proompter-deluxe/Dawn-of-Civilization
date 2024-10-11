@@ -1053,9 +1053,9 @@ def specificName(iPlayer):
 		return "TXT_KEY_CIV_BULGARIA_SHORT_DESC"
 			
 	elif iCiv == iNorse:
-		bOwnNorway = cities.region(rNorway) <= cities.region(rNorway).owner(iPlayer)
-		bOwnDenmark = cities.region(rDenmark) <= cities.region(rDenmark).owner(iPlayer)
-		bOwnSweden = cities.region(rSweden) <= cities.region(rSweden).owner(iPlayer)
+		bOwnNorway = 1 <= len(cities.region(rNorway)) == len(cities.region(rNorway).owner(iPlayer))
+		bOwnDenmark = 1 <= len(cities.region(rDenmark)) == len(cities.region(rDenmark).owner(iPlayer))
+		bOwnSweden = 1 <= len(cities.region(rSweden)) == len(cities.region(rSweden).owner(iPlayer))
 		
 		if bOwnDenmark and bOwnSweden and bOwnNorway:
 			return "TXT_KEY_CIV_NORSE_SCANDINAVIA"
@@ -2001,7 +2001,7 @@ def specificTitle(iPlayer, lPreviousOwners=[]):
 			if bEmpire:
 				return "TXT_KEY_EMPIRE_ADJECTIVE"
 		
-			if 1 < cities.region(rBritain) <= cities.region(rBritain).owner(iPlayer):
+			if 1 < len(cities.region(rBritain)) <= len(cities.region(rBritain).owner(iPlayer)):
 				return "TXT_KEY_CIV_ENGLAND_UNITED_KINGDOM_OF"
 			
 	elif iCiv == iHolyRome:

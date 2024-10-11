@@ -260,7 +260,7 @@ class GameData:
 		self.iNextTurnAIWar = -1
 		
 		# entries are dynamically added
-		self.lConquest = { 0: False }
+		self.dHasConquestHappened = { 0: False }
 		
 		# Dynamic Civs
 		
