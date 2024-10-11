@@ -58,7 +58,7 @@ tGreecePersiaBR = (97, 52)
 
 # following setup: iPlayer, iPreferredTarget, TL, BR, iNumTargets, iStartYear, iTurnInterval
 tConquestMacedonAnatolia = (19, iMacedon, iPersia, tGreeceAnatoliaTL, tGreeceAnatoliaBR, 3, iAlexanderYear, 10)
-tConquestMacedonLevant = (20, iMacedon, iPersia, tLevantTL, tLevantBR, 3, iAlexanderYear, 20)
+tConquestMacedonLevant = (20, iMacedon, iPhoenicia, tLevantTL, tLevantBR, 3, iAlexanderYear, 20)
 tConquestMacedonEgypt = (6, iMacedon, iEgypt, tEgyptTL, tEgyptBR, 3, iAlexanderYear, 20)
 tConquestMacedonMesopotamia = (5, iMacedon, iPersia, tGreeceMesopotamiaTL, tGreeceMesopotamiaBR, 3, iAlexanderYear, 20)
 tConquestMacedonPersia = (7, iMacedon, iPersia, tGreecePersiaTL, tGreecePersiaBR, 4, iAlexanderYear, 20)
@@ -449,7 +449,7 @@ def spawnConquerors(iPlayer, iPreferredTarget, tTL, tBR, iNumTargets, iWarPlan =
 				units.promotion(infos.type("PROMOTION_MERCENARY"))
 
 			# Tyre gets extra attackers, since it's a tough nut to crack and the site of a famous siege
-			if plot(city) == plot(tTyre):
+			if location(city) == tTyre:
 				makeUnits(iPlayer, iCatapult, tPlot, 2, UnitAITypes.UNITAI_ATTACK_CITY)
 				makeUnits(iPlayer, iHoplite, tPlot, 1, UnitAITypes.UNITAI_ATTACK_CITY)
 
