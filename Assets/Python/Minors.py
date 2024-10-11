@@ -579,7 +579,7 @@ barbarians = [
 	Barbarians(500, 1900, {iNativeRaider: 2}, ((69, 19), (78, 32)), 10, NATIVES, iOwner=iNative, adjective="TXT_KEY_ADJECTIVE_BANTU"),
 	Barbarians(550, 650, {iHorseArcher: 4, iSwordsman: 2}, ((70, 57), (80, 62)), 4, INVADERS, target_area=((65, 52), (72, 59)), adjective="TXT_KEY_ADJECTIVE_AVAR"),
 	Barbarians(560, 660, {iSwordsman: 3, iAxeman: 2}, ((68, 60), (77, 65)), 6, NOMADS, target_area=((74, 49), (76, 52)), iAlternativeCiv=iBulgaria, adjective="TXT_KEY_ADJECTIVE_SLAVIC"),
-	Barbarians(600, 850, {iSwordsman: 3, iAxeman: 2}, ((68, 60), (77, 65)), 7, NOMADS, target_area=((62, 55), (67, 62)), adjective="TXT_KEY_ADJECTIVE_SLAVIC"),
+	Barbarians(600, 850, {iSwordsman: 3, iAxeman: 2}, ((71, 61), (77, 65)), 7, NOMADS, target_area=((62, 55), (64, 70)), adjective="TXT_KEY_ADJECTIVE_SLAVIC"),
 	Barbarians(600, 1000, {iHolkan: 1}, ((19, 38), (25, 44)), 4, NATIVES, adjective="TXT_KEY_ADJECTIVE_MAYA"),
 	Barbarians(600, 900, {iDogSoldier: 1, iJaguar: 2}, ((11, 44), (19, 51)), 14, NOMADS, iOwner=iNative, target_area=((14, 40), (23, 45)), adjective="TXT_KEY_ADJECTIVE_NAHUA"),
 	Barbarians(600, 1100, {iSkirmisher: 1}, ((54, 33), (57, 38)), 12, NATIVES, iOwner=iNative, target_area=((57, 32), (64, 39)), adjective="TXT_KEY_ADJECTIVE_FULA"),
