@@ -37454,7 +37454,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=83,y=48
-	BonusType=BONUS_CLAM
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -37462,10 +37461,13 @@ BeginPlot
 	x=83,y=49
 	BonusType=BONUS_COPPER
 	TerrainType=TERRAIN_PLAINS
+	ImprovementType=IMPROVEMENT_MINE
+	RouteType=ROUTE_ROAD
 	PlotType=1
 EndPlot
 BeginPlot
 	x=83,y=50
+	BonusType=BONUS_FISH
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -37914,10 +37916,11 @@ BeginPlot
 	x=84,y=47
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_PLAINS
-	PlotType=2
+	PlotType=1
 EndPlot
 BeginPlot
 	x=84,y=48
+	BonusType=BONUS_CLAM
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -38371,7 +38374,7 @@ EndPlot
 BeginPlot
 	x=85,y=47
 	TerrainType=TERRAIN_PLAINS
-	PlotType=1
+	PlotType=2
 EndPlot
 BeginPlot
 	x=85,y=48

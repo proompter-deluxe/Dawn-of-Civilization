@@ -442,7 +442,7 @@ class Barbarians(object):
 minor_cities = [
 	MinorCity(-3000, iIndependent2, tSusa, "Shushan", iPopulation=1, iCiv=iBabylonia, units={iDefend: 1}, iCulture=10, adjective="TXT_KEY_ADJECTIVE_ELAMITE"),
 	# MinorCity(-3000, iIndependent, (90, 45), "Unug", iPopulation=1, iCiv=iBabylonia, units={iDefend: 2}, iCulture=10, adjective="TXT_KEY_ADJECTIVE_SUMERIAN"),
-	MinorCity(-2600, iIndependent2, (86, 50), "Halab", iPopulation=1, iCiv=iBabylonia, units={iDefend: 1, iWork: 1}, iCulture=10, adjective="TXT_KEY_ADJECTIVE_MARIOTE"),
+	MinorCity(-2100, iIndependent2, (85, 50), "Ugarit", iPopulation=1, iCiv=iBabylonia, units={iDefend: 1, iWork: 1}, iCulture=10, adjective="TXT_KEY_ADJECTIVE_MARIOTE"),
 	MinorCity(-2050, iIndependent, (118, 49), "Sanxingdui", iPopulation=2, iCiv=iChina, units={iDefend: 1, iBase: 1}, adjective="TXT_KEY_ADJECTIVE_SHU"),
 	MinorCity(-1830, iBarbarian, (124, 52), "Daliang", iPopulation=2, iCiv=iChina, units={iDefend: 1, iBase: 1}, adjective="TXT_KEY_ADJECTIVE_WEI"),
 	MinorCity(-1830, iIndependent, (127, 53), "Jimo", iPopulation=1, iCiv=iChina, units={iDefend: 1}, adjective="TXT_KEY_ADJECTIVE_QI"),

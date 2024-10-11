@@ -275,7 +275,7 @@ dRemovedResourcesDict = {
 	(87, 49)  :  200, # Horses in Syria
 	(55, 53)  :  400, # Gold in Spain
 	(59, 51)  :  400, # Silver in Spain
-	(83, 48)  :  500, # Clams in Phoenicia
+	(84, 48)  :  500, # Clams in Phoenicia
 	(83, 47)  :  500, # Dye (murex) in Phoenicia
 	(73, 46)  :  500, # Dye (murex) in Cyrenaica
 	(68, 47)  :  500, # Dye (murex) in Tunisia

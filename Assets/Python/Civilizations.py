@@ -662,7 +662,6 @@ dStartingUnits = CivDict({
 		iSettle: 1,
 		iWork: 1,
 		iBase: 1,
-		iDefend: 1,
 		iAttack: 2,
 		iHarass: 1,
 	},
@@ -1171,8 +1170,8 @@ dExtraAIUnits = CivDict({
 		iSiege: 3,
 	},
 	iHittites  : {
-		iAttack: 2,
-		iHarass: 2,
+		iAttack: 1,
+		iHarass: 3,
 	},
 	iChina : {
 		iDefend: 1,

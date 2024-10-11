@@ -78,5 +78,5 @@ tThebes = (80, 41)
 tTokyo = (140, 54)
 tVienna = (71, 59)
 tPella = (75, 54)
-tTyre = (84, 47)
+tTyre = (85, 47) # Tyre moved to the same tile as Damascus
 tAthens = (76, 51)
