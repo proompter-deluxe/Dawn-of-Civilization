@@ -155,6 +155,14 @@ def placeGoodyHuts(iGameTurn):
 				for tTL, tBR in scenario_definition.lTribalVillages:
 					placeTribalVillage(tTL, tBR)
 
+# give Byzantium a boost by building the Theodosian Walls in Constantinople if the player is autoplaying
+# while the walls were built in the 400s, we'll give the player a chance to build it, unless the player spawns after 600
+@handler("BeginGameTurn")
+def addTheodosianWallsInAutoplay(iGameTurn):
+	if iGameTurn == year(600) and autoplay() and isCurrentCapital(iByzantium, "Konstantinoupolis"):
+		capital = player(iByzantium).getCapitalCity()
+		capital.setHasRealBuilding(iTheodosianWalls, True)
+
 # Macedonian UP, starts with great general (and Stratocracy)
 @handler("birth")
 def macedonSpawnGreatGeneral(iPlayer):
