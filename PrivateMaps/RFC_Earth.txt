@@ -36029,7 +36029,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=80,y=40
-	BonusType=BONUS_WHEAT
 	FeatureType=FEATURE_FLOOD_PLAINS, FeatureVariety=0
 	TerrainType=TERRAIN_DESERT
 	PlotType=2
@@ -38318,7 +38317,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=85,y=37
-	BonusType=BONUS_FISH
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
