@@ -595,6 +595,8 @@ class Birth(object):
 		if not self.isHuman():
 			self.assignAdditionalTechs()
 			createRoleUnits(self.iPlayer, self.location, getAIStartingUnits(self.iPlayer))
+			for iUnit, iAmount in getSpecificAIStartingUnits(self.iPlayer):
+				makeUnits(self.iPlayer, iUnit, self.location, iAmount)
 
 		# if invader but no cities in birth, still grant a settler now
 		if bInvasionCiv and not cities.birth(self.iPlayer):

@@ -17,6 +17,9 @@ def getAdditionalUnits(iPlayer):
 def getSpecificAdditionalUnits(iPlayer):
 	return dSpecificAdditionalUnits[iPlayer].items()
 
+def getSpecificAIStartingUnits(iPlayer):
+	return dSpecificAIStartingUnits[iPlayer].items()
+
 ### Tech preference functions ###
 
 def getTechPreferences(iPlayer):
@@ -807,7 +810,6 @@ dStartingUnits = CivDict({
 		iWork: 2,
 		iAttack: 4,
 		iCounter: 2,
-		iDefend: 2,
 		iMissionary: 1,
 		iFerry: 2,
 		iEscort: 2,
@@ -1329,9 +1331,8 @@ dAdditionalUnits = CivDict({
 		iAttack: 2,
 	},
 	iByzantium: {
-		iShock: 2,
-		iAttack: 3,
-		iCounter: 1,
+		iAttack: 1,
+		iCounter: 2,
 	},
 	iFrance: {
 		iDefend: 3,
@@ -1458,6 +1459,12 @@ dAdditionalUnits = CivDict({
 		iAttack: 4,
 		iShock: 2,
 		iSiege: 2,
+	},
+}, {})
+
+dSpecificAIStartingUnits = CivDict({
+	iByzantium: {
+		iTagmata: 2,
 	},
 }, {})
 
