@@ -1167,7 +1167,7 @@ dStartingUnits = CivDict({
 dExtraAIUnits = CivDict({
 	iAssyria : {
 		iCounter: 1,
-		iArcher: 1,
+		iDefend: 1,
 		iSiege: 3,
 	},
 	iHittites  : {

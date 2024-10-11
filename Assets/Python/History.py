@@ -158,10 +158,11 @@ def placeGoodyHuts(iGameTurn):
 # give Byzantium a boost by building the Theodosian Walls in Constantinople if the player is autoplaying
 # while the walls were built in the 400s, we'll give the player a chance to build it, unless the player spawns after 600
 @handler("BeginGameTurn")
-def addTheodosianWallsInAutoplay(iGameTurn):
-	if iGameTurn == year(600) and autoplay() and isCurrentCapital(iByzantium, "Konstantinoupolis"):
+def buildTheodosianWallsInAutoplay():
+	if year() == year(600) and autoplay() and player(iByzantium).isAlive():
 		capital = player(iByzantium).getCapitalCity()
-		capital.setHasRealBuilding(iTheodosianWalls, True)
+		if capital and location(capital) == tConstantinople:
+			capital.setHasRealBuilding(iTheodosianWalls, True)
 
 # Macedonian UP, starts with great general (and Stratocracy)
 @handler("birth")
@@ -169,7 +170,6 @@ def macedonSpawnGreatGeneral(iPlayer):
 	if civ(iPlayer) == iMacedon:
 		makeUnits(iMacedon, iGreatGeneral, tPella, 1)
 
-# TODO: revisit how this works
 @handler("BeginGameTurn")
 def checkEarlyColonists():
 	if year().between(-850, -300): # early exit
