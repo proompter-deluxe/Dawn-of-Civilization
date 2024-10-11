@@ -68,12 +68,11 @@ def foundHinduism(iGameTurn):
 					foundReligion((92, 39), iHinduism)
 
 
-@handler("cityBuilt")
-def foundIslam(city):
-	if civ(city) == iArabia:
-		if not game.isReligionFounded(iIslam):
-			if at(city, tMecca):
-				foundReligion(location(city), iIslam)
+@handler("BeginGameTurn")
+def checkIslam(iGameTurn):
+	if not game.isReligionFounded(iIslam) and iGameTurn >= year(610):
+		if plot(tMecca).isCity():
+			foundReligion(tMecca, iIslam)
 
 
 @handler("BeginGameTurn")

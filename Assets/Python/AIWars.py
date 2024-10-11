@@ -405,12 +405,14 @@ def spawnConquerors(iPlayer, iPreferredTarget, tTL, tBR, iNumTargets, iWarPlan =
 	if iEra >= iMedieval or iCiv == iArabia:
 		iExtra += 1
 
+	tPlotLast = None
 	for city in targetCities:	
 		if not player(iPlayer).isHuman():
 			# we want to be sure that the AI can fund these conquerors for at least a few turns
 			player(iPlayer).changeGold(20)
 		
 		tPlot = findNearestLandPlot(city, iPlayer)
+		tPlotLast = tPlot
 		
 		if iCiv == iMacedon:
 			makeUnits(iPlayer, iCatapult, tPlot, 2, UnitAITypes.UNITAI_ATTACK_CITY)
@@ -451,6 +453,13 @@ def spawnConquerors(iPlayer, iPreferredTarget, tTL, tBR, iNumTargets, iWarPlan =
 	
 			if iCiv in [iTurks, iMongols]:
 				createRoleUnit(iPlayer, tPlot, iShockCity, 2)
+
+	# if human, select to orient player
+	if pPlayer.isHuman():
+		conquerorUnit = units.at(tPlotLast).owner(iPlayer).where(lambda unit: unit.isFound()).last()
+		if conquerorUnit:
+			interface.selectUnit(conquerorUnit, True, False, False)
+		
 
 
 def declareWar(iPlayer, iTarget, iWarPlan):

@@ -508,6 +508,7 @@ class Birth(object):
 			elif plot.getBirthProtected() == self.iPlayer:
 				plot.resetBirthProtected()
 				
+	# if specific civs had AI-only techs, it would go here
 	def assignAdditionalTechs(self):
 		return
 	
@@ -590,14 +591,14 @@ class Birth(object):
 		bInvasionCiv = self.iCiv in lInvasionCivs
 		
 		createRoleUnits(self.iPlayer, self.location, getStartingUnits(self.iPlayer), bCreateSettlers=not bInvasionCiv)
-		
+		createSpecificUnits(self.iPlayer, self.location)
+		if not self.isHuman():
+			self.assignAdditionalTechs()
+			createRoleUnits(self.iPlayer, self.location, getAIStartingUnits(self.iPlayer))
+
 		# if invader but no cities in birth, still grant a settler now
 		if bInvasionCiv and not cities.birth(self.iPlayer):
 			createRoleUnit(self.iPlayer, self.location, iSettle)
-		
-		# only create units if coming from autoplay, otherwise after the switch
-		if self.iPlayer == active():
-			createSpecificUnits(self.iPlayer, self.location)
 		
 		# select a settler if available
 		if self.isHuman():
@@ -887,7 +888,6 @@ class Birth(object):
 	
 	def askSwitch(self):
 		if not self.canSwitch():
-			self.assignAdditionalTechs()
 			return
 
 		self.switchPopup.text(adjective(self.iPlayer)).noSwitch().yesSwitch().launch()
@@ -910,12 +910,8 @@ class Birth(object):
 		game.doControl(ControlTypes.CONTROL_FORCEENDTURN)
 	
 	def noSwitch(self):
-		if not self.isHuman():
-			self.assignAdditionalTechs()
-			createRoleUnits(self.iPlayer, self.location, getAIStartingUnits(self.iPlayer))
-		
-		createSpecificUnits(self.iPlayer, self.location)
-	
+		return
+
 	def checkSwitch(self):
 		if self.bSwitch:
 			self.bSwitch = False

@@ -707,8 +707,7 @@ dStartingUnits = CivDict({
 		iWork: 3,
 		iShock: 4,
 		iSiege: 2,
-		iHarass: 2,
-		# 1 War Elephant
+		iCounter: 4,
 	},
 	iMacedon: {
 		iSettle: 1,
@@ -859,14 +858,12 @@ dStartingUnits = CivDict({
 	},
 	iArabia: {
 		iSettle: 2,
-		iWork: 3,
+		iWork: 5,
 		iDefend: 1,
-		iShock: 2,
-		iAttack: 3,
+		iShock: 4,
+		iAttack: 5,
 		iHarass: 2,
 		iSiege: 3,
-		iWork: 1,
-		iWorkerSea: 1,
 	},
 	iTibet: {
 		iSettle: 1,
@@ -1190,14 +1187,13 @@ dExtraAIUnits = CivDict({
 		iShock: 2,
 		iCounter: 6,
 		iSiege: 4,
-		iHarass: 2,
 	},
 	iRome: {
 		iWork: 3,
 	},
 	iJapan: {
 		iDefend: 2,
-		iAttack: 3,
+		iAttack: 1,
 	},
 	iDravidia: {
 		iShock: 1,
@@ -1222,21 +1218,24 @@ dExtraAIUnits = CivDict({
 		iCityAttack: 2,
 	},
 	iArabia: {
-		iShock: 3,
-		iAttack: 3,
-		iHarass: 4,
+		iShock: 2,
+		iAttack: 2,
+		iHarass: 2,
+		iCounter: 2,
 		iSiege: 3,
+		iWork: 3,
 	},
 	iBulgaria: {
-		iAttack: 2,
-		iHarass: 4,
+		iAttack: 1,
+		iHarass: 2,
 		iDefend: 1,
 		iSiege: 1,
 	},
 	iMoors: {
-		iAttack: 3,
-		iSiege: 3,
+		iAttack: 2,
+		iSiege: 2,
 		iHarass: 3,
+		iDefend: 1,
 	}, 
 	iHolyRome: {
 		iSettle: 1,
@@ -1259,11 +1258,12 @@ dExtraAIUnits = CivDict({
 	},
 	iInca: {
 		iCityAttack: 2,
+		iSettle: 1,
 	},
 	iOttomans: {
-		iAttack: 3,
+		iAttack: 4,
 		iShock: 1,
-		iSiege: 1,
+		iSiege: 2,
 	},
 	iRussia: {
 		iWork: 2,
@@ -1299,7 +1299,7 @@ dAdditionalUnits = CivDict({
 		iDefend: 2,
 	},
 	iPersia: {
-		iAttack: 4,
+		iCounter: 4,
 	},
 	iPolynesia: {
 		iBase: 2,
@@ -1321,7 +1321,7 @@ dAdditionalUnits = CivDict({
 	},
 	iKorea: {
 		iHarass: 2,
-		# 2 Crossbowmen
+		iDefend: 2,
 	},
 	iMaya: {
 		iDefend: 2,
@@ -1360,9 +1360,6 @@ dAdditionalUnits = CivDict({
 	iMali: {
 		iSkirmish: 2,
 		iAttack: 2,
-	},
-	iMoors: {
-		# 2 Camel Archers
 	},
 	iSpain: {
 		iDefend: 3,
@@ -1501,6 +1498,7 @@ dStartingExperience = CivDict({
 
 dAlwaysTrain = CivDict({
 	iGreece: [iHoplite],
+	iPersia: [iImmortal],
 	iMacedon: [iPhalanx, iCatapult],
 	iPhoenicia: [iNumidianCavalry],
 	iDravidia: [iWarElephant],
@@ -1531,11 +1529,7 @@ dNeverTrain = CivDict({
 
 def createSpecificUnits(iPlayer, tile):
 	iCiv = civ(iPlayer)
-	bHuman = player(iPlayer).isHuman()
 	
-	if iCiv == iPersia:
-		makeUnits(iPlayer, iImmortal, tile, 4, UnitAITypes.UNITAI_ATTACK)
-		# makeUnit(iPlayer, iWarElephant, tile)
 	if iCiv == iKorea:
 		makeUnit(iPlayer, iConfucianMissionary, tile)
 	elif iCiv == iDravidia:
@@ -1544,27 +1538,14 @@ def createSpecificUnits(iPlayer, tile):
 		makeUnit(iPlayer, iShotelai, tile)
 	elif iCiv == iMalays:
 		makeUnit(iPlayer, iHinduMissionary, tile)
-	elif iCiv == iMoors:
-		if civ() in [iSpain, iMoors]:
-			makeUnit(iPlayer, iCrossbowman, tile)
 	elif iCiv == iJava:
 		makeUnit(iPlayer, iBuddhistMissionary, tile)
-	elif iCiv == iSpain:
-		if not bHuman:
-			makeUnit(iPlayer, iSettler, tile)
-			makeUnits(iPlayer, iLancer, tile, 2)
-	elif iCiv == iInca:
-		if not bHuman:
-			makeUnit(iPlayer, iSettler, tile)
 	elif iCiv == iColombia:
 		makeUnits(iPlayer, iAlbionLegion, tile, 5).experience(2)
 
 dSpecificAdditionalUnits = CivDict({
 	iEthiopia: {
 		iShotelai: 2,
-	},
-	iKorea: {
-		iCrossbowman: 2,
 	},
 	iNorse: {
 		iHuscarl: 3,

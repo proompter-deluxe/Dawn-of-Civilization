@@ -1447,13 +1447,19 @@ def specificAdjective(iPlayer):
 			return "TXT_KEY_CIV_TURKS_EASTERN_TURKIC"
 			
 	elif iCiv == iArabia:
+		if bResurrected:
+			return "TXT_KEY_CIV_ARABIA_ADJECTIVE"
+
 		if (bTheocracy or controlsHolyCity(iPlayer, iIslam)) and iReligion == iIslam:
 			if not bEmpire:
 				return "TXT_KEY_CIV_ARABIA_RASHIDUN"
 				
 			if year() < year(dBirth[iMoors]):
 				return "TXT_KEY_CIV_ARABIA_UMMAYAD"
-				
+
+			if civ(plot(tBaghdad)) == iArabia and not isCurrentCapital(iPlayer, "Baghdad"):
+				relocateCapital(iArabia, tBaghdad)
+
 			return "TXT_KEY_CIV_ARABIA_ABBASID"
 			
 	elif iCiv == iMoors:

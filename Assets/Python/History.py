@@ -494,33 +494,6 @@ def stabilizeAustria(iPlayer):
 ### FLIP ###
 
 @handler("flip")
-def createArabArmies(iPlayer):
-	if civ(iPlayer) == iArabia:
-		bBaghdad = civ(plot(tBaghdad)) == iArabia
-		bTyre = civ(plot(tTyre)) == iArabia
-
-		iHeartlandCities = plots.regions(rMesopotamia, rLevant, rEgypt).cities().count()
-
-		lCities = []	
-		if bBaghdad: lCities.append(tBaghdad)
-		if bTyre: lCities.append(tTyre) # founded by Phoenicians as capital
-
-		tCapital = random_entry(lCities)
-
-		if tCapital:
-			relocateCapital(iArabia, tCapital)
-			if not player(iArabia).isHuman():
-				makeUnits(iArabia, iMobileGuard, tCapital, 3)
-				makeUnits(iArabia, iGhazi, tCapital, 2)
-				makeUnits(iArabia, iSpearman, tCapital, 2)
-			makeUnits(iArabia, iMobileGuard, tCapital, 2)
-			makeUnits(iArabia, iGhazi, tCapital, 2)
-			
-		makeUnits(iArabia, iSettler, max(0, tMecca, 7 - iHeartlandCities))
-		makeUnits(iArabia, iWorker, max(0, tMecca, 10 - iHeartlandCities))
-
-
-@handler("flip")
 def flipMoorishMaghreb(iPlayer):
 	if civ(iPlayer) == iMoors:
 		city = cities.owner(iPlayer).region(rMaghreb).random()

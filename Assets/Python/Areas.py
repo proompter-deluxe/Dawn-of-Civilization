@@ -33,7 +33,7 @@ iMalays :		(120, 27), # Palembang
 iJapan :		(137, 53), # Kyoto
 iNorse :		(68, 75), # Nidaros
 iTurks :		(104, 58), # Orduqent
-iArabia :		(86, 40), # Mecca
+iArabia :		(85, 47), # Damascus
 iTibet :		(113, 48), # Lhasa
 iMoors :		(56, 48), # Cadiz
 iJava :			(126, 25), # Trowulan
