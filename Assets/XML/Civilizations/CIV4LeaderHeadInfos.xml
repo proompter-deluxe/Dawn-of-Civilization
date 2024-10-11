@@ -4114,7 +4114,7 @@
 			<iDeclareWarTradeRand>40</iDeclareWarTradeRand>
 			<iDemandRebukedSneakProb>40</iDemandRebukedSneakProb>
 			<iDemandRebukedWarProb>20</iDemandRebukedWarProb>
-			<iRazeCityProb>15</iRazeCityProb>
+			<iRazeCityProb>25</iRazeCityProb>
 			<iBuildUnitProb>30</iBuildUnitProb>
 			<iBaseAttackOddsChange>2</iBaseAttackOddsChange>
 			<iAttackOddsChangeRand>8</iAttackOddsChangeRand>
@@ -7448,7 +7448,7 @@
 			<DefensivePactRefuseAttitudeThreshold>ATTITUDE_CAUTIOUS</DefensivePactRefuseAttitudeThreshold>
 			<PermanentAllianceRefuseAttitudeThreshold>ATTITUDE_PLEASED</PermanentAllianceRefuseAttitudeThreshold>
 			<VassalRefuseAttitudeThreshold>ATTITUDE_PLEASED</VassalRefuseAttitudeThreshold>
-			<iVassalPowerModifier>-20</iVassalPowerModifier>
+			<iVassalPowerModifier>10</iVassalPowerModifier>
 			<iFreedomAppreciation>10</iFreedomAppreciation>
 			<FavoriteCivic>CIVIC_MERCHANT_TRADE</FavoriteCivic>
 			<FavoriteReligion>RELIGION_CONFUCIANISM</FavoriteReligion>
@@ -8546,7 +8546,7 @@
 			<OpenBordersRefuseAttitudeThreshold>NONE</OpenBordersRefuseAttitudeThreshold>
 			<DefensivePactRefuseAttitudeThreshold>ATTITUDE_PLEASED</DefensivePactRefuseAttitudeThreshold>
 			<PermanentAllianceRefuseAttitudeThreshold>ATTITUDE_PLEASED</PermanentAllianceRefuseAttitudeThreshold>
-			<VassalRefuseAttitudeThreshold>ATTITUDE_ANNOYED</VassalRefuseAttitudeThreshold>
+			<VassalRefuseAttitudeThreshold>ATTITUDE_PLEASED</VassalRefuseAttitudeThreshold>
 			<iVassalPowerModifier>20</iVassalPowerModifier>
 			<iFreedomAppreciation>10</iFreedomAppreciation>
 			<FavoriteCivic>CIVIC_REDISTRIBUTION</FavoriteCivic>
@@ -9611,7 +9611,7 @@
 			<iDeclareWarTradeRand>40</iDeclareWarTradeRand>
 			<iDemandRebukedSneakProb>40</iDemandRebukedSneakProb>
 			<iDemandRebukedWarProb>25</iDemandRebukedWarProb>
-			<iRazeCityProb>15</iRazeCityProb>
+			<iRazeCityProb>25</iRazeCityProb>
 			<iBuildUnitProb>35</iBuildUnitProb>
 			<iBaseAttackOddsChange>4</iBaseAttackOddsChange>
 			<iAttackOddsChangeRand>8</iAttackOddsChangeRand>
@@ -16770,7 +16770,7 @@
 			<iDeclareWarTradeRand>40</iDeclareWarTradeRand>
 			<iDemandRebukedSneakProb>0</iDemandRebukedSneakProb>
 			<iDemandRebukedWarProb>0</iDemandRebukedWarProb>
-			<iRazeCityProb>0</iRazeCityProb>
+			<iRazeCityProb>25</iRazeCityProb>
 			<iBuildUnitProb>35</iBuildUnitProb>
 			<iBaseAttackOddsChange>0</iBaseAttackOddsChange>
 			<iAttackOddsChangeRand>8</iAttackOddsChangeRand>
@@ -37256,8 +37256,8 @@
 			<OpenBordersRefuseAttitudeThreshold>NONE</OpenBordersRefuseAttitudeThreshold>
 			<DefensivePactRefuseAttitudeThreshold>ATTITUDE_PLEASED</DefensivePactRefuseAttitudeThreshold>
 			<PermanentAllianceRefuseAttitudeThreshold>ATTITUDE_PLEASED</PermanentAllianceRefuseAttitudeThreshold>
-			<VassalRefuseAttitudeThreshold>ATTITUDE_ANNOYED</VassalRefuseAttitudeThreshold>
-			<iVassalPowerModifier>0</iVassalPowerModifier>
+			<VassalRefuseAttitudeThreshold>ATTITUDE_PLEASED</VassalRefuseAttitudeThreshold>
+			<iVassalPowerModifier>15</iVassalPowerModifier>
 			<iFreedomAppreciation>10</iFreedomAppreciation>
 			<FavoriteCivic>CIVIC_VASSALAGE</FavoriteCivic>
 			<FavoriteReligion>RELIGION_ORTHODOXY</FavoriteReligion>
@@ -48786,7 +48786,7 @@
 			<OpenBordersRefuseAttitudeThreshold>NONE</OpenBordersRefuseAttitudeThreshold>
 			<DefensivePactRefuseAttitudeThreshold>ATTITUDE_PLEASED</DefensivePactRefuseAttitudeThreshold>
 			<PermanentAllianceRefuseAttitudeThreshold>ATTITUDE_PLEASED</PermanentAllianceRefuseAttitudeThreshold>
-			<VassalRefuseAttitudeThreshold>ATTITUDE_ANNOYED</VassalRefuseAttitudeThreshold>
+			<VassalRefuseAttitudeThreshold>ATTITUDE_CAUTIOUS</VassalRefuseAttitudeThreshold>
 			<iVassalPowerModifier>10</iVassalPowerModifier>
 			<iFreedomAppreciation>10</iFreedomAppreciation>
 			<FavoriteCivic>CIVIC_MERCHANT_TRADE</FavoriteCivic>
@@ -65941,7 +65941,7 @@
 			<DefensivePactRefuseAttitudeThreshold>ATTITUDE_CAUTIOUS</DefensivePactRefuseAttitudeThreshold>
 			<PermanentAllianceRefuseAttitudeThreshold>ATTITUDE_PLEASED</PermanentAllianceRefuseAttitudeThreshold>
 			<VassalRefuseAttitudeThreshold>ATTITUDE_PLEASED</VassalRefuseAttitudeThreshold>
-			<iVassalPowerModifier>20</iVassalPowerModifier>
+			<iVassalPowerModifier>10</iVassalPowerModifier>
 			<iFreedomAppreciation>10</iFreedomAppreciation>
 			<FavoriteCivic>CIVIC_FANATICISM</FavoriteCivic>
 			<FavoriteReligion>RELIGION_ISLAM</FavoriteReligion>
