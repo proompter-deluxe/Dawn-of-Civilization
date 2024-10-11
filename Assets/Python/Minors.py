@@ -591,7 +591,7 @@ barbarians = [
 	Barbarians(750, 950, {iLongship: 1, iAxeman: 2}, ((53, 48), (63, 72)), 6, SEA_INVADERS, adjective="TXT_KEY_ADJECTIVE_VIKING"),
 	Barbarians(800, 1200, {iLongbowman: 2, iWarElephant: 1}, ((116, 37), (119, 43)), 8, INVADERS, target_area=((118, 34), (124, 39)), adjective="TXT_KEY_ADJECTIVE_TAI"),
 	Barbarians(800, 1100, {iHeavySwordsman: 1}, ((113, 50), (120, 56)), 8, INVADERS, target_area=((112, 57), (123, 56)), adjective="TXT_KEY_ADJECTIVE_TANGUT", condition=is_free_of_civ(iTibet)),
-	Barbarians(830, 920, {iHorseArcher: 3}, ((76, 60), (84, 63)), 2, INVADERS, target_area=((68, 57), (73, 60)), adjective="TXT_KEY_ADJECTIVE_MAGYAR"),
+	Barbarians(825, 900, {iHorseArcher: 3}, ((75, 58), (83, 63)), 2, INVADERS, target_area=((65, 57), (72, 61)), adjective="TXT_KEY_ADJECTIVE_MAGYAR"),
 	Barbarians(850, 1100, {iHorseArcher: 3}, ((79, 58), (88, 62)), 6, NOMADS, target_area=((73, 49), (84, 66)), adjective="TXT_KEY_ADJECTIVE_PECHENEG"),
 	Barbarians(900, 1100, {iKeshik: 4}, ((117, 56), (131, 63)), 6, INVADERS, target_area=((118, 49), (129, 61)), adjective="TXT_KEY_ADJECTIVE_JURCHEN", promotions=(iDesertAdaptation,)),
 	Barbarians(900, 1200, {iHorseArcher: 2}, ((89, 62), (93, 68)), 9, MINORS, adjective="TXT_KEY_ADJECTIVE_BULGAR"),
