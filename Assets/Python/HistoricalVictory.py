@@ -368,6 +368,7 @@ dGoals = {
 			(plots.regions(rGreece, rAnatolia).named(ANATOLIA), 4),
 			(plots.region(rEgypt).named(EGYPT), 3),
 			(plots.region(rLevant), 2),
+			(plots.region(rCentralEurope), 1),
 			at=320,
 		),
 		FirstDiscover(iArchitecture, iPolitics, iScholarship, iMachinery, iCivilService),
