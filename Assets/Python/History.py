@@ -481,6 +481,7 @@ def romanRelations(iPlayer):
 	if civ(iPlayer) == iByzantium and player(iRome).isExisting():
 		iRomePlayer = slot(iRome)
 		player(iRomePlayer).AI_changeMemoryCount(iPlayer, MemoryTypes.MEMORY_EVENT_GOOD_TO_US, 4)
+		player(iPlayer).AI_changeMemoryCount(iRomePlayer, MemoryTypes.MEMORY_EVENT_GOOD_TO_US, 4)
 
 # Northern China is upset at the south for rejecting imperial rule in Chang'an / Luoyang
 # This is to prevent the two Chinas from getting friendly and tech trading etc
