@@ -442,7 +442,7 @@ class Barbarians(object):
 minor_cities = [
 	MinorCity(-3000, iIndependent2, tSusa, "Shushan", iPopulation=1, iCiv=iBabylonia, units={iDefend: 1}, iCulture=10, adjective="TXT_KEY_ADJECTIVE_ELAMITE"),
 	# MinorCity(-3000, iIndependent, (90, 45), "Unug", iPopulation=1, iCiv=iBabylonia, units={iDefend: 2}, iCulture=10, adjective="TXT_KEY_ADJECTIVE_SUMERIAN"),
-	MinorCity(-2100, iIndependent2, (85, 50), "Ugarit", iPopulation=1, iCiv=iBabylonia, units={iDefend: 1, iWork: 1}, iCulture=10, adjective="TXT_KEY_ADJECTIVE_MARIOTE"),
+	MinorCity(-2100, iIndependent2, (85, 50), "Ugarit", iPopulation=1, iCiv=iBabylonia, units={iDefend: 1, iWork: 1}, iCulture=15, adjective="TXT_KEY_ADJECTIVE_MARIOTE"),
 	MinorCity(-2050, iIndependent, (118, 49), "Sanxingdui", iPopulation=2, iCiv=iChina, units={iDefend: 1, iBase: 1}, adjective="TXT_KEY_ADJECTIVE_SHU"),
 	MinorCity(-1830, iBarbarian, (124, 52), "Daliang", iPopulation=2, iCiv=iChina, units={iDefend: 1, iBase: 1}, adjective="TXT_KEY_ADJECTIVE_WEI"),
 	MinorCity(-1830, iIndependent, (127, 53), "Jimo", iPopulation=1, iCiv=iChina, units={iDefend: 1}, adjective="TXT_KEY_ADJECTIVE_QI"),
@@ -452,7 +452,7 @@ minor_cities = [
 	MinorCity(-860, iBarbarian, (89, 53), "Tushpa", iPopulation=2, iCiv=iAssyria, units={iDefend: 2}, iCulture=15, adjective="TXT_KEY_ADJECTIVE_ARMENIAN"),
 	MinorCity(-800, iIndependent, (100, 54), u"Smárkath", iPopulation=1, iCiv=iAssyria, units={iDefend: 1}, adjective="TXT_KEY_ADJECTIVE_SOGDIAN"),
 	MinorCity(-700, iIndependent2, (80, 52), "Sfard", iPopulation=2, iCiv=iHittites, units={iDefend: 1, iCounter: 1}, condition=lambda: not player(iHittites).isHuman(), adjective="TXT_KEY_ADJECTIVE_LYDIAN"),
-	MinorCity(-680, iIndependent, (92, 50), "Hagmatana", iPopulation=2, iCiv=iAssyria, units={iDefend: 2, iShock: 2}, iCulture=10, adjective="TXT_KEY_ADJECTIVE_MEDIAN"),
+	MinorCity(-680, iIndependent, (92, 50), "Hagmatana", iPopulation=2, iCiv=iAssyria, units={iDefend: 2, iShock: 2}, iCulture=15, adjective="TXT_KEY_ADJECTIVE_MEDIAN"),
 	MinorCity(-600, iIndependent, (97, 53), "Margu", iPopulation=1, iCiv=iPersia, units={iDefend: 1}, adjective="TXT_KEY_ADJECTIVE_SOGDIAN"),
 	MinorCity(-570, iIndependent2, tGades, "Gadir", iPopulation=2, iCiv=iPhoenicia, units={iDefend: 1}, condition=lambda: player(iPhoenicia).isExisting() and not player(iPhoenicia).isHuman(),  adjective="TXT_KEY_CIV_PHOENICIA_ADJECTIVE"),
 	MinorCity(-500, iIndependent2, (68, 53), "Roma", iPopulation=3, iCiv=iGreece, units={iDefend: 1, iCounter: 2, iWork: 1}, adjective="TXT_KEY_CIV_ROME_ADJECTIVE"),
