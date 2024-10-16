@@ -125,6 +125,7 @@ dSpecificVassalTitles = deepdict({
 	},
 	iFrance : {
 		iEgypt : "TXT_KEY_MANDATE_OF",
+		iMamluks : "TXT_KEY_MANDATE_OF",
 		iBabylonia : "TXT_KEY_CIV_FRENCH_BABYLONIA",
 		iGreece : "TXT_KEY_CIV_FRANCE_DEPARTEMENTS_OF",
 		iPersia : "TXT_KEY_MANDATE_OF",
@@ -982,7 +983,7 @@ def specificName(iPlayer):
 				return "TXT_KEY_CIV_CHINA_MING"
 	
 	elif iCiv == iMamluks:
-		if not bMonarchy or bResurrected or iEra >= iIndustrial:
+		if bCapitulated or not bMonarchy or bResurrected or iEra >= iIndustrial:
 			return "TXT_KEY_CIV_MISR_SHORT_DESC_MODERN"
 
 	elif iCiv == iNubia:
@@ -1249,7 +1250,7 @@ def specificAdjective(iPlayer):
 	bMonarchy = not isCommunist(iPlayer) and not isFascist(iPlayer) and not isRepublic(iPlayer)
 	
 	if iCiv == iMamluks:
-		if not bMonarchy or bResurrected or iEra >= iIndustrial:
+		if bCapitulated or not bMonarchy or bResurrected or iEra >= iIndustrial:
 			return "TXT_KEY_CIV_MISR_ADJECTIVE_MODERN"
 
 		if bMonarchy:
