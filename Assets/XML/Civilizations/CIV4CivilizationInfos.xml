@@ -3076,6 +3076,137 @@
 			<CivilizationActionSound>AS3D_PERSIA_ORDER</CivilizationActionSound>
 		</CivilizationInfo>
 		<CivilizationInfo>
+			<Type>CIVILIZATION_IROQUOIS</Type>
+			<Description>TXT_KEY_CIV_IROQUOIS_DESC</Description>
+			<ShortDescription>TXT_KEY_CIV_IROQUOIS_SHORT_DESC</ShortDescription>
+			<Adjective>TXT_KEY_CIV_IROQUOIS_ADJECTIVE</Adjective>
+			<Civilopedia>TXT_KEY_CIV_IROQUOIS_PEDIA</Civilopedia>
+			<DefaultPlayerColor>PLAYERCOLOR_LIGHT_BROWN</DefaultPlayerColor>
+			<ArtDefineTag>ART_DEF_CIVILIZATION_IROQUOIS</ArtDefineTag>
+			<ArtStyleType>ARTSTYLE_SOUTH_AMERICA</ArtStyleType>
+			<UnitArtStyleType>UNIT_ARTSTYLE_SOUTH_AMERICAN</UnitArtStyleType>
+			<PaganReligion>PAGAN_RELIGION_TEOTL_AZTEC</PaganReligion>
+			<Impact>IMPACT_SIGNIFICANT</Impact>
+			<Identifier>IRO</Identifier>
+			<StartingYear>1450</StartingYear>
+			<LoadingTimes>
+				<LoadingTime>22</LoadingTime>
+				<LoadingTime>10</LoadingTime>
+				<LoadingTime>0</LoadingTime>
+			</LoadingTimes>
+			<Rating>
+				<Trade>1</Trade>
+				<Production>3</Production>
+				<Culture>1</Culture>
+				<Growth>4</Growth>
+				<Start>1</Start>
+			</Rating>
+			<bPlayable>1</bPlayable>
+			<bAIPlayable>1</bAIPlayable>
+			<Cities>
+				<City>Cahokia</City>
+				<City>Poverty Point</City>
+				<City>Mound City</City>
+				<City>Chaco Canyon</City>
+				<City>Mesa Verde</City>
+				<City>Snaketown</City>
+				<City>Spiro</City>
+				<City>Moundville</City>
+				<City>Nacogdoches</City>
+				<City>Nanih Waiya</City>
+				<City>Anhaica</City>
+				<City>Etowah</City>
+				<City>Ocmulgee</City>
+				<City>Kituhwa</City>
+				<City>Fort Ancient</City>
+				<City>Onondaga</City>
+				<City>Bawating</City>
+				<City>Acoma</City>
+				<City>Hovenweep</City>
+				<City>Casa Grande</City>
+				<City>Criel</City>
+				<City>Joara</City>
+				<City>Lake Jackson</City>
+				<City>Chota</City>
+				<City>Oneida</City>
+				<City>Logstown</City>
+				<City>Five Finger Ridge</City>
+				<City>Frijoles Canyon</City>
+				<City>Puye Cliff</City>
+				<City>Kiet Siel</City>
+				<City>Montezuma Castle</City>
+				<City>Wickliffe</City>
+				<City>Aztalan</City>
+				<City>Angel Mounds</City>
+				<City>Tsirege</City>
+				<City>Taos</City>
+				<City>Zuni</City>
+				<City>Tishomingo</City>
+				<City>Shaugawaumikong</City>
+				<City>Allumette</City>
+				<City>Wendake</City>
+				<City>Norridgewock</City>
+				<City>Mutsun</City>
+				<City>Ozette</City>
+				<City>Estipah-skikikini-kots</City>
+				<City>Hueco Tanks</City>
+				<City>Ukpiagvik</City>
+				<City>Ketchikan</City>
+				<City>Kuujjuaq</City>
+			</Cities>
+			<Buildings>
+				<Building>
+					<BuildingClassType>BUILDINGCLASS_TANNERY</BuildingClassType>
+					<BuildingType>BUILDING_IROQUOIS_LONGHOUSE</BuildingType>
+				</Building>
+				<Building>
+					<BuildingClassType>BUILDINGCLASS_PAGAN_TEMPLE</BuildingClassType>
+					<BuildingType>BUILDING_TEOTL_STEP_PYRAMID</BuildingType>
+				</Building>
+				<Building>
+					<BuildingClassType>BUILDINGCLASS_PALACE</BuildingClassType>
+					<BuildingType>BUILDING_ALGONQUIN_PALACE_ASSEMBLY_HALL</BuildingType>
+				</Building>
+			</Buildings>
+			<Units>
+				<Unit>
+					<UnitClassType>UNITCLASS_ARQUEBUSIER</UnitClassType>
+					<UnitType>UNIT_IROQUOIS_MOHAWK</UnitType>
+				</Unit>
+			</Units>
+			<FreeUnitClasses>
+				<FreeUnitClass>
+					<UnitClassType>UNITCLASS_SETTLER</UnitClassType>
+					<iFreeUnits>1</iFreeUnits>
+				</FreeUnitClass>
+			</FreeUnitClasses>
+			<FreeBuildingClasses>
+				<FreeBuildingClass>
+					<BuildingClassType>BUILDINGCLASS_PALACE</BuildingClassType>
+					<bFreeBuildingClass>1</bFreeBuildingClass>
+				</FreeBuildingClass>
+			</FreeBuildingClasses>
+			<FreeTechs/>
+			<DisableTechs/>
+			<InitialCivics>
+				<CivicType>CIVIC_CHIEFDOM</CivicType>
+				<CivicType>CIVIC_PERSONALISM</CivicType>
+				<CivicType>CIVIC_TRADITIONALISM</CivicType>
+				<CivicType>CIVIC_RECIPROCITY</CivicType>
+				<CivicType>CIVIC_ANIMISM</CivicType>
+				<CivicType>CIVIC_KINSHIP</CivicType>
+			</InitialCivics>
+			<Leaders>
+				<Leader>
+					<LeaderName>LEADER_HIAWATHA</LeaderName>
+					<bLeaderAvailability>1</bLeaderAvailability>
+				</Leader>
+			</Leaders>
+			<DerivativeCiv>CIVILIZATION_AMERICA</DerivativeCiv>
+			<CivilizationSelectionSound>AS3D_NATIVE_AMERICA_SELECT</CivilizationSelectionSound>
+			<CivilizationActionSound>AS3D_NATIVE_AMERICA_ORDER</CivilizationActionSound>
+		</CivilizationInfo>
+		<CivilizationInfo>
 			<Type>CIVILIZATION_ITALY</Type>
 			<Description>TXT_KEY_CIV_ITALY_DESC</Description>
 			<ShortDescription>TXT_KEY_CIV_ITALY_SHORT_DESC</ShortDescription>
@@ -4779,118 +4910,6 @@
 			<CivilizationSelectionSound>AS3D_PERSIA_SELECT</CivilizationSelectionSound>
 			<CivilizationActionSound>AS3D_PERSIA_ORDER</CivilizationActionSound>
 		</CivilizationInfo>
-		<!-- <CivilizationInfo>
-			<Type>CIVILIZATION_NATIVE_AMERICA</Type>
-			<Description>TXT_KEY_CIV_NATIVE_AMERICA_DESC</Description>
-			<ShortDescription>TXT_KEY_CIV_NATIVE_AMERICA_SHORT_DESC</ShortDescription>
-			<Adjective>TXT_KEY_CIV_NATIVE_AMERICA_ADJECTIVE</Adjective>
-			<Civilopedia>TXT_KEY_CIV_NATIVE_AMERICA_PEDIA</Civilopedia>
-			<DefaultPlayerColor>PLAYERCOLOR_LIGHT_BROWN</DefaultPlayerColor>
-			<ArtDefineTag>ART_DEF_CIVILIZATION_NATIVE_AMERICA</ArtDefineTag>
-			<ArtStyleType>ARTSTYLE_SOUTH_AMERICA</ArtStyleType>
-			<UnitArtStyleType>UNIT_ARTSTYLE_SOUTH_AMERICAN</UnitArtStyleType>
-			<Identifier>NAT</Identifier>
-			<StartingYear>0</StartingYear>
-			<LoadingTimes>
-				<LoadingTime>0</LoadingTime>
-				<LoadingTime>0</LoadingTime>
-				<LoadingTime>0</LoadingTime>
-			</LoadingTimes>
-			<Rating>
-				<Trade>0</Trade>
-				<Production>0</Production>
-				<Culture>0</Culture>
-				<Growth>0</Growth>
-				<Start>0</Start>
-			</Rating>
-			<bPlayable>0</bPlayable>
-			<bAIPlayable>0</bAIPlayable>
-			<Cities>
-				<City>Cahokia</City>
-				<City>Poverty Point</City>
-				<City>Mound City</City>
-				<City>Chaco Canyon</City>
-				<City>Mesa Verde</City>
-				<City>Snaketown</City>
-				<City>Spiro</City>
-				<City>Moundville</City>
-				<City>Nacogdoches</City>
-				<City>Nanih Waiya</City>
-				<City>Anhaica</City>
-				<City>Etowah</City>
-				<City>Ocmulgee</City>
-				<City>Kituhwa</City>
-				<City>Fort Ancient</City>
-				<City>Onondaga</City>
-				<City>Bawating</City>
-				<City>Acoma</City>
-				<City>Namb&#233;</City>
-				<City>Hovenweep</City>
-				<City>Casa Grande</City>
-				<City>Criel</City>
-				<City>Joara</City>
-				<City>Lake Jackson</City>
-				<City>Chota</City>
-				<City>Oneida</City>
-				<City>Logstown</City>
-				<City>Five Finger Ridge</City>
-				<City>Frijoles Canyon</City>
-				<City>Puye Cliff</City>
-				<City>Kiet Siel</City>
-				<City>Montezuma Castle</City>
-				<City>Wickliffe</City>
-				<City>Aztalan</City>
-				<City>Angel Mounds</City>
-				<City>Tsirege</City>
-				<City>Taos</City>
-				<City>Zuni</City>
-				<City>Tishomingo</City>
-				<City>Shaugawaumikong</City>
-				<City>Allumette</City>
-				<City>Wendake</City>
-				<City>Norridgewock</City>
-				<City>Mutsun</City>
-				<City>Ozette</City>
-				<City>Estipah-skikikini-kots</City>
-				<City>Hueco Tanks</City>
-				<City>Ukpiagvik</City>
-				<City>Ketchikan</City>
-				<City>Kuujjuaq</City>
-			</Cities>
-			<Buildings/>
-			<Units/>
-			<FreeUnitClasses>
-				<FreeUnitClass>
-					<UnitClassType>UNITCLASS_SETTLER</UnitClassType>
-					<iFreeUnits>1</iFreeUnits>
-				</FreeUnitClass>
-			</FreeUnitClasses>
-			<FreeBuildingClasses>
-				<FreeBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_PALACE</BuildingClassType>
-					<bFreeBuildingClass>1</bFreeBuildingClass>
-				</FreeBuildingClass>
-			</FreeBuildingClasses>
-			<FreeTechs/>
-			<DisableTechs/>
-			<InitialCivics>
-				<CivicType>CIVIC_CHIEFDOM</CivicType>
-				<CivicType>CIVIC_PERSONALISM</CivicType>
-				<CivicType>CIVIC_TRADITIONALISM</CivicType>
-				<CivicType>CIVIC_RECIPROCITY</CivicType>
-				<CivicType>CIVIC_ANIMISM</CivicType>
-				<CivicType>CIVIC_KINSHIP</CivicType>
-			</InitialCivics>
-			<Leaders>
-				<Leader>
-					<LeaderName>LEADER_BARBARIAN</LeaderName>
-					<bLeaderAvailability>1</bLeaderAvailability>
-				</Leader>
-			</Leaders>
-			<DerivativeCiv>CIVILIZATION_AMERICA</DerivativeCiv>
-			<CivilizationSelectionSound>AS3D_NATIVE_AMERICA_SELECT</CivilizationSelectionSound>
-			<CivilizationActionSound>AS3D_NATIVE_AMERICA_ORDER</CivilizationActionSound>
-		</CivilizationInfo> -->
 		<CivilizationInfo>
 			<Type>CIVILIZATION_NETHERLANDS</Type>
 			<Description>TXT_KEY_CIV_NETHERLANDS_DESC</Description>

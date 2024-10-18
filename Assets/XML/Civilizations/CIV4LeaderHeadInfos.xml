@@ -77488,10 +77488,10 @@
 			</DiplomacyMusicWar>
 		</LeaderHeadInfo>
 		<LeaderHeadInfo>
-			<Type>LEADER_SITTING_BULL</Type>
-			<Description>TXT_KEY_LEADER_SITTING_BULL</Description>
-			<Civilopedia>TXT_KEY_LEADER_SITTING_BULL_PEDIA</Civilopedia>
-			<ArtDefineTag>ART_DEF_LEADER_SITTING_BULL</ArtDefineTag>
+			<Type>LEADER_HIAWATHA</Type>
+			<Description>TXT_KEY_LEADER_HIAWATHA</Description>
+			<Civilopedia>TXT_KEY_LEADER_HIAWATHA_PEDIA</Civilopedia>
+			<ArtDefineTag>ART_DEF_LEADER_HIAWATHA</ArtDefineTag>
 			<iWonderConstructRand>0</iWonderConstructRand>
 			<iBaseAttitude>0</iBaseAttitude>
 			<iBasePeaceWeight>8</iBasePeaceWeight>
@@ -77561,9 +77561,9 @@
 			<DefensivePactRefuseAttitudeThreshold>ATTITUDE_ANNOYED</DefensivePactRefuseAttitudeThreshold>
 			<PermanentAllianceRefuseAttitudeThreshold>ATTITUDE_PLEASED</PermanentAllianceRefuseAttitudeThreshold>
 			<VassalRefuseAttitudeThreshold>ATTITUDE_PLEASED</VassalRefuseAttitudeThreshold>
-			<iVassalPowerModifier>50</iVassalPowerModifier>
+			<iVassalPowerModifier>-10</iVassalPowerModifier>
 			<iFreedomAppreciation>10</iFreedomAppreciation>
-			<FavoriteCivic>CIVIC_EGALITARIANISM</FavoriteCivic>
+			<FavoriteCivic>CIVIC_CHIEFDOM</FavoriteCivic>
 			<FavoriteReligion>NONE</FavoriteReligion>
 			<Traits/>
 			<Flavors>
@@ -77579,7 +77579,7 @@
 			<ContactRands>
 				<ContactRand>
 					<ContactType>CONTACT_RELIGION_PRESSURE</ContactType>
-					<iContactRand>500</iContactRand>
+					<iContactRand>800</iContactRand>
 				</ContactRand>
 				<ContactRand>
 					<ContactType>CONTACT_CIVIC_PRESSURE</ContactType>
@@ -77603,7 +77603,7 @@
 				</ContactRand>
 				<ContactRand>
 					<ContactType>CONTACT_DEMAND_TRIBUTE</ContactType>
-					<iContactRand>25</iContactRand>
+					<iContactRand>600</iContactRand>
 				</ContactRand>
 				<ContactRand>
 					<ContactType>CONTACT_OPEN_BORDERS</ContactType>
@@ -77635,7 +77635,7 @@
 				</ContactRand>
 				<ContactRand>
 					<ContactType>CONTACT_TRADE_SLAVE</ContactType>
-					<iContactRand>5</iContactRand>
+					<iContactRand>15</iContactRand>
 				</ContactRand>
 			</ContactRands>
 			<ContactDelays>

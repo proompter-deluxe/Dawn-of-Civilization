@@ -134,6 +134,7 @@ dCultureMods = CivDict({
 	iIndependent2: 20,
 	iNative: 20,
 	iBarbarian: 30,
+	iIroquois: 100,
 }, default=100)
 
 dUnitUpkeepMods = CivDict({
@@ -205,6 +206,7 @@ dUnitUpkeepMods = CivDict({
 	iIndependent2: 50,
 	iNative: 100,
 	iBarbarian: 100,
+	iIroquois: 100,
 }, default=100)
 
 dResearchCostMods = CivDict({
@@ -276,6 +278,7 @@ dResearchCostMods = CivDict({
 	iIndependent2: 125,
 	iNative: 125,
 	iBarbarian: 110,
+	iIroquois: 85,
 }, default=100)
 
 dDistanceMaintenanceMods = CivDict({
@@ -347,6 +350,7 @@ dDistanceMaintenanceMods = CivDict({
 	iIndependent2: 100,
 	iNative: 100,
 	iBarbarian: 20,
+	iIroquois: 80,
 }, default=100)
 
 dColonyMaintenanceMods = CivDict({
@@ -418,6 +422,7 @@ dColonyMaintenanceMods = CivDict({
 	iIndependent2: 100,
 	iNative: 100,
 	iBarbarian: 20,
+	iIroquois: 100,
 }, default=100)
 
 dCitiesMaintenanceMods = CivDict({
@@ -489,6 +494,7 @@ dCitiesMaintenanceMods = CivDict({
 	iIndependent2: 100,
 	iNative: 100,
 	iBarbarian: 30,
+	iIroquois: 85,
 }, default=100)
 
 dCivicUpkeepMods = CivDict({
@@ -560,6 +566,7 @@ dCivicUpkeepMods = CivDict({
 	iIndependent2: 100,
 	iNative: 100,
 	iBarbarian: 70,
+	iIroquois: 80,
 }, default=100)
 
 dHealthMods = CivDict({
@@ -631,6 +638,7 @@ dHealthMods = CivDict({
 	iIndependent2: 0,
 	iNative: 0,
 	iBarbarian: 0,
+	iIroquois: 3,
 }, default=2)
 
 dUnitCostMods = CivDict({
@@ -702,6 +710,7 @@ dUnitCostMods = CivDict({
 	iIndependent2: 300,
 	iNative: 150,
 	iBarbarian: 140,
+	iIroquois: 80,
 }, default=100)
 
 dWonderCostMods = CivDict({
@@ -773,6 +782,7 @@ dWonderCostMods = CivDict({
 	iIndependent2: 150,
 	iNative: 150,
 	iBarbarian: 100,
+	iIroquois: 100,
 }, default=100)
 
 dBuildingCostMods = CivDict({
@@ -844,6 +854,7 @@ dBuildingCostMods = CivDict({
 	iIndependent2: 100,
 	iNative: 150,
 	iBarbarian: 100,
+	iIroquois: 80,
 }, default=100)
 
 dInflationRateMods = CivDict({
@@ -915,6 +926,7 @@ dInflationRateMods = CivDict({
 	iIndependent2: 95,
 	iNative: 95,
 	iBarbarian: 95,
+	iIroquois: 75,
 }, default=100)
 
 dGreatPeopleThresholdMods = CivDict({
@@ -986,6 +998,7 @@ dGreatPeopleThresholdMods = CivDict({
 	iIndependent2: 100,
 	iNative: 100,
 	iBarbarian: 100,
+	iIroquois: 85,
 }, default=100)
 
 dGrowthThresholdMods = CivDict({
@@ -1057,6 +1070,7 @@ dGrowthThresholdMods = CivDict({
 	iIndependent2: 125,
 	iNative: 125,
 	iBarbarian: 125,
+	iIroquois: 75,
 }, default=100)
 
 tModifiers = (dCultureMods, dUnitUpkeepMods, dResearchCostMods, dDistanceMaintenanceMods, dColonyMaintenanceMods, dCitiesMaintenanceMods, dCivicUpkeepMods, dHealthMods, dUnitCostMods, dWonderCostMods, dBuildingCostMods, dInflationRateMods, dGreatPeopleThresholdMods, dGrowthThresholdMods)

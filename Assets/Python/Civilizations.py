@@ -570,6 +570,11 @@ lCivilizations = [
 		techs=techs.column(6).including(iMachinery, iCivilService, iGuilds, iTheology)
 	),
 	Civilization(
+		iIroquois,
+		iGold=20,
+		techs=techs.of(iTanning, iPottery, iAgriculture)
+	),
+	Civilization(
 		iIran,
 		iGold=600,
 		iAdvancedStartPoints=250,
@@ -1074,6 +1079,11 @@ dStartingUnits = CivDict({
 		iDefend: 2,
 		iAttack: 2,
 		iExplore: 1,
+	},
+	iIroquois: {
+		iSettle: 1,
+		iWork: 1,
+		iDefend: 2,
 	},
 	iIran: {
 		iSettle: 1,

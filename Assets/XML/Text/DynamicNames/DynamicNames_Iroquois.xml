@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Iroquois -->
+<Civ4GameText xmlns="http://www.firaxis.com">
+	<TEXT>
+		<Tag>TXT_KEY_CIV_IROQUOIS_DESC</Tag>
+		<English>The Iroquois</English>
+		<French>Les Iroquois</French>
+		<German>The Iroquois</German>
+		<Italian>The Iroquois</Italian>
+		<Spanish>The Iroquois</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_IROQUOIS_PEOPLES</Tag>
+		<English>Iroquois Peoples</English>
+		<French>Iroquois Peoples</French>
+		<German>Iroquois Peoples</German>
+		<Italian>Iroquois Peoples</Italian>
+		<Spanish>Iroquois Peoples</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_IROQUOIS_ADJECTIVE</Tag>
+		<English>Iroquois</English>
+		<French>Iroquois</French>
+		<German>Iroquois</German>
+		<Italian>Iroquois</Italian>
+		<Spanish>Iroquois</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_IROQUOIS_SHORT_DESC</Tag>
+		<English>Iroquois</English>
+		<French>Iroquois</French>
+		<German>Iroquois</German>
+		<Italian>Iroquois</Italian>
+		<Spanish>Iroquois</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_IROQUOIS_DEFAULT</Tag>
+		<English>%s2 Confederacy</English>
+		<French>%s2 Confederacy</French>
+		<German>%s2 Confederacy</German>
+		<Italian>%s2 Confederacy</Italian>
+		<Spanish>%s2 Confederacy</Spanish>
+	</TEXT>
+</Civ4GameText>

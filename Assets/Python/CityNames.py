@@ -84,6 +84,8 @@ dLanguages = CivDict({
 	iBulgaria: [iLangRuthenian, iLangByzantine, iLangRussian], # Bulgarian/Balkans language later
 	iMamluks: [iLangEgyptianArabic, iLangArabic],
 	iMacedon: [iLangGreek],
+	iIroquois: [iLangNahuatl],
+
 }, [])
 
 ### CSV CITY NAME MAP ###

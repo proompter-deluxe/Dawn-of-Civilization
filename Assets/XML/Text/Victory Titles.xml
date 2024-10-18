@@ -300,6 +300,32 @@
 		<Spanish>Rhodes Rebuffed</Spanish>
 	</TEXT>
 
+	
+	<TEXT>
+		<Tag>TXT_KEY_VICTORY_TITLE_IRO1</Tag>
+		<English>North American Statehood</English>
+		<French>North American Statehood</French>
+		<German>North American Statehood</German>
+		<Italian>North American Statehood</Italian>
+		<Spanish>North American Statehood</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_VICTORY_TITLE_IRO2</Tag>
+		<English>An Invaluable Ally</English>
+		<French>An Invaluable Ally</French>
+		<German>An Invaluable Ally</German>
+		<Italian>An Invaluable Ally</Italian>
+		<Spanish>An Invaluable Ally</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_VICTORY_TITLE_IRO3</Tag>
+		<English>The Great Peace</English>
+		<French>The Great Peace</French>
+		<German>The Great Peace</German>
+		<Italian>The Great Peace</Italian>
+		<Spanish>The Great Peace</Spanish>
+	</TEXT>
+
 	<TEXT>
 		<Tag>TXT_KEY_VICTORY_TITLE_MCD1</Tag>
 		<English>The Silver Shields and the King's Companions</English>

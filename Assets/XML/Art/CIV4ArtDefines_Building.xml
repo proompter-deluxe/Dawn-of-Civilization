@@ -3787,5 +3787,15 @@
 			<KFM/>
 			<Button>Art/Interface/Buttons/Buildings/hellenistic_colony.dds</Button>
 		</BuildingArtInfo>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_LONGHOUSE</Type>
+			<LSystem>LSYSTEM_2x2</LSystem>
+			<bAnimated>0</bAnimated>
+			<fScale>0.5</fScale>
+			<fInterfaceScale>0.5</fInterfaceScale>
+			<NIF>Art/Structures/Buildings/IroquoisLonghouse/IroquoisLH.nif</NIF>
+			<KFM/>
+			<Button>Art/Structures/Buildings/IroquoisLonghouse/longhouse.dds</Button>
+		</BuildingArtInfo>	
 	</BuildingArtInfos>
 </Civ4ArtDefines>

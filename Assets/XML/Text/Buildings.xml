@@ -222,6 +222,18 @@
 		<Spanish>Comandancia</Spanish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_BUILDING_LONGHOUSE</Tag>
+		<English>Longhouse</English>
+		<French>
+			<Text>Maison longue</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>Longhouse</German>
+		<Italian>Longhouse</Italian>
+		<Spanish>Longhouse</Spanish>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CHINESE_TAIXUE</Tag>
 		<English>Taixue</English>
 		<French>
@@ -324,6 +336,14 @@
 		<German>Palatial Bureaucracy</German>
 		<Italian>Palatial Bureaucracy</Italian>
 		<Spanish>Palatial Bureaucracy</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_ASSEMBLY_HALL</Tag>
+		<English>Assembly Hall</English>
+		<French>Assembly Hall</French>
+		<German>Assembly Hall</German>
+		<Italian>Assembly Hall</Italian>
+		<Spanish>Assembly Hall</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_DRYDOCK_STRATEGY</Tag>

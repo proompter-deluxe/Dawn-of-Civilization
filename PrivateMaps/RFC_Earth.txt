@@ -12667,7 +12667,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=28,y=60
-	BonusType=BONUS_CORN
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
@@ -13128,6 +13127,7 @@ EndPlot
 BeginPlot
 	x=29,y=60
 	TerrainType=TERRAIN_GRASS
+	BonusType=BONUS_CORN
 	PlotType=2
 EndPlot
 BeginPlot

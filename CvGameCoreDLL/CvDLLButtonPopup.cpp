@@ -307,9 +307,17 @@ void CvDLLButtonPopup::OnOkClicked(CvPopup* pPopup, PopupReturn *pPopupReturn, C
 	case BUTTONPOPUP_RAZECITY:
 		if (pPopupReturn->getButtonClicked() == 1) // raze
 		{
-			CvCity* pCity = GET_PLAYER(GC.getGameINLINE().getActivePlayer()).getCity(info.getData1());
+			CvPlayerAI& kPlayer = GET_PLAYER(GC.getGameINLINE().getActivePlayer());
+
+			CvCity* pCity = kPlayer.getCity(info.getData1());
 			if (NULL != pCity)
 			{
+				// IROQUOIS UP: golden age from razing cities
+				if (pCity->getCivilizationType() == IROQUOIS)
+				{
+					kPlayer.changeGoldenAgeTurns(kPlayer.getGoldenAgeLength());
+				}
+
 				pCity->raze(info.getData3());
 			}
 		}

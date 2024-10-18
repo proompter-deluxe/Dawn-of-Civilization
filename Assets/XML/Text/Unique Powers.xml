@@ -1169,4 +1169,20 @@
 		<Italian>Start with the Stratocracy civic and a free Great General</Italian>
 		<Spanish>Start with the Stratocracy civic and a free Great General</Spanish>
 	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UP_IRO_TITLE</Tag>
+		<English>The Power of Tribal Integration:</English>
+		<French>The Power of Tribal Integration:</French>
+		<German>The Power of Tribal Integration:</German>
+		<Italian>The Power of Tribal Integration:</Italian>
+		<Spanish>The Power of Tribal Integration:</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UP_IRO</Tag>
+		<English>Razing a city starts a Golden Age</English>
+		<French>Razing a city starts a Golden Age</French>
+		<German>Razing a city starts a Golden Age</German>
+		<Italian>Razing a city starts a Golden Age</Italian>
+		<Spanish>Razing a city starts a Golden Age</Spanish>
+	</TEXT>
 </Civ4GameText>

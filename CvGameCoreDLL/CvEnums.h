@@ -1199,6 +1199,7 @@ enum CivilizationTypes		// Exposed to Python
 	INCA,
 	INDIA,
 	IRAN,
+	IROQUOIS,
 	ITALY,
 	JAPAN,
 	JAVA,
@@ -1457,7 +1458,7 @@ enum LeaderHeadTypes			// Exposed to Python
 
 	BOUDICA,
 
-	SITTING_BULL,
+	HIAWATHA,
 
 	NUM_LEADERHEADS
 };

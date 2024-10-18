@@ -718,6 +718,15 @@ dGoals = {
 		RazeCount(7),
 		LandPercent(12, by=1500),
 	),
+	iIroquois : (
+		EnterEraBefore(iIndustrial, iGlobal),
+		All(
+			AttitudeCount(AttitudeTypes.ATTITUDE_FRIENDLY, 1, civs=group(iCivGroupEurope).named(EUROPE)),
+			RazeCount(5),
+			by=1750,
+		),
+		PopulationCount(45, by=1850),
+	),
 	iAztecs: (
 		BestPopulationCity(start(iAztecs).named(TENOCHTITLAN), at=1520),
 		SacrificeGoldenAges(16, by=1650),

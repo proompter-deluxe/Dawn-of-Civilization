@@ -570,6 +570,7 @@ dStartingLeaders = [
 	iCanada : iMacDonald,
 	iMamluks: iSaladin,
 	iMacedon: iAlexanderTheGreat,
+	iIroquois: iHiawatha,
 },
 # 600 AD
 {

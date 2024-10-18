@@ -383,12 +383,12 @@
 			<BackgroundKFM>art/LeaderHeads/Pericles/Pericles_BG.kfm</BackgroundKFM>
 		</LeaderheadArtInfo>
 		<LeaderheadArtInfo>
-			<Type>ART_DEF_LEADER_SITTING_BULL</Type>
-			<Button>,Art/interface/LeaderHeads/Btn_LH_Aztec_Montezuma.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,3,2</Button>
-			<NIF>art/LeaderHeads/Sitting Bull/Sitting Bull.nif</NIF>
-			<KFM>art/LeaderHeads/Sitting Bull/Sitting Bull.kfm</KFM>
-			<NoShaderNIF>art/LeaderHeads/Sitting Bull/Sitting_Bull_NONSHADER.nif</NoShaderNIF>
-			<BackgroundKFM>art/LeaderHeads/Sitting Bull/Sitting Bull_BG.kfm</BackgroundKFM>
+			<Type>ART_DEF_LEADER_HIAWATHA</Type>
+			<Button>Art/LeaderHeads/HiawathaFinal/hiawathabutton.dds</Button>
+			<NIF>art/LeaderHeads/HiawathaFinal/shaka.nif</NIF>
+			<KFM>art/LeaderHeads/HiawathaFinal/shaka.kfm</KFM>
+			<NoShaderNIF>art/Leaderheads/HiawathaFinal/shaka.nif</NoShaderNIF>
+			<BackgroundKFM>art/LeaderHeads/HiawathaFinal/boudica_bg.kfm</BackgroundKFM>
 		</LeaderheadArtInfo>
 		<LeaderheadArtInfo>
 			<Type>ART_DEF_LEADER_SULEIMAN</Type>
