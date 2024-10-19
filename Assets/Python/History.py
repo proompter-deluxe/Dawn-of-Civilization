@@ -248,6 +248,10 @@ def conquistadors(iTeamX, iHasMetTeamY):
 					return
 				
 				iNewWorldCiv = civ(iNewWorldPlayer)
+
+				# Iroquois are in new world for plague but not for conquerors
+				if iNewWorldCiv == iIroquois:
+					return
 				
 				if player(iNewWorldCiv).isBirthProtected():
 					data.dFirstContactConquerors[iNewWorldCiv] = True

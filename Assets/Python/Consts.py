@@ -127,7 +127,7 @@ iTechGroupFarEast : [iChina, iChinaS, iKorea, iKhmer, iMalays, iJapan, iJava, iT
 iTechGroupNativeAmerica : [iPolynesia, iMaya, iToltecs, iInca, iAztecs, iIroquois],
 }
 
-lBioNewWorld = [iMaya, iToltecs, iInca, iAztecs]
+lBioNewWorld = [iMaya, iToltecs, iInca, iAztecs, iIroquois]
 
 #for messages
 iDuration = 14
