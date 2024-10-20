@@ -3171,7 +3171,11 @@
 			<Units>
 				<Unit>
 					<UnitClassType>UNITCLASS_ARQUEBUSIER</UnitClassType>
-					<UnitType>UNIT_IROQUOIS_MOHAWK</UnitType>
+					<UnitType>UNIT_IROQUOIS_MOHAWK_CATHOLIC</UnitType>
+				</Unit>
+				<Unit>
+					<UnitClassType>UNITCLASS_CROSSBOWMAN</UnitClassType>
+					<UnitType>UNIT_IROQUOIS_MOHAWK_PROTESTANT</UnitType>
 				</Unit>
 			</Units>
 			<FreeUnitClasses>

@@ -722,10 +722,10 @@ dGoals = {
 		EnterEraBefore(iIndustrial, iGlobal),
 		All(
 			AttitudeCount(AttitudeTypes.ATTITUDE_FRIENDLY, 1, civs=group(iCivGroupEurope).named(EUROPE)),
-			RazeCount(5),
-			by=1750,
+			RazeCount(3),
+			by=1775,
 		),
-		PopulationCount(45, by=1850),
+		PopulationCount(30, by=1865),
 	),
 	iAztecs: (
 		BestPopulationCity(start(iAztecs).named(TENOCHTITLAN), at=1520),

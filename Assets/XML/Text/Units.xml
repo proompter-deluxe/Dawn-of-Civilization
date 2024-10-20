@@ -1194,16 +1194,28 @@
 		</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_IROQUOIS_MOHAWK</Tag>
-		<English>Mohawk</English>
+		<Tag>TXT_KEY_UNIT_IROQUOIS_MOHAWK_CATHOLIC</Tag>
+		<English>Catholic Allies</English>
 		<French>
-			<Text>Mohawk</Text>
+			<Text>Catholic Allies</Text>
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>Mohawk</German>
-		<Italian>Mohawk</Italian>
-		<Spanish>Mohawk</Spanish>
+		<German>Catholic Allies</German>
+		<Italian>Catholic Allies</Italian>
+		<Spanish>Catholic Allies</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_IROQUOIS_MOHAWK_PROTESTANT</Tag>
+		<English>Protestant Allies</English>
+		<French>
+			<Text>Protestant Allies</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>Protestant Allies</German>
+		<Italian>Protestant Allies</Italian>
+		<Spanish>Protestant Allies</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_MONGOLIAN_KESHIK</Tag>
