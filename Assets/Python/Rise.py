@@ -780,7 +780,7 @@ class Birth(object):
 			
 		if self.iPlayer < 0:
 			self.canceled = True
-			message(active(), "BIRTH CANCELED: no free slot found at year: %s1, for ID %s2, text %s3", year(), self.iPlayer, infos.civ(self.iCiv).getText(), color=iRed, force=True)
+			message(active(), "BIRTH CANCELED: no free slot found for %s1", infos.civ(self.iCiv).getText(), color=iRed, force=True)
 			message(active(), "SLOTS: %s1", slotCivsToString(), color=iRed, force=True)
 			return
 		

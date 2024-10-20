@@ -35,13 +35,13 @@ def availableSlot(iSlot):
 def slotCivsToString():
 	civs = "Total slots: %s. List: " % iNumPlayers
 	for iSlot in range(iNumPlayers):
-		civ = civ(iSlot)
-		if civ is None:
+		civilization = civ(iSlot)
+		if civilization is None:
 			civs += "None, "
-		elif civ == -1:
+		elif civilization == -1:
 			civs += "-1, "
 		else:
-			civs += infos.civ(civ).getText() + ", "
+			civs += infos.civ(civilization).getText() + ", "
 	
 	return civs
 
