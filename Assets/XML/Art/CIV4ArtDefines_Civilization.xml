@@ -170,8 +170,8 @@
 		</CivilizationArtInfo>
 		<CivilizationArtInfo>
 			<Type>ART_DEF_CIVILIZATION_IROQUOIS</Type>
-			<Button>,Art/Interface/Buttons/Civilizations/Aztec.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,7,4</Button>
-			<Path>Art/Interface/TeamColor/FlagDECAL_NativeAmerica.dds</Path>
+			<Button>Art/Interface/Buttons/Civilizations/iroquois.dds</Button>
+			<Path>Art/Interface/TeamColor/FlagDECAL_Iroquois.dds</Path>
 			<bWhiteFlag>0</bWhiteFlag>
 		</CivilizationArtInfo>
 		<CivilizationArtInfo>

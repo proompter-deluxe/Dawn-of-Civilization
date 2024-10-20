@@ -3081,7 +3081,7 @@
 			<ShortDescription>TXT_KEY_CIV_IROQUOIS_SHORT_DESC</ShortDescription>
 			<Adjective>TXT_KEY_CIV_IROQUOIS_ADJECTIVE</Adjective>
 			<Civilopedia>TXT_KEY_CIV_IROQUOIS_PEDIA</Civilopedia>
-			<DefaultPlayerColor>PLAYERCOLOR_LIGHT_BROWN</DefaultPlayerColor>
+			<DefaultPlayerColor>PLAYERCOLOR_PURPLE_IROQUOIS</DefaultPlayerColor>
 			<ArtDefineTag>ART_DEF_CIVILIZATION_IROQUOIS</ArtDefineTag>
 			<ArtStyleType>ARTSTYLE_SOUTH_AMERICA</ArtStyleType>
 			<UnitArtStyleType>UNIT_ARTSTYLE_SOUTH_AMERICAN</UnitArtStyleType>

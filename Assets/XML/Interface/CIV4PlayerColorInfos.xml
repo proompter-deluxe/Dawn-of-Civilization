@@ -241,10 +241,16 @@
 			<TextColorType>COLOR_PLAYER_MIDDLE_BLUE</TextColorType>
 		</PlayerColorInfo>
 		<PlayerColorInfo>
-			<Type>PLAYERCOLOR_LIGHT_BROWN</Type> <!-- Moors and Native America -->
+			<Type>PLAYERCOLOR_LIGHT_BROWN</Type> <!-- Moors -->
 			<ColorTypePrimary>COLOR_PLAYER_LIGHT_BROWN</ColorTypePrimary>
 			<ColorTypeSecondary>COLOR_PLAYER_DARK_YELLOW</ColorTypeSecondary>
 			<TextColorType>COLOR_PLAYER_BROWN_TEXT</TextColorType>
+		</PlayerColorInfo>
+		<PlayerColorInfo>
+			<Type>PLAYERCOLOR_PURPLE_IROQUOIS</Type> <!-- Iroquois -->
+			<ColorTypePrimary>COLOR_PLAYER_PURPLE_IROQUOIS</ColorTypePrimary>
+			<ColorTypeSecondary>COLOR_PLAYER_WHITE</ColorTypeSecondary>
+			<TextColorType>COLOR_PLAYER_PURPLE_IROQUOIS_TEXT</TextColorType>
 		</PlayerColorInfo>
 		<PlayerColorInfo>
 			<Type>PLAYERCOLOR_DARK_ORANGE</Type>

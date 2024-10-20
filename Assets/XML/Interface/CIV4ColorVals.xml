@@ -953,6 +953,20 @@
 			<fAlpha>1.00</fAlpha>
 		</ColorVal>
 		<ColorVal>
+			<Type>COLOR_PLAYER_PURPLE_IROQUOIS</Type>
+			<fRed>0.267</fRed>
+			<fGreen>0.186</fGreen>
+			<fBlue>0.547</fBlue>
+			<fAlpha>1.00</fAlpha>
+		</ColorVal>
+		<ColorVal>
+			<Type>COLOR_PLAYER_PURPLE_IROQUOIS_TEXT</Type>
+			<fRed>0.268</fRed>
+			<fGreen>0.187</fGreen>
+			<fBlue>0.545</fBlue>
+			<fAlpha>1.00</fAlpha>
+		</ColorVal>
+		<ColorVal>
 			<Type>COLOR_PLAYER_DARK_ORANGE</Type>
 			<fRed>0.74</fRed>
 			<fGreen>0.26</fGreen>
