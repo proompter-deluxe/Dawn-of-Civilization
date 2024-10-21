@@ -468,8 +468,16 @@
 					<BonusType>BONUS_CORN</BonusType>
 					<YieldChanges>
 						<iYield>0</iYield>
-						<iYield>0</iYield>
 						<iYield>1</iYield>
+						<iYield>1</iYield>
+					</YieldChanges>
+				</BonusYieldChange>
+				<BonusYieldChange>
+					<BonusType>BONUS_FUR</BonusType>
+					<YieldChanges>
+						<iYield>0</iYield>
+						<iYield>0</iYield>
+						<iYield>2</iYield>
 					</YieldChanges>
 				</BonusYieldChange>
 			</BonusYieldChanges>
