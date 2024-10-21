@@ -12208,6 +12208,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=27,y=57
+	BonusType=BONUS_FUR
 	FeatureType=FEATURE_FOREST, FeatureVariety=1
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
@@ -12224,6 +12225,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=27,y=60
+	BonusType=BONUS_FUR
 	FeatureType=FEATURE_FOREST, FeatureVariety=1
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
@@ -13139,7 +13141,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=29,y=62
-	BonusType=BONUS_ALUMINUM
+	BonusType=BONUS_GOLD
 	FeatureType=FEATURE_FOREST, FeatureVariety=2
 	TerrainType=TERRAIN_MOORLAND
 	PlotType=1
@@ -13576,7 +13578,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=30,y=58
-	BonusType=BONUS_SALT
+	BonusType=BONUS_FUR
 	FeatureType=FEATURE_FOREST, FeatureVariety=1
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
@@ -14029,6 +14031,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=31,y=57
+	BonusType=BONUS_SALT
 	FeatureType=FEATURE_FOREST, FeatureVariety=1
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
@@ -14066,7 +14069,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=31,y=63
-	BonusType=BONUS_IRON
 	FeatureType=FEATURE_FOREST, FeatureVariety=2
 	TerrainType=TERRAIN_MOORLAND
 	PlotType=1
@@ -15013,6 +15015,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=33,y=63
+	BonusType=BONUS_ALUMINUM
 	FeatureType=FEATURE_FOREST, FeatureVariety=2
 	TerrainType=TERRAIN_MOORLAND
 	PlotType=1
@@ -15453,13 +15456,13 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=34,y=57
-	BonusType=BONUS_CRAB
-	BonusVarietyType=BONUS_CRAB_SHRIMP
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
 BeginPlot
 	x=34,y=58
+	BonusType=BONUS_CRAB
+	BonusVarietyType=BONUS_CRAB_SHRIMP
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -15495,6 +15498,7 @@ BeginPlot
 	x=34,y=64
 	RiverNSDirection=2
 	isWOfRiver
+	BonusType=BONUS_IRON
 	FeatureType=FEATURE_FOREST, FeatureVariety=2
 	TerrainType=TERRAIN_MOORLAND
 	PlotType=2
@@ -18745,6 +18749,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=41,y=61
+	BonusType=BONUS_FISH
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot

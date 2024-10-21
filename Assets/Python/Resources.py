@@ -292,7 +292,11 @@ dRemovedResourcesDict = {
 	(92, 60)  : 1600, # Silk in the Volga Delta
 	(32, 42)  : 1650, # Gold in Hispaniola
 	(47, 24)  : 1650, # Dye (brazilwood) in Brazil
-	(53, 66)  : 1850, # Potato in Ireland
+	(35, 62)  : 1775, # Fur in Gaspé
+	(30, 58)  : 1775, # Fur in Iroquois lands
+	(27, 57)  : 1775, # Fur in Iroquois lands
+	(27, 60)  : 1775, # Fur in Iroquois lands
+	(53, 66)  : 1840, # Potato in Ireland
 }
 
 dFeaturesDict = {

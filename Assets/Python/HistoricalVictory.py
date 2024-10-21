@@ -723,7 +723,7 @@ dGoals = {
 		All(
 			AttitudeCount(AttitudeTypes.ATTITUDE_FRIENDLY, 1, civs=group(iCivGroupEurope).named(EUROPE)),
 			RazeCount(3),
-			by=1775,
+			by=1800,
 		),
 		PopulationCount(30, by=1865),
 	),
