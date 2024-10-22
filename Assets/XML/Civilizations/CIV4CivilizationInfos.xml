@@ -621,6 +621,7 @@
 			<bPlayable>1</bPlayable>
 			<bAIPlayable>1</bAIPlayable>
 			<Cities>
+				<City>Ur</City>
 				<City>Shuruppak</City>
 				<City>Sippar</City>
 				<City>Eridu</City>
@@ -2951,9 +2952,9 @@
 			<PaganReligion>PAGAN_RELIGION_VEDISM</PaganReligion>
 			<Impact>IMPACT_CRITICAL</Impact>
 			<Identifier>IND</Identifier>
-			<StartingYear>-1500</StartingYear>
+			<StartingYear>-600</StartingYear>
 			<LoadingTimes>
-				<LoadingTime>1</LoadingTime>
+				<LoadingTime>4</LoadingTime>
 				<LoadingTime>0</LoadingTime>
 				<LoadingTime>0</LoadingTime>
 			</LoadingTimes>

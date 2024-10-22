@@ -35,10 +35,10 @@ lBirthOrder = [
 	iNubia,
 	iGreece,
 	iAssyria,
-	iIndia,
 	iCarthage,
 	iPolynesia,
 	iPersia,
+	iIndia,
 	iCelts,
 	iMacedon,
 	iMaya,
@@ -216,7 +216,7 @@ lNeighbours = [
 	(iGreece, iByzantium),
 	(iGreece, iOttomans),
 	(iGreece, iItaly),
-	(iIndia, iPersia),
+	(iPersia, iIndia),
 	(iIndia, iDravidia),
 	(iIndia, iKushans),
 	(iIndia, iMalays),
@@ -460,10 +460,10 @@ iHittites : -1800,
 iNubia : -1650,
 iGreece : -1600,
 iAssyria : -1450,
-iIndia : -1500,
 iPhoenicia : -1100,
 iPolynesia : -1000,
 iPersia : -660,
+iIndia : -600,
 iCelts : -600,
 iMacedon: -475,
 iMaya : -400,
@@ -1008,7 +1008,7 @@ iLightEscort, iWork, iMissionary) = range(iNumUnitRoles)
 # Promotions
 iDesertAdaptation = 82
 iSteppeAdaptation = 83
-
+iMobility = 47
 
 iNumBonuses = 54
 (iAluminium, iAmber, iCamel, iCitrus, iCoal, iCopper, iDates, iHorse, iIron, iMarble,

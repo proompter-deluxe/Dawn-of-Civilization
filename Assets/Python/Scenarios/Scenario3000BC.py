@@ -6,15 +6,15 @@ lCivilizations = [
 	Civilization(
 		iEgypt,
 		lCivics=[iMonarchy, iRedistribution, iDeification],
-		techs=techs.of(iMining, iPottery, iAgriculture, iMythology)
+		techs=techs.of(iMining, iMasonry, iPottery, iAgriculture, iMythology)
 	),
 	Civilization(
 		iBabylonia,
-		techs=techs.of(iPottery, iPastoralism, iAgriculture, iMythology)
+		techs=techs.of(iPottery, iPastoralism, iAgriculture, iMythology, iMining)
 	),
 	Civilization(
 		iHarappa,
-		techs=techs.of(iTanning, iMining, iPottery, iAgriculture)
+		techs=techs.of(iMining, iPottery, iAgriculture, iPastoralism, iProperty)
 	),
 	Civilization(
 		iNative,

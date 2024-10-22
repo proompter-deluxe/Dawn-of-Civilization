@@ -182,18 +182,21 @@ class Civilization(object):
 				self.player.AI_doAdvancedStart()
 
 lCivilizations = [
+	# this doesn't do anything because it is set in Scenario3000BC
 	Civilization(
 		iEgypt,
 		lCivics=[iMonarchy, iRedistribution, iDeification],
-		techs=techs.of(iMining, iPottery, iAgriculture, iMythology)
+		techs=techs.of(iMining, iMasonry, iPottery, iAgriculture, iMythology)
 	),
+	# this doesn't do anything because it is set in Scenario3000BC
 	Civilization(
 		iBabylonia,
-		techs=techs.of(iPottery, iPastoralism, iAgriculture, iMythology)
+		techs=techs.of(iPottery, iPastoralism, iAgriculture, iMythology, iMining)
 	),
+	# this doesn't do anything because it is set in Scenario3000BC
 	Civilization(
 		iHarappa,
-		techs=techs.of(iTanning, iMining, iPottery, iAgriculture)
+		techs=techs.of(iMining, iPottery, iAgriculture, iPastoralism, iProperty)
 	),
 	Civilization(
 		iChina,
@@ -231,7 +234,7 @@ lCivilizations = [
 		iGold=80,
 		iStateReligion=iHinduism,
 		lCivics=[iMonarchy, iDeification],
-		techs=techs.column(2).including(iAlloys, iWriting).without(iSeafaring)
+		techs=techs.column(3).including(iBloomery, iPriesthood, iMathematics).without(iSeafaring, iShipbuilding)
 	),
 	Civilization(
 		iPhoenicia,
@@ -695,12 +698,12 @@ dStartingUnits = CivDict({
 		iWorkerSea: 1,
 	},
 	iIndia: {
-		iSettle: 1,
-		iWork: 2,
-		iDefend: 1,
-		iCounter: 1,
+		iSettle: 4,
+		iWork: 3,
+		iDefend: 4,
+		iCounter: 2,
 		iAttack: 1,
-		iHarass: 1,
+		iHarass: 3,
 	},
 	iPhoenicia: {
 		iSettle: 1,
@@ -1627,8 +1630,7 @@ dTechPreferences = {
 		iMasonry: 20,
 		
 		iAlloys: -50,
-		iDivination: -50,
-		iCeremony: -50,
+		iTanning: -10,
 	},
 	iAssyria : {
 		iMasonry: 40,

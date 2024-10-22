@@ -165,17 +165,17 @@ dGoals = {
 		All(
 			Wonders(iGreatSphinx, iPyramids),
 			CultureAmount(500),
-			by=-1200,
+			by=-900,
 		),
 		Control(
 			plots.region(rNubia).named(NUBIA),
 			plots.region(rLevant).named(LEVANT),
-			by=-600,
+			by=-500,
 		),
 		All(
 			Wonders(iGreatLibrary, iGreatLighthouse),
 			CultureAmount(5000),
-			by=-200,
+			by=-100,
 		),
 	),
 	iBabylonia: (
@@ -189,8 +189,8 @@ dGoals = {
 	),
 	iHarappa: (
 		TradeConnection(by=-1800),
-		BuildingCount((iReservoir, 3), (iGranary, 2), (iWeaver, 2), by=-1500),
-		PopulationCount(45, by=-800),
+		BuildingCount((iReservoir, 3), (iGranary, 2), (iWeaver, 2), by=-1000),
+		PopulationCount(40, by=-600),
 	),
 	iAssyria: (
 		All(
@@ -296,7 +296,7 @@ dGoals = {
 		
 	),
 	iIndia: (
-		BuildingCount((iHinduShrine, 1), (iBuddhistShrine, 1), at=-100),
+		BuildingCount((iHinduShrine, 1), (iBuddhistShrine, 1), at=100),
 		BuildingCount(religious_buildings(temple).named(TEMPLES), 25, by=700),
 		PopulationPercent(20, at=1200),
 	),

@@ -24,6 +24,7 @@ lExpandedFlipCivs = [
 
 lExpansionCivs = [
 	iPersia,
+	iIndia,
 	iMacedon,
 	iRome,
 	iKushans,
@@ -62,7 +63,6 @@ lInvasionCivs = [
 ]
 
 dClearedForBirth = {
-	iIndia: iHarappa,
 	iByzantium: iMacedon,
 	iItaly: iRome,
 	iAztecs: iToltecs,
@@ -72,7 +72,6 @@ dClearedForBirth = {
 }
 
 lAlwaysClear = [
-	iHarappa,
 	iToltecs,
 ]
 
