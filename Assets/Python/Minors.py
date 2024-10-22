@@ -548,7 +548,7 @@ barbarians = [
 	Barbarians(-100, 400, {iHorseArcher: 2}, ((79, 58), (88, 63)), 8, NOMADS, target_area=((65, 50), (84, 58)), adjective="TXT_KEY_ADJECTIVE_SARMATIAN"),
 	Barbarians(-50, 700, {iWarGalley: 1}, ((54, 42), (69, 50)), 18, PIRATES, adjective="TXT_KEY_ADJECTIVE_BARBARY"),
 	Barbarians(0, 200, {iAxeman: 2}, ((101, 37), (112, 45)), 8, MINORS, adjective="TXT_KEY_ADJECTIVE_HINDI"),
-	Barbarians(0, 800, {iSwordsman: 2}, ((116, 37), (119, 43)), 10, NATIVES, target_area=((64, 56), (72, 65)), adjective="TXT_KEY_ADJECTIVE_MON"),
+	Barbarians(0, 800, {iPendekar: 2}, ((116, 37), (119, 43)), 10, NATIVES, target_area=((64, 56), (72, 65)), adjective="TXT_KEY_ADJECTIVE_MON"),
 	Barbarians(50, 250, {iHorseArcher: 1, iAxeman: 1}, ((117, 53), (119, 56)), 6, INVADERS, target_area=((118, 52), (121, 54)), adjective="TXT_KEY_ADJECTIVE_QIANG"),
 	Barbarians(50, 100, {iHorseArcher: 3}, ((125, 60), (131, 63)), 6, NOMADS, target_area=((123, 55), (129, 61)), adjective="TXT_KEY_ADJECTIVE_XIANBEI", promotions=(iDesertAdaptation, iSteppeAdaptation)),
 	Barbarians(100, 500, {iHorseArcher: 3}, ((113, 55), (131, 63)), 7, NOMADS, target_area=((117, 46), (129, 61)), adjective="TXT_KEY_ADJECTIVE_XIANBEI", promotions=(iDesertAdaptation, iSteppeAdaptation)),
