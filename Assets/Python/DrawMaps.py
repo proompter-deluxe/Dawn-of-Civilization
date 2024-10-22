@@ -8,8 +8,8 @@ from pathlib import Path
 iWorldX = 150
 iWorldY = 80
 
-iNumCivs = 71
-(iAmerica, iArabia, iArgentina, iAssyria, iAztecs, iBabylonia, iBrazil, iBulgaria, iBurma, iByzantium, iCanada, 
+iNumCivs = 72
+(iAmerica, iArabia, iArgentina, iArmenia, iAssyria, iAztecs, iBabylonia, iBrazil, iBulgaria, iBurma, iByzantium, iCanada, 
 iCarthage, iCelts, iChina, iChinaS, iColombia, iDravidia, iEgypt, iEngland, iEthiopia, iFrance, iGermany, 
 iGreece, iHarappa, iHittites, iHolyRome, iInca, iIndia, iIran, iIroquois, iItaly, iJapan, iJava, 
 iKhmer, iCongo, iKorea, iKushans, iMacedon, iMalays, iMali, iMamluks, iMaya, iMexico, iMongols, iMoors, 
@@ -88,6 +88,7 @@ dCivNames = {
 	iMamluks: "Mamluks",
 	iMacedon: "Macedonia",
 	iIroquois: "Iroquois",
+	iArmenia: "Armenia",
 }
 
 dReligionNames = {
@@ -172,6 +173,7 @@ iBrazil :		((42, 19),	(47, 25)),
 iCanada :		((26, 59),	(37, 62)),
 iMacedon:       ((73, 53),  (79, 55)),
 iIroquois:      ((27, 58),  (30, 59)),
+iArmenia:       ((88, 52),  (90, 55)),
 }
 
 dCoreAreaExceptions = {
@@ -268,7 +270,7 @@ tSpreadFactors = (
 # Zoroastrianism
 {
 	iCore :		[rPersia],
-	iPeriphery : 	[rKhorasan, rMesopotamia, rTransoxiana, rLevant],
+	iPeriphery : 	[rKhorasan, rMesopotamia, rTransoxiana, rLevant, rCaucasus, rAnatolia],
 	iMinority : 	[rSindh, rRajputana],
 },
 )

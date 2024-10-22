@@ -8,7 +8,7 @@ from Events import handler
 
 ### CONSTANTS ###
 
-iNumLanguages = 45
+iNumLanguages = 46
 (iLangAmerican, iLangArabic, iLangBabylonian, iLangBurmese, iLangByzantine, 
 iLangCeltic, iLangChinese, iLangCongolese, iLangDutch, iLangEgyptian, 
 iLangEgyptianArabic, iLangEnglish, iLangEthiopian, iLangFrench, iLangGerman, 
@@ -17,7 +17,7 @@ iLangJapanese, iLangKhmer, iLangKorean, iLangLatin, iLangMande,
 iLangMayan, iLangMongolian, iLangNahuatl, iLangNorse, iLangNubian, 
 iLangPersian, iLangPhoenician, iLangPolish, iLangPolynesian, iLangPortuguese, 
 iLangQuechua, iLangRussian, iLangSpanish, iLangSwedish, iLangThai, 
-iLangTibetan, iLangTurkish, iLangVietnamese, iLangFarsi, iLangRuthenian) = range(iNumLanguages)
+iLangTibetan, iLangTurkish, iLangVietnamese, iLangFarsi, iLangRuthenian, iLangArmenian) = range(iNumLanguages)
 
 dLanguages = CivDict({
 	iEgypt:	[iLangEgyptian],
@@ -85,6 +85,7 @@ dLanguages = CivDict({
 	iMamluks: [iLangEgyptianArabic, iLangArabic],
 	iMacedon: [iLangGreek],
 	iIroquois: [iLangNahuatl],
+	iArmenia: [iLangArmenian, iLangByzantine, iLangRussian],
 
 }, [])
 
@@ -140,7 +141,8 @@ dLanguageNames = {
 	iLangTurkish: "Turkish",
 	iLangVietnamese: "Vietnamese",
 	iLangFarsi: "Farsi",
-	iLangRuthenian: "Ruthenian"
+	iLangRuthenian: "Ruthenian",
+	iLangArmenian: "Armenian",
 }
 
 dTranslations = dict((iLanguage, FileDict("Translations/%s.csv" % dLanguageNames[iLanguage])) for iLanguage in range(iNumLanguages))

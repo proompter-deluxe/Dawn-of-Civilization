@@ -394,6 +394,14 @@
 		<Spanish>The [COLOR_BUILDING_TEXT]Dun[COLOR_REVERT], the Celtic replacement for [COLOR_BUILDING_TEXT]Walls[COLOR_REVERT], gives all eligible units built in this city the [COLOR_HIGHLIGHT_TEXT]Guerrilla I[COLOR_REVERT] promotion.</Spanish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_BUILDING_ARMENIAN_MOUNTAIN_WATCHES</Tag>
+		<English>Mountain Watches</English>
+		<French>Mountain Watches</French>
+		<German>Mountain Watches</German>
+		<Italian>Mountain Watches</Italian>
+		<Spanish>Mountain Watches</Spanish>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ENGLISH_EXCHEQUER</Tag>
 		<English>Exchequer</English>
 		<French>Exchequer</French>

@@ -55,7 +55,7 @@
 			<TextColorType>COLOR_PLAYER_DARK_PINK_TEXT</TextColorType>
 		</PlayerColorInfo>
 		<PlayerColorInfo>
-			<Type>PLAYERCOLOR_DARK_PURPLE</Type> <!-- Byzantium & Macedon -->
+			<Type>PLAYERCOLOR_DARK_PURPLE</Type> <!-- Byzantium -->
 			<ColorTypePrimary>COLOR_PLAYER_DARK_PURPLE</ColorTypePrimary>
 			<ColorTypeSecondary>COLOR_PLAYER_YELLOW</ColorTypeSecondary>
 			<TextColorType>COLOR_PLAYER_DARK_PURPLE_TEXT</TextColorType>
@@ -545,6 +545,12 @@
 			<ColorTypePrimary>COLOR_PLAYER_APPLE_TEXT</ColorTypePrimary>
 			<ColorTypeSecondary>COLOR_PLAYER_BLACK</ColorTypeSecondary>
 			<TextColorType>COLOR_PLAYER_APPLE_TEXT</TextColorType>
+		</PlayerColorInfo>
+		<PlayerColorInfo>
+			<Type>PLAYERCOLOR_ARMENIA_RED</Type> <!-- Armenia -->
+			<ColorTypePrimary>COLOR_PLAYER_BRIGHT_RED</ColorTypePrimary>
+			<ColorTypeSecondary>COLOR_PLAYER_GOLDENROD</ColorTypeSecondary>
+			<TextColorType>COLOR_PLAYER_BRIGHT_RED_TEXT</TextColorType>
 		</PlayerColorInfo>
 	</PlayerColorInfos>
 </Civ4PlayerColorInfos>

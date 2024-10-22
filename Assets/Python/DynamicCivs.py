@@ -63,6 +63,7 @@ dSpecificVassalTitles = deepdict({
 		iEgypt : "TXT_KEY_CIV_MACEDON_EGYPT",
 		iPersia : "TXT_KEY_CIV_MACEDON_PERSIA",
 		iRome : "TXT_KEY_CIV_GREEK_ROME",
+		iGreece: "TXT_KEY_CIV_MACEDON_GREECE",
 	},
 	iGreece : {
 		iRome : "TXT_KEY_CIV_GREEK_ROME",
@@ -571,6 +572,7 @@ dStartingLeaders = [
 	iMamluks: iSaladin,
 	iMacedon: iAlexanderTheGreat,
 	iIroquois: iHiawatha,
+	iArmenia: iTigranes,
 },
 # 600 AD
 {
@@ -2271,6 +2273,11 @@ def leader(iPlayer):
 	elif iCiv == iRome:
 		if bEmpire or not bCityStates: return iAugustus
 		
+	elif iCiv == iArmenia:
+		if iEra >= iIndustrial: return iAndranik
+
+		if iEra >= iMedieval or scenario() >= i600AD: return iAshot
+
 	elif iCiv == iKorea:		
 		if iEra >= iRenaissance: return iSejong
 		

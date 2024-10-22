@@ -230,6 +230,22 @@
 		<Spanish>Eyalet of Syria</Spanish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_CIV_OTTOMAN_ARMENIA</Tag>
+		<English>Armenian Millet</English>
+		<French>
+			<Text>Millet arm&#233;nien</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>Armenian Millet</German>
+		<French>
+			<Text>Millet armeno</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<Spanish>Armenian Millet</Spanish>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_CIV_OTTOMAN_ETHIOPIA</Tag>
 		<English>Eyalet of Habes</English>
 		<French>

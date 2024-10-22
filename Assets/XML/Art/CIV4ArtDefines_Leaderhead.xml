@@ -1158,5 +1158,29 @@
 			<NoShaderNIF>Art/Leaderheads/Simeon_I/putin.nif</NoShaderNIF>
 			<BackgroundKFM>Art/Leaderheads/Simeon_I/putin_bg.kfm</BackgroundKFM>
 		</LeaderheadArtInfo>
+		<LeaderheadArtInfo>
+			<Type>ART_DEF_LEADER_TIGRANES</Type>
+			<Button>Art/Leaderheads/Tigranes/Tigranes.dds</Button>
+			<NIF>Art/Leaderheads/Tigranes/John II.nif</NIF>
+			<KFM>Art/Leaderheads/Tigranes/John II.kfm</KFM>
+			<NoShaderNIF>Art/Leaderheads/Tigranes/JohnII_BG.nif</NoShaderNIF>
+			<BackgroundKFM>Art/Leaderheads/Tigranes/JohnII_BG.kfm</BackgroundKFM>
+		</LeaderheadArtInfo>
+		<LeaderheadArtInfo>
+			<Type>ART_DEF_LEADER_ASHOT</Type>
+			<Button>,Art/Interface/Buttons/Leaderheads/Ashot.dds,Art/Leaderheads/Ashot/mem_leaders_atlas.dds,5,1</Button>
+			<NIF>Art/Leaderheads/Ashot/elcid.nif</NIF>
+			<KFM>Art/Leaderheads/Ashot/alexander.kfm</KFM>
+			<NoShaderNIF>Art/Leaderheads/Ashot/elcid.nif</NoShaderNIF>
+			<BackgroundKFM>Art/Leaderheads/Ashot/Boudica_BG.kfm</BackgroundKFM>
+		</LeaderheadArtInfo>
+		<LeaderheadArtInfo>
+			<Type>ART_DEF_LEADER_ANDRANIK</Type>
+			<Button>Art/Leaderheads/Andranik/Andranik.dds</Button>
+			<NIF>Art/Leaderheads/Andranik/josef_stalin.nif</NIF>
+			<KFM>Art/Leaderheads/Andranik/josef_stalin.kfm</KFM>
+			<NoShaderNIF>Art/Leaderheads/Andranik/josef_stalin_noshader.nif</NoShaderNIF>
+			<BackgroundKFM>Art/Leaderheads/Andranik/josef_stalin_BG.kfm</BackgroundKFM>
+		</LeaderheadArtInfo>
 	</LeaderheadArtInfos>
 </Civ4ArtDefines>

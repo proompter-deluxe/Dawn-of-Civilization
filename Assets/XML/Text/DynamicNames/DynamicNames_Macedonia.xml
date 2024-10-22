@@ -109,4 +109,16 @@
 		<Italian>Greco-Bactrian Kingdom</Italian>
 		<Spanish>Greco-Bactrian Kingdom</Spanish>
 	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_MACEDON_GREECE</Tag>
+		<English>League of Corinth</English>
+		<French>
+			<Text>Ligue de Corinthe</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>League of Corinth</German>
+		<Italian>League of Corinth</Italian>
+		<Spanish>League of Corinth</Spanish>
+	</TEXT>
 </Civ4GameText>

@@ -1171,6 +1171,7 @@ enum CivilizationTypes		// Exposed to Python
 	AMERICA,
 	ARABIA,
 	ARGENTINA,
+	ARMENIA,
 	ASSYRIA,
 	AZTECS,
 	BABYLONIA,

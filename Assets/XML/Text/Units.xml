@@ -1730,6 +1730,18 @@
 		<Spanish>[COLOR_UNIT_TEXT]Swordsmen[COLOR_REVERT] have a combat bonus when attacking cities.</Spanish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_UNIT_VISHAP</Tag>
+		<English>Vishap</English>
+		<French>
+			<Text>Vishap</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>Vishap</German>
+		<Italian>Vishap</Italian>
+		<Spanish>Vishap</Spanish>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUMERIAN_VULTURE</Tag>
 		<English>Vulture</English>
 		<French>

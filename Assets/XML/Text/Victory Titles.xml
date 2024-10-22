@@ -276,6 +276,31 @@
 	</TEXT>
 
 	<TEXT>
+		<Tag>TXT_KEY_VICTORY_TITLE_ARM1</Tag>
+		<English>Hellenistic Empire</English>
+		<French>Hellenistic Empire</French>
+		<German>Hellenistic Empire</German>
+		<Italian>Hellenistic Empire</Italian>
+		<Spanish>Hellenistic Empire</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_VICTORY_TITLE_ARM2</Tag>
+		<English>Flourishing Between Worlds</English>
+		<French>Flourishing Between Worlds</French>
+		<German>Flourishing Between Worlds</German>
+		<Italian>Flourishing Between Worlds</Italian>
+		<Spanish>Flourishing Between Worlds</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_VICTORY_TITLE_ARM3</Tag>
+		<English>Persistent Brotherhood</English>
+		<French>Persistent Brotherhood</French>
+		<German>Persistent Brotherhood</German>
+		<Italian>Persistent Brotherhood</Italian>
+		<Spanish>Persistent Brotherhood</Spanish>
+	</TEXT>
+
+	<TEXT>
 		<Tag>TXT_KEY_VICTORY_TITLE_MAM1</Tag>
 		<English>Expelling the Crusaders</English>
 		<French>Expelling the Crusaders</French>

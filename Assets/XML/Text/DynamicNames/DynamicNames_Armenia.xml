@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--  -->
+<Civ4GameText xmlns="http://www.firaxis.com">
+	<TEXT>
+		<Tag>TXT_KEY_CIV_ARMENIA_DESC</Tag>
+		<English>The Armenians</English>
+		<French>
+			<Text>Les Arm&#233;niens</Text>
+			<Gender>Male</Gender>
+			<Plural>1</Plural>
+		</French>
+		<German>The Armenians</German>
+		<Italian>The Armenians</Italian>
+		<Spanish>The Armenians</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_ARMENIA_PEOPLES</Tag>
+		<English>Armenian Peoples</English>
+		<French>
+			<Text>Peuplades arm&#233;niennes</Text>
+			<Gender>Female</Gender>
+			<Plural>1</Plural>
+		</French>
+		<German>Armenian Peoples</German>
+		<Italian>Armenian Peoples</Italian>
+		<Spanish>Armenian Peoples</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_ARMENIA_ADJECTIVE</Tag>
+		<English>Armenian</English>
+		<French>
+			<Text>arm&#233;nien;arm&#233;nienne;arm&#233;niens;arm&#233;niennes</Text>
+			<Gender>Male:Female:Male:Female</Gender>
+			<Plural>0:0:1:1</Plural>
+		</French>
+		<German>Armenian</German>
+		<Italian>Armenian</Italian>
+		<Spanish>Armenian</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_ARMENIA_SHORT_DESC</Tag>
+		<English>Armenia</English>
+		<French>
+			<Text>Arm&#233;nie</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>Armenia</German>
+		<Italian>Armenia</Italian>
+		<Spanish>Armenia</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_ARMENIA_DEFAULT</Tag>
+		<English>Kingdom of %s1</English>
+		<French>
+			<Text>Royaume d'%s1</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>K&#246;nigreich %s1:K&#246;nigreich %s1:K&#246;nigreich %s1</Text>
+			<Gender>Neuter:Neuter:Neuter</Gender>
+			<Plural>0:0:0</Plural>
+		</German>
+		<Italian>
+			<Text>Regno del %s1</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Reino de %s1</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+</Civ4GameText>

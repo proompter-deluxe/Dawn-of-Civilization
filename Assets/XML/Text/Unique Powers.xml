@@ -274,6 +274,22 @@
 		<Spanish>Free disengage promotion for units</Spanish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_UP_ARM_TITLE</Tag>
+		<English>The Power of the Rugged Homeland:</English>
+		<French>The Power of the Rugged Homeland:</French>
+		<German>The Power of the Rugged Homeland:</German>
+		<Italian>The Power of the Rugged Homeland:</Italian>
+		<Spanish>The Power of the Rugged Homeland:</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UP_ARM</Tag>
+		<English>Hostile units take damage every turn in your core area</English>
+		<French>Hostile units take damage every turn in your core area</French>
+		<German>Hostile units take damage every turn in your core area</German>
+		<Italian>Hostile units take damage every turn in your core area</Italian>
+		<Spanish>Hostile units take damage every turn in your core area</Spanish>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_UP_COL_TITLE</Tag>
 		<English>The Power of the Liberator:</English>
 		<French>Le pouvoir du lib&#233;rateur :</French>

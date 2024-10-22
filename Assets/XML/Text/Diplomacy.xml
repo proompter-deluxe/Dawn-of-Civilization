@@ -586,6 +586,33 @@
 		<Spanish>Os damos una cordial bienvenida ante nuestra presencia, oh, líder de la poderosa tierra de [CT_CIV_SHORT].</Spanish>
 	</TEXT>
 	<TEXT>
+		<Tag>AI_DIPLO_FIRST_CONTACT_LEADER_TIGRANES_1</Tag>
+		<English>Welcome [CT_NAME]. I, [OUR_NAME] greet you.  Shall we live in peace or shall the warlike peoples of the [OUR_CIV_SHORT] pillage the [CT_EMPIRE]?</English>
+		<French>Welcome [CT_NAME] I the god like [OUR_NAME] greet you.  Shall we live in peace or shall the warlike peoples of the [OUR_CIV_SHORT] pillage the [CT_EMPIRE]</French>
+		<German>Welcome [CT_NAME] I the god like [OUR_NAME] greet you.  Shall we live in peace or shall the warlike peoples of the [OUR_CIV_SHORT] pillage the [CT_EMPIRE]</German>
+		<Italian>Welcome [CT_NAME] I the god like [OUR_NAME] greet you.  Shall we live in peace or shall the warlike peoples of the [OUR_CIV_SHORT] pillage the [CT_EMPIRE]</Italian>
+		<Spanish>Welcome [CT_NAME] I the god like [OUR_NAME] greet you.  Shall we live in peace or shall the warlike peoples of the [OUR_CIV_SHORT] pillage the [CT_EMPIRE]</Spanish>
+		<Russian>Welcome [CT_NAME] I the god like [OUR_NAME] greet you.  Shall we live in peace or shall the warlike peoples of the [OUR_CIV_SHORT] pillage the [CT_EMPIRE]</Russian>
+		<Japanese>Welcome [CT_NAME] I the god like [OUR_NAME] greet you.  Shall we live in peace or shall the warlike peoples of the [OUR_CIV_SHORT] pillage the [CT_EMPIRE]</Japanese>
+		<Chinese>Welcome [CT_NAME] I the god like [OUR_NAME] greet you.  Shall we live in peace or shall the warlike peoples of the [OUR_CIV_SHORT] pillage the [CT_EMPIRE]</Chinese>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_FIRST_CONTACT_LEADER_ASHOT_1</Tag>
+		<English>Welcome to our mountainous little kingdom, [CT_NAME]! I am king [OUR_NAME]. Now, go away!</English>
+		<French>Welcome to our mountainous little kingdom, [CT_NAME]! I am king [OUR_NAME]. Now, go away!</French>
+		<German>Welcome to our mountainous little kingdom, [CT_NAME]! I am king [OUR_NAME]. Now, go away!</German>
+		<Italian>Welcome to our mountainous little kingdom, [CT_NAME]! I am king [OUR_NAME]. Now, go away!</Italian>
+		<Spanish>Welcome to our mountainous little kingdom, [CT_NAME]! I am king [OUR_NAME]. Now, go away!</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_FIRST_CONTACT_LEADER_ANDRANIK_1</Tag>
+		<English>Greetings! I am [OUR_NAME] of the [OUR_EMPIRE]. I hope that our two great peoples can live together in peace, but if we cannot, I will fight you even if you have a vastly superior army!</English>
+		<French>Greetings! I am [OUR_NAME] of the [OUR_EMPIRE]. I hope that our two great peoples can live together in peace, but if we cannot, I will fight you even if you have a vastly superior army!</French>
+		<German>Greetings! I am [OUR_NAME] of the [OUR_EMPIRE]. I hope that our two great peoples can live together in peace, but if we cannot, I will fight you even if you have a vastly superior army!</German>
+		<Italian>Greetings! I am [OUR_NAME] of the [OUR_EMPIRE]. I hope that our two great peoples can live together in peace, but if we cannot, I will fight you even if you have a vastly superior army!</Italian>
+		<Spanish>Greetings! I am [OUR_NAME] of the [OUR_EMPIRE]. I hope that our two great peoples can live together in peace, but if we cannot, I will fight you even if you have a vastly superior army!</Spanish>
+	</TEXT>
+	<TEXT>
 		<Tag>AI_DIPLO_FIRST_CONTACT_LEADER_</Tag>
 		<English></English>
 		<French></French>

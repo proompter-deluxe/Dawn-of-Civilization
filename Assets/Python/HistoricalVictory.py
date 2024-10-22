@@ -718,8 +718,20 @@ dGoals = {
 		RazeCount(7),
 		LandPercent(12, by=1500),
 	),
-	iIroquois : (
-		EnterEraBefore(iIndustrial, iGlobal),
+	iArmenia: (
+		RouteConnection([iRouteRoad], capital().named(CAPITAL), plots.regions(rLevant, rAnatolia).adjacent_region(rMediterraneanSea).named(MEDITERRANEAN), at=-50),
+		All(
+			CultureAmount(500, by=-50),
+			CultureAmount(2000, by=900),
+			GoldenAges(1, by=900),
+		),
+		All(
+			AttitudeCount(AttitudeTypes.ATTITUDE_FRIENDLY, 3, iStateReligion=iOrthodoxy),
+			at=1919,
+		),
+	),
+	iIroquois: (
+		EnterEraBefore(iIndustrial, iDigital),
 		All(
 			AttitudeCount(AttitudeTypes.ATTITUDE_FRIENDLY, 1, civs=group(iCivGroupEurope).named(EUROPE)),
 			RazeCount(3),

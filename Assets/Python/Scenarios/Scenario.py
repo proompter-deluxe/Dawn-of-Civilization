@@ -138,6 +138,10 @@ LEADER_DATES = {
 	iVargas: 1930,
 	iMacDonald: 1870,
 	iTrudeau: 1970,
+	iHiawatha: 1450,
+	iTigranes: -95,
+	iAshot: 862,
+	iAndranik: 1914,
 }
 
 RELIGION_FOUNDING_DATES = {

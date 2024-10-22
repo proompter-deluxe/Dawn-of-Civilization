@@ -1138,6 +1138,41 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<BuildingClass>BUILDINGCLASS_WALLS</BuildingClass>
+			<Type>BUILDING_ARMENIAN_MOUNTAIN_WATCHES</Type>
+			<Description>TXT_KEY_BUILDING_ARMENIAN_MOUNTAIN_WATCHES</Description>
+			<Civilopedia>TXT_KEY_BUILDING_ARMENIAN_MOUNTAIN_WATCHES_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_ARMENIAN_MOUNTAIN_WATCHES_STRATEGY</Strategy>
+			<Advisor>ADVISOR_MILITARY</Advisor>
+			<ArtDefineTag>ART_DEF_BUILDING_ARMENIAN_MOUNTAIN_WATCHES</ArtDefineTag>
+			<ObsoleteTech>TECH_BALLISTICS</ObsoleteTech>
+			<PrereqTech>TECH_CONSTRUCTION</PrereqTech>
+			<FreePromotion>PROMOTION_MOBILITY</FreePromotion>
+			<bCenterInCity>1</bCenterInCity>
+			<iCost>50</iCost>
+			<iConquestProb>100</iConquestProb>
+			<iAdvancedStartCost>100</iAdvancedStartCost>
+			<iMinAreaSize>-1</iMinAreaSize>
+			<iDefense>50</iDefense>
+			<iBombardDefense>50</iBombardDefense>
+			<iAsset>1</iAsset>
+			<iPower>2</iPower>
+			<fVisibilityPriority>1.0</fVisibilityPriority>
+			<ConstructSound>AS2D_BUILD_WALLS</ConstructSound>
+			<BonusProductionModifiers>
+				<BonusProductionModifier>
+					<BonusType>BONUS_STONE</BonusType>
+					<iProductonModifier>100</iProductonModifier>
+				</BonusProductionModifier>
+			</BonusProductionModifiers>
+			<Flavors>
+				<Flavor>
+					<FlavorType>FLAVOR_MILITARY</FlavorType>
+					<iFlavor>10</iFlavor>
+				</Flavor>
+			</Flavors>
+		</BuildingInfo>
+		<BuildingInfo>
+			<BuildingClass>BUILDINGCLASS_WALLS</BuildingClass>
 			<Type>BUILDING_CELTIC_DUN</Type>
 			<Description>TXT_KEY_BUILDING_CELTIC_DUN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CELTIC_DUN_PEDIA</Civilopedia>

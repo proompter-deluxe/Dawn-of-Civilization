@@ -273,6 +273,13 @@ lCivilizations = [
 		techs=techs.column(4).including(iGeneralship, iCurrency).without(iRiding, iShipbuilding, iNavigation)
 	),
 	Civilization(
+		iArmenia,
+		iGold=100,
+		iAdvancedStartPoints=60,
+		lCivics=[iMonarchy, iRedistribution, iSlavery],
+		techs=techs.column(4).including(iCurrency, iGeneralship).without(iNavigation)
+	),
+	Civilization(
 		iMaya,
 		iGold=100,
 		lCivics=[iDespotism, iSlavery],
@@ -572,7 +579,7 @@ lCivilizations = [
 	Civilization(
 		iIroquois,
 		iGold=20,
-		techs=techs.of(iTanning, iPottery, iAgriculture)
+		techs=techs.of(iTanning, iPottery, iAgriculture, iMythology)
 	),
 	Civilization(
 		iIran,
@@ -740,6 +747,14 @@ dStartingUnits = CivDict({
 		iSettleSea: 2,
 		iFerry: 1,
 		iWorkerSea: 1,
+	},
+	iArmenia : {
+		iSettle: 1,
+		iWork: 1,
+		iDefend: 3,
+		iAttack: 1,
+		iHarass: 1,
+		iCounter: 1,
 	},
 	iMaya: {
 		iSettle: 1,
@@ -1081,8 +1096,10 @@ dStartingUnits = CivDict({
 		iExplore: 1,
 	},
 	iIroquois: {
+		iExplore: 1,
 		iSettle: 1,
-		iWork: 1,
+		iWork: 2,
+		iBase: 1,
 		iDefend: 2,
 	},
 	iIran: {

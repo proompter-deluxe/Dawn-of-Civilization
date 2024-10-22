@@ -1318,6 +1318,46 @@
 		<Spanish>Hiawatha</Spanish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_LEADER_TIGRANES</Tag>
+		<English>Tigranes II</English>
+		<French>
+			<Text>Tigranes II</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Tigranes II</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Tigranes II</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Tigranes II</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_LEADER_ASHOT</Tag>
+		<English>Ashot I</English>
+		<French>Ashot I</French>
+		<German>Ashot I</German>
+		<Italian>Ashot I</Italian>
+		<Spanish>Ashot I</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_LEADER_ANDRANIK</Tag>
+		<English>Andranik</English>
+		<French>Andranik</French>
+		<German>Andranik</German>
+		<Italian>Andranik</Italian>
+		<Spanish>Andranik</Spanish>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_LEADER_</Tag>
 		<English></English>
 		<French></French>

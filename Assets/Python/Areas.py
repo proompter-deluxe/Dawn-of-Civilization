@@ -71,6 +71,7 @@ iBulgaria:      (77, 56), # Tarnovo
 iMamluks :	    (79, 43), # Cairo
 iMacedon:       (75, 54), # Pella
 iIroquois:      (30, 59), # "Mohawk"
+iArmenia:       (89, 53), # Dvin
 })
 
 dPeriodCapitals = {
@@ -267,6 +268,7 @@ iCanada :		((26, 59),	(37, 62)),
 iBulgaria:      ((73, 55),  (78, 58)),
 iMacedon:       ((73, 53),  (79, 55)),
 iIroquois:      ((27, 58),  (30, 59)),
+iArmenia:       ((88, 52),  (90, 55)),
 })
 
 dCoreAreaExceptions = CivDict({
