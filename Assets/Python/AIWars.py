@@ -423,7 +423,7 @@ def spawnConquerors(iPlayer, iPreferredTarget, tTL, tBR, iNumTargets, iWarPlan =
 	
 	iExtra = 0
 	if iEra >= iMedieval or iCiv == iArabia:
-		iExtra += 1
+		iExtra = 1
 
 	tPlotLast = None
 	for city in targetCities:	
@@ -457,22 +457,25 @@ def spawnConquerors(iPlayer, iPreferredTarget, tTL, tBR, iNumTargets, iWarPlan =
 		elif iCiv in [iSpain, iEngland, iHolyRome, iFrance, iItaly]:
 			dConquestUnits = {
 				iCityAttack: 1 + iExtra,
-				iCitySiege: 2,
+				iCitySiege: 2 + iExtra,
 				iDefend: 1,
 				iShockCity: min(iExtra * 2, 2),
 				iCounter: 1,
 			}
-			createRoleUnits(iPlayer, tPlot, dConquestUnits.items())
+			units = createRoleUnits(iPlayer, tPlot, dConquestUnits.items())
+			units.promotion(infos.type("PROMOTION_CITY_RAIDER1"))
 		else:
 			dConquestUnits = {
 				iCityAttack: 2 + iExtra,
-				iCitySiege: 2 + iExtra,
+				iCitySiege: 2 + 2 * iExtra,
 				iDefend: 1,
 			}
-			createRoleUnits(iPlayer, tPlot, dConquestUnits.items())
+			units = createRoleUnits(iPlayer, tPlot, dConquestUnits.items())
+			units.promotion(infos.type("PROMOTION_CITY_RAIDER1"))
 	
 			if iCiv in [iTurks, iMongols]:
 				createRoleUnit(iPlayer, tPlot, iShockCity, 2)
+				createRoleUnit(iPlayer, tPlot, iHarass, 2)
 
 	# if human, select to orient player
 	if pPlayer.isHuman():
