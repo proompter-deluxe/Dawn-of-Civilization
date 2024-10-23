@@ -88,7 +88,7 @@ def armenianUniquePower():
 				for i in range(pCurrentPlot.getNumUnits()):
 					unit = pCurrentPlot.getUnit(i)
 					if (team(iArmenia).isAtWar(unit.getTeam())):
-						unit.setDamage(unit.getDamage()+8, iArmenia)
+						unit.setDamage(unit.getDamage()+5, iArmenia)
 
 
 @handler("BeginGameTurn")
