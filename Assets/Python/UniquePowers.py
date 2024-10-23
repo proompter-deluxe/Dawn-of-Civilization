@@ -84,7 +84,7 @@ def armenianUniquePower():
 	for x in range(tBLx, tTRx):
 		for y in range(tBLy, tTRy):
 			pCurrentPlot = plot(x, y)
-			if (civ(pCurrentPlot.getOwner()) == iArmenia):
+			if (pCurrentPlot.getOwner() != -1 and civ(pCurrentPlot.getOwner()) == iArmenia):
 				for i in range(pCurrentPlot.getNumUnits()):
 					unit = pCurrentPlot.getUnit(i)
 					if (team(iArmenia).isAtWar(unit.getTeam())):
