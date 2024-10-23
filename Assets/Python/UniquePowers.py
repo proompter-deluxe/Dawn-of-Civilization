@@ -77,7 +77,7 @@ def mughalUP(city, iBuilding):
 # derived from vanilla RFC's Russia UP
 @handler("BeginGameTurn")
 def armenianUniquePower():
-	if not player(iArmenia).isAlive():
+	if autoplay() or not player(iArmenia).isAlive():
 		return
 
 	(tBLx, tBLy), (tTRx, tTRy) = dCoreArea[iArmenia]
