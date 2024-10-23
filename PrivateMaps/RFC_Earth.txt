@@ -42494,8 +42494,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=94,y=48
-	BonusType=BONUS_HORSE
-	TerrainType=TERRAIN_PLAINS
+	TerrainType=TERRAIN_SEMIDESERT
 	PlotType=2
 EndPlot
 BeginPlot
@@ -42936,7 +42935,8 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=95,y=47
-	TerrainType=TERRAIN_SEMIDESERT
+	BonusType=BONUS_HORSE
+	TerrainType=TERRAIN_PLAINS
 	PlotType=2
 EndPlot
 BeginPlot

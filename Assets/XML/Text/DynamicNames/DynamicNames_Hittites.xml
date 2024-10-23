@@ -35,18 +35,18 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIV_HITTITES_DEFAULT</Tag>
-		<English>%s2 Empire</English>
-		<French>%s2 Empire</French>
-		<German>%s2 Empire</German>
-		<Italian>%s2 Empire</Italian>
-		<Spanish>%s2 Empire</Spanish>
+		<English>%s2 Kingdom</English>
+		<French>%s2 Kingdom</French>
+		<German>%s2 Kingdom</German>
+		<Italian>%s2 Kingdom</Italian>
+		<Spanish>%s2 Kingdom</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CIV_HITTITES_PHRYGIAN_ADJECTIVE</Tag>
-		<English>Phrygian</English>
-		<French>Phrygian</French>
-		<German>Phrygian</German>
-		<Italian>Phrygian</Italian>
-		<Spanish>Phrygian</Spanish>
+		<Tag>TXT_KEY_CIV_HITTITES_LYDIAN_ADJECTIVE</Tag>
+		<English>Lydian</English>
+		<French>Lydian</French>
+		<German>Lydian</German>
+		<Italian>Lydian</Italian>
+		<Spanish>Lydian</Spanish>
 	</TEXT>
 </Civ4GameText>

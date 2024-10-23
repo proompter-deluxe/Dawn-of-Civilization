@@ -462,6 +462,7 @@ dEmpireThreshold = {
 	iMongols : 8,
 	iRussia : 8,
 	iBulgaria: 4,
+	iHittites: 3,
 }
 
 lChristianity = [iCatholicism, iOrthodoxy, iProtestantism]
@@ -1315,8 +1316,8 @@ def specificAdjective(iPlayer):
 			return "TXT_KEY_CIV_BABYLONIA_AKKADIAN"
 
 	elif iCiv == iHittites:
-		if year() >= year(-750):
-			return "TXT_KEY_CIV_HITTITES_PHRYGIAN_ADJECTIVE"
+		if bResurrected:
+			return "TXT_KEY_CIV_HITTITES_LYDIAN_ADJECTIVE"
 			
 	elif iCiv == iGreece:
 		if iEra == iAncient:
@@ -2438,6 +2439,8 @@ def leaderName(iPlayer):
 	iCiv = civ(iPlayer)
 	pPlayer = player(iPlayer)
 	iLeader = pPlayer.getLeader()
+	bResurrected = data.civs[iPlayer].iResurrections > 0
+
 	
 	if iCiv == iChina:
 		if iLeader == iHongwu:
@@ -2453,5 +2456,9 @@ def leaderName(iPlayer):
 		if iLeader == iAshurbanipal:
 			if data.civs[iPlayer].iResurrections > 0:
 				return "TXT_KEY_LEADER_NASIR_AL_DAWLA"
+
+	elif iCiv == iHittites:
+		if bResurrected:
+			return "TXT_KEY_LEADER_CROESUS"
 
 	return None

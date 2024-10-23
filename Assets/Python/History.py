@@ -196,12 +196,16 @@ def checkEarlyColonists():
 		elif year() == year(-700) - offset:
 			giveEarlyColonists(iPhoenicia)
 			giveEarlyColonists(iGreece)
-		elif year() == year(-650) - offset:
-			giveEarlyColonists(iGreece)
+		elif year() == year(-680): # no offset, since we spawn the city just prior
+			pPlayer = player(iGreece)
+			if pPlayer.isExisting() and not pPlayer.isHuman():
+				flipCity(tKerasous, False, True, iGreece)
+				makeUnits(iGreece, iWorker, tKerasous, 1, UnitAITypes.UNITAI_WORKER)
+				makeUnits(iGreece, iArcher, tKerasous, 1, UnitAITypes.UNITAI_CITY_DEFENSE)
 		elif year() == year(-600) - offset:
 			giveEarlyColonists(iGreece)	
 		# Phoenicia often refuses to settle spain, and so I must force the issue
-		elif year() == year(-550): # - offset: --> no offset, since we spawn the city in -570
+		elif year() == year(-550): # no offset, since we spawn the city just prior
 			pPlayer = player(iPhoenicia)
 			if pPlayer.isExisting() and not pPlayer.isHuman():
 				flipCity(tGades, False, True, iPhoenicia)
@@ -594,14 +598,15 @@ def buildCapitalInfrastructure(iPlayer, city):
 					city.setHasRealBuilding(religiosBuilding(iStateReligion), True)
 					
 					
-def giveEarlyColonists(iCiv):
+def giveEarlyColonists(iCiv, overridePlot = None):
 	pPlayer = player(iCiv)
-	
+	pPlot = overridePlot
 	if pPlayer.isExisting() and not pPlayer.isHuman():
 		message(active(), 'TXT_KEY_EVENT_EARLY_COLONIZERS', adjective(pPlayer))
-		capital = pPlayer.getCapitalCity()
-		if capital:
-			tSeaPlot = findSeaPlots(capital, 1, iCiv)
+		if pPlot is None:
+			pPlot = pPlayer.getCapitalCity()
+		if pPlot:
+			tSeaPlot = findSeaPlots(pPlot, 1, iCiv)
 			if tSeaPlot:
 				makeUnit(iCiv, iGalley, tSeaPlot, UnitAITypes.UNITAI_SETTLER_SEA)
 				makeUnit(iCiv, iSettler, tSeaPlot)

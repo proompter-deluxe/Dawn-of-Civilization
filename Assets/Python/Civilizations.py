@@ -1532,7 +1532,7 @@ dStartingExperience = CivDict({
 dAlwaysTrain = CivDict({
 	iGreece: [iHoplite],
 	iPersia: [iImmortal],
-	iMacedon: [iPhalanx, iCatapult],
+	iMacedon: [iPhalanx],
 	iPhoenicia: [iNumidianCavalry],
 	iDravidia: [iWarElephant],
 	iByzantium: [iLegion],
@@ -1565,6 +1565,8 @@ def createSpecificUnits(iPlayer, tile):
 	
 	if iCiv == iKorea:
 		makeUnit(iPlayer, iConfucianMissionary, tile)
+	elif iCiv == iPersia:
+		makeUnits(iPlayer, iZoroastrianMissionary, tile, 2)
 	elif iCiv == iDravidia:
 		makeUnit(iPlayer, iWarElephant, tile)
 	elif iCiv == iEthiopia:

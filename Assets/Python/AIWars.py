@@ -151,8 +151,10 @@ iAssyriaLevantConquestYear = -800
 tConquestAssyriaLevant = (26, iAssyria, iPhoenicia, tLevantTL, tLevantBR, 2, iAssyriaLevantConquestYear, 5)
 
 iPersiaLydiaConquestYear = -550
+tPersiaLydiaTL = (80, 51)
+tPersiaLydiaBR = (84, 55)
 
-tConquestPersiaLydia = (27, iPersia, iHittites, tRomeAnatoliaTL, tRomeAnatoliaBR, 2, iPersiaLydiaConquestYear, 5)
+tConquestPersiaLydia = (27, iPersia, iHittites, tPersiaLydiaTL, tPersiaLydiaBR, 2, iPersiaLydiaConquestYear, 5)
 
 tCarthageTL = (66, 47)
 tCarthageBR = (67, 48)

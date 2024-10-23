@@ -80,3 +80,4 @@ tVienna = (71, 59)
 tPella = (75, 54)
 tTyre = (85, 47) # Tyre moved to the same tile as Damascus
 tAthens = (76, 51)
+tKerasous = (86, 54)
