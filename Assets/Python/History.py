@@ -191,6 +191,8 @@ def checkEarlyColonists():
 				makeUnits(iPhoenicia, iWarElephant, tCarthage, 2)
 		elif year() == year(-750) - offset:
 			giveEarlyColonists(iGreece)
+		elif year() == year(-725) - offset:
+			giveEarlyColonists(iGreece)
 		elif year() == year(-700) - offset:
 			giveEarlyColonists(iPhoenicia)
 			giveEarlyColonists(iGreece)
