@@ -32,6 +32,7 @@ def onPlayerCivAssigned(iPlayer):
 
 dTargetDistanceValueModifier = CivDict({
 iGreece : 5,
+iMacedon: 3,
 iPersia : 3,
 iRome : 3,
 iDravidia : 7,

@@ -146,9 +146,9 @@ tArabsSindBR = (102, 47)
 
 tConquestArabiaSind = (25, iArabia, iKushans, tArabsSindTL, tArabsSindBR, 2, iArabSindConquestYear, 15)
 
-iAssyriaLevantConquestYear = -900
+iAssyriaLevantConquestYear = -800
 
-tConquestAssyriaLevant = (26, iAssyria, iPhoenicia, tLevantTL, tLevantBR, 1, iAssyriaLevantConquestYear, 5)
+tConquestAssyriaLevant = (26, iAssyria, iPhoenicia, tLevantTL, tLevantBR, 2, iAssyriaLevantConquestYear, 5)
 
 iPersiaLydiaConquestYear = -550
 
@@ -164,6 +164,14 @@ tSicilyBR = (71, 52)
 tConquestByzantiumSicily = (30, iByzantium, iBarbarian, tSicilyTL, tSicilyBR, 2, iByzantiumCarthageConquestYear + 5, 5)
 
 tConquestByzantiumAndalusia = (31, iByzantium, iBarbarian, tSpainMoorsTL, tSpainMoorsBR, 1, iByzantiumCarthageConquestYear + 5, 5)
+
+# dummy conquest intended for validating if Egypt can be conquered
+iPersiaLevantConquestYear = -600
+tConquestPersiaLevant= (32, iPersia, iPhoenicia, tLevantTL, tLevantBR, 2, iPersiaLevantConquestYear, 5)
+
+iPersiaEgyptConquestYear = -525
+
+tConquestPersiaEgypt = (33, iPersia, iEgypt, tEgyptTL, tEgyptBR, 2, iPersiaEgyptConquestYear, 10)
 
 lConquests = [
 	tConquestRomeCarthageInSpain,
@@ -196,7 +204,9 @@ lConquests = [
 	tConquestPersiaLydia,
 	tConquestByzantiumCarthage,
 	tConquestByzantiumSicily,
-	tConquestByzantiumAndalusia
+	tConquestByzantiumAndalusia,
+	tConquestPersiaLevant,
+	tConquestPersiaEgypt,
 ]
 
 dConquestChecker = {
@@ -212,6 +222,7 @@ dConquestChecker = {
 	tConquestByzantiumCarthage[0]: lambda tConquest: checkByzantiumConquestOfCarthage(tConquest),
 	tConquestByzantiumSicily[0]: lambda tConquest: checkByzantiumIfCarthageOwned(tConquest),
 	tConquestByzantiumAndalusia[0]: lambda tConquest: checkByzantiumIfCarthageOwned(tConquest),
+	tConquestPersiaEgypt[0]: lambda tConquest: checkConquest(tConquest, tConquestPersiaLevant),
 }
 
 def checkByzantiumConquestOfCarthage(tConquest):
