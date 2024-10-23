@@ -722,7 +722,7 @@ dGoals = {
 		RouteConnection([iRouteRoad], capital().named(CAPITAL), plots.regions(rLevant, rAnatolia).adjacent_region(rMediterraneanSea).named(MEDITERRANEAN), at=-50),
 		All(
 			CultureAmount(500, by=-50),
-			CultureAmount(2000, by=900),
+			CultureAmount(4000, by=900),
 			GoldenAges(1, by=900),
 		),
 		All(
