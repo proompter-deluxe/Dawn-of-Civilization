@@ -549,7 +549,7 @@
 		<PlayerColorInfo>
 			<Type>PLAYERCOLOR_ARMENIA_RED</Type> <!-- Armenia -->
 			<ColorTypePrimary>COLOR_PLAYER_BRIGHT_RED</ColorTypePrimary>
-			<ColorTypeSecondary>COLOR_PLAYER_GOLDENROD</ColorTypeSecondary>
+			<ColorTypeSecondary>COLOR_PLAYER_VERYDARK_BLUE</ColorTypeSecondary>
 			<TextColorType>COLOR_PLAYER_BRIGHT_RED_TEXT</TextColorType>
 		</PlayerColorInfo>
 	</PlayerColorInfos>
