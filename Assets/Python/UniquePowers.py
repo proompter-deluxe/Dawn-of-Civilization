@@ -80,13 +80,14 @@ def armenianUniquePower():
 	if not player(iArmenia).isAlive():
 		return
 
-	for x in range(dCoreArea[iArmenia][0][0], dCoreArea[iArmenia][1][0]):
-		for y in range(dCoreArea[iArmenia][0][1], dCoreArea[iArmenia][1][1]):
-			pCurrentPlot = plot( x, y )
-			if (pCurrentPlot.getOwner() == iArmenia):
+	(tBLx, tBLy), (tTRx, tTRy) = dCoreArea[iArmenia]
+	for x in range(tBLx, tTRx):
+		for y in range(tBLy, tTRy):
+			pCurrentPlot = plot(x, y)
+			if (civ(pCurrentPlot.getOwner()) == iArmenia):
 				for i in range(pCurrentPlot.getNumUnits()):
 					unit = pCurrentPlot.getUnit(i)
-					if (team(iArmenia).isAtWar(unit.getOwner())):
+					if (team(iArmenia).isAtWar(unit.getTeam())):
 						unit.setDamage(unit.getDamage()+8, iArmenia)
 
 
