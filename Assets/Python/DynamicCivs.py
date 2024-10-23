@@ -71,15 +71,6 @@ dSpecificVassalTitles = deepdict({
 	iIndia : {
 		iAztecs: "TXT_KEY_CIV_INDIAN_AZTECS",
 	},
-	iPersia : {
-		iEgypt : "TXT_KEY_CIV_PERSIAN_EGYPT",
-		iIndia : "TXT_KEY_CIV_PERSIAN_INDIA",
-		iBabylonia : "TXT_KEY_CIV_PERSIAN_BABYLONIA",
-		iGreece : "TXT_KEY_CIV_PERSIAN_GREECE",
-		iEthiopia : "TXT_KEY_CIV_PERSIAN_ETHIOPIA",
-		iArabia : "TXT_KEY_CIV_PERSIAN_ARABIA",
-		iMongols : "TXT_KEY_CIV_PERSIAN_MONGOLIA",
-	},
 	iJapan : {
 		iChina : "TXT_KEY_CIV_JAPANESE_CHINA",
 		iIndia : "TXT_KEY_CIV_JAPANESE_INDIA",
@@ -350,6 +341,8 @@ dForeignNames = deepdict({
 	iPersia : {
 		iByzantium : "TXT_KEY_CIV_PERSIAN_NAME_BYZANTIUM",
 		iTurks : "TXT_KEY_CIV_PERSIAN_NAME_TURKS",
+		iOttomans: "TXT_KEY_CIV_PERSIAN_NAME_OTTOMANS",
+		iHittites: "TXT_KEY_CIV_PERSIAN_NAME_HITTITES",
 	},
 	iRome : {
 		iEgypt : "TXT_KEY_CIV_ROMAN_NAME_EGYPT",
