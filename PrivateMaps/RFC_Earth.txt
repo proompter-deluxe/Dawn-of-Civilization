@@ -31709,7 +31709,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=71,y=44
-	TerrainType=TERRAIN_DESERT
+	TerrainType=TERRAIN_SEMIDESERT
 	PlotType=2
 EndPlot
 BeginPlot
@@ -32183,7 +32183,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=72,y=43
-	TerrainType=TERRAIN_DESERT
+	TerrainType=TERRAIN_SEMIDESERT
 	PlotType=2
 EndPlot
 BeginPlot
@@ -37503,8 +37503,6 @@ BeginPlot
 	x=83,y=55
 	isNOfRiver
 	RiverWEDirection=1
-	BonusType=BONUS_SPICES
-	BonusVarietyType=BONUS_SPICES_SAFFRON
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=1
@@ -37968,6 +37966,8 @@ BeginPlot
 	x=84,y=55
 	isNOfRiver
 	RiverWEDirection=1
+	BonusType=BONUS_SPICES
+	BonusVarietyType=BONUS_SPICES_SAFFRON
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
