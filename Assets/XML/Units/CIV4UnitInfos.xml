@@ -18372,6 +18372,7 @@
 			<Civilopedia>TXT_KEY_UNIT_GALLEON_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_UNIT_GALLEON_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
+			<bRivalTerritory>1</bRivalTerritory>
 			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryProduction>1</bMilitaryProduction>
 			<bPillage>1</bPillage>
