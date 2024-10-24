@@ -632,12 +632,13 @@ class Birth(object):
 			for plot in plots.core(self.iPlayer):
 				convertPlotCulture(plot, self.iPlayer, 100, bOwner=True)
 			
-			player(iBarbarian).found(74, 56)
-			founded = city(74, 56)	
-			if founded:			
-				founded.setName("Ras", False)
-				founded.setPopulation(2)
-				makeUnits(iBarbarian, iSwordsman, (74, 56), 2)
+			if not cities.surrounding((74, 56), radius=1):
+				player(iBarbarian).found(74, 56)
+				founded = city(74, 56)	
+				if founded:			
+					founded.setName("Ras", False)
+					founded.setPopulation(2)
+					makeUnits(iBarbarian, iSwordsman, (74, 56), 2)
 		else:
 			for plot in plots.surrounding(self.location):
 				convertPlotCulture(plot, self.iPlayer, 100, bOwner=True)
