@@ -1160,6 +1160,24 @@ EndPlot
 BeginPlot
 	x=83,y=55
 	RouteType=ROUTE_ROMAN_ROAD
+	BeginUnit
+		UnitType=UNIT_ARCHER
+		UnitOwner=CIVILIZATION_BYZANTIUM
+	EndUnit
+	BeginCity
+		CityOwner=CIVILIZATION_BYZANTIUM
+		CityName=Sinope
+		CityPopulation=2
+		BuildingType=BUILDING_GRANARY
+		ReligionType=RELIGION_ORTHODOXY
+		BeginCulture
+			Civilization=CIVILIZATION_BYZANTIUM, Culture=50
+		EndCulture
+		YearFounded=-600
+		YearAcquired=330
+		PreviousOwner=CIVILIZATION_GREECE
+		PreviousOwner=CIVILIZATION_ROME
+	EndCity
 EndPlot
 BeginPlot
 	x=84,y=33
@@ -1237,24 +1255,6 @@ EndPlot
 BeginPlot
 	x=84,y=55
 	RouteType=ROUTE_ROMAN_ROAD
-	BeginUnit
-		UnitType=UNIT_ARCHER
-		UnitOwner=CIVILIZATION_BYZANTIUM
-	EndUnit
-	BeginCity
-		CityOwner=CIVILIZATION_BYZANTIUM
-		CityName=Sinope
-		CityPopulation=2
-		BuildingType=BUILDING_GRANARY
-		ReligionType=RELIGION_ORTHODOXY
-		BeginCulture
-			Civilization=CIVILIZATION_BYZANTIUM, Culture=50
-		EndCulture
-		YearFounded=-600
-		YearAcquired=330
-		PreviousOwner=CIVILIZATION_GREECE
-		PreviousOwner=CIVILIZATION_ROME
-	EndCity
 EndPlot
 BeginPlot
 	x=85,y=44
