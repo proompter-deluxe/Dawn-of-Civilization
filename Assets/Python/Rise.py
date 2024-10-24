@@ -618,17 +618,29 @@ class Birth(object):
 			completeCityFlip(self.location, self.iPlayer, city_(self.location).getOwner(), 100, bCreateGarrisons=False)
 		
 		if self.iCiv not in lInvasionCivs:
-			for city in cities.ring(self.location):
-				if city.isHolyCity():
-					completeCityFlip(city, self.iPlayer, city.getOwner(), 100)
+			for pCity in cities.ring(self.location):
+				if pCity.isHolyCity():
+					completeCityFlip(pCity, self.iPlayer, pCity.getOwner(), 100)
 				else:
-					self.data.lPreservedWonders += [iWonder for iWonder in infos.buildings() if isWonder(iWonder) and city.isHasRealBuilding(iWonder)]
+					self.data.lPreservedWonders += [iWonder for iWonder in infos.buildings() if isWonder(iWonder) and pCity.isHasRealBuilding(iWonder)]
 				
-					plot_(city).eraseAIDevelopment()
-					plot_(city).setImprovementType(iCityRuins)
-		
-		for plot in plots.surrounding(self.location):
-			convertPlotCulture(plot, self.iPlayer, 100, bOwner=True)
+					plot_(pCity).eraseAIDevelopment()
+					plot_(pCity).setImprovementType(iCityRuins)
+
+		# for Bulgaria, we want to clear all the culture in the core and found Ras so it can flip next turn
+		if (self.iCiv == iBulgaria):
+			for plot in plots.core(self.iPlayer):
+				convertPlotCulture(plot, self.iPlayer, 100, bOwner=True)
+			
+			player(iBarbarian).found(74, 56)
+			founded = city(74, 56)	
+			if founded:			
+				founded.setName("Ras", False)
+				founded.setPopulation(2)
+				makeUnits(iBarbarian, iSwordsman, (74, 56), 2)
+		else:
+			for plot in plots.surrounding(self.location):
+				convertPlotCulture(plot, self.iPlayer, 100, bOwner=True)
 		
 	def resetPlague(self):
 		self.data.iPlagueCountdown = -10

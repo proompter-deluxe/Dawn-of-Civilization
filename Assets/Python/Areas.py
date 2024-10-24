@@ -148,7 +148,6 @@ iMexico :		((9, 41),	(23, 49)),
 iColombia :		((26, 31),	(36, 38)),
 iBrazil :		((40, 16),	(49, 31)),
 iCanada : 		((6, 59),	(37, 68)),
-iBulgaria:      ((73, 55),  (78, 58)),
 })
 
 dExtendedBirthArea = CivDict({
