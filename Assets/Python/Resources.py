@@ -282,6 +282,7 @@ dRemovedResourcesDict = {
 	(70, 50)  :  500, # Dye (murex) in Italy
 	(61, 48)  :  500, # Dye (murex) in Algeria
 	(58, 47)  :  500, # Dye (murex) in Morocco
+	(87, 54)  :  500, # Olives on Trebizond
 	(66, 46)  :  550, # Ivory in Tunisia
 	(58, 45)  :  550, # Ivory in Morocco
 	(94, 43)  :  550, # Ivory in Persia

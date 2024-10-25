@@ -39340,6 +39340,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=87,y=54
+	BonusType=BONUS_OLIVES
 	FeatureType=FEATURE_FOREST, FeatureVariety=4
 	TerrainType=TERRAIN_GRASS
 	PlotType=1
