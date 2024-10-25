@@ -2665,15 +2665,13 @@ int CvPlayerAI::AI_foundValue(int iX, int iY, int iMinRivalRange, bool bStarting
 		}
 	}
 
-	if (GET_TEAM(getTeam()).isHasTech((TechTypes)COMPASS))
+
+	if (GET_TEAM(getTeam()).countNumCitiesByArea(pArea) == 0)
 	{
-		if (GET_TEAM(getTeam()).countNumCitiesByArea(pArea) == 0)
+
+		if (iSettlerMapValue >= 20)
 		{
-			if (iSettlerMapValue >= 20)
-			{
-				iValue *= 5;
-				iValue /= 4;
-			}
+			iValue += 1000 * iSettlerMapValue;
 		}
 	}
 

@@ -896,11 +896,11 @@ iArmenia: 30,
 dMaxColonists = CivDict({
 iSweden : 1,
 iSpain : 8,
-iFrance : 7,
+iFrance : 9,
 iEngland : 10,
 iPortugal : 7, 
 iNetherlands : 6,
-iGermany : 2
+iGermany : 3
 })
 
 # initialise religion variables to religion indices from XML

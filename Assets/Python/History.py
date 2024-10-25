@@ -181,36 +181,28 @@ def checkEarlyColonists():
 		offset = turns(data.iSeed % 5)
 
 		# the foundation of Carthage
-		if year() == year(-810) - offset:
+		if year() == year(-800) - offset:
+			giveEarlyColonists(iPhoenicia, tCarthage)
+
 			pPlayer = player(iPhoenicia)
 			if pPlayer.isExisting() and not pPlayer.isHuman():
-				message(active(), 'TXT_KEY_EVENT_EARLY_COLONIZERS', adjective(pPlayer))
-				makeUnit(iPhoenicia, iSettler, tCarthage, UnitAITypes.UNITAI_SETTLE)
-				makeUnits(iPhoenicia, iArcher, tCarthage, 2)
+				makeUnits(iPhoenicia, iSacredBand, tCarthage, 2)
 				makeUnits(iPhoenicia, iWorker, tCarthage, 2, UnitAITypes.UNITAI_WORKER)
 				makeUnits(iPhoenicia, iWarElephant, tCarthage, 2)
 		elif year() == year(-750) - offset:
 			giveEarlyColonists(iGreece)
+			giveEarlyColonists(iPhoenicia)
 		elif year() == year(-725) - offset:
 			giveEarlyColonists(iGreece)
 		elif year() == year(-700) - offset:
 			giveEarlyColonists(iPhoenicia)
+			# spawn the colonist in the eastern Black Sea
+			giveEarlyColonists(iGreece, (86, 55))	
+		elif year() == year(-650) - offset:
 			giveEarlyColonists(iGreece)
-		elif year() == year(-680): # no offset, since we spawn the city just prior
-			pPlayer = player(iGreece)
-			if pPlayer.isExisting() and not pPlayer.isHuman():
-				flipCity(tKerasous, False, True, iGreece)
-				makeUnits(iGreece, iWorker, tKerasous, 1, UnitAITypes.UNITAI_WORKER)
-				makeUnits(iGreece, iArcher, tKerasous, 1, UnitAITypes.UNITAI_CITY_DEFENSE)
 		elif year() == year(-600) - offset:
 			giveEarlyColonists(iGreece)	
-		# Phoenicia often refuses to settle spain, and so I must force the issue
-		elif year() == year(-550): # no offset, since we spawn the city just prior
-			pPlayer = player(iPhoenicia)
-			if pPlayer.isExisting() and not pPlayer.isHuman():
-				flipCity(tGades, False, True, iPhoenicia)
-				makeUnits(iPhoenicia, iWorker, tGades, 1, UnitAITypes.UNITAI_WORKER)
-				makeUnits(iPhoenicia, iArcher, tGades, 1, UnitAITypes.UNITAI_CITY_DEFENSE)
+			giveEarlyColonists(iPhoenicia)			
 		
 @handler("BeginGameTurn")
 def checkLateColonists():
