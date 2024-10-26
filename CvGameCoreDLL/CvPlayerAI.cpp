@@ -2659,14 +2659,11 @@ int CvPlayerAI::AI_foundValue(int iX, int iY, int iMinRivalRange, bool bStarting
 		}
 	}
 
-	// in the "exploration age" we massively emphasize based on settler map value
-	if (GET_TEAM(getTeam()).isHasTech((TechTypes)COMPASS))
+	// scale the value based the weight of the settler map if above 20
+	// values above 20 are recommended for colonizing civs. Non-colonizing civs are fine with values of 10
+	if (iSettlerMapValue >= 20)
 	{
-		// scale the value based the weight of the settler map if above 20
-		if (iSettlerMapValue >= 20)
-		{
-			iValue *= iSettlerMapValue/16;
-		}
+		iValue *= iSettlerMapValue/16;
 	}
 
 	if (!bStartingLoc)
