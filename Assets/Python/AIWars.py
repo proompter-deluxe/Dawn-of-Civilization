@@ -14,7 +14,7 @@ iMaxIntervalLate = 60
 iThreshold = 100
 iMinValue = 30
 
-iRomeCarthageYear = -220
+iRomeCarthageYear = -200
 tRomeCarthageTL = (60, 44)
 tRomeCarthageBR = (70, 49)
 
@@ -175,6 +175,16 @@ iPersiaEgyptConquestYear = -525
 
 tConquestPersiaEgypt = (33, iPersia, iEgypt, tEgyptTL, tEgyptBR, 2, iPersiaEgyptConquestYear, 10)
 
+iCarthageInSpainYear = -240
+tCarthageSpainTL = (56, 48)
+tCarthageSpainBR = (60, 51)
+tConquestCarthageInSpain = (34, iPhoenicia, iIndependent2, tCarthageSpainTL, tCarthageSpainBR, 3, iCarthageInSpainYear, 5)
+
+iHannibalInItaly = -220
+tHannibalInItalyTL = (65, 57)
+tHannibalInItalyBR = (67, 57)
+tConquestHannibalInItaly = (35, iPhoenicia, iRome, tHannibalInItalyTL, tHannibalInItalyBR, 1, iHannibalInItaly, 10)
+
 lConquests = [
 	tConquestRomeCarthageInSpain,
 	tConquestRomeCarthage, 
@@ -209,6 +219,8 @@ lConquests = [
 	tConquestByzantiumAndalusia,
 	tConquestPersiaLevant,
 	tConquestPersiaEgypt,
+	tConquestCarthageInSpain,
+	tConquestHannibalInItaly,
 ]
 
 dConquestChecker = {
@@ -225,6 +237,7 @@ dConquestChecker = {
 	tConquestByzantiumSicily[0]: lambda tConquest: checkByzantiumIfCarthageOwned(tConquest),
 	tConquestByzantiumAndalusia[0]: lambda tConquest: checkByzantiumIfCarthageOwned(tConquest),
 	tConquestPersiaEgypt[0]: lambda tConquest: checkConquest(tConquest, tConquestPersiaLevant),
+	tConquestHannibalInItaly[0]: lambda tConquest: checkConquest(tConquest, tConquestCarthageInSpain),
 }
 
 def checkByzantiumConquestOfCarthage(tConquest):
@@ -466,6 +479,15 @@ def spawnConquerors(iPlayer, iPreferredTarget, tTL, tBR, iNumTargets, iWarPlan =
 				makeUnits(iPlayer, iCatapult, tPlot, 2, UnitAITypes.UNITAI_ATTACK_CITY)
 				makeUnits(iPlayer, iHoplite, tPlot, 1, UnitAITypes.UNITAI_ATTACK_CITY)
 
+		# Hannibalic army composition
+		elif iCiv == iPhoenicia:
+			units  = makeUnits(iPlayer, iCatapult, tPlot, 2, UnitAITypes.UNITAI_ATTACK_CITY)
+			units += makeUnits(iPlayer, iSacredBand, tPlot, 1, UnitAITypes.UNITAI_ATTACK_CITY)
+			units += makeUnits(iPlayer, iOathsworn, tPlot, 2, UnitAITypes.UNITAI_ATTACK_CITY)
+			units += makeUnits(iPlayer, iHoplite, tPlot, 1, UnitAITypes.UNITAI_ATTACK_CITY)
+			units += makeUnits(iPlayer, iNumidianCavalry, tPlot, 1, UnitAITypes.UNITAI_ATTACK_CITY)
+			units += makeUnits(iPlayer, iWarElephant, tPlot, 1, UnitAITypes.UNITAI_ATTACK_CITY)
+			units.promotion(infos.type("PROMOTION_MERCENARY"))
 
 		elif iCiv in [iSpain, iEngland, iHolyRome, iFrance, iItaly]:
 			dConquestUnits = {

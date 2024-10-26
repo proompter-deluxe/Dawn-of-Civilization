@@ -182,27 +182,26 @@ def checkEarlyColonists():
 
 		# the foundation of Carthage
 		if year() == year(-800) - offset:
-			giveEarlyColonists(iPhoenicia, tCarthage)
-
+			# even the player gets this event!
 			pPlayer = player(iPhoenicia)
-			if pPlayer.isExisting() and not pPlayer.isHuman():
+			if pPlayer.isExisting():
+				message(active(), 'TXT_KEY_EVENT_EARLY_COLONIZERS', adjective(pPlayer))
+				makeUnit(iPhoenicia, iSettler, tCarthage)
 				makeUnits(iPhoenicia, iSacredBand, tCarthage, 2)
 				makeUnits(iPhoenicia, iWorker, tCarthage, 2, UnitAITypes.UNITAI_WORKER)
 				makeUnits(iPhoenicia, iWarElephant, tCarthage, 2)
 		elif year() == year(-750) - offset:
 			giveEarlyColonists(iGreece)
-			giveEarlyColonists(iPhoenicia)
 		elif year() == year(-725) - offset:
 			giveEarlyColonists(iGreece)
 		elif year() == year(-700) - offset:
-			giveEarlyColonists(iPhoenicia)
-			# spawn the colonist in the eastern Black Sea
-			giveEarlyColonists(iGreece, (86, 55))	
+			giveEarlyColonists(iGreece)
 		elif year() == year(-650) - offset:
 			giveEarlyColonists(iGreece)
+			giveEarlyColonists(iPhoenicia)
 		elif year() == year(-600) - offset:
-			giveEarlyColonists(iGreece)	
-			giveEarlyColonists(iPhoenicia)			
+			giveEarlyColonists(iGreece)
+			giveEarlyColonists(iPhoenicia)
 		
 @handler("BeginGameTurn")
 def checkLateColonists():
@@ -211,7 +210,8 @@ def checkLateColonists():
 			if player(iCiv).isExisting():
 				iPlayer = slot(iCiv)
 				if data.players[iPlayer].iExplorationTurn >= 0:
-					if turn() == data.players[iPlayer].iExplorationTurn + 1 + data.players[iPlayer].iColonistsAlreadyGiven * 8:
+					# every 4 turns (on normal), with an offset determined by the civ index
+					if turn() % int(round(4 * infos.gameSpeed().getGrowthPercent() / 100)) == iCiv % 4:
 						giveColonists(iPlayer)
 
 
@@ -386,6 +386,12 @@ def recordExplorationTurn(iTech, iTeam, iPlayer):
 	if iTech == iExploration:
 		data.players[iPlayer].iExplorationTurn = game.getGameTurn()
 
+		# reveal ALL potential settling locations to AI
+		# by Exploration unlocked by an AI, if you wanted to circumnavigate the globe first you should have already done so
+		if not player(iPlayer).isHuman():
+			for plot in plots.all().land().where(lambda p: p.getSettlerValue(civ(iPlayer)) >= 10).expand(2):
+				plot.setRevealed(iTeam, True, False, -1)
+			player(iPlayer).AI_updateFoundValues(False)
 
 @handler("techAcquired")
 def americanWestCoastSettlement(iTech, iTeam, iPlayer):
@@ -612,10 +618,37 @@ def giveColonists(iPlayer):
 	pTeam = team(iPlayer)
 	iCiv = civ(iPlayer)
 	
-	if pPlayer.isExisting() and not pPlayer.isHuman() and iCiv in dMaxColonists:
-		if pTeam.isHasTech(iExploration) and data.players[iPlayer].iColonistsAlreadyGiven < dMaxColonists[iCiv]:
+	if pPlayer.isExisting() and not pPlayer.isHuman() and iCiv in dMaxColonistsPreIndustrial:
+		if pTeam.isHasTech(iExploration) and data.players[iPlayer].iColonistsAlreadyGivenPreIndustrial < dMaxColonistsPreIndustrial[iCiv]:
 			sourceCities = cities.core(iCiv).owner(iPlayer)
 			
+			# help England with settling Canada and Australia
+			if iCiv == iEngland:
+				colonialCities = cities.regions(rOntario, rMaritimes, rAustralia).owner(iPlayer)
+				if colonialCities:
+					sourceCities = colonialCities
+			
+			# help France with settling New France
+			if iCiv == iFrance:
+				colonialCities = cities.regions(rQuebec, rOntario, rMaritimes, rDeepSouth, rMidwest).owner(iPlayer)
+				if colonialCities:
+					sourceCities = colonialCities
+					
+			city = sourceCities.coastal().random()
+			if city:
+				tSeaPlot = findSeaPlots(city, 1, iCiv)
+				if not tSeaPlot: tSeaPlot = city
+				
+				makeUnit(iPlayer, unique_unit(iPlayer, iGalleon), tSeaPlot, UnitAITypes.UNITAI_SETTLER_SEA)
+				makeUnit(iPlayer, iSettler, tSeaPlot, UnitAITypes.UNITAI_SETTLE)
+				createRoleUnit(iPlayer, tSeaPlot, iDefend, 1)
+				makeUnit(iPlayer, iWorker, tSeaPlot)
+				
+				data.players[iPlayer].iColonistsAlreadyGivenPreIndustrial += 1
+
+	if pPlayer.isExisting() and not pPlayer.isHuman() and pPlayer.getCurrentEra() >= iIndustrial and iCiv in dMaxColonistsIndustrial:
+		if pTeam.isHasTech(iExploration) and data.players[iPlayer].iColonistsAlreadyGivenIndustrial < dMaxColonistsIndustrial[iCiv]:
+
 			# help England with settling Canada and Australia
 			if iCiv == iEngland:
 				colonialCities = cities.regions(rOntario, rMaritimes, rAustralia).owner(iPlayer)
@@ -631,8 +664,8 @@ def giveColonists(iPlayer):
 				makeUnit(iPlayer, iSettler, tSeaPlot, UnitAITypes.UNITAI_SETTLE)
 				createRoleUnit(iPlayer, tSeaPlot, iDefend, 1)
 				makeUnit(iPlayer, iWorker, tSeaPlot)
-				
-				data.players[iPlayer].iColonistsAlreadyGiven += 1
+
+				data.players[iPlayer].iColonistsAlreadyGivenIndustrial += 1
 
 
 def giveRaiders(iCiv):

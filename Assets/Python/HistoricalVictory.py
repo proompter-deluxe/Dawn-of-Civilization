@@ -116,6 +116,7 @@ TRANSOXIANA = "TXT_KEY_VICTORY_NAME_TRANSOXIANA"
 WEST_AFRICA = "TXT_KEY_VICTORY_NAME_WEST_AFRICA"
 GREECE = "TXT_KEY_VICTORY_NAME_GREECE"
 CRIMEA = "TXT_KEY_VICTORY_NAME_CRIMEA"
+ATTICA = "TXT_KEY_VICTORY_NAME_ATTICA"
 
 # area descriptors
 ANDEAN_COAST = "TXT_KEY_VICTORY_NAME_ANDEAN_COAST"
@@ -336,7 +337,7 @@ dGoals = {
 	),
 	iPersia: (
 		Control(
-			plots.region(rGreece), 
+			plots.rectangle(tAttica).named(ATTICA),
 			by=-480,
 		),
 		BuildingCount(wonders(), 10, by=-300),

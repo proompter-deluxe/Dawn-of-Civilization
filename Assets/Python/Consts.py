@@ -561,7 +561,7 @@ iPoland : 1650,
 iInca : 1533,
 iMamluks: 1382, # the "Circassian" period is often considered a decline
 iMongols : 1368,
-iAztecs : 1521,
+iAztecs : 1600, # decline after the historical conquest, because we want to give the AI time to discover and conquer the Aztecs
 iMughals : 1640,
 iCongo : 1800,
 iIroquois: 1770,
@@ -584,7 +584,7 @@ iHittites : [(-840, -670)],
 iNubia : [(500, 1500)],
 iGreece : [(1800, 2020)],
 iIndia : [(1600, 1800), (1900, 2020)],
-iPhoenicia : [(800, 1500), (1950, 2020)],
+iPhoenicia : [(-800,-300), (800, 1500), (1950, 2020)],
 iPersia : [(220, 580), (870, 1000)],
 iCelts : [(400, 1150), (1850, 2020)],
 iRome : [(-338, 450)],
@@ -768,7 +768,7 @@ iHittites : 40,
 iNubia : 20,
 iGreece : 60,
 iIndia : 50,
-iPhoenicia : 75,
+iPhoenicia : 85,
 iPolynesia : 40,
 iPersia : 70,
 iCelts : 50,
@@ -893,13 +893,20 @@ iIroquois: 30,
 iArmenia: 30,
 }, 100)
 
-dMaxColonists = CivDict({
+dMaxColonistsPreIndustrial = CivDict({
 iSweden : 1,
 iSpain : 8,
-iFrance : 9,
-iEngland : 10,
+iFrance : 8,
+iEngland : 7,
 iPortugal : 7, 
 iNetherlands : 6,
+})
+
+dMaxColonistsIndustrial = CivDict({
+iFrance : 3,
+iEngland : 6,
+iPortugal : 2, 
+iNetherlands : 2,
 iGermany : 3
 })
 

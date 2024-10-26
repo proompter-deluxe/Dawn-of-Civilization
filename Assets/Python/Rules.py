@@ -100,7 +100,7 @@ def spreadCulture(city):
 
 @handler("cityBuilt")
 def updateFoundValues(city):
-	if not is_minor(city) and player(city).getNumCities() <= 1:
+	if not is_minor(city):
 		player(city).AI_updateFoundValues(False)
 
 

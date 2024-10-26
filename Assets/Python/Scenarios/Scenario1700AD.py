@@ -337,7 +337,7 @@ scenario1700AD = Scenario(
 		iNetherlands: 3,
 	},
 	
-	dColonistsAlreadyGiven = {
+	dColonistsAlreadyGivenPreIndustrial = {
 		iNorse : 1,
 		iSpain : 7,
 		iFrance : 3,

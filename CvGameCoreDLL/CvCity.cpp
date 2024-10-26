@@ -15479,6 +15479,9 @@ bool CvCity::canSpread(ReligionTypes eReligion, bool bMissionary) const
 {
 	if (isHasReligion(eReligion)) return false;
 
+	// Norse are more resistant to spread of religion until 950 AD
+	if (getCivilizationType() == NORSE && GC.getGameINLINE().getGameTurnYear() < 950 && GET_PLAYER(getOwner()).getStateReligion() != eReligion) return false;
+
 	if (bMissionary) return true;
 
 	if (!plot()->canSpread(eReligion)) return false;

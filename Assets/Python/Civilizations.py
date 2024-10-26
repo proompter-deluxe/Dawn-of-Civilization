@@ -14,6 +14,9 @@ def getAIStartingUnits(iPlayer):
 def getAdditionalUnits(iPlayer):
 	return dAdditionalUnits[iPlayer].items()
 
+def getHumanStartingUnits(iPlayer):
+	return dHumanStartingUnits[iPlayer].items()
+
 def getSpecificAdditionalUnits(iPlayer):
 	return dSpecificAdditionalUnits[iPlayer].items()
 
@@ -730,9 +733,9 @@ dStartingUnits = CivDict({
 		iSettle: 1,
 		iWork: 2,
 		iDefend: 3,
-		iCounter: 5,
-		iShock: 3,
-		iSiege: 3,
+		iCounter: 1,
+		iShock: 2,
+		iSiege: 1,
 	},
 	iCelts: {
 		iSettle: 3,
@@ -1103,7 +1106,7 @@ dStartingUnits = CivDict({
 		iSettle: 1,
 		iWork: 2,
 		iBase: 1,
-		iDefend: 2,
+		iDefend: 3,
 	},
 	iIran: {
 		iSettle: 1,
@@ -1316,6 +1319,23 @@ dExtraAIUnits = CivDict({
 	iBrazil: {
 		iDefend: 1,
 	}
+}, {})
+
+dHumanStartingUnits = CivDict({
+	iMacedon : {
+		iCounter: 4,
+		iShock: 1,
+		iSiege: 2,
+	},
+	iRome : {
+		iAttack: 3,
+		iSiege: 2,
+	},
+	iPersia : {
+		iCounter: 4,
+		iShock: 1,
+		iSiege: 2,
+	},
 }, {})
 
 dAdditionalUnits = CivDict({

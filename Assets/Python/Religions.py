@@ -80,7 +80,7 @@ def checkJudaism(iGameTurn):
 	if game.isReligionFounded(iJudaism):
 		return
 
-	if iGameTurn == year(-1000) - turns(data.iSeed % 5):
+	if iGameTurn == year(-1600) - turns(data.iSeed % 4):
 		foundReligion(selectHolyCity(plots.regions(rEgypt, rLevant, rMesopotamia), tJerusalem, False), iJudaism)
 
 
@@ -159,6 +159,10 @@ def spreadJudaism():
 	spreadReligionToRegion(iJudaism, [rIberia, rFrance, rLowerGermany, rCentralEurope, rPoland, rItaly, rBritain, rRuthenia, rBalkans], 1000, 10)
 	spreadReligionToRegion(iJudaism, [rMesopotamia, rAnatolia, rEgypt], 600, 20)
 	spreadReligionToRegion(iJudaism, [rOntario, rMaritimes, rAtlanticSeaboard, rMidwest], 1850, 10)
+
+@handler("BeginGameTurn")
+def spreadCatholicism():
+	spreadReligionToRegion(iCatholicism, [rDenmark, rNorway, rSweden], 1000, 10)
 
 
 @handler("BeginGameTurn")

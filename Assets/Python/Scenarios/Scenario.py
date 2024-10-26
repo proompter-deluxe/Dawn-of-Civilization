@@ -328,7 +328,7 @@ class Scenario(object):
 		self.dGreatPeopleCreated = kwargs.get("dGreatPeopleCreated", {})
 		self.dGreatGeneralsCreated = kwargs.get("dGreatGeneralsCreated", {})
 		
-		self.dColonistsAlreadyGiven = kwargs.get("dColonistsAlreadyGiven", {})
+		self.dColonistsAlreadyGivenPreIndustrial = kwargs.get("dColonistsAlreadyGivenPreIndustrial", {})
 		
 		self.lInitialWars = kwargs.get("lInitialWars", [])
 		
@@ -484,9 +484,9 @@ class Scenario(object):
 	def adjustColonists(self):
 		iStartTurn = scenarioStartTurn()
 		
-		for iCiv, iColonists in self.dColonistsAlreadyGiven.items():
+		for iCiv, iColonists in self.dColonistsAlreadyGivenPreIndustrial.items():
 			data.players[iCiv].iExplorationTurn = iStartTurn
-			data.players[iCiv].iColonistsAlreadyGiven = iColonists
+			data.players[iCiv].iColonistsAlreadyGivenPreIndustrial = iColonists
 	
 	def revealTiles(self):
 		for iGroup, revealed in self.dRevealed.items():

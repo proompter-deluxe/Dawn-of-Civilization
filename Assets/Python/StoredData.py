@@ -98,7 +98,8 @@ class PlayerData:
 		
 		# History
 		
-		self.iColonistsAlreadyGiven = 0
+		self.iColonistsAlreadyGivenPreIndustrial = 0
+		self.iColonistsAlreadyGivenIndustrial = 0
 		self.iExplorationTurn = -1
 		
 		self.colonialAcquisitionCities = []

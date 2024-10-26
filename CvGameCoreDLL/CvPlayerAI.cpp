@@ -1931,12 +1931,6 @@ int CvPlayerAI::AI_foundValue(int iX, int iY, int iMinRivalRange, bool bStarting
 			{
 				return 0;
 			}
-
-			// Leoreth: early civs are too eager to expand
-			if (getCurrentEra() == ERA_ANCIENT)
-			{
-				return 0;
-			}
 		}
 
 		if (pLoopPlot->isCity() && pLoopPlot->getOwnerINLINE() == getID())
@@ -1947,6 +1941,11 @@ int CvPlayerAI::AI_foundValue(int iX, int iY, int iMinRivalRange, bool bStarting
 			{
 				bNearbySameValue = true;
 			}
+		}
+
+		if (bNearbySameValue && iNearbyCities > 1)
+		{
+			return 0;
 		}
 
 		if (iI != CITY_HOME_PLOT)
@@ -1977,11 +1976,6 @@ int CvPlayerAI::AI_foundValue(int iX, int iY, int iMinRivalRange, bool bStarting
                 }
             }*/
 		}
-	}
-
-	if (bNearbySameValue && iNearbyCities > 1)
-	{
-		return 0;
 	}
 
 	iBadTile /= 2;
@@ -2665,13 +2659,13 @@ int CvPlayerAI::AI_foundValue(int iX, int iY, int iMinRivalRange, bool bStarting
 		}
 	}
 
-
-	if (GET_TEAM(getTeam()).countNumCitiesByArea(pArea) == 0)
+	// in the "exploration age" we massively emphasize based on settler map value
+	if (GET_TEAM(getTeam()).isHasTech((TechTypes)COMPASS))
 	{
-
+		// scale the value based the weight of the settler map if above 20
 		if (iSettlerMapValue >= 20)
 		{
-			iValue += 1000 * iSettlerMapValue;
+			iValue *= iSettlerMapValue/16;
 		}
 	}
 
@@ -2902,8 +2896,8 @@ int CvPlayerAI::AI_targetCityValue(CvCity* pCity, bool bRandomize, bool bIgnoreA
 /* UNOFFICIAL_PATCH                        END                                                  */
 /************************************************************************************************/
 
-	//Leoreth: more barbarian pressure against India and Rome
-	if (isBarbarian() && (pCity->getCivilizationType() == INDIA || pCity->getCivilizationType() == ROME))
+	//Leoreth: more barbarian pressure against India, Rome, Byzantium, Hittites
+	if (isBarbarian() && (pCity->getCivilizationType() == INDIA || pCity->getCivilizationType() == ROME || pCity->getCivilizationType() == BYZANTIUM || pCity->getCivilizationType() == HITTITES))
 	{
 		iValue += 2;
 	}
@@ -18312,12 +18306,13 @@ void CvPlayerAI::AI_updateCitySites(int iMinFoundValueThreshold, int iMaxSites) 
 			CvPlot* pLoopPlot = GC.getMapINLINE().plotByIndexINLINE(iI);
 			if (pLoopPlot->isRevealed(getTeam(), false))
 			{
-				if (pLoopPlot->getSettlerValue(getID()) > 0)
+				int iSettlerValue = pLoopPlot->getSettlerValue(getID());
+				if (iSettlerValue > 0)
 				{
 					iValue = pLoopPlot->getFoundValue(getID());
 
 					// Leoreth: weigh by settler map value - applied here to keep found value within short
-					iValue *= pLoopPlot->getSettlerValue(getID());
+					iValue *= iSettlerValue;
 
 					// Leoreth: really value designated city sites
 					if (pLoopPlot->getSettlerValue(getID()) >= 10)

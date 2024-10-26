@@ -31,6 +31,7 @@ tNewZealandEast = ((0, 6), (2, 12))
 tNewZealandWest = ((148, 4), (149, 7))
 tMarquesas = ((14, 26),	(14, 26))
 tEasterIsland = ((20, 18),	(20, 18))
+tAttica = ((75, 51), (76, 52))
 
 # second Dravidian goal: control or vassalize the Deccan and Srivijaya in 1000 AD
 tSrivijaya = ((115, 26), (121, 32))
@@ -80,4 +81,4 @@ tVienna = (71, 59)
 tPella = (75, 54)
 tTyre = (85, 47) # Tyre moved to the same tile as Damascus
 tAthens = (76, 51)
-tKerasous = (86, 54)
+tTrebizond = (86, 54)
