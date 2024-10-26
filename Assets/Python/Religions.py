@@ -160,10 +160,6 @@ def spreadJudaism():
 	spreadReligionToRegion(iJudaism, [rMesopotamia, rAnatolia, rEgypt], 600, 20)
 	spreadReligionToRegion(iJudaism, [rOntario, rMaritimes, rAtlanticSeaboard, rMidwest], 1850, 10)
 
-@handler("BeginGameTurn")
-def spreadCatholicism():
-	spreadReligionToRegion(iCatholicism, [rDenmark, rNorway, rSweden], 1000, 10)
-
 
 @handler("BeginGameTurn")
 def spreadHinduismSoutheastAsia():
