@@ -8847,6 +8847,10 @@
 			<TechTypes>
 				<PrereqTech>TECH_TANNING</PrereqTech>
 			</TechTypes>
+			<PrereqBonuses>
+				<BonusType>BONUS_COPPER</BonusType>
+				<BonusType>BONUS_IRON</BonusType>
+			</PrereqBonuses>
 			<iCost>40</iCost>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
 			<iMinAreaSize>-1</iMinAreaSize>
