@@ -275,21 +275,30 @@ class Barbarians(object):
 	def spawn(self):
 		lSpawnPlots = self.get_spawn_plots()
 		
+		# only naval units on first pass, then only land units
 		for iUnit, plot in zip(self.get_spawn_units(), lSpawnPlots):
-			unit = makeUnit(self.get_owner(), iUnit, plot, self.get_unit_ai(iUnit, plot))
-			
-			data.units[unit].spawn_data = self.spawn_data()
-			
-			if self.adjective:
-				set_unit_adjective(unit, self.adjective)
-			
-			if self.promotions:
-				for iPromotion in self.promotions:
-					unit.setHasPromotion(iPromotion, True)
+			if infos.unit(iUnit).getDomainType() == DomainTypes.DOMAIN_SEA:
+				self.spawnUnit(iUnit, plot)
+
+		for iUnit, plot in zip(self.get_spawn_units(), lSpawnPlots):
+			if infos.unit(iUnit).getDomainType() != DomainTypes.DOMAIN_SEA:
+				self.spawnUnit(iUnit, plot)
 		
 		for plot in lSpawnPlots:
 			if self.can_notify(plot):
 				self.notify(plot)
+
+	def spawnUnit(self, iUnit, plot):
+		unit = makeUnit(self.get_owner(), iUnit, plot, self.get_unit_ai(iUnit, plot))
+					
+		data.units[unit].spawn_data = self.spawn_data()
+					
+		if self.adjective:
+			set_unit_adjective(unit, self.adjective)
+					
+		if self.promotions:
+			for iPromotion in self.promotions:
+				unit.setHasPromotion(iPromotion, True)
 	
 	def get_owner(self):
 		if self.pattern == MINORS:
@@ -446,7 +455,7 @@ minor_cities = [
 	MinorCity(-2050, iIndependent, (118, 49), "Sanxingdui", iPopulation=2, iCiv=iChina, units={iDefend: 1, iBase: 1}, adjective="TXT_KEY_ADJECTIVE_SHU"),
 	MinorCity(-1830, iBarbarian, (124, 52), "Daliang", iPopulation=2, iCiv=iChina, units={iDefend: 1, iBase: 1}, adjective="TXT_KEY_ADJECTIVE_WEI"),
 	MinorCity(-1830, iIndependent, (127, 53), "Jimo", iPopulation=1, iCiv=iChina, units={iDefend: 1}, adjective="TXT_KEY_ADJECTIVE_QI"),
-	MinorCity(-2200, iIndependent, tJerusalem, "Yerushalayim", iPopulation=2, iCiv=iBabylonia, units={iDefend: 2}, adjective="TXT_KEY_ADJECTIVE_ISRAELITE"),
+	MinorCity(-2200, iBarbarian, tJerusalem, "Yerushalayim", iPopulation=2, iCiv=iBabylonia, units={iDefend: 2}, adjective="TXT_KEY_ADJECTIVE_ISRAELITE"),
 	MinorCity(-2000, iIndependent, (85, 47), "Sur", iPopulation=2, iCiv=iBabylonia, units={iDefend: 1, iCounter: 1}, adjective="TXT_KEY_CIV_PHOENICIA_ADJECTIVE"),
 	MinorCity(-1200, iIndependent2, (105, 46), "Indraprastha", iPopulation=1, iCiv=iIndia, units={iDefend: 1, iAttack: 1}, bIgnoreRuins=True, condition=lambda: player(iIndia).isHuman(), adjective="TXT_KEY_ADJECTIVE_VEDIC"),
 	MinorCity(-1200, iBarbarian, (72, 55), "Daorson", iPopulation=2, iCiv=iGreece, units={iDefend: 2, iAttack: 1}, adjective="TXT_KEY_ADJECTIVE_ILLYRIAN"),
@@ -514,9 +523,9 @@ barbarians = [
 	Barbarians(-3000, -1500, {iWarrior: 2}, ((79, 56), (103, 62)), 8, NOMADS, target_area=((83, 44), (104, 51)), adjective="TXT_KEY_ADJECTIVE_INDO_EUROPEAN"),
 	Barbarians(-2000, -1500, {iWarrior: 2}, ((120, 42), (129, 50)), 8, MINORS, adjective="TXT_KEY_ADJECTIVE_YUE"),
 	Barbarians(-1800, -1400, {iWarrior: 3}, ((90, 47), (93, 51)), 9, INVADERS, adjective="TXT_KEY_ADJECTIVE_KASSITE"),
-	Barbarians(-1800, -1400, {iAxeman: 1}, ((79, 42), (84, 46)), 8, INVADERS, target_area=((77, 39), (82, 45)), adjective="TXT_KEY_ADJECTIVE_HYKSOS"),
+	Barbarians(-1800, -1400, {iChariot: 1}, ((82, 44), (84, 45)), 6, INVADERS, target_area=((77, 39), (80, 44)), adjective="TXT_KEY_ADJECTIVE_HYKSOS"),
 	Barbarians(-1750, -1300, {iChariot: 2}, ((85, 50), (91, 57)), 8, MINORS, adjective="TXT_KEY_ADJECTIVE_HURRIAN"),
-	Barbarians(-1600, -1000, {iChariot: 1}, ((73, 37), (77, 43)), 9, NOMADS, target_area=((77, 37), (82, 45)), adjective="TXT_KEY_ADJECTIVE_TJEHENU", promotions=(iDesertAdaptation,)),
+	Barbarians(-1600, -1000, {iChariot: 1}, ((73, 37), (77, 43)), 9, NOMADS, target_area=((77, 37), (80, 44)), adjective="TXT_KEY_ADJECTIVE_TJEHENU", promotions=(iDesertAdaptation,)),
 	Barbarians(-1500, -1000, {iWarrior: 1, iSkirmisher: 1}, ((120, 42), (129, 50)), 8, MINORS, adjective="TXT_KEY_ADJECTIVE_YUE"),
 	Barbarians(-1500, -670, {iChariot: 2}, ((79, 56), (103, 62)), 8, NOMADS, target_area=((83, 44), (104, 51)), adjective="TXT_KEY_ADJECTIVE_IRANIAN"),
 	# Barbarians(-1100, -300, {iAxeman: 2}, ((120, 42), (129, 50)), 12, MINORS, adjective="TXT_KEY_ADJECTIVE_SHU"),

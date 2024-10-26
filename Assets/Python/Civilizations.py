@@ -244,7 +244,6 @@ lCivilizations = [
 		iGold=200,
 		iAdvancedStartPoints=90,
 		lCivics=[iRepublic, iSlavery],
-		lEnemies=[iAssyria], # otherwise the Phoenician spawn protection is absurdly long
 		techs=techs.column(2).including(iAlloys, iWriting, iShipbuilding)
 	),
 	Civilization(
@@ -715,7 +714,7 @@ dStartingUnits = CivDict({
 		iCounter: 1,
 		iSettleSea: 1,
 		iFerry: 1,
-		iEscort: 1,
+		iEscort: 2,
 	},
 	iPolynesia: {
 		iSettle: 1,
@@ -1212,6 +1211,11 @@ dExtraAIUnits = CivDict({
 		iDefend: 1,
 		iCounter: 1,
 		iWork: 1,
+	},
+	iPhoenicia: {
+		iSettleSea: 1,
+		iFerry: 1,
+		iEscort: 1,
 	},
 	iIndia : {
 		iHarass: 1,
@@ -1759,7 +1763,7 @@ dTechPreferences = {
 		iTheology: -20,
 		iCivilService: -20,
 	},
-	iCarthage : {
+	iPhoenicia : {
 		iNavigation: 40,
 		iRiding: 30,
 		iCurrency: 30,
@@ -2247,7 +2251,7 @@ dBuildingPreferences = {
 		iParthenon: -30,
 		iStatueOfZeus: -20,
 	},
-	iCarthage : {
+	iPhoenicia : {
 		iGreatCothon: 30,
 		iGreatLighthouse: 15,
 		iColossus: 15,

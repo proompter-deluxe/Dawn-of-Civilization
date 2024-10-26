@@ -580,7 +580,11 @@ class Birth(object):
 		
 		# for AI, reveal nearby settler targets to improve settler AI
 		if not self.isHuman():
-			revealed += plots.all().land().where(lambda p: p.getSettlerValue(self.iCiv) >= 10).where(lambda p: distance(self.location, p) <= 15).expand(2)
+			iRevealRange = 15
+			# pre-medieval colonizer civs get a buff to the range at which cities are revealed
+			if self.iCiv == iPhoenicia or self.iCiv == iGreece:
+				iRevealRange = 50
+			revealed += plots.all().land().where(lambda p: p.getSettlerValue(self.iCiv) >= 10).where(lambda p: distance(self.location, p) <= iRevealRange).expand(2)
 		
 		# reveal tiles
 		for plot in revealed:
