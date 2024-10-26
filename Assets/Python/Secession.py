@@ -73,9 +73,10 @@ def canBeRazed(city):
 	if city.getNumActiveWorldWonders() > 0:
 		return False
 
-	# always raze Harappan cities, except holy city
-	if civ(city) == iHarappa and not player(city).isHuman():
-		return True
+	# always raze cities for certain early age civs, except holy city
+	if not player(city).isHuman():
+		if civ(city) in [iHarappa, iHittites]:
+			return True
 	
 	if city.getPopulation() >= 10:
 		return False
