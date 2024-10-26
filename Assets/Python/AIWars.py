@@ -185,6 +185,9 @@ tHannibalInItalyTL = (65, 57)
 tHannibalInItalyBR = (67, 57)
 tConquestHannibalInItaly = (35, iPhoenicia, iRome, tHannibalInItalyTL, tHannibalInItalyBR, 1, iHannibalInItaly, 10)
 
+# used for checking a precondition
+tDummyConquestRomeHoldingRome= (36, iRome, iBarbarian, tRome, tRome, 1, -3000, 10)
+
 lConquests = [
 	tConquestRomeCarthageInSpain,
 	tConquestRomeCarthage, 
@@ -230,6 +233,7 @@ dConquestChecker = {
 	tConquestMacedonPersia[0]: lambda tConquest: checkConquest(tConquest, tConquestMacedonMesopotamia),
 	tConquestRomeAnatolia[0]: lambda tConquest: checkConquest(tConquest, tConquestRomeGreece),
 	tConquestRomeLevant[0]: lambda tConquest: checkConquest(tConquest, tConquestRomeGreece),
+	tConquestRomeEgypt[0]: lambda tConquest: checkConquest(tConquest, tConquestRomeGreece),
 	tConquestRomeCarthage[0]: lambda tConquest: checkConquest(tConquest, tConquestRomeCarthageInSpain),
 	tConquestRomeBritain[0]: lambda tConquest: checkConquest(tConquest, tConquestRomeCelts),
 	tConquestArabiaSind[0]: lambda tConquest: checkConquest(tConquest, tConquestArabiaPersia),
@@ -238,6 +242,7 @@ dConquestChecker = {
 	tConquestByzantiumAndalusia[0]: lambda tConquest: checkByzantiumIfCarthageOwned(tConquest),
 	tConquestPersiaEgypt[0]: lambda tConquest: checkConquest(tConquest, tConquestPersiaLevant),
 	tConquestHannibalInItaly[0]: lambda tConquest: checkConquest(tConquest, tConquestCarthageInSpain),
+	tConquestRomeGreece[0]: lambda tConquest: checkConquest(tConquest, tDummyConquestRomeHoldingRome),
 }
 
 def checkByzantiumConquestOfCarthage(tConquest):
