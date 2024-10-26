@@ -647,6 +647,7 @@ def giveColonists(iPlayer):
 
 	if pPlayer.isExisting() and not pPlayer.isHuman() and pPlayer.getCurrentEra() >= iIndustrial and iCiv in dMaxColonistsIndustrial:
 		if pTeam.isHasTech(iExploration) and data.players[iPlayer].iColonistsAlreadyGivenIndustrial < dMaxColonistsIndustrial[iCiv]:
+			sourceCities = cities.core(iCiv).owner(iPlayer)
 
 			# help England with settling Canada and Australia
 			if iCiv == iEngland:
