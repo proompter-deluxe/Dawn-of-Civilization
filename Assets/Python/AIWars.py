@@ -243,6 +243,7 @@ dConquestChecker = {
 	tConquestPersiaEgypt[0]: lambda tConquest: checkConquest(tConquest, tConquestPersiaLevant),
 	tConquestHannibalInItaly[0]: lambda tConquest: checkConquest(tConquest, tConquestCarthageInSpain),
 	tConquestRomeGreece[0]: lambda tConquest: checkConquest(tConquest, tDummyConquestRomeHoldingRome),
+	tConquestRomeCelts[0]: lambda tConquest: checkConquest(tConquest, tDummyConquestRomeHoldingRome),
 }
 
 def checkByzantiumConquestOfCarthage(tConquest):
