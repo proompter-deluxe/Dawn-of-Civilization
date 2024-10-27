@@ -267,7 +267,6 @@ dSpawnResourcesDict = {
 dRemovedResourcesDict = {
 	(89, 45)  : -1500,# Wheat in Sumeria, Gulf Coast sea level changes affects Ur/Uruk/Eridu area
 	(78, 48)  : -1100,# Olives in Crete, Bronze Age collapse
-	(78, 49)  : -1100,# Fish in Crete, Bronze Age collapse
 	(88, 51)  : -200, # Olives in Assyria
 	(75, 51)  :  -50, # Silver in Greece
 	(77, 55)  :  -50, # Gold in Macedonia
@@ -318,6 +317,7 @@ dRemovedFeaturesDict = {
 	(88, 46)  : 1050, # Mesopotamia
 	(63, 65)  : 1500, # Netherlands
 	(62, 64)  : 1500, # Netherlands
+	(62, 65)  : 1500, # Netherlands
 	(99, 59)  : 1600, # Transoxiana
 	(98, 58)  : 1600, # Transoxiana
 	(96, 56)  : 1600, # Transoxiana
