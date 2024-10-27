@@ -553,7 +553,7 @@ barbarians = [
 	Barbarians(-300, 300, {iCamelRider: 1}, ((86, 38), (91, 45)), 10, NOMADS, target_area=((77, 39), (91, 50)), adjective="TXT_KEY_ADJECTIVE_BEDOUIN"),
 	Barbarians(-250, 300, {iAxeman: 1}, ((64, 59), (75, 65)), 8, INVADERS, target_area=((58, 52), (71, 62)), adjective="TXT_KEY_ADJECTIVE_GERMANIC"),
 	Barbarians(-250, 300, {iAxeman: 1}, ((64, 59), (75, 65)), 10, INVADERS, target_area=((58, 52), (71, 62)), adjective="TXT_KEY_ADJECTIVE_GERMANIC"),
-	Barbarians(-250, -100, {iHorseArcher: 3, iSavaran: 3, iCatapult: 2, iSwordsman: 2, iArcher: 2}, ((93, 51), (96, 55)), 4, INVADERS, target_area=((87, 45), (91, 50)), adjective="TXT_KEY_CIV_PERSIA_PARTHIAN", promotions=(iDesertAdaptation, iSteppeAdaptation)),
+	Barbarians(-250, -100, {iHorseArcher: 3, iSavaran: 3, iCatapult: 2, iSwordsman: 2, iArcher: 2}, ((95, 49), (97, 51)), 4, CLOSE_INVADERS, target_area=((87, 45), (91, 50)), adjective="TXT_KEY_CIV_PERSIA_PARTHIAN", promotions=(iDesertAdaptation, iSteppeAdaptation)),
 	Barbarians(-200, 100, {iHolkan: 1}, ((19, 38), (25, 44)), 7, NATIVES, adjective="TXT_KEY_ADJECTIVE_MAYA"),
 	Barbarians(-200, 200, {iWarGalley: 1}, ((59, 44), (84, 54)), 8, PIRATES),
 	Barbarians(-200, 300, {iCamelRider: 1}, ((56, 39), (71, 44)), 9, NOMADS, target_area=((54, 34), (76, 48)), adjective="TXT_KEY_ADJECTIVE_BERBER"),
