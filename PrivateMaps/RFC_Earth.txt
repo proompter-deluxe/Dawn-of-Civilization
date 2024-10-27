@@ -38393,7 +38393,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=85,y=49
-	BonusType=BONUS_WINE
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_PLAINS
 	PlotType=2
@@ -38862,6 +38861,7 @@ BeginPlot
 	x=86,y=50
 	isNOfRiver
 	RiverWEDirection=1
+	BonusType=BONUS_WINE
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_PLAINS
 	PlotType=2
