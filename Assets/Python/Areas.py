@@ -59,7 +59,7 @@ iThailand : 	(119, 37), # Ayutthaya
 iSweden : 		(73, 71), # Birka
 iCongo : 		(71, 25), # Mbanza Kongo
 iIran : 		(93, 48), # Esfahan
-iNetherlands :	(62, 64), # Amsterdam
+iNetherlands :	(62, 65), # Amsterdam
 iGermany : 		(70, 64), # Berlin
 iAmerica :		(29, 54), # Washington
 iArgentina :	(38, 13), # Buenos Aires

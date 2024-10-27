@@ -27785,7 +27785,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=62,y=64
-	RiverNSDirection=0
+	RiverNSDirection=2
 	isNOfRiver
 	RiverWEDirection=3
 	isWOfRiver
@@ -27795,18 +27795,21 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=62,y=65
+	RiverNSDirection=2
+	isWOfRiver
+	TerrainType=TERRAIN_LAGOON
+	FeatureType=FEATURE_MARSH, FeatureVariety=2
+	PlotType=2
+EndPlot
+BeginPlot
+	x=62,y=66
 	FeatureType=FEATURE_ISLANDS, FeatureVariety=0
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
 BeginPlot
-	x=62,y=66
-	BonusType=BONUS_CLAM
-	TerrainType=TERRAIN_COAST
-	PlotType=3
-EndPlot
-BeginPlot
 	x=62,y=67
+	BonusType=BONUS_CLAM
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -30810,6 +30813,7 @@ EndPlot
 BeginPlot
 	x=69,y=49
 	BonusType=BONUS_WHEAT
+	ImprovementType=IMPROVEMENT_FARM
 	TerrainType=TERRAIN_PLAINS
 	PlotType=2
 EndPlot
@@ -33636,12 +33640,12 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=75,y=49
+	BonusType=BONUS_WINE
 	TerrainType=TERRAIN_PLAINS
 	PlotType=2
 EndPlot
 BeginPlot
 	x=75,y=50
-	BonusType=BONUS_WINE
 	TerrainType=TERRAIN_PLAINS
 	PlotType=1
 EndPlot
@@ -35092,13 +35096,11 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=78,y=48
-	BonusType=BONUS_OLIVES
 	TerrainType=TERRAIN_PLAINS
 	PlotType=2
 EndPlot
 BeginPlot
 	x=78,y=49
-	BonusType=BONUS_FISH
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -35602,9 +35604,9 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=79,y=48
-	BonusType=BONUS_CLAM
-	TerrainType=TERRAIN_COAST
-	PlotType=3
+	BonusType=BONUS_OLIVES
+	TerrainType=TERRAIN_PLAINS
+	PlotType=2
 EndPlot
 BeginPlot
 	x=79,y=49
@@ -36073,17 +36075,18 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=80,y=47
-	TerrainType=TERRAIN_OCEAN
+	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
 BeginPlot
 	x=80,y=48
+	BonusType=BONUS_CLAM
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
 BeginPlot
 	x=80,y=49
-	TerrainType=TERRAIN_OCEAN
+	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
 BeginPlot
