@@ -31,7 +31,7 @@ tRomeMesopotamiaBR = (90, 50)
 
 iRomeAnatoliaYear = -100
 tRomeAnatoliaTL = (79, 51)
-tRomeAnatoliaBR = (88, 55)
+tRomeAnatoliaBR = (84, 55)
 
 iRomeCeltiaYear = -60
 tRomeCeltiaTL = (56, 55)
@@ -66,7 +66,7 @@ tConquestMacedonPersia = (7, iMacedon, iPersia, tGreecePersiaTL, tGreecePersiaBR
 tConquestRomeCarthageInSpain = (22, iRome, iPhoenicia, tRomeSpainTL, tRomeSpainBR, 3, iRomeCarthageYear, 10)
 tConquestRomeCarthage = (0, iRome, iPhoenicia, tRomeCarthageTL, tRomeCarthageBR, 4, iRomeCarthageYear + 20, 30)
 tConquestRomeGreece = (1, iRome, iGreece, tRomeGreeceTL, tRomeGreeceBR, 2, iRomeGreeceYear, 10)
-tConquestRomeAnatolia = (2, iRome, iMacedon, tRomeAnatoliaTL, tRomeAnatoliaBR, 3, iRomeAnatoliaYear, 15)
+tConquestRomeAnatolia = (2, iRome, iMacedon, tRomeAnatoliaTL, tRomeAnatoliaBR, 2, iRomeAnatoliaYear, 15)
 tConquestRomeLevant = (28, iRome, iMacedon, tLevantTL, tLevantBR, 2, iRomeLevantYear, 10)
 tConquestRomeCelts = (3, iRome, iCelts, tRomeCeltiaTL, tRomeCeltiaBR, 2, iRomeCeltiaYear, 10)
 tConquestRomeEgypt = (4, iRome, iEgypt, tEgyptTL, tEgyptBR, 3, iRomeEgyptYear, 10)
@@ -458,6 +458,7 @@ def spawnConquerors(iPlayer, iPreferredTarget, tTL, tBR, iNumTargets, iWarPlan =
 		iExtra = 1
 
 	tPlotLast = None
+	
 	for city in targetCities:	
 		if not player(iPlayer).isHuman():
 			# we want to be sure that the AI can fund these conquerors for at least a few turns
@@ -475,10 +476,10 @@ def spawnConquerors(iPlayer, iPreferredTarget, tTL, tBR, iNumTargets, iWarPlan =
 			# if Macedon happens to control Greece proper, give them volunteers
 			# otherwise give them mercenaries
 			if civ(plot(tAthens)) == iMacedon:
-				units = makeUnits(iPlayer, iHoplite, tPlot, 1, UnitAITypes.UNITAI_ATTACK_CITY)
+				lUnits = makeUnits(iPlayer, iHoplite, tPlot, 1, UnitAITypes.UNITAI_ATTACK_CITY)
 			else:
-				units = makeUnits(iPlayer, iHoplite, tPlot, 1, UnitAITypes.UNITAI_ATTACK_CITY)
-				units.promotion(infos.type("PROMOTION_MERCENARY"))
+				lUnits = makeUnits(iPlayer, iHoplite, tPlot, 1, UnitAITypes.UNITAI_ATTACK_CITY)
+				lUnits.promotion(infos.type("PROMOTION_MERCENARY"))
 
 			# Tyre gets extra attackers, since it's a tough nut to crack and the site of a famous siege
 			if location(city) == tTyre:
@@ -487,13 +488,13 @@ def spawnConquerors(iPlayer, iPreferredTarget, tTL, tBR, iNumTargets, iWarPlan =
 
 		# Hannibalic army composition
 		elif iCiv == iPhoenicia:
-			units  = makeUnits(iPlayer, iCatapult, tPlot, 2, UnitAITypes.UNITAI_ATTACK_CITY)
-			units += makeUnits(iPlayer, iSacredBand, tPlot, 1, UnitAITypes.UNITAI_ATTACK_CITY)
-			units += makeUnits(iPlayer, iOathsworn, tPlot, 2, UnitAITypes.UNITAI_ATTACK_CITY)
-			units += makeUnits(iPlayer, iHoplite, tPlot, 1, UnitAITypes.UNITAI_ATTACK_CITY)
-			units += makeUnits(iPlayer, iNumidianCavalry, tPlot, 1, UnitAITypes.UNITAI_ATTACK_CITY)
-			units += makeUnits(iPlayer, iWarElephant, tPlot, 1, UnitAITypes.UNITAI_ATTACK_CITY)
-			units.promotion(infos.type("PROMOTION_MERCENARY"))
+			lUnits  = makeUnits(iPlayer, iCatapult, tPlot, 2, UnitAITypes.UNITAI_ATTACK_CITY)
+			lUnits += makeUnits(iPlayer, iSacredBand, tPlot, 1, UnitAITypes.UNITAI_ATTACK_CITY)
+			lUnits += makeUnits(iPlayer, iOathsworn, tPlot, 2, UnitAITypes.UNITAI_ATTACK_CITY)
+			lUnits += makeUnits(iPlayer, iHoplite, tPlot, 1, UnitAITypes.UNITAI_ATTACK_CITY)
+			lUnits += makeUnits(iPlayer, iNumidianCavalry, tPlot, 1, UnitAITypes.UNITAI_ATTACK_CITY)
+			lUnits += makeUnits(iPlayer, iWarElephant, tPlot, 1, UnitAITypes.UNITAI_ATTACK_CITY)
+			lUnits.promotion(infos.type("PROMOTION_MERCENARY"))
 
 		elif iCiv in [iSpain, iEngland, iHolyRome, iFrance, iItaly]:
 			dConquestUnits = {
@@ -503,16 +504,16 @@ def spawnConquerors(iPlayer, iPreferredTarget, tTL, tBR, iNumTargets, iWarPlan =
 				iShockCity: min(iExtra * 2, 2),
 				iCounter: 1,
 			}
-			units = createRoleUnits(iPlayer, tPlot, dConquestUnits.items())
-			units.promotion(infos.type("PROMOTION_CITY_RAIDER1"))
+			lUnits = createRoleUnits(iPlayer, tPlot, dConquestUnits.items())
+			lUnits.promotion(infos.type("PROMOTION_CITY_RAIDER1"))
 		else:
 			dConquestUnits = {
 				iCityAttack: 2 + iExtra,
 				iCitySiege: 2 + 2 * iExtra,
 				iDefend: 1,
 			}
-			units = createRoleUnits(iPlayer, tPlot, dConquestUnits.items())
-			units.promotion(infos.type("PROMOTION_CITY_RAIDER1"))
+			lUnits = createRoleUnits(iPlayer, tPlot, dConquestUnits.items())
+			lUnits.promotion(infos.type("PROMOTION_CITY_RAIDER1"))
 	
 			if iCiv in [iTurks, iMongols]:
 				createRoleUnit(iPlayer, tPlot, iShockCity, 2)
@@ -520,7 +521,7 @@ def spawnConquerors(iPlayer, iPreferredTarget, tTL, tBR, iNumTargets, iWarPlan =
 
 	# if human, select to orient player
 	if pPlayer.isHuman():
-		conquerorUnit = units.at(tPlotLast).owner(iPlayer).where(lambda unit: unit.isFound()).last()
+		conquerorUnit = units.at(tPlotLast).owner(iPlayer).last()
 		if conquerorUnit:
 			interface.selectUnit(conquerorUnit, True, False, False)
 		

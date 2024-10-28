@@ -6956,7 +6956,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_CRUSADE_GENERIC_NO_SELECT_ANOTHER</Tag>
-		<English>No, we are too occupied, let another lead the Crusade.</English>
+		<English>No, we are too occupied. Let others lead the Crusade.</English>
 		<French></French>
 		<German></German>
 		<Italian></Italian>
@@ -6988,7 +6988,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_WORLDNEWS_CRUSADE_GENERIC_YES_DIVERT_HELP</Tag>
-		<English>[ICON_BULLET]Pay to divert an your new crusading force outside a random Orthodox city in the Balkans or Mediterranean and declare war on the owner of that city.</English>
+		<English>[ICON_BULLET]Pay to divert your crusading force outside a random Orthodox city in the Balkans or Mediterranean and declare war on the owner of that city.</English>
 		<French></French>
 		<German></German>
 		<Italian></Italian>

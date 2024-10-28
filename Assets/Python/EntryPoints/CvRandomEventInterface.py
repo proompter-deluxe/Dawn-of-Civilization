@@ -2911,7 +2911,7 @@ def doTriggerCrusadeAgainstAgainstHeathens(argsList):
 	spawnConquerors(iPlayer, -1, targetLocation, targetLocation, 1, WarPlanTypes.WARPLAN_TOTAL)
 
 def getHelpCrusadeAgainstAgainstHeathens(argsList):
-	return localText.getText("TXT_KEY_EVENT_WORLDNEWS_CRUSADE_GENERIC_YES_HELP")
+	return localText.getText("TXT_KEY_EVENT_WORLDNEWS_CRUSADE_GENERIC_YES_HELP", ())
 
 def canDoTriggerCrusadeAgainstOrthodox(argsList):
 	kTriggeredData = argsList[1]
@@ -2929,7 +2929,7 @@ def doTriggerCrusadeAgainstOrthodox(argsList):
 	spawnConquerors(iPlayer, -1, targetLocation, targetLocation, 1, WarPlanTypes.WARPLAN_TOTAL)
 
 def getHelpCrusadeAgainstOrthodox(argsList):
-	return localText.getText("TXT_KEY_EVENT_WORLDNEWS_CRUSADE_GENERIC_YES_DIVERT_HELP")
+	return localText.getText("TXT_KEY_EVENT_WORLDNEWS_CRUSADE_GENERIC_YES_DIVERT_HELP", ())
 
 def doTriggerCrusadeAgainstAgainstHeathensWithAnotherCatholic(argsList):
 	kTriggeredData = argsList[1]
@@ -2946,7 +2946,7 @@ def doTriggerCrusadeAgainstAgainstHeathensWithAnotherCatholic(argsList):
 	spawnConquerors(iNewCrusadeLeader, -1, targetLocation, targetLocation, 1, WarPlanTypes.WARPLAN_TOTAL)
 
 def getHelpCrusadeAgainstAgainstHeathensWithAnotherCatholic(argsList):
-	return localText.getText("TXT_KEY_EVENT_WORLDNEWS_CRUSADE_GENERIC_NO_SELECT_ANOTHER_HELP")
+	return localText.getText("TXT_KEY_EVENT_WORLDNEWS_CRUSADE_GENERIC_NO_SELECT_ANOTHER_HELP", ())
 
 ######## CRUSADE ###########
 
