@@ -1366,6 +1366,30 @@
 		<Spanish>Croesus</Spanish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_LEADER_MITHRIDATES</Tag>
+		<English>Mithridates I</English>
+		<French>Mithridates I</French>
+		<German>Mithridates I</German>
+		<Italian>Mithridates I</Italian>
+		<Spanish>Mithridates I</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_LEADER_AGAMEMNON</Tag>
+		<English>Agamemnon</English>
+		<French>Agamemnon</French>
+		<German>Agamemnon</German>
+		<Italian>Agamemnon</Italian>
+		<Spanish>Agamemnon</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_LEADER_ARIADNE</Tag>
+		<English>Ariadne</English>
+		<French>Ariadne</French>
+		<German>Ariadne</German>
+		<Italian>Ariadne</Italian>
+		<Spanish>Ariadne</Spanish>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_LEADER_</Tag>
 		<English></English>
 		<French></French>

@@ -238,6 +238,7 @@ dMasterTitles = {
 	iChina : "TXT_KEY_CIV_CHINESE_VASSAL",
 	iIndia : "TXT_KEY_CIV_INDIAN_VASSAL",
 	iPersia : "TXT_KEY_CIV_PERSIAN_VASSAL",
+	iParthia:  "TXT_KEY_CIV_PERSIAN_VASSAL",
 	iRome : "TXT_KEY_CIV_ROMAN_VASSAL",
 	iJapan : "TXT_KEY_CIV_JAPANESE_VASSAL",
 	iByzantium : "TXT_KEY_CIV_BYZANTINE_VASSAL",
@@ -563,10 +564,12 @@ dStartingLeaders = [
 	iColombia : iBolivar,
 	iBrazil : iPedro,
 	iCanada : iMacDonald,
-	iMamluks: iSaladin,
-	iMacedon: iAlexanderTheGreat,
-	iIroquois: iHiawatha,
-	iArmenia: iTigranes,
+	iMamluks : iSaladin,
+	iMacedon : iAlexanderTheGreat,
+	iIroquois : iHiawatha,
+	iArmenia : iTigranes,
+	iParthia : iMithridates,
+	iMinoans : iAriadne,
 },
 # 600 AD
 {
@@ -629,12 +632,6 @@ def onRespawn(iPlayer):
 	setDesc(iPlayer, defaultTitle(iPlayer))
 	checkName(iPlayer)
 	checkLeader(iPlayer)
-
-	# Sassanid revival
-	if civ(iPlayer) == iPersia and year() <= year(600):
-		makeUnits(iPlayer, iSavaran, tPersepolis, 5, UnitAITypes.UNITAI_ATTACK_CITY)
-		makeUnits(iPlayer, iSwordsman, tPersepolis, 3, UnitAITypes.UNITAI_ATTACK_CITY)
-		makeUnits(iPlayer, iCatapult, tPersepolis, 3, UnitAITypes.UNITAI_ATTACK_CITY)
 
 @handler("vassalState")	
 def onVassalState(iMaster, iVassal):
@@ -1319,9 +1316,12 @@ def specificAdjective(iPlayer):
 		if bResurrected:
 			return "TXT_KEY_CIV_HITTITES_LYDIAN_ADJECTIVE"
 			
-	elif iCiv == iGreece:
-		if iEra == iAncient:
-			return "TXT_KEY_CIV_GREECE_MYCENAEAN"
+	elif iCiv == iMinoans:
+		if year() >= year(dBirth[iGreece]):
+			return "TXT_KEY_CIV_MINOANS_ADJECTIVE"
+
+		if team(iPlayer).isHasTech(iSmelting) and team(iPlayer).isHasTech(iNavigation):
+			return "TXT_KEY_CIV_MINOANS_MYCENAEAN"
 			
 	elif iCiv == iIran:
 		if bEmpire:
@@ -1343,24 +1343,20 @@ def specificAdjective(iPlayer):
 		if pPlayer.isStateReligion() and iReligion < 0:
 			return "TXT_KEY_CIV_PERSIA_MEDIAN"
 	
-		if bEmpire:
-			if iEra <= iClassical:
-				if bResurrected:
-					return "TXT_KEY_CIV_PERSIA_PARTHIAN"
-				
-				if getColumn(iPlayer) < 6:
-					return "TXT_KEY_CIV_PERSIA_ACHAEMENID"
-			
-			if iEra <= iMedieval: 
-				return "TXT_KEY_CIV_PERSIA_SASSANID"
-				
+		if bEmpire:	
 			if iEra == iRenaissance:
 				return "TXT_KEY_CIV_PERSIA_SAFAVID"
 	
 			if iEra == iIndustrial:
 				return "TXT_KEY_CIV_PERSIA_QAJAR"
-	
-			return "TXT_KEY_CIV_PERSIA_PAHLAVI"
+			if iEra == iGlobal:
+				return "TXT_KEY_CIV_PERSIA_PAHLAVI"
+		
+			return "TXT_KEY_CIV_PERSIA_ACHAEMENID"
+		
+	elif iCiv == iParthia:
+		if iEra <= iMedieval: 
+			return "TXT_KEY_CIV_PERSIA_SASSANID"
 
 	elif iCiv == iPhoenicia:
 		if player(iCiv).getPeriod() == iPeriodTunisia:
@@ -1828,6 +1824,13 @@ def specificTitle(iPlayer, lPreviousOwners=[]):
 	elif iCiv == iPersia:
 		if bEmpire:
 			return "TXT_KEY_EMPIRE_ADJECTIVE"
+			
+		if bCityStates:
+			return "TXT_KEY_CITY_STATES_ADJECTIVE"
+		
+	elif iCiv == iParthia:
+		if iEra >= iMedieval:
+			return "TXT_KEY_CIV_SASSANID_SHAHDOM"
 
 		if bEmpire:
 			return "TXT_KEY_EMPIRE_ADJECTIVE"
@@ -2250,8 +2253,6 @@ def leader(iPlayer):
 	elif iCiv == iPersia:
 		if bResurrected and game.isReligionFounded(iIslam): return iAbbas
 
-		if getColumn(iPlayer) >= 6: return iKhosrow
-			
 		if bEmpire:
 			return iDarius
 			
@@ -2271,6 +2272,14 @@ def leader(iPlayer):
 		if iEra >= iIndustrial: return iAndranik
 
 		if iEra >= iMedieval or scenario() >= i600AD: return iAshot
+
+	elif iCiv == iMinoans:
+		if year() >= year(dBirth[iGreece]): return iAriadne
+		
+		if team(iPlayer).isHasTech(iSmelting) and team(iPlayer).isHasTech(iNavigation): return iAgamemnon
+
+	elif iCiv == iParthia:
+		if getColumn(iPlayer) >= 6: return iKhosrow
 
 	elif iCiv == iKorea:		
 		if iEra >= iRenaissance: return iSejong

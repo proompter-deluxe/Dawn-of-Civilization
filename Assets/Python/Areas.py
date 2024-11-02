@@ -72,6 +72,8 @@ iMamluks :	    (79, 43), # Cairo
 iMacedon:       (75, 54), # Pella
 iIroquois:      (30, 59), # "Mohawk"
 iArmenia:       (89, 53), # Dvin
+iParthia:       (94, 51), # Hekatompylos / Komis
+iMinoans:       (78, 48),  # Knossos
 })
 
 dPeriodCapitals = {
@@ -148,6 +150,8 @@ iMexico :		((9, 41),	(23, 49)),
 iColombia :		((26, 31),	(36, 38)),
 iBrazil :		((40, 16),	(49, 31)),
 iCanada : 		((6, 59),	(37, 68)),
+iParthia:       ((92, 51),  (95, 53)),
+iMacedon:       ((73, 53),  (79, 55)),
 })
 
 dExtendedBirthArea = CivDict({
@@ -211,7 +215,7 @@ iChina :		((120, 51),	(126, 56)),
 iChinaS :		((124, 43),	(131, 50)),
 iHittites :		((82, 52),	(85, 54)),
 iNubia :		((80, 37),	(81, 39)),
-iGreece :		((74, 49),	(80, 53)),
+iGreece :		((74, 48),	(80, 53)),
 iIndia :		((107, 44),	(111, 46)),
 iPhoenicia :	((84, 47),	(85, 49)),
 iPolynesia :	((3, 20),	(5, 23)),
@@ -265,9 +269,11 @@ iColombia :		((28, 34),	(30, 38)),
 iBrazil :		((42, 19),	(47, 25)),
 iCanada :		((26, 59),	(37, 62)),
 iBulgaria:      ((73, 55),  (78, 58)),
-iMacedon:       ((73, 53),  (79, 55)),
+iMacedon:       ((73, 53),  (78, 55)), # Byzantium not part of core
 iIroquois:      ((27, 58),  (30, 59)),
 iArmenia:       ((88, 52),  (90, 55)),
+iParthia:       ((89, 47),  (95, 52)),
+iMinoans:       ((77, 48),  (79, 48)),
 })
 
 dCoreAreaExceptions = CivDict({
@@ -355,6 +361,8 @@ iMughals :	((99, 42),	(104, 50)),
 iOttomans : ((78, 51),	(87, 55)),
 iPhoenicia: ((63, 43),  (70, 48)), # Tunisia, Hafsids
 iPersia :   ((92, 43),	(95, 50)),
+iParthia :  ((92, 43),	(95, 50)),
+iGreece :   ((74, 49),	(80, 53)), # doesn't flip Crete on respawn
 })
 
 dRespawnAreaExceptions = CivDict({
@@ -365,4 +373,5 @@ iTurks :	[(99, 48), (99, 49), (100, 48), (100, 49), (100, 50), (101, 48), (101, 
 iMughals :	[(102, 42), (102, 43), (102, 44), (102, 45), (103, 42), (103, 43), (103, 44), (103, 45), (104, 42), (104, 43), (104, 44), (104, 45)],
 iPhoenicia: [(70, 48)],
 iPersia :	[(94, 48), (94, 49), (94, 50), (95, 46), (95, 47), (95, 48), (95, 49), (95, 50)],
+iParthia :	[(94, 48), (94, 49), (94, 50), (95, 46), (95, 47), (95, 48), (95, 49), (95, 50)],
 }, [])

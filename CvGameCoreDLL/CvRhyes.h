@@ -11,10 +11,10 @@ typedef list<char*> LISTCHAR;
 
 #define MAX_COM_SHRINE			(20)
 
-#define BEGIN_WONDERS				(193) // increment if normal building (not for wonders) is added
+#define BEGIN_WONDERS				(195) // increment if normal building (not for wonders) is added
 #define BEGIN_GREAT_WONDERS			(BEGIN_WONDERS+13) // increment if a national wonder is added
 
-#define NUM_CIVS				(67)
+#define NUM_CIVS				(69)
 
 #define NUM_ERAS				(ERA_DIGITAL+1)
 
@@ -211,6 +211,7 @@ enum DoCBuildings
 	ORACLE, 
 	GREAT_WALL, 
 	ISHTAR_GATE, 
+	PALACE_OF_MINOS,
 
 	TERRACOTTA_ARMY, 
 	HANGING_GARDENS, 

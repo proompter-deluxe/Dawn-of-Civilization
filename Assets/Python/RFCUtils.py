@@ -726,11 +726,7 @@ def canRespawn(iCiv):
 	if player(iCiv).isAlive():
 		return False
 		
-	# check if only recently died, excepting Persia as an emirate respawn
-	if iCiv == iPersia and year().between(870, 1000):
-		if data.civs[iCiv].iLastTurnAlive > turn() - turns(5):
-			return False
-	elif data.civs[iCiv].iLastTurnAlive > turn() - turns(20):
+	if data.civs[iCiv].iLastTurnAlive > turn() - turns(20):
 		return False
 	
 	# check if the civ can be reborn at this date
@@ -754,6 +750,9 @@ def canRespawn(iCiv):
 	
 	# Iran cannot respawn if Persia is alive and vice versa
 	if exclusive(iCiv, iPersia, iIran):
+		return False
+	
+	if exclusive(iCiv, iParthia, iIran):
 		return False
 	
 	# Mexico cannot respawn if Aztecs are alive and vice versa

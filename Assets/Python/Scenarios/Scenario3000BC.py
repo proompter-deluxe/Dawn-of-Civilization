@@ -17,6 +17,10 @@ lCivilizations = [
 		techs=techs.of(iMining, iPottery, iAgriculture, iPastoralism, iProperty)
 	),
 	Civilization(
+		iMinoans,
+		techs=techs.of(iPastoralism, iPottery, iAgriculture, iSailing, iTanning)
+	),
+	Civilization(
 		iNative,
 		techs=techs.of(iTanning, iMythology)
 	),

@@ -75,7 +75,7 @@ def canBeRazed(city):
 
 	# always raze cities for certain early age civs, except holy city
 	if not player(city).isHuman():
-		if civ(city) in [iHarappa, iHittites]:
+		if civ(city) in [iHarappa, iHittites, iMinoans]:
 			return True
 	
 	if city.getPopulation() >= 10:

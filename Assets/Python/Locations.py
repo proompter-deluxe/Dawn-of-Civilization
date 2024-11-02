@@ -82,3 +82,4 @@ tPella = (75, 54)
 tTyre = (85, 47) # Tyre moved to the same tile as Damascus
 tAthens = (76, 51)
 tTrebizond = (86, 54)
+tMycenae = (75, 50)

@@ -1255,6 +1255,15 @@
 			<DefaultBuilding>BUILDING_ISHTAR_GATE</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
+			<Type>BUILDINGCLASS_PALACE_OF_MINOS</Type>
+			<Description>TXT_KEY_BUILDING_PALACE_OF_MINOS</Description>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
+			<iMaxTeamInstances>-1</iMaxTeamInstances>
+			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
+			<iExtraPlayerInstances>0</iExtraPlayerInstances>
+			<DefaultBuilding>BUILDING_PALACE_OF_MINOS</DefaultBuilding>
+		</BuildingClassInfo>
+		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_TERRACOTTA_ARMY</Type>
 			<Description>TXT_KEY_BUILDING_TERRACOTTA_ARMY</Description>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>

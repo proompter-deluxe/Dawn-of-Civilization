@@ -3951,8 +3951,8 @@ It is fine for a human player mouse-over (which is what it is used for).
 void createTestFontString(CvWStringBuffer& szString)
 {
 	int iI;
-	szString.assign(L"!\"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[Ч]^_`abcdefghijklmnopqrstuvwxyz\n");
-	szString.append(L"{}~\\ЯАБВГДЕЖЗИЙКЛМНОПРСТУФХЦШЩЪЫЬЭЮџЯабвгдежзийклмнопрстуфхцчшщъыьэюяїЎ«»°ЉЊЋљњћ™©®ЂЈў”‘“…’");
+	szString.assign(L"!\"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[пїЅ]^_`abcdefghijklmnopqrstuvwxyz\n");
+	szString.append(L"{}~\\пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅЮџпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ");
 	for (iI=0;iI<NUM_YIELD_TYPES;++iI)
 		szString.append(CvWString::format(L"%c", GC.getYieldInfo((YieldTypes) iI).getChar()));
 
@@ -18777,8 +18777,8 @@ void CvGameTextMgr::parseGreatPeopleHelp(CvWStringBuffer &szBuffer, CvCity& city
 		iModifier += GET_PLAYER(city.getOwner()).getCommercePercent(COMMERCE_GOLD);
 	}
 
-	// Leoreth: Greek UP
-	if (city.getCivilizationType() == GREECE && GET_PLAYER(city.getOwnerINLINE()).getCurrentEra() <= ERA_CLASSICAL)
+	// Leoreth: Minoan UP
+	if (city.getCivilizationType() == MINOANS && GET_PLAYER(city.getOwnerINLINE()).getCurrentEra() <= ERA_CLASSICAL)
 	{
 		szBuffer.append(gDLL->getText("TXT_KEY_MISC_HELP_GREATPEOPLE_UNIQUE_POWER", 150));
 		szBuffer.append(NEWLINE);

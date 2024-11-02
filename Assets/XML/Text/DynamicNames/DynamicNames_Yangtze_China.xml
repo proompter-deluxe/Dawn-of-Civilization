@@ -3,15 +3,15 @@
 <Civ4GameText xmlns="http://www.firaxis.com">
 	<TEXT>
 		<Tag>TXT_KEY_CIV_YANGTZE_CHINA_DESC</Tag>
-		<English>The Yangtze Chinese</English>
+		<English>The Wu</English>
 		<French>
-			<Text>Les Chinois du Yangtze</Text>
+			<Text>Les Wus</Text>
 			<Gender>Male</Gender>
 			<Plural>1</Plural>
 		</French>
-		<German>The Yangtze Chinese</German>
-		<Italian>The Yangtze Chinese</Italian>
-		<Spanish>The Yangtze Chinese</Spanish>
+		<German>The Wu</German>
+		<Italian>The Wu</Italian>
+		<Spanish>The Wu</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIV_YANGTZE_CHINA_PEOPLES</Tag>

@@ -98,18 +98,6 @@
 		<Spanish>Median</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CIV_PERSIA_PARTHIAN</Tag>
-		<English>Parthian</English>
-		<French>
-			<Text>parthe:parthe:parthes:parthes</Text>
-			<Gender>Male:Female:Male:Female</Gender>
-			<Plural>0:0:1:1</Plural>
-		</French>
-		<German>Parthian</German>
-		<Italian>Parthian</Italian>
-		<Spanish>Parthian</Spanish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_CIV_PERSIA_ACHAEMENID</Tag>
 		<English>Achaemenid</English>
 		<French>ach&#233;m&#233;nide</French>

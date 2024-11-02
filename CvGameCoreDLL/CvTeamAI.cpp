@@ -1872,6 +1872,13 @@ DenialTypes CvTeamAI::AI_surrenderTrade(TeamTypes eTeam, int iPowerMultiplier) c
 		int iRawVassalPower = getPower(true);
 		int iVassalPower = (iRawVassalPower * (iPowerMultiplier + iPersonalityModifier / std::max(1, iMembers))) / 100;
 
+		// Persia UP: double effective power for calculation of vassalization
+		if (GET_PLAYER(GET_TEAM(eTeam).getLeaderID()).getCivilizationType() == PERSIA)
+		{
+			iMasterPower *= 2;
+			iTotalMasterPower *= 2;
+		}
+
 		int iTotalPopulation = GC.getGameINLINE().getTotalPopulation();
 		int iMasterPopulation = GET_TEAM(eTeam).getTotalPopulation();
 		int iVassalPopulation = getTotalPopulation();

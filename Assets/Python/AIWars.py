@@ -180,13 +180,17 @@ tCarthageSpainTL = (56, 48)
 tCarthageSpainBR = (60, 51)
 tConquestCarthageInSpain = (34, iPhoenicia, iIndependent2, tCarthageSpainTL, tCarthageSpainBR, 3, iCarthageInSpainYear, 5)
 
-iHannibalInItaly = -220
+iHannibalInItalyYear = -220
 tHannibalInItalyTL = (65, 57)
 tHannibalInItalyBR = (67, 57)
-tConquestHannibalInItaly = (35, iPhoenicia, iRome, tHannibalInItalyTL, tHannibalInItalyBR, 1, iHannibalInItaly, 10)
+tConquestHannibalInItaly = (35, iPhoenicia, iRome, tHannibalInItalyTL, tHannibalInItalyBR, 1, iHannibalInItalyYear, 10)
 
 # used for checking a precondition
 tDummyConquestRomeHoldingRome= (36, iRome, iBarbarian, tRome, tRome, 1, -3000, 10)
+
+
+iParthiaMesopotamiaYear = 220
+tConquestParthiaMesopotamia = (37, iParthia, iRome, tLevantTL, tGreeceMesopotamiaBR, 3, iParthiaMesopotamiaYear, 10)
 
 lConquests = [
 	tConquestRomeCarthageInSpain,
@@ -224,6 +228,7 @@ lConquests = [
 	tConquestPersiaEgypt,
 	tConquestCarthageInSpain,
 	tConquestHannibalInItaly,
+	tConquestParthiaMesopotamia,
 ]
 
 dConquestChecker = {
@@ -471,7 +476,6 @@ def spawnConquerors(iPlayer, iPreferredTarget, tTL, tBR, iNumTargets, iWarPlan =
 			makeUnits(iPlayer, iCatapult, tPlot, 2, UnitAITypes.UNITAI_ATTACK_CITY)
 			makeUnits(iPlayer, iPhalanx, tPlot, 2, UnitAITypes.UNITAI_ATTACK_CITY)
 			makeUnits(iPlayer, iCompanion, tPlot, 2, UnitAITypes.UNITAI_ATTACK_CITY)
-			makeUnits(iPlayer, iArcher, tPlot, 1)
 
 			# if Macedon happens to control Greece proper, give them volunteers
 			# otherwise give them mercenaries
@@ -496,7 +500,7 @@ def spawnConquerors(iPlayer, iPreferredTarget, tTL, tBR, iNumTargets, iWarPlan =
 			lUnits += makeUnits(iPlayer, iWarElephant, tPlot, 1, UnitAITypes.UNITAI_ATTACK_CITY)
 			lUnits.promotion(infos.type("PROMOTION_MERCENARY"))
 
-		elif iCiv in [iSpain, iEngland, iHolyRome, iFrance, iItaly]:
+		elif iCiv in [iSpain, iEngland, iHolyRome, iFrance, iItaly, iParthia]:
 			dConquestUnits = {
 				iCityAttack: 1 + iExtra,
 				iCitySiege: 2 + iExtra,

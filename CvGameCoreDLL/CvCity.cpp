@@ -6793,8 +6793,8 @@ int CvCity::getTotalGreatPeopleRateModifier() const
 		iModifier += GC.getDefineINT("GOLDEN_AGE_GREAT_PEOPLE_MODIFIER");
 	}
 
-	// Leoreth: Greek UP
-	if (getCivilizationType() == GREECE && GET_PLAYER(getOwnerINLINE()).getCurrentEra() <= ERA_CLASSICAL)
+	// Leoreth: Minoan UP
+	if (getCivilizationType() == MINOANS && GET_PLAYER(getOwnerINLINE()).getCurrentEra() <= ERA_CLASSICAL)
 	{
 		iModifier += 150;
 	}

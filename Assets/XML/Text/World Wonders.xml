@@ -3265,4 +3265,13 @@
 		<Italian>University of Sankore produced %d1 [ICON_GOLD] after receiving [COLOR_HIGHLIGHT_TEXT]%s2[COLOR_REVERT] in trade.</Italian>
 		<Spanish>University of Sankore produced %d1 [ICON_GOLD] after receiving [COLOR_HIGHLIGHT_TEXT]%s2[COLOR_REVERT] in trade.</Spanish>
 	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_PALACE_OF_MINOS</Tag>
+		<English>Palace of Minos</English>
+		<French>Palace of Minos</French>
+		<German>Palace of Minos</German>
+		<Italian>Palace of Minos</Italian>
+		<Spanish>Palace of Minos</Spanish>
+	</TEXT>
+	
 </Civ4GameText>

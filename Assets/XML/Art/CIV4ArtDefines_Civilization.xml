@@ -438,5 +438,17 @@
 			<Path>Art/Interface/TeamColor/FlagDECAL_Armenia.dds</Path>
 			<bWhiteFlag>0</bWhiteFlag>
 		</CivilizationArtInfo>
+		<CivilizationArtInfo>
+			<Type>ART_DEF_CIVILIZATION_PARTHIA</Type>
+			<Button>Art/Interface/Buttons/Civilizations/parthia.dds</Button>
+			<Path>Art/Interface/TeamColor/FlagDECAL_Parthia.dds</Path>
+			<bWhiteFlag>0</bWhiteFlag>
+		</CivilizationArtInfo>
+		<CivilizationArtInfo>
+			<Type>ART_DEF_CIVILIZATION_MINOANS</Type>
+			<Button>Art/Interface/Buttons/Civilizations/minoans.dds</Button>
+			<Path>Art/Interface/TeamColor/FlagDECAL_Minoans.dds</Path>
+			<bWhiteFlag>0</bWhiteFlag>
+		</CivilizationArtInfo>
 	</CivilizationArtInfos>
 </Civ4ArtDefines>

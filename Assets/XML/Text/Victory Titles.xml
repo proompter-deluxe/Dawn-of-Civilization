@@ -1552,4 +1552,54 @@
 		<Italian>Bulwark of Europe</Italian>
 		<Spanish>Bulwark of Europe</Spanish>
 	</TEXT>
+
+	<TEXT>
+		<Tag>TXT_KEY_VICTORY_TITLE_PAR1</Tag>
+		<English>Imperial Rejuvenation</English>
+		<French>Imperial Rejuvenation</French>
+		<German>Imperial Rejuvenation</German>
+		<Italian>Imperial Rejuvenation</Italian>
+		<Spanish>Imperial Rejuvenation</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_VICTORY_TITLE_PAR2</Tag>
+		<English>Imperial Humiliation</English>
+		<French>Imperial Humiliation</French>
+		<German>Imperial Humiliation</German>
+		<Italian>Imperial Humiliation</Italian>
+		<Spanish>Imperial Humiliation</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_VICTORY_TITLE_PAR3</Tag>
+		<English>The Legacy Endures</English>
+		<French>The Legacy Endures</French>
+		<German>The Legacy Endures</German>
+		<Italian>The Legacy Endures</Italian>
+		<Spanish>The Legacy Endures</Spanish>
+	</TEXT>
+
+	<TEXT>
+		<Tag>TXT_KEY_VICTORY_TITLE_MNO1</Tag>
+		<English>The First Naval Empire</English>
+		<French>The First Naval Empire</French>
+		<German>The First Naval Empire</German>
+		<Italian>The First Naval Empire</Italian>
+		<Spanish>The First Naval Empire</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_VICTORY_TITLE_MNO2</Tag>
+		<English>The Illiad</English>
+		<French>The Illiad</French>
+		<German>The Illiad</German>
+		<Italian>The Illiad</Italian>
+		<Spanish>The Illiad</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_VICTORY_TITLE_MNO3</Tag>
+		<English>The Odyssey</English>
+		<French>The Odyssey</French>
+		<German>The Odyssey</German>
+		<Italian>The Odyssey</Italian>
+		<Spanish>The Odyssey</Spanish>
+	</TEXT>
 </Civ4GameText>

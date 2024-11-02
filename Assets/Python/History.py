@@ -191,16 +191,7 @@ def checkEarlyColonists():
 				makeUnits(iPhoenicia, iWorker, tCarthage, 2, UnitAITypes.UNITAI_WORKER)
 				makeUnits(iPhoenicia, iWarElephant, tCarthage, 2)
 		elif year() == year(-750) - offset:
-			giveEarlyColonists(iGreece)
 			giveEarlyColonists(iPhoenicia)
-		elif year() == year(-725) - offset:
-			giveEarlyColonists(iGreece)
-		elif year() == year(-700) - offset:
-			giveEarlyColonists(iGreece)
-		elif year() == year(-650) - offset:
-			giveEarlyColonists(iGreece)
-		elif year() == year(-600) - offset:
-			giveEarlyColonists(iGreece)
 		
 @handler("BeginGameTurn")
 def checkLateColonists():

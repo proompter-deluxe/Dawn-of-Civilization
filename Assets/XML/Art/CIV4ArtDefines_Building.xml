@@ -1808,6 +1808,16 @@
 			<Button>Art/Structures/Wonders/Ishtar/Ishtar.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_PALACE_OF_MINOS</Type>
+			<LSystem>LSYSTEM_3x3</LSystem>
+			<bAnimated>0</bAnimated>
+			<fScale>1.4</fScale>
+			<fInterfaceScale>0.64</fInterfaceScale>
+			<NIF>Art/Structures/Wonders/PalaceOfMinos_aka_DariusPalace/darius.nif</NIF>
+			<KFM/>
+			<Button>Art/Structures/Wonders/PalaceOfMinos_aka_DariusPalace/palace_of_minos_btn.dds</Button>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_TERRACOTTA_ARMY</Type>
 			<LSystem>LSYSTEM_3x3</LSystem>
 			<bAnimated>0</bAnimated>
@@ -3806,6 +3816,26 @@
 			<NIF>Art/Structures/Buildings/IroquoisLonghouse/IroquoisLH.nif</NIF>
 			<KFM/>
 			<Button>Art/Structures/Buildings/IroquoisLonghouse/longhouse.dds</Button>
-		</BuildingArtInfo>	
+		</BuildingArtInfo>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_MINOAN_ANAKTORA</Type>
+			<LSystem>LSYSTEM_2x2</LSystem>
+			<bAnimated>0</bAnimated>
+			<fScale>1.5</fScale>
+			<fInterfaceScale>0.5</fInterfaceScale>
+			<NIF>Art/Structures/Buildings/Anaktora/Anaktora.nif</NIF>
+			<KFM/>
+			<Button>Art/Structures/Buildings/Anaktora/anaktora_btn.dds</Button>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_PERSIAN_POLO_FIELD</Type>
+			<LSystem>LSYSTEM_2x2</LSystem>
+			<bAnimated>0</bAnimated>
+			<fScale>1.5</fScale>
+			<fInterfaceScale>0.5</fInterfaceScale>
+			<NIF>Art/Structures/Buildings/PoloField/Central_Park.nif</NIF>
+			<KFM/>
+			<Button>Art/Structures/Buildings/PoloField/polofield_btn.dds</Button>
+		</BuildingArtInfo>
 	</BuildingArtInfos>
 </Civ4ArtDefines>

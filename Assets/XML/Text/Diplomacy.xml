@@ -613,6 +613,30 @@
 		<Spanish>Greetings! I am [OUR_NAME] of the [OUR_EMPIRE]. I hope that our two great peoples can live together in peace, but if we cannot, I will fight you even if you have a vastly superior army!</Spanish>
 	</TEXT>
 	<TEXT>
+		<Tag>AI_DIPLO_FIRST_CONTACT_LEADER_MITHRIDATES_1</Tag>
+		<English>Placeholder for AI_DIPLO_FIRST_CONTACT_LEADER_MITHRIDATES_1</English>
+		<French></French>
+		<German></German>
+		<Italian></Italian>
+		<Spanish></Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_FIRST_CONTACT_LEADER_AGAMEMNON_1</Tag>
+		<English>Placeholder for AI_DIPLO_FIRST_CONTACT_LEADER_AGAMEMNON_1</English>
+		<French></French>
+		<German></German>
+		<Italian></Italian>
+		<Spanish></Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_FIRST_CONTACT_LEADER_ARIADNE_1</Tag>
+		<English>Placeholder for AI_DIPLO_FIRST_CONTACT_LEADER_ARIADNE_1</English>
+		<French></French>
+		<German></German>
+		<Italian></Italian>
+		<Spanish></Spanish>
+	</TEXT>
+	<TEXT>
 		<Tag>AI_DIPLO_FIRST_CONTACT_LEADER_</Tag>
 		<English></English>
 		<French></French>

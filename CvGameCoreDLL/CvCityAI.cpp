@@ -2391,6 +2391,7 @@ UnitTypes CvCityAI::AI_bestUnit(bool bAsync, AdvisorTypes eIgnoreAdvisor, UnitAI
 		aiUnitAIVal[UNITAI_CITY_DEFENSE] *= 3;
 		aiUnitAIVal[UNITAI_CITY_COUNTER] *= 2;
 		break;
+	case MINOANS:
 	case GREECE:
 		aiUnitAIVal[UNITAI_SETTLE] *= 2;
 		aiUnitAIVal[UNITAI_EXPLORE] *= 2;
@@ -2428,6 +2429,7 @@ UnitTypes CvCityAI::AI_bestUnit(bool bAsync, AdvisorTypes eIgnoreAdvisor, UnitAI
 		aiUnitAIVal[UNITAI_SETTLER_SEA] *= 3;
 		aiUnitAIVal[UNITAI_EXPLORE_SEA] *= 2;
 		break;
+	case PARTHIA:
 	case PERSIA:
 		aiUnitAIVal[UNITAI_ATTACK] *= 2;
 		break;

@@ -58,3 +58,18 @@ BeginPlot
 		UnitOwner=CIVILIZATION_HARAPPANS
 	EndUnit
 EndPlot
+BeginPlot
+	x=78,y=48
+	BeginUnit
+		UnitType=UNIT_MILITIA
+		UnitOwner=CIVILIZATION_MINOANS
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_WORKER
+		UnitOwner=CIVILIZATION_MINOANS
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_SETTLER
+		UnitOwner=CIVILIZATION_MINOANS
+	EndUnit
+EndPlot

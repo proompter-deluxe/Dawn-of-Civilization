@@ -8,12 +8,12 @@ from pathlib import Path
 iWorldX = 150
 iWorldY = 80
 
-iNumCivs = 72
+iNumCivs = 74
 (iAmerica, iArabia, iArgentina, iArmenia, iAssyria, iAztecs, iBabylonia, iBrazil, iBulgaria, iBurma, iByzantium, iCanada, 
 iPhoenicia, iCelts, iChina, iChinaS, iColombia, iDravidia, iEgypt, iEngland, iEthiopia, iFrance, iGermany, 
 iGreece, iHarappa, iHittites, iHolyRome, iInca, iIndia, iIran, iIroquois, iItaly, iJapan, iJava, 
-iKhmer, iCongo, iKorea, iKushans, iMacedon, iMalays, iMali, iMamluks, iMaya, iMexico, iMongols, iMoors, 
-iMughals, iNetherlands, iNorse, iNubia, iOttomans, iPersia, iPoland, iPolynesia, iPortugal, 
+iKhmer, iCongo, iKorea, iKushans, iMacedon, iMalays, iMali, iMamluks, iMaya, iMexico, iMinoans, iMongols, iMoors, 
+iMughals, iNetherlands, iNorse, iNubia, iOttomans, iParthia, iPersia, iPoland, iPolynesia, iPortugal, 
 iRome, iRus, iRussia, iSpain, iSwahili, iSweden, iThailand, iTibet, iToltecs, 
 iTurks, iVietnam, iZulu, iIndependent, iIndependent2, iNative, iMinor, iBarbarian) = range(iNumCivs)
 
@@ -89,6 +89,8 @@ dCivNames = {
 	iMacedon: "Macedonia",
 	iIroquois: "Iroquois",
 	iArmenia: "Armenia",
+	iParthia: "Parthia",
+	iMinoans: "Minoans",
 }
 
 dReligionNames = {

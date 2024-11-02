@@ -42,6 +42,7 @@ TENOCHTITLAN = "TXT_KEY_VICTORY_NAME_TENOCHTITLAN"
 TOLLAN = "TXT_KEY_VICTORY_NAME_TOLLAN"
 VIENNA = "TXT_KEY_VICTORY_NAME_VIENNA"
 TARNOVO = "TXT_KEY_VICTORY_NAME_TARNOVO"
+MYCENAE = "TXT_KEY_VICTORY_NAME_MYCENAE"
 
 # city descriptors
 ANOTHER_CAPITAL = "TXT_KEY_VICTORY_NAME_ANOTHER_CAPITAL"
@@ -117,6 +118,7 @@ WEST_AFRICA = "TXT_KEY_VICTORY_NAME_WEST_AFRICA"
 GREECE = "TXT_KEY_VICTORY_NAME_GREECE"
 CRIMEA = "TXT_KEY_VICTORY_NAME_CRIMEA"
 ATTICA = "TXT_KEY_VICTORY_NAME_ATTICA"
+MEDITERRANEAN_COAST = "TXT_KEY_VICTORY_NAME_MEDITERRANEAN_COAST"
 
 # area descriptors
 ANDEAN_COAST = "TXT_KEY_VICTORY_NAME_ANDEAN_COAST"
@@ -730,6 +732,29 @@ dGoals = {
 			AttitudeCount(AttitudeTypes.ATTITUDE_FRIENDLY, 3, iStateReligion=iOrthodoxy),
 			at=1919,
 		),
+	),
+	iParthia: (
+		BestPopulationCity(capital().named(CAPITAL), at=-50),
+		DefeatedUnits(civs(iRome, iByzantium), 50, by=500),
+		LandPercent(7, at=800),
+	),
+	iMinoans: (
+		# the first naval empire
+		All(
+			TradeRouteCount(4, by=-1250),
+			UnitCombatLevelCount(UnitCombatTypes.UNITCOMBAT_NAVAL, 1, 6, by=-1000),
+		),
+		# the Illiad
+		All(
+			RazeCount(1, by=-1150),
+			CitySpecialistCount(city(tMycenae).named(MYCENAE), great_people(), 2, by=-900),
+		),
+		# the Odyssey
+		All(
+			RevealedPercent(plots.regions(rMediterraneanSea).named(MEDITERRANEAN), 100, by=-1300),
+			ControlledResourceCount(iDye, 1, by=-1000),
+			ResourceCount(sum(lHappinessResources).named(HAPPINESS_RESOURCES), 5, by=-900),
+		)
 	),
 	iIroquois: (
 		EnterEraBefore(iIndustrial, iDigital),

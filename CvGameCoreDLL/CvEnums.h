@@ -1215,6 +1215,7 @@ enum CivilizationTypes		// Exposed to Python
 	MAMLUKS,
 	MAYA,
 	MEXICO,
+	MINOANS,
 	MONGOLS,
 	MOORS,
 
@@ -1223,6 +1224,7 @@ enum CivilizationTypes		// Exposed to Python
 	NORSE,
 	NUBIA,
 	OTTOMANS,
+	PARTHIA,
 	PERSIA,
 	POLAND,
 	POLYNESIA,

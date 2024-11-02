@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Greece -->
+<Civ4GameText xmlns="http://www.firaxis.com">
+	<TEXT>
+		<Tag>TXT_KEY_CIV_MINOANS_DESC</Tag>
+		<English>The Minoans</English>
+		<French>The Minoans</French>
+		<German>The Minoans</German>
+		<Italian>The Minoans</Italian>
+		<Spanish>The Minoans</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_MINOANS_PEOPLES</Tag>
+		<English>Minoan Peoples</English>
+		<French>Minoan Peoples</French>
+		<German>Minoan Peoples</German>
+		<Italian>Minoan Peoples</Italian>
+		<Spanish>Minoan Peoples</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_MINOANS_DEFAULT</Tag>
+		<English>%s2 Palace Complexes</English>
+		<French>%s2 Palace Complexes</French>
+		<German>%s2 Palace Complexes</German>
+		<Italian>%s2 Palace Complexes</Italian>
+		<Spanish>%s2 Palace Complexes</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_MINOANS_ADJECTIVE</Tag>
+		<English>Minoan</English>
+		<French>Minoan</French>
+		<German>Minoan</German>
+		<Italian>Minoan</Italian>
+		<Spanish>Minoan</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_MINOANS_SHORT_DESC</Tag>
+		<English>Minoans</English>
+		<French>Minoans</French>
+		<German>Minoans</German>
+		<Italian>Minoans</Italian>
+		<Spanish>Minoans</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_MINOANS_MYCENAEAN</Tag>
+		<English>Mycenaean</English>
+		<French>Mycenaean</French>
+		<German>Mycenaean</German>
+		<Italian>Mycenaean</Italian>
+		<Spanish>Mycenaean</Spanish>
+	</TEXT>
+</Civ4GameText>

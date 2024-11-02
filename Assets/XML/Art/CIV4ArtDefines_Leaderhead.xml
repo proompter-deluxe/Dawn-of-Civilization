@@ -1182,5 +1182,29 @@
 			<NoShaderNIF>Art/Leaderheads/Andranik/josef_stalin_noshader.nif</NoShaderNIF>
 			<BackgroundKFM>Art/Leaderheads/Andranik/josef_stalin_BG.kfm</BackgroundKFM>
 		</LeaderheadArtInfo>
+		<LeaderheadArtInfo>
+			<Type>ART_DEF_LEADER_ARIADNE</Type>
+			<Button>Art/Leaderheads/Ariadne/Ariadne.dds</Button>
+			<NIF>Art/Leaderheads/Ariadne/elizabeth.nif</NIF>
+			<KFM>Art/LeaderHeads/Elizabeth/elizabeth.kfm</KFM>
+			<NoShaderNIF>Art/Leaderheads/Ariadne/elizabeth.nif</NoShaderNIF>
+			<BackgroundKFM>Art/Leaderheads/Ariadne/peter_bg.kfm</BackgroundKFM>
+		</LeaderheadArtInfo>
+		<LeaderheadArtInfo>
+			<Type>ART_DEF_LEADER_AGAMEMNON</Type>
+			<Button>Art/Leaderheads/Agamemnon/agamemnonbut.dds</Button>
+			<NIF>Art/Leaderheads/Agamemnon/hannibal.nif</NIF>
+			<KFM>Art/Leaderheads/Agamemnon/hannibal.kfm</KFM>
+			<NoShaderNIF>Art/Leaderheads/Agamemnon/hannibal_nonshader.nif</NoShaderNIF>
+			<BackgroundKFM>Art/Leaderheads/Agamemnon/hannibal_BG.kfm</BackgroundKFM>
+		</LeaderheadArtInfo>
+		<LeaderheadArtInfo>
+			<Type>ART_DEF_LEADER_MITHRIDATES</Type>
+			<Button>Art/Leaderheads/Mithridates_aka_Odysseus/mithridates_btn.dds</Button> <!-- FIXME -->
+			<NIF>Art/Leaderheads/Mithridates_aka_Odysseus/odysseusbeard.nif</NIF>
+			<KFM>Art/Leaderheads/Mithridates_aka_Odysseus/cunne_shote.kfm</KFM>
+			<NoShaderNIF>Art/Leaderheads/Mithridates_aka_Odysseus/odysseusbeard.nif</NoShaderNIF>
+			<BackgroundKFM>Art/Leaderheads/Mithridates_aka_Odysseus/cunne_shote_bg.kfm</BackgroundKFM>
+		</LeaderheadArtInfo>
 	</LeaderheadArtInfos>
 </Civ4ArtDefines>

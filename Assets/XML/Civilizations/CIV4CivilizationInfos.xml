@@ -1862,6 +1862,7 @@
 			<bPlayable>1</bPlayable>
 			<bAIPlayable>1</bAIPlayable>
 			<Cities>
+				<City>Menefer</City>
 				<City>Akhetaten</City>
 				<City>Djeba</City>
 				<City>Djedet</City>
@@ -2441,9 +2442,9 @@
 			<PaganReligion>PAGAN_RELIGION_OLYMPIANISM</PaganReligion>
 			<Impact>IMPACT_CRITICAL</Impact>
 			<Identifier>GRE</Identifier>
-			<StartingYear>-1600</StartingYear>
+			<StartingYear>-900</StartingYear>
 			<LoadingTimes>
-				<LoadingTime>1</LoadingTime>
+				<LoadingTime>3</LoadingTime>
 				<LoadingTime>0</LoadingTime>
 				<LoadingTime>0</LoadingTime>
 			</LoadingTimes>
@@ -2583,6 +2584,7 @@
 			<bPlayable>1</bPlayable>
 			<bAIPlayable>1</bAIPlayable>
 			<Cities>
+				<City>Sibipura</City>
 				<City>Kolhapur</City>
 				<City>Lucknow</City>
 				<City>Rajshahi</City>
@@ -4668,6 +4670,133 @@
 			<CivilizationActionSound>AS3D_SPAIN_ORDER</CivilizationActionSound>
 		</CivilizationInfo>
 		<CivilizationInfo>
+			<Type>CIVILIZATION_MINOANS</Type>
+			<Description>TXT_KEY_CIV_MINOANS_DESC</Description>
+			<ShortDescription>TXT_KEY_CIV_MINOANS_SHORT_DESC</ShortDescription>
+			<Adjective>TXT_KEY_CIV_MINOANS_ADJECTIVE</Adjective>
+			<Civilopedia>TXT_KEY_CIV_MINOANS_PEDIA</Civilopedia>
+			<DefaultPlayerColor>PLAYERCOLOR_VERYDARK_BLUE</DefaultPlayerColor>
+			<ArtDefineTag>ART_DEF_CIVILIZATION_MINOANS</ArtDefineTag>
+			<ArtStyleType>ARTSTYLE_GRECO_ROMAN</ArtStyleType>
+			<UnitArtStyleType>UNIT_ARTSTYLE_GRECO_ROMAN</UnitArtStyleType>
+			<PaganReligion>PAGAN_RELIGION_OLYMPIANISM</PaganReligion>
+			<Impact>IMPACT_SIGNIFICANT</Impact>
+			<Identifier>MNO</Identifier>
+			<StartingYear>-3000</StartingYear>
+			<LoadingTimes>
+				<LoadingTime>0</LoadingTime>
+				<LoadingTime>0</LoadingTime>
+				<LoadingTime>0</LoadingTime>
+			</LoadingTimes>
+			<Rating>
+				<Trade>3</Trade>
+				<Production>2</Production>
+				<Culture>4</Culture>
+				<Growth>3</Growth>
+				<Start>4</Start>
+			</Rating>
+			<bPlayable>1</bPlayable>
+			<bAIPlayable>1</bAIPlayable>
+			<Cities>
+				<City>Knossos</City>
+				<City>Megara</City>
+				<City>Olympia</City>
+				<City>Argos</City>
+				<City>Phocaea</City>
+				<City>Rhodos</City>
+				<City>Thebai</City>
+				<City>Thermopylae</City>
+				<City>Pharsalos</City>
+				<City>Eretria</City>
+				<City>Marathon</City>
+				<City>Artemision</City>
+				<City>Sicyon</City>
+				<City>Gortyn</City>
+				<City>Mytilene</City>
+				<City>Tegea</City>
+				<City>Argos Orestikon</City>
+				<City>Dion</City>
+				<City>Amphipolis</City>
+				<City>Thasos</City>
+				<City>Potidaea</City>
+				<City>Buthrotos</City>
+				<City>Olynthos</City>
+				<City>Eordaea</City>
+				<City>Serrai</City>
+				<City>Lynkestis</City>
+				<City>Crestone</City>
+				<City>Stageira</City>
+				<City>Aeani</City>
+				<City>Methoni</City>
+				<City>Ichnai</City>
+				<City>Liti</City>
+				<City>Thermai</City>
+				<City>Idomenai</City>
+				<City>Leivithra</City>
+				<City>Kalindoia</City>
+				<City>Arethousa</City>
+				<City>Argilos</City>
+				<City>Galipsos</City>
+				<City>Mieza</City>
+				<City>Kyrros</City>
+				<City>Kozani</City>
+				<City>Naussa</City>
+				<City>Palatitsa</City>
+				<City>Florina</City>
+			</Cities>
+			<Buildings>
+				<Building>
+					<BuildingClassType>BUILDINGCLASS_GRANARY</BuildingClassType>
+					<BuildingType>BUILDING_MINOAN_ANAKTORA</BuildingType>
+				</Building>
+				<Building>
+					<BuildingClassType>BUILDINGCLASS_PAGAN_TEMPLE</BuildingClassType>
+					<BuildingType>BUILDING_OLYMPIAN_TEMPLE</BuildingType>
+				</Building>
+			</Buildings>
+			<Units>
+				<Unit>
+					<UnitClassType>UNITCLASS_LIGHT_SWORDSMAN</UnitClassType>
+					<UnitType>UNIT_MYCENAEAN_MYRMIDON</UnitType>
+				</Unit>
+			</Units>
+			<FreeUnitClasses>
+				<FreeUnitClass>
+					<UnitClassType>UNITCLASS_SETTLER</UnitClassType>
+					<iFreeUnits>1</iFreeUnits>
+				</FreeUnitClass>
+			</FreeUnitClasses>
+			<FreeBuildingClasses>
+				<FreeBuildingClass>
+					<BuildingClassType>BUILDINGCLASS_PALACE</BuildingClassType>
+					<bFreeBuildingClass>1</bFreeBuildingClass>
+				</FreeBuildingClass>
+			</FreeBuildingClasses>
+			<FreeTechs/>
+			<DisableTechs/>
+			<InitialCivics>
+				<CivicType>CIVIC_CHIEFDOM</CivicType>
+				<CivicType>CIVIC_PERSONALISM</CivicType>
+				<CivicType>CIVIC_TRADITIONALISM</CivicType>
+				<CivicType>CIVIC_RECIPROCITY</CivicType>
+				<CivicType>CIVIC_ANIMISM</CivicType>
+				<CivicType>CIVIC_KINSHIP</CivicType>
+			</InitialCivics>
+			<Leaders>
+				<Leader>
+					<LeaderName>LEADER_ARIADNE</LeaderName>
+					<bLeaderAvailability>1</bLeaderAvailability>
+				</Leader>
+				<Leader>
+					<LeaderName>LEADER_AGAMEMNON</LeaderName>
+					<bLeaderAvailability>1</bLeaderAvailability>
+				</Leader>
+			</Leaders>
+			<DerivativeCiv>CIVILIZATION_BYZANTIUM</DerivativeCiv>
+			<CivilizationSelectionSound>AS3D_GREECE_SELECT</CivilizationSelectionSound>
+			<CivilizationActionSound>AS3D_GREECE_ORDER</CivilizationActionSound>
+		</CivilizationInfo>
+		<CivilizationInfo>
 			<Type>CIVILIZATION_MONGOL</Type>
 			<Description>TXT_KEY_CIV_MONGOL_DESC</Description>
 			<ShortDescription>TXT_KEY_CIV_MONGOL_SHORT_DESC</ShortDescription>
@@ -5420,6 +5549,125 @@
 			<CivilizationActionSound>AS3D_OTTOMAN_ORDER</CivilizationActionSound>
 		</CivilizationInfo>
 		<CivilizationInfo>
+			<Type>CIVILIZATION_PARTHIA</Type>
+			<Description>TXT_KEY_CIV_PARTHIA_DESC</Description>
+			<ShortDescription>TXT_KEY_CIV_PARTHIA_SHORT_DESC</ShortDescription>
+			<Adjective>TXT_KEY_CIV_PARTHIA_ADJECTIVE</Adjective>
+			<Civilopedia>TXT_KEY_CIV_PARTHIA_PEDIA</Civilopedia>
+			<DefaultPlayerColor>PLAYERCOLOR_BROWN_RED</DefaultPlayerColor>
+			<ArtDefineTag>ART_DEF_CIVILIZATION_PARTHIA</ArtDefineTag>
+			<ArtStyleType>ARTSTYLE_MIDDLE_EAST</ArtStyleType>
+			<UnitArtStyleType>UNIT_ARTSTYLE_MIDDLE_EASTERN</UnitArtStyleType>
+			<PaganReligion>PAGAN_RELIGION_OLYMPIANISM</PaganReligion>
+			<Impact>IMPACT_CRITICAL</Impact>
+			<Identifier>PAR</Identifier>
+			<StartingYear>-240</StartingYear>
+			<LoadingTimes>
+				<LoadingTime>5</LoadingTime>
+				<LoadingTime>0</LoadingTime>
+				<LoadingTime>0</LoadingTime>
+			</LoadingTimes>
+			<Rating>
+				<Trade>2</Trade>
+				<Production>3</Production>
+				<Culture>4</Culture>
+				<Growth>2</Growth>
+				<Start>3</Start>
+			</Rating>
+			<bPlayable>1</bPlayable>
+			<bAIPlayable>1</bAIPlayable>
+			<Cities>
+				<City>Neh</City>
+				<City>Ergili</City>
+				<City>Zohak</City>
+				<City>Pteira</City>
+				<City>Aspabota</City>
+				<City>Daphnai</City>
+				<City>Eion</City>
+				<City>Bampur</City>
+				<City>Gaugamela</City>
+				<City>Patigrbana</City>
+				<City>Dariush Kabir</City>
+				<City>Ghulaman</City>
+				<City>Istakhr</City>
+				<City>Jinjan</City>
+				<City>Borazjan</City>
+				<City>Dakyanus</City>
+				<City>Altin Tepe</City>
+				<City>Bunyan</City>
+				<City>Charsadda</City>
+				<City>Ura Tyube</City>
+				<City>Qatna</City>
+				<City>Capisa</City>
+				<City>Kyreskhata</City>
+				<City>Autiyara</City>
+				<City>Bagastana</City>
+				<City>Darmasa</City>
+				<City>Drapsaka</City>
+				<City>Gandutava</City>
+				<City>Izata</City>
+				<City>Kampada</City>
+				<City>Kapisa</City>
+				<City>Karmana</City>
+				<City>Kounaxa</City>
+				<City>Kuganaka</City>
+				<City>Nautaka</City>
+				<City>Paishiyauvada</City>
+				<City>Arshada</City>
+			</Cities>
+			<Buildings>
+				<Building>
+					<BuildingClassType>BUILDINGCLASS_AQUEDUCT</BuildingClassType>
+					<BuildingType>BUILDING_PERSIAN_QANAT</BuildingType>
+				</Building>
+				<Building>
+					<BuildingClassType>BUILDINGCLASS_PAGAN_TEMPLE</BuildingClassType>
+					<BuildingType>BUILDING_OLYMPIAN_TEMPLE</BuildingType>
+				</Building>
+			</Buildings>
+			<Units>
+				<Unit>
+					<UnitClassType>UNITCLASS_LANCER</UnitClassType>
+					<UnitType>UNIT_PERSIAN_SAVARAN</UnitType>
+				</Unit>
+			</Units>
+			<FreeUnitClasses>
+				<FreeUnitClass>
+					<UnitClassType>UNITCLASS_SETTLER</UnitClassType>
+					<iFreeUnits>1</iFreeUnits>
+				</FreeUnitClass>
+			</FreeUnitClasses>
+			<FreeBuildingClasses>
+				<FreeBuildingClass>
+					<BuildingClassType>BUILDINGCLASS_PALACE</BuildingClassType>
+					<bFreeBuildingClass>1</bFreeBuildingClass>
+				</FreeBuildingClass>
+			</FreeBuildingClasses>
+			<FreeTechs/>
+			<DisableTechs/>
+			<InitialCivics>
+				<CivicType>CIVIC_CHIEFDOM</CivicType>
+				<CivicType>CIVIC_PERSONALISM</CivicType>
+				<CivicType>CIVIC_TRADITIONALISM</CivicType>
+				<CivicType>CIVIC_RECIPROCITY</CivicType>
+				<CivicType>CIVIC_ANIMISM</CivicType>
+				<CivicType>CIVIC_KINSHIP</CivicType>
+			</InitialCivics>
+			<Leaders>
+				<Leader>
+					<LeaderName>LEADER_MITHRIDATES</LeaderName>
+					<bLeaderAvailability>1</bLeaderAvailability>
+				</Leader>
+				<Leader>
+					<LeaderName>LEADER_KHOSROW</LeaderName>
+					<bLeaderAvailability>1</bLeaderAvailability>
+				</Leader>
+			</Leaders>
+			<DerivativeCiv>CIVILIZATION_IRAN</DerivativeCiv>
+			<CivilizationSelectionSound>AS3D_PERSIA_SELECT</CivilizationSelectionSound>
+			<CivilizationActionSound>AS3D_PERSIA_ORDER</CivilizationActionSound>
+		</CivilizationInfo>
+		<CivilizationInfo>
 			<Type>CIVILIZATION_PERSIA</Type>
 			<Description>TXT_KEY_CIV_PERSIA_DESC</Description>
 			<ShortDescription>TXT_KEY_CIV_PERSIA_SHORT_DESC</ShortDescription>
@@ -5488,8 +5736,8 @@
 			</Cities>
 			<Buildings>
 				<Building>
-					<BuildingClassType>BUILDINGCLASS_AQUEDUCT</BuildingClassType>
-					<BuildingType>BUILDING_PERSIAN_QANAT</BuildingType>
+					<BuildingClassType>BUILDINGCLASS_BARRACKS</BuildingClassType>
+					<BuildingType>BUILDING_PERSIAN_POLO_FIELD</BuildingType>
 				</Building>
 				<Building>
 					<BuildingClassType>BUILDINGCLASS_PAGAN_TEMPLE</BuildingClassType>
@@ -5500,10 +5748,6 @@
 				<Unit>
 					<UnitClassType>UNITCLASS_SPEARMAN</UnitClassType>
 					<UnitType>UNIT_PERSIAN_IMMORTAL</UnitType>
-				</Unit>
-				<Unit>
-					<UnitClassType>UNITCLASS_LANCER</UnitClassType>
-					<UnitType>UNIT_PERSIAN_SAVARAN</UnitType>
 				</Unit>
 			</Units>
 			<FreeUnitClasses>
@@ -5535,10 +5779,6 @@
 				</Leader>
 				<Leader>
 					<LeaderName>LEADER_DARIUS</LeaderName>
-					<bLeaderAvailability>1</bLeaderAvailability>
-				</Leader>
-				<Leader>
-					<LeaderName>LEADER_KHOSROW</LeaderName>
 					<bLeaderAvailability>1</bLeaderAvailability>
 				</Leader>
 				<Leader>

@@ -201,6 +201,11 @@ lCivilizations = [
 		iHarappa,
 		techs=techs.of(iMining, iPottery, iAgriculture, iPastoralism, iProperty)
 	),
+	# this doesn't do anything because it is set in Scenario3000BC
+	Civilization(
+		iMinoans,
+		techs=techs.of(iPastoralism, iPottery, iAgriculture, iSailing, iTanning)
+	),
 	Civilization(
 		iChina,
 		iGold=50,
@@ -282,7 +287,14 @@ lCivilizations = [
 		iGold=100,
 		iAdvancedStartPoints=60,
 		lCivics=[iMonarchy, iRedistribution, iSlavery],
-		techs=techs.column(4).including(iCurrency, iGeneralship).without(iNavigation)
+		techs=techs.column(4).including(iGeneralship).without(iNavigation)
+	),
+	Civilization(
+		iParthia,
+		iGold=100,
+		iAdvancedStartPoints=60,
+		lCivics=[iDespotism, iSlavery, iHegemony],
+		techs=techs.column(4).including(iGeneralship).without(iShipbuilding, iNavigation, iCement)
 	),
 	Civilization(
 		iMaya,
@@ -694,9 +706,9 @@ dStartingUnits = CivDict({
 	iGreece: {
 		iSettle: 1,
 		iWork: 2,
-		iSettleSea: 1,
-		iBase: 2,
+		iSettleSea: 3,
 		iDefend: 1,
+		iCounter: 1,
 		iWorkerSea: 1,
 	},
 	iIndia: {
@@ -722,7 +734,7 @@ dStartingUnits = CivDict({
 		iWorkerSea: 1,
 	},
 	iPersia: {
-		iSettle: 6,
+		iSettle: 7,
 		iWork: 3,
 		iShock: 4,
 		iSiege: 2,
@@ -760,6 +772,14 @@ dStartingUnits = CivDict({
 		iAttack: 1,
 		iHarass: 1,
 		iCounter: 1,
+	},
+	iParthia : {
+		iSettle: 2,
+		iWork: 2,
+		iDefend: 4,
+		iAttack: 2,
+		iShock: 3,
+		iSiege: 2,
 	},
 	iMaya: {
 		iSettle: 1,
@@ -1203,9 +1223,11 @@ dExtraAIUnits = CivDict({
 		iDefend: 2,
 		iSiege: 3,
 	},
-	iHittites  : {
+	iHittites : {
 		iAttack: 1,
 		iHarass: 3,
+		iSettler: 1,
+		iBase: 1,
 	},
 	iChina : {
 		iDefend: 1,
@@ -1216,6 +1238,10 @@ dExtraAIUnits = CivDict({
 		iSettleSea: 1,
 		iFerry: 1,
 		iEscort: 1,
+	},
+	iGreece: {
+		iSettleSea: 2,
+		iWork: 1,
 	},
 	iIndia : {
 		iHarass: 1,
@@ -1555,7 +1581,6 @@ dStartingExperience = CivDict({
 
 dAlwaysTrain = CivDict({
 	iGreece: [iHoplite],
-	iPersia: [iImmortal],
 	iMacedon: [iPhalanx],
 	iPhoenicia: [iNumidianCavalry],
 	iDravidia: [iWarElephant],
@@ -1601,6 +1626,8 @@ def createSpecificUnits(iPlayer, tile):
 		makeUnit(iPlayer, iBuddhistMissionary, tile)
 	elif iCiv == iColombia:
 		makeUnits(iPlayer, iAlbionLegion, tile, 5).experience(2)
+	elif iCiv == iParthia:
+		makeUnits(iPlayer, iHorseArcher, tile, 5)
 
 dSpecificAdditionalUnits = CivDict({
 	iEthiopia: {
@@ -1743,6 +1770,19 @@ dTechPreferences = {
 		iPrinting: -20,
 		iTheology: -15,
 	},
+	iMinoans : {
+		iArithmetics: 40,
+		iLiterature: 20,
+		iNavigation: 40,
+		iWriting: 20,
+		iShipbuilding: 20,
+		
+		iMachinery: -20,
+		iPaper: -20,
+		iPrinting: -20,
+		iTheology: -15,
+		iBloomery: -10,
+	},
 	iMacedon : {
 		iGeneralship: 40,
 		iCalendar: 20,
@@ -1778,8 +1818,9 @@ dTechPreferences = {
 		iBloomery: -30,
 	},
 	iPersia : {
-		iFission: 15,
-	
+		iTheology: -40,
+	},
+	iParthia : {
 		iTheology: -40,
 	},
 	iCelts : {
@@ -2157,6 +2198,8 @@ dBuildingPreferences = {
 		iGreatLibrary: 30,
 		iGreatLighthouse: 30,
 		iGreatSphinx: 30,
+
+		iPalaceOfMinos: -30,
 	},
 	iBabylonia : {
 		iHangingGardens: 50,
@@ -2168,14 +2211,19 @@ dBuildingPreferences = {
 		iGreatSphinx: 0,
 		
 		iOracle: -60,
+		iPalaceOfMinos: -30,
 	},
 	iHarappa : {
 		iPyramids: 0,
 		iGreatSphinx: 0,
+
+		iPalaceOfMinos: -30,
 	},
 	iAssyria : {
 		iPyramids: 0,
 		iGreatSphinx: 0,
+
+		iPalaceOfMinos: -30,
 	},
 	iChina : {
 		iGreatWall: 80,
@@ -2203,6 +2251,15 @@ dBuildingPreferences = {
 		iHimejiCastle: -30,
 		iBorobudur: -30,
 		iBrandenburgGate: -30,
+	},
+	iNubia: {
+		iPalaceOfMinos: -20,
+	},
+	iMinoans: {
+		iPalaceOfMinos: 50,
+
+		iOracle: -20,
+		iGreatCothon: -50,
 	},
 	iGreece : {
 		iColossus: 30,

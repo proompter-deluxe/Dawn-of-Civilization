@@ -291,6 +291,10 @@
 			<Path>Art/Movies/Wonders/ishtar.dds</Path>
 		</MovieArtInfo>
 		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_PALACE_OF_MINOS</Type>
+			<Path>Art/Movies/Wonders/palace_of_minos.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
 			<Type>ART_DEF_MOVIE_KHAJURAHO</Type>
 			<Path>Art/Movies/Wonders/Khajuraho.dds</Path>
 		</MovieArtInfo>

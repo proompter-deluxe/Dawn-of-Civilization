@@ -580,7 +580,7 @@ def calculateStability(iPlayer):
 	# recent expansion stability
 	iConquestModifier = 1
 	if iHegemony in civics: iConquestModifier += 1
-	if iCiv == iPersia: iConquestModifier += 1 # Persian UP
+	if iCiv == iParthia: iConquestModifier += 1 # iParthia UP
 	
 	iRecentExpansionStability += iRecentlyFounded
 	iRecentExpansionStability += iConquestModifier * iRecentlyConquered

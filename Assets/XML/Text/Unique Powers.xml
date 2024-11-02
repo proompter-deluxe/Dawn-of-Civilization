@@ -418,15 +418,15 @@
 		<Spanish>Units retain all their experience when upgraded</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UP_GRE_TITLE</Tag>
-		<English>The Power of Philosophy:</English>
-		<French>Le pouvoir de la philosophie :</French>
-		<German>Die Macht der Philosophie:</German>
-		<Italian>Il potere della filosofia:</Italian>
-		<Spanish>El poder de la filosof&#237;a:</Spanish>
+		<Tag>TXT_KEY_UP_MNO_TITLE</Tag>
+		<English>The Power of Heroes:</English>
+		<French>Le pouvoir des h&#233;ros :</French>
+		<German>The Power of Heroes:</German>
+		<Italian>The Power of Heroes:</Italian>
+		<Spanish>The Power of Heroes:</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UP_GRE</Tag>
+		<Tag>TXT_KEY_UP_MNO</Tag>
 		<English>+150% Great People birth rate until the end of the Classical Era</English>
 		<French>Le taux de natalit&#233; des personnages illustres est augment&#233; de 150 % jusqu'&#224; la fin de l'&#200;re classique</French>
 		<German>+150% Geburtenrate von Gro&#223;en Pers&#246;nlichkeiten bis zum Ende des klassischen Zeitalters</German>
@@ -859,11 +859,11 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UP_PER</Tag>
-		<English>Additional stability for recently conquered cities</English>
-		<French>Stabilit&#233; additionnelle pour les villes r&#233;cemment conquises</French>
-		<German>Zus&#228;tzliche Stabilit&#228;t f&#252;r k&#252;rzlich eroberte St&#228;dte</German>
-		<Italian>Additional stability for recently conquered cities</Italian>
-		<Spanish>Additional stability for recently conquered cities</Spanish>
+		<English>Other civs are much more likely to capitulate</English>
+		<French>Other civs are much more likely to capitulate</French>
+		<German>Other civs are much more likely to capitulate</German>
+		<Italian>Other civs are much more likely to capitulate</Italian>
+		<Spanish>Other civs are much more likely to capitulate</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UP_PLY_TITLE</Tag>
@@ -1200,5 +1200,37 @@
 		<German>Razing a city starts a Golden Age</German>
 		<Italian>Razing a city starts a Golden Age</Italian>
 		<Spanish>Razing a city starts a Golden Age</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UP_PAR_TITLE</Tag>
+		<English>The Legacy of Empires:</English>
+		<French>The Legacy of Empires:</French>
+		<German>The Legacy of Empires:</German>
+		<Italian>The Legacy of Empires:</Italian>
+		<Spanish>The Legacy of Empires:</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UP_PAR</Tag>
+		<English>Additional stability for recently conquered cities</English>
+		<French>Stabilit&#233; additionnelle pour les villes r&#233;cemment conquises</French>
+		<German>Zus&#228;tzliche Stabilit&#228;t f&#252;r k&#252;rzlich eroberte St&#228;dte</German>
+		<Italian>Additional stability for recently conquered cities</Italian>
+		<Spanish>Additional stability for recently conquered cities</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UP_GRE_TITLE</Tag>
+		<English>The Power of the Founders:</English>
+		<French>The Power of the Founders:</French>
+		<German>The Power of the Founders:</German>
+		<Italian>The Power of the Founders:</Italian>
+		<Spanish>The Power of the Founders:</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UP_GRE</Tag>
+		<English>Extra settler granted when finished building a settler</English>
+		<French>Extra settler granted when finished building a settler</French>
+		<German>Extra settler granted when finished building a settler</German>
+		<Italian>Extra settler granted when finished building a settler</Italian>
+		<Spanish>Extra settler granted when finished building a settler</Spanish>
 	</TEXT>
 </Civ4GameText>

@@ -217,12 +217,4 @@
 			<Plural>0</Plural>
 		</Spanish>
 	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CIV_GREECE_MYCENAEAN</Tag>
-		<English>Mycenaean</English>
-		<French>Mycenaean</French>
-		<German>Mycenaean</German>
-		<Italian>Mycenaean</Italian>
-		<Spanish>Mycenaean</Spanish>
-	</TEXT>
 </Civ4GameText>

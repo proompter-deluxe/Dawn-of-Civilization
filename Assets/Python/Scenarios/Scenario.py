@@ -142,6 +142,9 @@ LEADER_DATES = {
 	iTigranes: -95,
 	iAshot: 862,
 	iAndranik: 1914,
+	iAriadne: -1700,
+	iMithridates: -140,
+	iAgamemnon: -1200,
 }
 
 RELIGION_FOUNDING_DATES = {
@@ -158,6 +161,7 @@ RELIGION_FOUNDING_DATES = {
 }
 
 WONDER_ORIGINAL_BUILDERS = {
+	iPalaceOfMinos: (iMinoans, -1900),
 	iGreatLighthouse : (iEgypt, -284),
 	iGreatLibrary : (iEgypt, -285),
 	iPyramids : (iEgypt, -2600),

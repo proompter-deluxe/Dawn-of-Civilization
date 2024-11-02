@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Persia -->
+<Civ4GameText xmlns="http://www.firaxis.com">
+	<TEXT>
+		<Tag>TXT_KEY_CIV_PARTHIA_DESC</Tag>
+		<English>The Parthians</English>
+		<French>
+			<Text>Les Parthes</Text>
+			<Gender>Male</Gender>
+			<Plural>1</Plural>
+		</French>
+		<German>
+			<Text>Parthier:Die Parthier:den Parthiern</Text>
+			<Gender>Male:Male:Male</Gender>
+			<Plural>1:1:1</Plural>
+		</German>
+		<Italian>
+			<Text>I Partiani</Text>
+			<Gender>Male</Gender>
+			<Plural>1</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Los Partos</Text>
+			<Gender>Male</Gender>
+			<Plural>1</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_PARTHIA_PEOPLES</Tag>
+		<English>Parni Peoples</English>
+		<French>
+			<Text>Peuplades parthes</Text>
+			<Gender>Female</Gender>
+			<Plural>1</Plural>
+		</French>
+		<German>Parni Peoples</German>
+		<Italian>Parni Peoples</Italian>
+		<Spanish>Parni Peoples</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_SASSANID_SHAHDOM</Tag>
+		<English>%s2 Shahdom</English>
+		<French>
+			<Text>Royaume %s2</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Schahtum %s2:Schahtum %s2:Schahtum %s2</Text>
+			<Gender>Neuter:Neuter:Neuter</Gender>
+			<Plural>0:0:0</Plural>
+		</German>
+		<Italian>
+			<Text>Scialato %s2</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Reino del Sah de %s2</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_PARTHIA_DEFAULT</Tag>
+		<English>Kingdom of %s1</English>
+		<French>
+			<Text>Royaume de %s1</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>K&#246;nigreich %s1:K&#246;nigreich %s1:K&#246;nigreich %s1</Text>
+			<Gender>Neuter:Neuter:Neuter</Gender>
+			<Plural>0:0:0</Plural>
+		</German>
+		<Italian>
+			<Text>Regno del %s1</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Reino de %s1</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_PARTHIA_SASSANID</Tag>
+		<English>Sassanid</English>
+		<French>sassanide</French>
+		<German>Sassanid</German>
+		<Italian>Sassanid</Italian>
+		<Spanish>Sassanid</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_PARTHIA_ADJECTIVE</Tag>
+		<English>Parthian</English>
+		<French>
+			<Text>parthe:parthe:parthes:parthes</Text>
+			<Gender>Male:Female:Male:Female</Gender>
+			<Plural>0:0:1:1</Plural>
+		</French>
+		<German>Parthian</German>
+		<Italian>Parthian</Italian>
+		<Spanish>Parthian</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_PARTHIA_SHORT_DESC</Tag>
+		<English>Parthia</English>
+		<French>
+			<Text>Parthie</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Parthien</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Partia</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Partia</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+</Civ4GameText>

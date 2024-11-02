@@ -70,7 +70,7 @@ def completeCollapse(iPlayer):
 		
 def downgradeImprovements(iPlayer):
 	lAlwaysDowngrade = [iCottage, iHamlet, iVillage, iTown]
-	bPlayerDowngrade = civ(iPlayer) in [iHarappa, iToltecs, iHittites, iEgypt] and not player(iPlayer).isHuman()
+	bPlayerDowngrade = civ(iPlayer) in [iHarappa, iToltecs, iHittites, iEgypt, iMinoans] and not player(iPlayer).isHuman()
 	
 	improvementPlots = plots.owner(iPlayer).where(lambda p: p.getImprovementType() >= 0)
 	alwaysDowngrade, potentialDowngrade = improvementPlots.split(lambda p: p.getImprovementType() in lAlwaysDowngrade or bPlayerDowngrade)
@@ -94,8 +94,8 @@ def downgradeImprovements(iPlayer):
 		else:
 			plot.setImprovementType(-1)
 		
-		# Destroy all Harappan and Toltec improvements
-		if civ(iPlayer) in [iHarappa, iToltecs] and not player(iPlayer).isHuman():
+		# Destroy all improvements of particular civs
+		if civ(iPlayer) in [iHarappa, iMinoans, iToltecs] and not player(iPlayer).isHuman():
 			if iImprovement >= 0:
 				plot.setImprovementType(-1)
 				

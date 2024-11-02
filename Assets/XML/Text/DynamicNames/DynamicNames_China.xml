@@ -3,9 +3,9 @@
 <Civ4GameText xmlns="http://www.firaxis.com">
 	<TEXT>
 		<Tag>TXT_KEY_CIV_CHINA_DESC</Tag>
-		<English>The Yellow River Chinese</English>
+		<English>The Han Chinese</English>
 		<French>
-			<Text>Les Chinois du fleuve Jaune</Text>
+			<Text>Les Chinois Hans</Text>
 			<Gender>Male</Gender>
 			<Plural>1</Plural>
 		</French>

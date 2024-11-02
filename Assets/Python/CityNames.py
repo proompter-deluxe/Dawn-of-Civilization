@@ -4,11 +4,11 @@ from Core import *
 from Files import *
 
 from Events import handler
-
+from DynamicCivs import getColumn
 
 ### CONSTANTS ###
 
-iNumLanguages = 46
+iNumLanguages = 48
 (iLangAmerican, iLangArabic, iLangBabylonian, iLangBurmese, iLangByzantine, 
 iLangCeltic, iLangChinese, iLangCongolese, iLangDutch, iLangEgyptian, 
 iLangEgyptianArabic, iLangEnglish, iLangEthiopian, iLangFrench, iLangGerman, 
@@ -17,7 +17,7 @@ iLangJapanese, iLangKhmer, iLangKorean, iLangLatin, iLangMande,
 iLangMayan, iLangMongolian, iLangNahuatl, iLangNorse, iLangNubian, 
 iLangPersian, iLangPhoenician, iLangPolish, iLangPolynesian, iLangPortuguese, 
 iLangQuechua, iLangRussian, iLangSpanish, iLangSwedish, iLangThai, 
-iLangTibetan, iLangTurkish, iLangVietnamese, iLangFarsi, iLangRuthenian, iLangArmenian) = range(iNumLanguages)
+iLangTibetan, iLangTurkish, iLangVietnamese, iLangFarsi, iLangRuthenian, iLangArmenian, iLangDanish, iLangParthian) = range(iNumLanguages)
 
 dLanguages = CivDict({
 	iEgypt:	[iLangEgyptian],
@@ -86,6 +86,8 @@ dLanguages = CivDict({
 	iMacedon: [iLangGreek],
 	iIroquois: [iLangNahuatl],
 	iArmenia: [iLangArmenian, iLangByzantine, iLangRussian],
+	iParthia: [iLangParthian, iLangGreek, iLangPersian],
+	iMinoans: [iLangGreek],
 
 }, [])
 
@@ -143,6 +145,8 @@ dLanguageNames = {
 	iLangFarsi: "Farsi",
 	iLangRuthenian: "Ruthenian",
 	iLangArmenian: "Armenian",
+	iLangDanish: "Danish",
+	iLangParthian: "Parthian",
 }
 
 dTranslations = dict((iLanguage, FileDict("Translations/%s.csv" % dLanguageNames[iLanguage])) for iLanguage in range(iNumLanguages))
@@ -267,6 +271,11 @@ def getSpecialLanguages(identifier):
 			return [iLangArabic]
 	elif iCiv == iPersia and player(identifier).getStateReligion() == iIslam:
 		return [iLangFarsi, iLangArabic, iLangPersian]
+	elif iCiv == iNorse:
+		if player(iCiv).getPeriod() == iPeriodDenmark:
+			return [iLangDanish, iLangNorse]
+	elif iCiv == iParthia and getColumn(player(identifier).getID()) >= 6:
+		return [iLangFarsi, iLangPersian, iLangByzantine]
 	
 	return None
 

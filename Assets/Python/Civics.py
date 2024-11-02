@@ -1,7 +1,7 @@
 from Core import *
 
 
-lCityStatesStart = [iRome, iPhoenicia, iGreece, iIndia, iMaya, iAztecs]
+lCityStatesStart = [iRome, iPhoenicia, iGreece, iIndia, iMaya, iAztecs, iMinoans]
 
 
 class Civics(object):

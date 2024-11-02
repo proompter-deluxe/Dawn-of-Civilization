@@ -34600,7 +34600,7 @@ BeginPlot
 	x=77,y=48
 	BonusType=BONUS_WINE
 	TerrainType=TERRAIN_PLAINS
-	PlotType=2
+	PlotType=1
 EndPlot
 BeginPlot
 	x=77,y=49
@@ -35606,7 +35606,7 @@ BeginPlot
 	x=79,y=48
 	BonusType=BONUS_OLIVES
 	TerrainType=TERRAIN_PLAINS
-	PlotType=2
+	PlotType=1
 EndPlot
 BeginPlot
 	x=79,y=49
@@ -42071,6 +42071,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=93,y=51
+	BonusType=BONUS_WHEAT
 	TerrainType=TERRAIN_PLAINS
 	PlotType=1
 EndPlot
@@ -42514,7 +42515,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=94,y=51
-	BonusType=BONUS_WHEAT
 	TerrainType=TERRAIN_PLAINS
 	PlotType=1
 EndPlot

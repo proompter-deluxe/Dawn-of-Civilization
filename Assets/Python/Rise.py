@@ -36,6 +36,7 @@ lExpansionCivs = [
 	iMongols,
 	iMughals,
 	iOttomans,
+	iParthia,
 ]
 
 lIndependenceCivs = [
@@ -63,16 +64,17 @@ lInvasionCivs = [
 ]
 
 dClearedForBirth = {
-	iByzantium: iMacedon,
 	iItaly: iRome,
 	iAztecs: iToltecs,
 	iRussia: iRus,
 	iMexico: iAztecs,
 	iMamluks: iEgypt,
+	iGreece: iMinoans,
 }
 
 lAlwaysClear = [
 	iToltecs,
+	iMinoans,
 ]
 
 lBirthWars = [
@@ -739,9 +741,9 @@ class Birth(object):
 		if self.iCiv == iByzantium:
 			if not player(iRome).isExisting():
 				return False
-			elif player(iGreece).isExisting():
+			elif player(iGreece).isExisting() and player(iGreece).isHuman() or stability(iGreece) == iStabilitySolid:
 				return False
-			elif player(iMacedon).isExisting():
+			elif player(iMacedon).isExisting() and player(iMacedon).isHuman() or stability(iMacedon) == iStabilitySolid:
 				return False
 			elif player(iRome).isHuman() and stability(iRome) == iStabilitySolid:
 				return False
@@ -762,9 +764,9 @@ class Birth(object):
 			if cities.birth(iOttomans).none(CyCity.isHuman) and cities.regions(rAnatolia, rCaucasus, rLevant, rMesopotamia).none(lambda city: iTurks in [city.getCivilizationType(), city.getPreviousCiv()]):
 				return False
 		
-		# Iran requires Persia to be dead
+		# Iran requires Persia and Parthia to be dead
 		if self.iCiv == iIran:
-			if player(iPersia).isExisting():
+			if player(iPersia).isExisting() or player(iParthia).isExisting():
 				return False
 		
 		# Mexico requires Aztecs to be dead

@@ -2715,6 +2715,14 @@
 		<Spanish></Spanish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_VICTORY_NAME_MYCENAE</Tag>
+		<English>Mycenae</English>
+		<French></French>
+		<German></German>
+		<Italian></Italian>
+		<Spanish></Spanish>
+	</TEXT>	
+	<TEXT>
 		<Tag>TXT_KEY_VICTORY_NAME_TARNOVO</Tag>
 		<English>Tarnovo</English>
 		<French></French>
@@ -3737,7 +3745,6 @@
 		<Italian></Italian>
 		<Spanish></Spanish>
 	</TEXT>
-	
 	<TEXT>
 		<Tag>TXT_KEY_VICTORY_ACCOMPLISHED</Tag>
 		<English>Accomplished:</English>

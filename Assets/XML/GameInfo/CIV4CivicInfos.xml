@@ -49,6 +49,12 @@
 			<iDistanceMaintenanceModifier>-25</iDistanceMaintenanceModifier>
 			<iFoodProductionModifier>50</iFoodProductionModifier>
 			<WeLoveTheKing>TXT_KEY_CIVIC_WE_LOVE_MONARCH</WeLoveTheKing>
+			<BuildingHappinessChanges>
+				<BuildingHappinessChange>
+					<BuildingType>BUILDING_PERSIAN_POLO_FIELD</BuildingType>
+					<iHappinessChange>1</iHappinessChange>
+				</BuildingHappinessChange>
+			</BuildingHappinessChanges>
 		</CivicInfo>
 		<CivicInfo>
 			<CivicOptionType>CIVICOPTION_GOVERNMENT</CivicOptionType>

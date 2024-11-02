@@ -65,6 +65,11 @@ def norseUP(winningUnit, losingUnit):
 			
 			events.fireEvent("combatGold", iWinner, winningUnit, iGold)
 
+# Greek UP: extra settler when one is built
+@handler("unitBuilt")
+def GreekUP(city, unit):
+	if civ(city) == iGreece and unit.isFound():	
+		makeUnit(iGreece, iSettler, city.plot())
 
 # Mughal UP: receives 50% of building cost as culture when building is completed
 @handler("buildingBuilt")
