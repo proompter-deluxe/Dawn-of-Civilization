@@ -5736,7 +5736,7 @@
 			</Cities>
 			<Buildings>
 				<Building>
-					<BuildingClassType>BUILDINGCLASS_BARRACKS</BuildingClassType>
+					<BuildingClassType>BUILDINGCLASS_STABLE</BuildingClassType>
 					<BuildingType>BUILDING_PERSIAN_POLO_FIELD</BuildingType>
 				</Building>
 				<Building>
