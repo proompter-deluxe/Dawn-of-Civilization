@@ -262,7 +262,7 @@ dGoals = {
 		),
 	),
 	iGreece: (
-		FirstDiscover(iMathematics, iLiterature, iAesthetics, iPhilosophy, iMedicine),
+		FirstDiscover(iEthics),
 		CityCount(
 			(plots.region(rIberia), 1),
 			(plots.region(rItaly), 1),

@@ -229,7 +229,7 @@ lCivilizations = [
 		iGreece,
 		iGold=100,
 		lCivics=[iRepublic, iSlavery, iDeification],
-		techs=techs.column(2).including(iAlloys, iWriting)
+		techs=techs.column(3).including(iBloomery, iMathematics)
 	),
 	Civilization(
 		iAssyria,
