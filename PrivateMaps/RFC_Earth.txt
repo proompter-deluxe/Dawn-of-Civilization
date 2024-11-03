@@ -38304,13 +38304,13 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=85,y=36
+	BonusType=BONUS_FISH
 	FeatureType=FEATURE_ISLANDS, FeatureVariety=2
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
 BeginPlot
 	x=85,y=37
-	BonusType=BONUS_FISH
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
