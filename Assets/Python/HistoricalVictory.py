@@ -734,9 +734,9 @@ dGoals = {
 		),
 	),
 	iParthia: (
-		BestPopulationCity(capital().named(CAPITAL), at=-50),
-		DefeatedUnits(civs(iRome, iByzantium), 50, by=500),
-		LandPercent(7, at=800),
+		BestPopulationCity(capital().named(CAPITAL), at=100),
+		DefeatedUnits(civs(iRome, iByzantium), 35, by=500),
+		PopulationPercent(10, at=850),
 	),
 	iMinoans: (
 		# the first naval empire

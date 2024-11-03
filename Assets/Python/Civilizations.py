@@ -703,7 +703,7 @@ dStartingUnits = CivDict({
 	iGreece: {
 		iSettle: 1,
 		iWork: 2,
-		iSettleSea: 3,
+		iSettleSea: 2,
 		iDefend: 1,
 		iCounter: 1,
 		iWorkerSea: 1,
@@ -1236,9 +1236,10 @@ dExtraAIUnits = CivDict({
 		iEscort: 2,
 	},
 	iGreece: {
-		iSettleSea: 3,
+		iSettleSea: 4,
 		iWork: 1,
 		iWorkerSea: 1,
+		iEscort: 1,
 	},
 	iIndia : {
 		iHarass: 1,
@@ -1701,6 +1702,9 @@ dTechPreferences = {
 		iCompass: 20,
 		iConstruction: 20,
 		iCivilService: 15,
+		iLaw: 20,
+		iMedicine: 20,
+		iGeneralship: 15,
 		
 		iCivilLiberties: -100,
 		iHumanities: -100,
@@ -1770,6 +1774,7 @@ dTechPreferences = {
 		iPaper: -20,
 		iPrinting: -20,
 		iTheology: -15,
+		iArtisanry: -20,
 	},
 	iMinoans : {
 		iArithmetics: 40,

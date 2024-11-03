@@ -106,7 +106,7 @@
 		<Spanish>It is the year 1700 AD. After the Ming Dynasty has collapsed under peasant revolts, the Jurchens of Manchuria have conquered China and established the Qing Dynasty. With Manchuria and Tibet under imperial control, China has reached the greatest extent in history, and the rule of the Kangxi Emperor promises another golden era.</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_DOM_YANGTZE_CHINA</Tag>
+		<Tag>TXT_KEY_DOM_WU</Tag>
 		<English>It is the year 200 AD. Following barbarian invasions and the Yellow Turban Rebellion, The Han dynasty has lost the Mandate of Heaven, and the emperors are no more than puppets in the hands of scheming warlords. It is up you, Sun Quan, to reclaim Heaven's favour and reunify China!</English>
 		<French>Placeholder TXT_KEY_DOM_YANGTZE_CHINA</French>
 		<German>Placeholder TXT_KEY_DOM_YANGTZE_CHINA</German>
@@ -625,5 +625,13 @@
 		<German>The Orontid dynasty ruled satrapy of Armenia of the Achaemenid Empire for three centuries until the empire was defeated by Alexander the Great's Macedonian Empire at the Battle of Gaugamela. After Alexander's death in 323 BC, the Orontids returned, not as satraps, but as kings of independent Armenia!</German>
 		<Italian>The Orontid dynasty ruled satrapy of Armenia of the Achaemenid Empire for three centuries until the empire was defeated by Alexander the Great's Macedonian Empire at the Battle of Gaugamela. After Alexander's death in 323 BC, the Orontids returned, not as satraps, but as kings of independent Armenia!</Italian>
 		<Spanish>The Orontid dynasty ruled satrapy of Armenia of the Achaemenid Empire for three centuries until the empire was defeated by Alexander the Great's Macedonian Empire at the Battle of Gaugamela. After Alexander's death in 323 BC, the Orontids returned, not as satraps, but as kings of independent Armenia!</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DOM_PARTHIA</Tag>
+		<English>Pashto Parni were an East Iranian people who lived around the Ochus River, southeast of the Caspian Sea. In the middle of the 3rd century BCE, the Parni have invaded Parthia, drove away the Greek satraps and founded a new empire which adopted elements of Greek culture, though it eventually saw a gradual revival of glorious Iranian traditions.!</English>
+		<French>Pashto Parni were an East Iranian people who lived around the Ochus River, southeast of the Caspian Sea. In the middle of the 3rd century BCE, the Parni have invaded Parthia, drove away the Greek satraps and founded a new empire which adopted elements of Greek culture, though it eventually saw a gradual revival of glorious Iranian traditions.</French>
+		<German>Pashto Parni were an East Iranian people who lived around the Ochus River, southeast of the Caspian Sea. In the middle of the 3rd century BCE, the Parni have invaded Parthia, drove away the Greek satraps and founded a new empire which adopted elements of Greek culture, though it eventually saw a gradual revival of glorious Iranian traditions.</German>
+		<Italian>Pashto Parni were an East Iranian people who lived around the Ochus River, southeast of the Caspian Sea. In the middle of the 3rd century BCE, the Parni have invaded Parthia, drove away the Greek satraps and founded a new empire which adopted elements of Greek culture, though it eventually saw a gradual revival of glorious Iranian traditions.</Italian>
+		<Spanish>Pashto Parni were an East Iranian people who lived around the Ochus River, southeast of the Caspian Sea. In the middle of the 3rd century BCE, the Parni have invaded Parthia, drove away the Greek satraps and founded a new empire which adopted elements of Greek culture, though it eventually saw a gradual revival of glorious Iranian traditions.</Spanish>
 	</TEXT>
 </Civ4GameText>

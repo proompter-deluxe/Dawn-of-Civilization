@@ -578,9 +578,9 @@ barbarians = [
 	Barbarians(300, 600, {iCamelArcher: 2}, ((71, 39), (76, 44)), 6, INVADERS, target_area=((77, 40), (81, 44)), adjective="TXT_KEY_ADJECTIVE_BERBER"),
 	Barbarians(300, 1500, {iCamelArcher: 1}, ((86, 38), (91, 45)), 10, NOMADS, target_area=((77, 39), (91, 50)), adjective="TXT_KEY_ADJECTIVE_BEDOUIN"),
 	Barbarians(350, 600, {iHorseArcher: 5}, ((98, 43), (108, 49)), 6, INVADERS, target_area=((98, 42), (112, 49)), adjective="TXT_KEY_ADJECTIVE_HUNA"),
-	Barbarians(350, 550, {iSwordsman: 3, iAxeman: 4, iCatapult: 1}, ((59, 59), (65, 65)), 2, INVADERS, target_area=((59, 55), (66, 63)), iAlternativeCiv=iFrance, adjective="TXT_KEY_ADJECTIVE_FRANKISH"),
-	Barbarians(350, 550, {iSwordsman: 3, iHorseArcher: 1, iAxeman: 2}, ((66, 53), (73, 66)), 2, INVADERS, target_area=((65, 51), (70, 57)), adjective="TXT_KEY_ADJECTIVE_OSTROGOTHIC"),
-	Barbarians(350, 520, {iSwordsman: 4, iAxeman: 2, iCatapult: 2}, ((65, 60), (70, 64)), 2, INVADERS, target_area=((54, 49), (62, 58)), iAlternativeCiv=iSpain, adjective="TXT_KEY_ADJECTIVE_VISIGOTHIC"),
+	Barbarians(350, 460, {iSwordsman: 3, iAxeman: 4, iCatapult: 1}, ((59, 59), (65, 65)), 4, INVADERS, target_area=((59, 55), (66, 63)), iAlternativeCiv=iFrance, adjective="TXT_KEY_ADJECTIVE_FRANKISH"),
+	Barbarians(350, 550, {iSwordsman: 3, iHorseArcher: 1, iAxeman: 2}, ((66, 53), (73, 66)), 4, INVADERS, target_area=((65, 51), (70, 57)), adjective="TXT_KEY_ADJECTIVE_OSTROGOTHIC"),
+	Barbarians(350, 520, {iSwordsman: 4, iAxeman: 2, iCatapult: 2}, ((65, 60), (70, 64)), 4, INVADERS, target_area=((54, 49), (62, 58)), iAlternativeCiv=iSpain, adjective="TXT_KEY_ADJECTIVE_VISIGOTHIC"),
 	Barbarians(350, 460, {iHorseArcher: 5}, ((61, 57), (77, 62)), 2, INVADERS, target_area=((57, 51), (71, 61)), adjective="TXT_KEY_ADJECTIVE_HUNNIC", promotions=(iMobility,)),
 	Barbarians(350, 460, {iHorseArcher: 5}, ((93, 53), (100, 60)), 2, INVADERS, target_area=((92, 47), (98, 52)), adjective="TXT_KEY_ADJECTIVE_HUNNIC", iAlternativeCiv=iTurks, promotions=(iMobility, iDesertAdaptation, iSteppeAdaptation)), # Hephtalites
 	Barbarians(350, 600, {iDogSoldier: 1}, ((11, 44), (19, 51)), 10, NOMADS, iOwner=iNative, target_area=((14, 40), (23, 45)), adjective="TXT_KEY_ADJECTIVE_NAHUA"),
