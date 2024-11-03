@@ -119,7 +119,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIV_CHINESE_SOUTH_VASSAL</Tag>
-		<English>Tributary Yangtze %s4 State</English>
+		<English>Tributary %s4 State</English>
 		<French>
 			<Text>&#201;tat %s4 tributaire</Text>
 			<Gender>Male</Gender>
@@ -143,54 +143,48 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIV_YANGTZE_CHINA_SHORT_DESC</Tag>
-		<English>Yangtze China</English>
+		<English>Wu</English>
 		<French>
-			<Text>Chine du Yangtze</Text>
-			<Gender>Female</Gender>
+			<Text>Wu</Text>
+			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
 		<German>
-			<Text>Sudliche China</Text>
+			<Text>Wu</Text>
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</German>
 		<Italian>
-			<Text>Cina meridionale</Text>
-			<Gender>Female</Gender>
+			<Text>Wu</Text>
+			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</Italian>
 		<Spanish>
-			<Text>China meridional</Text>
-			<Gender>Female</Gender>
+			<Text>Wu</Text>
+			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIV_YANGTZE_CHINA_ADJECTIVE</Tag>
 		<English>
-			<Text>Yangtze Chinese</Text>
+			<Text>Wu</Text>
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</English>
 		<French>
-			<Text>Yangtze-Chinois</Text>
+			<Text>Wu</Text>
 			<Gender>Male</Gender>
 			<Plural>1</Plural>
 		</French>
-		<German> <!-- FIXME-->
-			<Text>Chinesisch:chinesischen:chinesische</Text>
-			<Gender>Neuter:Neuter:Neuter</Gender>
-			<Plural>0:0:0</Plural>
+		<German>
+			<Text>Wu</Text>
 		</German>
-		<Italian> <!-- FIXME-->
-			<Text>Cinese:Cinese:Cinesi:Cinesi</Text>
-			<Gender>Male:Female:Male:Female</Gender>
-			<Plural>0:0:1:1</Plural>
+		<Italian>
+			<Text>Wu</Text>
 		</Italian>
-		<Spanish> <!-- FIXME-->
-			<Text>chino:china:chinos:chinas</Text>
-			<Gender>Male:Female:Male:Female</Gender>
-			<Plural>0:0:1:1</Plural>
+		<Spanish>
+			<Text>Wu</Text>
 		</Spanish>
 	</TEXT>
 </Civ4GameText>

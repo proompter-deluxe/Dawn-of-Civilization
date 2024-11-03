@@ -586,7 +586,7 @@ dNeighbours = dictFromEdges(lBirthCivs, lNeighbours)
 dInfluences = dictFromEdges(lBirthCivs, lInfluences)
 
 dResurrections = CivDict({
-iEgypt : [(-3000, -360)],
+iEgypt : [(-3000, -100)], # can revive as Ptolemaic dynasty
 iBabylonia : [(-3000, -1450), (-700, -630)],
 iAssyria : [(-1450, -650), (900, 1200)],
 iChina : [(580, 1127), (1600, 2020)],
@@ -598,7 +598,7 @@ iIndia : [(1600, 1800), (1900, 2020)],
 iPhoenicia : [(-800,-300), (800, 1500), (1950, 2020)],
 iPersia : [(870, 1000)],
 iCelts : [(400, 1150), (1850, 2020)],
-iRome : [(-338, 450)],
+iRome : [(-338, 320)],
 iMaya : [(0, 800)],
 iDravidia : [(-300, 600), (1300, 1650)],
 iEthiopia : [(1270, 1520), (1850, 2020)],

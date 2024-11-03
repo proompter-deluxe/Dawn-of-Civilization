@@ -2755,12 +2755,10 @@ int CvTeam::getCivilizationResearchModifier() const
 	// nerf late game China
 	if (GET_PLAYER(getLeaderID()).getCivilizationType() == CHINA)
 	{
-		if (GET_PLAYER(getLeaderID()).getCurrentEra() == ERA_MEDIEVAL) iCivModifier += 20;
 		if (GET_PLAYER(getLeaderID()).getCurrentEra() >= ERA_RENAISSANCE) iCivModifier += 30;
 	}
 	else if (GET_PLAYER(getLeaderID()).getCivilizationType() == YANGTZE_CHINA)
 	{
-		if (GET_PLAYER(getLeaderID()).getCurrentEra() == ERA_MEDIEVAL) iCivModifier += 20;
 		if (GET_PLAYER(getLeaderID()).getCurrentEra() >= ERA_RENAISSANCE) iCivModifier += 30;
 	}
 	// buff late game Japan
@@ -2770,6 +2768,16 @@ int CvTeam::getCivilizationResearchModifier() const
 		{
 			iCivModifier += isHuman() ? -20 : -40;
 		}
+	}
+	// nerf late game Mughals
+	else if (GET_PLAYER(getLeaderID()).getCivilizationType() == MUGHALS)
+	{
+		if (GET_PLAYER(getLeaderID()).getCurrentEra() >= ERA_RENAISSANCE) iCivModifier += 20;
+	}
+	// nerf late game Ottomans
+	else if (GET_PLAYER(getLeaderID()).getCivilizationType() == OTTOMANS)
+	{
+		if (GET_PLAYER(getLeaderID()).getCurrentEra() >= ERA_INDUSTRIAL) iCivModifier += 20;
 	}
 
 	return iCivModifier;

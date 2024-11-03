@@ -14,6 +14,7 @@ dRelocatedCapitals = CivDict({
 	iMongols : tBeijing,
 	iOttomans : tConstantinople,
 	iMacedon: tBabylon,
+	iParthia: tBabylon,
 })
 
 dCapitalInfrastructure = CivDict({
@@ -172,14 +173,7 @@ def macedonSpawnGreatGeneral(iPlayer):
 
 @handler("BeginGameTurn")
 def checkEarlyColonists():
-	if year().between(-850, -300): # early exit
-		# a bit primitive list of if's
-		# but this list shouldn't grow beyond 10 entries
-		# and only gets checked in antiquity, 
-		# so it shouldn't be a problem performance-wise
-
 		offset = turns(data.iSeed % 5)
-
 		# the foundation of Carthage
 		if year() == year(-800) - offset:
 			# even the player gets this event!
@@ -190,8 +184,6 @@ def checkEarlyColonists():
 				makeUnits(iPhoenicia, iSacredBand, tCarthage, 2)
 				makeUnits(iPhoenicia, iWorker, tCarthage, 2, UnitAITypes.UNITAI_WORKER)
 				makeUnits(iPhoenicia, iWarElephant, tCarthage, 2)
-		elif year() == year(-750) - offset:
-			giveEarlyColonists(iPhoenicia)
 		
 @handler("BeginGameTurn")
 def checkLateColonists():

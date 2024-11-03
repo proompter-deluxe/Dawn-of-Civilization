@@ -1355,7 +1355,7 @@ def specificAdjective(iPlayer):
 			return "TXT_KEY_CIV_PERSIA_ACHAEMENID"
 		
 	elif iCiv == iParthia:
-		if iEra <= iMedieval: 
+		if getColumn(iPlayer) >= 6:
 			return "TXT_KEY_CIV_PERSIA_SASSANID"
 
 	elif iCiv == iPhoenicia:
@@ -1829,7 +1829,7 @@ def specificTitle(iPlayer, lPreviousOwners=[]):
 			return "TXT_KEY_CITY_STATES_ADJECTIVE"
 		
 	elif iCiv == iParthia:
-		if iEra >= iMedieval:
+		if getColumn(iPlayer) >= 6:
 			return "TXT_KEY_CIV_SASSANID_SHAHDOM"
 
 		if bEmpire:

@@ -229,7 +229,7 @@ lCivilizations = [
 		iGreece,
 		iGold=100,
 		lCivics=[iRepublic, iSlavery, iDeification],
-		techs=techs.column(3).including(iBloomery, iMathematics)
+		techs=techs.column(3).including(iBloomery)
 	),
 	Civilization(
 		iAssyria,
@@ -292,7 +292,7 @@ lCivilizations = [
 	Civilization(
 		iParthia,
 		iGold=100,
-		iAdvancedStartPoints=60,
+		iAdvancedStartPoints=120,
 		lCivics=[iDespotism, iSlavery, iHegemony],
 		techs=techs.column(4).including(iGeneralship).without(iShipbuilding, iNavigation, iCement)
 	),
@@ -351,7 +351,7 @@ lCivilizations = [
 		iAdvancedStartPoints=60,
 		lCivics=[iMonarchy, iCasteSystem, iRedistribution, iSyncretism, iHegemony],
 		lEnemies=[iChina, iIndependent, iIndependent2],
-		techs=techs.column(5).including(iArtisanry, iScholarship, iPolitics, iAlchemy)
+		techs=techs.column(5).including(iArtisanry, iScholarship, iAlchemy)
 	),
 	Civilization(
 		iMali,
@@ -437,7 +437,7 @@ lCivilizations = [
 	Civilization(
 		iMoors,
 		iGold=200,
-		iAdvancedStartPoints=150,
+		iAdvancedStartPoints=100,
 		iStateReligion=iIslam,
 		lCivics=[iDespotism, iTheocracy, iSlavery, iMerchantTrade, iClergy, iHegemony],
 		techs=techs.column(6).including(iMachinery, iAlchemy, iTheology)
@@ -529,7 +529,7 @@ lCivilizations = [
 	Civilization(
 		iItaly,
 		iGold=350,
-		iAdvancedStartPoints=250,
+		iAdvancedStartPoints=100,
 		iStateReligion=iCatholicism,
 		lCivics=[iRepublic, iCitizenship, iManorialism, iMerchantTrade, iClergy],
 		techs=techs.column(7).including(iCommune, iPaper, iCompass, iDoctrine)
@@ -550,15 +550,14 @@ lCivilizations = [
 	),
 	Civilization(
 		iMughals,
-		iGold=400,
-		iAdvancedStartPoints=100,
+		iGold=200,
 		iStateReligion=iIslam,
 		lCivics=[iDespotism, iVassalage, iSlavery, iRegulatedTrade, iFanaticism, iHegemony],
-		techs=techs.column(7).including(iCommune, iCropRotation, iDoctrine, iGunpowder)
+		techs=techs.column(7).including(iDoctrine, iGunpowder)
 	),
 	Civilization(
 		iThailand,
-		iGold=300,
+		iGold=200,
 		iStateReligion=iBuddhism,
 		lCivics=[iMonarchy, iVassalage, iCasteSystem, iRegulatedTrade, iMonasticism, iThalassocracy],
 		techs=techs.column(8).without(iCompass, iDoctrine)
@@ -566,7 +565,7 @@ lCivilizations = [
 	Civilization(
 		iSweden,
 		iGold=200,
-		iAdvancedStartPoints=200,
+		iAdvancedStartPoints=100,
 		iStateReligion=iProtestantism,
 		lCivics=[iElective, iVassalage, iManorialism, iRegulatedTrade, iClergy, iHegemony],
 		techs=techs.column(8).including(iCompanies)
@@ -582,7 +581,7 @@ lCivilizations = [
 	Civilization(
 		iOttomans,
 		iGold=300,
-		iAdvancedStartPoints=200,
+		iAdvancedStartPoints=100,
 		iStateReligion=iIslam,
 		lCivics=[iDespotism, iTheocracy, iSlavery, iRegulatedTrade, iFanaticism, iHegemony],
 		techs=techs.column(7).including(iCommune, iCropRotation, iPaper, iDoctrine, iGunpowder)
@@ -601,7 +600,7 @@ lCivilizations = [
 	Civilization(
 		iIran,
 		iGold=600,
-		iAdvancedStartPoints=250,
+		iAdvancedStartPoints=100,
 		iStateReligion=iIslam,
 		lCivics=[iMonarchy, iTheocracy, iSlavery, iMerchantTrade, iFanaticism, iHegemony],
 		techs=techs.column(9).including(iHeritage, iFirearms)
@@ -609,7 +608,7 @@ lCivilizations = [
 	Civilization(
 		iNetherlands,
 		iGold=600,
-		iAdvancedStartPoints=300,
+		iAdvancedStartPoints=200,
 		iStateReligion=iProtestantism,
 		lCivics=[iRepublic, iBureaucracy, iManorialism, iMerchantTrade, iClergy],
 		techs=techs.column(10)
@@ -617,7 +616,7 @@ lCivilizations = [
 	Civilization(
 		iGermany,
 		iGold=800,
-		iAdvancedStartPoints=300,
+		iAdvancedStartPoints=200,
 		iStateReligion=iProtestantism,
 		lCivics=[iMonarchy, iBureaucracy, iManorialism, iRegulatedTrade, iClergy, iHegemony],
 		techs=techs.column(11).without(iGeography, iCivilLiberties, iHorticulture, iUrbanPlanning)
@@ -625,7 +624,7 @@ lCivilizations = [
 	Civilization(
 		iAmerica,
 		iGold=1500,
-		iAdvancedStartPoints=500,
+		iAdvancedStartPoints=200,
 		iStateReligion=iProtestantism,
 		lCivics=[iDemocracy, iConstitution, iIndividualism, iFreeEnterprise, iSecularism, iIsolationism],
 		techs=techs.column(12).including(iRepresentation, iChemistry)
@@ -862,9 +861,9 @@ dStartingUnits = CivDict({
 	iFrance: {
 		iSettle: 2,
 		iWork: 2,
-		iDefend: 2,
+		iDefend: 4,
 		iCounter: 2,
-		iAttack: 4,
+		iAttack: 2,
 		iShock: 1,
 		iMissionary: 1,
 	},
@@ -1074,7 +1073,6 @@ dStartingUnits = CivDict({
 		iAttack: 4,
 		iHarass: 2,
 		iDefend: 2,
-		iMissionary: 4,
 	},
 	iThailand: {
 		iSettle: 1,
@@ -1235,13 +1233,14 @@ dExtraAIUnits = CivDict({
 		iWork: 1,
 	},
 	iPhoenicia: {
-		iSettleSea: 1,
+		iSettleSea: 2,
 		iFerry: 1,
-		iEscort: 1,
+		iEscort: 2,
 	},
 	iGreece: {
-		iSettleSea: 2,
+		iSettleSea: 3,
 		iWork: 1,
+		iWorkerSea: 1,
 	},
 	iIndia : {
 		iHarass: 1,
@@ -1628,6 +1627,10 @@ def createSpecificUnits(iPlayer, tile):
 		makeUnits(iPlayer, iAlbionLegion, tile, 5).experience(2)
 	elif iCiv == iParthia:
 		makeUnits(iPlayer, iHorseArcher, tile, 5)
+	elif iCiv == iMughals:
+		makeUnits(iPlayer, iIslamicMissionary, tile, 4)
+	elif iCiv == iFrance:
+		makeUnits(iPlayer, iAxeman, tile, 3)
 
 dSpecificAdditionalUnits = CivDict({
 	iEthiopia: {
@@ -1993,7 +1996,7 @@ dTechPreferences = {
 	},
 	iHolyRome : {
 		iPrinting: 50,
-		iAcademia: 30,
+		iAcademia: 40,
 		iFirearms: 20,
 		iReplaceableParts: 20,
 		iEducation: 15,
@@ -2057,7 +2060,7 @@ dTechPreferences = {
 		iPatronage: 20,
 		iReplaceableParts: 20,
 		iHumanities: 20,
-		iAcademia: 20,
+		iAcademia: 30,
 		iFission: 12,
 	},
 	iMughals : {

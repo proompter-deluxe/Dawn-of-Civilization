@@ -42525,7 +42525,8 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=94,y=53
-	TerrainType=TERRAIN_DESERT
+	TerrainType=TERRAIN_PLAINS
+	BonusType=BONUS_HORSE
 	PlotType=2
 EndPlot
 BeginPlot

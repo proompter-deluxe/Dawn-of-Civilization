@@ -46,7 +46,7 @@ dCivNames = {
 	iCanada: "Canada",
 	iPhoenicia: "Phoenicia",
 	iChina: "China",
-	iChinaS: "Yangtze_China",
+	iChinaS: "Wu",
 	iColombia: "Colombia",
 	iEgypt: "Egypt",
 	iEngland: "England",
