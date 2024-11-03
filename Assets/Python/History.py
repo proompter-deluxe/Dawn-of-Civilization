@@ -160,10 +160,11 @@ def placeGoodyHuts(iGameTurn):
 # while the walls were built in the 400s, we'll give the player a chance to build it, unless the player spawns after 600
 @handler("BeginGameTurn")
 def buildTheodosianWallsInAutoplay():
-	if year() == year(600) and autoplay() and player(iByzantium).isAlive():
+	if year() == year(450) and autoplay() and player(iByzantium).isAlive():
 		capital = player(iByzantium).getCapitalCity()
 		if capital and location(capital) == tConstantinople:
-			capital.setHasRealBuilding(iTheodosianWalls, True)
+			if game.getBuildingClassCreatedCount(infos.building(iTheodosianWalls).getBuildingClassType()) == 0:
+				capital.setHasRealBuilding(iTheodosianWalls, True)
 
 # Macedonian UP, starts with great general (and Stratocracy)
 @handler("birth")

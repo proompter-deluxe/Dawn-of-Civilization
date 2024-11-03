@@ -370,14 +370,12 @@ lCivilizations = [
 	Civilization(
 		iSpain,
 		iGold=100,
-		iStateReligion=iCatholicism,
 		lCivics=[iMonarchy, iManorialism, iMerchantTrade, iClergy, iHegemony],
 		techs=techs.column(5).including(iNobility, iPolitics).without(iMedicine, iPhilosophy)
 	),
 	Civilization(
 		iFrance,
 		iGold=100,
-		iStateReligion=iCatholicism,
 		lCivics=[iMonarchy, iManorialism, iMerchantTrade, iClergy, iHegemony],
 		techs=techs.column(5).including(iNobility, iPolitics).without(iMedicine, iPhilosophy)
 	),
@@ -1538,7 +1536,7 @@ dAdditionalUnits = CivDict({
 
 dSpecificAIStartingUnits = CivDict({
 	iByzantium: {
-		iTagmata: 2,
+		iTagmata: 3,
 	},
 }, {})
 
@@ -1630,7 +1628,7 @@ def createSpecificUnits(iPlayer, tile):
 	elif iCiv == iMughals:
 		makeUnits(iPlayer, iIslamicMissionary, tile, 4)
 	elif iCiv == iFrance:
-		makeUnits(iPlayer, iAxeman, tile, 3)
+		makeUnits(iPlayer, iAxeman, tile, 5)
 
 dSpecificAdditionalUnits = CivDict({
 	iEthiopia: {

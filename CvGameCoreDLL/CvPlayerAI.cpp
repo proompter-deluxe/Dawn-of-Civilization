@@ -2893,10 +2893,16 @@ int CvPlayerAI::AI_targetCityValue(CvCity* pCity, bool bRandomize, bool bIgnoreA
 /* UNOFFICIAL_PATCH                        END                                                  */
 /************************************************************************************************/
 
-	//Leoreth: more barbarian pressure against India, Rome, Byzantium, Hittites
-	if (isBarbarian() && (pCity->getCivilizationType() == INDIA || pCity->getCivilizationType() == ROME || pCity->getCivilizationType() == BYZANTIUM || pCity->getCivilizationType() == HITTITES))
+	//Leoreth: more barbarian pressure against select civs
+	if (isBarbarian() && (pCity->getCivilizationType() == INDIA || pCity->getCivilizationType() == BYZANTIUM || pCity->getCivilizationType() == HITTITES))
 	{
 		iValue += 2;
+	}
+
+	// Rome is seen as super valuable
+	if (isBarbarian() && pCity->getCivilizationType() == ROME)
+	{
+		iValue += 6;
 	}
 
 	if (GET_PLAYER(pCity->getOwnerINLINE()).isMinorCiv() || pCity->isBarbarian())

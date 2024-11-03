@@ -2779,6 +2779,16 @@ int CvTeam::getCivilizationResearchModifier() const
 	{
 		if (GET_PLAYER(getLeaderID()).getCurrentEra() >= ERA_INDUSTRIAL) iCivModifier += 20;
 	}
+	// nerf late game Moors
+	else if (GET_PLAYER(getLeaderID()).getCivilizationType() == MOORS)
+	{
+		if (GET_PLAYER(getLeaderID()).getCurrentEra() >= ERA_RENAISSANCE) iCivModifier += 20;
+	}
+	// nerf mid game Carthage
+	else if (GET_PLAYER(getLeaderID()).getCivilizationType() == CARTHAGE)
+	{
+		if (GET_PLAYER(getLeaderID()).getCurrentEra() >= ERA_MEDIEVAL) iCivModifier += 20;
+	}
 
 	return iCivModifier;
 }
