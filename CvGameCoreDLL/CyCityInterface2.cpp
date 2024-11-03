@@ -171,5 +171,6 @@ void CyCityPythonInterface2(python::class_<CyCity>& x)
 		.def("getCorporationBadHappiness", &CyCity::getCorporationBadHappiness, "int ()")
 		.def("getCorporationCount", &CyCity::getCorporationCount, "int ()")
 		.def("doPlotCulture", &CyCity::doPlotCulture, "void (bool bUpdate, int ePlayer, int iCultureRate, bool bOwned)")
+		.def("AI_updateAssignWork", &CyCity::AI_updateAssignWork, "void ()")
 		;
 }
