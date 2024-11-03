@@ -61,7 +61,8 @@ def current_time():
 
 
 def unique(iterable):
-	return [key for key, value in groupby(iterable)]
+	elements = list(iterable)
+	return sorted(set(elements), key=elements.index)
 
 
 def until(iTurn):
