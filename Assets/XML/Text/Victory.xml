@@ -516,6 +516,14 @@
 		<Spanish></Spanish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_VICTORY_DESC_POPULATION_AND_VASSALS_PERCENT</Tag>
+		<English>%s1 of the world's population (including vassals)</English>
+		<French></French>
+		<German></German>
+		<Italian></Italian>
+		<Spanish></Spanish>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_VICTORY_DESC_GOLD_AMOUNT</Tag>
 		<English>%s1 gold</English>
 		<French></French>

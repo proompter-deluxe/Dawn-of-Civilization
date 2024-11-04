@@ -340,10 +340,16 @@ dGoals = {
 	iPersia: (
 		Control(
 			plots.rectangle(tAttica).named(ATTICA),
+			plots.region(rAnatolia).named(ANATOLIA),
+			plots.region(rMesopotamia).named(MESOPOTAMIA),
+			plots.region(rLevant).named(LEVANT),
+			plots.region(rPersia).named(PERSIA),
+			plots.region(rCaucasus).named(CAUCASUS),
+			subject=VASSALS,
 			by=-480,
 		),
-		BuildingCount(wonders(), 10, by=-300),
-		PopulationPercent(35, at=-300),
+		PopulationWithVassalsPercent(35, by=-300),
+		BuildingCount(wonders(), 7, subject=VASSALS, by=-250),
 	),
 	iCelts: (
 		ConqueredCities(2, bControl=False, by=-150),

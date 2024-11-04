@@ -859,11 +859,11 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UP_PER</Tag>
-		<English>Other civs are much more likely to capitulate</English>
-		<French>Other civs are much more likely to capitulate</French>
-		<German>Other civs are much more likely to capitulate</German>
-		<Italian>Other civs are much more likely to capitulate</Italian>
-		<Spanish>Other civs are much more likely to capitulate</Spanish>
+		<English>Other civs are much more likely to vassalize or capitulate</English>
+		<French>Other civs are much more likely to vassalize or capitulate</French>
+		<German>Other civs are much more likely to vassalize or capitulate</German>
+		<Italian>Other civs are much more likely to vassalize or capitulate</Italian>
+		<Spanish>Other civs are much more likely to vassalize or capitulate</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UP_PLY_TITLE</Tag>

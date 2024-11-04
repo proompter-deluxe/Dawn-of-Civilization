@@ -1036,19 +1036,19 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_VICTORY_TITLE_PER2</Tag>
+		<English>A Third of the World</English>
+		<French>Le tiers du monde</French>
+		<German>A Third of the World</German>
+		<Italian>A Third of the World</Italian>
+		<Spanish>A Third of the World</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_VICTORY_TITLE_PER3</Tag>
 		<English>Wonders of the World</English>
 		<French>Merveilles du monde </French>
 		<German>Die Weltwunder</German>
 		<Italian>Wonders of the World</Italian>
 		<Spanish>Wonders of the World</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_VICTORY_TITLE_PER3</Tag>
-		<English>The First Empire</English>
-		<French>Le premier empire </French>
-		<German>Das erste Gro&#223;reich</German>
-		<Italian>The First Empire</Italian>
-		<Spanish>The First Empire</Spanish>
 	</TEXT>
 	
 	<TEXT>

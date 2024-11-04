@@ -1784,15 +1784,10 @@ DenialTypes CvTeamAI::AI_surrenderTrade(TeamTypes eTeam, int iPowerMultiplier) c
 		return DENIAL_NO_GAIN;
 	}
 
-	// Leoreth: not if either of them are birth protected
+	// Leoreth: not if the surrendering civ is birth protected
 	if (GET_PLAYER(getLeaderID()).isBirthProtected())
 	{
 		return DENIAL_POWER_US;
-	}
-
-	if (GET_PLAYER(kMasterTeam.getLeaderID()).isBirthProtected())
-	{
-		return DENIAL_NO_GAIN;
 	}
 
 	for (int iLoopTeam = 0; iLoopTeam < MAX_TEAMS; iLoopTeam++)
@@ -1872,26 +1867,28 @@ DenialTypes CvTeamAI::AI_surrenderTrade(TeamTypes eTeam, int iPowerMultiplier) c
 		int iRawVassalPower = getPower(true);
 		int iVassalPower = (iRawVassalPower * (iPowerMultiplier + iPersonalityModifier / std::max(1, iMembers))) / 100;
 
+		int iTotalPopulation = GC.getGameINLINE().getTotalPopulation();
+		int iMasterPopulation = GET_TEAM(eTeam).getTotalPopulation();
+		int iVassalPopulation = getTotalPopulation();
+
 		// Persia UP: double effective power for calculation of vassalization
 		if (GET_PLAYER(GET_TEAM(eTeam).getLeaderID()).getCivilizationType() == PERSIA)
 		{
 			iMasterPower *= 2;
 			iTotalMasterPower *= 2;
 		}
-
-		int iTotalPopulation = GC.getGameINLINE().getTotalPopulation();
-		int iMasterPopulation = GET_TEAM(eTeam).getTotalPopulation();
-		int iVassalPopulation = getTotalPopulation();
-
-		// Leoreth: do not accumulate too many vassals (strength + population instead of number of vassals)
-		if (iTotalMasterPower + iRawVassalPower > iTotalPower / 3)
+		else // Persia should not get the "too powerful for us..." message
 		{
-			return DENIAL_POWER_YOU;
-		}
+			// Leoreth: do not accumulate too many vassals (strength + population instead of number of vassals)
+			if (iTotalMasterPower + iRawVassalPower > iTotalPower / 3)
+			{
+				return DENIAL_POWER_YOU;
+			}
 
-		if (iMasterPopulation + iVassalPopulation > iTotalPopulation / 3)
-		{
-			return DENIAL_POWER_YOU;
+			if (iMasterPopulation + iVassalPopulation > iTotalPopulation / 3)
+			{
+				return DENIAL_POWER_YOU;
+			}
 		}
 
 		if (isAtWar(eTeam))
@@ -1994,7 +1991,13 @@ DenialTypes CvTeamAI::AI_surrenderTrade(TeamTypes eTeam, int iPowerMultiplier) c
 			return DENIAL_POWER_US;
 		}
 
-		if (iVassalPower > iAveragePower || 3 * iVassalPower > 2 * iMasterPower)
+		if (3 * iVassalPower > 2 * iMasterPower)
+		{
+			return DENIAL_POWER_US;
+		}
+
+		// before medieval era, discount the "average power" check, because it is too skewed (too few civs, score too similar)
+		if (iVassalPower > iAveragePower && GET_PLAYER((PlayerTypes)eTeam).getCurrentEra() >= 2)
 		{
 			return DENIAL_POWER_US;
 		}

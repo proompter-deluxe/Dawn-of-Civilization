@@ -451,7 +451,7 @@ lPeoplesRepublicAdj = [iDravidia, iByzantium, iMongols]
 dEmpireThreshold = {
 	iPhoenicia : 4,
 	iPolynesia : 3,
-	iPersia: 7,
+	iPersia: 8,
 	iDravidia : 4,
 	iKorea : 4,
 	iChina: 5,
@@ -1808,14 +1808,14 @@ def specificTitle(iPlayer, lPreviousOwners=[]):
 			return "TXT_KEY_CIV_BABYLONIA_NEO_EMPIRE"
 			
 	elif iCiv == iGreece:
-		if bEmpire:
-			return "TXT_KEY_EMPIRE_ADJECTIVE"
-	
 		if bCityStates and period(iCiv) == -1:				
 			if bWar:
 				return "TXT_KEY_CIV_GREECE_LEAGUE"
 				
 			return "TXT_KEY_CITY_STATES_ADJECTIVE"
+
+		if bEmpire:
+			return "TXT_KEY_EMPIRE_ADJECTIVE"
 
 	elif iCiv == iMacedon:
 		if bEmpire:
@@ -2253,7 +2253,7 @@ def leader(iPlayer):
 	elif iCiv == iPersia:
 		if bResurrected and game.isReligionFounded(iIslam): return iAbbas
 
-		if bEmpire:
+		if not player(iBabylonia).isAlive() and not player(iAssyria).isAlive():
 			return iDarius
 			
 	elif iCiv == iPhoenicia:

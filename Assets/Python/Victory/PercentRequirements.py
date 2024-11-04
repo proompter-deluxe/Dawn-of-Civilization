@@ -100,6 +100,25 @@ class PopulationPercent(PercentRequirement):
 		return game.getTotalPopulation()
 
 
+class PopulationWithVassalsPercent(PercentRequirement):
+
+	TYPES = (PERCENTAGE,)
+	
+	GOAL_DESC_KEY = "TXT_KEY_VICTORY_DESC_CONTROL"
+	DESC_KEY = "TXT_KEY_VICTORY_DESC_POPULATION_AND_VASSALS_PERCENT"
+	PROGR_KEY = "TXT_KEY_VICTORY_PROGR_POPULATION_PERCENT"
+	
+	def value(self, iPlayer):
+		pop = cities.owner(iPlayer).sum(CyCity.getPopulation)
+		for iVassal in players.vassals(iPlayer):
+			pop += cities.owner(iVassal).sum(CyCity.getPopulation)
+	
+		return pop
+	
+	def total(self):
+		return game.getTotalPopulation()
+
+
 # Third American UHV goal
 class PowerPercent(PercentRequirement):
 

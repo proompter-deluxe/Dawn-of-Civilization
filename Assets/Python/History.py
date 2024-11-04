@@ -174,7 +174,8 @@ def macedonSpawnGreatGeneral(iPlayer):
 
 @handler("BeginGameTurn")
 def checkEarlyColonists():
-		offset = turns(data.iSeed % 5)
+	if year().between(-1000, -700): # early exit
+		offset = turns(data.iSeed % 3)
 		# the foundation of Carthage
 		if year() == year(-800) - offset:
 			# even the player gets this event!
@@ -185,6 +186,12 @@ def checkEarlyColonists():
 				makeUnits(iPhoenicia, iSacredBand, tCarthage, 2)
 				makeUnits(iPhoenicia, iWorker, tCarthage, 2, UnitAITypes.UNITAI_WORKER)
 				makeUnits(iPhoenicia, iWarElephant, tCarthage, 2)
+		elif year() == year(-825) - offset:
+			giveEarlyColonists(iGreece)
+		elif year() == year(-800) - offset:
+			giveEarlyColonists(iGreece)
+		elif year() == year(-750) - offset:
+			giveEarlyColonists(iGreece)
 		
 @handler("BeginGameTurn")
 def checkLateColonists():

@@ -261,7 +261,7 @@ lCivilizations = [
 		iAdvancedStartPoints=200,
 		iStateReligion=iZoroastrianism,
 		lCivics=[iMonarchy, iManorialism, iRedistribution, iClergy],
-		techs=techs.column(3).including(iBloomery, iPriesthood, iMathematics).without(iSeafaring, iShipbuilding)
+		techs=techs.column(3).including(iBloomery, iPriesthood, iMathematics, iContract).without(iSeafaring, iShipbuilding)
 	),
 	Civilization(
 		iMacedon,
@@ -1236,9 +1236,9 @@ dExtraAIUnits = CivDict({
 		iEscort: 2,
 	},
 	iGreece: {
-		iSettleSea: 4,
-		iWork: 1,
-		iWorkerSea: 1,
+		iSettleSea: 2,
+		iWork: 2,
+		iWorkerSea: 4,
 		iEscort: 1,
 	},
 	iIndia : {
@@ -2224,12 +2224,19 @@ dBuildingPreferences = {
 		iGreatSphinx: 0,
 
 		iPalaceOfMinos: -30,
+		iOracle: -40,
 	},
 	iAssyria : {
+		iHangingGardens: 50,
+		iIshtarGate: 50,
+		iSpiralMinaret: 20,
+		iGreatMausoleum: 15,
+
 		iPyramids: 0,
 		iGreatSphinx: 0,
 
 		iPalaceOfMinos: -30,
+		iOracle: -30,
 	},
 	iChina : {
 		iGreatWall: 80,
@@ -2246,7 +2253,6 @@ dBuildingPreferences = {
 		iBrandenburgGate: -30,
 	},
 	iChinaS : {
-		iGreatWall: 80,
 		iForbiddenPalace: 20,
 		iGrandCanal: 40,
 		iOrientalPearlTower: 40,
@@ -2260,6 +2266,9 @@ dBuildingPreferences = {
 	},
 	iNubia: {
 		iPalaceOfMinos: -20,
+		iOracle: -20,
+		iHangingGardens: -20,
+		iIshtarGate: -20,
 	},
 	iMinoans: {
 		iPalaceOfMinos: 50,
