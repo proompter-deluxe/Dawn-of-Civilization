@@ -536,6 +536,7 @@ lCivilizations = [
 		iMongols,
 		iGold=250,
 		iAdvancedStartPoints=50,
+		lEnemies=[iPersia, iParthia, iTurks, iMamluks, iArabia],
 		lCivics=[iElective, iVassalage, iSlavery, iMerchantTrade, iHegemony],
 		techs=techs.column(7).including(iPaper, iCompass).without(iTheology)
 	),
