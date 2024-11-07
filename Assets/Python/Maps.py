@@ -140,6 +140,23 @@ def exportScenario():
 	CvWBDesc().write(full_path, bDevelopmentOnly=True)
 
 
+def markDuplicateCityNames():
+	dCityNameTiles = {}
+	
+	for tile, name in city_names:
+		if name in ["?", "^"]:
+			continue
+		
+		name_tiles = dCityNameTiles.get(name, [])
+		if all(distance(tile, other_tile) > 1 for other_tile in name_tiles):
+			dCityNameTiles[name] = name_tiles + [tile]
+	
+	for name, tiles in dCityNameTiles.items():
+		if len(tiles) > 1:
+			for tile in tiles:
+				createLandmark(tile, name)
+
+
 def importArea(area):
 	worldBuilder.TempInfo = [location(p) for p in area]
 	worldBuilder.showAreaExportOverlay()
@@ -240,12 +257,23 @@ def markCityNames():
 
 
 def markInvalidCityNames():
+	lInvalidNames = []
+	
 	for tile, name in city_names:
 		try:
 			name.encode("latin-1")
 		except:
 			createLandmark(tile, name)
-			print name
+			lInvalidNames.append(name.encode("latin-1", "xmlcharrefreplace"))
+		
+	file = open(getPath("Export/InvalidNames.txt"), "w")
+	
+	try:
+		content = "\n".join(lInvalidNames)
+		print content
+		file.write(content)
+	finally:
+		file.close()
 
 
 def markResource(iResource):
