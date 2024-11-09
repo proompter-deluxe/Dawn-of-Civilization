@@ -392,7 +392,7 @@ class Birth(object):
 	
 	@property
 	def switchPopup(self):
-		return popup.text("TXT_KEY_POPUP_SWITCH").option(self.noSwitch, "TXT_KEY_POPUP_NO").option(self.yesSwitch, "TXT_KEY_POPUP_YES").build()
+		return popup.text("TXT_KEY_POPUP_SWITCH").cancel("TXT_KEY_POPUP_NO", button=event_bullet).option(self.yesSwitch, "TXT_KEY_POPUP_YES").build()
 	
 	def isHuman(self):
 		if self.iPlayer is None:
@@ -879,7 +879,7 @@ class Birth(object):
 			self.assignAdditionalTechs()
 			return
 
-		self.switchPopup.text(adjective(self.iPlayer)).noSwitch().yesSwitch().launch()
+		self.switchPopup.text(adjective(self.iPlayer)).cancel().yesSwitch().launch()
 	
 	def canSwitch(self):
 		if not MainOpt.isSwitchPopup():
@@ -898,17 +898,13 @@ class Birth(object):
 		
 		game.doControl(ControlTypes.CONTROL_FORCEENDTURN)
 	
-	def noSwitch(self):
-		if not self.isHuman():
-			self.assignAdditionalTechs()
-			createRoleUnits(self.iPlayer, self.location, getAIStartingUnits(self.iPlayer))
-		
-		createSpecificUnits(self.iPlayer, self.location)
-	
 	def checkSwitch(self):
 		if self.bSwitch:
-			self.bSwitch = False
 			self.switch()
+		else:
+			self.setupWithoutSwitch()
+		
+		self.bSwitch = False
 	
 	def switch(self):
 		iPreviousPlayer = active()
@@ -953,6 +949,13 @@ class Birth(object):
 		data.dUnitsKilled = dict((iUnit, iNumUnits) for iUnit, iNumUnits in dUnitsKilled.items() if iNumUnits > 0)
 		data.dUnitsLost = dict((iUnit, iNumUnits) for iUnit, iNumUnits in dUnitsLost.items() if iNumUnits > 0)
 		data.dBuildingsBuilt = dict((iBuilding, iNumBuildings) for iBuilding, iNumBuildings in dBuildingsBuilt.items() if iNumBuildings > 0)
+	
+	def setupWithoutSwitch(self):
+		if not self.isHuman():
+			self.assignAdditionalTechs()
+			createRoleUnits(self.iPlayer, self.location, getAIStartingUnits(self.iPlayer))
+		
+		createSpecificUnits(self.iPlayer, self.location)		
 	
 	def birth(self):
 		# initial save
