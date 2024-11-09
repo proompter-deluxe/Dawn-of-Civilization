@@ -601,21 +601,33 @@ class Birth(object):
 		for plot in plots.all():
 			plot.updateRevealedOwner(self.team.getID())
 	
+	def prepareCity(self, city):		
+		city.rebuild(-1)
+		
+		iMinPopulation = self.player.getCurrentEra() + 1
+		city.setPopulation(max(iMinPopulation, city.getPopulation()))
+		
+		if since(scenarioStartTurn()):
+			ensureDefenders(self.iPlayer, city, 2)
+	
 	def prepareCapital(self):
 		expelUnits(self.iPlayer, plots.surrounding(self.location), self.flippedArea())
 	
 		if plot_(self.location).isCity():
-			completeCityFlip(self.location, self.iPlayer, city_(self.location).getOwner(), 100, bCreateGarrisons=False)
+			capital = completeCityFlip(self.location, self.iPlayer, city_(self.location).getOwner(), 100, bCreateGarrisons=False)
 		
 		if self.iCiv not in lInvasionCivs:
 			for city in cities.ring(self.location):
 				if city.isHolyCity():
-					completeCityFlip(city, self.iPlayer, city.getOwner(), 100)
+					capital = completeCityFlip(city, self.iPlayer, city.getOwner(), 100)
 				else:
 					self.data.lPreservedWonders += [iWonder for iWonder in infos.buildings() if isWonder(iWonder) and city.isHasRealBuilding(iWonder)]
 				
 					plot_(city).eraseAIDevelopment()
 					plot_(city).setImprovementType(iCityRuins)
+		
+		if capital:
+			self.prepareCity(capital)
 		
 		for plot in plots.surrounding(self.location):
 			convertPlotCulture(plot, self.iPlayer, 100, bOwner=True)
@@ -1032,13 +1044,8 @@ class Birth(object):
 		
 		for city in flippedCities:
 			city = completeCityFlip(city, self.iPlayer, city.getOwner(), 100, bFlipUnits=True)
-			city.rebuild(-1)
 			
-			iMinPopulation = self.player.getCurrentEra() + 1
-			city.setPopulation(max(iMinPopulation, city.getPopulation()))
-			
-			if since(scenarioStartTurn()):
-				ensureDefenders(self.iPlayer, city, 2)
+			self.prepareCity(city)
 		
 		convertSurroundingPlotCulture(self.iPlayer, flippedPlots.land())
 		convertSurroundingPlotCulture(self.iPlayer, flippedPlots.water().where(lambda p: p.getPlayerCityRadiusCount(self.iPlayer) > 0))
