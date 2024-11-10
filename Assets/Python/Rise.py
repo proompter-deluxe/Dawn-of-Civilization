@@ -612,6 +612,8 @@ class Birth(object):
 	
 	def prepareCapital(self):
 		expelUnits(self.iPlayer, plots.surrounding(self.location), self.flippedArea())
+		
+		capital = None
 	
 		if plot_(self.location).isCity():
 			capital = completeCityFlip(self.location, self.iPlayer, city_(self.location).getOwner(), 100, bCreateGarrisons=False)
@@ -684,7 +686,10 @@ class Birth(object):
 			self.expansion()
 			self.announce()
 		
-		elif iUntilBirth == 2:
+		if self.iPlayer is None:
+			return
+		
+		if iUntilBirth == 2:
 			self.askSwitch()
 		elif iUntilBirth == 1:
 			self.birth()
