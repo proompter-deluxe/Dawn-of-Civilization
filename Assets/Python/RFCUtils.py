@@ -722,8 +722,12 @@ def exclusive(iCiv, *civs):
 # used: CvScreensInterface, Stability
 # TODO: should move to stability
 def canRespawn(iCiv):
-	# only dead civ need to check for resurrection
+	# only dead civ needs to check for resurrection
 	if player(iCiv).isAlive():
+		return False
+	
+	# cannot respawn if it has not spawned yet
+	if until(year(dBirth[iCiv])) > 0:
 		return False
 		
 	# check if only recently died
