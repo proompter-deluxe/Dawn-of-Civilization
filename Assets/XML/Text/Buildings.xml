@@ -1543,7 +1543,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ISLAMIC_TEMPLE</Tag>
-		<English>Islamic Mosque</English>
+		<English>Sunni Mosque</English>
 		<French>
 			<Text>Mosqu&#233;e islamique:Mosqu&#233;es islamiques</Text>
 			<Gender>Female</Gender>
@@ -1563,7 +1563,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ISLAMIC_MONASTERY</Tag>
-		<English>Islamic Madrassa</English>
+		<English>Sunni Madrassa</English>
 		<French>
 			<Text>Madrassa islamique:Madrassas islamiques</Text>
 			<Gender>Female</Gender>
@@ -1583,7 +1583,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ISLAMIC_CATHEDRAL</Tag>
-		<English>Islamic Grand Mosque</English>
+		<English>Sunni Grand Mosque</English>
 		<French>
 			<Text>Grande mosqu&#233;e islamique:Grandes mosqu&#233;es islamiques</Text>
 			<Gender>Female</Gender>
@@ -1608,6 +1608,82 @@
 		<German>The [COLOR_BUILDING_TEXT]Masjid al-Haram[COLOR_REVERT] ([COLOR_BUILDING_TEXT]Islamic Shrine[COLOR_REVERT]) produces one gold each turn for every city in the world that practises [COLOR_HIGHLIGHT_TEXT]Islam[COLOR_REVERT], with a limit of 20 gold. It also spreads [COLOR_HIGHLIGHT_TEXT]Islam[COLOR_REVERT] thoughout the world and increases its city's chances of generating a [COLOR_UNIT_TEXT]Great Prophet[COLOR_REVERT].</German>
 		<Italian>The [COLOR_BUILDING_TEXT]Masjid al-Haram[COLOR_REVERT] ([COLOR_BUILDING_TEXT]Islamic Shrine[COLOR_REVERT]) produces one gold each turn for every city in the world that practises [COLOR_HIGHLIGHT_TEXT]Islam[COLOR_REVERT], with a limit of 20 gold. It also spreads [COLOR_HIGHLIGHT_TEXT]Islam[COLOR_REVERT] thoughout the world and increases its city's chances of generating a [COLOR_UNIT_TEXT]Great Prophet[COLOR_REVERT].</Italian>
 		<Spanish>The [COLOR_BUILDING_TEXT]Masjid al-Haram[COLOR_REVERT] ([COLOR_BUILDING_TEXT]Islamic Shrine[COLOR_REVERT]) produces one gold each turn for every city in the world that practises [COLOR_HIGHLIGHT_TEXT]Islam[COLOR_REVERT], with a limit of 20 gold. It also spreads [COLOR_HIGHLIGHT_TEXT]Islam[COLOR_REVERT] thoughout the world and increases its city's chances of generating a [COLOR_UNIT_TEXT]Great Prophet[COLOR_REVERT].</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_SHIA_TEMPLE</Tag>
+		<English>Shia Mosque</English>
+		<French>
+			<Text>Mosqu&#233;e shia:Mosqu&#233;es shias</Text>
+			<Gender>Female</Gender>
+			<Plural>0:1</Plural>
+		</French>
+		<German>Shia Moschee</German>
+		<Italian>Moschea Shia</Italian>
+		<Spanish>Mezquita shia</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_SHIA_TEMPLE_STRATEGY</Tag>
+		<English>[COLOR_BUILDING_TEXT]Mosques[COLOR_REVERT] ([COLOR_BUILDING_TEXT]Shia Temples[COLOR_REVERT]) increase a city's happiness and culture. [COLOR_BUILDING_TEXT]Mosques[COLOR_REVERT] are required to build the [COLOR_BUILDING_TEXT]Shia Grand Mosque[COLOR_REVERT] building.</English>
+		<French>[COLOR_BUILDING_TEXT]Mosques[COLOR_REVERT] ([COLOR_BUILDING_TEXT]Shia Temples[COLOR_REVERT]) increase a city's happiness and culture. [COLOR_BUILDING_TEXT]Mosques[COLOR_REVERT] are required to build the [COLOR_BUILDING_TEXT]Shia Grand Mosque[COLOR_REVERT] building.</French>
+		<German>[COLOR_BUILDING_TEXT]Mosques[COLOR_REVERT] ([COLOR_BUILDING_TEXT]Shia Temples[COLOR_REVERT]) increase a city's happiness and culture. [COLOR_BUILDING_TEXT]Mosques[COLOR_REVERT] are required to build the [COLOR_BUILDING_TEXT]Shia Grand Mosque[COLOR_REVERT] building.</German>
+		<Italian>[COLOR_BUILDING_TEXT]Mosques[COLOR_REVERT] ([COLOR_BUILDING_TEXT]Shia Temples[COLOR_REVERT]) increase a city's happiness and culture. [COLOR_BUILDING_TEXT]Mosques[COLOR_REVERT] are required to build the [COLOR_BUILDING_TEXT]Shia Grand Mosque[COLOR_REVERT] building.</Italian>
+		<Spanish>[COLOR_BUILDING_TEXT]Mosques[COLOR_REVERT] ([COLOR_BUILDING_TEXT]Shia Temples[COLOR_REVERT]) increase a city's happiness and culture. [COLOR_BUILDING_TEXT]Mosques[COLOR_REVERT] are required to build the [COLOR_BUILDING_TEXT]Shia Grand Mosque[COLOR_REVERT] building.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_SHIA_MONASTERY</Tag>
+		<English>Shia Madrassa</English>
+		<French>
+			<Text>Madrassa shia:Madrassas shias</Text>
+			<Gender>Female</Gender>
+			<Plural>0:1</Plural>
+		</French>
+		<German>Shia Madrasa</German>
+		<Italian>Madrassa Shia</Italian>
+		<Spanish>Madraza shia</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_SHIA_MONASTERY_STRATEGY</Tag>
+		<English>[COLOR_BUILDING_TEXT]Madrasahs[COLOR_REVERT] ([COLOR_BUILDING_TEXT]Shia Monasteries[COLOR_REVERT]) allow you to create [COLOR_UNIT_TEXT]Shia Imams[COLOR_REVERT], who can spread [COLOR_HIGHLIGHT_TEXT]Islam[COLOR_REVERT] in other cities. They also provide culture and a slight boost to research.</English>
+		<French>[COLOR_BUILDING_TEXT]Madrasahs[COLOR_REVERT] ([COLOR_BUILDING_TEXT]Shia Monasteries[COLOR_REVERT]) allow you to create [COLOR_UNIT_TEXT]Shia Imams[COLOR_REVERT], who can spread [COLOR_HIGHLIGHT_TEXT]Islam[COLOR_REVERT] in other cities. They also provide culture and a slight boost to research.</French>
+		<German>[COLOR_BUILDING_TEXT]Madrasahs[COLOR_REVERT] ([COLOR_BUILDING_TEXT]Shia Monasteries[COLOR_REVERT]) allow you to create [COLOR_UNIT_TEXT]Shia Imams[COLOR_REVERT], who can spread [COLOR_HIGHLIGHT_TEXT]Islam[COLOR_REVERT] in other cities. They also provide culture and a slight boost to research.</German>
+		<Italian>[COLOR_BUILDING_TEXT]Madrasahs[COLOR_REVERT] ([COLOR_BUILDING_TEXT]Shia Monasteries[COLOR_REVERT]) allow you to create [COLOR_UNIT_TEXT]Shia Imams[COLOR_REVERT], who can spread [COLOR_HIGHLIGHT_TEXT]Islam[COLOR_REVERT] in other cities. They also provide culture and a slight boost to research.</Italian>
+		<Spanish>[COLOR_BUILDING_TEXT]Madrasahs[COLOR_REVERT] ([COLOR_BUILDING_TEXT]Shia Monasteries[COLOR_REVERT]) allow you to create [COLOR_UNIT_TEXT]Shia Imams[COLOR_REVERT], who can spread [COLOR_HIGHLIGHT_TEXT]Islam[COLOR_REVERT] in other cities. They also provide culture and a slight boost to research.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_SHIA_CATHEDRAL</Tag>
+		<English>Shia Grand Mosque</English>
+		<French>
+			<Text>Grande mosqu&#233;e shia:Grandes mosqu&#233;es shias</Text>
+			<Gender>Female</Gender>
+			<Plural>0:1</Plural>
+		</French>
+		<German>Shia Gro&#223;moschee</German>
+		<Italian>Grande Moschea Shia</Italian>
+		<Spanish>Gran Mezquita shia</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_SHIA_CATHEDRAL_STRATEGY</Tag>
+		<English>The [COLOR_BUILDING_TEXT]Grand Mosque[COLOR_REVERT] ([COLOR_BUILDING_TEXT]Shia Cathedral[COLOR_REVERT]) greatly increases a city's cultural output. It increases the city's happiness if [COLOR_HIGHLIGHT_TEXT]Islam[COLOR_REVERT] is your state religion, or if you have access to [COLOR_HIGHLIGHT_TEXT]Incense[COLOR_REVERT].</English>
+		<French>The [COLOR_BUILDING_TEXT]Grand Mosque[COLOR_REVERT] ([COLOR_BUILDING_TEXT]Shia Cathedral[COLOR_REVERT]) greatly increases a city's cultural output. It increases the city's happiness if [COLOR_HIGHLIGHT_TEXT]Islam[COLOR_REVERT] is your state religion, or if you have access to [COLOR_HIGHLIGHT_TEXT]Incense[COLOR_REVERT].</French>
+		<German>The [COLOR_BUILDING_TEXT]Grand Mosque[COLOR_REVERT] ([COLOR_BUILDING_TEXT]Shia Cathedral[COLOR_REVERT]) greatly increases a city's cultural output. It increases the city's happiness if [COLOR_HIGHLIGHT_TEXT]Islam[COLOR_REVERT] is your state religion, or if you have access to [COLOR_HIGHLIGHT_TEXT]Incense[COLOR_REVERT].</German>
+		<Italian>The [COLOR_BUILDING_TEXT]Grand Mosque[COLOR_REVERT] ([COLOR_BUILDING_TEXT]Shia Cathedral[COLOR_REVERT]) greatly increases a city's cultural output. It increases the city's happiness if [COLOR_HIGHLIGHT_TEXT]Islam[COLOR_REVERT] is your state religion, or if you have access to [COLOR_HIGHLIGHT_TEXT]Incense[COLOR_REVERT].</Italian>
+		<Spanish>The [COLOR_BUILDING_TEXT]Grand Mosque[COLOR_REVERT] ([COLOR_BUILDING_TEXT]Shia Cathedral[COLOR_REVERT]) greatly increases a city's cultural output. It increases the city's happiness if [COLOR_HIGHLIGHT_TEXT]Islam[COLOR_REVERT] is your state religion, or if you have access to [COLOR_HIGHLIGHT_TEXT]Incense[COLOR_REVERT].</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_SHIA_SHRINE</Tag>
+		<English>Imam Ali Mosque</English>
+		<French>Imam Ali Mosque</French>
+		<German>Imam Ali Mosque</German>
+		<Italian>Imam Ali Mosque</Italian>
+		<Spanish>Imam Ali Mosque</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_SHIA_SHRINE_STRATEGY</Tag>
+		<English>The [COLOR_BUILDING_TEXT]Imam Ali Mosque[COLOR_REVERT] ([COLOR_BUILDING_TEXT]Shia Shrine[COLOR_REVERT]) produces one gold each turn for every city in the world that practises [COLOR_HIGHLIGHT_TEXT]Islam[COLOR_REVERT], with a limit of 20 gold. It also spreads [COLOR_HIGHLIGHT_TEXT]Islam[COLOR_REVERT] thoughout the world and increases its city's chances of generating a [COLOR_UNIT_TEXT]Great Prophet[COLOR_REVERT].</English>
+		<French>The [COLOR_BUILDING_TEXT]Imam Ali Mosque[COLOR_REVERT] ([COLOR_BUILDING_TEXT]Shia Shrine[COLOR_REVERT]) produces one gold each turn for every city in the world that practises [COLOR_HIGHLIGHT_TEXT]Islam[COLOR_REVERT], with a limit of 20 gold. It also spreads [COLOR_HIGHLIGHT_TEXT]Islam[COLOR_REVERT] thoughout the world and increases its city's chances of generating a [COLOR_UNIT_TEXT]Great Prophet[COLOR_REVERT].</French>
+		<German>The [COLOR_BUILDING_TEXT]Imam Ali Mosque[COLOR_REVERT] ([COLOR_BUILDING_TEXT]Shia Shrine[COLOR_REVERT]) produces one gold each turn for every city in the world that practises [COLOR_HIGHLIGHT_TEXT]Islam[COLOR_REVERT], with a limit of 20 gold. It also spreads [COLOR_HIGHLIGHT_TEXT]Islam[COLOR_REVERT] thoughout the world and increases its city's chances of generating a [COLOR_UNIT_TEXT]Great Prophet[COLOR_REVERT].</German>
+		<Italian>The [COLOR_BUILDING_TEXT]Imam Ali Mosque[COLOR_REVERT] ([COLOR_BUILDING_TEXT]Shia Shrine[COLOR_REVERT]) produces one gold each turn for every city in the world that practises [COLOR_HIGHLIGHT_TEXT]Islam[COLOR_REVERT], with a limit of 20 gold. It also spreads [COLOR_HIGHLIGHT_TEXT]Islam[COLOR_REVERT] thoughout the world and increases its city's chances of generating a [COLOR_UNIT_TEXT]Great Prophet[COLOR_REVERT].</Italian>
+		<Spanish>The [COLOR_BUILDING_TEXT]Imam Ali Mosque[COLOR_REVERT] ([COLOR_BUILDING_TEXT]Shia Shrine[COLOR_REVERT]) produces one gold each turn for every city in the world that practises [COLOR_HIGHLIGHT_TEXT]Islam[COLOR_REVERT], with a limit of 20 gold. It also spreads [COLOR_HIGHLIGHT_TEXT]Islam[COLOR_REVERT] thoughout the world and increases its city's chances of generating a [COLOR_UNIT_TEXT]Great Prophet[COLOR_REVERT].</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HINDU_TEMPLE</Tag>

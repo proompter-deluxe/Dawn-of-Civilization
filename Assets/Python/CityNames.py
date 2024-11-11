@@ -269,7 +269,7 @@ def getSpecialLanguages(identifier):
 	elif iCiv == iPhoenicia:
 		if player(iCiv).getPeriod() == iPeriodTunisia:
 			return [iLangArabic]
-	elif iCiv == iPersia and player(identifier).getStateReligion() == iIslam:
+	elif iCiv == iPersia and (player(identifier).getStateReligion() == iShia or player(identifier).getStateReligion() == iIslam):
 		return [iLangFarsi, iLangArabic, iLangPersian]
 	elif iCiv == iNorse:
 		if player(iCiv).getPeriod() == iPeriodDenmark:

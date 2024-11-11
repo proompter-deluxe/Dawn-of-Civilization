@@ -206,38 +206,42 @@
 		</Spanish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_RELIGION_ISLAM_SUNNI</Tag>
+		<English>Sunni Islam</English>
+		<French>
+			<Text>Islam sunni</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>Sunni Islam</German>
+		<Italian>Sunni Islam</Italian>
+		<Spanish>Sunni Islam</Spanish>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_RELIGION_ISLAM_ADJECTIVE</Tag>
 		<English>
-			<Text>Islamic</Text>
+			<Text>Sunni</Text>
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</English>
 		<French>
-			<Text>musulman:musulmane:musulmans:musulmanes</Text>
-			<Gender>Male:Female:Male:Female</Gender>
-			<Plural>0:0:1:1</Plural>
+			<Text>Sunni</Text>
 		</French>
 		<German>
-			<Text>Islamisch:islamischen:islamische</Text>
-			<Gender>Neuter:Neuter:Neuter</Gender>
-			<Plural>0:0:0</Plural>
+			<Text>Sunni</Text>
 		</German>
 		<Italian>
-			<Text>musulmano:musulmana:musulmani:musulmane</Text>
-			<Gender>Male:Female:Male:Female</Gender>
-			<Plural>0:0:1:1</Plural>
+			<Text>Sunni</Text>
 		</Italian>
 		<Spanish>
-			<Text>isl&#225;mico:isl&#225;mica:isl&#225;micos:isl&#225;micas</Text>
-			<Gender>Male:Female:Male:Female</Gender>
-			<Plural>0:0:1:1</Plural>
+			<Text>Sunni</Text>
 		</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_RELIGION_PROTESTANTISM</Tag>
 		<English>Protestantism</English>
 		<French>
-			<Text>Protestantisme</Text>
+			<Text>Protestantisme</Text>	
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
@@ -300,6 +304,30 @@
 			<Plural>0</Plural>
 		</Italian>
 		<Spanish>Orthodox</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_RELIGION_SHIA</Tag>
+		<English>Shia Islam</English>
+		<French>
+			<Text>Islam shia</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>Shia Islam</German>
+		<Italian>Shia Islam</Italian>
+		<Spanish>Shia Islam</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_RELIGION_SHIA_ADJECTIVE</Tag>
+		<English>Shi'ite</English>
+		<French>
+			<Text>Shi'ite:Shi'ite:Shi'ites:Shi'ites</Text>
+			<Gender>Male:Female:Male:Female</Gender>
+			<Plural>0:0:1:1</Plural>
+		</French>
+		<German>Shi'ite</German>
+		<Italian>Shi'ite</Italian>
+		<Spanish>Shi'ite</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_RELIGION_REFORMATION</Tag>

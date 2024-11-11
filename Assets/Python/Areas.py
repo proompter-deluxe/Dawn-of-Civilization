@@ -68,7 +68,7 @@ iColombia :		(30, 34), # Bogota
 iBrazil :		(44, 20), # Rio de Janeiro
 iCanada :		(31, 61), # Montreal
 iBulgaria:      (77, 56), # Tarnovo
-iMamluks :	    (79, 43), # Cairo
+iMamluks :	    (67, 48), # Tunis
 iMacedon:       (75, 54), # Pella
 iIroquois:      (30, 59), # "Mohawk"
 iArmenia:       (89, 53), # Dvin
@@ -109,6 +109,7 @@ iInca :		(28, 25),	# Lima
 iItaly :	(68, 53),	# Rome
 iMughals :	(99, 43),	# Karachi
 iOttomans :	(79, 55),	# Istanbul
+iMamluks :	(79, 43),   # Cairo
 })
 
 ### Birth Area ###
@@ -153,6 +154,7 @@ iCanada : 		((6, 59),	(37, 68)),
 iParthia:       ((92, 51),  (95, 53)),
 iMacedon:       ((73, 53),  (79, 55)),
 iGreece :		((74, 48),	(78, 53)),
+iMamluks:       ((63, 43),  (70, 48)), # Tunisia
 })
 
 dExtendedBirthArea = CivDict({

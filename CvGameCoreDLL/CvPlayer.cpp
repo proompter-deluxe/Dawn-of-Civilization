@@ -8567,7 +8567,7 @@ void CvPlayer::foundReligion(ReligionTypes eReligion, ReligionTypes eSlotReligio
 			}
 			if ((pLoopCity->getX() == 60 && pLoopCity->getY() == 44) || (pLoopCity->getX() == 73 && pLoopCity->getY() == 38)) //Rome or Jerusalem
 			{
-				if (eReligion == CATHOLICISM || eReligion == ORTHODOXY || eReligion == ISLAM)
+				if (eReligion == CATHOLICISM || eReligion == ORTHODOXY || eReligion == ISLAM || eReligion == SHIA)
 					iValue *= 2;
 				//iValue /= 3;
 			}
@@ -24386,7 +24386,7 @@ EraTypes CvPlayer::getSoundtrackEra()
 			}
 		}
 	}
-	else if (eStateReligion == ISLAM || eStateReligion == ZOROASTRIANISM)
+	else if (eStateReligion == ISLAM || eStateReligion == SHIA || eStateReligion == ZOROASTRIANISM)
 	{
 		if (eCurrentEra == ERA_MEDIEVAL || eCurrentEra == ERA_RENAISSANCE)
 		{

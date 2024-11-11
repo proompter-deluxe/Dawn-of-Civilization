@@ -67,6 +67,7 @@ LEADER_DATES = {
 	iAlpArslan: 1070,
 	iTamerlane: 1370,
 	iHarun: 790,
+	iAlMuizz: 953,
 	iSaladin: 1180,
 	iBaibars: 1260,
 	iSimeon: 893,
@@ -157,7 +158,8 @@ RELIGION_FOUNDING_DATES = {
 	iBuddhism: 80,
 	iConfucianism: -500,
 	iTaoism: -400,
-	iZoroastrianism: -600
+	iZoroastrianism: -600,
+	iShia: 680,
 }
 
 WONDER_ORIGINAL_BUILDERS = {

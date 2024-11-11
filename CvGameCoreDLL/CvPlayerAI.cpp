@@ -4333,7 +4333,10 @@ TechTypes CvPlayerAI::AI_bestTech(int iMaxPathLength, bool bIgnoreCost, bool bAs
 												{
 													if (iJ == JUDAISM) continue;
 													if ((iJ == CONFUCIANISM || iJ == TAOISM) && getCivilizationType() != CHINA) continue;
+													if ((iJ == CONFUCIANISM || iJ == TAOISM) && getCivilizationType() != YANGTZE_CHINA) continue;
+
 													if (iJ == ZOROASTRIANISM && getCivilizationType() != PERSIA) continue;
+													if (iJ == ZOROASTRIANISM && getCivilizationType() != PARTHIA) continue;
 
 													int iRoll = 2400;
 													if (!GC.getGame().isOption(GAMEOPTION_PICK_RELIGION))
@@ -10791,6 +10794,7 @@ int CvPlayerAI::AI_civicValue(CivicTypes eCivic) const
 		case CATHOLICISM:
 		case PROTESTANTISM:
 		case ISLAM:
+		case SHIA:
 			iValue /= 5;
 			break;
 		}
@@ -10849,6 +10853,11 @@ ReligionTypes CvPlayerAI::AI_bestReligion() const
 			if (iI == CATHOLICISM || iI == ORTHODOXY || iI == PROTESTANTISM)
 			{
 				if (eFavorite == ISLAM)
+				{
+					iValue /= 2;
+				}
+
+				if (eFavorite == SHIA)
 				{
 					iValue /= 2;
 				}

@@ -63,6 +63,11 @@ dGoals = {
 		CitySpecialistCount(holy_city(iIslam), great_people(), 7, subject=STATE_RELIGION),
 		BuildingCount(religious_buildings(shrine).named(SHRINES), 5),
 	),
+	iShia: (
+		NoStateReligion(iIslam),
+		ReligionSpreadPercent(iShia, 30),
+		BuildingCount(religious_buildings(shrine).named(SHRINES), 5),
+	),
 	iProtestantism: (
 		FirstDiscover(iCivilLiberties, iSocialContract, iEconomics),
 		SpecialistCount((iSpecialistGreatMerchant, 5), (iSpecialistGreatEngineer, 5), subject=STATE_RELIGION, iReligion=iProtestantism),

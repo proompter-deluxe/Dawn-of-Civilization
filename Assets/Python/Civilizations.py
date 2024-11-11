@@ -279,7 +279,7 @@ lCivilizations = [
 		iRome,
 		iGold=200,
 		iAdvancedStartPoints=300,
-		lCivics=[iRepublic, iSlavery, iRedistribution],
+		lCivics=[iRepublic, iSlavery, iRedistribution, iHegemony],
 		techs=techs.column(4).including(iGeneralship, iCurrency).without(iRiding, iShipbuilding, iNavigation)
 	),
 	Civilization(
@@ -480,6 +480,15 @@ lCivilizations = [
 		techs=techs.column(6).including(iGuilds).without(iScholarship)
 	),
 	Civilization(
+		iMamluks,
+		iGold=300,
+		iAdvancedStartPoints=60,
+		iStateReligion=iShia,
+		lEnemies=[iArabia, iIndependent, iIndependent2],
+		lCivics=[iMonarchy, iSlavery, iMerchantTrade, iClergy, iTheocracy, iHegemony],
+		techs=techs.column(6).including(iTheology, iDoctrine)
+	),
+	Civilization(
 		iVietnam,
 		iGold=200,
 		iStateReligion=iConfucianism,
@@ -490,17 +499,9 @@ lCivilizations = [
 		iSwahili,
 		iGold=200,
 		iAdvancedStartPoints=50,
-		iStateReligion=iIslam,
+		iStateReligion=iShia,
 		lCivics=[iElective, iCitizenship, iSlavery, iMerchantTrade, iClergy, iThalassocracy],
 		techs=techs.column(6).including(iGuilds, iAlchemy)
-	),
-	Civilization(
-		iMamluks,
-		iGold=200,
-		iAdvancedStartPoints=50,
-		iStateReligion=iIslam,
-		lCivics=[iMonarchy, iVassalage, iSlavery, iMerchantTrade, iFanaticism, iHegemony],
-		techs=techs.column(6).including(iFeudalism, iFortification, iTheology, iDoctrine)
 	),
 	Civilization(
 		iPoland,
@@ -600,7 +601,7 @@ lCivilizations = [
 		iIran,
 		iGold=600,
 		iAdvancedStartPoints=100,
-		iStateReligion=iIslam,
+		iStateReligion=iShia,
 		lCivics=[iMonarchy, iTheocracy, iSlavery, iMerchantTrade, iFanaticism, iHegemony],
 		techs=techs.column(9).including(iHeritage, iFirearms)
 	),
@@ -948,7 +949,8 @@ dStartingUnits = CivDict({
 	iBulgaria: {
 		iSettle: 2,
 		iWork: 2,
-		iDefend: 3,
+		iDefend: 4,
+		iAttack: 1,
 		iHarass: 5,
 	},
 	iEngland: {
@@ -1008,10 +1010,10 @@ dStartingUnits = CivDict({
 		iSettle: 2,
 		iWork: 2,
 		iDefend: 3,
-		iShock: 4,
-		iAttack: 2,
-		iSiege: 1,
-		iMissionary: 1,
+		iShock: 6,
+		iAttack: 4,
+		iSiege: 4,
+		iMissionary: 2,
 	},
 	iPoland: {
 		iSettle: 2,
@@ -1834,15 +1836,14 @@ dTechPreferences = {
 		iEthics: 20,
 		iBloomery: 20,
 	},
-	iRome : {
-		iTheology: 30,
+	iRome : {	
 		iCurrency: 20,
 		iLaw: 20,
 		iPolitics: 20,
 		iConstruction: 15,
 		iEngineering: 15,
 		
-		iCalendar: -20,
+		iTheology: -30,
 	},
 	iMaya : {
 		iCalendar: 40,
@@ -2444,7 +2445,6 @@ dBuildingPreferences = {
 		iDomeOfTheRock: 40,
 		iHouseOfWisdom: 40,
 		iBurjKhalifa: 40,
-		iAlamut: 30,
 	
 		iTopkapiPalace: -80,
 		iMezquita: -50,
@@ -2452,16 +2452,8 @@ dBuildingPreferences = {
 		iGreatAdobeMosque: -30,
 	},
 	iMamluks: {
-		iSpiralMinaret: 40,
-		iDomeOfTheRock: 40,
-		iHouseOfWisdom: 40,
 		iBurjKhalifa: 40,
 		iAlamut: 30,
-	
-		iTopkapiPalace: -80,
-		iMezquita: -50,
-		iUniversityOfSankore: -30,
-		iGreatAdobeMosque: -30,
 	},
 	iTibet : {
 		iPotalaPalace: 40,

@@ -14,7 +14,7 @@
 			<TechPrereq>TECH_LITERATURE</TechPrereq>
 			<FreeUnitClass>UNITCLASS_JEWISH_MISSIONARY</FreeUnitClass>
 			<iFreeUnits>0</iFreeUnits>
-			<iSpreadFactor>50</iSpreadFactor>
+			<iSpreadFactor>40</iSpreadFactor>
 			<bLocal>1</bLocal>
 			<GlobalReligionCommerces>
 				<iGlobalReligionCommerce>1</iGlobalReligionCommerce>
@@ -136,7 +136,7 @@
 		</ReligionInfo>
 		<ReligionInfo>
 			<Type>RELIGION_ISLAM</Type>
-			<Description>TXT_KEY_RELIGION_ISLAM</Description>
+			<Description>TXT_KEY_RELIGION_ISLAM_SUNNI</Description>
 			<Adjective>TXT_KEY_RELIGION_ISLAM_ADJECTIVE</Adjective>
 			<Civilopedia>TXT_KEY_RELIGION_ISLAM_PEDIA</Civilopedia>
 			<TechPrereq>TECH_THEOLOGY</TechPrereq>
@@ -205,7 +205,7 @@
 			<TechPrereq>TECH_PHILOSOPHY</TechPrereq>
 			<FreeUnitClass>UNITCLASS_BUDDHIST_MISSIONARY</FreeUnitClass>
 			<iFreeUnits>2</iFreeUnits>
-			<iSpreadFactor>140</iSpreadFactor>
+			<iSpreadFactor>120</iSpreadFactor>
 			<bProselytizing>1</bProselytizing>
 			<GlobalReligionCommerces>
 				<iGlobalReligionCommerce>1</iGlobalReligionCommerce>
@@ -300,7 +300,7 @@
 			<TechPrereq>TECH_PRIESTHOOD</TechPrereq>
 			<FreeUnitClass>UNITCLASS_ZOROASTRIAN_MISSIONARY</FreeUnitClass>
 			<iFreeUnits>1</iFreeUnits>
-			<iSpreadFactor>50</iSpreadFactor>
+			<iSpreadFactor>60</iSpreadFactor>
 			<GlobalReligionCommerces>
 				<iGlobalReligionCommerce>1</iGlobalReligionCommerce>
 				<iGlobalReligionCommerce>0</iGlobalReligionCommerce>
@@ -322,6 +322,38 @@
 			<MovieFile>Art/Movies/Zoroastrianism/Tao_Found.nif</MovieFile>
 			<MovieSound>AS2D_BUILD_ZORO_MOVIE</MovieSound>
 			<Sound>AS2D_BUILD_ZORO</Sound>
+		</ReligionInfo>
+		<ReligionInfo>
+			<Type>RELIGION_SHIA</Type>
+			<Description>TXT_KEY_RELIGION_SHIA</Description>
+			<Adjective>TXT_KEY_RELIGION_SHIA_ADJECTIVE</Adjective>
+			<Civilopedia>TXT_KEY_RELIGION_SHIA_PEDIA</Civilopedia>
+			<TechPrereq>TECH_DOCTRINE</TechPrereq>
+			<FreeUnitClass>UNITCLASS_SHIA_MISSIONARY</FreeUnitClass>
+			<iFreeUnits>1</iFreeUnits>
+			<iSpreadFactor>180</iSpreadFactor>
+			<bProselytizing>1</bProselytizing>
+			<GlobalReligionCommerces>
+				<iGlobalReligionCommerce>1</iGlobalReligionCommerce>
+				<iGlobalReligionCommerce>0</iGlobalReligionCommerce>
+				<iGlobalReligionCommerce>0</iGlobalReligionCommerce>
+			</GlobalReligionCommerces>
+			<HolyCityCommerces>
+				<iHolyCityCommerce>0</iHolyCityCommerce>
+				<iHolyCityCommerce>0</iHolyCityCommerce>
+				<iHolyCityCommerce>3</iHolyCityCommerce>
+			</HolyCityCommerces>
+			<StateReligionCommerces>
+				<iStateReligionCommerce>0</iStateReligionCommerce>
+				<iStateReligionCommerce>0</iStateReligionCommerce>
+				<iStateReligionCommerce>1</iStateReligionCommerce>
+			</StateReligionCommerces>
+			<Button>Art/Interface/Buttons/Religions/Shia.dds</Button>
+			<TechButton>Art/Interface/Buttons/TechTree/Doctrine.dds</TechButton>
+			<GenericTechButton>,Art/Interface/Buttons/TechTree/Islam.dds,Art/Interface/Buttons/Beyond the Sword_Atlas.dds,6,3</GenericTechButton>
+			<MovieFile>Art/Movies/Religion/Islam/Isl_Found.nif</MovieFile>
+			<MovieSound>AS2D_BUILD_ISLAMIC_MOVIE</MovieSound>
+			<Sound>AS2D_BUILD_ISLAMIC</Sound>
 		</ReligionInfo>
 	</ReligionInfos>
 </Civ4ReligionInfo>

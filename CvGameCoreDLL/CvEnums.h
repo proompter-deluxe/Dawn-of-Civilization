@@ -1269,6 +1269,7 @@ enum LeaderHeadTypes			// Exposed to Python
 	WENT_ANTU,
 
 	ASHURBANIPAL,
+	NASIR_AL_DAWLA,
 
 	QIN_SHI_HUANG,
 	TAIZONG,
@@ -1351,6 +1352,7 @@ enum LeaderHeadTypes			// Exposed to Python
 
 	HARUN,
 	
+	AL_MUIZZ,
 	SALADIN,
 	BAIBARS,
 	NASSER,
@@ -2277,6 +2279,7 @@ enum ReligionTypes				// Exposed to Python
 	CONFUCIANISM,
 	TAOISM,
 	ZOROASTRIANISM,
+	SHIA,
 	NUM_RELIGIONS,
 };
 

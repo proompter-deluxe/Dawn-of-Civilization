@@ -258,6 +258,18 @@
 		<Spanish>Theme of Boulgaria</Spanish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_CIV_BYZANTINE_ASSYRIA</Tag>
+		<English>Theme of Antiocheia</English>
+		<French>
+			<Text>Th&#232;me d'Antioche</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>Theme of Antiocheia</German>
+		<Italian>Theme of Antiocheia</Italian>
+		<Spanish>Theme of Antiocheia</Spanish>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_CIV_BYZANTIUM_ADJECTIVE</Tag>
 		<English>
 			<Text>Byzantine:Byzantines</Text>

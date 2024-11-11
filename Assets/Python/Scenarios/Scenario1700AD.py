@@ -193,7 +193,7 @@ lCivilizations = [
 		iIran,
 		iLeader=iAbbas,
 		iGold=200,
-		iStateReligion=iIslam,
+		iStateReligion=iShia,
 		lCivics=[iMonarchy, iTheocracy, iSlavery, iMerchantTrade, iFanaticism, iHegemony],
 		techs=techs.column(10).including(iCombinedArms, iGeography, iUrbanPlanning, iHorticulture),
 		dAttitudes={iMughals: -2, iOttomans: -4}

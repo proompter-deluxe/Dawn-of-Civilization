@@ -1378,6 +1378,9 @@ def canTriggerAncientOlympics(argsList):
 
 	if stateReligion == CvUtil.findInfoTypeNum(gc.getReligionInfo,gc.getNumReligionInfos(),'RELIGION_ISLAM'):
 		return false
+	
+	if stateReligion == CvUtil.findInfoTypeNum(gc.getReligionInfo,gc.getNumReligionInfos(),'RELIGION_SHIA'):
+		return false
 
 	return true
 

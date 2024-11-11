@@ -85,7 +85,7 @@ tSpainMoorsBR = (60, 51)
 
 tConquestSpainMoors = (9, iSpain, iMoors, tSpainMoorsTL, tSpainMoorsBR, 1, iSpainMoorsYear, 10)
 
-iTurksPersiaYear = 1000
+iTurksPersiaYear = 1040
 tTurksPersiaTL = (91, 43)
 tTurksPersiaBR = (98, 52)
 
@@ -107,6 +107,12 @@ tMongolsPersiaTL = (91, 43)
 tMongolsPersiaBR = (98, 52)
 
 tConquestMongolsPersia = (13, iMongols, iTurks, tMongolsPersiaTL, tMongolsPersiaBR, 7, iMongolsPersiaYear, 10)
+
+iMongolsBaghdadYear = 1260
+tMongolsBaghdadTL = (88, 43)
+tMongolsBaghdadBR = (90, 49)
+
+tConquestMongolsBaghdad = (38, iMongols, iArabia, tMongolsBaghdadTL, tMongolsBaghdadBR, 2, iMongolsBaghdadYear, 5)
 
 iChinaIndiesYear = -240
 tChinaIndiesTL = (118, 49)
@@ -192,6 +198,9 @@ tDummyConquestRomeHoldingRome= (36, iRome, iBarbarian, tRome, tRome, 1, -3000, 1
 iParthiaMesopotamiaYear = 220
 tConquestParthiaMesopotamia = (37, iParthia, iRome, tLevantTL, tGreeceMesopotamiaBR, 3, iParthiaMesopotamiaYear, 10)
 
+iFatamidEgyptYear = 969
+tConquestFatamidEgypt = (38, iMamluks, iArabia, tEgyptTL, tEgyptBR, 2, iFatamidEgyptYear, 10)
+
 lConquests = [
 	tConquestRomeCarthageInSpain,
 	tConquestRomeCarthage, 
@@ -229,6 +238,8 @@ lConquests = [
 	tConquestCarthageInSpain,
 	tConquestHannibalInItaly,
 	tConquestParthiaMesopotamia,
+	tConquestFatamidEgypt,
+	tConquestMongolsBaghdad,
 ]
 
 dConquestChecker = {
@@ -249,6 +260,7 @@ dConquestChecker = {
 	tConquestHannibalInItaly[0]: lambda tConquest: checkConquest(tConquest, tConquestCarthageInSpain),
 	tConquestRomeGreece[0]: lambda tConquest: checkConquest(tConquest, tDummyConquestRomeHoldingRome),
 	tConquestRomeCelts[0]: lambda tConquest: checkConquest(tConquest, tDummyConquestRomeHoldingRome),
+	tConquestMongolsBaghdad[0]: lambda tConquest: checkConquest(tConquest, tConquestMongolsPersia),
 }
 
 def checkByzantiumConquestOfCarthage(tConquest):
@@ -522,6 +534,10 @@ def spawnConquerors(iPlayer, iPreferredTarget, tTL, tBR, iNumTargets, iWarPlan =
 			if iCiv in [iTurks, iMongols]:
 				createRoleUnit(iPlayer, tPlot, iShockCity, 2)
 				createRoleUnit(iPlayer, tPlot, iHarass, 2)
+
+			# Shia conquerors get free missionary
+			if pPlayer.getStateReligion() == iShia:
+				makeUnits(iPlayer, iShiaMissionary, tPlot, 1)
 
 	# if human, select to orient player
 	if pPlayer.isHuman():

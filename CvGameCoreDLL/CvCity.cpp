@@ -5127,26 +5127,26 @@ int CvCity::determineArtStyleType() const
 		case REGION_SIBERIA:
 			return GC.getCivilizationInfo(RUSSIA).getArtStyleType();
 		case REGION_MAGHREB:
-			if (isHasReligion(ISLAM))
+			if (isHasReligion(ISLAM) || isHasReligion(SHIA))
 			{
 				return GC.getCivilizationInfo(ARABIA).getArtStyleType();
 			}
 			return GC.getCivilizationInfo(ROME).getArtStyleType();
 		case REGION_ANATOLIA:
 		case REGION_CAUCASUS:
-			if (isHasReligion(ISLAM))
+			if (isHasReligion(ISLAM) || isHasReligion(SHIA))
 			{
 				return GC.getCivilizationInfo(PERSIA).getArtStyleType();
 			}
 			return GC.getCivilizationInfo(ROME).getArtStyleType();
 		case REGION_LEVANT:
-			if (isHasReligion(ISLAM))
+			if (isHasReligion(ISLAM) || isHasReligion(SHIA))
 			{
 				return GC.getCivilizationInfo(ARABIA).getArtStyleType();
 			}
 			return GC.getCivilizationInfo(CARTHAGE).getArtStyleType();
 		case REGION_MESOPOTAMIA:
-			if (isHasReligion(ISLAM))
+			if (isHasReligion(ISLAM) || isHasReligion(SHIA))
 			{
 				return GC.getCivilizationInfo(ARABIA).getArtStyleType();
 			}
@@ -5154,7 +5154,7 @@ int CvCity::determineArtStyleType() const
 		case REGION_ARABIA:
 			return GC.getCivilizationInfo(ARABIA).getArtStyleType();
 		case REGION_EGYPT:
-			if (isHasReligion(ISLAM))
+			if (isHasReligion(ISLAM) || isHasReligion(SHIA))
 			{
 				return GC.getCivilizationInfo(ARABIA).getArtStyleType();
 			}
@@ -5164,7 +5164,7 @@ int CvCity::determineArtStyleType() const
 			}
 			return GC.getCivilizationInfo(ROME).getArtStyleType();
 		case REGION_NUBIA:
-			if (isHasReligion(ISLAM))
+			if (isHasReligion(ISLAM) || isHasReligion(SHIA))
 			{
 				return GC.getCivilizationInfo(ARABIA).getArtStyleType();
 			}
@@ -5181,7 +5181,7 @@ int CvCity::determineArtStyleType() const
 		case REGION_SWAHILI_COAST:
 		case REGION_SAHEL:
 		case REGION_SAHARA:
-			if (isHasReligion(ISLAM))
+			if (isHasReligion(ISLAM) || isHasReligion(SHIA))
 			{
 				return GC.getCivilizationInfo(ARABIA).getArtStyleType();
 			}
@@ -5230,7 +5230,7 @@ int CvCity::determineArtStyleType() const
 		}
 		else if (eRegionGroup == REGION_GROUP_NORTH_AFRICA)
 		{
-			if (isHasReligion(ISLAM))
+			if (isHasReligion(ISLAM) || isHasReligion(SHIA))
 			{
 				return GC.getCivilizationInfo(ARABIA).getArtStyleType();
 			}
@@ -5242,7 +5242,7 @@ int CvCity::determineArtStyleType() const
 		}
 		else if (eRegionGroup == REGION_GROUP_SOUTH_ASIA)
 		{
-			if (isHasReligion(ISLAM))
+			if (isHasReligion(ISLAM) || isHasReligion(SHIA))
 			{
 				return GC.getCivilizationInfo(PERSIA).getArtStyleType();
 			}

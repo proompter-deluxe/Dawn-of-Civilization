@@ -469,6 +469,10 @@
 					<LeaderName>LEADER_ASHURBANIPAL</LeaderName>
 					<bLeaderAvailability>1</bLeaderAvailability>
 				</Leader>
+				<Leader>
+					<LeaderName>LEADER_NASIR_AL_DAWLA</LeaderName>
+					<bLeaderAvailability>1</bLeaderAvailability>
+				</Leader>
 			</Leaders>
 			<DerivativeCiv>CIVILIZATION_BABYLONIA</DerivativeCiv>
 			<CivilizationSelectionSound>AS3D_BABYLON_SELECT</CivilizationSelectionSound>
@@ -4369,18 +4373,18 @@
 			<PaganReligion>PAGAN_RELIGION_PESEDJET</PaganReligion>
 			<Impact>IMPACT_SIGNIFICANT</Impact>
 			<Identifier>MAM</Identifier>
-			<StartingYear>970</StartingYear>
+			<StartingYear>909</StartingYear>
 			<LoadingTimes>
-				<LoadingTime>10</LoadingTime>
-				<LoadingTime>5</LoadingTime>
+				<LoadingTime>9</LoadingTime>
+				<LoadingTime>4</LoadingTime>
 				<LoadingTime>0</LoadingTime>
 			</LoadingTimes>
 			<Rating>
 				<Trade>3</Trade>
 				<Production>2</Production>
-				<Culture>4</Culture>
+				<Culture>3</Culture>
 				<Growth>2</Growth>
-				<Start>2</Start>
+				<Start>3</Start>
 			</Rating>
 			<bPlayable>1</bPlayable>
 			<bAIPlayable>1</bAIPlayable>
@@ -4439,6 +4443,10 @@
 				<CivicType>CIVIC_KINSHIP</CivicType>
 			</InitialCivics>
 			<Leaders>
+				<Leader>
+					<LeaderName>LEADER_AL_MUIZZ</LeaderName>
+					<bLeaderAvailability>1</bLeaderAvailability>
+				</Leader>
 				<Leader>
 					<LeaderName>LEADER_SALADIN</LeaderName>
 					<bLeaderAvailability>1</bLeaderAvailability>

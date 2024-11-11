@@ -858,6 +858,44 @@
 			<DefaultBuilding>BUILDING_ISLAMIC_SHRINE</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
+			<Type>BUILDINGCLASS_SHIA_TEMPLE</Type>
+			<Description>TXT_KEY_BUILDING_SHIA_TEMPLE</Description>
+			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
+			<iMaxTeamInstances>-1</iMaxTeamInstances>
+			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
+			<iExtraPlayerInstances>0</iExtraPlayerInstances>
+			<bMonument>1</bMonument>
+			<DefaultBuilding>BUILDING_SHIA_TEMPLE</DefaultBuilding>
+		</BuildingClassInfo>
+		<BuildingClassInfo>
+			<Type>BUILDINGCLASS_SHIA_CATHEDRAL</Type>
+			<Description>TXT_KEY_BUILDING_SHIA_CATHEDRAL</Description>
+			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
+			<iMaxTeamInstances>-1</iMaxTeamInstances>
+			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
+			<iExtraPlayerInstances>0</iExtraPlayerInstances>
+			<bMonument>1</bMonument>
+			<DefaultBuilding>BUILDING_SHIA_CATHEDRAL</DefaultBuilding>
+		</BuildingClassInfo>
+		<BuildingClassInfo>
+			<Type>BUILDINGCLASS_SHIA_MONASTERY</Type>
+			<Description>TXT_KEY_BUILDING_SHIA_MONASTERY</Description>
+			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
+			<iMaxTeamInstances>-1</iMaxTeamInstances>
+			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
+			<iExtraPlayerInstances>0</iExtraPlayerInstances>
+			<DefaultBuilding>BUILDING_SHIA_MONASTERY</DefaultBuilding>
+		</BuildingClassInfo>
+		<BuildingClassInfo>
+			<Type>BUILDINGCLASS_SHIA_SHRINE</Type>
+			<Description>TXT_KEY_BUILDING_SHIA_SHRINE</Description>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
+			<iMaxTeamInstances>-1</iMaxTeamInstances>
+			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
+			<iExtraPlayerInstances>0</iExtraPlayerInstances>
+			<DefaultBuilding>BUILDING_SHIA_SHRINE</DefaultBuilding>
+		</BuildingClassInfo>
+		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_HINDU_TEMPLE</Type>
 			<Description>TXT_KEY_BUILDING_HINDU_TEMPLE</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>

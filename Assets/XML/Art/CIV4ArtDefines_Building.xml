@@ -3837,5 +3837,45 @@
 			<KFM/>
 			<Button>Art/Structures/Buildings/PoloField/polofield_btn.dds</Button>
 		</BuildingArtInfo>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_SHIA_TEMPLE</Type>
+			<LSystem>LSYSTEM_2x2</LSystem>
+			<bAnimated>1</bAnimated>
+			<fScale>2.35</fScale>
+			<fInterfaceScale>0.65</fInterfaceScale>
+			<NIF>Art/Structures/Buildings/Shia_Buildings/temple/shia_temple.nif</NIF>
+			<KFM/>
+			<Button>,Art/Interface/Buttons/Buildings/Temple_Shia.dds,Art/Interface/Buttons/mem_buildings_atlas.dds,6,2</Button>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_SHIA_CATHEDRAL</Type>
+			<LSystem>LSYSTEM_4x4</LSystem>
+			<bAnimated>0</bAnimated>
+			<fScale>1.58</fScale>
+			<fInterfaceScale>0.57</fInterfaceScale>
+			<NIF>Art/Structures/Buildings/Shia_Buildings/cathedral/shia_cathedral.nif</NIF>
+			<KFM/>
+			<Button>,Art/Interface/Buttons/Buildings/Cathedral_Shia.dds,Art/Interface/Buttons/mem_buildings_atlas.dds,8,2</Button>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_SHIA_MONASTERY</Type>
+			<LSystem>LSYSTEM_3x1</LSystem>
+			<bAnimated>1</bAnimated>
+			<fScale>2.5</fScale>
+			<fInterfaceScale>0.56</fInterfaceScale>
+			<NIF>Art/Structures/Buildings/Shia_Buildings/monastery/shia_monastery.nif</NIF>
+			<KFM/>
+			<Button>,Art/Interface/Buttons/Buildings/Monastery_Shia.dds,Art/Interface/Buttons/mem_buildings_atlas.dds,7,2</Button>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_SHIA_SHRINE</Type>
+			<LSystem>LSYSTEM_3x2</LSystem>
+			<bAnimated>0</bAnimated>
+			<fScale>4.4</fScale>
+			<fInterfaceScale>0.4</fInterfaceScale>
+			<NIF>Art/Structures/Buildings/imam_ali_mosque/Ali.nif</NIF>
+			<KFM/>
+			<Button>,Art/Interface/Buttons/Buildings/Shrine_Shia.dds,Art/Interface/Buttons/mem_buildings_atlas.dds,4,2</Button>
+		</BuildingArtInfo>
 	</BuildingArtInfos>
 </Civ4ArtDefines>

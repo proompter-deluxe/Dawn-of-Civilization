@@ -68,9 +68,9 @@ lBirthOrder = [
 	iHolyRome,
 	iBurma,
 	iRus,
+    iMamluks,
 	iVietnam,
 	iSwahili,
-	iMamluks,
 	iPoland,
 	iPortugal,
 	iInca,
@@ -504,7 +504,7 @@ iBurma : 849,
 iRus : 880,
 iVietnam : 938,
 iSwahili : 957,
-iMamluks: 970,
+iMamluks: 909, # Fatimids in Tunisia
 iPoland : 1025,
 iPortugal : 1130,
 iInca : 1150,
@@ -595,8 +595,8 @@ iHittites : [(-840, -670)],
 iNubia : [(500, 1500)],
 iGreece : [(-900, -500), (1800, 2020)],
 iIndia : [(1600, 1800), (1900, 2020)],
-iPhoenicia : [(-800,-300), (800, 1500), (1950, 2020)],
-iPersia : [(870, 1000)],
+iPhoenicia : [(-800,-300), (1000, 1500), (1950, 2020)],
+iPersia : [(910, 1000)],
 iCelts : [(400, 1150), (1850, 2020)],
 iRome : [(-338, 320)],
 iMaya : [(0, 800)],
@@ -610,7 +610,7 @@ iFrance : [(1700, 2020)],
 iMalays : [(500, 1500), (1940, 2020)],
 iJapan : [(1800, 2020)],
 iNorse : [(1520, 2020)],
-iTurks : [(1350, 1500)],
+iTurks : [(1350, 1600), (1750, 1850), (1980, 2020)],
 iArabia : [(1900, 2020)],
 iBulgaria: [(1200, 1400), (1800,2020)],
 iMoors : [(1220, 2020)], # Marinids / Ziyanids
@@ -641,7 +641,7 @@ iMexico : [(1810, 2020)],
 iColombia : [(1810, 2020)],
 iBrazil : [(1820, 2020)],
 iCanada : [(1867, 2020)],
-iMamluks : [(1800, 2020)],
+iMamluks : [(920, 1250), (1800, 2020)],
 iMacedon : [(-400, -150)],
 iArmenia : [(50, 1050), (1870, 2020)],
 iMinoans : [(-3000, -1300)],
@@ -932,21 +932,22 @@ iGermany : 3
 })
 
 # initialise religion variables to religion indices from XML
-iNumReligions = 10
-(iJudaism, iOrthodoxy, iCatholicism, iProtestantism, iIslam, iHinduism, iBuddhism, iConfucianism, iTaoism, iZoroastrianism) = range(iNumReligions)
+iNumReligions = 11
+(iJudaism, iOrthodoxy, iCatholicism, iProtestantism, iIslam, iHinduism, iBuddhism, iConfucianism, iTaoism, iZoroastrianism, iShia) = range(iNumReligions)
 
 #Persecution preference
 tPersecutionPreference = (
-(iHinduism, iBuddhism, iTaoism, iConfucianism, iZoroastrianism, iIslam, iProtestantism, iCatholicism, iOrthodoxy), # Judaism
-(iIslam, iProtestantism, iCatholicism, iJudaism, iZoroastrianism, iHinduism, iBuddhism, iTaoism, iConfucianism), # Orthodoxy
-(iIslam, iProtestantism, iOrthodoxy, iJudaism, iZoroastrianism, iHinduism, iBuddhism, iTaoism, iConfucianism), # Catholicism
-(iIslam, iCatholicism, iOrthodoxy, iJudaism, iZoroastrianism, iHinduism, iBuddhism, iTaoism, iConfucianism), # Protestantism
-(iHinduism, iProtestantism, iCatholicism, iOrthodoxy, iJudaism, iTaoism, iConfucianism, iZoroastrianism, iBuddhism), # Islam
-(iIslam, iCatholicism, iProtestantism, iOrthodoxy, iJudaism, iZoroastrianism, iTaoism, iConfucianism, iBuddhism), # Hinduism
-(iCatholicism, iProtestantism, iOrthodoxy, iJudaism, iZoroastrianism, iTaoism, iIslam, iConfucianism, iHinduism), # Buddhism
-(iIslam, iCatholicism, iProtestantism, iOrthodoxy, iJudaism, iZoroastrianism, iHinduism, iBuddhism, iTaoism), # Confucianism
-(iIslam, iCatholicism, iProtestantism, iOrthodoxy, iJudaism, iZoroastrianism, iHinduism, iBuddhism, iConfucianism), # Taoism
-(iIslam, iCatholicism, iProtestantism, iOrthodoxy, iJudaism, iBuddhism, iHinduism, iTaoism, iConfucianism), # Zoroastrianism
+(iHinduism, iBuddhism, iTaoism, iConfucianism, iZoroastrianism, iIslam, iShia, iProtestantism, iCatholicism, iOrthodoxy), # Judaism
+(iIslam, iShia, iProtestantism, iCatholicism, iJudaism, iZoroastrianism, iHinduism, iBuddhism, iTaoism, iConfucianism), # Orthodoxy
+(iIslam, iShia, iProtestantism, iOrthodoxy, iJudaism, iZoroastrianism, iHinduism, iBuddhism, iTaoism, iConfucianism), # Catholicism
+(iIslam, iShia, iCatholicism, iOrthodoxy, iJudaism, iZoroastrianism, iHinduism, iBuddhism, iTaoism, iConfucianism), # Protestantism
+(iShia, iHinduism, iProtestantism, iCatholicism, iOrthodoxy, iJudaism, iTaoism, iConfucianism, iZoroastrianism, iBuddhism), # Islam (Sunni)
+(iIslam, iShia, iCatholicism, iProtestantism, iOrthodoxy, iJudaism, iZoroastrianism, iTaoism, iConfucianism, iBuddhism), # Hinduism
+(iCatholicism, iProtestantism, iOrthodoxy, iJudaism, iZoroastrianism, iTaoism, iIslam, iShia, iConfucianism, iHinduism), # Buddhism
+(iIslam, iShia, iCatholicism, iProtestantism, iOrthodoxy, iJudaism, iZoroastrianism, iHinduism, iBuddhism, iTaoism), # Confucianism
+(iIslam, iShia, iCatholicism, iProtestantism, iOrthodoxy, iJudaism, iZoroastrianism, iHinduism, iBuddhism, iConfucianism), # Taoism
+(iIslam, iShia, iCatholicism, iProtestantism, iOrthodoxy, iJudaism, iBuddhism, iHinduism, iTaoism, iConfucianism), # Zoroastrianism
+(iIslam, iHinduism, iProtestantism, iCatholicism, iOrthodoxy, iJudaism, iTaoism, iConfucianism, iZoroastrianism, iBuddhism), # Shia
 )
 
 # pagan religions
@@ -989,10 +990,10 @@ iTranshumanism) = range(iNumTechs)
 
 # initialise unit variables to unit indices from XML
 
-iNumUnits = 235
+iNumUnits = 236
 (iLion, iBear, iPanther, iWolf, iSettler, iCityBuilder, iPioneer, iWorker, iRomanWorker, iPunjabiWorker, iLabourer, 
 iMadeireiro, iScout, iExplorer, iBandeirante, iSpy, iReligiousPersecutor, iJewishMissionary, iOrthodoxMissionary, iCatholicMissionary, iProtestantMissionary, 
-iIslamicMissionary, iHinduMissionary, iBuddhistMissionary, iConfucianMissionary, iTaoistMissionary, iZoroastrianMissionary, iWarrior, iNativeWarrior, iMilitia, iAxeman, 
+iIslamicMissionary, iShiaMissionary, iHinduMissionary, iBuddhistMissionary, iConfucianMissionary, iTaoistMissionary, iZoroastrianMissionary, iWarrior, iNativeWarrior, iMilitia, iAxeman, 
 iLightSwordsman, iMycenaeanMyrmidon, iVulture, iDogSoldier, iOathsworn, iSwordsman, iJaguar, iLegion, iGallicWarrior, iPendekar, iAucac, 
 iShotelai, iHeavySwordsman, iSamurai, iHuscarl, iGhazi, iDruzhina, iPombos, iSpearman, iPhalanx, iAzmaru, iHoplite, 
 iSacredBand, iImmortal, iNativeRaider, iHeavySpearman, iTagmata, iKyundaw, iPikeman, iLandsknecht, iArquebusier, iFirelancer, iTercio, 
@@ -1067,11 +1068,11 @@ iColdStoragePlant, iGrainSilo, iNewsPress, iIndustrialPark, iCinema, iHospital, 
 iBroadcastTower, iIntelligenceAgency, iElectricalGrid, iAirport, iBunker, iBombShelters, iHydroPlant, iSecurityBureau, iStadium, iContainerTerminal, 
 iNuclearPlant, iSupercomputer, iHotel, iRecyclingCenter, iLogisticsCenter, iSolarPlant, iFiberNetwork, iAutomatedFactory, iVerticalFarm) = range(iNumBuildings)
 
-iNumReligiousBuildings = 40
+iNumReligiousBuildings = 44
 iFirstReligiousBuilding = iNumBuildings
 iNumBuildings += iNumReligiousBuildings
 (iJewishTemple, iJewishCathedral, iJewishMonastery, iJewishShrine, iOrthodoxTemple, iOrthodoxCathedral, iOrthodoxMonastery, iOrthodoxShrine, iCatholicTemple, iCatholicCathedral, 
-iCatholicMonastery, iCatholicShrine, iProtestantTemple, iProtestantCathedral, iProtestantMonastery, iProtestantShrine, iIslamicTemple, iIslamicCathedral, iIslamicMonastery, iIslamicShrine, 
+iCatholicMonastery, iCatholicShrine, iProtestantTemple, iProtestantCathedral, iProtestantMonastery, iProtestantShrine, iIslamicTemple, iIslamicCathedral, iIslamicMonastery, iIslamicShrine, iShiaTemple, iShiaCathedral, iShiaMonastery, iShiaShrine, 
 iHinduTemple, iHinduCathedral, iHinduMonastery, iHinduShrine, iBuddhistTemple, iBuddhistCathedral, iBuddhistMonastery, iBuddhistShrine, iConfucianTemple, iConfucianCathedral, 
 iConfucianMonastery, iConfucianShrine, iTaoistTemple, iTaoistCathedral, iTaoistMonastery, iTaoistShrine, iZoroastrianTemple, iZoroastrianCathedral, iZoroastrianMonastery, iZoroastrianShrine) = range(iFirstReligiousBuilding, iNumBuildings)
 
@@ -1237,14 +1238,14 @@ iVictorySecularism = 11
 
 
 #leaders
-iNumLeaders = 148
+iNumLeaders = 150
 (iLeaderBarbarian, iNativeLeader, iIndependentLeader, iRamesses, iCleopatra, iSargon, iHammurabi, iWentAntu,
-iAshurbanipal, iQinShiHuang, iTaizong, iHongwu, iMao, iSunQuan, iGaozong, iChiangKaishek, iMursili, iPericles, iAlexanderTheGreat, iGeorge, iAsoka, 
+iAshurbanipal, iNasirAlDawla, iQinShiHuang, iTaizong, iHongwu, iMao, iSunQuan, iGaozong, iChiangKaishek, iMursili, iPericles, iAlexanderTheGreat, iGeorge, iAsoka, 
 iChandragupta, iShivaji, iGandhi, iHiram, iHannibal, iAbuFaris, iTaharqa, iAhoeitu, iCyrus, iDarius, iMithridates, iKhosrow, 
 iBrennus, iJuliusCaesar, iAugustus, iPacal, iRajendra, iKrishnaDevaRaya, iEzana, iZaraYaqob, iMenelik, iTopiltzin, 
 iKanishka, iWangKon, iSejong, iSuryavarman, iMansaMusa, iJustinian, iBasil, iCharlemagne, iLouis, iNapoleon, 
 iDeGaulle, iSriJayanasa, iTunPerak, iKammu, iOdaNobunaga, iMeiji, iRagnar, iChristian, iGerhardsen, iBumin, 
-iAlpArslan, iTamerlane, iHarun, iSaladin, iBaibars, iNasser, iSimeon, iSongtsen, iLobsangGyatso, iRahman, iYaqub, iHayamWuruk, iSuharto, 
+iAlpArslan, iTamerlane, iHarun, iAlMuizz, iSaladin, iBaibars, iNasser, iSimeon, iSongtsen, iLobsangGyatso, iRahman, iYaqub, iHayamWuruk, iSuharto, 
 iIsabella, iPhilip, iFranco, iAlfred, iElizabeth, iVictoria, iChurchill, iBarbarossa, iCharles, iFrancis, 
 iAnawrahta, iBayinnaung, iYaroslav, iLeLoi, iDawud, iCasimir, iSobieski, iPilsudski, iWalesa, iAfonso, 
 iJoao, iMaria, iHuaynaCapac, iCastilla, iLorenzo, iCavour, iMussolini, iGenghisKhan, iKublaiKhan, iMontezuma, 

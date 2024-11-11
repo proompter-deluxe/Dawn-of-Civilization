@@ -410,6 +410,18 @@
 		<Spanish>Harun al-Rashid</Spanish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_LEADER_AL_MUIZZ</Tag>
+		<English>Al-Mu'izz</English>
+		<French>
+			<Text>Al-Mu'izz</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>Al-Mu'izz</German>
+		<Italian>Al-Mu'izz</Italian>
+		<Spanish>Al-Mu'izz</Spanish>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_LEADER_HATSHEPSUT</Tag>
 		<English>Cleopatra</English>
 		<French>

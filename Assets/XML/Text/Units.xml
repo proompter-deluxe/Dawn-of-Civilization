@@ -2155,18 +2155,38 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_ISLAMIC_MISSIONARY</Tag>
-		<English>Islamic Imam</English>
+		<English>Sunni Imam</English>
 		<French>
-			<Text>Imam musulman</Text>
+			<Text>Imam sunni</Text>
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>Islamischer Imam</German>
-		<Italian>Islamic Imam</Italian>
-		<Spanish>Islamic Imam</Spanish>
+		<German>Sunni Imam</German>
+		<Italian>Sunni Imam</Italian>
+		<Spanish>Sunni Imam</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_ISLAMIC_MISSIONARY_STRATEGY</Tag>
+		<English>[COLOR_UNIT_TEXT]Imams[COLOR_REVERT] ([COLOR_UNIT_TEXT]Islamic Missionaries[COLOR_REVERT]) can spread [COLOR_HIGHLIGHT_TEXT]Islam[COLOR_REVERT] in friendly cities (or rival cities with whom you have [COLOR_HIGHLIGHT_TEXT]Open Borders[COLOR_REVERT]).</English>
+		<French>[COLOR_UNIT_TEXT]Imams[COLOR_REVERT] ([COLOR_UNIT_TEXT]Islamic Missionaries[COLOR_REVERT]) can spread [COLOR_HIGHLIGHT_TEXT]Islam[COLOR_REVERT] in friendly cities (or rival cities with whom you have [COLOR_HIGHLIGHT_TEXT]Open Borders[COLOR_REVERT]).</French>
+		<German>[COLOR_UNIT_TEXT]Imams[COLOR_REVERT] ([COLOR_UNIT_TEXT]Islamic Missionaries[COLOR_REVERT]) can spread [COLOR_HIGHLIGHT_TEXT]Islam[COLOR_REVERT] in friendly cities (or rival cities with whom you have [COLOR_HIGHLIGHT_TEXT]Open Borders[COLOR_REVERT]).</German>
+		<Italian>[COLOR_UNIT_TEXT]Imams[COLOR_REVERT] ([COLOR_UNIT_TEXT]Islamic Missionaries[COLOR_REVERT]) can spread [COLOR_HIGHLIGHT_TEXT]Islam[COLOR_REVERT] in friendly cities (or rival cities with whom you have [COLOR_HIGHLIGHT_TEXT]Open Borders[COLOR_REVERT]).</Italian>
+		<Spanish>[COLOR_UNIT_TEXT]Imams[COLOR_REVERT] ([COLOR_UNIT_TEXT]Islamic Missionaries[COLOR_REVERT]) can spread [COLOR_HIGHLIGHT_TEXT]Islam[COLOR_REVERT] in friendly cities (or rival cities with whom you have [COLOR_HIGHLIGHT_TEXT]Open Borders[COLOR_REVERT]).</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_SHIA_MISSIONARY</Tag>
+		<English>Shi'ite Imam</English>
+		<French>
+			<Text>Imam shi'ite</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>Shi'ite Imam</German>
+		<Italian>Shi'ite Imam</Italian>
+		<Spanish>Shi'ite Imam</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_SHIA_MISSIONARY_STRATEGY</Tag>
 		<English>[COLOR_UNIT_TEXT]Imams[COLOR_REVERT] ([COLOR_UNIT_TEXT]Islamic Missionaries[COLOR_REVERT]) can spread [COLOR_HIGHLIGHT_TEXT]Islam[COLOR_REVERT] in friendly cities (or rival cities with whom you have [COLOR_HIGHLIGHT_TEXT]Open Borders[COLOR_REVERT]).</English>
 		<French>[COLOR_UNIT_TEXT]Imams[COLOR_REVERT] ([COLOR_UNIT_TEXT]Islamic Missionaries[COLOR_REVERT]) can spread [COLOR_HIGHLIGHT_TEXT]Islam[COLOR_REVERT] in friendly cities (or rival cities with whom you have [COLOR_HIGHLIGHT_TEXT]Open Borders[COLOR_REVERT]).</French>
 		<German>[COLOR_UNIT_TEXT]Imams[COLOR_REVERT] ([COLOR_UNIT_TEXT]Islamic Missionaries[COLOR_REVERT]) can spread [COLOR_HIGHLIGHT_TEXT]Islam[COLOR_REVERT] in friendly cities (or rival cities with whom you have [COLOR_HIGHLIGHT_TEXT]Open Borders[COLOR_REVERT]).</German>

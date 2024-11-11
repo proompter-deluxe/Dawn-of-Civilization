@@ -15,6 +15,7 @@ dRelocatedCapitals = CivDict({
 	iOttomans : tConstantinople,
 	iMacedon: tBabylon,
 	iParthia: tBabylon,
+	iMamluks : tCairo,
 })
 
 dCapitalInfrastructure = CivDict({

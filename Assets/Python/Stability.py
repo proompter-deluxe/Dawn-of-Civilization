@@ -696,7 +696,7 @@ def calculateStability(iPlayer):
 	elif iStateReligion in [iZoroastrianism, iOrthodoxy, iCatholicism, iProtestantism]:
 		if iSlavery in civics: iCivicEraTechStability -= 3
 		
-	elif iStateReligion == iIslam:
+	elif iStateReligion == iIslam or iStateReligion == iShia:
 		if iSlavery in civics: iCivicEraTechStability += 2
 		
 	elif iStateReligion == iBuddhism:

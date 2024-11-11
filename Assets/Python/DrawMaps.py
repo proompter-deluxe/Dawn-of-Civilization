@@ -28,8 +28,8 @@ rSahel, rSahara, rAtlanticSeaboard, rDeepSouth, rMidwest, rGreatPlains, rAridoam
 rQuebec, rMaritimes, rAmericanArctic, rCaribbean, rMesoamerica, rCentralAmerica, rNewGranada, rAndes, rAmazonia, rBrazil, 
 rSouthernCone, rAntarctica, rHinduKush, rDenmark, rNorway, rCrimea) = range(iNumRegions)
 
-iNumReligions = 10
-(iJudaism, iOrthodoxy, iCatholicism, iProtestantism, iIslam, iHinduism, iBuddhism, iConfucianism, iTaoism, iZoroastrianism) = range(iNumReligions)
+iNumReligions = 11
+(iJudaism, iOrthodoxy, iCatholicism, iProtestantism, iIslam, iHinduism, iBuddhism, iConfucianism, iTaoism, iZoroastrianism, iShia) = range(iNumReligions)
 
 iNumReligionMapTypes = 5
 (iNone, iMinority, iPeriphery, iHistorical, iCore) = range(iNumReligionMapTypes)
@@ -58,7 +58,7 @@ dCivNames = {
 	iHolyRome: "Holy_Rome",
 	iInca: "Inca",
 	iIndia: "India",
-	iIndonesia: "Indonesia",
+	iMalays: "Malays",
 	iIran: "Iran",
 	iItaly: "Italy",
 	iJapan: "Japan",
@@ -104,6 +104,7 @@ dReligionNames = {
 	iConfucianism: "Confucianism",
 	iTaoism: "Taoism",
 	iZoroastrianism: "Zoroastrianism",
+	iShia: "Shia",
 }
 
 
@@ -145,7 +146,7 @@ iNorse :		((65, 67),	(68, 75)),
 iTurks :		((96, 54),	(107, 59)),
 iArabia :		((84, 38),	(90, 49)),
 iTibet :		((111, 47),	(114, 49)),
-iIndonesia :	((119, 24),	(128, 28)),
+iMalays :	((119, 24),	(128, 28)),
 iMoors :		((56, 44),	(61, 50)),
 iSpain :		((54, 51),	(59, 54)),
 iFrance :		((59, 56),	(63, 62)),
@@ -192,7 +193,7 @@ iRome :		[(66, 51), (66, 52), (70, 57), (71, 56), (71, 57), (72, 55), (72, 56), 
 iByzantium :[(76, 51), (84, 51), (85, 51), (86, 51), (86, 52), (87, 51), (87, 52)],
 iTurks :	[(105, 54), (105, 55), (106, 54), (106, 55), (107, 54), (107, 55), (107, 56)],
 iArabia :	[(88, 38), (88, 39), (88, 40), (88, 41), (88, 42), (88, 43), (88, 44), (89, 38), (89, 39), (89, 40), (89, 41), (89, 42), (89, 43), (89, 44), (90, 38), (90, 39), (90, 40), (90, 41), (90, 42), (90, 43), (90, 44)],
-iIndonesia :[(124, 28), (125, 28), (126, 28), (127, 28)],
+iMalays :[(124, 28), (125, 28), (126, 28), (127, 28)],
 iMoors :	[(60, 44), (61, 44), (61, 45)],
 iSpain :	[(54, 51), (54, 52), (55, 51), (55, 52)],
 iFrance :	[(61, 56), (62, 56), (62, 62), (63, 56), (63, 62)],
@@ -233,47 +234,55 @@ tSpreadFactors = (
 },
 # Protestantism
 {
-	iCore :		[rBritain, rLowerGermany, rDenmark, rNorway, rSweden, rAtlanticSeaboard, rMidwest, rOntario, rGreatPlains, rDeepSouth, rMaritimes],
+	iCore :			[rBritain, rLowerGermany, rDenmark, rNorway, rSweden, rAtlanticSeaboard, rMidwest, rOntario, rGreatPlains, rDeepSouth, rMaritimes],
 	iHistorical :	[rCalifornia, rCascadia, rAmericanArctic, rAustralia],
 	iPeriphery :	[rFrance, rOceania, rCape, rZambezi],
 	iMinority : 	[rPoland, rCentralEurope, rBrazil, rKorea]
 },
 # Islam
 {
-	iCore : 	[rArabia, rMesopotamia, rEgypt, rLevant],
-	iHistorical : 	[rPersia, rKhorasan, rSindh, rPunjab, rTransoxiana, rMaghreb, rIndonesia, rSahel, rSahara, rHornOfAfrica],
-	iPeriphery : 	[rNubia, rIberia, rAnatolia, rBalkans, rHindustan, rRajputana, rBengal, rDeccan, rPonticSteppe, rCrimea, rCentralAsianSteppe, rSwahiliCoast],
-	iMinority : 	[rUrals, rSiberia, rCaucasus, rTarimBasin, rMongolia],
+	iCore : 		[rArabia, rMesopotamia, rEgypt, rLevant],
+	iHistorical : 	[rPersia, rKhorasan, rSindh, rPunjab, rTransoxiana, rMaghreb, rIndonesia, rSahel, rSahara, rHornOfAfrica, rHinduKush],
+	iPeriphery : 	[rNubia, rIberia, rAnatolia, rBalkans, rHindustan, rRajputana, rBengal, rDeccan, rPonticSteppe, rCrimea, rCentralAsianSteppe, rSwahiliCoast, rCaucasus, rTarimBasin],
+	iMinority : 	[rUrals, rSiberia, rMongolia],
 },
 # Hinduism
 {
-	iCore : 	[rHindustan, rRajputana, rDeccan, rBengal, rDravida],
+	iCore : 		[rHindustan, rRajputana, rDeccan, rBengal, rDravida],
 	iHistorical : 	[rPunjab, rSindh, rIndochina, rIndonesia, rPhilippines],
 },
 # Buddhism
 {
-	iCore : 	[rHindustan, rRajputana, rBengal, rTibet, rIndochina],
+	iCore : 		[rHindustan, rRajputana, rBengal, rTibet, rIndochina],
 	iHistorical : 	[rDeccan, rDravida, rPunjab, rSindh, rTarimBasin, rMongolia, rNorthChina, rSouthChina, rKorea, rJapan, rIndonesia, rKhorasan],
-	iMinority :	[rTransoxiana, rKhorasan],
+	iMinority :		[rTransoxiana, rKhorasan],
 },
 # Confucianism
 {
-	iCore : 	[rNorthChina, rSouthChina, rManchuria],
+	iCore : 		[rNorthChina, rSouthChina, rManchuria],
 	iHistorical :	[rKorea],
 	iPeriphery : 	[rMongolia, rTibet],
 	iMinority : 	[rJapan, rIndonesia, rIndochina, rAustralia],
 },
 # Taoism
 {
-	iCore : 	[rNorthChina, rSouthChina],
+	iCore : 		[rNorthChina, rSouthChina],
 	iHistorical : 	[rManchuria],
 	iPeriphery : 	[rTibet, rMongolia],
 },
 # Zoroastrianism
 {
-	iCore :		[rPersia],
-	iPeriphery : 	[rKhorasan, rMesopotamia, rTransoxiana, rLevant, rCaucasus, rAnatolia],
-	iMinority : 	[rSindh, rRajputana],
+	iCore :			[rPersia],
+	iHistorical : 	[rKhorasan, rTransoxiana, rHinduKush],
+	iPeriphery : 	[rMesopotamia, rTransoxiana, rLevant, rCaucasus, rAnatolia],
+	iMinority : 	[rSindh, rPunjab],
+},
+# Shia
+{
+	iCore : 		[rArabia, rMesopotamia, rPersia],
+	iHistorical : 	[rMaghreb, rLevant, rEgypt, rKhorasan, rTransoxiana, rCaucasus, rRajputana, rSwahiliCoast],
+	iPeriphery : 	[rNubia, rAnatolia, rBalkans, rHindustan, rBengal, rCentralAsianSteppe, rSindh, rPunjab, rHinduKush],
+	iMinority : 	[rUrals, rSiberia, rTarimBasin, rMongolia, rIberia, rDeccan, rPonticSteppe, rCrimea, rHornOfAfrica, rSahara, rSahel, rIndonesia],
 },
 )
 

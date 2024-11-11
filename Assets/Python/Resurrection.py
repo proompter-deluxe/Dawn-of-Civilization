@@ -206,6 +206,11 @@ def doResurrection(iCiv, lCityList, bAskFlip=True, bDisplay=False):
 	# determine prevalent religion in the resurrection area
 	iNewStateReligion = getPrevalentReligion(plots.of(resurrectionCities))
 	
+	if iCiv == iPersia and game.isReligionFounded(iShia):
+		iNewStateReligion = iShia
+	elif iCiv == iAssyria and game.isReligionFounded(iShia):
+		iNewStateReligion = iShia
+
 	# set state religion based on religions in the area
 	if iNewStateReligion >= 0:
 		pPlayer.setLastStateReligion(iNewStateReligion)
@@ -261,13 +266,23 @@ def doResurrection(iCiv, lCityList, bAskFlip=True, bDisplay=False):
 	# give the new civ a starting army
 	capital = pPlayer.getCapitalCity()
 	
+	# certain civs should be more powerful on respawn
+	bonusUnits = 0
+	if iCiv == iTurks and pPlayer.getCurrentEra() < iIndustrial and not player(iIran).isExisting(): # Timurid
+		bonusUnits = 3
+
 	dStartingUnits = {
-		iAttack: 2 * iArmySize + iNumCities,
-		iShock: iArmySize,
-		iCounter: iArmySize,
-		iSiege: iArmySize + iNumCities,
+		iAttack: 2 * iArmySize + iNumCities + bonusUnits,
+		iShock: iArmySize + bonusUnits,
+		iCounter: iArmySize + bonusUnits,
+		iSiege: iArmySize + iNumCities + bonusUnits,
 	}
 	createRoleUnits(iPlayer, capital, dStartingUnits.items())
+
+	if iCiv == iPersia and game.isReligionFounded(iShia):
+		makeUnits(iPersia, iShiaMissionary, plot(capital), 4)
+	elif iCiv == iAssyria and game.isReligionFounded(iShia):
+		makeUnits(iAssyria, iShiaMissionary, plot(capital), 2)
 	
 	switchCivics(iPlayer)
 		

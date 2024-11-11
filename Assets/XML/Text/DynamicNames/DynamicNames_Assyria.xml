@@ -49,4 +49,20 @@
 		<Italian>Hamdanid</Italian>
 		<Spanish>Hamdanid</Spanish>
 	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_ASSYRIA_ANTIOCHENE</Tag>
+		<English>Antiochene</English>
+		<French>Antiochene</French>
+		<German>Antiochene</German>
+		<Italian>Antiochene</Italian>
+		<Spanish>Antiochene</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_ASSYRIA_PRINCIPALITY_OF_ANTIOCH</Tag>
+		<English>Principality of Antioch</English>
+		<French>Principality of Antioch</French>
+		<German>Principality of Antioch</German>
+		<Italian>Principality of Antioch</Italian>
+		<Spanish>Principality of Antioch</Spanish>
+	</TEXT>
 </Civ4GameText>

@@ -68,7 +68,6 @@ dClearedForBirth = {
 	iAztecs: iToltecs,
 	iRussia: iRus,
 	iMexico: iAztecs,
-	iMamluks: iEgypt,
 	iGreece: iMinoans,
 }
 

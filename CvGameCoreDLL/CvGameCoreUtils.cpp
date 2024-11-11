@@ -2689,6 +2689,7 @@ bool isPrecursor(ReligionTypes ePrecursor, ReligionTypes eReligion)
 	if (ePrecursor == HINDUISM && eReligion == BUDDHISM) return true;
 	if ((ePrecursor == CATHOLICISM || ePrecursor == ORTHODOXY) && eReligion == ISLAM) return true;
 	if (ePrecursor == JUDAISM && (eReligion == CATHOLICISM || eReligion == ORTHODOXY)) return true;
+	if (ePrecursor == ISLAM && eReligion == SHIA) return true;
 
 	return false;
 }
