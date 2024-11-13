@@ -14522,7 +14522,7 @@
 		<LeaderHeadInfo>
 			<Type>LEADER_ABU_FARIS</Type> <!-- Saladin but more piratical -->
 			<Description>TXT_KEY_LEADER_ABU_FARIS</Description>
-			<Civilopedia>TXT_KEY_LEADER_ABU_FARIS_PEDIA</Civilopedia> <!-- TODO -->
+			<Civilopedia>TXT_KEY_LEADER_ABU_FARIS_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_LEADER_ABU_FARIS</ArtDefineTag>
 			<iWonderConstructRand>10</iWonderConstructRand>
 			<iBaseAttitude>0</iBaseAttitude>

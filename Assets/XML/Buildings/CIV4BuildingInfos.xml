@@ -12187,7 +12187,9 @@
 			<ArtDefineTag>ART_DEF_BUILDING_GREAT_ADOBE_MOSQUE</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_GREAT_ADOBE_MOSQUE</MovieDefineTag>
 			<StateReligion>RELIGION_ISLAM</StateReligion>
+			<OrStateReligion>RELIGION_SHIA</OrStateReligion>
 			<PrereqReligion>RELIGION_ISLAM</PrereqReligion>
+			<OrPrereqReligion>RELIGION_SHIA</OrPrereqReligion>
 			<MaxStartEra>ERA_INDUSTRIAL</MaxStartEra>
 			<PrereqTech>TECH_DOCTRINE</PrereqTech>
 			<ObsoleteTech>TECH_MEASUREMENT</ObsoleteTech>
@@ -12253,7 +12255,9 @@
 			<ArtDefineTag>ART_DEF_BUILDING_SPIRAL_MINARET</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_SPIRAL_MINARET</MovieDefineTag>
 			<StateReligion>RELIGION_ISLAM</StateReligion>
+			<OrStateReligion>RELIGION_SHIA</OrStateReligion>
 			<PrereqReligion>RELIGION_ISLAM</PrereqReligion>
+			<OrPrereqReligion>RELIGION_SHIA</OrPrereqReligion>
 			<MaxStartEra>ERA_RENAISSANCE</MaxStartEra>
 			<PrereqTech>TECH_THEOLOGY</PrereqTech>
 			<ObsoleteTech>TECH_ECONOMICS</ObsoleteTech>
@@ -12310,7 +12314,10 @@
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_DOME_OF_THE_ROCK</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_DOME_OF_THE_ROCK</MovieDefineTag>
+			<StateReligion>RELIGION_ISLAM</StateReligion>
+			<OrStateReligion>RELIGION_SHIA</OrStateReligion>
 			<PrereqReligion>RELIGION_ISLAM</PrereqReligion>
+			<OrPrereqReligion>RELIGION_SHIA</OrPrereqReligion>
 			<MaxStartEra>ERA_MEDIEVAL</MaxStartEra>
 			<PrereqTech>TECH_THEOLOGY</PrereqTech>
 			<GreatPeopleUnitClass>UNITCLASS_GREAT_PROPHET</GreatPeopleUnitClass>
@@ -12377,7 +12384,9 @@
 			<ArtDefineTag>ART_DEF_BUILDING_HOUSE_OF_WISDOM</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_HOUSE_OF_WISDOM</MovieDefineTag>
 			<StateReligion>RELIGION_ISLAM</StateReligion>
+			<OrStateReligion>RELIGION_SHIA</OrStateReligion>
 			<PrereqReligion>RELIGION_ISLAM</PrereqReligion>
+			<OrPrereqReligion>RELIGION_SHIA</OrPrereqReligion>
 			<MaxStartEra>ERA_RENAISSANCE</MaxStartEra>
 			<PrereqTech>TECH_ALCHEMY</PrereqTech>
 			<ObsoleteTech>TECH_OPTICS</ObsoleteTech>
@@ -12434,6 +12443,7 @@
 			<MovieDefineTag>ART_DEF_BUILDING_KRAK_DES_CHEVALIERS</MovieDefineTag>
 			<StateReligion>RELIGION_CATHOLICISM</StateReligion>
 			<PrereqReligion>RELIGION_ISLAM</PrereqReligion>
+			<OrPrereqReligion>RELIGION_SHIA</OrPrereqReligion>
 			<MaxStartEra>ERA_RENAISSANCE</MaxStartEra>
 			<PrereqTech>TECH_FORTIFICATION</PrereqTech>
 			<ObsoleteTech>TECH_COMBINED_ARMS</ObsoleteTech>
@@ -12562,7 +12572,9 @@
 			<ArtDefineTag>ART_DEF_BUILDING_UNIVERSITY_OF_SANKORE</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_UNIVERSITY_OF_SANKORE</MovieDefineTag>
 			<StateReligion>RELIGION_ISLAM</StateReligion>
+			<OrStateReligion>RELIGION_SHIA</OrStateReligion>
 			<PrereqReligion>RELIGION_ISLAM</PrereqReligion>
+			<OrPrereqReligion>RELIGION_SHIA</OrPrereqReligion>
 			<MaxStartEra>ERA_RENAISSANCE</MaxStartEra>
 			<PrereqTech>TECH_SCHOLARSHIP</PrereqTech>
 			<ObsoleteTech>TECH_REFRIGERATION</ObsoleteTech>
@@ -13150,6 +13162,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_TOPKAPI_PALACE</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_TOPKAPI_PALACE</MovieDefineTag>
 			<StateReligion>RELIGION_ISLAM</StateReligion>
+			<OrStateReligion>RELIGION_SHIA</OrStateReligion>
 			<PrereqReligion>RELIGION_ORTHODOXY</PrereqReligion>
 			<MaxStartEra>ERA_RENAISSANCE</MaxStartEra>
 			<PrereqTech>TECH_JUDICIARY</PrereqTech>
@@ -13367,7 +13380,10 @@
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_GUR_E_AMIR</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_GUR_E_AMIR</MovieDefineTag>
+			<StateReligion>RELIGION_ISLAM</StateReligion>
+			<OrStateReligion>RELIGION_SHIA</OrStateReligion>
 			<PrereqReligion>RELIGION_ISLAM</PrereqReligion>
+			<OrPrereqReligion>RELIGION_SHIA</OrPrereqReligion>
 			<MaxStartEra>ERA_RENAISSANCE</MaxStartEra>
 			<PrereqTech>TECH_PATRONAGE</PrereqTech>
 			<ObsoleteTech>TECH_SOCIOLOGY</ObsoleteTech>
@@ -13421,7 +13437,9 @@
 			<ArtDefineTag>ART_DEF_BUILDING_RED_FORT</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_RED_FORT</MovieDefineTag>
 			<StateReligion>RELIGION_ISLAM</StateReligion>
+			<OrStateReligion>RELIGION_SHIA</OrStateReligion>
 			<PrereqReligion>RELIGION_ISLAM</PrereqReligion>
+			<OrPrereqReligion>RELIGION_SHIA</OrPrereqReligion>
 			<MaxStartEra>ERA_RENAISSANCE</MaxStartEra>
 			<PrereqTech>TECH_LOGISTICS</PrereqTech>
 			<GreatPeopleUnitClass>UNITCLASS_GREAT_ENGINEER</GreatPeopleUnitClass>
@@ -13483,7 +13501,9 @@
 			<ArtDefineTag>ART_DEF_BUILDING_TAJ_MAHAL</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_TAJ_MAHAL</MovieDefineTag>
 			<StateReligion>RELIGION_ISLAM</StateReligion>
+			<OrStateReligion>RELIGION_SHIA</OrStateReligion>
 			<PrereqReligion>RELIGION_ISLAM</PrereqReligion>
+			<OrPrereqReligion>RELIGION_SHIA</OrPrereqReligion>
 			<MaxStartEra>ERA_INDUSTRIAL</MaxStartEra>
 			<PrereqTech>TECH_URBAN_PLANNING</PrereqTech>
 			<GreatPeopleUnitClass>UNITCLASS_GREAT_ARTIST</GreatPeopleUnitClass>
@@ -14301,7 +14321,9 @@
 			<ArtDefineTag>ART_DEF_BUILDING_SHALIMAR_GARDENS</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_SHALIMAR_GARDENS</MovieDefineTag>
 			<StateReligion>RELIGION_ISLAM</StateReligion>
+			<OrStateReligion>RELIGION_SHIA</OrStateReligion>
 			<PrereqReligion>RELIGION_ISLAM</PrereqReligion>
+			<OrPrereqReligion>RELIGION_SHIA</OrPrereqReligion>
 			<MaxStartEra>ERA_INDUSTRIAL</MaxStartEra>
 			<PrereqTech>TECH_HORTICULTURE</PrereqTech>
 			<ObsoleteTech>TECH_SOCIAL_SERVICES</ObsoleteTech>
