@@ -134,7 +134,7 @@ tSouthChinaBR = (131, 50)
 
 tConquestSuiUnification = (18, iChina, iChinaS, tSouthChinaTL, tSouthChinaBR, 3, iSuiUnificationYear, 10)
 
-iArabCarthageConquestYear = 690
+iArabCarthageConquestYear = 680
 tTunisiaTL = (66, 44)
 tTunisiaBR = (69, 48)
 
@@ -199,7 +199,7 @@ iParthiaMesopotamiaYear = 220
 tConquestParthiaMesopotamia = (37, iParthia, iRome, tLevantTL, tGreeceMesopotamiaBR, 3, iParthiaMesopotamiaYear, 10)
 
 iFatamidEgyptYear = 969
-tConquestFatamidEgypt = (38, iMamluks, iArabia, tEgyptTL, tEgyptBR, 2, iFatamidEgyptYear, 10)
+tConquestFatamidEgypt = (39, iMamluks, iArabia, tEgyptTL, tEgyptBR, 2, iFatamidEgyptYear, 10)
 
 lConquests = [
 	tConquestRomeCarthageInSpain,

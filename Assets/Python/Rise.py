@@ -760,12 +760,17 @@ class Birth(object):
 		
 		# Ottomans require that the Turks managed to conquer at least one city in the Near East
 		if self.iCiv == iOttomans:
-			if cities.birth(iOttomans).none(CyCity.isHuman) and cities.regions(rAnatolia, rCaucasus, rLevant, rMesopotamia).none(lambda city: iTurks in [city.getCivilizationType(), city.getPreviousCiv()]):
+			if cities.birth(iOttomans).none(CyCity.isHuman) and cities.regions(rAnatolia, rCaucasus).none(lambda city: iTurks in [city.getCivilizationType(), city.getPreviousCiv()]):
 				return False
 		
 		# Iran requires Persia and Parthia to be dead
 		if self.iCiv == iIran:
 			if player(iPersia).isExisting() or player(iParthia).isExisting():
+				return False
+
+		# Moors & Fatimids require Arabia to have held at least one city in Maghreb or Carthage to not hold a city in that region
+		if self.iCiv == iMoors or self.iCiv == iMamluks:
+			if len(cities.region(rMaghreb).owner(iPhoenicia)) != 0 or cities.regions(rMaghreb).none(lambda city: iArabia in [city.getCivilizationType(), city.getPreviousCiv()]):
 				return False
 		
 		# Mexico requires Aztecs to be dead
