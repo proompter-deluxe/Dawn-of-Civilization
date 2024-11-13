@@ -3306,8 +3306,8 @@
 			<PrereqTech>TECH_FORTIFICATION</PrereqTech>
 			<ObsoleteTech>TECH_URBAN_PLANNING</ObsoleteTech>
 			<bCenterInCity>1</bCenterInCity>
-			<iCost>100</iCost>
-			<iConquestProb>100</iConquestProb>
+			<iCost>80</iCost>
+			<iConquestProb>75</iConquestProb>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
 			<iMinAreaSize>-1</iMinAreaSize>
 			<iDefense>50</iDefense>
@@ -3338,12 +3338,6 @@
 					<iExperience>2</iExperience>
 				</UnitCombatFreeExperience>
 			</UnitCombatFreeExperiences>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_WALLS</BuildingClassType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_MILITARY</FlavorType>
@@ -3351,13 +3345,13 @@
 				</Flavor>
 				<Flavor>
 					<FlavorType>FLAVOR_PRODUCTION</FlavorType>
-					<iFlavor>2</iFlavor>
+					<iFlavor>3</iFlavor>
 				</Flavor>
 			</Flavors>
 			<DomainProductionModifiers>
 				<DomainProductionModifier>
 					<DomainType>DOMAIN_LAND</DomainType>
-					<iProductionModifier>10</iProductionModifier>
+					<iProductionModifier>20</iProductionModifier>
 				</DomainProductionModifier>
 			</DomainProductionModifiers>
 		</BuildingInfo>
