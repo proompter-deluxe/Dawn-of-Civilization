@@ -33,7 +33,7 @@
 			<iDeclareWarTradeRand>0</iDeclareWarTradeRand>
 			<iDemandRebukedSneakProb>0</iDemandRebukedSneakProb>
 			<iDemandRebukedWarProb>0</iDemandRebukedWarProb>
-			<iRazeCityProb>10</iRazeCityProb>
+			<iRazeCityProb>40</iRazeCityProb>
 			<iBuildUnitProb>50</iBuildUnitProb>
 			<iBaseAttackOddsChange>0</iBaseAttackOddsChange>
 			<iAttackOddsChangeRand>16</iAttackOddsChangeRand>
@@ -35458,7 +35458,7 @@
 			<Description>TXT_KEY_LEADER_TAMERLANE</Description>
 			<Civilopedia>TXT_KEY_LEADER_TAMERLANE_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_LEADER_TAMERLANE</ArtDefineTag>
-			<iWonderConstructRand>25</iWonderConstructRand>
+			<iWonderConstructRand>20</iWonderConstructRand>
 			<iBaseAttitude>-2</iBaseAttitude>
 			<iBasePeaceWeight>0</iBasePeaceWeight>
 			<iPeaceWeightRand>3</iPeaceWeightRand>
@@ -35475,12 +35475,12 @@
 			<iMaxWarMinAdjacentLandPercent>0</iMaxWarMinAdjacentLandPercent>
 			<iLimitedWarRand>100</iLimitedWarRand>
 			<iLimitedWarPowerRatio>130</iLimitedWarPowerRatio>
-			<iDogpileWarRand>50</iDogpileWarRand>
+			<iDogpileWarRand>20</iDogpileWarRand>
 			<iMakePeaceRand>100</iMakePeaceRand>
 			<iDeclareWarTradeRand>50</iDeclareWarTradeRand>
 			<iDemandRebukedSneakProb>10</iDemandRebukedSneakProb>
 			<iDemandRebukedWarProb>50</iDemandRebukedWarProb>
-			<iRazeCityProb>20</iRazeCityProb>
+			<iRazeCityProb>30</iRazeCityProb>
 			<iBuildUnitProb>40</iBuildUnitProb>
 			<iBaseAttackOddsChange>8</iBaseAttackOddsChange>
 			<iAttackOddsChangeRand>8</iAttackOddsChangeRand>
@@ -57541,7 +57541,7 @@
 			<iDeclareWarTradeRand>40</iDeclareWarTradeRand>
 			<iDemandRebukedSneakProb>20</iDemandRebukedSneakProb>
 			<iDemandRebukedWarProb>50</iDemandRebukedWarProb>
-			<iRazeCityProb>0</iRazeCityProb>
+			<iRazeCityProb>40</iRazeCityProb>
 			<iBuildUnitProb>35</iBuildUnitProb>
 			<iBaseAttackOddsChange>6</iBaseAttackOddsChange>
 			<iAttackOddsChangeRand>16</iAttackOddsChangeRand>
