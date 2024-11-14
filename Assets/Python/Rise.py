@@ -82,11 +82,14 @@ lBirthWars = [
 	(iArabia, iEgypt),
 	(iArabia, iBabylonia),
 	(iArabia, iPersia),
+	(iArabia, iParthia),
 	(iMongols, iChina),
 	(iMongols, iChinaS),
 	(iOttomans, iByzantium),
 	(iOttomans, iBulgaria),
 	(iMoors, iSpain),
+	(iMamluks, iArabia),
+	(iParthia, iPersia)
 ]
 
 
@@ -636,14 +639,14 @@ class Birth(object):
 			capital = completeCityFlip(self.location, self.iPlayer, city_(self.location).getOwner(), 100, bCreateGarrisons=False)
 		
 		if self.iCiv not in lInvasionCivs:
-			for city in cities.ring(self.location):
-				if city.isHolyCity():
-					capital = completeCityFlip(city, self.iPlayer, city.getOwner(), 100)
+			for pCity in cities.ring(self.location):
+				if pCity.isHolyCity():
+					capital = completeCityFlip(pCity, self.iPlayer, pCity.getOwner(), 100)
 				else:
 					self.data.lPreservedWonders += [iWonder for iWonder in infos.buildings() if isWonder(iWonder) and pCity.isHasRealBuilding(iWonder)]
 
-					plot_(city).eraseAIDevelopment()
-					plot_(city).setImprovementType(iCityRuins)
+					plot_(pCity).eraseAIDevelopment()
+					plot_(pCity).setImprovementType(iCityRuins)
 
 		if capital:
 			self.prepareCity(capital)
@@ -787,7 +790,7 @@ class Birth(object):
 
 		# Moors & Fatimids require Arabia to have held at least one city in Maghreb or Carthage to not hold a city in that region
 		if self.iCiv == iMoors or self.iCiv == iMamluks:
-			if len(cities.region(rMaghreb).owner(iPhoenicia)) != 0 or cities.regions(rMaghreb).none(lambda city: iArabia in [city.getCivilizationType(), city.getPreviousCiv()]):
+			if len(cities.region(rMaghreb).owner(iPhoenicia)) != 0 and cities.regions(rMaghreb).none(lambda city: iArabia in [city.getCivilizationType(), city.getPreviousCiv()]):
 				return False
 		
 		# Mexico requires Aztecs to be dead

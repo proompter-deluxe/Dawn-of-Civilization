@@ -583,7 +583,7 @@ dGoals = {
 		),
 		All(
 			Wonder(iMezquita),
-			CitySpecialistCount(start(iMoors).named(CORDOBA), sum(iSpecialistGreatProphet, iSpecialistGreatScientist, iSpecialistGreatEngineer), 4),
+			CitySpecialistCount(capital().named(CAPITAL), sum(iSpecialistGreatProphet, iSpecialistGreatScientist, iSpecialistGreatEngineer), 4),
 			by=1300,
 		),
 		PiracyGold(3000, by=1650),
