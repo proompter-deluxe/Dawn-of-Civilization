@@ -929,7 +929,7 @@ class Birth(object):
 		if player(iClearedCiv).isHuman():
 			return
 		
-		if turn() == year(dFall[iClearedCiv]).deviate(10, data.iSeed):
+		if turn() == year(dFall[iClearedCiv]).deviate(5, data.iSeed):
 			completeCollapse(slot(iClearedCiv))
 	
 	def askSwitch(self):
