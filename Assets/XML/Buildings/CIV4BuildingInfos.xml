@@ -18,7 +18,7 @@
 			<bGovernmentCenter>1</bGovernmentCenter>
 			<bNeverCapture>1</bNeverCapture>
 			<bNukeImmune>1</bNukeImmune>
-			<iCost>160</iCost>
+			<iCost>80</iCost>
 			<iHurryCostModifier>50</iHurryCostModifier>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMinAreaSize>-1</iMinAreaSize>
@@ -54,7 +54,7 @@
 			<bGovernmentCenter>1</bGovernmentCenter>
 			<bNeverCapture>1</bNeverCapture>
 			<bNukeImmune>1</bNukeImmune>
-			<iCost>160</iCost>
+			<iCost>80</iCost>
 			<iHurryCostModifier>50</iHurryCostModifier>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMinAreaSize>-1</iMinAreaSize>
@@ -106,7 +106,7 @@
 			<bGovernmentCenter>1</bGovernmentCenter>
 			<bNeverCapture>1</bNeverCapture>
 			<bNukeImmune>1</bNukeImmune>
-			<iCost>160</iCost>
+			<iCost>80</iCost>
 			<iHurryCostModifier>50</iHurryCostModifier>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMinAreaSize>-1</iMinAreaSize>
