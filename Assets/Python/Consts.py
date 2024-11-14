@@ -610,7 +610,7 @@ iFrance : [(1700, 2020)],
 iMalays : [(500, 1500), (1940, 2020)],
 iJapan : [(1800, 2020)],
 iNorse : [(1520, 2020)],
-iTurks : [(1350, 1600), (1750, 1850), (1980, 2020)],
+iTurks : [(1350, 1480), (1750, 1850), (1980, 2020)],
 iArabia : [(1900, 2020)],
 iBulgaria: [(1200, 1400), (1800,2020)],
 iMoors : [(1220, 2020)], # Marinids / Ziyanids
@@ -1274,7 +1274,7 @@ iNumImpacts = 5
 lTradingCompanyCivs = [iSpain, iFrance, iEngland, iPortugal, iNetherlands]
 lLateColonyCivs = lTradingCompanyCivs + [iGermany]
 
-lMongolCivs = [iPersia, iByzantium, iTurks, iArabia, iRus, iMamluks, iAssyria, iParthia, iKushans, iMacedon]
+lMongolCivs = [iPersia, iByzantium, iTurks, iArabia, iRus, iMamluks, iAssyria, iParthia, iKushans, iMacedon, iArmenia]
 
 (i3000BC, i600AD, i1700AD) = range(3)
 
