@@ -401,7 +401,7 @@ class Birth(object):
 	
 	@property
 	def switchPopup(self):
-		return popup.text("TXT_KEY_POPUP_SWITCH").option(self.noSwitch, "TXT_KEY_POPUP_NO").option(self.yesSwitch, "TXT_KEY_POPUP_YES").build()
+		return popup.text("TXT_KEY_POPUP_SWITCH").cancel("TXT_KEY_POPUP_NO", button=event_bullet).option(self.yesSwitch, "TXT_KEY_POPUP_YES").build()
 	
 	def isHuman(self):
 		if self.iPlayer is None:
@@ -618,21 +618,35 @@ class Birth(object):
 		for plot in plots.all():
 			plot.updateRevealedOwner(self.team.getID())
 	
+	def prepareCity(self, city):		
+		city.rebuild(-1)
+		
+		iMinPopulation = self.player.getCurrentEra() + 1
+		city.setPopulation(max(iMinPopulation, city.getPopulation()))
+		
+		if since(scenarioStartTurn()):
+			ensureDefenders(self.iPlayer, city, 2)
+	
 	def prepareCapital(self):
 		expelUnits(self.iPlayer, plots.surrounding(self.location), self.flippedArea())
+		
+		capital = None
 	
 		if plot_(self.location).isCity():
-			completeCityFlip(self.location, self.iPlayer, city_(self.location).getOwner(), 100, bCreateGarrisons=False)
+			capital = completeCityFlip(self.location, self.iPlayer, city_(self.location).getOwner(), 100, bCreateGarrisons=False)
 		
 		if self.iCiv not in lInvasionCivs:
-			for pCity in cities.ring(self.location):
-				if pCity.isHolyCity():
-					completeCityFlip(pCity, self.iPlayer, pCity.getOwner(), 100)
+			for city in cities.ring(self.location):
+				if city.isHolyCity():
+					capital = completeCityFlip(city, self.iPlayer, city.getOwner(), 100)
 				else:
 					self.data.lPreservedWonders += [iWonder for iWonder in infos.buildings() if isWonder(iWonder) and pCity.isHasRealBuilding(iWonder)]
-				
-					plot_(pCity).eraseAIDevelopment()
-					plot_(pCity).setImprovementType(iCityRuins)
+
+					plot_(city).eraseAIDevelopment()
+					plot_(city).setImprovementType(iCityRuins)
+
+		if capital:
+			self.prepareCity(capital)
 
 		# for Bulgaria, we want to clear all the culture in the core and found Ras so it can flip next turn
 		if (self.iCiv == iBulgaria):
@@ -649,7 +663,7 @@ class Birth(object):
 		else:
 			for plot in plots.surrounding(self.location):
 				convertPlotCulture(plot, self.iPlayer, 100, bOwner=True)
-		
+
 	def resetPlague(self):
 		self.data.iPlagueCountdown = -10
 		clearPlague(self.iPlayer)
@@ -702,7 +716,10 @@ class Birth(object):
 			self.expansion()
 			self.announce()
 		
-		elif iUntilBirth == 2:
+		if self.iPlayer is None:
+			return
+		
+		if iUntilBirth == 2:
 			self.askSwitch()
 		elif iUntilBirth == 1:
 			self.birth()
@@ -916,7 +933,7 @@ class Birth(object):
 		if not self.canSwitch():
 			return
 
-		self.switchPopup.text(adjective(self.iPlayer)).noSwitch().yesSwitch().launch()
+		self.switchPopup.text(adjective(self.iPlayer)).cancel().yesSwitch().launch()
 	
 	def canSwitch(self):
 		if not MainOpt.isSwitchPopup():
@@ -934,14 +951,14 @@ class Birth(object):
 		self.bSwitch = True
 		
 		game.doControl(ControlTypes.CONTROL_FORCEENDTURN)
-	
-	def noSwitch(self):
-		return
 
 	def checkSwitch(self):
 		if self.bSwitch:
-			self.bSwitch = False
 			self.switch()
+		else:
+			self.setupWithoutSwitch()
+		
+		self.bSwitch = False
 	
 	def switch(self):
 		iPreviousPlayer = active()
@@ -986,6 +1003,13 @@ class Birth(object):
 		data.dUnitsKilled = dict((iUnit, iNumUnits) for iUnit, iNumUnits in dUnitsKilled.items() if iNumUnits > 0)
 		data.dUnitsLost = dict((iUnit, iNumUnits) for iUnit, iNumUnits in dUnitsLost.items() if iNumUnits > 0)
 		data.dBuildingsBuilt = dict((iBuilding, iNumBuildings) for iBuilding, iNumBuildings in dBuildingsBuilt.items() if iNumBuildings > 0)
+	
+	def setupWithoutSwitch(self):
+		if not self.isHuman():
+			self.assignAdditionalTechs()
+			createRoleUnits(self.iPlayer, self.location, getAIStartingUnits(self.iPlayer))
+		
+		createSpecificUnits(self.iPlayer, self.location)		
 	
 	def birth(self):
 		# initial save
@@ -1062,13 +1086,8 @@ class Birth(object):
 		
 		for city in flippedCities:
 			city = completeCityFlip(city, self.iPlayer, city.getOwner(), 100, bFlipUnits=True)
-			city.rebuild(-1)
 			
-			iMinPopulation = self.player.getCurrentEra() + 1
-			city.setPopulation(max(iMinPopulation, city.getPopulation()))
-			
-			if since(scenarioStartTurn()):
-				ensureDefenders(self.iPlayer, city, 2)
+			self.prepareCity(city)
 		
 		convertSurroundingPlotCulture(self.iPlayer, flippedPlots.land())
 		convertSurroundingPlotCulture(self.iPlayer, flippedPlots.water().where(lambda p: p.getPlayerCityRadiusCount(self.iPlayer) > 0))

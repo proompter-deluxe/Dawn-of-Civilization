@@ -2888,3 +2888,9 @@ void CyCity::doPlotCulture(bool bUpdate, int ePlayer, int iCultureRate, bool bOw
 {
 	if (m_pCity) m_pCity->doPlotCulture(bUpdate, (PlayerTypes)ePlayer, iCultureRate, bOwned);
 }
+
+// Leoreth
+void CyCity::AI_updateAssignWork()
+{
+	if (m_pCity) m_pCity->AI_updateAssignWork();
+}

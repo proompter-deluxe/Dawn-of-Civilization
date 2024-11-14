@@ -559,6 +559,7 @@ public:
 	bool AI_isEmphasize(int iEmphasizeType);
 	int AI_countBestBuilds(CyArea* pArea);
 	int AI_cityValue();
+	void AI_updateAssignWork(); // Leoreth
 
 	std::string getScriptData() const;
 	void setScriptData(std::string szNewValue);

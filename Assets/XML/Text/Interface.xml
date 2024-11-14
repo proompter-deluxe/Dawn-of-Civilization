@@ -3737,6 +3737,14 @@
 		<Spanish></Spanish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_HAPPY_FEATURES</Tag>
+		<English>+%d1_Change[ICON_HAPPY]: "We prosper close to Oases!"</English>
+		<French>+%d1_Change[ICON_HAPPY]: "We prosper close to Oases!"</French>
+		<German>+%d1_Change[ICON_HAPPY]: "We prosper close to Oases!"</German>
+		<Italian>+%d1_Change[ICON_HAPPY]: "We prosper close to Oases!"</Italian>
+		<Spanish>+%d1_Change[ICON_HAPPY]: "We prosper close to Oases!"</Spanish>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_</Tag>
 		<English></English>
 		<French></French>

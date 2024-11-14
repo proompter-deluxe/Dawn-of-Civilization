@@ -22,12 +22,13 @@ iPersia :		(94, 45), # Persepolis
 iRome :			(68, 53), # Rome
 iCelts :		(62, 57), # Nemessos
 iMaya :			(22, 41), # Tikal
-iDravidia :		(107, 34), # Thanjavur
+iDravidia :		(106, 34), # Thanjavur
 iEthiopia :		(84, 35), # Aksum
 iToltecs :		(17, 43), # Tollan
 iKushans :		(102, 49), # Taxila
 iKorea :		(131, 54), # Seoul
 iKhmer :		(121, 37), # Angkor
+iMali :			(59, 35), # Djenne
 iByzantium :	(79, 55), # Constantinople
 iMalays :		(120, 27), # Palembang
 iJapan :		(137, 53), # Kyoto
@@ -45,7 +46,6 @@ iBurma :		(117, 42), # Bagan
 iRus :			(81, 62), # Kyiv
 iVietnam : 		(121, 42), # Hanoi
 iSwahili :		(84, 23), # Kilwa
-iMali :			(58, 35), # Djenne
 iPoland :		(74, 61), # Krakow
 iPortugal :		(54, 50), # Lisboa
 iInca :			(31, 24), # Cuzco

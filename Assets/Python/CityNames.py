@@ -156,7 +156,7 @@ dTranslations = dict((iLanguage, FileDict("Translations/%s.csv" % dLanguageNames
 
 @handler("cityBuilt")
 def onCityBuilt(city):
-	updateName(city)
+	updateName(city, bFound=True)
 
 
 @handler("cityAcquired")
@@ -211,11 +211,11 @@ def updateNames(identifier):
 		updateName(city)
 
 
-def updateName(city):
+def updateName(city, bFound=False):
 	if not game.isFinalInitialized():
 		return
 	
-	if turn() == scenarioStartTurn():
+	if not bFound and turn() == scenarioStartTurn():
 		return
 
 	if is_minor(city):

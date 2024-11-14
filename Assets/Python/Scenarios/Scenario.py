@@ -453,6 +453,7 @@ class Scenario(object):
 		
 		self.updateData()
 		self.updateNames()
+		self.updateCityWork()
 	
 	def adjustTerritories(self):
 		for city in cities.all():
@@ -520,6 +521,10 @@ class Scenario(object):
 	def updateNames(self):
 		for iPlayer in players.major():
 			checkName(iPlayer)
+	
+	def updateCityWork(self):
+		for city in cities.all():
+			city.AI_updateAssignWork()
 	
 	def updatePeriods(self):
 		for iYear, dPeriods in dScenarioPeriods.items():
