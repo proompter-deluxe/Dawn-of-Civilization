@@ -271,6 +271,11 @@ def doResurrection(iCiv, lCityList, bAskFlip=True, bDisplay=False):
 	if iCiv == iTurks and pPlayer.getCurrentEra() < iIndustrial and not player(iIran).isExisting(): # Timurid
 		bonusUnits = 3
 
+		# turks should also declare war on a bunch of civs on rebirth
+		for targetCiv in [iPersia, iArmenia, iParthia, iOttomans, iAssyria, iArabia]:
+			if player(targetCiv).isExisting():
+				team(iCiv).declareWar(targetCiv, False, -1)
+
 	dStartingUnits = {
 		iAttack: 2 * iArmySize + iNumCities + bonusUnits,
 		iShock: iArmySize + bonusUnits,
