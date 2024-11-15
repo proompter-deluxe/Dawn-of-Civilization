@@ -144,7 +144,7 @@ iArabPersiaConquestYear = 650
 tArabsPersiaTL = (92, 43)
 tArabsPersiaBR = (95, 50)
 
-tConquestArabiaPersia = (24, iArabia, iPersia, tArabsPersiaTL, tArabsPersiaBR, 3, iArabPersiaConquestYear, 10)
+tConquestArabiaPersia = (24, iArabia, iPersia, tArabsPersiaTL, tArabsPersiaBR, 2, iArabPersiaConquestYear, 10)
 
 iArabSindConquestYear = 710
 tArabsSindTL = (98, 42)
