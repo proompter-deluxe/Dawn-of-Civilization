@@ -788,10 +788,13 @@ class Birth(object):
 			if player(iPersia).isExisting() or player(iParthia).isExisting():
 				return False
 
-		# Moors & Fatimids require Arabia to have held at least one city in Maghreb or Carthage to not hold a city in that region
+		# Moors & Fatimids cannot spawn if Arabia has never conquered one of the cities of the Maghreb
+		# OR Carthage, Romans and Byzantines don't hold any cities in the Maghreb
 		if self.iCiv == iMoors or self.iCiv == iMamluks:
-			if len(cities.region(rMaghreb).owner(iPhoenicia)) != 0 and cities.regions(rMaghreb).none(lambda city: iArabia in [city.getCivilizationType(), city.getPreviousCiv()]):
-				return False
+			if cities.regions(rMaghreb).none(lambda city: iArabia in [city.getCivilizationType(), city.getPreviousCiv()]):
+				for iBlockerCiv in [iPhoenicia, iRome, iByzantium]:
+					if len(cities.region(rMaghreb).owner(iBlockerCiv)) != 0:
+						return False
 		
 		# Mexico requires Aztecs to be dead
 		if self.iCiv == iMexico:
