@@ -1539,7 +1539,7 @@ dAdditionalUnits = CivDict({
 
 dSpecificAIStartingUnits = CivDict({
 	iByzantium: {
-		iTagmata: 3,
+		iTagmata: 4,
 	},
 }, {})
 
