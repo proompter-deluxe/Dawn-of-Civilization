@@ -575,7 +575,7 @@ iMughals : 1640,
 iCongo : 1800,
 iIroquois : 1770,
 iArmenia : 1050,
-iMinoans: -1100,
+iMinoans: -1130,
 iParthia: 650,
 }, 2020)
 
