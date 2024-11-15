@@ -272,7 +272,7 @@ def doResurrection(iCiv, lCityList, bAskFlip=True, bDisplay=False):
 		bonusUnits = 3
 
 		# turks should also declare war on a bunch of civs on rebirth
-		for targetCiv in [iPersia, iArmenia, iParthia, iOttomans, iAssyria, iArabia]:
+		for targetCiv in [iPersia, iArmenia, iParthia, iOttomans, iAssyria, iArabia, iKushans]:
 			if player(targetCiv).isExisting():
 				team(iCiv).declareWar(targetCiv, False, -1)
 
