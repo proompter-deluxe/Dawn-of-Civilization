@@ -276,6 +276,8 @@ def getSpecialLanguages(identifier):
 			return [iLangDanish, iLangNorse]
 	elif iCiv == iParthia and getColumn(player(identifier).getID()) >= 6:
 		return [iLangFarsi, iLangPersian, iLangByzantine]
+	elif iCiv == iAssyria and data.civs[iCiv].iResurrections > 0 and game.isReligionFounded(iIslam):
+		return [iLangArabic, iLangByzantine]
 	
 	return None
 
