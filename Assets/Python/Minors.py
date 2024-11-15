@@ -506,7 +506,7 @@ minor_cities = [
 	MinorCity(1000, iBarbarian, (78, 65), "Vil'na", iPopulation=2, iCiv=iPoland, units={iHarass: 3, iDefend: 1}, adjective="TXT_KEY_ADJECTIVE_LITHUANIAN"),
 	MinorCity(1000, iNative, (67, 34), "Kano", iPopulation=2, iCiv=iMali, units={iDefend: 2}, adjective="TXT_KEY_ADJECTIVE_HAUSA"),
 	MinorCity(1100, iIndependent, (144, 33), "Nan Madol", iPopulation=1),
-	MinorCity(1150, iNative, (15, 44), "Ts'intsuntsani", iPopulation=3, iCiv=iAztecs, units={iDefend: 3, iAttack:2}, bIgnoreRuins=True, adjective="TXT_KEY_ADJECTIVE_PUREPECHA"),
+	MinorCity(1150, iNative, (15, 44), "Ts'intsuntsani", iPopulation=3, iCiv=iToltecs, units={iDefend: 1, iHarass: 2}, bIgnoreRuins=True, adjective="TXT_KEY_ADJECTIVE_PUREPECHA"),
 	MinorCity(1180, iIndependent, (66, 31), "Edo", iPopulation=3, iCiv=iMali, units={iDefend: 2}, adjective="TXT_KEY_ADJECTIVE_EDO"),
 	MinorCity(1350, iIndependent2, (81, 32), "Bonga", iPopulation=3, iCiv=iEthiopia, units={iDefend: 3}),
 	MinorCity(1585, iNative, (74, 23), "Mwimbele", iPopulation=1, units={iSkirmish: 2}, adjective="TXT_KEY_ADJECTIVE_LUBA"),

@@ -108,12 +108,6 @@ tMongolsPersiaBR = (98, 52)
 
 tConquestMongolsPersia = (13, iMongols, iTurks, tMongolsPersiaTL, tMongolsPersiaBR, 7, iMongolsPersiaYear, 10)
 
-iMongolsBaghdadYear = 1260
-tMongolsBaghdadTL = (88, 43)
-tMongolsBaghdadBR = (90, 49)
-
-tConquestMongolsBaghdad = (38, iMongols, iArabia, tMongolsBaghdadTL, tMongolsBaghdadBR, 2, iMongolsBaghdadYear, 5)
-
 iChinaIndiesYear = -240
 tChinaIndiesTL = (118, 49)
 tChinaIndiesBR = (128, 56)
@@ -198,8 +192,22 @@ tDummyConquestRomeHoldingRome= (36, iRome, iBarbarian, tRome, tRome, 1, -3000, 1
 iParthiaMesopotamiaYear = 220
 tConquestParthiaMesopotamia = (37, iParthia, iRome, tLevantTL, tGreeceMesopotamiaBR, 3, iParthiaMesopotamiaYear, 10)
 
+
+iMongolsBaghdadYear = 1260
+tMongolsBaghdadTL = (88, 43)
+tMongolsBaghdadBR = (90, 49)
+
+tConquestMongolsBaghdad = (38, iMongols, iArabia, tMongolsBaghdadTL, tMongolsBaghdadBR, 1, iMongolsBaghdadYear, 5)
+
 iFatamidEgyptYear = 969
 tConquestFatamidEgypt = (39, iMamluks, iArabia, tEgyptTL, tEgyptBR, 2, iFatamidEgyptYear, 10)
+
+
+iMongolsKievYear = 1240
+tMongolsKievTL = (80, 60)
+tMongolsKievBR = (82, 64)
+
+tConquestMongolsKiev = (40, iMongols, iRus, tMongolsKievTL, tMongolsKievBR, 1, iMongolsKievYear, 5)
 
 lConquests = [
 	tConquestRomeCarthageInSpain,
@@ -240,6 +248,7 @@ lConquests = [
 	tConquestParthiaMesopotamia,
 	tConquestFatamidEgypt,
 	tConquestMongolsBaghdad,
+	tConquestMongolsKiev,
 ]
 
 dConquestChecker = {

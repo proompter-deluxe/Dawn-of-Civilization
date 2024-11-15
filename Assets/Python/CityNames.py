@@ -272,7 +272,7 @@ def getSpecialLanguages(identifier):
 	elif iCiv == iPersia and (player(identifier).getStateReligion() == iShia or player(identifier).getStateReligion() == iIslam):
 		return [iLangFarsi, iLangArabic, iLangPersian]
 	elif iCiv == iNorse:
-		if player(iCiv).getPeriod() == iPeriodDenmark:
+		if player(iCiv).getPeriod() == iPeriodDenmark or player(iCiv).getPeriod() == iPeriodNorway:
 			return [iLangDanish, iLangNorse]
 	elif iCiv == iParthia and getColumn(player(identifier).getID()) >= 6:
 		return [iLangFarsi, iLangPersian, iLangByzantine]
@@ -293,6 +293,13 @@ def getCivicRenames(iCiv):
 	
 	return {}
 
+
+def renameOwnedCity(city, sName):
+	sOldName = city.getName()
+	
+	if sOldName != sName:
+		city.setName(sName, False)
+		message(city.getOwner(), "TXT_KEY_INTERFACE_CITY_NAME_CHANGED", sOldName, sName, location=city, button="Art/Interface/Buttons/Actions/FoundCity.dds")
 
 def renameCity(oldName, newName):
 	data.dRenamedCities[oldName] = newName

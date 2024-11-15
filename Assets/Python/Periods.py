@@ -200,7 +200,7 @@ def onCapitalMoved(city):
 			setPeriod(iNorse, getNorsePeriod(iOwner))
 	
 	elif iOwnerCiv == iMoors:
-		if player(iOwner).getCurrentEra() >= iIndustrial and city.getRegionID() != rIberia:
+		if player(iOwner).getCurrentEra() >= iRenaissance and city.getRegionID() != rIberia:
 			setPeriod(iMoors, iPeriodMorocco)
 
 
@@ -214,16 +214,16 @@ def onTechAcquired(iTech, iTeam, iPlayer):
 			setPeriod(iDravidia, iPeriodVijayanagara)
 	
 	if iCiv == iNorse:
-		if iEra == iRenaissance:
+		if iEra >= iRenaissance:
 			setPeriod(iNorse, getNorsePeriod(iPlayer))
 	
 	if iCiv == iMoors:
-		if iEra == iIndustrial:
-			if player(iPlayer).getCapitalCity().getRegionID() != rIberia:
+		if iEra >= iRenaissance:
+			if player(iMoors).getPeriod() == -1 and player(iPlayer).getCapitalCity().getRegionID() != rIberia :
 				setPeriod(iMoors, iPeriodMorocco)
 
 	if iCiv == iSpain:
-		if iEra == iRenaissance:
+		if iEra >= iRenaissance:
 			if player(iMoors).isExisting() and player(iMoors).getPeriod() == -1 and cities.owner(iMoors).region(rIberia).none():
 				setPeriod(iMoors, iPeriodMorocco)
 	
@@ -244,7 +244,7 @@ def onTechAcquired(iTech, iTeam, iPlayer):
 		if iEra == iDigital:
 			setPeriod(iGermany, iPeriodModernGermany)
 			
-			
+
 def getNorsePeriod(iPlayer):
 	capital = player(iPlayer).getCapitalCity()
 	
@@ -254,4 +254,5 @@ def getNorsePeriod(iPlayer):
 		elif capital in plots.regions(rDenmark):
 			return iPeriodDenmark
 	
-	return -1
+	# default to Denmark, for example if a government in exile
+	return iPeriodDenmark

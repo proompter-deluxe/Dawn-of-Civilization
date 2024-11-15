@@ -709,9 +709,16 @@ def onPeriodChange(iPlayer, iPeriod):
 		if iPeriod == iPeriodDenmark:
 			setShort(iPlayer, text("TXT_KEY_CIV_DENMARK_SHORT_DESC"))
 			setAdjective(iPlayer, text("TXT_KEY_CIV_DENMARK_ADJECTIVE"))
+			for city in cities.owner(iPlayer):
+				if city.getName() in ['Roskilde']: 
+					cn.renameOwnedCity(city, "København")
+
 		elif iPeriod == iPeriodNorway:
 			setShort(iPlayer, text("TXT_KEY_CIV_NORWAY_SHORT_DESC"))
 			setAdjective(iPlayer, text("TXT_KEY_CIV_NORWAY_ADJECTIVE"))
+			for city in cities.owner(iPlayer):
+				if city.getName() in ['Roskilde']: 
+					cn.renameOwnedCity(city, "København")
 	
 	if iCiv == iTurks:
 		if iPeriod == iPeriodUzbeks:

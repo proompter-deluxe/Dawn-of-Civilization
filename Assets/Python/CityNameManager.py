@@ -48,13 +48,6 @@ def updateMexicanCityNames(iPlayer):
 
 # methods
 
-def renameOwnedCity(city, sName):
-	sOldName = city.getName()
-	
-	if sOldName != sName:
-		city.setName(sName, False)
-	
-		message(city.getOwner(), "TXT_KEY_INTERFACE_CITY_NAME_CHANGED", sOldName, sName, location=city, button="Art/Interface/Buttons/Actions/FoundCity.dds")
 
 def isResurrected(iPlayer):
 	return data.civs[iPlayer].iResurrections > 0

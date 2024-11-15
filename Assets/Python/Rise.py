@@ -37,6 +37,7 @@ lExpansionCivs = [
 	iMughals,
 	iOttomans,
 	iParthia,
+	iAztecs,
 ]
 
 lIndependenceCivs = [

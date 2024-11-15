@@ -546,6 +546,7 @@ lCivilizations = [
 		iGold=200,
 		iAdvancedStartPoints=30,
 		lCivics=[iMonarchy, iCitizenship, iSlavery, iRedistribution, iDeification, iHegemony],
+		lEnemies=[iIndependent, iIndependent2],
 		techs=techs.column(4).including(iGeneralship, iAesthetics, iCurrency, iLaw).without(iSeafaring, iRiding, iShipbuilding, iCement, iNavigation)
 	),
 	Civilization(
@@ -1330,6 +1331,9 @@ dExtraAIUnits = CivDict({
 		iWork: 2,
 		iSiege: 2,
 	},
+	iAztecs: {
+		iSiege: 4,
+	},
 	iIran: {
 		iAttack: 6,
 		iSiege: 3,
@@ -1472,8 +1476,8 @@ dAdditionalUnits = CivDict({
 		iShock: 4,
 	},
 	iAztecs: {
-		iAttack: 5,
-		iDefend: 3,
+		iAttack: 2,
+		iDefend: 2,
 	},
 	iMughals: {
 		iShockCity: 2,

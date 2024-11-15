@@ -159,7 +159,7 @@ def secedeCity(city, iNewOwner, bRelocate, iArmyPercent):
 	
 	flipped_city = completeCityFlip(city, iNewOwner, city.getOwner(), 50, False, True, True)
 	
-	if flipped_city and civ(iOldOwner) == iToltecs:
+	if flipped_city and civ(iOldOwner) in [iToltecs, iMaya]:
 		removeBuildings(flipped_city)
 	
 	if not player(iNewOwner).isMinorCiv():
