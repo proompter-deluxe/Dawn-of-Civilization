@@ -134,7 +134,7 @@ tSouthChinaBR = (131, 50)
 
 tConquestSuiUnification = (18, iChina, iChinaS, tSouthChinaTL, tSouthChinaBR, 3, iSuiUnificationYear, 10)
 
-iArabCarthageConquestYear = 680
+iArabCarthageConquestYear = 670
 tTunisiaTL = (66, 44)
 tTunisiaBR = (69, 48)
 
