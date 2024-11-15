@@ -707,7 +707,7 @@ class Birth(object):
 	
 		iUntilBirth = until(self.iTurn)
 		
-		if iUntilBirth == turns(5) or (scenarioStart() and self.iTurn - turns(5) < scenarioStartTurn()):
+		if iUntilBirth == turns(4) or (scenarioStart() and self.iTurn - turns(4) < scenarioStartTurn()):
 			if not self.canSpawn():
 				self.canceled = True
 				return
