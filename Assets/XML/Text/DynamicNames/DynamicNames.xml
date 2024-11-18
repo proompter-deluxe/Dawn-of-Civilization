@@ -642,4 +642,16 @@
 			<Plural>0</Plural>
 		</Spanish>
 	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DUCHY_OF</Tag>
+		<English>Duchy of %s1</English>
+		<French>
+			<Text>Duch&#233; de %s1</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>Duchy of %s1</German>
+		<Italian>Duchy of %s1</Italian>
+		<Spanish>Duchy of %s1</Spanish>
+	</TEXT>
 </Civ4GameText>

@@ -864,8 +864,8 @@ def getColumn(iPlayer):
 	
 ### Utility methods for civilization status ###
 	
-def isCapitulated(iPlayer):
-	return team(iPlayer).isAVassal() and team(iPlayer).isCapitulated()
+#def isCapitulated(iPlayer):
+#	return team(iPlayer).isAVassal() and team(iPlayer).isCapitulated()
 	
 def isEmpire(iPlayer):
 	if team(iPlayer).isAVassal(): return False
@@ -913,7 +913,7 @@ def controlsCity(iPlayer, (x, y)):
 def name(iPlayer, bIgnoreVassal = False):
 	iCiv = civ(iPlayer)
 
-	if isCapitulated(iPlayer) and not bIgnoreVassal:
+	if team(iPlayer).isAVassal() and not bIgnoreVassal:
 		sVassalName = vassalName(iPlayer, master(iPlayer))
 		if sVassalName: return sVassalName
 		
@@ -978,7 +978,7 @@ def specificName(iPlayer):
 	bCityStates = isCityStates(iPlayer)
 	bTheocracy = civic.iLegitimacy == iTheocracy or civic.iReligion == iFanaticism
 	bResurrected = data.civs[iCiv].iResurrections > 0
-	bCapitulated = isCapitulated(iPlayer)
+	bCapitulated = team(iPlayer).isAVassal()
 	bMonarchy = not isCommunist(iPlayer) and not isFascist(iPlayer) and not isRepublic(iPlayer)
 	iAnarchyTurns = data.civs[iCiv].iAnarchyTurns
 	iEra = pPlayer.getCurrentEra()
@@ -1207,7 +1207,7 @@ def specificName(iPlayer):
 def adjective(iPlayer, bIgnoreVassal = False):
 	iCiv = civ(iPlayer)
 
-	if isCapitulated(iPlayer):
+	if team(iPlayer).isAVassal():
 		iMaster = master(iPlayer)
 	
 		sForeignAdjective = dForeignAdjectives[civ(iMaster)].get(iPlayer)
@@ -1262,7 +1262,7 @@ def specificAdjective(iPlayer):
 	bCityStates = isCityStates(iPlayer)
 	bTheocracy = civic.iLegitimacy == iTheocracy or civic.iReligion == iFanaticism
 	bResurrected = data.civs[iCiv].iResurrections > 0
-	bCapitulated = isCapitulated(iPlayer)
+	bCapitulated = team(iPlayer).isAVassal()
 	iAnarchyTurns = data.civs[iCiv].iAnarchyTurns
 	iEra = pPlayer.getCurrentEra()
 	iGameEra = game.getCurrentEra()
@@ -1594,7 +1594,7 @@ def specificAdjective(iPlayer):
 ### Title methods ###
 
 def title(iPlayer):
-	if isCapitulated(iPlayer):
+	if team(iPlayer).isAVassal():
 		sVassalTitle = vassalTitle(iPlayer, master(iPlayer))
 		if sVassalTitle: return sVassalTitle
 		
@@ -1686,6 +1686,10 @@ def vassalTitle(iPlayer, iMaster):
 	if iCiv in lColonies and iMasterCiv not in lColonies:
 		return "TXT_KEY_COLONY_OF"
 	
+	# for pre-industrial civs, prefer Duchy to Protectorate
+	if iMasterCiv in dCivGroups[iCivGroupEurope] and player(iMasterCiv).getCurrentEra() <= iRenaissance:
+		return "TXT_KEY_DUCHY_OF"
+	
 	return "TXT_KEY_PROTECTORATE_OF"
 	
 def communistTitle(iPlayer):
@@ -1762,7 +1766,7 @@ def specificTitle(iPlayer, lPreviousOwners=[]):
 	bCityStates = isCityStates(iPlayer)
 	bTheocracy = civic.iLegitimacy == iTheocracy or civic.iReligion == iFanaticism
 	bResurrected = data.civs[iCiv].iResurrections > 0
-	bCapitulated = isCapitulated(iPlayer)
+	bCapitulated = team(iPlayer).isAVassal()
 	iAnarchyTurns = data.civs[iCiv].iAnarchyTurns
 	iEra = pPlayer.getCurrentEra()
 	iGameEra = game.getCurrentEra()

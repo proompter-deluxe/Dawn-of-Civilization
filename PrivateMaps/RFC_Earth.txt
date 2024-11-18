@@ -30933,6 +30933,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=69,y=68
+	BonusType=BONUS_AMBER
 	FeatureType=FEATURE_ISLANDS, FeatureVariety=0
 	TerrainType=TERRAIN_COAST
 	PlotType=3
