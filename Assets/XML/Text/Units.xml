@@ -3677,15 +3677,15 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_MAMLUK_CAVALRY</Tag>
-		<English>Mamluk Cavalry</English>
+		<English>Ghulam Cavalry</English>
 		<French>
-			<Text>Chevalier Mamluk</Text>
+			<Text>Chevalier ghulam</Text>
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>Mamluk Cavalry</German>
-		<Italian>Mamluk Cavalry</Italian>
-		<Spanish>Mamluk Cavalry</Spanish>
+		<German>Ghulam Cavalry</German>
+		<Italian>Ghulam Cavalry</Italian>
+		<Spanish>Ghulam Cavalry</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_MAMLUK_NAFFATUN</Tag>

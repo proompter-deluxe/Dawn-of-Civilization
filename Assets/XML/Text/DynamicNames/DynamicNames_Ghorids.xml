@@ -3,11 +3,11 @@
 <Civ4GameText xmlns="http://www.firaxis.com">
 	<TEXT>
 		<Tag>TXT_KEY_CIV_GHORIDS_DESC</Tag>
-		<English>The Ghorids</English>
-		<French>The Ghorids</French>
-		<German>The Ghorids</German>
-		<Italian>The Ghorids</Italian>
-		<Spanish>The Ghorids</Spanish>
+		<English>The Ghurids</English>
+		<French>The Ghurids</French>
+		<German>The Ghurids</German>
+		<Italian>The Ghurids</Italian>
+		<Spanish>The Ghurids</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIV_GHORIDS_PEOPLES</Tag>
@@ -23,11 +23,11 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIV_GHORIDS_ADJECTIVE</Tag>
-		<English>Ghorid</English>
-		<French>Ghorid</French>
-		<German>Ghorid</German>
-		<Italian>Ghorid</Italian>
-		<Spanish>Ghorid</Spanish>
+		<English>Ghurid</English>
+		<French>Ghurid</French>
+		<German>Ghurid</German>
+		<Italian>Ghurid</Italian>
+		<Spanish>Ghurid</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIV_GHAZNAVIDS_ADJECTIVE</Tag>
@@ -39,11 +39,11 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIV_GHORIDS_SHORT_DESC</Tag>
-		<English>Ghorids</English>
-		<French>Ghorids</French>
-		<German>Ghorids</German>
-		<Italian>Ghorids</Italian>
-		<Spanish>Ghorids</Spanish>
+		<English>Ghurids</English>
+		<French>Ghurids</French>
+		<German>Ghurids</German>
+		<Italian>Ghurids</Italian>
+		<Spanish>Ghurids</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIV_GHORIDS_DEFAULT</Tag>
