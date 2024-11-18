@@ -11,10 +11,10 @@ typedef list<char*> LISTCHAR;
 
 #define MAX_COM_SHRINE			(20)
 
-#define BEGIN_WONDERS				(199) // increment if normal building (not for wonders) is added
+#define BEGIN_WONDERS				(200) // increment if normal building (not for wonders) is added
 #define BEGIN_GREAT_WONDERS			(BEGIN_WONDERS+13) // increment if a national wonder is added
 
-#define NUM_CIVS				(69)
+#define NUM_CIVS				(70)
 
 #define NUM_ERAS				(ERA_DIGITAL+1)
 
@@ -463,6 +463,7 @@ enum Regions
 	REGION_DENMARK,
 	REGION_NORWAY,
 	REGION_CRIMEA,
+	REGION_YEMEN_OMAN,
 	NUM_REGIONS,
 };
 

@@ -3877,5 +3877,15 @@
 			<KFM/>
 			<Button>,Art/Interface/Buttons/Buildings/Shrine_Shia.dds,Art/Interface/Buttons/mem_buildings_atlas.dds,4,2</Button>
 		</BuildingArtInfo>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_SLAVE_BARRACKS</Type>
+			<LSystem>LSYSTEM_2x2</LSystem>
+			<bAnimated>1</bAnimated>
+			<fScale>0.25</fScale>
+			<fInterfaceScale>0.62</fInterfaceScale>
+			<NIF>Art/Structures/Buildings/Huskarl_Barracks/Barracks.nif</NIF>
+			<KFM/>
+			<Button>,Art/Interface/Buttons/Buildings/Armory.dds,Art/Interface/Buttons/mem_buildings_atlas.dds,4,3</Button>
+		</BuildingArtInfo>
 	</BuildingArtInfos>
 </Civ4ArtDefines>

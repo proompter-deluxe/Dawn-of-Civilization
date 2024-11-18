@@ -84,7 +84,7 @@ def checkLostCitiesCollapses():
 
 @handler("BeginGameTurn")
 def updateHumanStability(iGameTurn):
-	if iGameTurn >= year(dBirth[active()]):
+	if iGameTurn >= year(dBirth[civ(active())]):
 		data.iHumanStability = calculateStability(active())[0]
 
 
@@ -103,7 +103,7 @@ def triggerCrisis(iPlayer):
 	
 	changeCrisisCountdown(iPlayer, turns(10))
 	
-	bFall = since(year(dFall[iPlayer])) >= 0
+	bFall = since(year(dFall[civ(iPlayer)])) >= 0
 	
 	# help AI to not immediately collapse
 	if not player(iPlayer).isHuman() and not bFall:
@@ -422,7 +422,7 @@ def getSeparatismModifier(iPlayer, city):
 	
 	bHistorical = plot.getPlayerSettlerValue(iPlayer) > 0
 	bConquest = plot.getPlayerWarValue(iPlayer) > 1
-	bFall = since(year(dFall[iPlayer])) >= 0
+	bFall = since(year(dFall[iCiv])) >= 0
 	bTotalitarianism = civic.iSociety == iTotalitarianism
 	bExpansionExceptions = (bHistorical and iCiv == iMongols and not bFall) or bTotalitarianism
 	
@@ -1216,6 +1216,6 @@ def getAdministrationModifier(iPlayer):
 	return max(100, iModifier)
 	
 def isDecline(iPlayer):
-	return not player(iPlayer).isHuman() and year() >= year(dFall[iPlayer])
+	return not player(iPlayer).isHuman() and year() >= year(dFall[civ(iPlayer)])
 
 		

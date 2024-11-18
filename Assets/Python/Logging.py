@@ -120,8 +120,8 @@ def stopTimer(iPlayer):
 #@handler("BeginGameTurn")
 def logSlotInfo():
 	current = players.all().alive()
-	past_fall = current.where(lambda p: turn() >= year(dFall[p]))
-	resurrected = current.where(lambda p: data.civs[p].iResurrections > 0)
+	past_fall = current.where(lambda p: turn() >= year(dFall[civ(p)]))
+	resurrected = current.where(lambda p: data.civs[civ(p)].iResurrections > 0)
 	
 	message = """### SLOT INFO ###
 turn: %d, year: %d

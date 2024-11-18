@@ -138,7 +138,7 @@ iArabPersiaConquestYear = 650
 tArabsPersiaTL = (92, 43)
 tArabsPersiaBR = (95, 50)
 
-tConquestArabiaPersia = (24, iArabia, iPersia, tArabsPersiaTL, tArabsPersiaBR, 2, iArabPersiaConquestYear, 10)
+tConquestArabiaPersia = (24, iArabia, iPersia, tArabsPersiaTL, tArabsPersiaBR, 3, iArabPersiaConquestYear, 10)
 
 iArabSindConquestYear = 710
 tArabsSindTL = (98, 42)
@@ -209,6 +209,11 @@ tMongolsKievBR = (82, 64)
 
 tConquestMongolsKiev = (40, iMongols, iRus, tMongolsKievTL, tMongolsKievBR, 1, iMongolsKievYear, 5)
 
+iTimuridsPunjabYear = 1400
+tTimuridsPunjabTL = (99, 46)
+tTimuridsPunjabBR = (104, 51)
+tConquestTimuridsPunjab = (41, iTimurids, iGhorids, tTimuridsPunjabTL, tTimuridsPunjabBR, 3, iTimuridsPunjabYear, 5)
+
 lConquests = [
 	tConquestRomeCarthageInSpain,
 	tConquestRomeCarthage, 
@@ -249,6 +254,7 @@ lConquests = [
 	tConquestFatamidEgypt,
 	tConquestMongolsBaghdad,
 	tConquestMongolsKiev,
+	tConquestTimuridsPunjab,
 ]
 
 dConquestChecker = {
@@ -378,7 +384,7 @@ def checkConquest(tConquest, tPrereqConquest = (), bInvertPrereqConquestConditio
 	if player(iPlayer).isHuman():
 		return
 		
-	if not player(iPlayer).isExisting() and iCiv != iTurks: 
+	if not player(iPlayer).isExisting(): 
 		return
 	
 	if team(iPlayer).isAVassal():
@@ -534,13 +540,13 @@ def spawnConquerors(iPlayer, iPreferredTarget, tTL, tBR, iNumTargets, iWarPlan =
 		else:
 			dConquestUnits = {
 				iCityAttack: 2 + iExtra,
-				iCitySiege: 2 + 2 * iExtra,
+				iCitySiege: 2 + iExtra,
 				iDefend: 1,
 			}
 			lUnits = createRoleUnits(iPlayer, tPlot, dConquestUnits.items())
 			lUnits.promotion(infos.type("PROMOTION_CITY_RAIDER1"))
 	
-			if iCiv in [iTurks, iMongols]:
+			if iCiv in [iTurks, iMongols, iTimurids]:
 				createRoleUnit(iPlayer, tPlot, iShockCity, 2)
 				createRoleUnit(iPlayer, tPlot, iHarass, 2)
 

@@ -5152,6 +5152,7 @@ int CvCity::determineArtStyleType() const
 			}
 			return GC.getCivilizationInfo(BABYLONIA).getArtStyleType();
 		case REGION_ARABIA:
+		case REGION_YEMEN_OMAN:
 			return GC.getCivilizationInfo(ARABIA).getArtStyleType();
 		case REGION_EGYPT:
 			if (isHasReligion(ISLAM) || isHasReligion(SHIA))

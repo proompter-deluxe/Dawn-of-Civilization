@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--  -->
+<Civ4GameText xmlns="http://www.firaxis.com">
+	<TEXT>
+		<Tag>TXT_KEY_CIV_GHORIDS_DESC</Tag>
+		<English>The Ghorids</English>
+		<French>The Ghorids</French>
+		<German>The Ghorids</German>
+		<Italian>The Ghorids</Italian>
+		<Spanish>The Ghorids</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_GHORIDS_PEOPLES</Tag>
+		<English>Ghazni Peoples</English>
+		<French>
+			<Text>Peuplades ghaznis</Text>
+			<Gender>Female</Gender>
+			<Plural>1</Plural>
+		</French>
+		<German>Ghazni Peoples</German>
+		<Italian>Ghazni Peoples</Italian>
+		<Spanish>Ghazni Peoples</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_GHORIDS_ADJECTIVE</Tag>
+		<English>Ghorid</English>
+		<French>Ghorid</French>
+		<German>Ghorid</German>
+		<Italian>Ghorid</Italian>
+		<Spanish>Ghorid</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_GHAZNAVIDS_ADJECTIVE</Tag>
+		<English>Ghaznavid</English>
+		<French>Ghaznavid</French>
+		<German>Ghaznavid</German>
+		<Italian>Ghaznavid</Italian>
+		<Spanish>Ghaznavid</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_GHORIDS_SHORT_DESC</Tag>
+		<English>Ghorids</English>
+		<French>Ghorids</French>
+		<German>Ghorids</German>
+		<Italian>Ghorids</Italian>
+		<Spanish>Ghorids</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_GHORIDS_DEFAULT</Tag>
+		<English>Kingdom of %s1</English>
+		<French>
+			<Text>Royaume d'%s1</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>K&#246;nigreich %s1:K&#246;nigreich %s1:K&#246;nigreich %s1</Text>
+			<Gender>Neuter:Neuter:Neuter</Gender>
+			<Plural>0:0:0</Plural>
+		</German>
+		<Italian>
+			<Text>Regno del %s1</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Reino de %s1</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_GHORID_INDIA</Tag>
+		<English>Deccan Sultanates</English>
+		<French>
+			<Text>Sultatnats du Deccan</Text>
+			<Gender>Male</Gender>
+			<Plural>1</Plural>
+		</French>
+		<German>Deccan Sultanates</German>
+		<Italian>Deccan Sultanates</Italian>
+		<Spanish>Deccan Sultanates</Spanish>
+	</TEXT>
+</Civ4GameText>

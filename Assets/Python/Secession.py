@@ -99,8 +99,13 @@ def canBeRazed(city):
 
 def getCityClaim(city):
 	iOwner = city.getOwner()
-	possibleClaims = players.major().existing().without(iOwner).past_birth().before_fall()
-	
+	# exclude fallen civs that are NOT resurrected versions
+	possibleClaims = players.major().existing().without(iOwner).past_birth().where(lambda p: year() < year(dFall[civ(p)]) or data.civs[civ(p)].iResurrections > 0)
+
+	# exclude Iran from getting any Timurid cities other than from its spawn-flip, during the partial collapse to Mughal Indian phase
+	if civ(iOwner) == iTimurids and year() < year(1650):
+		possibleClaims = possibleClaims.where(lambda p: civ(p) != iIran)
+
 	# claim based on core territory
 	coreClaims = possibleClaims.where(lambda p: city.isPlayerCore(p))
 	if coreClaims:
@@ -129,8 +134,8 @@ def getCityClaim(city):
 		iWarClaim = warClaims.maximum(lambda p: team(p).AI_getWarSuccess(team(iOwner).getID()) - team(iOwner).AI_getWarSuccess(team(p).getID()))
 		return civ(iWarClaim)
 	
-	# claim for dead civilisation that can be resurrected
-	resurrections = civs.major().before_fall().without(iOwner).where(canRespawn).where(lambda c: city in cities.respawn(c))
+	# claim for dead civilisation that can be resurrected --> ignore whether the civ is "fallen" or not, due to respawn/reskins
+	resurrections = civs.major().without(iOwner).where(canRespawn).where(lambda c: city in cities.respawn(c))
 	if resurrections:
 		return resurrections.maximum(lambda c: (city.isCore(c), plot(city).getSettlerValue(c)))
 	
@@ -180,7 +185,7 @@ def getPossibleMinors(iPlayer):
 	if gc.getGame().countKnownTechNumTeams(iNationalism) == 0 and civ(iPlayer) in [iMaya, iToltecs, iAztecs, iInca, iMali, iEthiopia, iCongo, iIroquois]:
 		lPossibleMinors = [iNative]
 		
-	if gc.getGame().getCurrentEra() <= iMedieval:
+	elif gc.getGame().getCurrentEra() <= iMedieval:
 		lPossibleMinors = [iBarbarian, iIndependent, iIndependent2]
 		
 	return players.civs(*lPossibleMinors)

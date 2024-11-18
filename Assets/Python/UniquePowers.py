@@ -33,6 +33,17 @@ def arabianUP(iOwner, iPlayer, city):
 		if not city.hasBuilding(temple(iStateReligion)):
 			city.setHasRealBuilding(temple(iStateReligion), True)
 
+@handler("cityAcquired")
+def ghoridUP(iOwner, iPlayer, city):
+	if civ(iPlayer) != iGhorids:
+		return
+
+	iStateReligion = player(iGhorids).getStateReligion()
+	for iReligion in range(iNumReligions):
+			# Don't remove religion for the Holy City
+			if iReligion != iStateReligion and city.isHasReligion(iReligion) and city.getID() != game.getHolyCity(iReligion).getID():		
+					removeReligion(city, iReligion)
+					player(iPlayer).changeGold(50)
 
 @handler("cityAcquired")
 def mongolUP(iOwner, iPlayer, city, bConquest):
@@ -74,7 +85,7 @@ def GreekUP(city, unit):
 # Mughal UP: receives 50% of building cost as culture when building is completed
 @handler("buildingBuilt")
 def mughalUP(city, iBuilding):
-	if civ(city) == iMughals:
+	if civ(city) == iTimurids:
 		iCost = player(city).getBuildingProductionNeeded(iBuilding)
 		city.changeCulture(city.getOwner(), iCost / 2, True)
 

@@ -16,6 +16,8 @@ dRelocatedCapitals = CivDict({
 	iMacedon: tBabylon,
 	iParthia: tBabylon,
 	iMamluks : tCairo,
+	iGhorids: tDelhi,
+	iTimurids: tDelhi,
 })
 
 dCapitalInfrastructure = CivDict({
@@ -285,7 +287,7 @@ def conquistadors(iTeamX, iHasMetTeamY):
 							if not player(iNewWorldPlayer).isHuman():
 								iModifier2 = 1
 								
-						if year() < year(dBirth[active()]):
+						if year() < year(dBirth[civ(active())]):
 							iModifier1 += 1
 							iModifier2 += 1
 							
@@ -572,7 +574,7 @@ def relocateCapitals(iPlayer, city):
 
 def buildCapitalInfrastructure(iPlayer, city):
 	if iPlayer in dCapitalInfrastructure:
-		if at(city, plots.capital(iPlayer)) and year() <= year(dBirth[iPlayer]) + turns(5):
+		if at(city, plots.capital(iPlayer)) and year() <= year(dBirth[civ(iPlayer)]) + turns(5):
 			iPopulation, lBuildings, lReligiousBuildings = dCapitalInfrastructure[iPlayer]
 			
 			if city.getPopulation() < iPopulation:

@@ -152,7 +152,7 @@ def onGameStart():
 	#Rhye - dawn of map must appear in late starts too
 	#if (gc.getGame().getGameTurnYear() == gc.getDefineINT("START_YEAR") and not gc.getGame().isOption(GameOptionTypes.GAMEOPTION_ADVANCED_START)):
 	if (gc.getGame().getStartEra() == gc.getDefineINT("STANDARD_ERA") or gc.getGame().isOption(GameOptionTypes.GAMEOPTION_ADVANCED_START)):
-		if year(dBirth[active()]) <= scenarioStartTurn():
+		if year(dBirth[civ(active())]) <= scenarioStartTurn():
 			popupInfo = CyPopupInfo()
 			popupInfo.setButtonPopupType(ButtonPopupTypes.BUTTONPOPUP_PYTHON_SCREEN)
 			popupInfo.setText(u"showDawnOfMan")

@@ -394,18 +394,6 @@
 		</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CIV_ARABIAN_MUGHALS</Tag>
-		<English>Emirate of Delhi</English>
-		<French>
-			<Text>&#201;mirat de Delhi</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<German>Emirate of Delhi</German>
-		<Italian>Emirate of Delhi</Italian>
-		<Spanish>Emirate of Delhi</Spanish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_CIV_ARABIA_ADJECTIVE</Tag>
 		<English>Arabian</English>
 		<French>

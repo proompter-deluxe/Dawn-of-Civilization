@@ -292,7 +292,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_MINIMAL_SPECIALISTS</Tag>
 		<English>[ICON_BULLET]At least %D1 slots for[SPACE]</English>
-		<French>[ICON_BULLET]Capacité minimale de %D1[SPACE]</French>
+		<French>[ICON_BULLET]Capacit&#233; minimale de %D1[SPACE]</French>
 		<German>[ICON_BULLET]Erlaubt mindestens %D1[SPACE]</German>
 		<Italian>[ICON_BULLET]At least %D1 for[SPACE]</Italian>
 		<Spanish>[ICON_BULLET]At least %D1 for[SPACE]</Spanish>
@@ -300,7 +300,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_AT_LEAST_ONE_SPECIALIST</Tag>
 		<English>[ICON_BULLET]At least one slot for[SPACE]</English>
-		<French>[ICON_BULLET]Capacité minimale d'un[SPACE]</French>
+		<French>[ICON_BULLET]Capacit&#233; minimale d'un[SPACE]</French>
 		<German>[ICON_BULLET]Erlaubt mindestens einen[SPACE]</German>
 		<Italian>[ICON_BULLET]At least one slot for[SPACE]</Italian>
 		<Spanish>[ICON_BULLET]At least one slot for[SPACE]</Spanish>

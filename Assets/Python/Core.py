@@ -173,7 +173,7 @@ def itemize(iterable, format_func = lambda x: x, item_char = bullet):
 
 
 def autoplay():
-	return year() < year(dBirth[active()])
+	return year() < year(dBirth[civ(active())])
 
 
 def spread(iterable, size, offset=0):
@@ -1801,13 +1801,13 @@ class Players(EntityCollection):
 		return self.where(lambda p: not team(p).isAVassal())
 	
 	def past_birth(self):
-		return self.where(lambda p: year() >= year(dBirth[p]))
+		return self.where(lambda p: year() >= year(dBirth[civ(p)]))
 		
 	def before_birth(self):
-		return self.where(lambda p: year() < year(dBirth[p]))
+		return self.where(lambda p: year() < year(dBirth[civ(p)]))
 	
 	def before_fall(self):
-		return self.where(lambda p: year() < year(dFall[p]))
+		return self.where(lambda p: year() < year(dFall[civ(p)]))
 
 	def civs(self, *civs):
 		return self.where(lambda p: civ(p) in civs)

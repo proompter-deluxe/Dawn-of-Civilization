@@ -265,22 +265,12 @@ def doResurrection(iCiv, lCityList, bAskFlip=True, bDisplay=False):
 	
 	# give the new civ a starting army
 	capital = pPlayer.getCapitalCity()
-	
-	# certain civs should be more powerful on respawn
-	bonusUnits = 0
-	if iCiv == iTurks and pPlayer.getCurrentEra() < iIndustrial and not player(iIran).isExisting(): # Timurid
-		bonusUnits = 3
-
-		# turks should also declare war on a bunch of civs on rebirth
-		for targetCiv in [iPersia, iArmenia, iParthia, iOttomans, iAssyria, iArabia, iKushans]:
-			if player(targetCiv).isExisting():
-				team(iCiv).declareWar(player(targetCiv).getTeam(), False, -1)
 
 	dStartingUnits = {
-		iAttack: 2 * iArmySize + iNumCities + bonusUnits,
-		iShock: iArmySize + bonusUnits,
-		iCounter: iArmySize + bonusUnits,
-		iSiege: iArmySize + iNumCities + bonusUnits,
+		iAttack: 2 * iArmySize + iNumCities,
+		iShock: iArmySize,
+		iCounter: iArmySize,
+		iSiege: iArmySize + iNumCities,
 	}
 	createRoleUnits(iPlayer, capital, dStartingUnits.items())
 

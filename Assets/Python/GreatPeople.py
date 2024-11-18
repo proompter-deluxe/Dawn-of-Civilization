@@ -64,6 +64,7 @@ def getAlias(iCiv, iType, iEra):
 	elif iCiv == iIran or iCiv == iParthia: return iPersia
 	elif iCiv == iMinoans or iCiv == iMacedon: return iGreece
 	elif iCiv == iChinaS: return iChina
+	elif iCiv == iGhorids: return iTimurids
 	
 	return iCiv
 	
@@ -3878,7 +3879,7 @@ iAztecs : {
 		"Qualpopoca", # 15th
 	],
 },
-iMughals : {
+iTimurids : {
 	iGreatProphet : [
 		"Guru Ram Das", # 16th
 		"Guru Arjan", # 16th

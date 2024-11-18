@@ -130,6 +130,24 @@ class AreaNoStateReligion(Requirement):
 		return self.area.cities().none(lambda city: player(city).getStateReligion() == self.iReligion)
 
 
+class AreaNoReligion(Requirement):
+
+	TYPES = (AREA, RELIGION_ADJECTIVE)
+	
+	GOAL_DESC_KEY = "TXT_KEY_VICTORY_DESC_ALLOW"
+	DESC_KEY = "TXT_KEY_VICTORY_DESC_AREA_NO_RELIGION"
+	PROGR_KEY = "TXT_KEY_VICTORY_PROGR_AREA_NO_RELIGION"
+	
+	def __init__(self, area, iReligion, **options):
+		Requirement.__init__(self, area, iReligion, **options)
+		
+		self.area = area
+		self.iReligion = iReligion
+	
+	def fulfilled(self, evaluator):
+		return self.area.cities().none(lambda city: city.isHasReligion(self.iReligion))
+
+
 # Third Russian UHV goal
 class Communist(Requirement):
 

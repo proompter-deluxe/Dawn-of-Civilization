@@ -604,7 +604,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_VICTORY_TITLE_HRE1</Tag>
 		<English>Translatio Imperii and Reformation</English>
-		<French>Translatio imperii et Réforme </French>
+		<French>Translatio imperii et R&#233;forme </French>
 		<German>Translatio Imperii and Reformation</German>
 		<Italian>Translatio Imperii and Reformation</Italian>
 		<Spanish>Translatio Imperii and Reformation</Spanish>
@@ -978,11 +978,11 @@
 	
 	<TEXT>
 		<Tag>TXT_KEY_VICTORY_TITLE_MUG1</Tag>
-		<English>Muhammad ibn Tughluq</English>
-		<French>Mouhammed ibn Tughl&#251;q </French>
-		<German>Muhammad ibn Tughluq</German>
-		<Italian>Muhammad ibn Tughluq</Italian>
-		<Spanish>Muhammad ibn Tughluq</Spanish>
+		<English>Tamerlane</English>
+		<French>Tamerlane </French>
+		<German>Tamerlane</German>
+		<Italian>Tamerlane</Italian>
+		<Spanish>Tamerlane</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_VICTORY_TITLE_MUG2</Tag>
@@ -1601,5 +1601,30 @@
 		<German>The Odyssey</German>
 		<Italian>The Odyssey</Italian>
 		<Spanish>The Odyssey</Spanish>
+	</TEXT>
+	
+	<TEXT>
+		<Tag>TXT_KEY_VICTORY_TITLE_GHO1</Tag>
+		<English>Piety</English>
+		<French>Piety</French>
+		<German>Piety</German>
+		<Italian>Piety</Italian>
+		<Spanish>Piety</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_VICTORY_TITLE_GHO2</Tag>
+		<English>The End of Idolatry</English>
+		<French>The End of Idolatry</French>
+		<German>The End of Idolatry</German>
+		<Italian>The End of Idolatry</Italian>
+		<Spanish>The End of Idolatry</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_VICTORY_TITLE_GHO3</Tag>
+		<English>Finders Keepers</English>
+		<French>Finders Keepers</French>
+		<German>Finders Keepers</German>
+		<Italian>Finders Keepers</Italian>
+		<Spanish>Finders Keepers</Spanish>
 	</TEXT>
 </Civ4GameText>

@@ -37,7 +37,7 @@
 		<Tag>TXT_KEY_TERRAIN_ARCTIC_COAST</Tag>
 		<English>Arctic Coast</English>
 		<French>Arctic Coast</French>
-		<German>Arktische Küste</German>
+		<German>Arktische K&#252;ste</German>
 		<Italian>Arctic Coast</Italian>
 		<Spanish>Arctic Coast</Spanish>
 	</TEXT>
@@ -45,7 +45,7 @@
 		<Tag>TXT_KEY_TERRAIN_SEMIDESERT</Tag>
 		<English>Semidesert</English>
 		<French>Semidesert</French>
-		<German>Halbwüste</German>
+		<German>Halbw&#252;ste</German>
 		<Italian>Semidesert</Italian>
 		<Spanish>Semidesert</Spanish>
 	</TEXT>
@@ -76,7 +76,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_TERRAIN_SALTLAKE</Tag>
 		<English>Salt Lake</English>
-		<French>Lac salé</French>
+		<French>Lac sal&#233;</French>
 		<German>Salzsee</German>
 		<Italian>Lago salato</Italian>
 		<Spanish>Lago salado</Spanish>

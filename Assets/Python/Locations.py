@@ -83,3 +83,5 @@ tTyre = (85, 47) # Tyre moved to the same tile as Damascus
 tAthens = (76, 51)
 tTrebizond = (86, 54)
 tMycenae = (75, 50)
+tDelhi = (105, 46)
+tVaranasi = (108, 44)

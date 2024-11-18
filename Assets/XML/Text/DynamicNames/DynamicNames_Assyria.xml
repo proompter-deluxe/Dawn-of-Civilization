@@ -58,11 +58,11 @@
 		<Spanish>Antiochene</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CIV_ASSYRIA_PRINCIPALITY_OF_ANTIOCH</Tag>
-		<English>Principality of Antioch</English>
-		<French>Principality of Antioch</French>
-		<German>Principality of Antioch</German>
-		<Italian>Principality of Antioch</Italian>
-		<Spanish>Principality of Antioch</Spanish>
+		<Tag>TXT_KEY_CIV_ASSYRIA_PRINCIPALITY_OF</Tag>
+		<English>Principality of %s1</English>
+		<French>Principality of %s1</French>
+		<German>Principality of %s1</German>
+		<Italian>Principality of %s1</Italian>
+		<Spanish>Principality of %s1</Spanish>
 	</TEXT>
 </Civ4GameText>

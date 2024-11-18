@@ -24,6 +24,7 @@ dPeriods1700AD = {
 	iHolyRome : iPeriodAustria,
 	iInca : iPeriodPeru,
 	iOttomans : iPeriodOttomanConstantinople,
+	iTimurids: iPeriodMughals,
 }
 
 dScenarioPeriods = {
@@ -57,6 +58,7 @@ dPeriodNames = {
 	iPeriodOttomanConstantinople:	"Ottoman_Constantinople",
 	iPeriodModernGermany:			"Modern_Germany",
 	iPeriodTunisia:					"Tunisia",
+	iPeriodMughals:					"Mughals",
 }
 
 
@@ -94,6 +96,9 @@ def onBirth(iPlayer):
 		setPeriod(iCelts, iPeriodInsularCelts)
 	elif iCiv == iGermany:
 		setPeriod(iHolyRome, iPeriodAustria)
+	elif iCiv == iIran:
+		setPeriod(iTimurids, iPeriodMughals)
+		setPeriod(iTurks, iPeriodUzbeks)
 
 @handler("collapse")
 def onCollapse(iPlayer):
@@ -147,11 +152,11 @@ def onCityAcquired(iOwner, iPlayer, city, bConquest):
 		else:
 			setPeriod(iTurks, -1)
 			
-	if iOwnerCiv == iByzantium:
-		if bConquest and player(iByzantium).getNumCities() <= 4:
+	if iOwnerCiv == iByzantium or city.getPreviousCiv() == iByzantium:
+		if bConquest and player(iByzantium).getNumCities() <= 3 and year() >= year(dBirth[iOttomans]):
 			setPeriod(iByzantium, iPeriodByzantineConstantinople)
 	
-	if iOwnerCiv == iCelts:
+	if iOwnerCiv == iCelts or city.getPreviousCiv() == iCelts:
 		if player(iCelts).getNumCities() > 0 and cities.core(iCelts).owner(iCelts).count() == 0:
 			setPeriod(iCelts, iPeriodInsularCelts)
 
@@ -240,7 +245,7 @@ def onTechAcquired(iTech, iTeam, iPlayer):
 		if iEra == iIndustrial:
 			setPeriod(iItaly, iPeriodModernItaly)
 	
-	if iPlayer == iGermany:
+	if iCiv == iGermany:
 		if iEra == iDigital:
 			setPeriod(iGermany, iPeriodModernGermany)
 			

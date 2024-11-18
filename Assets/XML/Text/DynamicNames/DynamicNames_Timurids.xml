@@ -14,6 +14,18 @@
 		<Spanish>The Mughals</Spanish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_CIV_TIMURIDS_DESC</Tag>
+		<English>The Timurids</English>
+		<French>
+			<Text>Les Timourides</Text>
+			<Gender>Male</Gender>
+			<Plural>1</Plural>
+		</French>
+		<German>The Timurids</German>
+		<Italian>The Timurids</Italian>
+		<Spanish>The Timurids</Spanish>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_CIV_PAKISTAN_ADJECTIVE</Tag>
 		<English>Pakistani</English>
 		<French>
@@ -38,16 +50,40 @@
 		<Spanish>Pakistan</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CIV_MUGHALS_PEOPLES</Tag>
-		<English>Ghorid Peoples</English>
+		<Tag>TXT_KEY_CIV_TIMURIDS_PEOPLES</Tag>
+		<English>Chagatai Peoples</English>
 		<French>
-			<Text>Peuplades ghorides</Text>
+			<Text>Peuplades chagatais</Text>
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
-		<German>Ghorid Peoples</German>
-		<Italian>Ghorid Peoples</Italian>
-		<Spanish>Ghorid Peoples</Spanish>
+		<German>Chagatai Peoples</German>
+		<Italian>Chagatai Peoples</Italian>
+		<Spanish>Chagatai Peoples</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_TIMURIDS_DEFAULT</Tag>
+		<English>%s2 Empire</English>
+		<French>
+			<Text>Empire %s2</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>%s2 Reich:%s2 Reich:%s2 Reich</Text>
+			<Gender>Neuter:Neuter:Neuter</Gender>
+			<Plural>0:0:0</Plural>
+		</German>
+		<Italian>
+			<Text>Impero %s2</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Imperio %s2</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIV_MUGHALS_DEFAULT</Tag>
@@ -122,18 +158,6 @@
 		<Spanish>%s2 Military Government</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CIV_MUGHALS_DELHI</Tag>
-		<English>Delhi</English>
-		<French>
-			<Text>Delhi</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<German>Delhi</German>
-		<Italian>Delhi</Italian>
-		<Spanish>Delhi</Spanish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_CIV_MUGHAL_VASSAL</Tag>
 		<English>Subah of %s1</English>
 		<French>
@@ -170,12 +194,16 @@
 		<Spanish>Mughal</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CIV_MUGHALS_GHORID</Tag>
-		<English>Ghorid</English>
-		<French>Ghorid</French>
-		<German>Ghorid</German>
-		<Italian>Ghorid</Italian>
-		<Spanish>Ghorid</Spanish>
+		<Tag>TXT_KEY_CIV_TIMURIDS_ADJECTIVE</Tag>
+		<English>Timurid</English>
+		<French>
+			<Text>timouride:timouride:timourides:timourides</Text>
+			<Gender>Male:Female:Male:Female</Gender>
+			<Plural>0:0:1:1</Plural>
+		</French>
+		<German>Timurid</German>
+		<Italian>Timurid</Italian>
+		<Spanish>Timurid</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIV_MUGHALS_SHORT_DESC</Tag>
@@ -188,5 +216,18 @@
 		<German>Moguln</German>
 		<Italian>Mughals</Italian>
 		<Spanish>Mughals</Spanish>
+	</TEXT>
+
+	<TEXT>
+		<Tag>TXT_KEY_CIV_TIMURIDS_SHORT_DESC</Tag>
+		<English>Timurids</English>
+		<French>
+			<Text>timourides</Text>
+			<Gender>Male</Gender>
+			<Plural>1</Plural>
+		</French>
+		<German>Timurids</German>
+		<Italian>Timurids</Italian>
+		<Spanish>Timurids</Spanish>
 	</TEXT>
 </Civ4GameText>

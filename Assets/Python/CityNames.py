@@ -8,7 +8,7 @@ from DynamicCivs import getColumn
 
 ### CONSTANTS ###
 
-iNumLanguages = 48
+iNumLanguages = 49
 (iLangAmerican, iLangArabic, iLangBabylonian, iLangBurmese, iLangByzantine, 
 iLangCeltic, iLangChinese, iLangCongolese, iLangDutch, iLangEgyptian, 
 iLangEgyptianArabic, iLangEnglish, iLangEthiopian, iLangFrench, iLangGerman, 
@@ -17,29 +17,30 @@ iLangJapanese, iLangKhmer, iLangKorean, iLangLatin, iLangMande,
 iLangMayan, iLangMongolian, iLangNahuatl, iLangNorse, iLangNubian, 
 iLangPersian, iLangPhoenician, iLangPolish, iLangPolynesian, iLangPortuguese, 
 iLangQuechua, iLangRussian, iLangSpanish, iLangSwedish, iLangThai, 
-iLangTibetan, iLangTurkish, iLangVietnamese, iLangFarsi, iLangRuthenian, iLangArmenian, iLangDanish, iLangParthian) = range(iNumLanguages)
+iLangTibetan, iLangTurkish, iLangVietnamese, iLangFarsi, iLangRuthenian, 
+iLangArmenian, iLangDanish, iLangParthian, iLangVedic) = range(iNumLanguages)
 
 dLanguages = CivDict({
 	iEgypt:	[iLangEgyptian],
 	iBabylonia: [iLangBabylonian],
-	iHarappa: [iLangIndian],
+	iHarappa: [iLangVedic],
 	iAssyria: [iLangBabylonian],
 	iChina: [iLangChinese],
 	iChinaS : [iLangChinese],
 	iHittites: [iLangHittite, iLangBabylonian],
 	iNubia: [iLangNubian, iLangEgyptian],
 	iGreece: [iLangGreek],
-	iIndia: [iLangIndian],
+	iIndia: [iLangVedic],
 	iPhoenicia: [iLangPhoenician, iLangGreek],
 	iPolynesia: [iLangPolynesian],
 	iPersia: [iLangPersian],
 	iRome: [iLangLatin, iLangGreek],
 	iCelts: [iLangCeltic],
 	iMaya: [iLangMayan, iLangNahuatl],
-	iDravidia: [iLangIndian],
+	iDravidia: [iLangIndian, iLangVedic],
 	iEthiopia: [iLangEthiopian],
 	iToltecs: [iLangNahuatl],
-	iKushans: [iLangIndian, iLangGreek, iLangTurkish],
+	iKushans: [iLangVedic, iLangGreek, iLangTurkish, iLangIndian],
 	iKorea: [iLangKorean, iLangChinese],
 	iByzantium: [iLangByzantine, iLangLatin, iLangGreek],
 	iMalays: [iLangIndonesian, iLangKhmer],
@@ -66,15 +67,15 @@ dLanguages = CivDict({
 	iItaly: [iLangItalian],
 	iMongols: [iLangMongolian, iLangTurkish, iLangChinese, iLangPersian],
 	iAztecs: [iLangNahuatl],
-	iMughals: [iLangFarsi, iLangArabic, iLangIndian],
+	iTimurids: [iLangFarsi, iLangTurkish, iLangArabic, iLangIndian],
 	iThailand: [iLangThai, iLangKhmer, iLangIndonesian],
-	iSweden: [iLangSwedish, iLangNorse],
-	iRussia: [iLangRussian],
-	iOttomans: [iLangTurkish, iLangArabic],
+	iSweden: [iLangSwedish, iLangDanish, iLangNorse],
+	iRussia: [iLangRussian, iLangByzantine],
+	iOttomans: [iLangTurkish, iLangArabic, iLangFarsi, iLangByzantine],
 	iCongo: [iLangCongolese],
-	iIran: [iLangFarsi, iLangPersian, iLangArabic],
-	iNetherlands: [iLangDutch],
-	iGermany: [iLangGerman],
+	iIran: [iLangFarsi, iLangPersian, iLangArabic, iLangTurkish],
+	iNetherlands: [iLangDutch, iLangGerman],
+	iGermany: [iLangGerman, iLangDutch],
 	iAmerica: [iLangAmerican, iLangEnglish],
 	iArgentina: [iLangSpanish],
 	iMexico: [iLangSpanish],
@@ -82,12 +83,13 @@ dLanguages = CivDict({
 	iBrazil: [iLangPortuguese, iLangSpanish],
 	iCanada: [iLangAmerican, iLangEnglish, iLangFrench],
 	iBulgaria: [iLangRuthenian, iLangByzantine, iLangRussian], # Bulgarian/Balkans language later
-	iMamluks: [iLangEgyptianArabic, iLangArabic],
-	iMacedon: [iLangGreek],
-	iIroquois: [iLangNahuatl],
+	iMamluks: [iLangEgyptianArabic, iLangArabic, iLangTurkish],
+	iMacedon: [iLangGreek, iLangByzantine],
+	iIroquois: [iLangNahuatl, iLangAmerican, iLangEnglish, iLangFrench],
 	iArmenia: [iLangArmenian, iLangByzantine, iLangRussian],
 	iParthia: [iLangParthian, iLangGreek, iLangPersian],
 	iMinoans: [iLangGreek],
+	iGhorids: [iLangFarsi, iLangTurkish, iLangArabic, iLangIndian],
 
 }, [])
 
@@ -147,6 +149,7 @@ dLanguageNames = {
 	iLangArmenian: "Armenian",
 	iLangDanish: "Danish",
 	iLangParthian: "Parthian",
+	iLangVedic: "Vedic",
 }
 
 dTranslations = dict((iLanguage, FileDict("Translations/%s.csv" % dLanguageNames[iLanguage])) for iLanguage in range(iNumLanguages))
@@ -278,6 +281,8 @@ def getSpecialLanguages(identifier):
 		return [iLangFarsi, iLangPersian, iLangByzantine]
 	elif iCiv == iAssyria and data.civs[iCiv].iResurrections > 0 and game.isReligionFounded(iIslam):
 		return [iLangArabic, iLangByzantine]
+	elif iCiv == iIndia and (data.civs[iCiv].iResurrections > 0 or year() > year(dBirth[iArabia])):
+		return [iLangIndian, iLangFarsi, iLangTurkish, iLangVedic]
 	
 	return None
 

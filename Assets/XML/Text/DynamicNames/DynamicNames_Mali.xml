@@ -47,11 +47,11 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIV_SONGHAI_DEFAULT</Tag>
-		<English>%s2 Empire</English>
-		<French>Empire %s2</French>
-		<German>%s2 Empire</German>
-		<Italian>%s2 Empire</Italian>
-		<Spanish>%s2 Empire</Spanish>
+		<English>%s2 Kingdom</English>
+		<French>%s2 Kingdom</French>
+		<German>%s2 Kingdom</German>
+		<Italian>%s2 Kingdom</Italian>
+		<Spanish>%s2 Kingdom</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIV_MALI_PEOPLES</Tag>
@@ -67,27 +67,11 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIV_MALI_DEFAULT</Tag>
-		<English>%s1 Empire</English>
-		<French>
-			<Text>Empire du %s1</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<German>
-			<Text>%s1 Reich:%s1 Reich:%s1 Reich</Text>
-			<Gender>Neuter:Neuter:Neuter</Gender>
-			<Plural>0:0:0</Plural>
-		</German>
-		<Italian>
-			<Text>Impero %s1</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Imperio %s1</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
+		<English>%s1 Kingdom</English>
+		<French>%s1 Kingdom</French>
+		<German>%s1 Kingdom</German>
+		<Italian>%s1 Kingdom</Italian>
+		<Spanish>%s1 Kingdom</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIV_MALI_FASCIST</Tag>

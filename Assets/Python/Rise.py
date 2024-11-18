@@ -34,10 +34,11 @@ lExpansionCivs = [
 	iSpain,
 	iMamluks,
 	iMongols,
-	iMughals,
+	iTimurids,
 	iOttomans,
 	iParthia,
 	iAztecs,
+	iGhorids,
 ]
 
 lIndependenceCivs = [
@@ -51,6 +52,8 @@ lIndependenceCivs = [
 	iFrance,
 	iSpain,
 	iGreece,
+	iTimurids,
+	iGhorids,
 ]
 
 lDynamicReligionCivs = [
@@ -329,10 +332,11 @@ def restorePreservedWonders(city):
 
 @handler("playerDestroyed")
 def preserveCivilizationAttributes(iPlayer):
-	data.civs[iPlayer].iGreatGeneralsCreated = player(iPlayer).getGreatGeneralsCreated()
-	data.civs[iPlayer].iGreatPeopleCreated = player(iPlayer).getGreatPeopleCreated()
-	data.civs[iPlayer].iGreatSpiesCreated = player(iPlayer).getGreatSpiesCreated()
-	data.civs[iPlayer].iNumUnitGoldenAges = player(iPlayer).getNumUnitGoldenAges()
+	iCiv = civ(iPlayer)
+	data.civs[iCiv].iGreatGeneralsCreated = player(iPlayer).getGreatGeneralsCreated()
+	data.civs[iCiv].iGreatPeopleCreated = player(iPlayer).getGreatPeopleCreated()
+	data.civs[iCiv].iGreatSpiesCreated = player(iPlayer).getGreatSpiesCreated()
+	data.civs[iCiv].iNumUnitGoldenAges = player(iPlayer).getNumUnitGoldenAges()
 	
 
 @handler("BeginGameTurn")
@@ -708,7 +712,7 @@ class Birth(object):
 	
 		iUntilBirth = until(self.iTurn)
 		
-		if iUntilBirth == turns(4) or (scenarioStart() and self.iTurn - turns(4) < scenarioStartTurn()):
+		if iUntilBirth == turns(3) or (scenarioStart() and self.iTurn - turns(3) < scenarioStartTurn()):
 			if not self.canSpawn():
 				self.canceled = True
 				return
@@ -729,8 +733,8 @@ class Birth(object):
 		if iUntilBirth == 2:
 			self.askSwitch()
 		elif iUntilBirth == 1:
-			self.birth()
 			self.checkSwitch()
+			self.birth()
 		elif iUntilBirth == 0:
 			self.flip()
 			self.wars()
@@ -752,7 +756,7 @@ class Birth(object):
 		
 		if autoplay():
 			if infos.civ(self.iCiv).getImpact() <= iImpactLimited:
-				if year(dBirth[active()]) > year(dFall[self.iCiv]) + turns(20):
+				if year(dBirth[civ(active())]) > year(dFall[self.iCiv]) + turns(20):
 					return False
 		
 		# Nubia requires no cities
@@ -782,9 +786,9 @@ class Birth(object):
 			if player(iToltecs).isExisting() and stability(iToltecs) >= iRequiredStability:
 				return False
 		
-		# Ottomans require that the Turks managed to conquer at least one city in the Near East
+		# Ottomans require that the Turks or Mongols managed to conquer at least one city in the Anatolia / Armenia
 		if self.iCiv == iOttomans:
-			if cities.birth(iOttomans).none(CyCity.isHuman) and cities.regions(rAnatolia, rCaucasus).none(lambda city: iTurks in [city.getCivilizationType(), city.getPreviousCiv()]):
+			if cities.birth(iOttomans).none(CyCity.isHuman) and cities.regions(rAnatolia, rCaucasus).none(lambda city: iTurks in [city.getCivilizationType(), city.getPreviousCiv()] or iMongols in [city.getCivilizationType(), city.getPreviousCiv()]):
 				return False
 		
 		# Iran requires Persia and Parthia to be dead
@@ -851,7 +855,8 @@ class Birth(object):
 		events.fireEvent("prepareBirth", self.iCiv)
 	
 	def protect(self):
-		self.protectionEnd = self.iTurn + turns(10)
+		# 5 turns of protection after it spawns since this event fires 2 turns before true birth
+		self.protectionEnd = self.iTurn + turns(7)
 		self.player.setBirthProtected(True)
 	
 		for plot in self.area:
@@ -952,7 +957,7 @@ class Birth(object):
 		if game.getAIAutoPlay() > 0:
 			return False
 		
-		if civ() in dNeighbours[self.iPlayer] and since(year(dBirth[active()])) < turns(25):
+		if civ() in dNeighbours[self.iPlayer] and since(year(dBirth[civ(active())])) < turns(25):
 			return False
 	
 		return True
@@ -965,8 +970,6 @@ class Birth(object):
 	def checkSwitch(self):
 		if self.bSwitch:
 			self.switch()
-		else:
-			self.setupWithoutSwitch()
 		
 		self.bSwitch = False
 	
@@ -1013,13 +1016,6 @@ class Birth(object):
 		data.dUnitsKilled = dict((iUnit, iNumUnits) for iUnit, iNumUnits in dUnitsKilled.items() if iNumUnits > 0)
 		data.dUnitsLost = dict((iUnit, iNumUnits) for iUnit, iNumUnits in dUnitsLost.items() if iNumUnits > 0)
 		data.dBuildingsBuilt = dict((iBuilding, iNumBuildings) for iBuilding, iNumBuildings in dBuildingsBuilt.items() if iNumBuildings > 0)
-	
-	def setupWithoutSwitch(self):
-		if not self.isHuman():
-			self.assignAdditionalTechs()
-			createRoleUnits(self.iPlayer, self.location, getAIStartingUnits(self.iPlayer))
-		
-		createSpecificUnits(self.iPlayer, self.location)		
 	
 	def birth(self):
 		# initial save

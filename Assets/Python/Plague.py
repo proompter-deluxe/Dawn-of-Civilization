@@ -263,7 +263,7 @@ def killUnitsByPlague(city, pPlot, baseValue, iDamage, iPreserveDefenders):
 	teamOwner = team(city)
 	
 	#deadly plague when human player isn't born yet, will speed up the loading
-	if turn() < year(dBirth[active()]) + turns(20):
+	if turn() < year(dBirth[civ(active())]) + turns(20):
 		iDamage += 10
 		baseValue -= 5
 

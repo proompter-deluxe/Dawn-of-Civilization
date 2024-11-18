@@ -36,7 +36,7 @@ def restoreCapital(iOwner, iPlayer, city):
 	
 	capital = plots.capital(iPlayer)
 	
-	if data.civs[iPlayer].iResurrections > 0 or player(iPlayer).getPeriod() != -1:
+	if data.civs[civ(iPlayer)].iResurrections > 0 or player(iPlayer).getPeriod() != -1:
 		capital = plots.respawnCapital(iPlayer)
 		
 	if at(city, capital):
@@ -263,7 +263,7 @@ def updateLastTurnAlive(iPlayer, bAlive):
 		return
 
 	if not bAlive and not (player(iPlayer).isHuman() and autoplay()):
-		data.civs[iPlayer].iLastTurnAlive = game.getGameTurn()
+		data.civs[civ(iPlayer)].iLastTurnAlive = game.getGameTurn()
 
 
 ### IMPLEMENTATIONS ###

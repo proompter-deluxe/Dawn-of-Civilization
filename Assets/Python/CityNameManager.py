@@ -50,7 +50,7 @@ def updateMexicanCityNames(iPlayer):
 
 
 def isResurrected(iPlayer):
-	return data.civs[iPlayer].iResurrections > 0
+	return data.civs[civ(iPlayer)].iResurrections > 0
 
 def getLanguages(iCiv):
 	iPeriod = player(iCiv).getPeriod()

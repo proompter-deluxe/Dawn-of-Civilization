@@ -13847,11 +13847,17 @@
 			<iMinAreaSize>-1</iMinAreaSize>
 			<iMoves>2</iMoves>
 			<iNukeRange>-1</iNukeRange>
+			<FreePromotions>
+				<FreePromotion>
+					<PromotionType>PROMOTION_COVER</PromotionType>
+					<bFreePromotion>1</bFreePromotion>
+				</FreePromotion>
+				<FreePromotion>
+					<PromotionType>PROMOTION_MOBILITY</PromotionType>
+					<bFreePromotion>1</bFreePromotion>
+				</FreePromotion>
+			</FreePromotions>
 			<TerrainImpassables>
-				<TerrainImpassable>
-					<TerrainType>TERRAIN_DESERT</TerrainType>
-					<bTerrainImpassable>1</bTerrainImpassable>
-				</TerrainImpassable>
 				<TerrainImpassable>
 					<TerrainType>TERRAIN_TUNDRA</TerrainType>
 					<bTerrainImpassable>1</bTerrainImpassable>
@@ -13862,14 +13868,6 @@
 				</TerrainImpassable>
 			</TerrainImpassables>
 			<FeatureImpassables>
-				<FeatureImpassable>
-					<FeatureType>FEATURE_JUNGLE</FeatureType>
-					<bFeatureImpassable>1</bFeatureImpassable>
-				</FeatureImpassable>
-				<FeatureImpassable>
-					<FeatureType>FEATURE_RAINFOREST</FeatureType>
-					<bFeatureImpassable>1</bFeatureImpassable>
-				</FeatureImpassable>
 				<FeatureImpassable>
 					<FeatureType>FEATURE_MARSH</FeatureType>
 					<bFeatureImpassable>1</bFeatureImpassable>

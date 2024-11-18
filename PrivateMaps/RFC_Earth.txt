@@ -38319,7 +38319,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=85,y=36
-	BonusType=BONUS_FISH
 	FeatureType=FEATURE_ISLANDS, FeatureVariety=2
 	TerrainType=TERRAIN_COAST
 	PlotType=3
@@ -43371,12 +43370,12 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=96,y=47
-	BonusType=BONUS_RARE_EARTHS
 	TerrainType=TERRAIN_DESERT
 	PlotType=1
 EndPlot
 BeginPlot
 	x=96,y=48
+	BonusType=BONUS_RARE_EARTHS
 	TerrainType=TERRAIN_SEMIDESERT
 	PlotType=1
 EndPlot
@@ -43811,8 +43810,6 @@ BeginPlot
 	isNOfRiver
 	RiverWEDirection=3
 	isWOfRiver
-	BonusType=BONUS_OPIUM
-	FeatureType=FEATURE_FLOOD_PLAINS, FeatureVariety=0
 	TerrainType=TERRAIN_DESERT
 	PlotType=2
 EndPlot
@@ -44251,6 +44248,8 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=98,y=47
+	BonusType=BONUS_OPIUM
+	FeatureType=FEATURE_FLOOD_PLAINS, FeatureVariety=0
 	TerrainType=TERRAIN_DESERT
 	PlotType=2
 EndPlot
@@ -44260,6 +44259,7 @@ BeginPlot
 	isNOfRiver
 	RiverWEDirection=3
 	isWOfRiver
+	BonusType=BONUS_IRON
 	TerrainType=TERRAIN_SEMIDESERT
 	PlotType=1
 EndPlot

@@ -170,18 +170,6 @@
 		<Spanish>Khanate of %s1</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CIV_TURKS_TIMURID</Tag>
-		<English>Timurid</English>
-		<French>
-			<Text>timouride:timouride:timourides:timourides</Text>
-			<Gender>Male:Female:Male:Female</Gender>
-			<Plural>0:0:1:1</Plural>
-		</French>
-		<German>Timurid</German>
-		<Italian>Timurid</Italian>
-		<Spanish>Timurid</Spanish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_CIV_TURKS_SHAYBANID</Tag>
 		<English>Shaybanid</English>
 		<French>

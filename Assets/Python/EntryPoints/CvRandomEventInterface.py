@@ -2877,21 +2877,24 @@ def canApplySportsLeagueDone3(argsList):
 
 ######## Cross' Crusade Variant ########
 
-# If Catholic nation between the discovery of Feudalism and the founding of Protestantism
+# If Catholic nation between the discovery of Feudalism and the founding of Protestantism, discovery of Humanities or birth of Timurids, whichever comes first
 # Choice 1 randomly selects a Muslim or indy city in the Levant, Spain, Maghreb, Egypt, Balkans, Greece, Anatolia or Baltics and spawns conquerors
 # Choice 2 randomly selects an Orthodox city in those regions and spawns conquerors
 # Choice 3 declines, auto-selecting choice 1 for another Catholic civ
 
 # Will only trigger if there is a valid Muslim target. Without one, you can't divert it to an Orthodox city!
-# Baltic Crusades also depend on the existence of a Muslim state in the Mediterranean, but there almost always is one (Moors, Ayyubids/Mamluks, Abbasids, Turks, Ottomans)
+# Baltic Crusades also depend on the existence of a Muslim state in the Mediterranean, but there almost always is one (Moors, Fatimids/Ayyubids/Mamluks, Abbasids, Turks, Ottomans, Tunis)
 
 def canTriggerGenericCrusade(argsList):
-	kTriggeredData = argsList[0]
-	iPlayer = kTriggeredData.ePlayer
-	pPlayer = gc.getPlayer(iPlayer)
+	if year() >= year(dBirth[iTimurids]):
+		return
 
 	if gc.getGame().isReligionFounded(iProtestantism):
 		return
+
+	kTriggeredData = argsList[0]
+	iPlayer = kTriggeredData.ePlayer
+	pPlayer = gc.getPlayer(iPlayer)
 
 	if team(iPlayer).isAVassal():
 		return

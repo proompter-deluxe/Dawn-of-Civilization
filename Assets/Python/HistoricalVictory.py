@@ -8,7 +8,7 @@ lHappinessResources = [iResource for iResource in infos.bonuses() if infos.bonus
 lNorseTargets = [plots.core(iCiv) for iCiv in dCivGroups[iCivGroupEurope] if iCiv != iNorse and dBirth[iCiv] <= 1050]
 
 # first Portuguese goal
-lIndianTradeRegions = [rArabia, rSindh, rRajputana, rDeccan, rDravida, rHornOfAfrica, rSwahiliCoast, rCape, rKalahari, rCongo, rGuinea, rSahel, rSahara, rMaghreb]
+lIndianTradeRegions = [rYemenOman, rSindh, rRajputana, rDeccan, rDravida, rHornOfAfrica, rSwahiliCoast, rCape, rKalahari, rCongo, rGuinea, rSahel, rSahara, rMaghreb]
 
 # second Portuguese goal: acquire 12 colonial resources by 1650 AD
 lColonialResources = [iBanana, iSpices, iSugar, iCoffee, iTea, iTobacco, iCocoa]
@@ -17,7 +17,7 @@ lColonialResources = [iBanana, iSpices, iSugar, iCoffee, iTea, iTobacco, iCocoa]
 lAztecTargets = [plots.core(iCiv) for iCiv in dCivGroups[iCivGroupEurope]]
 
 # third Thai goal: allow no foreign powers in South Asia in 1900 AD
-lSouthAsianCivs = [iIndia, iDravidia, iVietnam, iMalays, iJava, iKhmer, iBurma, iMughals, iThailand]
+lSouthAsianCivs = [iIndia, iDravidia, iVietnam, iMalays, iJava, iKhmer, iBurma, iTimurids, iThailand, iGhorids]
 
 # first Russian goal: control three Orthodox Cathedrals and three Orthodox wonders by 1550 AD
 lOrthodoxWonders = [iBuilding for iBuilding in infos.buildings() if isWonder(iBuilding) and iOrthodoxy in [infos.building(iBuilding).getPrereqReligion(), infos.building(iBuilding).getOrPrereqReligion()]]
@@ -72,6 +72,7 @@ DECCAN = "TXT_KEY_VICTORY_NAME_DECCAN"
 EASTER_ISLAND = "TXT_KEY_VICTORY_NAME_EASTER_ISLAND"
 EASTERN_EUROPE = "TXT_KEY_VICTORY_NAME_EASTERN_EUROPE"
 EGYPT = "TXT_KEY_VICTORY_NAME_EGYPT"
+EGYPT_COASTAL = "TXT_KEY_VICTORY_NAME_EGYPT_COASTAL"
 ELAM = "TXT_KEY_VICTORY_NAME_ELAM"
 EUROPE = "TXT_KEY_VICTORY_NAME_EUROPE"
 GAUL = "TXT_KEY_VICTORY_NAME_GAUL"
@@ -154,6 +155,7 @@ EUROPEAN = "TXT_KEY_VICTORY_NAME_EUROPEAN"
 EUROPEAN_CIVILIZATION = "TXT_KEY_VICTORY_NAME_EUROPEAN_CIVILIZATION"
 LOCAL = "TXT_KEY_VICTORY_NAME_LOCAL"
 MIDDLE_EASTERN = "TXT_KEY_VICTORY_NAME_MIDDLE_EASTERN"
+OTHER_TURKISH_MONGOL_OR_PERSIAN = "TXT_KEY_VICTORY_NAME_OTHER_TURKISH_MONGOL_OR_PERSIAN"
 
 # separators
 OR = "TXT_KEY_OR"
@@ -710,9 +712,9 @@ dGoals = {
 	),
 	iMamluks: (
 		All(
-			AreaNoStateReligion(plots.regions(rEgypt, rLevant, rMesopotamia, rArabia).named(MIDDLE_EAST), iCatholicism),
-			AreaNoStateReligion(plots.regions(rEgypt, rLevant, rMesopotamia, rArabia).named(MIDDLE_EAST), iOrthodoxy),
-			AllowOnly(plots.regions(rEgypt, rLevant, rMesopotamia, rArabia).named(MIDDLE_EAST), group(iCivGroupMiddleEast).named(MIDDLE_EASTERN)),
+			AreaNoStateReligion(plots.regions(rEgypt, rLevant, rMesopotamia, rArabia, rYemenOman).named(MIDDLE_EAST), iCatholicism),
+			AreaNoStateReligion(plots.regions(rEgypt, rLevant, rMesopotamia, rArabia, rYemenOman).named(MIDDLE_EAST), iOrthodoxy),
+			AllowOnly(plots.regions(rEgypt, rLevant, rMesopotamia, rArabia, rYemenOman).named(MIDDLE_EAST), group(iCivGroupMiddleEast).named(MIDDLE_EASTERN)),
 			at=1300,	
 		),
 		All(
@@ -721,7 +723,7 @@ dGoals = {
 		),
 		# Mirror the England UHV
 		All(
-			RouteConnection([iRouteRailroad], plots.regions(rEgypt).coastal().named(EGYPT), plots.regions(rCape).named(SOUTH_AFRICA)),
+			RouteConnection([iRouteRailroad], plots.regions(rEgypt).coastal().named(EGYPT_COASTAL), plots.regions(rCape).named(SOUTH_AFRICA)),
 			by=1880,
 		),
 	),
@@ -779,8 +781,29 @@ dGoals = {
 		SacrificeGoldenAges(16, by=1650),
 		Control(required=1, by=1750, desc_key=THIRD_AZTEC_GOAL, *lAztecTargets)
 	),
-	iMughals: (
-		BuildingCount(iIslamicCathedral, 3, by=1500),
+	iGhorids: (
+		All(
+			BuildingCount(iIslamicCathedral, 3),
+			SpecialistCount(iSpecialistSlave, 12),
+			by=1200,
+		),	
+		All(
+			AreaNoReligion(plots.regions(*lIndia).named(INDIA), iHinduism),	
+			AreaNoReligion(plots.regions(*lIndia).named(INDIA), iBuddhism),
+        	by=1400,
+		),
+		AllowNone(
+			civs(iTurks, iTimurids, iMongols, iParthia, iPersia),
+			plots.regions(*lIndia).named(INDIA),
+			at=1500,
+		),	
+	),
+	iTimurids: (
+		All(
+			LandPercent(5),
+			PopulationPercent(10),
+			by=1500
+		),
 		Wonders(iRedFort, iShalimarGardens, iTajMahal, by=1660),
 		CultureAmount(50000, at=1750),
 	),

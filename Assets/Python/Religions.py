@@ -40,10 +40,10 @@ def onBuildingBuilt(city, iBuilding):
 	iPlayer = city.getOwner()
 
 	if iBuilding == iHinduTemple:
-		if game.isReligionFounded(iBuddhism): return
-		player(city).foundReligion(iBuddhism, iBuddhism, True)
+		if not game.isReligionFounded(iBuddhism):
+			player(city).foundReligion(iBuddhism, iBuddhism, True)
 		
-	if iBuilding == iOrthodoxCathedral:
+	elif iBuilding == iOrthodoxCathedral:
 		if game.isReligionFounded(iCatholicism): return
 
 		# if Cathedral is in Orthodox Core/Historical, don't found Catholicism
@@ -60,48 +60,31 @@ def onBuildingBuilt(city, iBuilding):
 				player(city).setLastStateReligion(iCatholicism)
 
 @handler("BeginGameTurn")
-def foundHinduism(iGameTurn):
-	if not player(iIndia).isHuman():
-		if iGameTurn == year(-2000)+1:
-			if not game.isReligionFounded(iHinduism):
-				if plot(92, 39).isCity():
-					foundReligion((92, 39), iHinduism)
+def checkFoundReligions(iGameTurn):
+	if not game.isReligionFounded(iJudaism) and iGameTurn >= year(-1200) - turns(data.iSeed % 4):
+		foundReligion(selectHolyCity(plots.regions(rEgypt, rLevant, rMesopotamia), tJerusalem, False), iJudaism)
 
+	if not game.isReligionFounded(iHinduism) and iGameTurn >= year(-1000) - turns(data.iSeed % 4):
+		foundReligion(selectHolyCity(plots.regions(rHindustan), tVaranasi, False), iHinduism)
 
-@handler("BeginGameTurn")
-def checkIslam(iGameTurn):
+	if not game.isReligionFounded(iOrthodoxy) and game.isReligionFounded(iJudaism):
+		if iGameTurn == year(0) + turns(data.iSeed % 15):
+			holyCity = game.getHolyCity(iJudaism)
+			
+			if not holyCity.isHuman() and rand(2) == 0:
+				foundReligion(holyCity, iOrthodoxy)
+				return
+				
+			jewishCity = cities.all().notowner(active()).where(lambda city: city.isHasReligion(iJudaism)).random()
+			if jewishCity:
+				foundReligion(location(jewishCity), iOrthodoxy)
+
 	if not game.isReligionFounded(iIslam) and iGameTurn >= year(610):
 		if plot(tMecca).isCity():
 			foundReligion(tMecca, iIslam)
 
-
-@handler("BeginGameTurn")
-def checkJudaism(iGameTurn):
-	if game.isReligionFounded(iJudaism):
-		return
-
-	if iGameTurn == year(-1200) - turns(data.iSeed % 4):
-		foundReligion(selectHolyCity(plots.regions(rEgypt, rLevant, rMesopotamia), tJerusalem, False), iJudaism)
-
-
-@handler("BeginGameTurn")
-def checkChristianity(iGameTurn):
-	if not game.isReligionFounded(iJudaism): return
-	if game.isReligionFounded(iOrthodoxy): return
-	
-	iOffset = turns(data.iSeed % 15)
-	
-	if iGameTurn == year(0) + iOffset:
-		holyCity = game.getHolyCity(iJudaism)
-		
-		if not holyCity.isHuman() and rand(2) == 0:
-			foundReligion(holyCity, iOrthodoxy)
-			return
-			
-		jewishCity = cities.all().notowner(active()).where(lambda city: city.isHasReligion(iJudaism)).random()
-		if jewishCity:
-			foundReligion(location(jewishCity), iOrthodoxy)
-
+	if not game.isReligionFounded(iShia) and iGameTurn >= year(900) - turns(data.iSeed % 10):
+		foundReligion(selectHolyCity(plots.regions(rYemenOman, rPersia, rKhorasan, rTransoxiana), None, False), iShia)
 
 @handler("BeginGameTurn")
 def checkSchism(iGameTurn):
@@ -262,9 +245,11 @@ def foundReligion(location, iReligion):
 
 
 def selectHolyCity(area, tPreferredCity = None, bAIOnly = True):
-	preferredCity = city(tPreferredCity)
-	if preferredCity and not (bAIOnly and preferredCity.isHuman()):
-		return preferredCity
+	
+	if tPreferredCity:
+		preferredCity = city(tPreferredCity)
+		if preferredCity and not (bAIOnly and preferredCity.isHuman()):
+			return preferredCity
 				
 	holyCity = area.cities().where(lambda city: not bAIOnly or not city.isHuman()).random()
 	if holyCity:

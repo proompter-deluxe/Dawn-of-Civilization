@@ -2434,6 +2434,113 @@
 			<CivilizationActionSound>AS3D_GERMANY_ORDER</CivilizationActionSound>
 		</CivilizationInfo>
 		<CivilizationInfo>
+			<Type>CIVILIZATION_GHORIDS</Type>
+			<Description>TXT_KEY_CIV_GHORIDS_DESC</Description>
+			<ShortDescription>TXT_KEY_CIV_GHORIDS_SHORT_DESC</ShortDescription>
+			<Adjective>TXT_KEY_CIV_GHORIDS_ADJECTIVE</Adjective>
+			<Civilopedia>TXT_KEY_CIV_GHORIDS_PEDIA</Civilopedia>
+			<DefaultPlayerColor>PLAYERCOLOR_DARK_ROT_GREEN</DefaultPlayerColor>
+			<ArtDefineTag>ART_DEF_CIVILIZATION_GHORIDS</ArtDefineTag>
+			<ArtStyleType>ARTSTYLE_MIDDLE_EAST</ArtStyleType>
+			<UnitArtStyleType>UNIT_ARTSTYLE_MIDDLE_EASTERN</UnitArtStyleType>
+			<PaganReligion>PAGAN_RELIGION_MAZDAISM</PaganReligion>
+			<Impact>IMPACT_SIGNIFICANT</Impact>
+			<Identifier>GHO</Identifier>
+			<StartingYear>977</StartingYear>
+			<LoadingTimes>
+				<LoadingTime>12</LoadingTime>
+				<LoadingTime>6</LoadingTime>
+				<LoadingTime>0</LoadingTime>
+			</LoadingTimes>
+			<Rating>
+				<Trade>2</Trade>
+				<Production>2</Production>
+				<Culture>4</Culture>
+				<Growth>4</Growth>
+				<Start>3</Start>
+			</Rating>
+			<bPlayable>1</bPlayable>
+			<bAIPlayable>1</bAIPlayable>
+			<Cities>
+				<City>Kolhapur</City>
+				<City>Lucknow</City>
+				<City>Rajshahi</City>
+				<City>Cuttack</City>
+				<City>Rawalpindi</City>
+				<City>Howrah</City>
+				<City>Triverapatnam</City>
+				<City>Dakpathar</City>
+				<City>Jaunpur</City>
+				<City>Kodaikanal</City>
+				<City>Vrindavan</City>
+				<City>Guwahati</City>
+				<City>Bhalukpong</City>
+				<City>Sonepur</City>
+				<City>Vaishali</City>
+				<City>Rewalsar</City>
+				<City>Kurukshetra</City>
+				<City>Subarnapur</City>
+				<City>Wadhvan</City>
+				<City>Narkanda</City>
+				<City>Dhanaulti</City>
+				<City>Chitradurga</City>
+				<City>Srikakulam</City>
+				<City>Vijayaweda</City>
+				<City>Banswara</City>
+			</Cities>
+			<Buildings>
+				<Building>
+					<BuildingClassType>BUILDINGCLASS_BARRACKS</BuildingClassType>
+					<BuildingType>BUILDING_SLAVE_BARRACKS</BuildingType>
+				</Building>
+				<Building>
+					<BuildingClassType>BUILDINGCLASS_PAGAN_TEMPLE</BuildingClassType>
+					<BuildingType>BUILDING_MAZDAIST_TEMPLE</BuildingType>
+				</Building>
+			</Buildings>
+			<Units>
+				<Unit>
+					<UnitClassType>UNITCLASS_BOMBARD</UnitClassType>
+					<UnitType>UNIT_MUGHAL_SIEGE_ELEPHANT</UnitType>
+				</Unit>
+				<Unit>
+					<UnitClassType>UNITCLASS_LANCER</UnitClassType>
+					<UnitType>UNIT_MAMLUK_CAVALRY</UnitType>
+				</Unit>
+			</Units>
+			<FreeUnitClasses>
+				<FreeUnitClass>
+					<UnitClassType>UNITCLASS_SETTLER</UnitClassType>
+					<iFreeUnits>1</iFreeUnits>
+				</FreeUnitClass>
+			</FreeUnitClasses>
+			<FreeBuildingClasses>
+				<FreeBuildingClass>
+					<BuildingClassType>BUILDINGCLASS_PALACE</BuildingClassType>
+					<bFreeBuildingClass>1</bFreeBuildingClass>
+				</FreeBuildingClass>
+			</FreeBuildingClasses>
+			<FreeTechs/>
+			<DisableTechs/>
+			<InitialCivics>
+				<CivicType>CIVIC_CHIEFDOM</CivicType>
+				<CivicType>CIVIC_PERSONALISM</CivicType>
+				<CivicType>CIVIC_TRADITIONALISM</CivicType>
+				<CivicType>CIVIC_RECIPROCITY</CivicType>
+				<CivicType>CIVIC_ANIMISM</CivicType>
+				<CivicType>CIVIC_KINSHIP</CivicType>
+			</InitialCivics>
+			<Leaders>
+				<Leader>
+					<LeaderName>LEADER_IBN_TUGHLUQ</LeaderName>
+					<bLeaderAvailability>1</bLeaderAvailability>
+				</Leader>
+			</Leaders>
+			<DerivativeCiv>CIVILIZATION_PERSIA</DerivativeCiv>
+			<CivilizationSelectionSound>AS3D_PERSIA_SELECT</CivilizationSelectionSound>
+			<CivilizationActionSound>AS3D_PERSIA_ORDER</CivilizationActionSound>
+		</CivilizationInfo>
+		<CivilizationInfo>
 			<Type>CIVILIZATION_GREECE</Type>
 			<Description>TXT_KEY_CIV_GREECE_DESC</Description>
 			<ShortDescription>TXT_KEY_CIV_GREECE_SHORT_DESC</ShortDescription>
@@ -3077,7 +3184,7 @@
 			<PaganReligion>PAGAN_RELIGION_MAZDAISM</PaganReligion>
 			<Impact>IMPACT_CRITICAL</Impact>
 			<Identifier>IRA</Identifier>
-			<StartingYear>1501</StartingYear>
+			<StartingYear>1505</StartingYear>
 			<LoadingTimes>
 				<LoadingTime>20</LoadingTime>
 				<LoadingTime>10</LoadingTime>
@@ -4920,7 +5027,7 @@
 			<PaganReligion>PAGAN_RELIGION_ANUNNAKI</PaganReligion>
 			<Impact>IMPACT_SIGNIFICANT</Impact>
 			<Identifier>MOO</Identifier>
-			<StartingYear>711</StartingYear>
+			<StartingYear>720</StartingYear>
 			<LoadingTimes>
 				<LoadingTime>6</LoadingTime>
 				<LoadingTime>1</LoadingTime>
@@ -5023,121 +5130,6 @@
 			<DerivativeCiv>CIVILIZATION_ARABIA</DerivativeCiv>
 			<CivilizationSelectionSound>AS3D_ARABIA_SELECT</CivilizationSelectionSound>
 			<CivilizationActionSound>AS3D_ARABIA_ORDER</CivilizationActionSound>
-		</CivilizationInfo>
-		<CivilizationInfo>
-			<Type>CIVILIZATION_MUGHALS</Type>
-			<Description>TXT_KEY_CIV_MUGHALS_DESC</Description>
-			<ShortDescription>TXT_KEY_CIV_MUGHALS_SHORT_DESC</ShortDescription>
-			<Adjective>TXT_KEY_CIV_MUGHALS_ADJECTIVE</Adjective>
-			<Civilopedia>TXT_KEY_CIV_MUGHALS_PEDIA</Civilopedia>
-			<DefaultPlayerColor>PLAYERCOLOR_DARK_ROT_GREEN</DefaultPlayerColor>
-			<ArtDefineTag>ART_DEF_CIVILIZATION_MUGHALS</ArtDefineTag>
-			<ArtStyleType>ARTSTYLE_MIDDLE_EAST</ArtStyleType>
-			<UnitArtStyleType>UNIT_ARTSTYLE_MIDDLE_EASTERN</UnitArtStyleType>
-			<PaganReligion>PAGAN_RELIGION_TENGRI</PaganReligion>
-			<Impact>IMPACT_CRITICAL</Impact>
-			<Identifier>MUG</Identifier>
-			<StartingYear>1206</StartingYear>
-			<LoadingTimes>
-				<LoadingTime>12</LoadingTime>
-				<LoadingTime>6</LoadingTime>
-				<LoadingTime>0</LoadingTime>
-			</LoadingTimes>
-			<Rating>
-				<Trade>3</Trade>
-				<Production>2</Production>
-				<Culture>4</Culture>
-				<Growth>5</Growth>
-				<Start>5</Start>
-			</Rating>
-			<bPlayable>1</bPlayable>
-			<bAIPlayable>1</bAIPlayable>
-			<Cities>
-				<City>Kolhapur</City>
-				<City>Lucknow</City>
-				<City>Rajshahi</City>
-				<City>Cuttack</City>
-				<City>Rawalpindi</City>
-				<City>Howrah</City>
-				<City>Triverapatnam</City>
-				<City>Dakpathar</City>
-				<City>Jaunpur</City>
-				<City>Kodaikanal</City>
-				<City>Vrindavan</City>
-				<City>Guwahati</City>
-				<City>Bhalukpong</City>
-				<City>Sonepur</City>
-				<City>Vaishali</City>
-				<City>Rewalsar</City>
-				<City>Kurukshetra</City>
-				<City>Subarnapur</City>
-				<City>Wadhvan</City>
-				<City>Narkanda</City>
-				<City>Dhanaulti</City>
-				<City>Chitradurga</City>
-				<City>Srikakulam</City>
-				<City>Vijayaweda</City>
-				<City>Banswara</City>
-			</Cities>
-			<Buildings>
-				<Building>
-					<BuildingClassType>BUILDINGCLASS_ESTATE</BuildingClassType>
-					<BuildingType>BUILDING_MUGHAL_MAUSOLEUM</BuildingType>
-				</Building>
-				<Building>
-					<BuildingClassType>BUILDINGCLASS_PAGAN_TEMPLE</BuildingClassType>
-					<BuildingType>BUILDING_TENGRI_OBO</BuildingType>
-				</Building>
-			</Buildings>
-			<Units>
-				<Unit>
-					<UnitClassType>UNITCLASS_BOMBARD</UnitClassType>
-					<UnitType>UNIT_MUGHAL_SIEGE_ELEPHANT</UnitType>
-				</Unit>
-				<Unit>
-					<UnitClassType>UNITCLASS_CUIRASSIER</UnitClassType>
-					<UnitType>UNIT_MUGHAL_SOWAR</UnitType>
-				</Unit>
-			</Units>
-			<FreeUnitClasses>
-				<FreeUnitClass>
-					<UnitClassType>UNITCLASS_SETTLER</UnitClassType>
-					<iFreeUnits>1</iFreeUnits>
-				</FreeUnitClass>
-			</FreeUnitClasses>
-			<FreeBuildingClasses>
-				<FreeBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_PALACE</BuildingClassType>
-					<bFreeBuildingClass>1</bFreeBuildingClass>
-				</FreeBuildingClass>
-			</FreeBuildingClasses>
-			<FreeTechs/>
-			<DisableTechs/>
-			<InitialCivics>
-				<CivicType>CIVIC_CHIEFDOM</CivicType>
-				<CivicType>CIVIC_PERSONALISM</CivicType>
-				<CivicType>CIVIC_TRADITIONALISM</CivicType>
-				<CivicType>CIVIC_RECIPROCITY</CivicType>
-				<CivicType>CIVIC_ANIMISM</CivicType>
-				<CivicType>CIVIC_KINSHIP</CivicType>
-			</InitialCivics>
-			<Leaders>
-				<Leader>
-					<LeaderName>LEADER_IBN_TUGHLUQ</LeaderName>
-					<bLeaderAvailability>1</bLeaderAvailability>
-				</Leader>
-				<Leader>
-					<LeaderName>LEADER_AKBAR</LeaderName>
-					<bLeaderAvailability>1</bLeaderAvailability>
-				</Leader>
-				<Leader>
-					<LeaderName>LEADER_BHUTTO</LeaderName>
-					<bLeaderAvailability>1</bLeaderAvailability>
-				</Leader>
-			</Leaders>
-			<DerivativeCiv>CIVILIZATION_PERSIA</DerivativeCiv>
-			<CivilizationSelectionSound>AS3D_PERSIA_SELECT</CivilizationSelectionSound>
-			<CivilizationActionSound>AS3D_PERSIA_ORDER</CivilizationActionSound>
 		</CivilizationInfo>
 		<CivilizationInfo>
 			<Type>CIVILIZATION_NETHERLANDS</Type>
@@ -5562,7 +5554,7 @@
 			<ShortDescription>TXT_KEY_CIV_PARTHIA_SHORT_DESC</ShortDescription>
 			<Adjective>TXT_KEY_CIV_PARTHIA_ADJECTIVE</Adjective>
 			<Civilopedia>TXT_KEY_CIV_PARTHIA_PEDIA</Civilopedia>
-			<DefaultPlayerColor>PLAYERCOLOR_BROWN_RED</DefaultPlayerColor>
+			<DefaultPlayerColor>PLAYERCOLOR_DARK_ORANGE_RED</DefaultPlayerColor>
 			<ArtDefineTag>ART_DEF_CIVILIZATION_PARTHIA</ArtDefineTag>
 			<ArtStyleType>ARTSTYLE_MIDDLE_EAST</ArtStyleType>
 			<UnitArtStyleType>UNIT_ARTSTYLE_MIDDLE_EASTERN</UnitArtStyleType>
@@ -7079,6 +7071,125 @@
 			<CivilizationActionSound>AS3D_CHINA_ORDER</CivilizationActionSound>
 		</CivilizationInfo>
 		<CivilizationInfo>
+			<Type>CIVILIZATION_TIMURIDS</Type>
+			<Description>TXT_KEY_CIV_TIMURIDS_DESC</Description>
+			<ShortDescription>TXT_KEY_CIV_TIMURIDS_SHORT_DESC</ShortDescription>
+			<Adjective>TXT_KEY_CIV_TIMURIDS_ADJECTIVE</Adjective>
+			<Civilopedia>TXT_KEY_CIV_TIMURIDS_PEDIA</Civilopedia>
+			<DefaultPlayerColor>PLAYERCOLOR_DARK_RED_BLACK</DefaultPlayerColor>
+			<ArtDefineTag>ART_DEF_CIVILIZATION_TIMURIDS</ArtDefineTag>
+			<ArtStyleType>ARTSTYLE_MIDDLE_EAST</ArtStyleType>
+			<UnitArtStyleType>UNIT_ARTSTYLE_MIDDLE_EASTERN</UnitArtStyleType>
+			<PaganReligion>PAGAN_RELIGION_TENGRI</PaganReligion>
+			<Impact>IMPACT_CRITICAL</Impact>
+			<Identifier>MUG</Identifier>
+			<StartingYear>1370</StartingYear>
+			<LoadingTimes>
+				<LoadingTime>12</LoadingTime>
+				<LoadingTime>6</LoadingTime>
+				<LoadingTime>0</LoadingTime>
+			</LoadingTimes>
+			<Rating>
+				<Trade>4</Trade>
+				<Production>2</Production>
+				<Culture>3</Culture>
+				<Growth>3</Growth>
+				<Start>4</Start>
+			</Rating>
+			<bPlayable>1</bPlayable>
+			<bAIPlayable>1</bAIPlayable>
+			<Cities>
+				<City>Kolhapur</City>
+				<City>Lucknow</City>
+				<City>Rajshahi</City>
+				<City>Cuttack</City>
+				<City>Rawalpindi</City>
+				<City>Howrah</City>
+				<City>Triverapatnam</City>
+				<City>Dakpathar</City>
+				<City>Jaunpur</City>
+				<City>Kodaikanal</City>
+				<City>Vrindavan</City>
+				<City>Guwahati</City>
+				<City>Bhalukpong</City>
+				<City>Sonepur</City>
+				<City>Vaishali</City>
+				<City>Rewalsar</City>
+				<City>Kurukshetra</City>
+				<City>Subarnapur</City>
+				<City>Wadhvan</City>
+				<City>Narkanda</City>
+				<City>Dhanaulti</City>
+				<City>Chitradurga</City>
+				<City>Srikakulam</City>
+				<City>Vijayaweda</City>
+				<City>Banswara</City>
+			</Cities>
+			<Buildings>
+				<Building>
+					<BuildingClassType>BUILDINGCLASS_ESTATE</BuildingClassType>
+					<BuildingType>BUILDING_MUGHAL_MAUSOLEUM</BuildingType>
+				</Building>
+				<Building>
+					<BuildingClassType>BUILDINGCLASS_PAGAN_TEMPLE</BuildingClassType>
+					<BuildingType>BUILDING_TENGRI_OBO</BuildingType>
+				</Building>
+			</Buildings>
+			<Units>
+				<Unit>
+					<UnitClassType>UNITCLASS_CUIRASSIER</UnitClassType>
+					<UnitType>UNIT_MUGHAL_SOWAR</UnitType>
+				</Unit>
+				<Unit>
+					<UnitClassType>UNITCLASS_HORSE_ARCHER</UnitClassType>
+					<UnitType>UNIT_TURKIC_OGHUZ</UnitType>
+				</Unit>
+				<Unit>
+					<UnitClassType>UNITCLASS_LANCER</UnitClassType>
+					<UnitType>UNIT_MONGOLIAN_KESHIK</UnitType>
+				</Unit>
+			</Units>
+			<FreeUnitClasses>
+				<FreeUnitClass>
+					<UnitClassType>UNITCLASS_SETTLER</UnitClassType>
+					<iFreeUnits>1</iFreeUnits>
+				</FreeUnitClass>
+			</FreeUnitClasses>
+			<FreeBuildingClasses>
+				<FreeBuildingClass>
+					<BuildingClassType>BUILDINGCLASS_PALACE</BuildingClassType>
+					<bFreeBuildingClass>1</bFreeBuildingClass>
+				</FreeBuildingClass>
+			</FreeBuildingClasses>
+			<FreeTechs/>
+			<DisableTechs/>
+			<InitialCivics>
+				<CivicType>CIVIC_CHIEFDOM</CivicType>
+				<CivicType>CIVIC_PERSONALISM</CivicType>
+				<CivicType>CIVIC_TRADITIONALISM</CivicType>
+				<CivicType>CIVIC_RECIPROCITY</CivicType>
+				<CivicType>CIVIC_ANIMISM</CivicType>
+				<CivicType>CIVIC_KINSHIP</CivicType>
+			</InitialCivics>
+			<Leaders>
+				<Leader>
+					<LeaderName>LEADER_TAMERLANE</LeaderName>
+					<bLeaderAvailability>1</bLeaderAvailability>
+				</Leader>
+				<Leader>
+					<LeaderName>LEADER_AKBAR</LeaderName>
+					<bLeaderAvailability>1</bLeaderAvailability>
+				</Leader>
+				<Leader>
+					<LeaderName>LEADER_BHUTTO</LeaderName>
+					<bLeaderAvailability>1</bLeaderAvailability>
+				</Leader>
+			</Leaders>
+			<DerivativeCiv>CIVILIZATION_PERSIA</DerivativeCiv>
+			<CivilizationSelectionSound>AS3D_PERSIA_SELECT</CivilizationSelectionSound>
+			<CivilizationActionSound>AS3D_PERSIA_ORDER</CivilizationActionSound>
+		</CivilizationInfo>
+		<CivilizationInfo>
 			<Type>CIVILIZATION_TOLTECS</Type>
 			<Description>TXT_KEY_CIV_TOLTECS_DESC</Description>
 			<ShortDescription>TXT_KEY_CIV_TOLTECS_SHORT_DESC</ShortDescription>
@@ -7219,6 +7330,10 @@
 					<UnitClassType>UNITCLASS_HORSE_ARCHER</UnitClassType>
 					<UnitType>UNIT_TURKIC_OGHUZ</UnitType>
 				</Unit>
+				<Unit>
+					<UnitClassType>UNITCLASS_LANCER</UnitClassType>
+					<UnitType>UNIT_MAMLUK_CAVALRY</UnitType>
+				</Unit>
 			</Units>
 			<FreeUnitClasses/>
 			<FreeBuildingClasses>
@@ -7244,10 +7359,6 @@
 				</Leader>
 				<Leader>
 					<LeaderName>LEADER_ALP_ARSLAN</LeaderName>
-					<bLeaderAvailability>1</bLeaderAvailability>
-				</Leader>
-				<Leader>
-					<LeaderName>LEADER_TAMERLANE</LeaderName>
 					<bLeaderAvailability>1</bLeaderAvailability>
 				</Leader>
 			</Leaders>

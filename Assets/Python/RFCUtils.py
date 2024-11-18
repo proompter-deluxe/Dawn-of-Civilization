@@ -764,12 +764,21 @@ def canRespawn(iCiv):
 		return False
 	
 	# India cannot respawn when Mughals are alive (not vice versa -> Pakistan)
-	if iCiv == iIndia and player(iMughals).isAlive():
+	if iCiv == iIndia and player(iTimurids).isAlive():
 		return False
 	
 	# Exception during Japanese UHV
 	if player(iJapan).isHuman() and year().between(1920, 1945):
 		if iCiv in [iChina, iChinaS, iKorea, iMalays, iJava, iThailand]:
+			return False
+		
+	# Ottoman respawn requires that the Turks or Timurids or themselves managed to conquer at least one city in the Near East
+	if iCiv == iOttomans:
+		if (cities.birth(iOttomans).none(CyCity.isHuman) and 
+	  cities.regions(rAnatolia, rCaucasus).none(lambda city: 
+											 iTurks in [city.getCivilizationType(), city.getPreviousCiv()] or 
+											 iTimurids in [city.getCivilizationType(), city.getPreviousCiv()] or
+											 iOttomans in [city.getCivilizationType(), city.getPreviousCiv()])):
 			return False
 			
 	return True

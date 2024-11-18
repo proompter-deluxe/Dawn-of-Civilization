@@ -1192,6 +1192,7 @@ enum CivilizationTypes		// Exposed to Python
 	ETHIOPIA, 
 	FRANCE,
 	GERMANY,
+	GHORIDS,
 
 	GREECE,
 	HARAPPA,
@@ -1219,7 +1220,6 @@ enum CivilizationTypes		// Exposed to Python
 	MONGOLS,
 	MOORS,
 
-	MUGHALS,
 	NETHERLANDS,
 	NORSE,
 	NUBIA,
@@ -1238,6 +1238,7 @@ enum CivilizationTypes		// Exposed to Python
 	SWEDEN,
 	THAILAND,
 	TIBET,
+	TIMURIDS,
 	TOLTECS,
 
 	TURKS,

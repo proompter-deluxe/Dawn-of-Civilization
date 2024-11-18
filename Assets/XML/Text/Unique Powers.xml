@@ -1233,4 +1233,20 @@
 		<Italian>Extra settler granted when finished building a settler</Italian>
 		<Spanish>Extra settler granted when finished building a settler</Spanish>
 	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UP_GHO_TITLE</Tag>
+		<English>The Power of Zeal:</English>
+		<French>The Power of Zeal:</French>
+		<German>The Power of Zeal:</German>
+		<Italian>The Power of Zeal:</Italian>
+		<Spanish>The Power of Zeal:</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UP_GHO</Tag>
+		<English>Removes all non-state religions on city capture and grants gold per religion removed</English>
+		<French>Removes all non-state religions on city capture and grants gold per religion removed</French>
+		<German>Removes all non-state religions on city capture and grants gold per religion removed</German>
+		<Italian>Removes all non-state religions on city capture and grants gold per religion removed</Italian>
+		<Spanish>Removes all non-state religions on city capture and grants gold per religion removed</Spanish>
+	</TEXT>
 </Civ4GameText>

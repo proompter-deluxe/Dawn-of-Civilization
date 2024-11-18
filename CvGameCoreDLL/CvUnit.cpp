@@ -14450,6 +14450,7 @@ int CvUnit::getOriginalArtStyle(const CvPlot* pPlot) const
 	case REGION_LEVANT:
 		return GC.getCivilizationInfo(CARTHAGE).getUnitArtStyleType();
 	case REGION_ARABIA:
+	case REGION_YEMEN_OMAN:
 		return GC.getCivilizationInfo(ARABIA).getUnitArtStyleType();
 	case REGION_EGYPT:
 		if (GC.getGameINLINE().getGameTurnYear() > GC.getCivilizationInfo(ARABIA).getStartingYear())
@@ -14463,9 +14464,9 @@ int CvUnit::getOriginalArtStyle(const CvPlot* pPlot) const
 	case REGION_RAJPUTANA:
 	case REGION_HINDUSTAN:
 	case REGION_BENGAL:
-		if (GC.getGameINLINE().getGameTurnYear() >= GC.getCivilizationInfo(MUGHALS).getStartingYear())
+		if (GC.getGameINLINE().getGameTurnYear() >= GC.getCivilizationInfo(GHORIDS).getStartingYear())
 		{
-			return GC.getCivilizationInfo(MUGHALS).getUnitArtStyleType();
+			return GC.getCivilizationInfo(GHORIDS).getUnitArtStyleType();
 		}
 		return GC.getCivilizationInfo(INDIA).getUnitArtStyleType();
 	case REGION_DECCAN:

@@ -868,6 +868,14 @@
 		<Spanish></Spanish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_VICTORY_DESC_AREA_NO_RELIGION</Tag>
+		<English>no %s2 presence in %s1</English>
+		<French></French>
+		<German></German>
+		<Italian></Italian>
+		<Spanish></Spanish>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_VICTORY_DESC_AREA_PERCENT</Tag>
 		<English>%s2 of %s1</English>
 		<French></French>
@@ -1681,6 +1689,14 @@
 	<TEXT>
 		<Tag>TXT_KEY_VICTORY_PROGR_AREA_NO_STATE_RELIGION</Tag>
 		<English>No %s2 civilizations in %s1</English>
+		<French></French>
+		<German></German>
+		<Italian></Italian>
+		<Spanish></Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_VICTORY_PROGR_AREA_NO_RELIGION</Tag>
+		<English>No %s2 presence in %s1</English>
 		<French></French>
 		<German></German>
 		<Italian></Italian>
@@ -2957,6 +2973,14 @@
 		<Spanish></Spanish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_VICTORY_NAME_EGYPT_COASTAL</Tag>
+		<English>Coastal Egypt</English>
+		<French></French>
+		<German></German>
+		<Italian></Italian>
+		<Spanish></Spanish>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_VICTORY_NAME_ELAM</Tag>
 		<English>Elam</English>
 		<French></French>
@@ -3508,6 +3532,14 @@
 	<TEXT>
 		<Tag>TXT_KEY_VICTORY_NAME_MIDDLE_EASTERN</Tag>
 		<English>Middle Eastern</English>
+		<French></French>
+		<German></German>
+		<Italian></Italian>
+		<Spanish></Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_VICTORY_NAME_OTHER_TURKISH_MONGOL_OR_PERSIAN</Tag>
+		<English>other Turkish, Mongol or Persian</English>
 		<French></French>
 		<German></German>
 		<Italian></Italian>

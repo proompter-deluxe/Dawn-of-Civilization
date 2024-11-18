@@ -168,7 +168,7 @@ class CvDawnOfMan:
 		iActivePlayer = active()
 		iGameTurn = game.getGameTurn()
 		
-		iBirthTurn = year(dBirth[iActivePlayer])
+		iBirthTurn = year(dBirth[civ(iActivePlayer)])
 		iTotalAutoplay = iBirthTurn - scenarioStartTurn()
 		
 		iAutoplayRemaining = game.getAIAutoPlay()

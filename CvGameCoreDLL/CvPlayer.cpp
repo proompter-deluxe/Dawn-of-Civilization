@@ -6425,9 +6425,9 @@ bool CvPlayer::canConstruct(BuildingTypes eBuilding, bool bContinue, bool bTestV
 		else if (isHumanVictoryWonder(eBuilding, ITAIPU_DAM, BRAZIL)) return false;
 		else if (isHumanVictoryWonder(eBuilding, CRISTO_REDENTOR, BRAZIL)) return false;
 
-		else if (isHumanVictoryWonder(eBuilding, RED_FORT, MUGHALS)) return false;
-		else if (isHumanVictoryWonder(eBuilding, TAJ_MAHAL, MUGHALS)) return false;
-		else if (isHumanVictoryWonder(eBuilding, HARMANDIR_SAHIB, MUGHALS)) return false;
+		else if (isHumanVictoryWonder(eBuilding, RED_FORT, TIMURIDS)) return false;
+		else if (isHumanVictoryWonder(eBuilding, TAJ_MAHAL, TIMURIDS)) return false;
+		else if (isHumanVictoryWonder(eBuilding, HARMANDIR_SAHIB, TIMURIDS)) return false;
 
 		else if (isHumanVictoryWonder(eBuilding, SHWEDAGON_PAYA, BURMA)) return false;
 	}

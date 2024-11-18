@@ -101,7 +101,7 @@
 		<Tag>TXT_KEY_CIV_ETHIOPIA_REPUBLIC</Tag>
 		<English>Federal Democratic Republic of %s1</English>
 		<French>
-			<Text>R&#233;publique d&#233;mocratique f&#233;d&#233;rale d’%s1</Text>
+			<Text>R&#233;publique d&#233;mocratique f&#233;d&#233;rale d'%s1</Text>
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</French>
@@ -113,7 +113,7 @@
 		<Tag>TXT_KEY_CIV_ETHIOPIA_COMMUNIST</Tag>
 		<English>People's Democratic Republic of %s1</English>
 		<French>
-			<Text>R&#233;publique d&#233;mocratique populaire d’%s1</Text>
+			<Text>R&#233;publique d&#233;mocratique populaire d'%s1</Text>
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</French>

@@ -1547,30 +1547,6 @@ EndPlot
 BeginPlot
 	x=93,y=51
 	RouteType=ROUTE_ROAD
-	BeginUnit
-		UnitType=UNIT_CROSSBOWMAN
-		UnitOwner=CIVILIZATION_INDEPENDENT
-	EndUnit
-	BeginUnit
-		UnitType=UNIT_CROSSBOWMAN
-		UnitOwner=CIVILIZATION_INDEPENDENT
-	EndUnit
-	BeginCity
-		CityOwner=CIVILIZATION_INDEPENDENT
-		CityName=Raga
-		CityPopulation=3
-		BuildingType=BUILDING_GRANARY
-		BuildingType=BUILDING_WALLS
-		BuildingType=BUILDING_MARKET
-		BuildingType=BUILDING_ZOROASTRIAN_TEMPLE
-		ReligionType=RELIGION_ZOROASTRIANISM
-		BeginCulture
-			Civilization=CIVILIZATION_INDEPENDENT, Culture=10
-		EndCulture
-		YearFounded=-3000
-		PreviousOwner=CIVILIZATION_PERSIA
-		PreviousOwner=CIVILIZATION_GREECE
-	EndCity
 EndPlot
 BeginPlot
 	x=94,y=45
@@ -1610,6 +1586,34 @@ EndPlot
 BeginPlot
 	x=94,y=46
 	RouteType=ROUTE_ROAD
+EndPlot
+BeginPlot
+	x=94,y=51
+	RouteType=ROUTE_ROAD
+	BeginUnit
+		UnitType=UNIT_CROSSBOWMAN
+		UnitOwner=CIVILIZATION_INDEPENDENT
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_CROSSBOWMAN
+		UnitOwner=CIVILIZATION_INDEPENDENT
+	EndUnit
+	BeginCity
+		CityOwner=CIVILIZATION_INDEPENDENT
+		CityName=Komis
+		CityPopulation=3
+		BuildingType=BUILDING_GRANARY
+		BuildingType=BUILDING_WALLS
+		BuildingType=BUILDING_MARKET
+		BuildingType=BUILDING_ZOROASTRIAN_TEMPLE
+		ReligionType=RELIGION_ZOROASTRIANISM
+		BeginCulture
+			Civilization=CIVILIZATION_INDEPENDENT, Culture=10
+		EndCulture
+		YearFounded=-3000
+		PreviousOwner=CIVILIZATION_PERSIA
+		PreviousOwner=CIVILIZATION_GREECE
+	EndCity
 EndPlot
 BeginPlot
 	x=97,y=50
@@ -1779,7 +1783,7 @@ BeginPlot
 	EndUnit
 	BeginCity
 		CityOwner=CIVILIZATION_INDEPENDENT
-		CityName=Takkasila
+		CityName=Taxila
 		CityPopulation=3
 		BuildingType=BUILDING_GRANARY
 		BuildingType=BUILDING_WALLS

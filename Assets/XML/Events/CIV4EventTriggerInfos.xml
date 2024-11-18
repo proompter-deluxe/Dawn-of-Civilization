@@ -17718,7 +17718,7 @@
 			</TriggerTexts>
 			<bSinglePlayer>0</bSinglePlayer>
 			<iPercentGamesActive>100</iPercentGamesActive>
-			<iWeight>1000</iWeight>
+			<iWeight>900</iWeight>
 			<bProbabilityUnitMultiply>0</bProbabilityUnitMultiply>
 			<bProbabilityBuildingMultiply>0</bProbabilityBuildingMultiply>
 			<Civic>NONE</Civic>
@@ -17773,7 +17773,7 @@
 				<!-- <PrereqTech>TECH_GUILDS</PrereqTech> -->
 			</AndPreReqs>
 			<ObsoleteTechs>
-				<ObsoleteTech>TECH_ACADEMIA</ObsoleteTech>
+				<ObsoleteTech>TECH_HUMANITIES</ObsoleteTech>
 			</ObsoleteTechs>
 			<bRecurring>1</bRecurring>
 			<bTeam>0</bTeam>

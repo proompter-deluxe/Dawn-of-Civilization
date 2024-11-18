@@ -2770,7 +2770,7 @@ int CvTeam::getCivilizationResearchModifier() const
 		}
 	}
 	// nerf late game Mughals
-	else if (GET_PLAYER(getLeaderID()).getCivilizationType() == MUGHALS)
+	else if (GET_PLAYER(getLeaderID()).getCivilizationType() == TIMURIDS)
 	{
 		if (GET_PLAYER(getLeaderID()).getCurrentEra() >= ERA_RENAISSANCE) iCivModifier += 20;
 	}

@@ -578,6 +578,22 @@
 		<Spanish>Muscogee</Spanish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_ADJECTIVE_OROMO</Tag>
+		<English>Oromo</English>
+		<French>Oromo</French>
+		<German>Oromo</German>
+		<Italian>Oromo</Italian>
+		<Spanish>Oromo</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_ADJECTIVE_ADAL</Tag>
+		<English>Adalite</English>
+		<French>Adalite</French>
+		<German>Adalite</German>
+		<Italian>Adalite</Italian>
+		<Spanish>Adalite</Spanish>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_ADJECTIVE_NAHUA</Tag>
 		<English>Nahua</English>
 		<French>Nahua</French>
@@ -752,6 +768,14 @@
 		<German>Songhai</German>
 		<Italian>Songhai</Italian>
 		<Spanish>Songhai</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_ADJECTIVE_NOGAI</Tag>
+		<English>Nogai</English>
+		<French>Nogai</French>
+		<German>Nogai</German>
+		<Italian>Nogai</Italian>
+		<Spanish>Nogai</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_ADJECTIVE_SUMERIAN</Tag>

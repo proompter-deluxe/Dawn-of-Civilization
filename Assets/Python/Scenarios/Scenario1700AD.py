@@ -24,7 +24,7 @@ lCivilizations = [
 		iStateReligion=iHinduism,
 		lCivics=[iMonarchy, iTheocracy, iCasteSystem, iRegulatedTrade, iMonasticism, iHegemony],
 		techs=techs.column(10).including(iCombinedArms, iUrbanPlanning).without(iExploration),
-		dAttitudes={iMughals: -2}
+		dAttitudes={iTimurids: -2}
 	),
 	Civilization(
 		iDravidia,
@@ -93,7 +93,7 @@ lCivilizations = [
 		iStateReligion=iProtestantism,
 		lCivics=[iMonarchy, iBureaucracy, iIndividualism, iFreeEnterprise, iClergy, iColonialism],
 		techs=techs.column(11).without(iUrbanPlanning, iHorticulture),
-		dAttitudes={iFrance: -4, iPortugal: 2, iMughals: -2, iOttomans: -2}
+		dAttitudes={iFrance: -4, iPortugal: 2, iTimurids: -2, iOttomans: -2}
 	),
 	Civilization(
 		iHolyRome, # Austria
@@ -138,7 +138,7 @@ lCivilizations = [
 		dAttitudes={iSpain: 2, iEngland: 2, iNetherlands: -2}
 	),
 	Civilization(
-		iMughals,
+		iTimurids,
 		iLeader=iAkbar,
 		iGold=200,
 		iStateReligion=iIslam,
@@ -196,7 +196,7 @@ lCivilizations = [
 		iStateReligion=iShia,
 		lCivics=[iMonarchy, iTheocracy, iSlavery, iMerchantTrade, iFanaticism, iHegemony],
 		techs=techs.column(10).including(iCombinedArms, iGeography, iUrbanPlanning, iHorticulture),
-		dAttitudes={iMughals: -2, iOttomans: -4}
+		dAttitudes={iTimurids: -2, iOttomans: -4}
 	),
 	Civilization(
 		iNetherlands,
@@ -279,7 +279,7 @@ scenario1700AD = Scenario(
 			lSeaAreas=[((29, 60), (50, 27)), ((28, 11), (58, 26)), ((79, 23), (97, 32)), ((111, 28), (123, 44)), ((0, 28), (21, 44))],
 		),
 		iCivGroupAsia: Revealed(
-			lLandRegions=lEastAsia + lIndia + [rTarimBasin, rTransoxiana, rKhorasan, rMesopotamia, rPersia, rArabia],
+			lLandRegions=lEastAsia + lIndia + [rTarimBasin, rTransoxiana, rKhorasan, rMesopotamia, rPersia, rArabia, rYemenOman],
 			lCoastRegions=[rEthiopia],
 			lSeaAreas=[((79, 23), (97, 32))],
 		),
@@ -309,7 +309,7 @@ scenario1700AD = Scenario(
 		iHolyRome: 8,
 		iPoland: 8,
 		iPortugal: 8,
-		iMughals: 8,
+		iTimurids: 8,
 		iOttomans: 8,
 		iThailand: 8,
 		iCongo: 4,
@@ -330,7 +330,7 @@ scenario1700AD = Scenario(
 		iHolyRome: 4,
 		iPoland: 3,
 		iPortugal: 3,
-		iMughals: 4,
+		iTimurids: 4,
 		iOttomans: 5,
 		iThailand: 3,
 		iCongo: 2,
@@ -347,11 +347,11 @@ scenario1700AD = Scenario(
 	},
 	
 	lInitialWars = [
-		(iEngland, iMughals, WarPlanTypes.WARPLAN_LIMITED),
-		(iIndia, iMughals, WarPlanTypes.WARPLAN_TOTAL)
+		(iEngland, iTimurids, WarPlanTypes.WARPLAN_LIMITED),
+		(iIndia, iTimurids, WarPlanTypes.WARPLAN_TOTAL)
 	],
 	
-	lAllGoalsFailed = [iChina, iIndia, iDravidia, iKorea, iNorse, iTurks, iSpain, iHolyRome, iBurma, iVietnam, iPoland, iPortugal, iMughals, iSweden, iRussia, iOttomans, iThailand],
+	lAllGoalsFailed = [iChina, iIndia, iDravidia, iKorea, iNorse, iTurks, iSpain, iHolyRome, iBurma, iVietnam, iPoland, iPortugal, iTimurids, iSweden, iRussia, iOttomans, iThailand],
 	lGoalsSucceeded = [(iIran, 0), (iJapan, 0), (iFrance, 0), (iCongo, 0), (iNetherlands, 1)],
 	setupGoals = setupGoals,
 	
