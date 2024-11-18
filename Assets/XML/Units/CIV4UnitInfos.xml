@@ -5413,6 +5413,10 @@
 					<iUnitCombatMod>50</iUnitCombatMod>
 				</UnitCombatMod>
 				<UnitCombatMod>
+					<UnitCombatType>UNITCOMBAT_LIGHT_CAVALRY</UnitCombatType>
+					<iUnitCombatMod>50</iUnitCombatMod>
+				</UnitCombatMod>
+				<UnitCombatMod>
 					<UnitCombatType>UNITCOMBAT_GUN</UnitCombatType>
 					<iUnitCombatMod>-50</iUnitCombatMod>
 				</UnitCombatMod>
