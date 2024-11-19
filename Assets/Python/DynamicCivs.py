@@ -1121,7 +1121,7 @@ def specificName(iPlayer):
 			
 	elif iCiv == iGhorids:
 		# around 1200, rule breaks down into "Emirate/Sultanate of X" realms
-		if year() > year(dBirth[iMongols]) and cities.regions(lIndia).owner(iPlayer) > 0:
+		if year() >= year(dBirth[iMongols]):
 			return capitalName(iPlayer)
 
 	elif iCiv == iJava:
@@ -1582,6 +1582,8 @@ def specificAdjective(iPlayer):
 			return "TXT_KEY_CIV_GHORIDS_ADJECTIVE"
 		if iEra < iRenaissance:
 			return "TXT_KEY_CIV_GHAZNAVIDS_ADJECTIVE"
+		
+		return "TXT_KEY_CIV_GHORIDS_ADJECTIVE"
 
 	elif iCiv == iOttomans:
 		return "TXT_KEY_CIV_OTTOMANS_OTTOMAN"
@@ -1636,7 +1638,7 @@ def islamicTitle(iPlayer):
 		return
 
 	if iReligion == iIslam or iReligion == iShia:
-		if iCiv in [iSwahili, iAssyria, iMamluks, iArabia] or (iCiv == iGhorids and (year() < year(dBirth[iMongols]) or cities.regions(lIndia).owner(iPlayer) == 0)):
+		if iCiv in [iSwahili, iAssyria, iMamluks, iArabia] or (iCiv == iGhorids and year() < year(dBirth[iMongols])):
 			if bTheocracy:
 				return "TXT_KEY_CALIPHATE_ADJECTIVE"
 			if bEmpire:
