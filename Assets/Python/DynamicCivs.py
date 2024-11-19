@@ -67,6 +67,7 @@ dSpecificVassalTitles = deepdict({
 	},
 	iGreece : {
 		iRome : "TXT_KEY_CIV_GREEK_ROME",
+		iHittites: "TXT_KEY_CIV_GREEK_NAME_HITTITES",
 	},
 	iIndia : {
 		iAztecs: "TXT_KEY_CIV_INDIAN_AZTECS",
@@ -1686,8 +1687,10 @@ def vassalTitle(iPlayer, iMaster):
 	if iCiv in lColonies and iMasterCiv not in lColonies:
 		return "TXT_KEY_COLONY_OF"
 	
-	# for pre-industrial civs, prefer Duchy to Protectorate
-	if iMasterCiv in dCivGroups[iCivGroupEurope] and player(iMasterCiv).getCurrentEra() <= iRenaissance:
+	if player(iMasterCiv).getCurrentEra() <= iClassical:
+		return "TXT_KEY_CLIENT_KINGDOM"
+
+	if player(iMasterCiv).getCurrentEra() <= iRenaissance and iMasterCiv in dCivGroups[iCivGroupEurope]:
 		return "TXT_KEY_DUCHY_OF"
 	
 	return "TXT_KEY_PROTECTORATE_OF"

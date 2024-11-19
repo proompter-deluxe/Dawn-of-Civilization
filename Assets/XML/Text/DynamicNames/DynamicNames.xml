@@ -654,4 +654,12 @@
 		<Italian>Duchy of %s1</Italian>
 		<Spanish>Duchy of %s1</Spanish>
 	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CLIENT_KINGDOM</Tag>
+		<English>Client Kingdom of %s1</English>
+		<French>Client Kingdom of %s1</French>
+		<German>Client Kingdom of %s1</German>
+		<Italian>Client Kingdom of %s1</Italian>
+		<Spanish>Client Kingdom of %s1</Spanish>
+	</TEXT>
 </Civ4GameText>
