@@ -822,8 +822,10 @@ def key(iPlayer, sSuffix):
 def desc(iPlayer, sTextKey=str("%s1")):
 	if team(iPlayer).isAVassal():
 		return text(sTextKey,  u"%s" % name(iPlayer),  u"%s" % adjective(iPlayer),  u"%s" % name(iPlayer, True),  u"%s" % adjective(iPlayer, True))
-
-	return text(sTextKey, u"%s" % name(iPlayer), u"%s" % adjective(iPlayer))
+	try:
+		return text(sTextKey, u"%s" % name(iPlayer), u"%s" % adjective(iPlayer))
+	except:
+		message(active(), "Failure in Dynamic Civs desc with values: %s1 %s2 %s3", sTextKey, name(iPlayer), adjective(iPlayer), color=iRed, force=True)
 
 def capitalName(iPlayer):
 	capital = player(iPlayer).getCapitalCity()

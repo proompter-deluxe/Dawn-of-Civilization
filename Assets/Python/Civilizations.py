@@ -688,7 +688,7 @@ dStartingUnits = CivDict({
 		iSettle: 1,
 		iWork: 2,
 		iBase: 1,
-		iDefend: 2,
+		iDefend: 3,
 		iCounter: 4,
 		iSiege: 4,
 	},
@@ -1132,6 +1132,7 @@ dStartingUnits = CivDict({
 		iShock: 3,
 		iSiege: 4,
 		iMissionary: 2,
+		iHarass: 3,
 	},
 	iCongo: {
 		iSettle: 1,
@@ -1239,7 +1240,7 @@ dStartingUnits = CivDict({
 
 dExtraAIUnits = CivDict({
 	iAssyria : {
-		iCounter: 1,
+		iCounter: 3,
 		iDefend: 2,
 		iSiege: 3,
 	},
@@ -1299,10 +1300,10 @@ dExtraAIUnits = CivDict({
 		iCityAttack: 2,
 	},
 	iArabia: {
-		iShock: 2,
+		iShock: 3,
 		iAttack: 2,
-		iHarass: 2,
-		iCounter: 2,
+		iHarass: 3,
+		iCounter: 1,
 		iSiege: 3,
 		iWork: 3,
 	},
@@ -1345,7 +1346,7 @@ dExtraAIUnits = CivDict({
 	iOttomans: {
 		iAttack: 4,
 		iShock: 1,
-		iSiege: 2,
+		iSiege: 3,
 	},
 	iRussia: {
 		iWork: 2,

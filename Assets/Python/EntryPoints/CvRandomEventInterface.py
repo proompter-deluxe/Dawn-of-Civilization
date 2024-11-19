@@ -2911,7 +2911,7 @@ def doTriggerCrusadeAgainstAgainstHeathens(argsList):
 	kTriggeredData = argsList[1]
 	iPlayer = kTriggeredData.ePlayer
 
-	targetCity = cities.regions(rLevant, rIberia, rMaghreb, rEgypt, rBalkans, rGreece, rAnatolia, rBaltics).where(lambda city: (gc.getPlayer(city.getOwner()).isMinorCiv() and not city.isHasReligion(iCatholicism) and not city.isHasReligion(iOrthodoxy)) or (gc.getPlayer(city.getOwner()).getStateReligion() == iIslam and not team(city).isVassal(iPlayer))).random()
+	targetCity = cities.regions(rLevant, rMaghreb, rEgypt, rBalkans, rGreece, rBaltics).where(lambda city: (gc.getPlayer(city.getOwner()).isMinorCiv() and not city.isHasReligion(iCatholicism) and not city.isHasReligion(iOrthodoxy)) or (gc.getPlayer(city.getOwner()).getStateReligion() == iIslam and not team(city).isVassal(iPlayer))).random()
 	targetLocation = location(targetCity)
 
 	spawnConquerors(iPlayer, -1, targetLocation, targetLocation, 1, WarPlanTypes.WARPLAN_TOTAL)

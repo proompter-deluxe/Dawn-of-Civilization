@@ -49,7 +49,7 @@
 		<Tag>TXT_KEY_CIV_GHORIDS_DEFAULT</Tag>
 		<English>Kingdom of %s1</English>
 		<French>
-			<Text>Royaume d'%s1</Text>
+			<Text>Royaume de %s1</Text>
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>

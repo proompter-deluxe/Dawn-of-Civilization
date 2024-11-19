@@ -37501,7 +37501,7 @@ EndPlot
 BeginPlot
 	x=83,y=54
 	TerrainType=TERRAIN_PLAINS
-	PlotType=1
+	PlotType=2
 EndPlot
 BeginPlot
 	x=83,y=55
