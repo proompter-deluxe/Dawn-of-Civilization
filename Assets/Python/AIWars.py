@@ -390,7 +390,8 @@ def checkConquest(tConquest, tPrereqConquest = (), bInvertPrereqConquestConditio
 	if team(iPlayer).isAVassal():
 		return
 
-	iStartTurn = year(iYear) + turns(data.iSeed % 6 - 3)
+	# the start turn can only happen BEFORE the date now, in a narrow band of 0, 1 or 2
+	iStartTurn = year(iYear) - turns(data.iSeed % 3)
 	
 	if turn() == iStartTurn - turns(5):
 		warnConquest(iPlayer, iCiv, iPreferredTargetCiv, tTL, tBR)
