@@ -169,7 +169,7 @@ class Civilization(object):
 		for iEnemy in self.lEnemies:
 			iEnemyPlayer = slot(iEnemy)
 			if iEnemyPlayer >= 0 and self.iCiv != iEnemy:
-				team(iEnemyPlayer).declareWar(self.player.getTeam(), False, WarPlanTypes.WARPLAN_TOTAL)
+				team(self.player.getTeam()).declareWar(iEnemyPlayer, False, WarPlanTypes.WARPLAN_TOTAL)
 		
 		for iCiv, iAttitude in self.dAttitudes.items():
 			self.player.AI_changeAttitudeExtra(slot(iCiv), iAttitude)
@@ -2389,6 +2389,7 @@ dBuildingPreferences = {
 		iOracle: 15,
 	},
 	iRome : {
+		iSaintPeters: 40,
 		iFlavianAmphitheatre: 30,
 		iAquaAppia: 30,
 		iSantaMariaDelFiore: 30,
@@ -2455,6 +2456,7 @@ dBuildingPreferences = {
 		iBerlaymont: 20,
 		iLargeHadronCollider: 20,
 		iITER: 20,
+		iSaintPeters: 20,
 	},
 	iMalays : {
 		iGardensByTheBay: 40,
@@ -2525,6 +2527,7 @@ dBuildingPreferences = {
 		iGuadalupeBasilica: 30,
 		iChapultepecCastle: 30,
 		iSagradaFamilia: 30,
+		iSaintPeters: 20,
 		iCristoRedentor: 20,
 		iWembley: 20,
 		iIberianTradingCompanyBuilding: 20,
@@ -2550,6 +2553,7 @@ dBuildingPreferences = {
 	},
 	iHolyRome : {
 		iSaintThomasChurch: 30,
+		iSaintPeters: 20,
 		iKrakDesChevaliers: 20,
 		iNeuschwanstein: 20,
 		iPalaceOfNations: 20,
@@ -2582,6 +2586,7 @@ dBuildingPreferences = {
 		iTempleOfKukulkan: 20,
 	},
 	iItaly : {
+		iSaintPeters: 40,
 		iFlavianAmphitheatre: 30,
 		iSantaMariaDelFiore: 30,
 		iSistineChapel: 30,

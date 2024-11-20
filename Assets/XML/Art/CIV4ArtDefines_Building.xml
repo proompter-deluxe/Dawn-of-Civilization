@@ -908,14 +908,14 @@
 			<Button>Art/Interface/Buttons/Buildings/catholic_monastery.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_CATHOLIC_SHRINE</Type>
+			<Type>ART_DEF_BUILDING_SAINT_PETERS</Type>
 			<LSystem>LSYSTEM_2x4</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0.28</fScale>
 			<fInterfaceScale>0.4</fInterfaceScale>
 			<NIF>Art/Structures/Buildings/Apostolic_Palace/Apostolic_Palace.nif</NIF>
 			<KFM/>
-			<Button>Art/Interface/Buttons/Buildings/ApostolicPalace.dds</Button>
+			<Button>,Art/Interface/Buttons/TechTree/Corporation.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,2,14</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_ISLAMIC_TEMPLE</Type>
@@ -2206,6 +2206,16 @@
 			<NIF>Art/Structures/Wonders/HagiaSophia/HagiaSophia_Proper.nif</NIF>
 			<KFM/>
 			<Button>,Art/Interface/Buttons/Buildings/HagiaSophia.dds,Art/Interface/Buttons/Buildings_Atlas.dds,4,3</Button>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_AACHEN_CATHEDRAL</Type>
+			<LSystem>LSYSTEM_4x2</LSystem>
+			<bAnimated>0</bAnimated>
+			<fScale>0.45</fScale>
+			<fInterfaceScale>0.3</fInterfaceScale>
+			<NIF>Art/Structures/Wonders/AachenCathedral/Aachen08.nif</NIF>
+			<KFM/>
+			<Button>Art/Structures/Wonders/AachenCathedral/AachenCathedral_btn.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_WEAVER</Type>

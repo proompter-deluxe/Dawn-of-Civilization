@@ -662,6 +662,30 @@
 		<Spanish>The [COLOR_BUILDING_TEXT]Hagia Sophia[COLOR_REVERT] adds additional espionage to all buildings of your state religion. It also increases its city's chances of generating a [COLOR_UNIT_TEXT]Great Engineer[COLOR_REVERT].</Spanish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_BUILDING_AACHEN_CATHEDRAL</Tag>
+		<English>Aachen Cathedral</English>
+		<French>
+			<Text>Cath&#233;drale d'Aix-la-Chapelle</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Aachener Dom</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Cattedrale di Aquisgrana</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Catedral de Aquisgr&#225;n</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MT_RUSHMORE_STRATEGY</Tag>
 		<English>[COLOR_BUILDING_TEXT]Mt. Rushmore[COLOR_REVERT] decreases war weariness in all cities in your civilization and increases its city's chances of generating a [COLOR_UNIT_TEXT]Great Artist[COLOR_REVERT].</English>
 		<French>[COLOR_BUILDING_TEXT]Mt. Rushmore[COLOR_REVERT] decreases war weariness in all cities in your civilization and increases its city's chances of generating a [COLOR_UNIT_TEXT]Great Artist[COLOR_REVERT].</French>
