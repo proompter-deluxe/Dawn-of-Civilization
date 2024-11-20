@@ -120,6 +120,7 @@ GREECE = "TXT_KEY_VICTORY_NAME_GREECE"
 CRIMEA = "TXT_KEY_VICTORY_NAME_CRIMEA"
 ATTICA = "TXT_KEY_VICTORY_NAME_ATTICA"
 MEDITERRANEAN_COAST = "TXT_KEY_VICTORY_NAME_MEDITERRANEAN_COAST"
+ARAB_LANDS = "TXT_KEY_VICTORY_NAME_ARAB_LANDS"
 
 # area descriptors
 ANDEAN_COAST = "TXT_KEY_VICTORY_NAME_ANDEAN_COAST"
@@ -712,9 +713,9 @@ dGoals = {
 	),
 	iMamluks: (
 		All(
-			AreaNoStateReligion(plots.regions(rEgypt, rLevant, rMesopotamia, rArabia, rYemenOman).named(MIDDLE_EAST), iCatholicism),
-			AreaNoStateReligion(plots.regions(rEgypt, rLevant, rMesopotamia, rArabia, rYemenOman).named(MIDDLE_EAST), iOrthodoxy),
-			AllowOnly(plots.regions(rEgypt, rLevant, rMesopotamia, rArabia, rYemenOman).named(MIDDLE_EAST), group(iCivGroupMiddleEast).named(MIDDLE_EASTERN)),
+			AreaNoStateReligion(plots.regions(rMaghreb, rEgypt, rLevant, rMesopotamia, rArabia, rYemenOman).named(ARAB_LANDS), iCatholicism),
+			AreaNoStateReligion(plots.regions(rMaghreb, rEgypt, rLevant, rMesopotamia, rArabia, rYemenOman).named(ARAB_LANDS), iOrthodoxy),
+			AllowOnly(plots.regions(rEgypt, rLevant, rMesopotamia, rArabia, rYemenOman).named(ARAB_LANDS), group(iCivGroupMiddleEast).named(MIDDLE_EASTERN)),
 			at=1300,	
 		),
 		All(
@@ -800,7 +801,13 @@ dGoals = {
 	),
 	iTimurids: (
 		All(
-			ConqueredCities(10, inside=plots.regions(lMiddleEast).named(MIDDLE_EAST)),
+			ConqueredCities(2, inside=plots.region(rPersia)),
+			ConqueredCities(2, inside=plots.region(rMesopotamia)),
+			ConqueredCities(2, inside=plots.region(rLevant)),
+			ConqueredCities(1, inside=plots.region(rCaucasus)),
+			ConqueredCities(1, inside=plots.region(rAnatolia)),
+			ConqueredCities(1, inside=plots.region(rHinduKush)),
+			ConqueredCities(1, inside=plots.region(rPunjab)),
 			by=1500
 		),
 		Wonders(iRedFort, iShalimarGardens, iTajMahal, iGurEAmir, by=1660),

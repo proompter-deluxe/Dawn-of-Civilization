@@ -87,6 +87,7 @@ dResourcesDict = {
 	(78, 41)  : (700,   iSugar),	# Egypt
 	(113, 44) : (800,   iOpium),    # Bengal
 	(82, 40)  : (900,   iIron),		# Egypt
+	(101, 50) : (900,   iHorse),	# Punjab
 	(73, 25)  : (1000,  iBanana),   # Congo
 	(70, 30)  : (1000,  iBanana),   # Cameroon
 	(62, 32)  : (1000,  iBanana),   # West Africa
@@ -307,6 +308,7 @@ dFeaturesDict = {
 }
 
 dRemovedFeaturesDict = {
+	(90, 44)  : -500, # Mesopotamia
 	(69, 56)  : 400,  # Venice
 	(80, 37)  : 550,  # Nubia
 	(81, 39)  : 550,  # Nubia

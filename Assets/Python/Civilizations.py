@@ -1092,7 +1092,6 @@ dStartingUnits = CivDict({
 		iDefend: 6,
 		iAttack: 4,
 		iHarass: 6,
-		iShock: 12,
 		iSiege: 8,
 		iMissionary: 2,
 	},
@@ -1356,7 +1355,6 @@ dExtraAIUnits = CivDict({
 		iWork: 1,
 		iAttack: 4,
 		iHarass: 4,
-		iShock: 5,
 		iSiege: 7,
 		iMissionary: 1,
 	},
@@ -1578,6 +1576,9 @@ dSpecificAIStartingUnits = CivDict({
 	iByzantium: {
 		iTagmata: 4,
 	},
+	iTimurids: {
+		iKeshik: 5,
+	}
 }, {})
 
 dStartingExperience = CivDict({
@@ -1669,6 +1670,8 @@ def createSpecificUnits(iPlayer, tile):
 		makeUnits(iPlayer, iHorseArcher, tile, 5)
 	elif iCiv == iFrance:
 		makeUnits(iPlayer, iAxeman, tile, 5)
+	elif iCiv == iTimurids:
+		makeUnits(iPlayer, iKeshik, tile, 12)
 
 dSpecificAdditionalUnits = CivDict({
 	iEthiopia: {

@@ -7145,8 +7145,8 @@
 					<UnitType>UNIT_TURKIC_OGHUZ</UnitType>
 				</Unit>
 				<Unit>
-					<UnitClassType>UNITCLASS_LANCER</UnitClassType>
-					<UnitType>UNIT_MONGOLIAN_KESHIK</UnitType>
+					<UnitClassType>UNITCLASS_BOMBARD</UnitClassType>
+					<UnitType>UNIT_SIEGE_ENGINEER</UnitType>
 				</Unit>
 			</Units>
 			<FreeUnitClasses>
