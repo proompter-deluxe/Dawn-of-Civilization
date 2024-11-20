@@ -141,6 +141,11 @@ def captureSlaves(winningUnit, losingUnit):
 	if civ(losingUnit) == iNative:
 		if player(winningUnit).isSlavery() or player(winningUnit).isColonialSlavery():
 			captureUnit(losingUnit, winningUnit, iSlave, 50)
+	
+	# also enslave barbarians but at a lesser rate
+	if civ(losingUnit) == iBarbarian:
+		if player(winningUnit).isSlavery() or player(winningUnit).isColonialSlavery():
+			captureUnit(losingUnit, winningUnit, iSlave, 15)
 
 
 @handler("combatResult")
