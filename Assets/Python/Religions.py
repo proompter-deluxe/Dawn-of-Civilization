@@ -84,7 +84,7 @@ def checkFoundReligions(iGameTurn):
 			foundReligion(tMecca, iIslam)
 
 	if not game.isReligionFounded(iShia) and iGameTurn >= year(900) - turns(data.iSeed % 10):
-		foundReligion(selectHolyCity(plots.regions(rYemenOman, rPersia, rKhorasan, rTransoxiana), None, False), iShia)
+		foundReligion(selectHolyCity(plots.regions(rYemenOman, rPersia, rKhorasan, rHinduKush), None, False), iShia)
 
 @handler("BeginGameTurn")
 def checkSchism(iGameTurn):

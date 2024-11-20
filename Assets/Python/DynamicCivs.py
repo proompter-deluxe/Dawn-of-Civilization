@@ -1578,7 +1578,7 @@ def specificAdjective(iPlayer):
 			return "TXT_KEY_CIV_MONGOLIA_MONGOL"
 	
 	elif iCiv == iGhorids:
-		if cities.regions(lIndia).owner(iPlayer) > 0:
+		if cities.regions(lIndia).owner(iPlayer).count() > 0:
 			return "TXT_KEY_CIV_GHURIDS_ADJECTIVE"
 		if iEra < iRenaissance:
 			return "TXT_KEY_CIV_GHAZNAVIDS_ADJECTIVE"

@@ -783,13 +783,13 @@ dGoals = {
 	),
 	iGhorids: (
 		All(
-			BuildingCount(iIslamicCathedral, 3),
-			SpecialistCount(iSpecialistSlave, 12),
-			by=1200,
+			BuildingCount(iIslamicCathedral, 2),
+			SpecialistCount(iSpecialistSlave, 8),
+			by=1250,
 		),	
 		All(
-			AreaNoReligion(plots.regions(*lIndia).named(INDIA), iHinduism),	
-			AreaNoReligion(plots.regions(*lIndia).named(INDIA), iBuddhism),
+			AreaNoStateReligion(plots.regions(*lIndia).named(INDIA), iHinduism),	
+			AreaNoStateReligion(plots.regions(*lIndia).named(INDIA), iBuddhism),
         	by=1400,
 		),
 		AllowNone(
@@ -800,11 +800,10 @@ dGoals = {
 	),
 	iTimurids: (
 		All(
-			LandPercent(5),
-			PopulationPercent(10),
+			ConqueredCities(10, inside=plots.regions(lMiddleEast).named(MIDDLE_EAST)),
 			by=1500
 		),
-		Wonders(iRedFort, iShalimarGardens, iTajMahal, by=1660),
+		Wonders(iRedFort, iShalimarGardens, iTajMahal, iGurEAmir, by=1660),
 		CultureAmount(50000, at=1750),
 	),
 	iThailand: (

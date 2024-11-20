@@ -546,7 +546,7 @@ def spawnConquerors(iPlayer, iPreferredTarget, tTL, tBR, iNumTargets, iWarPlan =
 			makeUnits(iPlayer, iAzmaru, tPlot, 2, UnitAITypes.UNITAI_ATTACK_CITY)
 
 		elif iCiv == iRome:
-			makeUnits(iPlayer, iLegion, tPlot, 3, UnitAITypes.UNITAI_ATTACK_CITY)
+			makeUnits(iPlayer, iLegion, tPlot, 2, UnitAITypes.UNITAI_ATTACK_CITY)
 			makeUnits(iPlayer, iBallista, tPlot, 2, UnitAITypes.UNITAI_ATTACK_CITY)
 			makeUnits(iPlayer, iHorseman, tPlot, 1, UnitAITypes.UNITAI_ATTACK_CITY)
 
@@ -555,7 +555,7 @@ def spawnConquerors(iPlayer, iPreferredTarget, tTL, tBR, iNumTargets, iWarPlan =
 				iAttack: 2 + iRenaissanceExtras,
 				iCitySiege: 2 + iRenaissanceExtras,
 				iDefend: 1,
-				iShockCity: iMedievalExtras * 2 + iRenaissanceExtras + iNomadExtras,
+				iShockCity: iMedievalExtras + iRenaissanceExtras + iNomadExtras,
 				iCounter: max(iMedievalExtras + iRenaissanceExtras - iNomadExtras, 0),
 				iHarass: iNomadExtras * 2
 			}

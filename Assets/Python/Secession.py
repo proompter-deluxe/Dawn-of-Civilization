@@ -184,7 +184,13 @@ def getPossibleMinors(iPlayer):
 
 	if gc.getGame().countKnownTechNumTeams(iNationalism) == 0 and civ(iPlayer) in [iMaya, iToltecs, iAztecs, iInca, iMali, iEthiopia, iCongo, iIroquois]:
 		lPossibleMinors = [iNative]
+
+	elif gc.getGame().countKnownTechNumTeams(iNationalism) == 0 and civ(iPlayer) in [iSwahili, iIndia, iDravidia, iHarappa, iJava, iEthiopia, iNubia]:
+		lPossibleMinors = [iBarbarian, iNative]
 		
+	elif gc.getGame().getCurrentEra() <= iClassical:
+		lPossibleMinors = [iBarbarian, iNative, iIndependent, iIndependent2]
+
 	elif gc.getGame().getCurrentEra() <= iMedieval:
 		lPossibleMinors = [iBarbarian, iIndependent, iIndependent2]
 		

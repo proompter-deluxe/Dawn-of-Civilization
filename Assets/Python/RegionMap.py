@@ -96,8 +96,8 @@ tSpreadFactors = (
 # Shia
 {
 	iCore : 		[rYemenOman, rMesopotamia, rPersia],
-	iHistorical : 	[rMaghreb, rLevant, rEgypt, rKhorasan, rTransoxiana, rCaucasus, rRajputana, rSwahiliCoast],
-	iPeriphery : 	[rNubia, rAnatolia, rBalkans, rHindustan, rBengal, rCentralAsianSteppe, rSindh, rPunjab, rHinduKush, rArabia],
+	iHistorical : 	[rMaghreb, rLevant, rEgypt, rKhorasan, rCaucasus, rRajputana, rSwahiliCoast, rHinduKush],
+	iPeriphery : 	[rNubia, rAnatolia, rBalkans, rHindustan, rBengal, rCentralAsianSteppe, rSindh, rPunjab, rArabia, rTransoxiana],
 	iMinority : 	[rUrals, rSiberia, rTarimBasin, rMongolia, rIberia, rDeccan, rPonticSteppe, rCrimea, rHornOfAfrica, rSahara, rSahel, rIndonesia],
 },
 )

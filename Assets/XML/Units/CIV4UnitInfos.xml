@@ -5418,7 +5418,7 @@
 				</UnitCombatMod>
 				<UnitCombatMod>
 					<UnitCombatType>UNITCOMBAT_GUN</UnitCombatType>
-					<iUnitCombatMod>-50</iUnitCombatMod>
+					<iUnitCombatMod>-75</iUnitCombatMod>
 				</UnitCombatMod>
 			</UnitCombatMods>
 			<FreePromotions>
@@ -5428,6 +5428,10 @@
 				</FreePromotion>
 				<FreePromotion>
 					<PromotionType>PROMOTION_CITY_GARRISON2</PromotionType>
+					<bFreePromotion>1</bFreePromotion>
+				</FreePromotion>
+				<FreePromotion>
+					<PromotionType>PROMOTION_CITY_GARRISON3</PromotionType>
 					<bFreePromotion>1</bFreePromotion>
 				</FreePromotion>
 			</FreePromotions>

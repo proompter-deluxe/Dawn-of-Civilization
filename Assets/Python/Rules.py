@@ -137,13 +137,10 @@ def captureSlaves(winningUnit, losingUnit):
 		captureUnit(losingUnit, winningUnit, iSlave, 100)
 		return
 	
-	if players.major().existing().none(lambda p: team(p).isHasTech(iCompass)):
-		return
-		
+	# enslave natives if your civic is slavery or colonialism regardless of era
 	if civ(losingUnit) == iNative:
-		if civ(winningUnit) not in lBioNewWorld or any(data.dFirstContactConquerors.values()):
-			if player(winningUnit).isSlavery() or player(winningUnit).isColonialSlavery():
-				captureUnit(losingUnit, winningUnit, iSlave, 50)
+		if player(winningUnit).isSlavery() or player(winningUnit).isColonialSlavery():
+			captureUnit(losingUnit, winningUnit, iSlave, 50)
 
 
 @handler("combatResult")
