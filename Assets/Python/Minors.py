@@ -455,7 +455,7 @@ minor_cities = [
 	MinorCity(-2050, iIndependent, (118, 49), "Sanxingdui", iPopulation=2, iCiv=iChina, units={iDefend: 1, iBase: 1}, adjective="TXT_KEY_ADJECTIVE_SHU"),
 	MinorCity(-1830, iBarbarian, (124, 52), "Daliang", iPopulation=2, iCiv=iChina, units={iDefend: 1, iBase: 1}, adjective="TXT_KEY_ADJECTIVE_WEI"),
 	MinorCity(-1830, iIndependent, (127, 53), "Jimo", iPopulation=1, iCiv=iChina, units={iDefend: 1}, adjective="TXT_KEY_ADJECTIVE_QI"),
-	MinorCity(-2200, iBarbarian, tJerusalem, "Yerushalayim", iPopulation=1, iCiv=iBabylonia, units={iDefend: 2}, adjective="TXT_KEY_ADJECTIVE_ISRAELITE"),
+	MinorCity(-2200, iIndependent2, tJerusalem, "Yerushalayim", iPopulation=1, iCiv=iBabylonia, units={iDefend: 2}, adjective="TXT_KEY_ADJECTIVE_ISRAELITE"),
 	MinorCity(-2000, iIndependent, (85, 47), "Sur", iPopulation=1, iCiv=iBabylonia, units={iDefend: 1, iCounter: 1}, adjective="TXT_KEY_CIV_PHOENICIA_ADJECTIVE"),
 	MinorCity(-1200, iBarbarian, tDelhi, "Indraprastha", iPopulation=1, iCiv=iHarappa, units={iDefend: 1, iCounter: 1}, bIgnoreRuins=True, condition=lambda: not player(iHarappa).isHuman(), adjective="TXT_KEY_ADJECTIVE_VEDIC"),
 	MinorCity(-1200, iBarbarian, tVaranasi, "Kashika", iPopulation=1, iCiv=iHarappa, units={iDefend: 1, iCounter: 1}, bIgnoreRuins=True, condition=lambda: not player(iHarappa).isHuman(), adjective="TXT_KEY_ADJECTIVE_VEDIC"),

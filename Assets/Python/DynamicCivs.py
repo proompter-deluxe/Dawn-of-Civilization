@@ -192,7 +192,7 @@ dSpecificVassalTitles = deepdict({
 		iIndia : "TXT_KEY_CIV_MUGHAL_INDIA",
 	},
 	iGhorids : {
-		iIndia : "TXT_KEY_CIV_GHORID_INDIA",
+		iIndia : "TXT_KEY_CIV_GHURID_INDIA",
 	},
 	iRussia : {
 		iTurks : "TXT_KEY_ADJECTIVE_TITLE",
@@ -1579,11 +1579,11 @@ def specificAdjective(iPlayer):
 	
 	elif iCiv == iGhorids:
 		if cities.regions(lIndia).owner(iPlayer) > 0:
-			return "TXT_KEY_CIV_GHORIDS_ADJECTIVE"
+			return "TXT_KEY_CIV_GHURIDS_ADJECTIVE"
 		if iEra < iRenaissance:
 			return "TXT_KEY_CIV_GHAZNAVIDS_ADJECTIVE"
 		
-		return "TXT_KEY_CIV_GHORIDS_ADJECTIVE"
+		return "TXT_KEY_CIV_GHURIDS_ADJECTIVE"
 
 	elif iCiv == iOttomans:
 		return "TXT_KEY_CIV_OTTOMANS_OTTOMAN"

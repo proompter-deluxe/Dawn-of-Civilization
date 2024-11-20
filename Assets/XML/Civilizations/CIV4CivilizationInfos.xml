@@ -2434,11 +2434,11 @@
 			<CivilizationActionSound>AS3D_GERMANY_ORDER</CivilizationActionSound>
 		</CivilizationInfo>
 		<CivilizationInfo>
-			<Type>CIVILIZATION_GHORIDS</Type>
-			<Description>TXT_KEY_CIV_GHORIDS_DESC</Description>
-			<ShortDescription>TXT_KEY_CIV_GHORIDS_SHORT_DESC</ShortDescription>
-			<Adjective>TXT_KEY_CIV_GHORIDS_ADJECTIVE</Adjective>
-			<Civilopedia>TXT_KEY_CIV_GHORIDS_PEDIA</Civilopedia>
+			<Type>CIVILIZATION_GHURIDS</Type>
+			<Description>TXT_KEY_CIV_GHURIDS_DESC</Description>
+			<ShortDescription>TXT_KEY_CIV_GHURIDS_SHORT_DESC</ShortDescription>
+			<Adjective>TXT_KEY_CIV_GHURIDS_ADJECTIVE</Adjective>
+			<Civilopedia>TXT_KEY_CIV_GHURIDS_PEDIA</Civilopedia>
 			<DefaultPlayerColor>PLAYERCOLOR_DARK_ROT_GREEN</DefaultPlayerColor>
 			<ArtDefineTag>ART_DEF_CIVILIZATION_GHORIDS</ArtDefineTag>
 			<ArtStyleType>ARTSTYLE_MIDDLE_EAST</ArtStyleType>

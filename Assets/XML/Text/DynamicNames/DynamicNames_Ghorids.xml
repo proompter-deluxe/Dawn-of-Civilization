@@ -2,7 +2,7 @@
 <!--  -->
 <Civ4GameText xmlns="http://www.firaxis.com">
 	<TEXT>
-		<Tag>TXT_KEY_CIV_GHORIDS_DESC</Tag>
+		<Tag>TXT_KEY_CIV_GHURIDS_DESC</Tag>
 		<English>The Ghurids</English>
 		<French>The Ghurids</French>
 		<German>The Ghurids</German>
@@ -10,7 +10,7 @@
 		<Spanish>The Ghurids</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CIV_GHORIDS_PEOPLES</Tag>
+		<Tag>TXT_KEY_CIV_GHURIDS_PEOPLES</Tag>
 		<English>Ghazni Peoples</English>
 		<French>
 			<Text>Peuplades ghaznis</Text>
@@ -22,7 +22,7 @@
 		<Spanish>Ghazni Peoples</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CIV_GHORIDS_ADJECTIVE</Tag>
+		<Tag>TXT_KEY_CIV_GHURIDS_ADJECTIVE</Tag>
 		<English>Ghurid</English>
 		<French>Ghurid</French>
 		<German>Ghurid</German>
@@ -38,7 +38,7 @@
 		<Spanish>Ghaznavid</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CIV_GHORIDS_SHORT_DESC</Tag>
+		<Tag>TXT_KEY_CIV_GHURIDS_SHORT_DESC</Tag>
 		<English>Ghurids</English>
 		<French>Ghurids</French>
 		<German>Ghurids</German>
@@ -46,7 +46,7 @@
 		<Spanish>Ghurids</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CIV_GHORIDS_DEFAULT</Tag>
+		<Tag>TXT_KEY_CIV_GHURIDS_DEFAULT</Tag>
 		<English>Kingdom of %s1</English>
 		<French>
 			<Text>Royaume de %s1</Text>
@@ -70,7 +70,7 @@
 		</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CIV_GHORID_INDIA</Tag>
+		<Tag>TXT_KEY_CIV_GHURID_INDIA</Tag>
 		<English>Deccan Sultanates</English>
 		<French>
 			<Text>Sultatnats du Deccan</Text>
