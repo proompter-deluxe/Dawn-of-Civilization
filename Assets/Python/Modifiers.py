@@ -674,7 +674,7 @@ dHealthMods = CivDict({
 }, default=2)
 
 dUnitCostMods = CivDict({
-	iEgypt: 140,
+	iEgypt: 200,
 	iBabylonia: 140,
 	iHarappa: 200,
 	iChina: 130,
