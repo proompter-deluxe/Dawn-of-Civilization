@@ -52,7 +52,6 @@ lIndependenceCivs = [
 	iFrance,
 	iSpain,
 	iGreece,
-	iTimurids,
 	iGhorids,
 ]
 
@@ -815,6 +814,13 @@ class Birth(object):
 			if players.major().where(lambda p: civ(p) != self.iCiv).where(lambda p: birthCities.owner(p).any()).all_if_any(lambda p: stability(p) >= iStabilitySolid):
 				return False
 		
+		# Timurid spawn can be avoided if player is Mongols or Turks and is stable
+		if self.iCiv == iTimurids:
+			if player(iMongols).isHuman() and stability(iMongols) == iStabilitySolid:
+				return False
+			elif player(iTurks).isHuman() and stability(iTurks) == iStabilitySolid:
+				return False
+
 		return True
 	
 	def announce(self):
