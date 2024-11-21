@@ -140,11 +140,11 @@ def checkSchism(iGameTurn):
 @handler("BeginGameTurn")
 def spreadReligionsRegionally():
 	spreadReligionToRegion(iJudaism, [rIberia, rFrance, rLowerGermany, rCentralEurope, rPoland, rItaly, rBritain, rRuthenia, rBalkans], 1000, 1800, 10)
-	spreadReligionToRegion(iJudaism, [rMesopotamia, rAnatolia, rEgypt], 600, 1000, 20)
+	spreadReligionToRegion(iJudaism, [rMesopotamia, rAnatolia, rEgypt], 600, 1000, 15)
 	spreadReligionToRegion(iJudaism, [rOntario, rMaritimes, rAtlanticSeaboard, rMidwest], 1850, 1950, 10)
 
-	spreadReligionToRegion(iIslam, [rHinduKush, rTransoxiana, rKhorasan], 850, 1300, 10)
-	spreadReligionToRegion(iShia, [rPersia, rTransoxiana, rKhorasan, rDeccan, rRajputana, rYemenOman], 915, 1300, 10)
+	spreadReligionToRegion(iIslam, [rHinduKush, rTransoxiana, rKhorasan], 850, 1300, 6)
+	spreadReligionToRegion(iShia, [rPersia, rTransoxiana, rKhorasan, rDeccan, rRajputana, rYemenOman], 915, 1300, 6)
 
 @handler("BeginGameTurn")
 def spreadHinduismSoutheastAsia():
