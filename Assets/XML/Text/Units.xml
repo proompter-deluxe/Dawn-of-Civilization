@@ -2050,6 +2050,14 @@
 		<Spanish>Raider</Spanish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_UNIT_GHURID_VETERAN_SPEARS</Tag>
+		<English>Mujahideen Spears</English>
+		<French>Mujahideen Spears</French>
+		<German>Mujahideen Spears</German>
+		<Italian>Mujahideen Spears</Italian>
+		<Spanish>Mujahideen Spears</Spanish>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_UNIT_GREAT_SPY</Tag>
 		<English>Great Spy</English>
 		<French>

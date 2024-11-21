@@ -1800,6 +1800,10 @@
 					<UnitClassType>UNITCLASS_GRENADIER</UnitClassType>
 					<UnitType>UNIT_DRAVIDIAN_ROCKETEER</UnitType>
 				</Unit>
+				<Unit>
+					<UnitClassType>UNITCLASS_BOMBARD</UnitClassType>
+					<UnitType>UNIT_MUGHAL_SIEGE_ELEPHANT</UnitType>
+				</Unit>
 			</Units>
 			<FreeUnitClasses>
 				<FreeUnitClass>
@@ -1846,7 +1850,7 @@
 			<DefaultPlayerColor>PLAYERCOLOR_YELLOW</DefaultPlayerColor>
 			<ArtDefineTag>ART_DEF_CIVILIZATION_EGYPT</ArtDefineTag>
 			<ArtStyleType>ARTSTYLE_MIDDLE_EAST</ArtStyleType>
-			<UnitArtStyleType>UNIT_ARTSTYLE_MIDDLE_EASTERN</UnitArtStyleType>
+			<UnitArtStyleType>UNIT_ARTSTYLE_EGYPTIAN</UnitArtStyleType>
 			<PaganReligion>PAGAN_RELIGION_PESEDJET</PaganReligion>
 			<Impact>IMPACT_CRITICAL</Impact>
 			<Identifier>EGY</Identifier>
@@ -2440,7 +2444,7 @@
 			<Adjective>TXT_KEY_CIV_GHURIDS_ADJECTIVE</Adjective>
 			<Civilopedia>TXT_KEY_CIV_GHURIDS_PEDIA</Civilopedia>
 			<DefaultPlayerColor>PLAYERCOLOR_DARK_ROT_GREEN</DefaultPlayerColor>
-			<ArtDefineTag>ART_DEF_CIVILIZATION_GHORIDS</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_CIVILIZATION_GHURIDS</ArtDefineTag>
 			<ArtStyleType>ARTSTYLE_MIDDLE_EAST</ArtStyleType>
 			<UnitArtStyleType>UNIT_ARTSTYLE_MIDDLE_EASTERN</UnitArtStyleType>
 			<PaganReligion>PAGAN_RELIGION_MAZDAISM</PaganReligion>
@@ -2500,8 +2504,8 @@
 			</Buildings>
 			<Units>
 				<Unit>
-					<UnitClassType>UNITCLASS_BOMBARD</UnitClassType>
-					<UnitType>UNIT_MUGHAL_SIEGE_ELEPHANT</UnitType>
+					<UnitClassType>UNITCLASS_HEAVY_SPEARMAN</UnitClassType>
+					<UnitType>UNIT_GHURID_VETERAN_SPEARS</UnitType>
 				</Unit>
 				<Unit>
 					<UnitClassType>UNITCLASS_LANCER</UnitClassType>

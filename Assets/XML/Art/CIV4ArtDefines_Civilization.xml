@@ -271,7 +271,7 @@
 			<bWhiteFlag>0</bWhiteFlag>
 		</CivilizationArtInfo>
 		<CivilizationArtInfo>
-			<Type>ART_DEF_CIVILIZATION_GHORIDS</Type>
+			<Type>ART_DEF_CIVILIZATION_GHURIDS</Type>
 			<Button>Art/Interface/Buttons/Civilizations/Mughals.dds</Button>
 			<Path>Art/Interface/TeamColor/FlagDECAL_Mughals.dds</Path>
 			<bWhiteFlag>0</bWhiteFlag>
