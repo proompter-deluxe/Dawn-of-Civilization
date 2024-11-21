@@ -2,7 +2,7 @@
 <!-- China -->
 <Civ4GameText xmlns="http://www.firaxis.com">
 	<TEXT>
-		<Tag>TXT_KEY_CIV_YANGTZE_CHINA_DESC</Tag>
+		<Tag>TXT_KEY_CIV_WU_DESC</Tag>
 		<English>The Wu</English>
 		<French>
 			<Text>Les Wus</Text>
@@ -14,7 +14,7 @@
 		<Spanish>The Wu</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CIV_YANGTZE_CHINA_PEOPLES</Tag>
+		<Tag>TXT_KEY_CIV_WU_PEOPLES</Tag>
 		<English>Yangtze Peoples</English>
 		<French>
 			<Text>Peuples du Yangtze</Text>
@@ -38,7 +38,7 @@
 		</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CIV_YANGTZE_CHINA_DEFAULT</Tag>
+		<Tag>TXT_KEY_CIV_WU_DEFAULT</Tag>
 		<English>Kingdom of %s2</English>
 		<French>
 			<Text>Royaume de %s2</Text>
@@ -62,7 +62,7 @@
 		</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CIV_YANGTZE_CHINA_FASCIST</Tag>
+		<Tag>TXT_KEY_CIV_WU_FASCIST</Tag>
 		<English>Republic of China</English>
 		<French>
 			<Text>Nation de Chine</Text>
@@ -74,7 +74,7 @@
 		<Spanish>Nation of %s1</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CIV_YANGTZE_CHINA_HAN</Tag>
+		<Tag>TXT_KEY_CIV_WU_HAN</Tag>
 		<English>Han</English>
 		<French>
 			<Text>Han</Text>
@@ -94,7 +94,7 @@
 		</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CIV_YANGTZE_CHINA_SONG</Tag>
+		<Tag>TXT_KEY_CIV_WU_SONG</Tag>
 		<English>Southern Song</English>
 		<French>Song du sud</French>
 		<German>Sudliche Song</German>
@@ -102,7 +102,7 @@
 		<Spanish>Song meridional</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CIV_YANGTZE_CHINA_MING</Tag>
+		<Tag>TXT_KEY_CIV_WU_MING</Tag>
 		<English>Southern Ming</English>
 		<French>Ming du sud</French>
 		<German>Southern Ming</German>
@@ -110,7 +110,7 @@
 		<Spanish>Southern Ming</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CIV_YANGTZE_CHINA_WU</Tag>
+		<Tag>TXT_KEY_CIV_WU_WU</Tag>
 		<English>Wu</English>
 		<French>Wu</French>
 		<German>Wu</German>
@@ -142,7 +142,7 @@
 		</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CIV_YANGTZE_CHINA_SHORT_DESC</Tag>
+		<Tag>TXT_KEY_CIV_WU_SHORT_DESC</Tag>
 		<English>Wu</English>
 		<French>
 			<Text>Wu</Text>
@@ -166,7 +166,7 @@
 		</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CIV_YANGTZE_CHINA_ADJECTIVE</Tag>
+		<Tag>TXT_KEY_CIV_WU_ADJECTIVE</Tag>
 		<English>
 			<Text>Wu</Text>
 			<Gender>Male</Gender>

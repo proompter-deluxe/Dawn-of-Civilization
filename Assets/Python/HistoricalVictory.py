@@ -747,7 +747,7 @@ dGoals = {
 	),
 	iParthia: (
 		BestPopulationCity(capital().named(CAPITAL), at=100),
-		DefeatedUnits(civs(iRome, iByzantium), 35, by=500),
+		DefeatedUnits(civs(iRome, iByzantium), 30, by=500),
 		PopulationPercent(10, at=850),
 	),
 	iMinoans: (

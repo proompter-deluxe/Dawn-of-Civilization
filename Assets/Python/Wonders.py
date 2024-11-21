@@ -169,6 +169,12 @@ def silverTreeFountainEffect(unit, iPlayer):
 			iGreatPerson = find_max(range(iNumUnits), lambda iUnit: city.getGreatPeopleUnitProgress(iUnit)).result
 			if iGreatPerson >= 0:
 				player(iPlayer).createGreatPeople(iGreatPerson, False, False, city.getX(), city.getY())
+		else:
+			# no GP points generated anywhere? generate a random GP in a random city
+			randomCity = cities.owner(iPlayer).random()
+			lGreatPeople = [iGreatProphet, iGreatArtist, iGreatScientist, iGreatMerchant, iGreatEngineer, iGreatStatesman]
+			iRandomGP = lGreatPeople[rand(len(lGreatPeople))]
+			player(iPlayer).createGreatPeople(iRandomGP, False, False, randomCity.getX(), randomCity.getY())
 
 
 # Nobel Prize effect: additional great people points whenever a Great Person is born in a civ with pleasant relations

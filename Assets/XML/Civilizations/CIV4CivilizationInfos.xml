@@ -1520,13 +1520,13 @@
 			<CivilizationActionSound>AS3D_CHINA_ORDER</CivilizationActionSound>
 		</CivilizationInfo>
 		<CivilizationInfo>
-			<Type>CIVILIZATION_YANGTZE_CHINA</Type>
-			<Description>TXT_KEY_CIV_YANGTZE_CHINA_DESC</Description>
-			<ShortDescription>TXT_KEY_CIV_YANGTZE_CHINA_SHORT_DESC</ShortDescription>
-			<Adjective>TXT_KEY_CIV_YANGTZE_CHINA_ADJECTIVE</Adjective>
+			<Type>CIVILIZATION_WU</Type>
+			<Description>TXT_KEY_CIV_WU_DESC</Description>
+			<ShortDescription>TXT_KEY_CIV_WU_SHORT_DESC</ShortDescription>
+			<Adjective>TXT_KEY_CIV_WU_ADJECTIVE</Adjective>
 			<Civilopedia>TXT_KEY_CIV_CHINA_PEDIA</Civilopedia>
 			<DefaultPlayerColor>PLAYERCOLOR_GREEN_AND_WHITE_GREEN_TEXT</DefaultPlayerColor>
-			<ArtDefineTag>ART_DEF_CIVILIZATION_YANGTZE_CHINA</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_CIVILIZATION_WU</ArtDefineTag>
 			<ArtStyleType>ARTSTYLE_ASIAN</ArtStyleType>
 			<UnitArtStyleType>UNIT_ARTSTYLE_ASIAN</UnitArtStyleType>
 			<PaganReligion>PAGAN_RELIGION_SHENDAO</PaganReligion>

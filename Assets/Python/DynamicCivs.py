@@ -189,10 +189,10 @@ dSpecificVassalTitles = deepdict({
 		iTimurids : "TXT_KEY_CIV_MONGOL_MUGHALS",
 	},
 	iTimurids : {
-		iIndia : "TXT_KEY_CIV_MUGHAL_INDIA",
+		iDravidia : "TXT_KEY_CIV_DECCAN_SULTANATES",
 	},
 	iGhorids : {
-		iIndia : "TXT_KEY_CIV_GHURID_INDIA",
+		iDravidia : "TXT_KEY_CIV_DECCAN_SULTANATES",
 	},
 	iRussia : {
 		iTurks : "TXT_KEY_ADJECTIVE_TITLE",
@@ -374,6 +374,7 @@ dForeignNames = deepdict({
 		iRussia : "TXT_KEY_CIV_ROMAN_NAME_RUSSIA",
 		iOttomans : "TXT_KEY_CIV_ROMAN_NAME_OTTOMANS",
 		iThailand : "TXT_KEY_CIV_ROMAN_NAME_THAILAND",
+		iCelts: "TXT_KEY_CIV_ROMAN_NAME_CELTS",
 	},
 	iTurks : {
 		iByzantium : "TXT_KEY_CIV_TURKIC_NAME_BYZANTIUM",
@@ -1328,12 +1329,12 @@ def specificAdjective(iPlayer):
 	elif iCiv == iChinaS:
 		if bMonarchy:
 			if iEra == iMedieval and tPlayer.isHasTech(iPaper) and tPlayer.isHasTech(iGunpowder):
-				return "TXT_KEY_CIV_YANGTZE_CHINA_SONG"
+				return "TXT_KEY_CIV_WU_SONG"
 
 			if iEra >= iRenaissance:
-				return "TXT_KEY_CIV_YANGTZE_CHINA_MING"
+				return "TXT_KEY_CIV_WU_MING"
 
-			return "TXT_KEY_CIV_YANGTZE_CHINA_WU"
+			return "TXT_KEY_CIV_WU_WU"
 			
 	elif iCiv == iBabylonia:
 		if bCityStates and not bEmpire:

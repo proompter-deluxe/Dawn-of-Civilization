@@ -54,23 +54,23 @@ tGreeceMesopotamiaBR = (90, 50)
 tEgyptTL = (76, 40)
 tEgyptBR = (82, 45)
 tGreecePersiaTL = (91, 43)
-tGreecePersiaBR = (97, 52)
+tGreecePersiaBR = (95, 50) # Does not include Herat on purpose!
 
 # following setup: iPlayer, iPreferredTarget, TL, BR, iNumTargets, iStartYear, iTurnInterval
 tConquestMacedonAnatolia = (19, iMacedon, iPersia, tGreeceAnatoliaTL, tGreeceAnatoliaBR, 2, iAlexanderYear, 10)
 tConquestMacedonLevant = (20, iMacedon, iPhoenicia, tLevantTL, tLevantBR, 3, iAlexanderYear, 20)
 tConquestMacedonEgypt = (6, iMacedon, iEgypt, tEgyptTL, tEgyptBR, 2, iAlexanderYear, 20)
-tConquestMacedonMesopotamia = (5, iMacedon, iPersia, tGreeceMesopotamiaTL, tGreeceMesopotamiaBR, 3, iAlexanderYear, 20)
-tConquestMacedonPersia = (7, iMacedon, iPersia, tGreecePersiaTL, tGreecePersiaBR, 4, iAlexanderYear, 20)
+tConquestMacedonMesopotamia = (5, iMacedon, iPersia, tGreeceMesopotamiaTL, tGreeceMesopotamiaBR, 2, iAlexanderYear, 20)
+tConquestMacedonPersia = (7, iMacedon, iPersia, tGreecePersiaTL, tGreecePersiaBR, 3, iAlexanderYear, 20)
 
 tConquestRomeCarthageInSpain = (22, iRome, iPhoenicia, tRomeSpainTL, tRomeSpainBR, 3, iRomeCarthageYear, 10)
-tConquestRomeCarthage = (0, iRome, iPhoenicia, tRomeCarthageTL, tRomeCarthageBR, 4, iRomeCarthageYear + 20, 30)
+tConquestRomeCarthage = (0, iRome, iPhoenicia, tRomeCarthageTL, tRomeCarthageBR, 3, iRomeCarthageYear + 20, 30)
 tConquestRomeGreece = (1, iRome, iGreece, tRomeGreeceTL, tRomeGreeceBR, 2, iRomeGreeceYear, 10)
 tConquestRomeAnatolia = (2, iRome, iMacedon, tRomeAnatoliaTL, tRomeAnatoliaBR, 2, iRomeAnatoliaYear, 15)
 tConquestRomeLevant = (28, iRome, iMacedon, tLevantTL, tLevantBR, 2, iRomeLevantYear, 10)
 tConquestRomeCelts = (3, iRome, iCelts, tRomeCeltiaTL, tRomeCeltiaBR, 2, iRomeCeltiaYear, 10)
-tConquestRomeEgypt = (4, iRome, iEgypt, tEgyptTL, tEgyptBR, 3, iRomeEgyptYear, 10)
-tConquestRomeBritain = (21, iRome, iCelts, tRomeBritainTL, tRomeBritainBR, 2, iRomeBritainYear, 20)
+tConquestRomeEgypt = (4, iRome, iEgypt, tEgyptTL, tEgyptBR, 2, iRomeEgyptYear, 10)
+tConquestRomeBritain = (21, iRome, iCelts, tRomeBritainTL, tRomeBritainBR, 1, iRomeBritainYear, 20)
 
 iCholaSumatraYear = 1030
 tCholaSumatraTL = (115, 26)
@@ -510,21 +510,24 @@ def spawnConquerors(iPlayer, iPreferredTarget, tTL, tBR, iNumTargets, iWarPlan =
 		tPlotLast = tPlot
 		
 		if iCiv == iMacedon:
-			makeUnits(iPlayer, iCatapult, tPlot, 2, UnitAITypes.UNITAI_ATTACK_CITY)
-			makeUnits(iPlayer, iPhalanx, tPlot, 2, UnitAITypes.UNITAI_ATTACK_CITY)
-			makeUnits(iPlayer, iCompanion, tPlot, 1, UnitAITypes.UNITAI_ATTACK_CITY)
+			lUnits  = makeUnits(iPlayer, iCatapult, tPlot, 2, UnitAITypes.UNITAI_ATTACK_CITY)
+			lUnits += makeUnits(iPlayer, iPhalanx, tPlot, 2, UnitAITypes.UNITAI_ATTACK_CITY)
+			lUnits += makeUnits(iPlayer, iCompanion, tPlot, 1, UnitAITypes.UNITAI_ATTACK_CITY)
 
 			# if Macedon happens to control Greece proper, give them volunteers
 			# otherwise give them mercenaries
 			if civ(plot(tAthens)) == iMacedon:
-				lUnits = makeUnits(iPlayer, iHoplite, tPlot, 1, UnitAITypes.UNITAI_ATTACK_CITY)
+				lUnits += makeUnits(iPlayer, iHoplite, tPlot, 1, UnitAITypes.UNITAI_ATTACK_CITY)
 			else:
-				lUnits = makeUnits(iPlayer, iHoplite, tPlot, 1, UnitAITypes.UNITAI_ATTACK_CITY)
-				lUnits.promotion(infos.type("PROMOTION_MERCENARY"))
+				lMercs = makeUnits(iPlayer, iHoplite, tPlot, 1, UnitAITypes.UNITAI_ATTACK_CITY)
+				lMercs.promotion(infos.type("PROMOTION_MERCENARY"))
+				lUnits += lMercs
 
 			# Tyre gets extra attackers, since it's a tough nut to crack and the site of a famous siege
 			if location(city) == tTyre:
-				makeUnits(iPlayer, iCatapult, tPlot, 2, UnitAITypes.UNITAI_ATTACK_CITY)
+				lUnits += makeUnits(iPlayer, iCatapult, tPlot, 2, UnitAITypes.UNITAI_ATTACK_CITY)
+
+			lUnits.promotion(infos.type("PROMOTION_CITY_RAIDER1"))
 
 		# Hannibalic army composition
 		elif iCiv == iPhoenicia:
@@ -537,18 +540,22 @@ def spawnConquerors(iPlayer, iPreferredTarget, tTL, tBR, iNumTargets, iWarPlan =
 			lUnits.promotion(infos.type("PROMOTION_MERCENARY"))
 
 		elif iCiv == iPersia:
-			makeUnits(iPlayer, iCatapult, tPlot, 1, UnitAITypes.UNITAI_ATTACK_CITY)
-			makeUnits(iPlayer, iImmortal, tPlot, 2, UnitAITypes.UNITAI_ATTACK_CITY)
-			makeUnits(iPlayer, iHorseman, tPlot, 1, UnitAITypes.UNITAI_ATTACK_CITY)
+			lUnits  = makeUnits(iPlayer, iCatapult, tPlot, 1, UnitAITypes.UNITAI_ATTACK_CITY)
+			lUnits += makeUnits(iPlayer, iImmortal, tPlot, 2, UnitAITypes.UNITAI_ATTACK_CITY)
+			lUnits += makeUnits(iPlayer, iHorseman, tPlot, 1, UnitAITypes.UNITAI_ATTACK_CITY)
+			lUnits.promotion(infos.type("PROMOTION_CITY_RAIDER1"))
 
 		elif iCiv == iAssyria:
-			makeUnits(iPlayer, iSiegeRam, tPlot, 2, UnitAITypes.UNITAI_ATTACK_CITY)
-			makeUnits(iPlayer, iAzmaru, tPlot, 2, UnitAITypes.UNITAI_ATTACK_CITY)
+			lUnits  = makeUnits(iPlayer, iSiegeRam, tPlot, 2, UnitAITypes.UNITAI_ATTACK_CITY)
+			lUnits += makeUnits(iPlayer, iChariot, tPlot, 1, UnitAITypes.UNITAI_ATTACK_CITY)
+			lUnits += makeUnits(iPlayer, iAzmaru, tPlot, 2, UnitAITypes.UNITAI_ATTACK_CITY)
+			lUnits.promotion(infos.type("PROMOTION_CITY_RAIDER1"))
 
 		elif iCiv == iRome:
-			makeUnits(iPlayer, iLegion, tPlot, 2, UnitAITypes.UNITAI_ATTACK_CITY)
-			makeUnits(iPlayer, iBallista, tPlot, 2, UnitAITypes.UNITAI_ATTACK_CITY)
-			makeUnits(iPlayer, iHorseman, tPlot, 1, UnitAITypes.UNITAI_ATTACK_CITY)
+			lUnits  = makeUnits(iPlayer, iLegion, tPlot, 2, UnitAITypes.UNITAI_ATTACK_CITY)
+			lUnits += makeUnits(iPlayer, iBallista, tPlot, 2, UnitAITypes.UNITAI_ATTACK_CITY)
+			lUnits += makeUnits(iPlayer, iHorseman, tPlot, 1, UnitAITypes.UNITAI_ATTACK_CITY)
+			lUnits.promotion(infos.type("PROMOTION_CITY_RAIDER1"))
 
 		else:
 			dConquestUnits = {

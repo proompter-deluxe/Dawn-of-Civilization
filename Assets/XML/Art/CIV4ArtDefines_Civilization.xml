@@ -61,7 +61,7 @@
 			<bWhiteFlag>0</bWhiteFlag>
 		</CivilizationArtInfo>
 		<CivilizationArtInfo>
-			<Type>ART_DEF_CIVILIZATION_YANGTZE_CHINA</Type>
+			<Type>ART_DEF_CIVILIZATION_WU</Type>
 			<Button>Art/Interface/Buttons/Civilizations/yangtze_china.dds</Button>
 			<Path>Art/Interface/TeamColor/FlagDECAL_RoC_Sun.dds</Path>
 			<bWhiteFlag>0</bWhiteFlag>

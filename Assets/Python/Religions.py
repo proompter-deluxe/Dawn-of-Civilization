@@ -138,25 +138,27 @@ def checkSchism(iGameTurn):
 
 
 @handler("BeginGameTurn")
-def spreadJudaism():
-	spreadReligionToRegion(iJudaism, [rIberia, rFrance, rLowerGermany, rCentralEurope, rPoland, rItaly, rBritain, rRuthenia, rBalkans], 1000, 10)
-	spreadReligionToRegion(iJudaism, [rMesopotamia, rAnatolia, rEgypt], 600, 20)
-	spreadReligionToRegion(iJudaism, [rOntario, rMaritimes, rAtlanticSeaboard, rMidwest], 1850, 10)
+def spreadReligionsRegionally():
+	spreadReligionToRegion(iJudaism, [rIberia, rFrance, rLowerGermany, rCentralEurope, rPoland, rItaly, rBritain, rRuthenia, rBalkans], 1000, 1800, 10)
+	spreadReligionToRegion(iJudaism, [rMesopotamia, rAnatolia, rEgypt], 600, 1000, 20)
+	spreadReligionToRegion(iJudaism, [rOntario, rMaritimes, rAtlanticSeaboard, rMidwest], 1850, 1950, 10)
 
+	spreadReligionToRegion(iIslam, [rHinduKush, rTransoxiana, rKhorasan], 850, 1300, 10)
+	spreadReligionToRegion(iShia, [rPersia, rTransoxiana, rKhorasan, rDeccan, rRajputana, rYemenOman], 915, 1300, 10)
 
 @handler("BeginGameTurn")
 def spreadHinduismSoutheastAsia():
 	lSouthEastAsianCivs = [iKhmer, iMalays, iJava]
 
 	if not game.isReligionFounded(iHinduism): return
-	if none(player(iCiv).isExisting() for iCiv in lSouthEastAsianCivs): return
+	# if none(player(iCiv).isExisting() for iCiv in lSouthEastAsianCivs): return
 	if not turn().between(500, 1200): return
 	
 	if not periodic(20): return
 	
-	contacts = players.major().where(lambda p: any(player(q).canContact(p) for q in lSouthEastAsianCivs) and player(p).getStateReligion() in [iHinduism, iBuddhism])
-	if not contacts:
-		return
+	# contacts = players.major().where(lambda p: any(player(q).canContact(p) for q in lSouthEastAsianCivs) and player(p).getStateReligion() in [iHinduism, iBuddhism])
+	# if not contacts:
+	#	return
 	
 	southEastAsiaCities = cities.regions(rIndochina, rIndonesia)
 	potentialCities = southEastAsiaCities.where(lambda city: not city.isHasReligion(iHinduism))
@@ -172,9 +174,10 @@ def spreadHinduismSoutheastAsia():
 def spreadIslamIndonesia():
 	if not game.isReligionFounded(iIslam): 
 		return
-		
-	if not player(iJava).isExisting() and not player(iMalays).isExisting(): 
-		return
+
+	# spread islam there regardless of if they have collapsed / been conquered or not	
+	#if not player(iJava).isExisting() and not player(iMalays).isExisting(): 
+	#	return
 
 	if not turn().between(1250, 1600): 
 		return
@@ -182,9 +185,9 @@ def spreadIslamIndonesia():
 	if not periodic(10): 
 		return
 	
-	indonesianContacts = players.major().where(lambda p: (player(iJava).canContact(p) or player(iMalays).canContact(p)) and player(p).getStateReligion() == iIslam)
-	if not indonesianContacts:
-		return
+	# indonesianContacts = players.major().where(lambda p: (player(iJava).canContact(p) or player(iMalays).canContact(p)) and player(p).getStateReligion() == iIslam)
+	# if not indonesianContacts:
+	#	return
 		
 	indonesianCities = cities.region(rIndonesia)
 	potentialCities = indonesianCities.where(lambda c: not c.isHasReligion(iIslam))
@@ -258,9 +261,9 @@ def selectHolyCity(area, tPreferredCity = None, bAIOnly = True):
 	return None
 
 	
-def spreadReligionToRegion(iReligion, lRegions, iStartDate, iInterval):
+def spreadReligionToRegion(iReligion, lRegions, iStartDate, iEndDate, iInterval):
 	if not game.isReligionFounded(iReligion): return
-	if turn() < year(iStartDate): return
+	if turn() < year(iStartDate) or turn() > iEndDate: return
 	
 	if not periodic(iInterval): return
 	

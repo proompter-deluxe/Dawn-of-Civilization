@@ -186,7 +186,7 @@ def checkEarlyColonists():
 			if pPlayer.isExisting():
 				message(active(), 'TXT_KEY_EVENT_EARLY_COLONIZERS', adjective(pPlayer))
 				makeUnit(iPhoenicia, iSettler, tCarthage)
-				makeUnits(iPhoenicia, iSacredBand, tCarthage, 2)
+				makeUnits(iPhoenicia, iSacredBand, tCarthage, 3)
 				makeUnits(iPhoenicia, iWorker, tCarthage, 2, UnitAITypes.UNITAI_WORKER)
 				makeUnits(iPhoenicia, iWarElephant, tCarthage, 2)
 		elif year() == year(-825) - offset:

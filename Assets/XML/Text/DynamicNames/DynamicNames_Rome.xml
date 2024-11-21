@@ -395,6 +395,18 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIV_ROMAN_NAME_FRANCE</Tag>
+		<English>Francia</English>
+		<French>
+			<Text>Francia</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>Francia</German>
+		<Italian>Francia</Italian>
+		<Spanish>Francia</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_ROMAN_NAME_CELTS</Tag>
 		<English>Gaul</English>
 		<French>
 			<Text>Gaule</Text>
