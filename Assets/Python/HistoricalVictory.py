@@ -186,10 +186,10 @@ dGoals = {
 	),
 	iBabylonia: (
 		FirstDiscover(iConstruction, iArithmetics, iWriting, iCalendar, iContract),
-		CityBuildingCount(city(tBabylon).named(BABYLON), wonders(), 3, by=-850),
+		BuildingCount(wonders(), 4, by=-850),
 		All(
-			PopulationCount(12),
-			CityCultureLevel(city(tBabylon).named(BABYLON), iCultureLevelRefined),
+			PopulationCount(16),
+			CultureAmount(2000),
 			by=-700,
 		),
 	),

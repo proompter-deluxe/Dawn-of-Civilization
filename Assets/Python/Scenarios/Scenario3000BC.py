@@ -10,11 +10,11 @@ lCivilizations = [
 	),
 	Civilization(
 		iBabylonia,
-		techs=techs.of(iPottery, iPastoralism, iAgriculture, iMythology, iMining)
+		techs=techs.of(iPottery, iPastoralism, iAgriculture, iMythology, iProperty)
 	),
 	Civilization(
 		iHarappa,
-		techs=techs.of(iMining, iPottery, iAgriculture, iPastoralism, iProperty)
+		techs=techs.of(iMining, iPottery, iAgriculture, iPastoralism, iTanning)
 	),
 	Civilization(
 		iMinoans,
@@ -40,8 +40,7 @@ lTribalVillages = [
 
 
 def createStartingUnits():
-	if not player(iEgypt).isHuman():
-		makeUnit(iEgypt, iArcher, plots.capital(iEgypt))
+	makeUnit(iBabylonia, iWorker, plots.capital(iBabylonia))
 
 
 scenario3000BC = Scenario(

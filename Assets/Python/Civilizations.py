@@ -194,12 +194,12 @@ lCivilizations = [
 	# this doesn't do anything because it is set in Scenario3000BC
 	Civilization(
 		iBabylonia,
-		techs=techs.of(iPottery, iPastoralism, iAgriculture, iMythology, iMining)
+		techs=techs.of(iPottery, iPastoralism, iAgriculture, iMythology, iProperty)
 	),
 	# this doesn't do anything because it is set in Scenario3000BC
 	Civilization(
 		iHarappa,
-		techs=techs.of(iMining, iPottery, iAgriculture, iPastoralism, iProperty)
+		techs=techs.of(iMining, iPottery, iAgriculture, iPastoralism, iTanning)
 	),
 	# this doesn't do anything because it is set in Scenario3000BC
 	Civilization(
@@ -1721,9 +1721,12 @@ dTechPreferences = {
 		iSteel: -30,
 	},
 	iHarappa : {
-		iMasonry: 20,
+		iMasonry: 30,
+		iDivination: 10,
 		
 		iAlloys: -50,
+		iMasonry: -30,
+		iCalendar: -30,
 		iTanning: -10,
 	},
 	iAssyria : {
@@ -2254,6 +2257,7 @@ dBuildingPreferences = {
 		iGreatSphinx: 30,
 
 		iPalaceOfMinos: -30,
+		iOracle: -20,
 	},
 	iBabylonia : {
 		iHangingGardens: 50,

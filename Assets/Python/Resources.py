@@ -38,6 +38,9 @@ def setup():
 	global dRemovedFeatures
 	dRemovedFeatures = TileDict(dRemovedFeaturesDict, year)
 	
+	global dChangedTerrain
+	dChangedTerrain = TileDict(dChangedTerrainDict, year)
+
 	global dConquerorPlotTypes
 	dConquerorPlotTypes = TileDict(dConquerorPlotTypesDict)
 	
@@ -308,7 +311,8 @@ dFeaturesDict = {
 }
 
 dRemovedFeaturesDict = {
-	(90, 44)  : -500, # Mesopotamia
+	(90, 44)  : -550, # Mesopotamia
+	(90, 45)  : -550, # Mesopotamia
 	(69, 56)  : 400,  # Venice
 	(80, 37)  : 550,  # Nubia
 	(81, 39)  : 550,  # Nubia
@@ -326,6 +330,11 @@ dRemovedFeaturesDict = {
 	(97, 57)  : 1600, # Transoxiana
 	(81, 70)  : 1700, # Ingria
 	(80, 69)  : 1700, # Ingria
+}
+
+dChangedTerrainDict = {
+	(90, 44)  : (-550, iDesert), # Mesopotamia
+	(91, 45)  : (-550, iDesert), # Mesopotamia
 }
 
 dConquerorPlotTypesDict = {
@@ -375,18 +384,14 @@ def removeResources():
 	for x, y in dRemovedResources[game.getGameTurn()]:
 		removeResource(x, y)
 
-
-@handler("BeginGameTurn")
-def createFeatures():
 	for tile, iFeature in dFeatures[game.getGameTurn()]:
 		plot(tile).setFeatureType(iFeature, 0)
 
-
-@handler("BeginGameTurn")
-def removeFeatures(iGameTurn):
 	for tile in dRemovedFeatures[game.getGameTurn()]:
 		plot(tile).setFeatureType(-1, 0)
 
+	for tile, iTerrain in dChangedTerrain[game.getGameTurn()]:
+		plot(tile).setTerrainType(iTerrain, True, True)
 
 @handler("conquerors")
 def changeConquerorPlotTypes(iConquerorPlayer, iTargetPlayer):
