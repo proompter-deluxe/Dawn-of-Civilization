@@ -1029,6 +1029,10 @@
 					<UnitClassType>UNITCLASS_HEAVY_GALLEY</UnitClassType>
 					<UnitType>UNIT_BYZANTINE_DROMON</UnitType>
 				</Unit>
+				<Unit>
+					<UnitClassType>UNITCLASS_HEAVY_SPEARMAN</UnitClassType>
+					<UnitType>UNIT_TAGMATA</UnitType>
+				</Unit>
 			</Units>
 			<FreeUnitClasses>
 				<FreeUnitClass>
@@ -3069,7 +3073,7 @@
 			<PaganReligion>PAGAN_RELIGION_VEDISM</PaganReligion>
 			<Impact>IMPACT_CRITICAL</Impact>
 			<Identifier>IND</Identifier>
-			<StartingYear>-600</StartingYear>
+			<StartingYear>-650</StartingYear>
 			<LoadingTimes>
 				<LoadingTime>4</LoadingTime>
 				<LoadingTime>0</LoadingTime>

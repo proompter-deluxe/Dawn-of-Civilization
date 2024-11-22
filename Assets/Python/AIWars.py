@@ -214,6 +214,9 @@ tTimuridsPunjabTL = (99, 46)
 tTimuridsPunjabBR = (104, 51)
 tConquestTimuridsPunjab = (41, iTimurids, iGhorids, tTimuridsPunjabTL, tTimuridsPunjabBR, 3, iTimuridsPunjabYear, 5)
 
+
+tConquestMacedonPunjab = (7, iMacedon, iIndia, tTimuridsPunjabTL, tTimuridsPunjabBR, 1, iAlexanderYear, 20)
+
 lConquests = [
 	tConquestRomeCarthageInSpain,
 	tConquestRomeCarthage, 
@@ -255,6 +258,7 @@ lConquests = [
 	tConquestMongolsBaghdad,
 	tConquestMongolsKiev,
 	tConquestTimuridsPunjab,
+	tConquestMacedonPunjab,
 ]
 
 dConquestChecker = {
@@ -276,6 +280,7 @@ dConquestChecker = {
 	tConquestRomeGreece[0]: lambda tConquest: checkConquest(tConquest, tDummyConquestRomeHoldingRome),
 	tConquestRomeCelts[0]: lambda tConquest: checkConquest(tConquest, tDummyConquestRomeHoldingRome),
 	tConquestMongolsBaghdad[0]: lambda tConquest: checkConquest(tConquest, tConquestMongolsPersia),
+	tConquestMacedonPunjab[0]: lambda tConquest: checkConquest(tConquest, tConquestMacedonPersia),
 }
 
 def checkByzantiumConquestOfCarthage(tConquest):
@@ -496,8 +501,13 @@ def spawnConquerors(iPlayer, iPreferredTarget, tTL, tBR, iNumTargets, iWarPlan =
 		iRenaissanceExtras = 1
 
 	iNomadExtras = 0
-	if iCiv in [iTurks, iMongols, iTimurids]:
+	if iCiv in [iTurks, iMongols]:
 		iNomadExtras = 1
+	elif iCiv in [iTimurids]:
+		# timurids get a little bit of everything
+		iNomadExtras = 1
+		iRenaissanceExtras = 1
+		iMedievalExtras =  1
 
 	tPlotLast = None
 	

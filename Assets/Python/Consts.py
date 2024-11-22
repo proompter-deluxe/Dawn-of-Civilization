@@ -478,7 +478,7 @@ iPhoenicia : -1100,
 iPolynesia : -1000,
 iGreece : -900,
 iPersia : -660,
-iIndia : -600,
+iIndia : -650,
 iCelts : -600,
 iMacedon: -475,
 iMaya : -400,
@@ -549,7 +549,7 @@ iPhoenicia: -150,
 iNubia : -150,
 iChina: 1170,
 iChinaS: 580,
-iIndia : 600,
+iIndia : 1150,
 iPolynesia : 1200,
 iPersia : -300,
 iCelts : 1169,
@@ -557,7 +557,7 @@ iRome : 550,
 iGreece: -50,
 iMacedon: -50,
 iMaya : 900,
-iDravidia : 1000,
+iDravidia : 1770,
 iEthiopia : 960,
 iToltecs : 950,
 iKushans : 375,
@@ -604,13 +604,13 @@ iChinaS : [(910, 1550), (1850, 1920)],
 iHittites : [(-840, -670)],
 iNubia : [(500, 1500)],
 iGreece : [(-900, -500), (1800, 2020)],
-iIndia : [(1600, 1800), (1940, 2020)],
+iIndia : [(330, 480), (1600, 1800), (1940, 2020)],
 iPhoenicia : [(-800,-300), (1000, 1500), (1950, 2020)],
 iPersia : [(910, 1000)],
 iCelts : [(400, 1150), (1850, 2020)],
 iRome : [(-338, 450)],
 iMaya : [(0, 800)],
-iDravidia : [(-300, 600), (1300, 1650)],
+iDravidia : [(300, 1650)],
 iEthiopia : [(1270, 1520), (1750, 1880), (1940, 2020)],
 iKorea : [(1800, 2020)],
 iKhmer : [(1950, 2020)],
@@ -1276,12 +1276,12 @@ dResurrectionLeaders = CivDict({
 })
 
 # update DLL constants when this changes
-iNumPeriods = 24
+iNumPeriods = 25
 (iPeriodMing, iPeriodMaratha, iPeriodModernGreece, iPeriodCarthage, iPeriodInsularCelts,
 iPeriodVijayanagara, iPeriodByzantineConstantinople, iPeriodSeljuks, iPeriodMeiji, iPeriodDenmark, 
 iPeriodNorway, iPeriodUzbeks, iPeriodSaudi, iPeriodMorocco, iPeriodAustria, 
 iPeriodYuan, iPeriodPeru, iPeriodLateInca, iPeriodModernItaly, iPeriodPakistan, 
-iPeriodOttomanConstantinople, iPeriodModernGermany, iPeriodTunisia, iPeriodMughals) = range(iNumPeriods)
+iPeriodOttomanConstantinople, iPeriodModernGermany, iPeriodTunisia, iPeriodMughals, iPeriodModernIndia) = range(iNumPeriods)
 
 iNumImpacts = 5
 (iImpactMarginal, iImpactLimited, iImpactSignificant, iImpactCritical, iImpactPlayer) = range(iNumImpacts)

@@ -262,7 +262,7 @@ lCivilizations = [
 		iIndia,
 		iGold=80,
 		iStateReligion=iHinduism,
-		lCivics=[iMonarchy, iDeification],
+		lCivics=[iMonarchy],
 		techs=techs.column(3).including(iBloomery, iPriesthood, iMathematics).without(iSeafaring, iShipbuilding)
 	),
 	Civilization(
@@ -407,6 +407,7 @@ lCivilizations = [
 		iTurks,
 		iGold=100,
 		lCivics=[iDespotism, iSlavery, iMerchantTrade, iHegemony],
+		lEnemies=[iKushans],
 		techs=techs.column(5).including(iNobility, iSteel).without(iNavigation, iMedicine, iPhilosophy)
 	),
 	Civilization(
@@ -599,7 +600,7 @@ lCivilizations = [
 		iGold=300,
 		iStateReligion=iIslam,
 		lCivics=[iDespotism, iVassalage, iSlavery, iRegulatedTrade, iSyncretism, iHegemony],
-		lEnemies=[iIndependent, iIndependent2, iPersia, iGhorids, iArmenia, iOttomans, iMongols, iParthia, iTurks],
+		lEnemies=[iPersia, iGhorids, iArmenia, iMongols, iParthia, iTurks],
 		techs=techs.column(7).including(iCommune, iCropRotation, iPaper, iDoctrine, iGunpowder)
 	),
 	Civilization(
@@ -908,8 +909,8 @@ dStartingUnits = CivDict({
 	iTurks: {
 		iSettle: 6,
 		iWork: 3,
-		iDefend: 3,
-		iHarass: 7,
+		iDefend: 4,
+		iHarass: 9,
 		iExplore: 1,
 	},
 	iArabia: {

@@ -144,7 +144,7 @@ def spreadReligionsRegionally():
 	spreadReligionToRegion(iJudaism, [rOntario, rMaritimes, rAtlanticSeaboard, rMidwest], 1850, 1950, 10)
 
 	spreadReligionToRegion(iIslam, [rHinduKush, rTransoxiana, rKhorasan], 850, 1300, 6)
-	spreadReligionToRegion(iShia, [rPersia, rTransoxiana, rKhorasan, rDeccan, rRajputana, rYemenOman], 915, 1300, 6)
+	spreadReligionToRegion(iShia, [rPersia, rTransoxiana, rKhorasan, rDeccan, rRajputana, rYemenOman], 915, 1550, 6)
 
 @handler("BeginGameTurn")
 def spreadHinduismSoutheastAsia():

@@ -59,6 +59,7 @@ dPeriodNames = {
 	iPeriodModernGermany:			"Modern_Germany",
 	iPeriodTunisia:					"Tunisia",
 	iPeriodMughals:					"Mughals",
+	iPeriodModernIndia:				"Modern_India",
 }
 
 
@@ -248,7 +249,10 @@ def onTechAcquired(iTech, iTeam, iPlayer):
 	if iCiv == iGermany:
 		if iEra == iDigital:
 			setPeriod(iGermany, iPeriodModernGermany)
-			
+
+	if iCiv == iIndia:
+		if iEra == iIndustrial:
+			setPeriod(iIndia, iPeriodModernIndia)
 
 def getNorsePeriod(iPlayer):
 	capital = player(iPlayer).getCapitalCity()

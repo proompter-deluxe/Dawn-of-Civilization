@@ -10850,18 +10850,32 @@ ReligionTypes CvPlayerAI::AI_bestReligion() const
 				iValue /= 3; //Rhye (4)
 			}
 
-			if (iI == CATHOLICISM || iI == ORTHODOXY || iI == PROTESTANTISM)
+			switch (iI)
 			{
-				if (eFavorite == ISLAM)
-				{
-					iValue /= 2;
-				}
-
-				if (eFavorite == SHIA)
-				{
-					iValue /= 2;
-				}
-			}
+				case CATHOLICISM:
+				case ORTHODOXY:
+				case PROTESTANTISM:
+					if (eFavorite == ISLAM || eFavorite == SHIA)
+					{
+						iValue /= 2;
+					}
+				case ISLAM:
+					if (eFavorite == SHIA)
+					{
+						iValue /= 3;
+					}
+				case SHIA:
+					if (eFavorite == ISLAM)
+					{
+						iValue *= 2;
+						iValue /= 3;
+					}
+				case ZOROASTRIANISM:
+					if (eFavorite == ISLAM || eFavorite == SHIA)
+					{
+						iValue /= 2;
+					}
+			}		
 			
 			if (iValue > iBestValue)
 			{

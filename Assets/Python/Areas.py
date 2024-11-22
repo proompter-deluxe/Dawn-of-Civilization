@@ -339,6 +339,7 @@ iPeriodPakistan : 					((100, 46),	(103, 49)),
 iPeriodOttomanConstantinople : 		((77, 50),	(87, 55)),
 iPeriodModernGermany : 				((65, 61),	(69, 65)),
 iPeriodMughals :		            ((100, 45),	(107, 49)),
+iPeriodModernIndia :                ((103, 37),	(110, 46)),
 #iPeriodPakistan:                    something
 }
 
@@ -352,6 +353,7 @@ iPeriodLateInca :				[(34, 24), (34, 25)],
 iPeriodModernItaly :			[(65, 53)],
 iPeriodOttomanConstantinople :	[(86, 50), (87, 50)],
 iPeriodModernGermany :			[(69, 61)],
+iPeriodModernIndia :			[(103, 43), (103, 44), (103, 45), (103, 46), (104, 46)],
 })
 
 ### Respawn area ###
@@ -361,7 +363,6 @@ iHittites:	((79, 51),  (81, 54)),
 iAssyria :	((85, 49),	(90, 51)),
 iChina :	((120, 51),	(129, 58)),
 iChinaS :	((124, 43),	(131, 50)),
-iIndia :	((103, 37),	(110, 46)),
 iCelts :	((52, 64),	(56, 67)),
 iByzantium :((76, 51),	(87, 55)),
 iTurks :	((94, 53),	(101, 58)),
@@ -378,7 +379,6 @@ iGhorids :	((100, 45),	(106, 48)), # North-West India, Northern Pakistan
 
 dRespawnAreaExceptions = CivDict({
 iChinaS :	[(124, 50), (125, 50), (126, 50)],
-iIndia :	[(103, 43), (103, 44), (103, 45), (103, 46), (104, 46)],
 iByzantium :[(76, 51), (84, 51), (85, 51), (86, 51), (86, 52), (87, 51), (87, 52)],
 iTimurids :	[(102, 42), (102, 43), (102, 44), (102, 45), (103, 42), (103, 43), (103, 44), (103, 45), (104, 42), (104, 43), (104, 44), (104, 45)],
 iPhoenicia: [(70, 48)],

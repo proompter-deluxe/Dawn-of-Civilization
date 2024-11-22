@@ -5491,10 +5491,10 @@
 				<BonusType>BONUS_COPPER</BonusType>
 				<BonusType>BONUS_IRON</BonusType>
 			</PrereqBonuses>
-			<iCost>60</iCost>
+			<iCost>70</iCost>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
 			<iMinAreaSize>-1</iMinAreaSize>
-			<iMoves>0</iMoves>
+			<iMoves>1</iMoves>
 			<iNukeRange>-1</iNukeRange>
 			<TerrainImpassables>
 				<TerrainImpassable>
@@ -5539,7 +5539,7 @@
 				</UnitCombatMod>
 				<UnitCombatMod>
 					<UnitCombatType>UNITCOMBAT_GUN</UnitCombatType>
-					<iUnitCombatMod>-75</iUnitCombatMod>
+					<iUnitCombatMod>-50</iUnitCombatMod>
 				</UnitCombatMod>
 			</UnitCombatMods>
 			<FreePromotions>
@@ -5549,10 +5549,6 @@
 				</FreePromotion>
 				<FreePromotion>
 					<PromotionType>PROMOTION_CITY_GARRISON2</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
-				<FreePromotion>
-					<PromotionType>PROMOTION_CITY_GARRISON3</PromotionType>
 					<bFreePromotion>1</bFreePromotion>
 				</FreePromotion>
 			</FreePromotions>
