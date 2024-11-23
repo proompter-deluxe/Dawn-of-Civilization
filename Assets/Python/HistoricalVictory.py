@@ -801,13 +801,13 @@ dGoals = {
 	),
 	iTimurids: (
 		All(
-			ConqueredCities(2, inside=plots.region(rPersia)),
-			ConqueredCities(2, inside=plots.region(rMesopotamia)),
-			ConqueredCities(2, inside=plots.region(rLevant)),
-			ConqueredCities(1, inside=plots.region(rCaucasus)),
-			ConqueredCities(1, inside=plots.region(rAnatolia)),
-			ConqueredCities(1, inside=plots.region(rHinduKush)),
-			ConqueredCities(1, inside=plots.region(rPunjab)),
+			ConqueredCities(2, bControl=False, inside=plots.region(rPersia)),
+			ConqueredCities(2, bControl=False, inside=plots.region(rMesopotamia)),
+			ConqueredCities(2, bControl=False, inside=plots.region(rLevant)),
+			ConqueredCities(1, bControl=False, inside=plots.region(rCaucasus)),
+			ConqueredCities(1, bControl=False, inside=plots.region(rAnatolia)),
+			ConqueredCities(1, bControl=False, inside=plots.region(rHinduKush)),
+			ConqueredCities(1, bControl=False, inside=plots.region(rPunjab)),
 			by=1500
 		),
 		Wonders(iRedFort, iShalimarGardens, iTajMahal, iGurEAmir, by=1660),
