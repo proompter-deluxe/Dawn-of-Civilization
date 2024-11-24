@@ -772,13 +772,16 @@ def canRespawn(iCiv):
 		if iCiv in [iChina, iChinaS, iKorea, iMalays, iJava, iThailand]:
 			return False
 		
-	# Ottoman respawn requires that the Turks or Timurids or themselves managed to conquer at least one city in the Near East
+	# Ottoman respawn if
+	# 1) they have been alive before
+	# 2A) they didn't have the conditions to spawn initially, but now one of their "parent civs" has or had conquered the area
 	if iCiv == iOttomans:
-		if (cities.birth(iOttomans).none(CyCity.isHuman) and 
-	  cities.regions(rAnatolia, rCaucasus).none(lambda city: 
-											 iTurks in [city.getCivilizationType(), city.getPreviousCiv()] or 
-											 iTimurids in [city.getCivilizationType(), city.getPreviousCiv()] or
-											 iOttomans in [city.getCivilizationType(), city.getPreviousCiv()])):
+		if data.civs[iOttomans].iLastTurnAlive > 0:
+			return True
+		if cities.regions(rAnatolia, rCaucasus).none(lambda city: 
+			iTurks in [city.getCivilizationType(), city.getPreviousCiv()] or 
+			iMongols in [city.getCivilizationType(), city.getPreviousCiv()] or
+			iTimurids in [city.getCivilizationType(), city.getPreviousCiv()]):
 			return False
 			
 	return True

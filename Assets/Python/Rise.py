@@ -787,7 +787,7 @@ class Birth(object):
 		
 		# Ottomans require that the Turks or Mongols managed to conquer at least one city in the Anatolia / Armenia
 		if self.iCiv == iOttomans:
-			if cities.birth(iOttomans).none(CyCity.isHuman) and cities.regions(rAnatolia, rCaucasus).none(lambda city: iTurks in [city.getCivilizationType(), city.getPreviousCiv()] or iMongols in [city.getCivilizationType(), city.getPreviousCiv()]):
+			if cities.regions(rAnatolia, rCaucasus).none(lambda city: iTurks in [city.getCivilizationType(), city.getPreviousCiv()] or iMongols in [city.getCivilizationType(), city.getPreviousCiv()]):
 				return False
 		
 		# Iran requires Persia and Parthia to be dead
@@ -814,11 +814,13 @@ class Birth(object):
 			if players.major().where(lambda p: civ(p) != self.iCiv).where(lambda p: birthCities.owner(p).any()).all_if_any(lambda p: stability(p) >= iStabilitySolid):
 				return False
 		
-		# Timurid spawn can be avoided if player is Mongols or Turks and is stable
+		# Timurid spawn can be avoided if player is Mongols and Stable, 
+		# or Turks and Mongols are not current or previous owners of the Timurid birth zone
+		#
 		if self.iCiv == iTimurids:
 			if player(iMongols).isHuman() and stability(iMongols) == iStabilitySolid:
 				return False
-			elif player(iTurks).isHuman() and stability(iTurks) == iStabilitySolid:
+			elif cities.regions(rKhorasan, rTransoxiana, rHinduKush).none(lambda city: iMongols in [city.getCivilizationType(), city.getPreviousCiv()]):
 				return False
 
 		return True
