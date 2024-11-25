@@ -12787,16 +12787,6 @@ void CvPlayer::setCommercePercent(CommerceTypes eIndex, int iNewValue)
 					int iAdjustment = std::min(m_aiCommercePercent[iI], iTotalCommercePercent - 100);
 					m_aiCommercePercent[iI] -= iAdjustment;
 					iTotalCommercePercent -= iAdjustment;
-
-					// Shwedagon Paya effect: gold rate added to great people rate modifier
-					if (iI == COMMERCE_GOLD)
-					{
-						CvCity* pWonderCity = findBuildingCity((BuildingTypes)SHWEDAGON_PAYA);
-						if (pWonderCity)
-						{
-							pWonderCity->changeGreatPeopleRateModifier(-iAdjustment);
-						}
-					}
 				}
 				else
 				{
@@ -12806,16 +12796,6 @@ void CvPlayer::setCommercePercent(CommerceTypes eIndex, int iNewValue)
 		}
 
 		FAssert(100 == iTotalCommercePercent);
-
-		// Shwedagon Paya effect: gold rate added to great people rate modifier
-		if (eIndex == COMMERCE_GOLD && isHasBuildingEffect((BuildingTypes)SHWEDAGON_PAYA))
-		{
-			CvCity* pWonderCity = findBuildingCity((BuildingTypes)SHWEDAGON_PAYA);
-			if (pWonderCity)
-			{
-				pWonderCity->changeGreatPeopleRateModifier(getCommerceRate(eIndex) - iOldValue);
-			}
-		}
 
 		updateCommerce();
 
