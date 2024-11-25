@@ -803,7 +803,7 @@ dGoals = {
 		All(
 			ConqueredCities(2, bControl=False, inside=plots.region(rPersia)),
 			ConqueredCities(2, bControl=False, inside=plots.region(rMesopotamia)),
-			ConqueredCities(2, bControl=False, inside=plots.region(rLevant)),
+			ConqueredCities(1, bControl=False, inside=plots.region(rLevant)),
 			ConqueredCities(1, bControl=False, inside=plots.region(rCaucasus)),
 			ConqueredCities(1, bControl=False, inside=plots.region(rAnatolia)),
 			ConqueredCities(1, bControl=False, inside=plots.region(rHinduKush)),
