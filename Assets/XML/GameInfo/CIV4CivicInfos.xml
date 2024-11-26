@@ -27,7 +27,7 @@
 			<Button>,Art/Interface/Buttons/Civics/Despotism.dds</Button>
 			<iAnarchyLength>1</iAnarchyLength>
 			<iHappyPerMilitaryUnit>1</iHappyPerMilitaryUnit>
-			<Upkeep>UPKEEP_MEDIUM</Upkeep>
+			<Upkeep>UPKEEP_HIGH</Upkeep>
 			<Hurrys>
 				<Hurry>
 					<HurryType>HURRY_POPULATION</HurryType>
