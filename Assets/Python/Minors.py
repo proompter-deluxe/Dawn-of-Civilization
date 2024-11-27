@@ -145,8 +145,12 @@ class MinorCity(object):
 	def make_units(self, iUnit, iUnitAI, iNumUnits=1):
 		for unit in units.at(self.tile).where(lambda unit: unit.upgradeAvailable(unit.getUnitType(), infos.unit(iUnit).getUnitClassType(), 0)).limit(iNumUnits):
 			unit.kill(False, -1)
+		
+		city = city_(self.tile)
+		if not city:
+			return
 	
-		created_units = makeUnits(self.iOwner, iUnit, self.tile, iNumUnits, iUnitAI)
+		created_units = makeUnits(city.getOwner(), iUnit, self.tile, iNumUnits, iUnitAI)
 		
 		if self.adjective:
 			created_units.adjective(self.adjective)
