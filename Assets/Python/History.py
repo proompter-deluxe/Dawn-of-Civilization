@@ -283,6 +283,9 @@ def conquistadors(iTeamX, iHasMetTeamY):
 						elif iNewWorldCiv == iAztecs:
 							makeUnits(iOldWorldPlayer, iJaguar, arrivalPlot, 2, UnitAITypes.UNITAI_ATTACK_CITY)
 							makeUnit(iOldWorldPlayer, iHolkan, arrivalPlot, UnitAITypes.UNITAI_ATTACK_CITY)
+						elif iNewWorldCiv == iToltecs:
+							makeUnits(iOldWorldPlayer, iAtlAtl, arrivalPlot, 2, UnitAITypes.UNITAI_ATTACK_CITY)
+							makeUnit(iOldWorldPlayer, iHolkan, arrivalPlot, UnitAITypes.UNITAI_ATTACK_CITY)
 						elif iNewWorldCiv == iMaya:
 							makeUnits(iOldWorldPlayer, iHolkan, arrivalPlot, 2, UnitAITypes.UNITAI_ATTACK_CITY)
 							makeUnit(iOldWorldPlayer, iJaguar, arrivalPlot, UnitAITypes.UNITAI_ATTACK_CITY)
