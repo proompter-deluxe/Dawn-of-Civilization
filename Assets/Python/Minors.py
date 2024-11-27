@@ -645,6 +645,23 @@ def assignMinorUnitAdjective(city, unit):
 	minor_city_adjective = next(minor_city.adjective for minor_city in minor_cities if at(city, minor_city.tile))
 	if minor_city_adjective:
 		set_unit_adjective(unit, minor_city_adjective)
+	
+
+@handler("BeginGameTurn")
+def fragmentIndependents():
+	if year() >= year(50) and periodic(15):
+		iLargestMinor = players.independent().maximum(lambda p: player(p).getNumCities())
+		iSmallestMinor = players.independent().minimum(lambda p: player(p).getNumCities())
+		if player(iLargestMinor).getNumCities() > 2 * player(iSmallestMinor).getNumCities():
+			for city in cities.owner(iLargestMinor).sample(3):
+				completeCityFlip(city, iSmallestMinor, iLargestMinor, 50, bBarbarianDecay=False, bBarbarianConversion=True, bAlwaysOwnPlots=True, bFlipUnits=True)
+
+
+@handler("BeginGameTurn")
+def checkMinorTechs():
+	iMinor = players.civs(iIndependent, iIndependent2, iNative).existing().periodic(8)
+	if iMinor:
+		updateMinorTechs(iMinor, barbarian())
 
 
 def maintainFallenCivilizations():

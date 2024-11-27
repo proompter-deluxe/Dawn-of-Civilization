@@ -317,23 +317,6 @@ def preserveCivilizationAttributes(iPlayer):
 	data.civs[iPlayer].iGreatPeopleCreated = player(iPlayer).getGreatPeopleCreated()
 	data.civs[iPlayer].iGreatSpiesCreated = player(iPlayer).getGreatSpiesCreated()
 	data.civs[iPlayer].iNumUnitGoldenAges = player(iPlayer).getNumUnitGoldenAges()
-	
-
-@handler("BeginGameTurn")
-def fragmentIndependents():
-	if year() >= year(50) and periodic(15):
-		iLargestMinor = players.independent().maximum(lambda p: player(p).getNumCities())
-		iSmallestMinor = players.independent().minimum(lambda p: player(p).getNumCities())
-		if player(iLargestMinor).getNumCities() > 2 * player(iSmallestMinor).getNumCities():
-			for city in cities.owner(iLargestMinor).sample(3):
-				completeCityFlip(city, iLargestMinor, iSmallestMinor, 50, False, True, True, True)
-
-
-@handler("BeginGameTurn")
-def checkMinorTechs():
-	iMinor = players.civs(iIndependent, iIndependent2, iNative).existing().periodic(8)
-	if iMinor:
-		updateMinorTechs(iMinor, barbarian())
 
 
 def getBirth(iCiv):
