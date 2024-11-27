@@ -567,7 +567,7 @@ def canCreateUnit(iPlayer, iUnit):
 
 # used: RFCUtils, Rise
 def getUnitForRole(iPlayer, iRole, bUnique=True):
-	roleMetric = lambda unit: (infos.unit(unit).getCombat(), bUnique == (base_unit(unit) != unit))
+	roleMetric = lambda unit: (infos.unit(unit).getCombat(), infos.unit(unit).getCityAttackModifier(), bUnique == (base_unit(unit) != unit))
 	possibleUnits = infos.units().where(lambda unit: canCreateUnit(iPlayer, unit)).where(lambda unit: isUnitOfRole(unit, iRole))
 	
 	if not bUnique:
