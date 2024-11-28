@@ -17289,28 +17289,31 @@ int CvUnitAI::AI_pillageValue(CvPlot* pPlot, int iBonusValueThreshold)
 	{
 		if (pPlot->isRoute())
 		{
-			iValue++;
+			//iValue++;
 			if (eNonObsoleteBonus != NO_BONUS)
 			{
 				iValue += iBonusValue * 4;
 			}
 
-			for (iI = 0; iI < NUM_DIRECTION_TYPES; iI++)
+			if (isBarbarian())
 			{
-				pAdjacentPlot = plotDirection(getX_INLINE(), getY_INLINE(), ((DirectionTypes)iI));
-
-				if (pAdjacentPlot != NULL && pAdjacentPlot->getTeam() == pPlot->getTeam())
+				for (iI = 0; iI < NUM_DIRECTION_TYPES; iI++)
 				{
-					if (pAdjacentPlot->isCity())
-					{
-						iValue += 10;
-					}
+					pAdjacentPlot = plotDirection(getX_INLINE(), getY_INLINE(), ((DirectionTypes)iI));
 
-					if (!(pAdjacentPlot->isRoute()))
+					if (pAdjacentPlot != NULL && pAdjacentPlot->getTeam() == pPlot->getTeam())
 					{
-						if (!(pAdjacentPlot->isWater()) && !(pAdjacentPlot->isImpassable()))
+						if (pAdjacentPlot->isCity())
 						{
-							iValue += 2;
+							iValue += 10;
+						}
+
+						if (!(pAdjacentPlot->isRoute()))
+						{
+							if (!(pAdjacentPlot->isWater()) && !(pAdjacentPlot->isImpassable()))
+							{
+								iValue += 2;
+							}
 						}
 					}
 				}
