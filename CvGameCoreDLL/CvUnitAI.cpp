@@ -17332,30 +17332,33 @@ int CvUnitAI::AI_pillageValue(CvPlot* pPlot, int iBonusValueThreshold)
 
 	if (eImprovement != NO_IMPROVEMENT)
 	{
-		if (pPlot->getWorkingCity() != NULL)
+		if (pPlot->getFeatureType() == NO_FEATURE || !m_pUnitInfo->getFeatureImpassable(pPlot->getFeatureType()))
 		{
-			iValue += (pPlot->calculateImprovementYieldChange(eImprovement, YIELD_FOOD, pPlot->getOwnerINLINE()) * 5);
-			iValue += (pPlot->calculateImprovementYieldChange(eImprovement, YIELD_PRODUCTION, pPlot->getOwnerINLINE()) * 4);
-			iValue += (pPlot->calculateImprovementYieldChange(eImprovement, YIELD_COMMERCE, pPlot->getOwnerINLINE()) * 3);
-		}
-
-		if (getDomainType() != DOMAIN_AIR)
-		{
-			iValue += GC.getImprovementInfo(eImprovement).getPillageGold();
-		}
-
-		if (eNonObsoleteBonus != NO_BONUS)
-		{
-			if (GC.getImprovementInfo(eImprovement).isImprovementBonusTrade(eNonObsoleteBonus))
+			if (pPlot->getWorkingCity() != NULL)
 			{
-				iTempValue = iBonusValue * 4;
+				iValue += (pPlot->calculateImprovementYieldChange(eImprovement, YIELD_FOOD, pPlot->getOwnerINLINE()) * 5);
+				iValue += (pPlot->calculateImprovementYieldChange(eImprovement, YIELD_PRODUCTION, pPlot->getOwnerINLINE()) * 4);
+				iValue += (pPlot->calculateImprovementYieldChange(eImprovement, YIELD_COMMERCE, pPlot->getOwnerINLINE()) * 3);
+			}
 
-				if (pPlot->isConnectedToCapital() && (pPlot->getPlotGroupConnectedBonus(pPlot->getOwnerINLINE(), eNonObsoleteBonus) == 1))
+			if (getDomainType() != DOMAIN_AIR)
+			{
+				iValue += GC.getImprovementInfo(eImprovement).getPillageGold();
+			}
+
+			if (eNonObsoleteBonus != NO_BONUS)
+			{
+				if (GC.getImprovementInfo(eImprovement).isImprovementBonusTrade(eNonObsoleteBonus))
 				{
-					iTempValue *= 2;
-				}
+					iTempValue = iBonusValue * 4;
 
-				iValue += iTempValue;
+					if (pPlot->isConnectedToCapital() && (pPlot->getPlotGroupConnectedBonus(pPlot->getOwnerINLINE(), eNonObsoleteBonus) == 1))
+					{
+						iTempValue *= 2;
+					}
+
+					iValue += iTempValue;
+				}
 			}
 		}
 	}
