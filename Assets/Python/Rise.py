@@ -701,11 +701,6 @@ class Birth(object):
 				if year(dBirth[active()]) > year(dFall[self.iCiv]) + turns(20):
 					return False
 		
-		# Nubia requires no cities
-		if self.iCiv == iNubia:
-			if cities.birth(self.iCiv):
-				return False
-		
 		# Byzantium requires Rome to be alive and Greece to be dead (human Rome can avoid Byzantine spawn by being solid)
 		if self.iCiv == iByzantium:
 			if not player(iRome).isExisting():
