@@ -5531,6 +5531,11 @@ void CvGameTextMgr::setCityBarHelp(CvWStringBuffer &szString, CvCity* pCity)
 		{
 			iRate = pCity->getBaseCommerceRateTimes100((CommerceTypes)iI);
 		}
+		else if (iI == COMMERCE_CULTURE)
+		{
+			// Leoreth: include civilization culture modifier
+			iRate = pCity->getModifiedCultureRateTimes100();
+		}
 		else
 		{
 			// unchanged

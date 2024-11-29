@@ -810,6 +810,9 @@ public:
 	void setCommercePercent(CommerceTypes eIndex, int iNewValue);																// Exposed to Python
 	DllExport void changeCommercePercent(CommerceTypes eIndex, int iChange);										// Exposed to Python
 
+	// Leoreth
+	int getCommerceRateTimes100(CommerceTypes eCommerce) const;
+
 	int getCommerceRate(CommerceTypes eIndex) const;																									// Exposed to Python
 	void changeCommerceRate(CommerceTypes eIndex, int iChange);
 
@@ -1350,6 +1353,9 @@ public:
 	int getLandHistory(int iTurn) const;
 
 	CvCity* findBuildingCity(BuildingTypes eBuilding, bool bEffect = true) const;
+
+	int getModifiedCommerceRateTimes100(CommerceTypes eCommerce) const;
+	int getModifiedCommerceRate(CommerceTypes eCommerce) const;
 
 	bool m_bTurnPlayed;
 

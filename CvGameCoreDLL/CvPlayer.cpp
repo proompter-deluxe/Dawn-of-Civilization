@@ -12818,7 +12818,7 @@ void CvPlayer::changeCommercePercent(CommerceTypes eIndex, int iChange)
 }
 
 
-int CvPlayer::getCommerceRate(CommerceTypes eIndex) const
+int CvPlayer::getCommerceRateTimes100(CommerceTypes eIndex) const
 {
 	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
 	FAssertMsg(eIndex < NUM_COMMERCE_TYPES, "eIndex is expected to be within maximum bounds (invalid Index)");
@@ -12838,7 +12838,16 @@ int CvPlayer::getCommerceRate(CommerceTypes eIndex) const
 
 	FAssert(iRate >= 0);
 
-	return iRate / 100;
+	return iRate;
+}
+
+
+int CvPlayer::getCommerceRate(CommerceTypes eIndex) const
+{
+	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
+	FAssertMsg(eIndex < NUM_COMMERCE_TYPES, "eIndex is expected to be within maximum bounds (invalid Index)");
+
+	return getCommerceRateTimes100(eIndex) / 100;
 }
 
 
@@ -25552,4 +25561,22 @@ CvCity* CvPlayer::findBuildingCity(BuildingTypes eBuilding, bool bEffect) const
 	}
 
 	return NULL;
+}
+
+int CvPlayer::getModifiedCommerceRateTimes100(CommerceTypes eCommerce) const
+{
+	int iRate = getCommerceRateTimes100(eCommerce);
+
+	if (eCommerce == COMMERCE_CULTURE)
+	{
+		iRate *= getModifier(MODIFIER_CULTURE);
+		iRate /= 100;
+	}
+
+	return iRate;
+}
+
+int CvPlayer::getModifiedCommerceRate(CommerceTypes eCommerce) const
+{
+	return getModifiedCommerceRateTimes100(eCommerce) / 100;
 }
