@@ -1,6 +1,7 @@
 # coding: utf-8
 
 from Core import *
+from Core import periodic as core_periodic
 from RFCUtils import *
 from Events import handler
 
@@ -649,7 +650,7 @@ def assignMinorUnitAdjective(city, unit):
 
 @handler("BeginGameTurn")
 def fragmentIndependents():
-	if year() >= year(50) and periodic(15):
+	if year() >= year(50) and core_periodic(15):
 		iLargestMinor = players.independent().maximum(lambda p: player(p).getNumCities())
 		iSmallestMinor = players.independent().minimum(lambda p: player(p).getNumCities())
 		if player(iLargestMinor).getNumCities() > 2 * player(iSmallestMinor).getNumCities():
