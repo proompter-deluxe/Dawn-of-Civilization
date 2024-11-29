@@ -2389,6 +2389,24 @@ bool CvCity::canConstruct(BuildingTypes eBuilding, bool bContinue, bool bTestVis
 		if (iNumWaterTiles < 20) return false;
 	}
 
+	// Leoreth: Prambanan requires islands in city radius
+	if (eBuilding == PRAMBANAN)
+	{
+		bool bFound = false;
+		for (iI = 0; iI < NUM_CITY_PLOTS; iI++)
+		{
+			if (getCityIndexPlot(iI)->getFeatureType() == FEATURE_ISLANDS)
+			{
+				bFound = true;
+			}
+		}
+
+		if (!bFound)
+		{
+			return false;
+		}
+	}
+
 	// Leoreth: Guadalupe Basilica needs to be on different continent than Catholic holy city
 	if (eBuilding == GUADALUPE_BASILICA)
 	{
