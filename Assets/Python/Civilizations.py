@@ -332,7 +332,7 @@ lCivilizations = [
 		iGold=200,
 		iAdvancedStartPoints=100,
 		iStateReligion=iBuddhism,
-		lCivics=[iDespotism, iCitizenship, iCasteSystem, iMerchantTrade, iSyncretism, iThalassocracy],
+		lCivics=[iDespotism, iCitizenship, iCasteSystem, iMerchantTrade, iDeification, iThalassocracy],
 		techs=techs.column(5).including(iEthics).without(iGeneralship, iEngineering)
 	),
 	Civilization(
