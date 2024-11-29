@@ -241,6 +241,8 @@ void CvDeal::addTrades(CLinkList<TradeData>* pFirstList, CLinkList<TradeData>* p
 	bool bSecondPeace = false;
 	bool bFirstTrade = false;
 	bool bSecondTrade = false;
+	bool bFirstSurrender = false;
+	bool bSecondSurrender = false;
 
 	if (pFirstList != NULL)
 	{
@@ -274,13 +276,13 @@ void CvDeal::addTrades(CLinkList<TradeData>* pFirstList, CLinkList<TradeData>* p
 				break;
 			case TRADE_GOLD_PER_TURN:
 			case TRADE_VASSAL:
-			case TRADE_SURRENDER:
 			case TRADE_TECHNOLOGIES:
 			case TRADE_RESOURCES:
 			case TRADE_CITIES:
 				bFirstTrade = true;
 				break;
-			default:
+			case TRADE_SURRENDER:
+				bFirstSurrender = true;
 				break;
 			}
 		}
@@ -309,6 +311,7 @@ void CvDeal::addTrades(CLinkList<TradeData>* pFirstList, CLinkList<TradeData>* p
 				bSecondPeace = true;
 				break;
 			case TRADE_SLAVE:
+				bSecondTrade = true;
 				bSecondSlaves = true;
 				break;
 			case TRADE_GOLD:
@@ -316,9 +319,14 @@ void CvDeal::addTrades(CLinkList<TradeData>* pFirstList, CLinkList<TradeData>* p
 				iSecondGold += pNode->m_data.m_iData;
 				break;
 			case TRADE_GOLD_PER_TURN:
+			case TRADE_VASSAL:
+			case TRADE_TECHNOLOGIES:
+			case TRADE_RESOURCES:
+			case TRADE_CITIES:
 				bSecondTrade = true;
 				break;
-			default:
+			case TRADE_SURRENDER:
+				bSecondSurrender = true;
 				break;
 			}
 		}
@@ -343,6 +351,18 @@ void CvDeal::addTrades(CLinkList<TradeData>* pFirstList, CLinkList<TradeData>* p
 		}
 
 		if (bFirstTrade && !bSecondTrade)
+		{
+			CvEventReporter::getInstance().tribute(getFirstPlayer(), getSecondPlayer());
+		}
+	}
+	else
+	{
+		if (bSecondSurrender && !bFirstTrade)
+		{
+			CvEventReporter::getInstance().tribute(getSecondPlayer(), getFirstPlayer());
+		}
+
+		if (bFirstSurrender && !bSecondTrade)
 		{
 			CvEventReporter::getInstance().tribute(getFirstPlayer(), getSecondPlayer());
 		}
