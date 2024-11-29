@@ -162,7 +162,7 @@ dGoals = {
 		Control(
 			plots.region(rNubia).named(NUBIA),
 			plots.region(rLevant).named(LEVANT),
-			by=-600,
+			at=-600,
 		),
 		All(
 			Wonders(iGreatLibrary, iGreatLighthouse),
