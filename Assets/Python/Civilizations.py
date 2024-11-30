@@ -2062,6 +2062,10 @@ dBuildingPreferences = {
 	},
 	iKorea : {
 		iCheomseongdae: 30,
+		
+		iShwedagonPaya: 0,
+		iPrambanan: 0,
+		iBorobudur: 0,
 	},
 	iKhmer : {
 		iWatPreahPisnulok: 30,
@@ -2111,8 +2115,8 @@ dBuildingPreferences = {
 		iTsukijiFishMarket: 30,
 		iSkytree: 30,
 	
-		iBorobudur: -60,
-		iPrambanan: -60,
+		iBorobudur: 0,
+		iPrambanan: 0,
 		iShwedagonPaya: 0,
 		iGreatWall: -100,
 	},
