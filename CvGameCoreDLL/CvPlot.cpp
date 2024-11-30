@@ -7017,7 +7017,7 @@ int CvPlot::calculateImprovementYieldChange(ImprovementTypes eImprovement, Yield
 	{
 		if (eYield == YIELD_FOOD && eImprovement == IMPROVEMENT_ORCHARD)
 		{
-			iYield += 2;
+			iYield += 1;
 		}
 	}
 

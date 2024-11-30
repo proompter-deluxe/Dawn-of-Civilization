@@ -755,11 +755,11 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UP_MOO</Tag>
-		<English>+2 [ICON_FOOD] from Orchard</English>
-		<French>+2 [ICON_FOOD] from Orchard</French>
-		<German>+2 [ICON_FOOD] from Orchard</German>
-		<Italian>+2 [ICON_FOOD] from Orchard</Italian>
-		<Spanish>+2 [ICON_FOOD] from Orchard</Spanish>
+		<English>+1 [ICON_FOOD] from Orchard</English>
+		<French>+1 [ICON_FOOD] from Orchard</French>
+		<German>+1 [ICON_FOOD] from Orchard</German>
+		<Italian>+1 [ICON_FOOD] from Orchard</Italian>
+		<Spanish>+1 [ICON_FOOD] from Orchard</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UP_MUG_TITLE</Tag>
