@@ -173,7 +173,7 @@ def itemize(iterable, format_func = lambda x: x, item_char = bullet):
 
 
 def autoplay():
-	return year() < year(dBirth[active()])
+	return data.iBeforeObserverSlot == -1 and year() < year(dBirth[active()])
 
 
 def spread(iterable, size, offset=0):
