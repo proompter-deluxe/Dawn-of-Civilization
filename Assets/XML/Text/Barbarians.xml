@@ -210,6 +210,14 @@
 		<Spanish>Cuman</Spanish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_ADJECTIVE_DZUNGAR</Tag>
+		<English>Dzungar</English>
+		<French>Dzungar</French>
+		<German>Dzungar</German>
+		<Italian>Dzungar</Italian>
+		<Spanish>Dzungar</Spanish>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_ADJECTIVE_EDO</Tag>
 		<English>Edo</English>
 		<French>Edo</French>
@@ -296,6 +304,14 @@
 		<German>Hindi</German>
 		<Italian>Hindi</Italian>
 		<Spanish>Hindi</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_ADJECTIVE_HU</Tag>
+		<English>Hu</English>
+		<French>Hu</French>
+		<German>Hu</German>
+		<Italian>Hu</Italian>
+		<Spanish>Hu</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_ADJECTIVE_HUNA</Tag>
@@ -522,6 +538,14 @@
 		<Spanish>Mon</Spanish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_ADJECTIVE_MONGOL</Tag>
+		<English>Mongol</English>
+		<French>Mongol</French>
+		<German>Mongol</German>
+		<Italian>Mongol</Italian>
+		<Spanish>Mongol</Spanish>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_ADJECTIVE_MUISCA</Tag>
 		<English>Muisca</English>
 		<French>Muisca</French>
@@ -568,6 +592,14 @@
 		<German>Nubian</German>
 		<Italian>Nubian</Italian>
 		<Spanish>Nubian</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_ADJECTIVE_OIRAT</Tag>
+		<English>Oirat</English>
+		<French>Oirat</French>
+		<German>Oirat</German>
+		<Italian>Oirat</Italian>
+		<Spanish>Oirat</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_ADJECTIVE_OSTROGOTHIC</Tag>
@@ -856,6 +888,14 @@
 		<German>Xiongnu</German>
 		<Italian>Xiongnu</Italian>
 		<Spanish>Xiongnu</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_ADJECTIVE_XIRONG</Tag>
+		<English>Xirong</English>
+		<French>Xirong</French>
+		<German>Xirong</German>
+		<Italian>Xirong</Italian>
+		<Spanish>Xirong</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_ADJECTIVE_YEMENI</Tag>
