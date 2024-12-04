@@ -7012,7 +7012,7 @@ int CvPlot::calculateImprovementYieldChange(ImprovementTypes eImprovement, Yield
 		}
 	}
 
-	// Leoreth: Moorish UP: +2 food from Orchards
+	// Leoreth: Moorish UP: +1 food from Orchards
 	if (ePlayer != NO_PLAYER && GET_PLAYER(ePlayer).getCivilizationType() == MOORS)
 	{
 		if (eYield == YIELD_FOOD && eImprovement == IMPROVEMENT_ORCHARD)
