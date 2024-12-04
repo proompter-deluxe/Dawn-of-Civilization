@@ -19779,7 +19779,7 @@
 					<bTerrainImpassable>1</bTerrainImpassable>
 				</TerrainImpassable>
 			</TerrainImpassables>
-			<iBaseDiscover>1000</iBaseDiscover>
+			<iBaseDiscover>500</iBaseDiscover>
 			<iDiscoverMultiplier>2</iDiscoverMultiplier>
 			<iAsset>5</iAsset>
 			<UnitMeshGroups>
@@ -19850,7 +19850,7 @@
 					<bTerrainImpassable>1</bTerrainImpassable>
 				</TerrainImpassable>
 			</TerrainImpassables>
-			<iBaseDiscover>1000</iBaseDiscover>
+			<iBaseDiscover>500</iBaseDiscover>
 			<iDiscoverMultiplier>2</iDiscoverMultiplier>
 			<iGreatWorkCulture>4000</iGreatWorkCulture>
 			<iAsset>5</iAsset>
@@ -19923,7 +19923,7 @@
 					<bTerrainImpassable>1</bTerrainImpassable>
 				</TerrainImpassable>
 			</TerrainImpassables>
-			<iBaseDiscover>1500</iBaseDiscover>
+			<iBaseDiscover>500</iBaseDiscover>
 			<iDiscoverMultiplier>3</iDiscoverMultiplier>
 			<iAsset>5</iAsset>
 			<UnitMeshGroups>
@@ -19992,7 +19992,7 @@
 					<bTerrainImpassable>1</bTerrainImpassable>
 				</TerrainImpassable>
 			</TerrainImpassables>
-			<iBaseDiscover>1000</iBaseDiscover>
+			<iBaseDiscover>500</iBaseDiscover>
 			<iDiscoverMultiplier>2</iDiscoverMultiplier>
 			<iBaseTrade>500</iBaseTrade>
 			<iTradeMultiplier>200</iTradeMultiplier>
@@ -20066,7 +20066,7 @@
 					<bTerrainImpassable>1</bTerrainImpassable>
 				</TerrainImpassable>
 			</TerrainImpassables>
-			<iBaseDiscover>1000</iBaseDiscover>
+			<iBaseDiscover>500</iBaseDiscover>
 			<iDiscoverMultiplier>2</iDiscoverMultiplier>
 			<iBaseHurry>500</iBaseHurry>
 			<iHurryMultiplier>20</iHurryMultiplier>
@@ -20144,7 +20144,7 @@
 					<bTerrainImpassable>1</bTerrainImpassable>
 				</TerrainImpassable>
 			</TerrainImpassables>
-			<iBaseDiscover>1000</iBaseDiscover>
+			<iBaseDiscover>500</iBaseDiscover>
 			<iDiscoverMultiplier>2</iDiscoverMultiplier>
 			<iAsset>5</iAsset>
 			<UnitMeshGroups>
@@ -20514,7 +20514,7 @@
 					<bTerrainImpassable>1</bTerrainImpassable>
 				</TerrainImpassable>
 			</TerrainImpassables>
-			<iBaseDiscover>1000</iBaseDiscover>
+			<iBaseDiscover>500</iBaseDiscover>
 			<iDiscoverMultiplier>2</iDiscoverMultiplier>
 			<iAsset>5</iAsset>
 			<UnitMeshGroups>
@@ -20586,7 +20586,7 @@
 					<bTerrainImpassable>1</bTerrainImpassable>
 				</TerrainImpassable>
 			</TerrainImpassables>
-			<iBaseDiscover>1000</iBaseDiscover>
+			<iBaseDiscover>500</iBaseDiscover>
 			<iDiscoverMultiplier>2</iDiscoverMultiplier>
 			<iGreatWorkCulture>4000</iGreatWorkCulture>
 			<iAsset>5</iAsset>
@@ -20660,7 +20660,7 @@
 					<bTerrainImpassable>1</bTerrainImpassable>
 				</TerrainImpassable>
 			</TerrainImpassables>
-			<iBaseDiscover>1500</iBaseDiscover>
+			<iBaseDiscover>500</iBaseDiscover>
 			<iDiscoverMultiplier>3</iDiscoverMultiplier>
 			<iAsset>5</iAsset>
 			<UnitMeshGroups>
@@ -20734,7 +20734,7 @@
 					<bTerrainImpassable>1</bTerrainImpassable>
 				</TerrainImpassable>
 			</TerrainImpassables>
-			<iBaseDiscover>1000</iBaseDiscover>
+			<iBaseDiscover>500</iBaseDiscover>
 			<iDiscoverMultiplier>2</iDiscoverMultiplier>
 			<iBaseTrade>500</iBaseTrade>
 			<iTradeMultiplier>200</iTradeMultiplier>
@@ -20809,7 +20809,7 @@
 					<bTerrainImpassable>1</bTerrainImpassable>
 				</TerrainImpassable>
 			</TerrainImpassables>
-			<iBaseDiscover>1000</iBaseDiscover>
+			<iBaseDiscover>500</iBaseDiscover>
 			<iDiscoverMultiplier>2</iDiscoverMultiplier>
 			<iBaseHurry>500</iBaseHurry>
 			<iHurryMultiplier>20</iHurryMultiplier>
@@ -20888,7 +20888,7 @@
 					<bTerrainImpassable>1</bTerrainImpassable>
 				</TerrainImpassable>
 			</TerrainImpassables>
-			<iBaseDiscover>1000</iBaseDiscover>
+			<iBaseDiscover>500</iBaseDiscover>
 			<iDiscoverMultiplier>2</iDiscoverMultiplier>
 			<iAsset>5</iAsset>
 			<UnitMeshGroups>
