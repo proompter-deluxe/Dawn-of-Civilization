@@ -8110,7 +8110,7 @@
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_MANUFACTORY</ArtDefineTag>
 			<MovieDefineTag>NONE</MovieDefineTag>
-			<PrereqTech>TECH_COMPANIES</PrereqTech>
+			<PrereqTech>TECH_PRINTING</PrereqTech>
 			<bNukeImmune>1</bNukeImmune>
 			<iCost>-1</iCost>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
