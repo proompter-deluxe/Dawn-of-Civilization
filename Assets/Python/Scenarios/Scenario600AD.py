@@ -73,7 +73,7 @@ lCivilizations = [
 		iGold=400,
 		iStateReligion=iOrthodoxy,
 		lCivics=[iDespotism, iCitizenship, iManorialism, iMerchantTrade, iClergy, iHegemony],
-		techs=techs.column(6).including(iFortification,iMachinery, iCivilService)
+		techs=techs.column(6)
 	),
 	Civilization(
 		iFrance,
