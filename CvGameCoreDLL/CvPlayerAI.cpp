@@ -10617,15 +10617,22 @@ int CvPlayerAI::AI_civicValue(CivicTypes eCivic) const
 	{
 		if (kCivic.isHurry(iI))
 		{
+			int iGoldRate = calculateGoldRate();
 			iTempValue = 0;
 
 			if (GC.getHurryInfo((HurryTypes)iI).getGoldPerProduction() > 0)
 			{
 				// Leoreth: down from 50 : 25
-				iTempValue += ((((AI_avoidScience()) ? 30 : 15) * getNumCities()) / GC.getHurryInfo((HurryTypes)iI).getGoldPerProduction());
+				//iTempValue += ((((AI_avoidScience()) ? 30 : 15) * getNumCities()) / GC.getHurryInfo((HurryTypes)iI).getGoldPerProduction());
+
+				if (iGoldRate > 0)
+				{
+					iTempValue += AI_yieldWeight(YIELD_PRODUCTION) * (GC.getHurryInfo((HurryTypes)iI).isUnits() && bWarPlan ? 2 : 1) * iGoldRate / GC.getHurryInfo((HurryTypes)iI).getGoldPerProduction() / 100;
+				}
 			}
 			iTempValue += (GC.getHurryInfo((HurryTypes)iI).getProductionPerPopulation() * getNumCities() * (bWarPlan ? 2 : 1)) / 5;
 			iValue += iTempValue;
+			
 		}
 	}
 
