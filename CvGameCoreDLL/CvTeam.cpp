@@ -2755,7 +2755,6 @@ int CvTeam::getCivilizationResearchModifier() const
 	// nerf late game China
 	if (GET_PLAYER(getLeaderID()).getCivilizationType() == CHINA)
 	{
-		if (GET_PLAYER(getLeaderID()).getCurrentEra() == ERA_CLASSICAL) iCivModifier += 10;
 		if (GET_PLAYER(getLeaderID()).getCurrentEra() == ERA_MEDIEVAL) iCivModifier += 25;
 		if (GET_PLAYER(getLeaderID()).getCurrentEra() >= ERA_RENAISSANCE) iCivModifier += 40;
 	}
