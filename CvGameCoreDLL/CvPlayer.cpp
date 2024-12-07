@@ -13856,6 +13856,7 @@ CivicTypes CvPlayer::getCivics(CivicOptionTypes eIndex) const
 int CvPlayer::getSingleCivicUpkeep(CivicTypes eCivic, bool bIgnoreAnarchy) const
 {
 	int iUpkeep;
+	int iTotalPopulation;
 
 	if (eCivic == NO_CIVIC)
 	{
@@ -13880,9 +13881,16 @@ int CvPlayer::getSingleCivicUpkeep(CivicTypes eCivic, bool bIgnoreAnarchy) const
 		}
 	}
 
+	iTotalPopulation = getTotalPopulation();
+
+	if (getCivilizationType() == CHINA)
+	{
+		iTotalPopulation /= 2;
+	}
+
 	iUpkeep = 0;
 
-	iUpkeep += ((std::max(0, (getTotalPopulation() + GC.getDefineINT("UPKEEP_POPULATION_OFFSET") - GC.getCivicInfo(eCivic).getCivicOptionType())) * GC.getUpkeepInfo((UpkeepTypes)(GC.getCivicInfo(eCivic).getUpkeep())).getPopulationPercent()) / 100);
+	iUpkeep += ((std::max(0, (iTotalPopulation + GC.getDefineINT("UPKEEP_POPULATION_OFFSET") - GC.getCivicInfo(eCivic).getCivicOptionType())) * GC.getUpkeepInfo((UpkeepTypes)(GC.getCivicInfo(eCivic).getUpkeep())).getPopulationPercent()) / 100);
 	iUpkeep += ((std::max(0, (getNumCities() + GC.getDefineINT("UPKEEP_CITY_OFFSET") + GC.getCivicInfo(eCivic).getCivicOptionType() - (GC.getNumCivicOptionInfos() / 2))) * GC.getUpkeepInfo((UpkeepTypes)(GC.getCivicInfo(eCivic).getUpkeep())).getCityPercent()) / 100);
 
 	iUpkeep *= std::max(0, (getUpkeepModifier() + 100));
