@@ -605,7 +605,7 @@
 			<Description>TXT_KEY_CIVIC_REGULATED_TRADE</Description>
 			<Civilopedia>TXT_KEY_CIVIC_REGULATED_TRADE_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_CIVIC_REGULATED_TRADE_STRATEGY</Strategy>
-			<TechPrereq>TECH_GUILDS</TechPrereq>
+			<TechPrereq>TECH_COMPANIES</TechPrereq>
 			<Button>,Art/Interface/Buttons/Civics/Regulated Trade.dds</Button>
 			<iAnarchyLength>1</iAnarchyLength>
 			<Upkeep>UPKEEP_HIGH</Upkeep>
