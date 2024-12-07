@@ -497,9 +497,16 @@
 			<Button>,Art/Interface/Buttons/Civics/Totalitarianism.dds</Button>
 			<iAnarchyLength>1</iAnarchyLength>
 			<Upkeep>NONE</Upkeep>
-			<iBaseFreeUnits>15</iBaseFreeUnits>
-			<iFreeUnitsPopulationPercent>10</iFreeUnitsPopulationPercent>
 			<iWarWearinessModifier>-100</iWarWearinessModifier>
+			<SpecialistTypeExtraYields>
+				<SpecialistTypeExtraYield>
+					<SpecialistType>SPECIALIST_CITIZEN</SpecialistType>
+					<YieldChanges>
+						<iYield>0</iYield>
+						<iYield>2</iYield>
+					</YieldChanges>
+				</SpecialistTypeExtraYield>
+			</SpecialistTypeExtraYields>
 			<DomainExperienceModifiers>
 				<DomainExperienceModifier>
 					<DomainType>DOMAIN_LAND</DomainType>
