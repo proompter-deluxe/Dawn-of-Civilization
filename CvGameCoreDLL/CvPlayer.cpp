@@ -3927,6 +3927,21 @@ int CvPlayer::countSpecialists(SpecialistTypes eSpecialist) const
 }
 
 
+// Leoreth
+int CvPlayer::countSpecialistSlots(SpecialistTypes eSpecialist) const
+{
+	int iCount = 0;
+
+	int iLoop;
+	for (CvCity* pLoopCity = firstCity(&iLoop); pLoopCity != NULL; pLoopCity = nextCity(&iLoop))
+	{
+		iCount += pLoopCity->getMaxSpecialistCount(eSpecialist, true);
+	}
+
+	return iCount;
+}
+
+
 int CvPlayer::countNumCitiesConnectedToCapital() const
 {
 	CvCity* pLoopCity;

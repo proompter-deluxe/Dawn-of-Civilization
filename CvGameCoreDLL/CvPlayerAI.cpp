@@ -10630,7 +10630,8 @@ int CvPlayerAI::AI_civicValue(CivicTypes eCivic) const
 		iTempValue = 0;
 		if (kCivic.isSpecialistValid(iI))
 		{
-			iTempValue += ((getNumCities() *  (bCultureVictory3 ? 10 : 1)) + 6);
+			//iTempValue += ((getNumCities() *  (bCultureVictory3 ? 10 : 1)) + 6);
+			iTempValue += std::max(0, 2 * countSpecialists((SpecialistTypes)iI) - countSpecialistSlots((SpecialistTypes)iI));
 		}
 		iValue += (iTempValue / 2);
 	}

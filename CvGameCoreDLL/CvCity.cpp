@@ -13010,7 +13010,7 @@ void CvCity::alterSpecialistCount(SpecialistTypes eIndex, int iChange)
 }
 
 
-int CvCity::getMaxSpecialistCount(SpecialistTypes eIndex) const
+int CvCity::getMaxSpecialistCount(SpecialistTypes eIndex, bool bIgnoreCivic) const
 {
 	FAssertMsg(eIndex >= 0, "eIndex expected to be >= 0");
 	FAssertMsg(eIndex < GC.getNumSpecialistInfos(), "eIndex expected to be < GC.getNumSpecialistInfos()");
@@ -13018,7 +13018,7 @@ int CvCity::getMaxSpecialistCount(SpecialistTypes eIndex) const
 	int iMaxSpecialistCount = m_paiMaxSpecialistCount[eIndex];
 
 	// Leoreth: unlimited specialist effects now only double available specialists
-	if (GET_PLAYER(getOwnerINLINE()).isSpecialistValid(eIndex))
+	if (!bIgnoreCivic && GET_PLAYER(getOwnerINLINE()).isSpecialistValid(eIndex))
 	{
 		iMaxSpecialistCount *= 2;
 	}
