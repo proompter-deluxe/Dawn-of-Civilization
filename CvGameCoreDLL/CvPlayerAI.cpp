@@ -10398,20 +10398,24 @@ int CvPlayerAI::AI_civicValue(CivicTypes eCivic) const
 
 	iValue += (kCivic.getNonStateReligionHappiness() * (iTotalReligonCount - iHighestReligionCount) * 5);
 
-	if (kCivic.isStateReligion())
+	if (iHighestReligionCount > 0)
 	{
-		if (iHighestReligionCount > 0)
+		if (kCivic.isStateReligion())
 		{
 			iValue += iHighestReligionCount;
-
-			iValue += ((kCivic.isNoNonStateReligionSpread()) ? ((getNumCities() - iHighestReligionCount) * 2) : 0);
-			iValue += (kCivic.getStateReligionHappiness() * iHighestReligionCount * 4);
-			iValue += ((kCivic.getStateReligionGreatPeopleRateModifier() * iHighestReligionCount) / 20);
-			iValue += (kCivic.getStateReligionGreatPeopleRateModifier() / 4);
-			iValue += ((kCivic.getStateReligionUnitProductionModifier() * iHighestReligionCount) / 4);
-			iValue += ((kCivic.getStateReligionBuildingProductionModifier() * iHighestReligionCount) / 3);
-			iValue += (kCivic.getStateReligionFreeExperience() * iHighestReligionCount * ((bWarPlan) ? 6 : 2));
 		}
+
+		iValue += ((kCivic.isNoNonStateReligionSpread()) ? ((getNumCities() - iHighestReligionCount) * 2) : 0);
+		//iValue += (kCivic.getStateReligionHappiness() * iHighestReligionCount * 4);
+		if (kCivic.getStateReligionHappiness() != 0)
+		{
+			iValue += AI_getHappinessWeight(kCivic.getStateReligionHappiness(), 1) * iHighestReligionCount / getNumCities() / 30;
+		}
+		iValue += ((kCivic.getStateReligionGreatPeopleRateModifier() * iHighestReligionCount) / 20);
+		iValue += (kCivic.getStateReligionGreatPeopleRateModifier() / 4);
+		iValue += ((kCivic.getStateReligionUnitProductionModifier() * iHighestReligionCount) / 4);
+		iValue += ((kCivic.getStateReligionBuildingProductionModifier() * iHighestReligionCount) / 3);
+		iValue += (kCivic.getStateReligionFreeExperience() * iHighestReligionCount * ((bWarPlan) ? 6 : 2));
 	}
 
 	// Leoreth: no state religion change anarchy
