@@ -10448,15 +10448,19 @@ int CvPlayerAI::AI_civicValue(CivicTypes eCivic) const
 		//iTempValue += ((kCivic.getTradeYieldModifier(iI) * getNumCities()) / 11);
 
 		// Leoreth: more accurate trade yield modifier
-		if (kCivic.getTradeYieldModifier(iI) != 0)
+		int iTradeYield = 0;
+		if (kCivic.getTradeYieldModifier(iI) != 0 || kCivic.getVassalTradeModifier() != 0)
 		{
 			CvCity* pLoopCity;
 			int iLoop;
 			for (pLoopCity = firstCity(&iLoop); pLoopCity != NULL; pLoopCity = nextCity(&iLoop))
 			{
-				iTempValue += pLoopCity->getTradeYield(YIELD_COMMERCE) * kCivic.getTradeYieldModifier(iI) / 100;
+				iTradeYield += pLoopCity->getTradeYield((YieldTypes)iI);
 			}
 		}
+
+		iTempValue += iTradeYield * kCivic.getTradeYieldModifier(iI) / 100;
+		iTempValue += iTradeYield * kCivic.getVassalTradeModifier() * GET_TEAM(getTeam()).getVassalCount() / 10 / 100;
 
 		for (iJ = 0; iJ < GC.getNumImprovementInfos(); iJ++)
 		{
