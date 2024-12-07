@@ -10513,7 +10513,7 @@ int CvPlayerAI::AI_civicValue(CivicTypes eCivic) const
 
 		if (iI == YIELD_FOOD)
 		{
-			iTempValue *= 3;
+			iTempValue *= 4;
 		}
 		else if (iI == YIELD_PRODUCTION)
 		{
