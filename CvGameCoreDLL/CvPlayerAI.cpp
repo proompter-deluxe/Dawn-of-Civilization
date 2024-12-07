@@ -10496,14 +10496,16 @@ int CvPlayerAI::AI_civicValue(CivicTypes eCivic) const
 		{
 			if (getStateReligion() != NO_RELIGION)
 			{
-				int iStateReligionBuildingValue = 0;
+				/*int iStateReligionBuildingValue = 0;
 				for (iJ = 0; iJ < GC.getNumBuildingClassInfos(); iJ++)
 				{
 					if (GC.getBuildingInfo((BuildingTypes)GC.getCivilizationInfo(getCivilizationType()).getCivilizationBuildings(iJ)).getStateReligion() == getStateReligion())
 					{
 						iStateReligionBuildingValue += AI_averageYieldMultiplier((YieldTypes)iI) * kCivic.getStateReligionBuildingYield(iI) * getBuildingClassCount((BuildingClassTypes)iJ);
 					}
-				}
+				}*/
+
+				int iStateReligionBuildingValue = kCivic.getStateReligionBuildingYield(iI) * AI_averageYieldMultiplier((YieldTypes)iI) * iHighestReligionCount / 2;
 
 				iTempValue += iStateReligionBuildingValue / 100;
 			}
