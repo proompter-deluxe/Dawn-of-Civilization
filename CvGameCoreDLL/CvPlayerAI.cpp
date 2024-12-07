@@ -10568,6 +10568,8 @@ int CvPlayerAI::AI_civicValue(CivicTypes eCivic) const
 			continue;
 		}
 
+		CvBuildingInfo& kBuilding = GC.getBuildingInfo(eBuilding);
+
 		if (kCivic.getBuildingHappinessChanges(iI) != 0)
 		{
 			iValue += (kCivic.getBuildingHappinessChanges(iI) * getBuildingClassCount((BuildingClassTypes)iI) * 3);
@@ -10577,16 +10579,16 @@ int CvPlayerAI::AI_civicValue(CivicTypes eCivic) const
 		{
 			if (getNumCities() > 0 && canConstruct(eBuilding))
 			{
-				iValue += 2 * kCivic.getBuildingProductionModifier(iI) * (getNumCities() - getBuildingClassCountPlusMaking((BuildingClassTypes)iI)) / (100 * getNumCities());
+				iValue += (kBuilding.getAdvisorType() == ADVISOR_ECONOMY || kBuilding.getAdvisorType() == ADVISOR_SCIENCE ? 2 : 1) * kBuilding.getProductionCost() * kCivic.getBuildingProductionModifier(iI) * (getNumCities() - getBuildingClassCount((BuildingClassTypes)iI)) / (getNumCities()) / 100 / 120;
 			}
 		}
 
 		// Leoreth: shrine income income limit changes
 		if (kCivic.getShrineIncomeLimitChange() != 0)
 		{
-			if (GC.getBuildingInfo(eBuilding).getGlobalReligionCommerce() != NO_RELIGION && isHasBuilding(eBuilding))
+			if (kBuilding.getGlobalReligionCommerce() != NO_RELIGION && isHasBuilding(eBuilding))
 			{
-				iValue += std::max(0, std::min(kCivic.getShrineIncomeLimitChange(), GC.getGameINLINE().countReligionLevels((ReligionTypes)GC.getBuildingInfo(eBuilding).getGlobalReligionCommerce()) - MAX_COM_SHRINE)) * AI_commerceWeight(COMMERCE_GOLD);
+				iValue += std::max(0, std::min(kCivic.getShrineIncomeLimitChange(), GC.getGameINLINE().countReligionLevels((ReligionTypes)kBuilding.getGlobalReligionCommerce()) - MAX_COM_SHRINE)) * AI_commerceWeight(COMMERCE_GOLD);
 			}
 		}
 	}
