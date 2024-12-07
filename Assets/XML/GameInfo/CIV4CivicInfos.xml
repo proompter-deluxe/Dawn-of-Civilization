@@ -262,14 +262,8 @@
 			</SpecialistValids>
 			<StateReligionBuildingYields>
 				<iYield>0</iYield>
-				<iYield>2</iYield>
+				<iYield>1</iYield>
 			</StateReligionBuildingYields>
-			<SpecialBuildingNotRequireds>
-				<SpecialBuildingNotRequired>
-					<SpecialBuildingType>SPECIALBUILDING_MONASTERY</SpecialBuildingType>
-					<bNotRequired>1</bNotRequired>
-				</SpecialBuildingNotRequired>
-			</SpecialBuildingNotRequireds>
 		</CivicInfo>
 		<CivicInfo>
 			<CivicOptionType>CIVICOPTION_LEGITIMACY</CivicOptionType>
