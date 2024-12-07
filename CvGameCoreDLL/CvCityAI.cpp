@@ -2404,6 +2404,7 @@ UnitTypes CvCityAI::AI_bestUnit(bool bAsync, AdvisorTypes eIgnoreAdvisor, UnitAI
 		aiUnitAIVal[UNITAI_ATTACK] *= 3;
 		aiUnitAIVal[UNITAI_SETTLE] *= 3;
 		aiUnitAIVal[UNITAI_SETTLE] /= 2;
+		aiUnitAIVal[UNITAI_WORKER] *= 2;
 		aiUnitAIVal[UNITAI_MISSIONARY] /= 5;
 		break;
 	case INDIA:
