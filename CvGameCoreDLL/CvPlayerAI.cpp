@@ -3094,6 +3094,13 @@ int CvPlayerAI::AI_getPlotDanger(CvPlot* pPlot, int iRange, bool bTestMoves) con
 				            iBorderDanger++;
 				        }
 				    }
+					else
+					{
+						if (pPlot->isCity() && pLoopPlot->isCity())
+						{
+							continue;
+						}
+					}
 
 
 					pUnitNode = pLoopPlot->headUnitNode();
