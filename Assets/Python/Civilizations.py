@@ -1721,9 +1721,10 @@ dTechPreferences = {
 		iGuilds: -40,
 	},
 	iSpain : {
+		iMachinery: 100,
 		iCartography: 100,
 		iExploration: 100,
-		iCompass: 100,
+		iCompass: 50,
 		iFirearms: 25,
 		iPatronage: 30,
 		iReplaceableParts: 20,
