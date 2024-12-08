@@ -2524,6 +2524,7 @@ UnitTypes CvCityAI::AI_bestUnit(bool bAsync, AdvisorTypes eIgnoreAdvisor, UnitAI
 		//aiUnitAIVal[UNITAI_ASSAULT_SEA] *= 2;
 		//aiUnitAIVal[UNITAI_SETTLER_SEA] *= 2;
 		aiUnitAIVal[UNITAI_PIRATE_SEA] *= 2;
+		aiUnitAIVal[UNITAI_CITY_DEFENSE] /= 2;
 		break;
 	case SPAIN:
 		aiUnitAIVal[UNITAI_EXPLORE_SEA] *= 5;
