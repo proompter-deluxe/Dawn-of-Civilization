@@ -394,7 +394,7 @@ lCivilizations = [
 		iAdvancedStartPoints=100,
 		iStateReligion=iCatholicism,
 		lCivics=[iMonarchy, iVassalage, iManorialism, iMerchantTrade, iClergy, iHegemony],
-		techs=techs.column(6).including(iFeudalism, iAlchemy, iGuilds)
+		techs=techs.column(6).including(iFeudalism, iFortification, iAlchemy)
 	),
 	Civilization(
 		iEngland,
