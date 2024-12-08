@@ -489,6 +489,11 @@ def determineTargetPlayer(iPlayer):
 		elif iCiv == iItaly:
 			if iLoopCiv in [iFrance, iHolyRome, iGermany]:
 				dTargetValues[iLoopPlayer] /= 2
+		
+		# Spain prefers Moors in Iberia
+		if (iCiv == iSpain and iLoopCiv != iMoors) or (iCiv == iFrance and iLoopCiv == iSpain):
+			if cities.regions(rIberia).owner(iMoors):
+				dTargetValues[iLoopPlayer] /= 4
 				
 	return dict_max(dTargetValues)
 				
