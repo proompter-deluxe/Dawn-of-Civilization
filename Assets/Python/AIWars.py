@@ -290,12 +290,14 @@ def spawnConquerors(iPlayer, iPreferredTarget, tTL, tBR, iNumTargets, iYear, iIn
 		if not player(iPlayer).isHuman():
 			if iCiv == iMongols:
 				iExtra += 1
+			elif iCiv == iSpain:
+				iExtra += 1
 		
 		tPlot = findNearestLandPlot(city, iPlayer)
 		
 		dConquestUnits = {
 			iCityAttack: 2 + iExtra + max(0, iExtra-2),
-			iCitySiege: 1 + min(1, iExtra),
+			iCitySiege: 1 + max(0, iExtra-1),
 			iDefend: 1,
 		}
 		createRoleUnits(iPlayer, tPlot, dConquestUnits.items())
