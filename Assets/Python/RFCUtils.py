@@ -1111,6 +1111,16 @@ def endObserverMode():
 		else:
 			makeUnit(active(), iCatapult, (0, 0))
 
+def breakObserverMode(message = None):
+	if data.iBeforeObserverSlot == -1:
+		return
+	
+	game.setAIAutoPlay(0)
+	events.fireEvent("autoplayEnded")
+	
+	if message:
+		show(message)
+
 # used: Congresses
 def isIsland(tile):
 	return plot(tile).area().getNumTiles() == 1
