@@ -2708,6 +2708,22 @@ UnitTypes CvCityAI::AI_bestUnit(bool bAsync, AdvisorTypes eIgnoreAdvisor, UnitAI
 		break;
 	}
 
+	if (GET_PLAYER(getOwnerINLINE()).AI_getNumAIUnits(UNITAI_EXPLORE_SEA) == 0)
+	{
+		switch (getCivilizationType())
+		{
+		case FRANCE:
+		case SPAIN:
+		case ENGLAND:
+		case PORTUGAL:
+		case NETHERLANDS:
+			aiUnitAIVal[UNITAI_EXPLORE_SEA] *= 10;
+			break;
+		default:
+			break;
+		}
+	}
+
 	//Rhye - end
 
 	iBestValue = 0;
