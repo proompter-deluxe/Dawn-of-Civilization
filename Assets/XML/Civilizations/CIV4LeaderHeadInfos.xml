@@ -36596,7 +36596,7 @@
 			<iDemandRebukedSneakProb>20</iDemandRebukedSneakProb>
 			<iDemandRebukedWarProb>10</iDemandRebukedWarProb>
 			<iRazeCityProb>0</iRazeCityProb>
-			<iBuildUnitProb>20</iBuildUnitProb>
+			<iBuildUnitProb>15</iBuildUnitProb>
 			<iBaseAttackOddsChange>4</iBaseAttackOddsChange>
 			<iAttackOddsChangeRand>8</iAttackOddsChangeRand>
 			<iWorseRankDifferenceAttitudeChange>0</iWorseRankDifferenceAttitudeChange>
