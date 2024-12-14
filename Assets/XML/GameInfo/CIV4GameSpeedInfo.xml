@@ -396,12 +396,18 @@
 				
 				<!-- Medieval Era -->
 				<!-- 400 AD to 1400 AD -->
-				<!-- 100 turns -->
+				<!-- 110 turns -->
 				
-				<!-- 100 x 10 years = 1000 years -> 1400 AD -->
+				<!-- 90 x 10 years = 900 years -> 1300 AD -->
 				<GameTurnInfo>
 					<iMonthIncrement>120</iMonthIncrement>
-					<iTurnsPerIncrement>100</iTurnsPerIncrement>
+					<iTurnsPerIncrement>90</iTurnsPerIncrement>
+				</GameTurnInfo>
+				
+				<!-- 20 x 5 years = 100 years -> 1400 AD -->
+				<GameTurnInfo>
+					<iMonthIncrement>60</iMonthIncrement>
+					<iTurnsPerIncrement>20</iTurnsPerIncrement>
 				</GameTurnInfo>
 				
 				<!-- Renaissance Era -->
