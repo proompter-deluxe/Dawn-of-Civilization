@@ -8316,6 +8316,11 @@ int CvPlayerAI::AI_unitValue(UnitTypes eUnit, UnitAITypes eUnitAI, CvArea* pArea
 		return 0;
 	}
 
+	if (getCivilizationType() == FRANCE && GC.getUnitInfo(eUnit).isFound() && GC.getGameINLINE().getGameTurnYear() < 840)
+	{
+		return 0;
+	}
+
 	bValid = GC.getUnitInfo(eUnit).getUnitAIType(eUnitAI);
 
 	if (!bValid)
