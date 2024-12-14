@@ -21,6 +21,7 @@ dPeriods1700AD = {
 	iNorse : iPeriodDenmark,
 	iTurks : iPeriodUzbeks,
 	iMoors : iPeriodMorocco,
+	iSpain : iPeriodSpain,
 	iHolyRome : iPeriodAustria,
 	iInca : iPeriodPeru,
 	iOttomans : iPeriodOttomanConstantinople,
@@ -48,6 +49,7 @@ dPeriodNames = {
 	iPeriodUzbeks:					"Uzbeks",
 	iPeriodSaudi:					"Saudi",
 	iPeriodMorocco:					"Morocco",
+	iPeriodSpain:					"Spain",
 	iPeriodAustria:					"Austria",
 	iPeriodYuan:					"Yuan",
 	iPeriodPeru:					"Peru",
@@ -215,8 +217,9 @@ def onTechAcquired(iTech, iTeam, iPlayer):
 				setPeriod(iMoors, iPeriodMorocco)
 
 	if iCiv == iSpain:
-		if iEra == iRenaissance:
-			if player(iMoors).isExisting() and player(iMoors).getPeriod() == -1 and cities.owner(iMoors).region(rIberia).none():
+		if iEra == iRenaissance and player(iCiv).getPeriod() == -1:
+			if player(iMoors).isExisting() and cities.owner(iMoors).region(rIberia).none():
+				setPeriod(iSpain, iPeriodSpain)
 				setPeriod(iMoors, iPeriodMorocco)
 	
 	if iCiv == iJapan:
