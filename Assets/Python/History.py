@@ -317,10 +317,10 @@ def mongolConquerors(iTargetTeam):
 
 			teamTarget = team(iTargetTeam)
 			
-			mongol_area = plots.rectangle((70, 39), (86, 58))
+			lMongolRegions = [rLevant, rMesopotamia, rAnatolia, rCaucasus, rPersia, rKhorasan, rPonticSteppe, rRuthenia]
 			
 			mongol_cities = cities.owner(iMongols)
-			target_cities = mongol_area.cities().owner(iTargetCiv)
+			target_cities = cities.regions(*lMongolRegions).owner(iTargetCiv)
 			lTargetCities = [(mongol_cities.closest(target_city), target_city) for target_city in target_cities]
 			lSelectedTargets = sorted(lTargetCities, key=lambda (mongol_city, target_city): distance(mongol_city, target_city))[:3]
 			
