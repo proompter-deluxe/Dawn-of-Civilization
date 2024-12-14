@@ -359,7 +359,7 @@ def targetMinors():
 			if team(iPlayer).isAtWar(city.getTeam()):
 				continue
 		
-			if plot(city).getPlayerSettlerValue(iPlayer) >= 10 or plot(city).getPlayerWarValue(iPlayer) >= 6:
+			if plot(city).getPlayerSettlerValue(iPlayer) >= 5 or plot(city).getPlayerWarValue(iPlayer) >= 2:
 				declareWar(iPlayer, city.getOwner(), WarPlanTypes.WARPLAN_LIMITED)
 				break
 
