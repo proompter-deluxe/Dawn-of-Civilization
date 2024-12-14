@@ -512,6 +512,26 @@ def stabilizeRomeAfterByzantium(iPlayer):
 			data.players[iRome].iNumPreviousCities = player(iRome).getNumCities()
 
 
+@handler("flip")
+def westernMongolExplorers(iPlayer):
+	if civ(iPlayer) == iMongols:
+		if not player(iPlayer).isHuman():
+			city = cities.owner(iPlayer).minimum(CyCity.getX)
+			if city:
+				createRoleUnit(iPlayer, city, iExplore)
+
+
+@handler("flip")
+def removeBarbariansForMongols(iPlayer):
+	if civ(iPlayer) == iMongols:
+		lRegions = [rManchuria, rMongolia, rSiberia]
+		if not player(iPlayer).isHuman():
+			lRegions += [rCentralAsianSteppe, rUrals, rPonticSteppe]
+		
+		for unit in plots.regions(*lRegions).notowned().units().owner(iBarbarian):
+			unit.kill(False, -1)
+
+
 ### PERIOD CHANGE ###
 
 

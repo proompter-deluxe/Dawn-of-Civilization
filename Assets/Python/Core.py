@@ -1402,6 +1402,9 @@ class Plots(Locations):
 	
 	def edge(self):
 		return self.where(lambda p: plots.surrounding(p).any(lambda sp: sp not in self))
+	
+	def notowned(self):
+		return self.where(lambda p: not p.isOwned())
 
 
 class CitiesCorner:
