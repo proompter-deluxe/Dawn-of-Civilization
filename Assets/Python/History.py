@@ -404,6 +404,9 @@ def russianSiberianSettlement(iTech, iTeam, iPlayer):
 def earlyTradingCompany(iTech, iTeam, iPlayer):
 	if turn() == scenarioStartTurn():
 		return
+	
+	if data.civs[iPlayer].iResurrections > 0:
+		return
 
 	lCivs = [iSpain, iPortugal]
 	lTechs = [iExploration, iFirearms]
@@ -417,6 +420,9 @@ def earlyTradingCompany(iTech, iTeam, iPlayer):
 @handler("techAcquired")
 def lateTradingCompany(iTech, iTeam, iPlayer):
 	if turn() == scenarioStartTurn():
+		return
+	
+	if data.civs[iPlayer].iResurrections > 0:
 		return
 
 	lCivs = [iFrance, iEngland, iNetherlands]
