@@ -160,6 +160,9 @@ def newWorldPlague(iTeamX, iHasMetTeamY):
 	if iOldWorld is None or iNewWorld is None:
 		return
 	
+	if is_minor(iOldWorld):
+		return
+	
 	if data.players[iNewWorld].iPlagueCountdown == 0:
 		if not team(iNewWorld).isHasTech(iMicrobiology):
 			city = cities.owner(iNewWorld).random()
