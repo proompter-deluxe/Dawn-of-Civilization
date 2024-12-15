@@ -359,9 +359,6 @@ class Barbarians(object):
 		if self.pattern == PIRATES:
 			return UnitAITypes.UNITAI_PIRATE_SEA
 		
-		elif self.pattern == NATIVES:
-			return UnitAITypes.UNITAI_PILLAGE
-		
 		elif self.pattern == ANIMALS:
 			return UnitAITypes.UNITAI_ANIMAL
 		
