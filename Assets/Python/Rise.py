@@ -677,7 +677,7 @@ class Birth(object):
 		elif iUntilBirth == 1:
 			self.birth()
 			self.checkSwitch()
-		elif iUntilBirth == 0:
+		elif iUntilBirth == 0 and not scenarioStart():
 			self.flip()
 			self.wars()
 			
