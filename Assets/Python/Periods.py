@@ -134,6 +134,10 @@ def onResurrection(iPlayer):
 def onCityAcquired(iOwner, iPlayer, city, bConquest):
 	iCiv = civ(iPlayer)
 	iOwnerCiv = civ(iOwner)
+	
+	if iCiv == iSpain:
+		if not cities.owner(iMoors).region(rIberia):
+			setPeriod(iSpain, iPeriodSpain)
 
 	if iCiv == iOttomans:
 		if city.at(*tConstantinople):
@@ -152,6 +156,10 @@ def onCityAcquired(iOwner, iPlayer, city, bConquest):
 	if iOwnerCiv == iCelts:
 		if player(iCelts).getNumCities() > 0 and cities.core(iCelts).owner(iCelts).count() == 0:
 			setPeriod(iCelts, iPeriodInsularCelts)
+	
+	if iOwnerCiv == iMoors:
+		if not cities.owner(iMoors).region(rIberia):
+			setPeriod(iMoors, iPeriodMorocco)
 
 	
 @handler("firstCity")
@@ -216,12 +224,6 @@ def onTechAcquired(iTech, iTeam, iPlayer):
 			if player(iPlayer).getCapitalCity().getRegionID() != rIberia:
 				setPeriod(iMoors, iPeriodMorocco)
 
-	if iCiv == iSpain:
-		if iEra == iRenaissance and player(iCiv).getPeriod() == -1:
-			if player(iMoors).isExisting() and cities.owner(iMoors).region(rIberia).none():
-				setPeriod(iSpain, iPeriodSpain)
-				setPeriod(iMoors, iPeriodMorocco)
-	
 	if iCiv == iJapan:
 		if iEra == iIndustrial:
 			setPeriod(iJapan, iPeriodMeiji)
