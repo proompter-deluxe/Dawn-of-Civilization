@@ -691,6 +691,7 @@ def calculateStability(iPlayer):
 		
 	elif iStateReligion == iConfucianism:
 		if iBureaucracy in civics: iCivicEraTechStability += 3
+		if iIsolationism in civics: iCivicEraTechStability += 3
 		
 	elif iStateReligion in [iZoroastrianism, iOrthodoxy, iCatholicism, iProtestantism]:
 		if iSlavery in civics: iCivicEraTechStability -= 3
@@ -700,9 +701,6 @@ def calculateStability(iPlayer):
 		
 	elif iStateReligion == iBuddhism:
 		if iMonasticism in civics: iCivicEraTechStability += 2
-		
-	elif iStateReligion == iConfucianism:
-		if iIsolationism in civics: iCivicEraTechStability += 3
 		
 	if not player(iPlayer).isHuman() and iCivicEraTechStability < 0: iCivicEraTechStability /= 2
 	
