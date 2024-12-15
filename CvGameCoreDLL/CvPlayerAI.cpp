@@ -10960,7 +10960,7 @@ int CvPlayerAI::AI_religionValue(ReligionTypes eReligion) const
 		return 0;
 	}
 
-	CvCity* pHolyCity = GC.getGameINLINE().getHolyCity(eReligion);
+	/*CvCity* pHolyCity = GC.getGameINLINE().getHolyCity(eReligion);
 	if (pHolyCity != NULL)
 	{
 		bool bOurHolyCity = pHolyCity->getOwnerINLINE() == getID();
@@ -10995,7 +10995,7 @@ int CvPlayerAI::AI_religionValue(ReligionTypes eReligion) const
 				iValue /= 3;
 			}
 		}
-	}
+	}*/
 
 	return iValue;
 }
