@@ -390,6 +390,9 @@ def foundReligionInCore(iReligion):
 		foundReligion(location(city), iReligion)
 
 
+def isCityIslamic(city):
+	return gc.getPlayer(city.getOwner()).getStateReligion() == iIslam or gc.getPlayer(city.getOwner()).getStateReligion() == iShia
+
 ### popup handlers - transition to using Popups module ###
 
 

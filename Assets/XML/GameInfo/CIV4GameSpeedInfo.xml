@@ -9,7 +9,7 @@
 	<GameSpeedInfos>
 		<GameSpeedInfo>
 			<Type>GAMESPEED_MARATHON</Type>
-			<Description>TXT_KEY_GAMESPEED_MARATHON</Description>
+			<Description>TXT_KEY_GAMESPEED_MARATHON_TESTING</Description>
 			<Help>TXT_KEY_GAMESPEED_MARATHON_HELP</Help>
 			<iGrowthPercent>300</iGrowthPercent>
 			<iTrainPercent>200</iTrainPercent> <!-- Default: 180 -->
@@ -307,7 +307,7 @@
 		</GameSpeedInfo>
 		<GameSpeedInfo>
 			<Type>GAMESPEED_NORMAL</Type>
-			<Description>TXT_KEY_GAMESPEED_NORMAL</Description>
+			<Description>TXT_KEY_GAMESPEED_NORMAL_TESTING</Description>
 			<Help>TXT_KEY_GAMESPEED_NORMAL_HELP</Help>
 			<iGrowthPercent>100</iGrowthPercent>
 			<iTrainPercent>100</iTrainPercent>

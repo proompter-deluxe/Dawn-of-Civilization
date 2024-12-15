@@ -3752,4 +3752,20 @@
 		<Italian></Italian>
 		<Spanish></Spanish>
 	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_GAMESPEED_MARATHON_TESTING</Tag>
+		<English>Marathon (Untested and unbalanced)</English>
+		<French>Marathon (Untested and unbalanced)</French>
+		<German>Marathon (Untested and unbalanced)</German>
+		<Italian>Marathon (Untested and unbalanced)</Italian>
+		<Spanish>Marathon (Untested and unbalanced)</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_GAMESPEED_NORMAL_TESTING</Tag>
+		<English>Normal (Untested and unbalanced)</English>
+		<French>Normal (Untested and unbalanced)</French>
+		<German>Normal (Untested and unbalanced)</German>
+		<Italian>Normal (Untested and unbalanced)</Italian>
+		<Spanish>Normal (Untested and unbalanced)</Spanish>
+	</TEXT>
 </Civ4GameText>

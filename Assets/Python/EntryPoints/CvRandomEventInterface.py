@@ -12,7 +12,7 @@
 import CvUtil
 import CityNames as cn
 
-from Religions import embraceReformation, tolerateReformation, counterReformation
+from Religions import embraceReformation, tolerateReformation, counterReformation, isCityIslamic
 
 from RFCUtils import *
 from Core import *
@@ -2905,13 +2905,13 @@ def canTriggerGenericCrusade(argsList):
 	if pPlayer.getStateReligion() != iCatholicism:
 		return false
 
-	return cities.regions(rLevant, rIberia, rMaghreb, rEgypt, rBalkans, rGreece, rAnatolia, rBaltics).any(lambda city: gc.getPlayer(city.getOwner()).getStateReligion() == iIslam and not team(city).isVassal(iPlayer))
+	return cities.regions(rLevant, rIberia, rMaghreb, rEgypt, rBalkans, rGreece, rAnatolia, rBaltics).any(lambda city: isCityIslamic(city) and not team(city).isVassal(iPlayer))
 
 def doTriggerCrusadeAgainstAgainstHeathens(argsList):
 	kTriggeredData = argsList[1]
 	iPlayer = kTriggeredData.ePlayer
 
-	targetCity = cities.regions(rLevant, rMaghreb, rEgypt, rBalkans, rGreece, rBaltics).where(lambda city: (gc.getPlayer(city.getOwner()).isMinorCiv() and not city.isHasReligion(iCatholicism) and not city.isHasReligion(iOrthodoxy)) or (gc.getPlayer(city.getOwner()).getStateReligion() == iIslam and not team(city).isVassal(iPlayer))).random()
+	targetCity = cities.regions(rLevant, rMaghreb, rEgypt, rBalkans, rGreece, rBaltics).where(lambda city: (gc.getPlayer(city.getOwner()).isMinorCiv() and not city.isHasReligion(iCatholicism) and not city.isHasReligion(iOrthodoxy)) or (isCityIslamic(city) and not team(city).isVassal(iPlayer))).random()
 	targetLocation = location(targetCity)
 
 	spawnConquerors(iPlayer, -1, targetLocation, targetLocation, 1, WarPlanTypes.WARPLAN_TOTAL)
@@ -2941,15 +2941,19 @@ def doTriggerCrusadeAgainstAgainstHeathensWithAnotherCatholic(argsList):
 	kTriggeredData = argsList[1]
 	iSourcePlayer = kTriggeredData.ePlayer
 
-	iNewCrusadeLeader = group(iCivGroupEurope).where(lambda player: player.isAlive() and not player.isHuman() and player.getStateReligion() == iCatholicism and not team(iCiv).isAVassal() and player.getID() != iSourcePlayer).random()
+	lValidPlayers = []
+	for iPlayer in players.all().alive():
+			pPlayer = player(iPlayer)
+			if civ(iPlayer) in dCivGroups[iCivGroupEurope] and not pPlayer.isHuman() and pPlayer.getStateReligion() == iCatholicism and not team(iPlayer).isAVassal() and pPlayer.getID() != iSourcePlayer:
+				lValidPlayers.append(iPlayer)
 
-	if iNewCrusadeLeader is None:
-		return
+	if len(lValidPlayers) > 0:
+		iNewCrusadeLeader = random_entry(lValidPlayers)
 
-	targetCity = cities.regions(rLevant, rIberia, rMaghreb, rEgypt, rBalkans, rGreece, rAnatolia, rBaltics).where(lambda city: (gc.getPlayer(city.getOwner()).isMinorCiv() and not city.isHasReligion(iCatholicism) and not city.isHasReligion(iOrthodoxy)) or (gc.getPlayer(city.getOwner()).getStateReligion() == iIslam and not team(city).isVassal(iPlayer))).random()
-	targetLocation = location(targetCity)
+		targetCity = cities.regions(rLevant, rIberia, rMaghreb, rEgypt, rBalkans, rGreece, rAnatolia, rBaltics).where(lambda city: (gc.getPlayer(city.getOwner()).isMinorCiv() and not city.isHasReligion(iCatholicism) and not city.isHasReligion(iOrthodoxy)) or (isCityIslamic(city) and not team(city).isVassal(iPlayer))).random()
+		targetLocation = location(targetCity)
 
-	spawnConquerors(iNewCrusadeLeader, -1, targetLocation, targetLocation, 1, WarPlanTypes.WARPLAN_TOTAL)
+		spawnConquerors(iNewCrusadeLeader, -1, targetLocation, targetLocation, 1, WarPlanTypes.WARPLAN_TOTAL)
 
 def getHelpCrusadeAgainstAgainstHeathensWithAnotherCatholic(argsList):
 	return localText.getText("TXT_KEY_EVENT_WORLDNEWS_CRUSADE_GENERIC_NO_SELECT_ANOTHER_HELP", ())
