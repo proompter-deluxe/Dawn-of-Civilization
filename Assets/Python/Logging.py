@@ -186,13 +186,6 @@ def log_attitude_factors(iGameTurn):
 		for iPlayer, iOtherPlayer in players.major().alive().permutations():
 			if player(iPlayer).canContact(iOtherPlayer):
 				relations("%s ATTITUDE TOWARDS %s\n%s\n", name(iPlayer), name(iOtherPlayer), CyGameTextMgr().getAttitudeString(iPlayer, iOtherPlayer))
-				
-
-@handler("changeWar")
-def frenchSpanishWar(bWar, iTeam, iOtherTeam):
-	if bWar and civ(iTeam) in [iSpain, iFrance] and civ(iOtherTeam) in [iSpain, iFrance]:
-		log_with_trace("%s declares war on %s" % (name(iTeam), name(iOtherTeam)))
-		breakObserverMode("%s declares war on %s" % (name(iTeam), name(iOtherTeam)))
 
 
 def format_attitude_info(relations, iAttitude):
