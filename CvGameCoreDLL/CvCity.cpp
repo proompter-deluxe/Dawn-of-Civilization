@@ -15480,9 +15480,6 @@ bool CvCity::canSpread(ReligionTypes eReligion, bool bMissionary) const
 {
 	if (isHasReligion(eReligion)) return false;
 
-	// Norse are more resistant to spread of religion until 950 AD
-	if (getCivilizationType() == NORSE && GC.getGameINLINE().getGameTurnYear() < 950 && GET_PLAYER(getOwner()).getStateReligion() != eReligion) return false;
-
 	if (bMissionary) return true;
 
 	if (!plot()->canSpread(eReligion)) return false;
@@ -15507,7 +15504,7 @@ int CvCity::getTurnsToSpread(ReligionTypes eReligion) const
 	ReligionSpreadTypes eSpread = GET_PLAYER(getOwner()).getSpreadType(plot(), eReligion, bDistant);
 	ReligionTypes eStateReligion = GET_PLAYER(getOwner()).getStateReligion();
 	int iIncrement = 50;
-	
+
 	if (eStateReligion != eReligion && eStateReligion != NO_RELIGION && eSpread != RELIGION_SPREAD_FAST) iIncrement += 20;
 
 	if (eSpread == RELIGION_SPREAD_FAST)
@@ -15557,6 +15554,12 @@ int CvCity::getTurnsToSpread(ReligionTypes eReligion) const
 	if (GC.getReligionInfo(eReligion).isLocal() && eSpread == RELIGION_SPREAD_MINORITY && !isHasPrecursor(eReligion))
 	{
 		iTurns *= 2;
+	}
+
+	// Norse are more resistant to spread of religion until 950 AD
+	if (getCivilizationType() == NORSE && GC.getGameINLINE().getGameTurnYear() < 950 && GET_PLAYER(getOwner()).getStateReligion() != eReligion)
+	{
+		iTurns = 200;
 	}
 
 	return getTurns(iTurns);

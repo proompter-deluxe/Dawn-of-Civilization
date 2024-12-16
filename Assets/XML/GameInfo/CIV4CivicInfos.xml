@@ -34,6 +34,56 @@
 					<bHurry>1</bHurry>
 				</Hurry>
 			</Hurrys>
+			<SpecialistTypeExtraYields>
+				<SpecialistTypeExtraYield>
+					<SpecialistType>SPECIALIST_ARTIST</SpecialistType>
+					<YieldChanges>
+						<iYield>0</iYield>
+						<iYield>0</iYield>
+						<iYield>-1</iYield>
+					</YieldChanges>
+				</SpecialistTypeExtraYield>
+				<SpecialistTypeExtraYield>
+					<SpecialistType>SPECIALIST_GREAT_ARTIST</SpecialistType>
+					<YieldChanges>
+						<iYield>0</iYield>
+						<iYield>0</iYield>
+						<iYield>-1</iYield>
+					</YieldChanges>
+				</SpecialistTypeExtraYield>
+				<SpecialistTypeExtraYield>
+					<SpecialistType>SPECIALIST_SCIENTIST</SpecialistType>
+					<YieldChanges>
+						<iYield>0</iYield>
+						<iYield>0</iYield>
+						<iYield>-1</iYield>
+					</YieldChanges>
+				</SpecialistTypeExtraYield>
+				<SpecialistTypeExtraYield>
+					<SpecialistType>SPECIALIST_GREAT_SCIENTIST</SpecialistType>
+					<YieldChanges>
+						<iYield>0</iYield>
+						<iYield>0</iYield>
+						<iYield>-1</iYield>
+					</YieldChanges>
+				</SpecialistTypeExtraYield>
+				<SpecialistTypeExtraYield>
+					<SpecialistType>SPECIALIST_PRIEST</SpecialistType>
+					<YieldChanges>
+						<iYield>0</iYield>
+						<iYield>0</iYield>
+						<iYield>-1</iYield>
+					</YieldChanges>
+				</SpecialistTypeExtraYield>
+				<SpecialistTypeExtraYield>
+					<SpecialistType>SPECIALIST_GREAT_PRIEST</SpecialistType>
+					<YieldChanges>
+						<iYield>0</iYield>
+						<iYield>0</iYield>
+						<iYield>-1</iYield>
+					</YieldChanges>
+				</SpecialistTypeExtraYield>
+			</SpecialistTypeExtraYields>
 			<WeLoveTheKing>TXT_KEY_CIVIC_WE_LOVE_DESPOT</WeLoveTheKing>
 			<BuildingHappinessChanges>
 				<BuildingHappinessChange>
@@ -56,7 +106,6 @@
 			<Button>,Art/Interface/Buttons/Civics/Monarchy.dds</Button>
 			<iAnarchyLength>1</iAnarchyLength>
 			<Upkeep>UPKEEP_MEDIUM</Upkeep>
-			<iDistanceMaintenanceModifier>-25</iDistanceMaintenanceModifier>
 			<iFoodProductionModifier>50</iFoodProductionModifier>
 			<WeLoveTheKing>TXT_KEY_CIVIC_WE_LOVE_MONARCH</WeLoveTheKing>
 			<BuildingHappinessChanges>
@@ -151,6 +200,8 @@
 			<Button>,Art/Interface/Buttons/Civics/Elective.dds</Button>
 			<iAnarchyLength>1</iAnarchyLength>
 			<Upkeep>UPKEEP_LOW</Upkeep>
+			<iDistanceMaintenanceModifier>-50</iDistanceMaintenanceModifier>
+			<iBaseFreeUnits>10</iBaseFreeUnits>
 			<UnimprovedTileYields>
 				<iYield>0</iYield>
 				<iYield>0</iYield>
@@ -1153,7 +1204,7 @@
 			<TechPrereq>TECH_GLOBALISM</TechPrereq>
 			<Button>,Art/Interface/Buttons/Civics/Multilateralism.dds</Button>
 			<iAnarchyLength>1</iAnarchyLength>
-			<Upkeep>UPKEEP_MEDIUM</Upkeep>>
+			<Upkeep>UPKEEP_MEDIUM</Upkeep>
 			<bNoSlavery>1</bNoSlavery>
 			<iWarWearinessModifier>100</iWarWearinessModifier>
 			<iDefensivePactTradeModifier>100</iDefensivePactTradeModifier>

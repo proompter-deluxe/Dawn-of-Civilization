@@ -48853,11 +48853,12 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=108,y=49
-	TerrainType=TERRAIN_TUNDRA
-	PlotType=0
+	TerrainType=TERRAIN_COAST
+	PlotType=1
 EndPlot
 BeginPlot
 	x=108,y=50
+	BonusType=BONUS_SHEEP
 	TerrainType=TERRAIN_TUNDRA
 	PlotType=1
 EndPlot
@@ -49312,7 +49313,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=109,y=49
-	TerrainType=TERRAIN_TUNDRA
+	TerrainType=TERRAIN_PLAINS
 	PlotType=1
 EndPlot
 BeginPlot
