@@ -74,11 +74,13 @@ dClearedForBirth = {
 	iRussia: iRus,
 	iMexico: iAztecs,
 	iGreece: iMinoans,
+	iIndia: iHarappa,
 }
 
 lAlwaysClear = [
 	iToltecs,
 	iMinoans,
+	iHarappa,
 ]
 
 lBirthWars = [
@@ -739,7 +741,7 @@ class Birth(object):
 				if year(dBirth[civ(active())]) > year(dFall[self.iCiv]) + turns(20):
 					return False
 		
-		# Byzantium requires Rome to be alive and Greece to be dead (human Rome can avoid Byzantine spawn by being solid)
+		# Byzantium requires Rome to be alive and Greece (or Macedon) to be dead (human Rome can avoid Byzantine spawn by being solid)
 		if self.iCiv == iByzantium:
 			if not player(iRome).isExisting():
 				return False

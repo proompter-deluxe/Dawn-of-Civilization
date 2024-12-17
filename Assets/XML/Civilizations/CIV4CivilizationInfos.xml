@@ -3749,8 +3749,8 @@
 			<Civilopedia>TXT_KEY_CIV_KHAZARS_PEDIA</Civilopedia>
 			<DefaultPlayerColor>PLAYERCOLOR_SKY_BLUE</DefaultPlayerColor>
 			<ArtDefineTag>ART_DEF_CIVILIZATION_KHAZARS</ArtDefineTag>
-			<ArtStyleType>ARTSTYLE_ASIAN</ArtStyleType>
-			<UnitArtStyleType>UNIT_ARTSTYLE_ASIAN</UnitArtStyleType>
+			<ArtStyleType>ARTSTYLE_MIDDLE_EAST</ArtStyleType>
+			<UnitArtStyleType>UNIT_ARTSTYLE_MIDDLE_EASTERN</UnitArtStyleType>
 			<PaganReligion>PAGAN_RELIGION_TENGRI</PaganReligion>
 			<Impact>IMPACT_SIGNIFICANT</Impact>
 			<Identifier>KHA</Identifier>

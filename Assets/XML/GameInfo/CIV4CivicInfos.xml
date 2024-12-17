@@ -208,6 +208,7 @@
 			<Upkeep>UPKEEP_LOW</Upkeep>
 			<iDistanceMaintenanceModifier>-50</iDistanceMaintenanceModifier>
 			<iBaseFreeUnits>10</iBaseFreeUnits>
+			<iFreeUnitsPopulationPercent>8</iFreeUnitsPopulationPercent>
 			<UnimprovedTileYields>
 				<iYield>0</iYield>
 				<iYield>0</iYield>
@@ -327,30 +328,8 @@
 			<Button>,Art/Interface/Buttons/Civics/Vassalage.dds</Button>
 			<iAnarchyLength>1</iAnarchyLength>
 			<Upkeep>UPKEEP_LOW</Upkeep>
-			<iBaseFreeUnits>10</iBaseFreeUnits>
-			<iFreeUnitsPopulationPercent>8</iFreeUnitsPopulationPercent>
-			<ImprovementYieldChanges>
-				<ImprovementYieldChange>
-					<ImprovementType>IMPROVEMENT_FARM</ImprovementType>
-					<ImprovementYields>
-						<iYield>0</iYield>
-						<iYield>1</iYield>
-					</ImprovementYields>
-				</ImprovementYieldChange>
-				<ImprovementYieldChange>
-					<ImprovementType>IMPROVEMENT_ORCHARD</ImprovementType>
-					<ImprovementYields>
-						<iYield>0</iYield>
-						<iYield>1</iYield>
-					</ImprovementYields>
-				</ImprovementYieldChange>
-			</ImprovementYieldChanges>
-			<BuildingHappinessChanges>
-				<BuildingHappinessChange>
-					<BuildingType>BUILDINGCLASS_CASTLE</BuildingType>
-					<iHappinessChange>1</iHappinessChange>
-				</BuildingHappinessChange>
-			</BuildingHappinessChanges>
+			<bMilitaryFoodProduction>1</bMilitaryFoodProduction>
+			<iVassalTradeModifier>25</iVassalTradeModifier>
 		</CivicInfo>
 		<CivicInfo>
 			<CivicOptionType>CIVICOPTION_LEGITIMACY</CivicOptionType>

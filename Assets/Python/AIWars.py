@@ -256,7 +256,7 @@ lConquests = [
 	tConquestParthiaMesopotamia,
 	tConquestFatamidEgypt,
 	tConquestMongolsBaghdad,
-	tConquestMongolsKiev,
+	#tConquestMongolsKiev, # shouldn't need this since the Mongols will conquer the Khazars and then attack the Rus
 	tConquestTimuridsPunjab,
 	tConquestMacedonPunjab,
 ]
