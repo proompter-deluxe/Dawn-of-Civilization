@@ -5240,12 +5240,26 @@ int CvPlayerAI::AI_getWarAttitude(PlayerTypes ePlayer) const
 
 int CvPlayerAI::AI_getPeaceAttitude(PlayerTypes ePlayer) const
 {
-	int iAttitudeChange;
-
 	if (GC.getLeaderHeadInfo(getPersonalityType()).getAtPeaceAttitudeDivisor() != 0)
 	{
-		iAttitudeChange = (GET_TEAM(getTeam()).AI_getAtPeaceCounter(GET_PLAYER(ePlayer).getTeam()) / GC.getLeaderHeadInfo(getPersonalityType()).getAtPeaceAttitudeDivisor());
-		return range(iAttitudeChange, -(abs(GC.getLeaderHeadInfo(getPersonalityType()).getAtPeaceAttitudeChangeLimit())), abs(GC.getLeaderHeadInfo(getPersonalityType()).getAtPeaceAttitudeChangeLimit()));
+		int multiplier = 1;
+		// Nubian UP
+		if (GET_PLAYER(ePlayer).getCivilizationType() == NUBIA)
+		{
+			multiplier = 2;
+		}
+
+		int iAttitudeChange = (GET_TEAM(getTeam()).AI_getAtPeaceCounter(GET_PLAYER(ePlayer).getTeam()) * multiplier / GC.getLeaderHeadInfo(getPersonalityType()).getAtPeaceAttitudeDivisor());
+
+		int boundedAttitudeChange = range(iAttitudeChange, -(abs(GC.getLeaderHeadInfo(getPersonalityType()).getAtPeaceAttitudeChangeLimit())), abs(GC.getLeaderHeadInfo(getPersonalityType()).getAtPeaceAttitudeChangeLimit())) * multiplier;
+
+		// Nubian UP, baseline of 1 when not at war
+		if (GET_PLAYER(ePlayer).getCivilizationType() == NUBIA && !atWar(getTeam(), GET_PLAYER(ePlayer).getTeam()))
+		{
+			boundedAttitudeChange += 1;
+		}
+
+		return boundedAttitudeChange;
 	}
 
 	return 0;
@@ -5316,8 +5330,8 @@ int CvPlayerAI::AI_getDifferentReligionAttitude(PlayerTypes ePlayer) const
 
 	iAttitude = 0;
 
-	// Leoreth: Nubian UP
-	if (GET_PLAYER(ePlayer).getCivilizationType() == NUBIA)
+	// Khazar UP
+	if (GET_PLAYER(ePlayer).getCivilizationType() == KHAZARS)
 	{
 		return 0;
 	}
@@ -5383,12 +5397,6 @@ int CvPlayerAI::AI_getDifferentReligionAttitude(PlayerTypes ePlayer) const
 	else if (getCurrentEra() == ERA_RENAISSANCE)
 	{
 		iAttitude *= 2;
-	}
-
-	// KHAZAR UP: no penalties for different religion
-	if (GET_PLAYER(ePlayer).getCivilizationType() == KHAZARS && iAttitude < 0)
-	{
-		iAttitude = 0;
 	}
 
 	return iAttitude;

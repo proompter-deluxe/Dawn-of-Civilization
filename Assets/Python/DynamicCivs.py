@@ -1806,7 +1806,11 @@ def specificTitle(iPlayer, lPreviousOwners=[]):
 
 	elif iCiv == iKhazars:
 		if bResurrected:
-			return "TXT_KEY_CIV_GOLDEN_HORDE"
+			if iEra >= iRenaissance:
+				return "TXT_KEY_CIV_CRIMEAN_KHANATE"
+		
+			if year() >= year(dBirth[iMongols]): 
+				return "TXT_KEY_CIV_GOLDEN_HORDE"
 
 	elif iCiv == iAssyria:
 		if bResurrected and (iReligion == iOrthodoxy or iReligion == iCatholicism):
@@ -2529,6 +2533,7 @@ def leaderName(iPlayer):
 	iLeader = pPlayer.getLeader()
 	bResurrected = data.civs[iCiv].iResurrections > 0
 	iReligion = pPlayer.getStateReligion()
+	iEra = pPlayer.getCurrentEra()
 	
 	if iCiv == iChina:
 		if iLeader == iHongwu:
@@ -2543,5 +2548,12 @@ def leaderName(iPlayer):
 	elif iCiv == iHittites:
 		if bResurrected:
 			return "TXT_KEY_LEADER_CROESUS"
-
+		
+	elif iCiv == iKhazars:
+		if bResurrected:
+			if iEra >= iRenaissance:
+				return "TXT_KEY_LEADER_HACI_GIRAY_I"
+		
+			if year() >= year(dBirth[iMongols]): 
+				return "TXT_KEY_LEADER_OZBEG_KHAN"
 	return None

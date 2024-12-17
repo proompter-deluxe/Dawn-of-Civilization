@@ -222,7 +222,7 @@ lCivilizations = [
 	Civilization(
 		iNubia,
 		iGold=100,
-		lCivics=[iDespotism, iSlavery, iDeification],
+		lCivics=[iSlavery, iDeification],
 		lEnemies=[iEgypt],
 		techs=techs.column(1).including(iMasonry, iSmelting, iProperty, iCeremony, iDivination)
 	),

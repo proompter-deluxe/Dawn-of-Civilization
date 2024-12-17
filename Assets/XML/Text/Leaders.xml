@@ -1410,6 +1410,23 @@
 		<Spanish>Bulan</Spanish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_LEADER_OZBEG_KHAN</Tag>
+		<English>Ozbeg Khan</English>
+		<French>Ozbeg Khan</French>
+		<German>Ozbeg Khan</German>
+		<Italian>Ozbeg Khan</Italian>
+		<Spanish>Ozbeg Khan</Spanish>
+	</TEXT>
+	<TEXT>
+	<Tag>TXT_KEY_LEADER_HACI_GIRAY_I</Tag>
+		<English>Haci I Giray</English>
+		<French>Haci I Giray</French>
+		<German>Haci I Giray</German>
+		<Italian>Haci I Giray</Italian>
+		<Spanish>Haci I Giray</Spanish>
+	</TEXT>
+	
+	<TEXT>
 		<Tag>TXT_KEY_LEADER_</Tag>
 		<English></English>
 		<French></French>

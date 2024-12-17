@@ -66,7 +66,15 @@
 			<Plural>0</Plural>
 		</Spanish>
 	</TEXT>
-		<TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_CRIMEAN_KHANATE</Tag>
+		<English>Crimean Khanate</English>
+		<French>Crimean Khanate</French>
+		<German>Crimean Khanate</German>
+		<Italian>Crimean Khanate</Italian>
+		<Spanish>Crimean Khanate</Spanish>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_CIV_TATARS_ADJECTIVE</Tag>
 		<English>Tatar</English>
 		<French>
