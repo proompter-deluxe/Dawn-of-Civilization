@@ -263,7 +263,7 @@
 		<French>Le Pouvoir de la maneouvre:</French>
 		<German>The Power of Maneouvre:</German>
 		<Italian>The Power of Maneouvre:</Italian>
-		<Spanish>The Power of Maneouvre::</Spanish>
+		<Spanish>The Power of Maneouvre:</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UP_BUL</Tag>
@@ -272,6 +272,22 @@
 		<German>Free disengage promotion for units</German>
 		<Italian>Free disengage promotion for units</Italian>
 		<Spanish>Free disengage promotion for units</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UP_KHA_TITLE</Tag>
+		<English>The Power of Religious Crossroads:</English>
+		<French>The Power of Religious Crossroads:</French>
+		<German>The Power of Religious Crossroads:</German>
+		<Italian>The Power of Religious Crossroads:</Italian>
+		<Spanish>The Power of Religious Crossroads:</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UP_KHA</Tag>
+		<English>No penalities with other leaders for different religions</English>
+		<French>No penalities with other leaders for different religions</French>
+		<German>No penalities with other leaders for different religions</German>
+		<Italian>No penalities with other leaders for different religions</Italian>
+		<Spanish>No penalities with other leaders for different religions</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UP_ARM_TITLE</Tag>

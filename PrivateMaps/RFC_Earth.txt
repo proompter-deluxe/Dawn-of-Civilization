@@ -39845,12 +39845,12 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=88,y=59
+	BonusType=BONUS_SHEEP
 	TerrainType=TERRAIN_STEPPE
 	PlotType=2
 EndPlot
 BeginPlot
 	x=88,y=60
-	BonusType=BONUS_SHEEP
 	TerrainType=TERRAIN_STEPPE
 	PlotType=2
 EndPlot

@@ -139,6 +139,8 @@ TEMPLES = "TXT_KEY_VICTORY_NAME_TEMPLES"
 CHRISTIAN_CATHEDRALS = "TXT_KEY_VICTORY_NAME_CHRISTIAN_CATHEDRALS"
 STATE_RELIGION_CATHEDRAL = "TXT_KEY_VICTORY_NAME_STATE_RELIGION_CATHEDRAL"
 ORTHODOX_WONDERS = "TXT_KEY_VICTORY_NAME_ORTHODOX_WONDERS"
+ISLAMIC_CATHEDRAL = "TXT_KEY_VICTORY_NAME_ISLAMIC_CATHEDRAL"
+ISLAMIC_CATHEDRALS = "TXT_KEY_VICTORY_NAME_ISLAMIC_CATHEDRALS"
 
 # resource descriptors
 DIFFERENT_HAPPINESS_RESOURCES = "TXT_KEY_VICTORY_NAME_DIFFERENT_HAPPINESS_RESOURCES"
@@ -648,12 +650,27 @@ dGoals = {
 		),
 	),
 	iRus: (
-		DefeatedUnits(civs(iBarbarian), 25, by=1250),
+		DefeatedUnits(civs(iBarbarian, iMongols, iKhazars, iBulgaria), 25, by=1280),
 		TradeRouteCommerce(800, by=1300),
 		All(
 			ResourceCount((sum(lHappinessResources).named(HAPPINESS_RESOURCES), 6), (iSalt, 3)),
 			TradeGold(600),
 			by=1450,
+		),
+	),
+	iKhazars: (
+		All(
+			AttitudeCount(AttitudeTypes.ATTITUDE_PLEASED, 1, civs=group(iCivGroupEurope).named(EUROPE)),
+			AttitudeCount(AttitudeTypes.ATTITUDE_PLEASED, 1, civs=civs(iChina, iChinaS).named(CHINA)),
+			AttitudeCount(AttitudeTypes.ATTITUDE_PLEASED, 1, civs=group(iCivGroupMiddleEast).named(MIDDLE_EAST)),
+			at=970,
+		),
+		GoldenAges(3, by=1250),
+		All(
+			BuildingCount(iOrthodoxCathedral, 1),
+			BuildingCount(iJewishCathedral, 1),
+			BuildingCount(sum(iIslamicCathedral, iShiaCathedral).named(ISLAMIC_CATHEDRAL), 1),
+			by=1350,
 		),
 	),
 	iBulgaria: (

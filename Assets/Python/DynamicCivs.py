@@ -537,6 +537,7 @@ dStartingLeaders = [
 	iTurks : iBumin,
 	iArabia : iHarun,
 	iTibet : iSongtsen,
+	iKhazars: iBulan,
 	iBulgaria: iSimeon,
 	iKhmer : iSuryavarman,
 	iMoors : iRahman,
@@ -1288,7 +1289,11 @@ def specificAdjective(iPlayer):
 			return "TXT_KEY_CIV_MISR_AYYUBID"
 		
 		return "TXT_KEY_CIV_MISR_ADJECTIVE"
-			
+
+	elif iCiv == iKhazars:
+		if bResurrected:
+			return "TXT_KEY_CIV_TATARS_ADJECTIVE"
+
 	elif iCiv == iIndia:
 		if bMonarchy and not bCityStates and (iEra >= iMedieval or bEmpire):
 			if iEra >= iRenaissance:
@@ -1635,7 +1640,7 @@ def islamicTitle(iPlayer):
 	bTheocracy = civic.iLegitimacy == iTheocracy or (civic.iGovernment in [iRepublic, iElective] and civic.iReligion == iFanaticism)
 
 	# some civs have their own nomenclature, like Shahdom for Iran/Persia
-	if iCiv == iIran or iCiv == iPersia or iCiv == iOttomans or iCiv == iMongols or iCiv == iTimurids:
+	if iCiv == iIran or iCiv == iPersia or iCiv == iOttomans or iCiv == iMongols or iCiv == iTimurids or iCiv == iKhazars:
 		return
 
 	if iReligion == iIslam or iReligion == iShia:
@@ -1798,6 +1803,10 @@ def specificTitle(iPlayer, lPreviousOwners=[]):
 		
 		if iEra == iClassical:
 			return "TXT_KEY_CIV_EGYPT_NEW_KINGDOM"
+
+	elif iCiv == iKhazars:
+		if bResurrected:
+			return "TXT_KEY_CIV_GOLDEN_HORDE"
 
 	elif iCiv == iAssyria:
 		if bResurrected and (iReligion == iOrthodoxy or iReligion == iCatholicism):

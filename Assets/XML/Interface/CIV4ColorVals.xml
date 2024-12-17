@@ -1526,5 +1526,19 @@
 			<fBlue>0.17</fBlue>
 			<fAlpha>1.00</fAlpha>
 		</ColorVal>
+		<ColorVal>
+			<Type>COLOR_PLAYER_SKY_BLUE</Type>
+			<fRed>0.00</fRed>
+			<fGreen>0.62</fGreen>
+			<fBlue>0.89</fBlue>
+			<fAlpha>1.00</fAlpha>
+		</ColorVal>
+		<ColorVal>
+			<Type>COLOR_PLAYER_SKY_BLUE_TEXT</Type>
+			<fRed>0.00</fRed>
+			<fGreen>0.43</fGreen>
+			<fBlue>0.62</fBlue>
+			<fAlpha>1.00</fAlpha>
+		</ColorVal>
 	</ColorVals>
 </Civ4ColorVals>

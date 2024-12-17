@@ -76,6 +76,7 @@ iArmenia:       (89, 53), # Dvin
 iParthia:       (94, 51), # Hekatompylos / Komis
 iMinoans:       (78, 48), # Knossos
 iGhorids:       (99, 49), # Ghazni
+iKhazars:       (91, 60), # Atil / Itil
 })
 
 dPeriodCapitals = {
@@ -112,7 +113,8 @@ iInca :		(28, 25),	# Lima
 iItaly :	(68, 53),	# Rome
 iTimurids :	(99, 43),	# Karachi --> Pakistan period
 iOttomans :	(79, 55),	# Istanbul
-iMamluks :	(79, 43),   # Cairo
+iMamluks :	(79, 43),	# Cairo
+iKhazars :	(86, 59),	# Azov
 })
 
 ### Birth Area ###
@@ -282,6 +284,7 @@ iArmenia:       ((88, 52),  (90, 55)),
 iParthia:       ((89, 47),  (95, 52)),
 iMinoans:       ((77, 48),  (79, 48)),
 iGhorids:       ((98, 45),  (105, 49)), # north-west india, pakistan, afghanistan
+iKhazars:       ((86, 57),  (92, 61)),
 })
 
 dCoreAreaExceptions = CivDict({

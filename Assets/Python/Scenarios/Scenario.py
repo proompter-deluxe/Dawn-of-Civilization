@@ -146,6 +146,7 @@ LEADER_DATES = {
 	iAriadne: -1700,
 	iMithridates: -140,
 	iAgamemnon: -1200,
+	iBulan: 740,
 }
 
 RELIGION_FOUNDING_DATES = {

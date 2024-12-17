@@ -3668,6 +3668,16 @@
 			<Button>Art/Structures/Buildings/Gudang/Button_Gudang.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_KHAZARS_SILK_ROAD_TRADE_PORT</Type>
+			<LSystem>LSYSTEM_COAST</LSystem>
+			<bAnimated>0</bAnimated>
+			<fScale>0.7</fScale>
+			<fInterfaceScale>0.6</fInterfaceScale>
+			<NIF>Art/Structures/Buildings/Khazar_Lighthouse_EU3_Tax_Assessor/east_tax_assessor.nif</NIF>
+			<KFM/>
+			<Button>Art/Structures/Buildings/Khazar_Lighthouse_EU3_Tax_Assessor/khazar_lighthouse.dds</Button>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_BURMESE_KYAUNG</Type>
 			<LSystem>LSYSTEM_2x2</LSystem>
 			<bAnimated>0</bAnimated>

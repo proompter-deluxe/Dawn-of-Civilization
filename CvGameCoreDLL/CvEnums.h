@@ -1205,6 +1205,7 @@ enum CivilizationTypes		// Exposed to Python
 	ITALY,
 	JAPAN,
 	JAVA,
+	KHAZARS,
 
 	KHMER,
 	CONGO,
@@ -1465,6 +1466,15 @@ enum LeaderHeadTypes			// Exposed to Python
 	BOUDICA,
 
 	HIAWATHA,
+
+	TIGRANES,
+	ASHOT,
+	ANDRANIK,
+
+	ARIADNE,
+	AGAMEMNON,
+
+	BULAN,
 
 	NUM_LEADERHEADS
 };

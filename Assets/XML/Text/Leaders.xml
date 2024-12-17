@@ -1402,6 +1402,14 @@
 		<Spanish>Ariadne</Spanish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_LEADER_BULAN</Tag>
+		<English>Bulan</English>
+		<French>Bulan</French>
+		<German>Bulan</German>
+		<Italian>Bulan</Italian>
+		<Spanish>Bulan</Spanish>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_LEADER_</Tag>
 		<English></English>
 		<French></French>

@@ -1627,4 +1627,29 @@
 		<Italian>Finders Keepers</Italian>
 		<Spanish>Finders Keepers</Spanish>
 	</TEXT>
+
+	<TEXT>
+		<Tag>TXT_KEY_VICTORY_TITLE_KHA1</Tag>
+		<English>Diplomatic Nexus</English>
+		<French>Diplomatic Nexus</French>
+		<German>Diplomatic Nexus</German>
+		<Italian>Diplomatic Nexus</Italian>
+		<Spanish>Diplomatic Nexus</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_VICTORY_TITLE_KHA2</Tag>
+		<English>A Consolidated Empire</English>
+		<French>A Consolidated Empire</French>
+		<German>A Consolidated Empire</German>
+		<Italian>A Consolidated Empire</Italian>
+		<Spanish>A Consolidated Empire</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_VICTORY_TITLE_KHA3</Tag>
+		<English>Abrahamic Syncretism</English>
+		<French>Abrahamic Syncretism</French>
+		<German>Abrahamic Syncretism</German>
+		<Italian>Abrahamic Syncretism</Italian>
+		<Spanish>Abrahamic Syncretism</Spanish>
+	</TEXT>
 </Civ4GameText>

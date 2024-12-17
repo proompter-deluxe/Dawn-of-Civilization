@@ -424,8 +424,15 @@ lCivilizations = [
 		iGold=50,
 		iAdvancedStartPoints=25,
 		iStateReligion=iBuddhism,
-		lCivics=[iMonarchy, iMerchantTrade, iMonasticism, iHegemony],
+		lCivics=[iMonarchy, iMerchantTrade, iMonasticism],
 		techs=techs.column(5).including(iNobility, iScholarship, iEthics)
+	),
+	Civilization(
+		iKhazars,
+		iGold=100,
+		iStateReligion=iJudaism,
+		lCivics=[iElective, iSlavery, iMerchantTrade],
+		techs=techs.column(5).including(iNobility).without(iEngineering, iAesthetics, iLaw, iPhilosophy, iShipbuilding, iNavigation)
 	),
 	Civilization(
 		iBulgaria,
@@ -928,6 +935,14 @@ dStartingUnits = CivDict({
 		iDefend: 2,
 		iHarass: 4,
 		iMissionary: 1,
+	},
+	iKhazars: {
+		iSettle: 3,
+		iWork: 2,
+		iDefend: 4,
+		iCounter: 2,
+		iHarass: 6,
+		iMissionary: 2,
 	},
 	iMoors: {
 		iSettle: 2,
@@ -1457,6 +1472,9 @@ dAdditionalUnits = CivDict({
 		iShock: 1,
 	},
 	iTibet: {
+		iHarass: 2,
+	},
+	iKhazars: {
 		iHarass: 2,
 	},
 	iBulgaria: {
@@ -2008,6 +2026,13 @@ dTechPreferences = {
 		iPaper: 20,
 		iTheology: 20,
 		iDoctrine: 20,
+	},
+	iKhazars : {
+		iFinance: -50,
+		iFirearms: -50,
+		iCompanies: -50,
+		iPaper: -20,
+		iCompass: -30,
 	},
 	iJava : {
 		iPolitics: 30,

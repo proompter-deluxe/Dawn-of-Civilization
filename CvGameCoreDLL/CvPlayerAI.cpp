@@ -5378,6 +5378,12 @@ int CvPlayerAI::AI_getDifferentReligionAttitude(PlayerTypes ePlayer) const
 		iAttitude *= 2;
 	}
 
+	// KHAZAR UP: no penalties for different religion
+	if (GET_PLAYER(ePlayer).getCivilizationType() == KHAZARS && iAttitude < 0)
+	{
+		iAttitude = 0;
+	}
+
 	return iAttitude;
 }
 

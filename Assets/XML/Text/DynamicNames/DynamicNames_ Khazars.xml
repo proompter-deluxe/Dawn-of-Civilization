@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--  -->
+<Civ4GameText xmlns="http://www.firaxis.com">
+	<TEXT>
+		<Tag>TXT_KEY_CIV_KHAZARS_DESC</Tag>
+		<English>The Khazars</English>
+		<French>The Khazars</French>
+		<German>The Khazars</German>
+		<Italian>The Khazars</Italian>
+		<Spanish>The Khazars</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_KHAZARS_PEOPLES</Tag>
+		<English>West Turkic Tribes</English>
+		<French>West Turkic Tribes</French>
+		<German>West Turkic Tribes</German>
+		<Italian>West Turkic Tribes</Italian>
+		<Spanish>West Turkic Tribes</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_KHAZARS_ADJECTIVE</Tag>
+		<English>Khazar</English>
+		<French>Khazar</French>
+		<German>Khazar</German>
+		<Italian>Khazar</Italian>
+		<Spanish>Khazar</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_KHAZARS_SHORT_DESC</Tag>
+		<English>Khazars</English>
+		<French>Khazars</French>
+		<German>Khazars</German>
+		<Italian>Khazars</Italian>
+		<Spanish>Khazars</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_KHAZARS_DEFAULT</Tag>
+		<English>Khazar Khaganate</English>
+		<French>Khazar Khaganate</French>
+		<German>Khazar Khaganate</German>
+		<Italian>Khazar Khaganate</Italian>
+		<Spanish>Khazar Khaganate</Spanish>
+	</TEXT>
+
+	<TEXT>
+		<Tag>TXT_KEY_CIV_GOLDEN_HORDE</Tag>
+		<English>Khanate of the Golden Horde</English>
+		<French>
+			<Text>Khanat de la Horde d'or</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Khanat der Goldenen Horde:Khanat der Goldenen Horde:Khanat der Goldenen Horde</Text>
+			<Gender>Neuter:Neuter:Neuter</Gender>
+			<Plural>0:0:0</Plural>
+		</German>
+		<Italian>
+			<Text>Khanato dell'Orda d'Oro</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Janato de la Horda de Oro</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+		<TEXT>
+		<Tag>TXT_KEY_CIV_TATARS_ADJECTIVE</Tag>
+		<English>Tatar</English>
+		<French>
+			<Text>tatare:tatare:tatares:tatares</Text>
+			<Gender>Male:Female:Male:Female</Gender>
+			<Plural>0:0:1:1</Plural>
+		</French>
+		<German>Tatar</German>
+		<Italian>Tatar</Italian>
+		<Spanish>Tatar</Spanish>
+	</TEXT>
+</Civ4GameText>

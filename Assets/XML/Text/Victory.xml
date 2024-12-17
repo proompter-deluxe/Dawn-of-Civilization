@@ -3462,6 +3462,22 @@
 		<Spanish></Spanish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_VICTORY_NAME_ISLAMIC_CATHEDRALS</Tag>
+		<English>Islamic grand mosques</English>
+		<French></French>
+		<German></German>
+		<Italian></Italian>
+		<Spanish></Spanish>
+	</TEXT>
+		<TEXT>
+		<Tag>TXT_KEY_VICTORY_NAME_ISLAMIC_CATHEDRAL</Tag>
+		<English>Islamic grand mosque</English>
+		<French></French>
+		<German></German>
+		<Italian></Italian>
+		<Spanish></Spanish>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_VICTORY_NAME_STATE_RELIGION_CATHEDRAL</Tag>
 		<English>cathedrals of your state religion</English>
 		<French></French>
