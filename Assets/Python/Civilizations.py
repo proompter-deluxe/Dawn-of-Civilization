@@ -712,8 +712,8 @@ dStartingUnits = CivDict({
 		iSettle: 1,
 		iWork: 1,
 		iBase: 1,
-		iAttack: 2,
-		iHarass: 1,
+		iAttack: 1,
+		iShock: 2,
 	},
 	iNubia: {
 		iSettle: 1,
@@ -735,7 +735,7 @@ dStartingUnits = CivDict({
 		iDefend: 4,
 		iCounter: 2,
 		iAttack: 1,
-		iHarass: 3,
+		iShock: 3,
 	},
 	iPhoenicia: {
 		iSettle: 1,
@@ -788,7 +788,7 @@ dStartingUnits = CivDict({
 		iWork: 1,
 		iDefend: 3,
 		iAttack: 1,
-		iHarass: 1,
+		iShock: 1,
 		iCounter: 1,
 	},
 	iParthia : {
@@ -1264,7 +1264,7 @@ dExtraAIUnits = CivDict({
 	},
 	iHittites : {
 		iAttack: 1,
-		iHarass: 3,
+		iShock: 2,
 		iSettler: 1,
 		iBase: 1,
 	},
@@ -1284,7 +1284,7 @@ dExtraAIUnits = CivDict({
 		iEscort: 1,
 	},
 	iIndia : {
-		iHarass: 1,
+		iShock: 1,
 		iAttack: 1,
 		iDefend: 1,
 	},
@@ -1447,7 +1447,7 @@ dAdditionalUnits = CivDict({
 		# 2 Shotelai
 	},
 	iKorea: {
-		iHarass: 2,
+		iShock: 2,
 		iDefend: 2,
 	},
 	iMaya: {
