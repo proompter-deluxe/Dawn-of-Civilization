@@ -273,7 +273,6 @@ dRemovedResourcesDict = {
 	(79, 48)  : -1000,# Olives in Crete, Bronze Age collapse
 	(88, 51)  : -200, # Olives in Assyria
 	(75, 51)  :  -50, # Silver in Greece
-	(77, 55)  :  -50, # Gold in Macedonia
 	(74, 44)  :  200, # Spices (silphium) in Cyrenaica
 	(87, 49)  :  200, # Horses in Syria
 	(55, 53)  :  400, # Gold in Spain

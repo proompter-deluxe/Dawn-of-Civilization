@@ -167,6 +167,7 @@ public:
 	int countCityFeatures(FeatureTypes eFeature) const;																										// Exposed to Python
 	int countNumBuildings(BuildingTypes eBuilding) const;																									// Exposed to Python
 	int countSpecialists(SpecialistTypes eSpecialist) const;
+	int countSpecialistSlots(SpecialistTypes eSpecialist) const;
 	DllExport int countNumCitiesConnectedToCapital() const;																								// Exposed to Python
 	int countPotentialForeignTradeCities(CvArea* pIgnoreArea = NULL) const;																// Exposed to Python
 	int countPotentialForeignTradeCitiesConnected() const;																								// Exposed to Python
@@ -810,6 +811,9 @@ public:
 	void setCommercePercent(CommerceTypes eIndex, int iNewValue);																// Exposed to Python
 	DllExport void changeCommercePercent(CommerceTypes eIndex, int iChange);										// Exposed to Python
 
+	// Leoreth
+	int getCommerceRateTimes100(CommerceTypes eCommerce) const;
+
 	int getCommerceRate(CommerceTypes eIndex) const;																									// Exposed to Python
 	void changeCommerceRate(CommerceTypes eIndex, int iChange);
 
@@ -1350,6 +1354,9 @@ public:
 	int getLandHistory(int iTurn) const;
 
 	CvCity* findBuildingCity(BuildingTypes eBuilding, bool bEffect = true) const;
+
+	int getModifiedCommerceRateTimes100(CommerceTypes eCommerce) const;
+	int getModifiedCommerceRate(CommerceTypes eCommerce) const;
 
 	bool m_bTurnPlayed;
 

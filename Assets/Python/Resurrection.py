@@ -165,6 +165,9 @@ def doResurrection(iCiv, lCityList, bAskFlip=True, bDisplay=False):
 	iCiv = civ(iPlayer)
 	
 	pPlayer.setAlive(True, False)
+		
+	data.players[iPlayer].iNumPreviousCities = 0
+	data.civs[iPlayer].iResurrections += 1
 
 	for iOtherPlayer in players.major().without(iPlayer):
 		teamPlayer.makePeace(iOtherPlayer)
@@ -174,8 +177,6 @@ def doResurrection(iCiv, lCityList, bAskFlip=True, bDisplay=False):
 			
 		if team(iOtherPlayer).isVassal(iPlayer):
 			teamPlayer.freeVassal(iOtherPlayer)
-		
-	data.players[iPlayer].iNumPreviousCities = 0
 	
 	pPlayer.AI_reset()
 	

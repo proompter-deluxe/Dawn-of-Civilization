@@ -3927,6 +3927,21 @@ int CvPlayer::countSpecialists(SpecialistTypes eSpecialist) const
 }
 
 
+// Leoreth
+int CvPlayer::countSpecialistSlots(SpecialistTypes eSpecialist) const
+{
+	int iCount = 0;
+
+	int iLoop;
+	for (CvCity* pLoopCity = firstCity(&iLoop); pLoopCity != NULL; pLoopCity = nextCity(&iLoop))
+	{
+		iCount += pLoopCity->getMaxSpecialistCount(eSpecialist, true);
+	}
+
+	return iCount;
+}
+
+
 int CvPlayer::countNumCitiesConnectedToCapital() const
 {
 	CvCity* pLoopCity;
@@ -6431,6 +6446,9 @@ bool CvPlayer::canConstruct(BuildingTypes eBuilding, bool bContinue, bool bTestV
 		else if (isHumanVictoryWonder(eBuilding, GUR_E_AMIR, TIMURIDS)) return false;
 
 		else if (isHumanVictoryWonder(eBuilding, SHWEDAGON_PAYA, BURMA)) return false;
+
+		else if (isHumanVictoryWonder(eBuilding, BOROBUDUR, JAVA)) return false;
+		else if (isHumanVictoryWonder(eBuilding, PRAMBANAN, JAVA)) return false;
 	}
 
 	return true;
@@ -12843,16 +12861,6 @@ void CvPlayer::setCommercePercent(CommerceTypes eIndex, int iNewValue)
 					int iAdjustment = std::min(m_aiCommercePercent[iI], iTotalCommercePercent - 100);
 					m_aiCommercePercent[iI] -= iAdjustment;
 					iTotalCommercePercent -= iAdjustment;
-
-					// Shwedagon Paya effect: gold rate added to great people rate modifier
-					if (iI == COMMERCE_GOLD)
-					{
-						CvCity* pWonderCity = findBuildingCity((BuildingTypes)SHWEDAGON_PAYA);
-						if (pWonderCity)
-						{
-							pWonderCity->changeGreatPeopleRateModifier(-iAdjustment);
-						}
-					}
 				}
 				else
 				{
@@ -12862,16 +12870,6 @@ void CvPlayer::setCommercePercent(CommerceTypes eIndex, int iNewValue)
 		}
 
 		FAssert(100 == iTotalCommercePercent);
-
-		// Shwedagon Paya effect: gold rate added to great people rate modifier
-		if (eIndex == COMMERCE_GOLD && isHasBuildingEffect((BuildingTypes)SHWEDAGON_PAYA))
-		{
-			CvCity* pWonderCity = findBuildingCity((BuildingTypes)SHWEDAGON_PAYA);
-			if (pWonderCity)
-			{
-				pWonderCity->changeGreatPeopleRateModifier(getCommerceRate(eIndex) - iOldValue);
-			}
-		}
 
 		updateCommerce();
 
@@ -12894,7 +12892,7 @@ void CvPlayer::changeCommercePercent(CommerceTypes eIndex, int iChange)
 }
 
 
-int CvPlayer::getCommerceRate(CommerceTypes eIndex) const
+int CvPlayer::getCommerceRateTimes100(CommerceTypes eIndex) const
 {
 	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
 	FAssertMsg(eIndex < NUM_COMMERCE_TYPES, "eIndex is expected to be within maximum bounds (invalid Index)");
@@ -12914,7 +12912,16 @@ int CvPlayer::getCommerceRate(CommerceTypes eIndex) const
 
 	FAssert(iRate >= 0);
 
-	return iRate / 100;
+	return iRate;
+}
+
+
+int CvPlayer::getCommerceRate(CommerceTypes eIndex) const
+{
+	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
+	FAssertMsg(eIndex < NUM_COMMERCE_TYPES, "eIndex is expected to be within maximum bounds (invalid Index)");
+
+	return getCommerceRateTimes100(eIndex) / 100;
 }
 
 
@@ -13908,6 +13915,7 @@ CivicTypes CvPlayer::getCivics(CivicOptionTypes eIndex) const
 int CvPlayer::getSingleCivicUpkeep(CivicTypes eCivic, bool bIgnoreAnarchy) const
 {
 	int iUpkeep;
+	int iTotalPopulation;
 
 	if (eCivic == NO_CIVIC)
 	{
@@ -13932,9 +13940,16 @@ int CvPlayer::getSingleCivicUpkeep(CivicTypes eCivic, bool bIgnoreAnarchy) const
 		}
 	}
 
+	iTotalPopulation = getTotalPopulation();
+
+	if (getCivilizationType() == CHINA)
+	{
+		iTotalPopulation /= 2;
+	}
+
 	iUpkeep = 0;
 
-	iUpkeep += ((std::max(0, (getTotalPopulation() + GC.getDefineINT("UPKEEP_POPULATION_OFFSET") - GC.getCivicInfo(eCivic).getCivicOptionType())) * GC.getUpkeepInfo((UpkeepTypes)(GC.getCivicInfo(eCivic).getUpkeep())).getPopulationPercent()) / 100);
+	iUpkeep += ((std::max(0, (iTotalPopulation + GC.getDefineINT("UPKEEP_POPULATION_OFFSET") - GC.getCivicInfo(eCivic).getCivicOptionType())) * GC.getUpkeepInfo((UpkeepTypes)(GC.getCivicInfo(eCivic).getUpkeep())).getPopulationPercent()) / 100);
 	iUpkeep += ((std::max(0, (getNumCities() + GC.getDefineINT("UPKEEP_CITY_OFFSET") + GC.getCivicInfo(eCivic).getCivicOptionType() - (GC.getNumCivicOptionInfos() / 2))) * GC.getUpkeepInfo((UpkeepTypes)(GC.getCivicInfo(eCivic).getUpkeep())).getCityPercent()) / 100);
 
 	iUpkeep *= std::max(0, (getUpkeepModifier() + 100));
@@ -25629,4 +25644,22 @@ CvCity* CvPlayer::findBuildingCity(BuildingTypes eBuilding, bool bEffect) const
 	}
 
 	return NULL;
+}
+
+int CvPlayer::getModifiedCommerceRateTimes100(CommerceTypes eCommerce) const
+{
+	int iRate = getCommerceRateTimes100(eCommerce);
+
+	if (eCommerce == COMMERCE_CULTURE)
+	{
+		iRate *= getModifier(MODIFIER_CULTURE);
+		iRate /= 100;
+	}
+
+	return iRate;
+}
+
+int CvPlayer::getModifiedCommerceRate(CommerceTypes eCommerce) const
+{
+	return getModifiedCommerceRateTimes100(eCommerce) / 100;
 }

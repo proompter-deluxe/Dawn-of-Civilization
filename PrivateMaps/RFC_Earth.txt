@@ -34637,7 +34637,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=77,y=55
-	BonusType=BONUS_GOLD
 	TerrainType=TERRAIN_PLAINS
 	PlotType=1
 EndPlot

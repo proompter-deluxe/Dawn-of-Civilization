@@ -21,6 +21,7 @@ dPeriods1700AD = {
 	iNorse : iPeriodDenmark,
 	iTurks : iPeriodUzbeks,
 	iMoors : iPeriodMorocco,
+	iSpain : iPeriodSpain,
 	iHolyRome : iPeriodAustria,
 	iInca : iPeriodPeru,
 	iOttomans : iPeriodOttomanConstantinople,
@@ -49,6 +50,7 @@ dPeriodNames = {
 	iPeriodUzbeks:					"Uzbeks",
 	iPeriodSaudi:					"Saudi",
 	iPeriodMorocco:					"Morocco",
+	iPeriodSpain:					"Spain",
 	iPeriodAustria:					"Austria",
 	iPeriodYuan:					"Yuan",
 	iPeriodPeru:					"Peru",
@@ -142,6 +144,10 @@ def onResurrection(iPlayer):
 def onCityAcquired(iOwner, iPlayer, city, bConquest):
 	iCiv = civ(iPlayer)
 	iOwnerCiv = civ(iOwner)
+	
+	if iCiv == iSpain:
+		if not cities.owner(iMoors).region(rIberia):
+			setPeriod(iSpain, iPeriodSpain)
 
 	if iCiv == iOttomans:
 		if city.at(*tConstantinople):
@@ -160,6 +166,10 @@ def onCityAcquired(iOwner, iPlayer, city, bConquest):
 	if iOwnerCiv == iCelts or city.getPreviousCiv() == iCelts:
 		if player(iCelts).getNumCities() > 0 and cities.core(iCelts).owner(iCelts).count() == 0:
 			setPeriod(iCelts, iPeriodInsularCelts)
+	
+	if iOwnerCiv == iMoors:
+		if not cities.owner(iMoors).region(rIberia):
+			setPeriod(iMoors, iPeriodMorocco)
 
 	
 @handler("firstCity")

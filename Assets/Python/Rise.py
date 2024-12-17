@@ -330,28 +330,10 @@ def restorePreservedWonders(city):
 
 @handler("playerDestroyed")
 def preserveCivilizationAttributes(iPlayer):
-	iCiv = civ(iPlayer)
-	data.civs[iCiv].iGreatGeneralsCreated = player(iPlayer).getGreatGeneralsCreated()
-	data.civs[iCiv].iGreatPeopleCreated = player(iPlayer).getGreatPeopleCreated()
-	data.civs[iCiv].iGreatSpiesCreated = player(iPlayer).getGreatSpiesCreated()
-	data.civs[iCiv].iNumUnitGoldenAges = player(iPlayer).getNumUnitGoldenAges()
-	
-
-@handler("BeginGameTurn")
-def fragmentIndependents():
-	if year() >= year(50) and periodic(15):
-		iLargestMinor = players.independent().maximum(lambda p: player(p).getNumCities())
-		iSmallestMinor = players.independent().minimum(lambda p: player(p).getNumCities())
-		if player(iLargestMinor).getNumCities() > 2 * player(iSmallestMinor).getNumCities():
-			for city in cities.owner(iLargestMinor).sample(3):
-				completeCityFlip(city, iLargestMinor, iSmallestMinor, 50, False, True, True, True)
-
-
-@handler("BeginGameTurn")
-def checkMinorTechs():
-	iMinor = players.civs(iIndependent, iIndependent2, iNative).existing().periodic(8)
-	if iMinor:
-		updateMinorTechs(iMinor, barbarian())
+	data.civs[iPlayer].iGreatGeneralsCreated = player(iPlayer).getGreatGeneralsCreated()
+	data.civs[iPlayer].iGreatPeopleCreated = player(iPlayer).getGreatPeopleCreated()
+	data.civs[iPlayer].iGreatSpiesCreated = player(iPlayer).getGreatSpiesCreated()
+	data.civs[iPlayer].iNumUnitGoldenAges = player(iPlayer).getNumUnitGoldenAges()
 
 
 def getBirth(iCiv):
@@ -733,7 +715,7 @@ class Birth(object):
 		elif iUntilBirth == 1:
 			self.checkSwitch()
 			self.birth()
-		elif iUntilBirth == 0:
+		elif iUntilBirth == 0 and not scenarioStart():
 			self.flip()
 			self.wars()
 			
@@ -757,12 +739,7 @@ class Birth(object):
 				if year(dBirth[civ(active())]) > year(dFall[self.iCiv]) + turns(20):
 					return False
 		
-		# Nubia requires no cities
-		if self.iCiv == iNubia:
-			if cities.birth(self.iCiv):
-				return False
-		
-		# Byzantium requires Rome to be alive and Greece (or Macedon) to be dead (human Rome can avoid Byzantine spawn by being solid)
+		# Byzantium requires Rome to be alive and Greece to be dead (human Rome can avoid Byzantine spawn by being solid)
 		if self.iCiv == iByzantium:
 			if not player(iRome).isExisting():
 				return False

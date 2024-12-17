@@ -588,8 +588,6 @@ def spawnConquerors(iPlayer, iPreferredTarget, tTL, tBR, iNumTargets, iWarPlan =
 		conquerorUnit = units.at(tPlotLast).owner(iPlayer).last()
 		if conquerorUnit:
 			interface.selectUnit(conquerorUnit, True, False, False)
-		
-
 
 def declareWar(iPlayer, iTarget, iWarPlan):
 	if team(iPlayer).isVassal(iTarget):
@@ -638,7 +636,7 @@ def targetMinors():
 			if team(iPlayer).isAtWar(city.getTeam()):
 				continue
 		
-			if plot(city).getPlayerSettlerValue(iPlayer) >= 10 or plot(city).getPlayerWarValue(iPlayer) >= 6:
+			if plot(city).getPlayerSettlerValue(iPlayer) >= 5 or plot(city).getPlayerWarValue(iPlayer) >= 2:
 				declareWar(iPlayer, city.getOwner(), WarPlanTypes.WARPLAN_LIMITED)
 				break
 
@@ -768,6 +766,11 @@ def determineTargetPlayer(iPlayer):
 		elif iCiv == iItaly:
 			if iLoopCiv in [iFrance, iHolyRome, iGermany]:
 				dTargetValues[iLoopPlayer] /= 2
+		
+		# Spain prefers Moors in Iberia
+		if (iCiv == iSpain and iLoopCiv != iMoors) or (iCiv == iFrance and iLoopCiv == iSpain):
+			if cities.regions(rIberia).owner(iMoors):
+				dTargetValues[iLoopPlayer] /= 4
 				
 	return dict_max(dTargetValues)
 				

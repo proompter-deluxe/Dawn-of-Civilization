@@ -2410,6 +2410,7 @@ UnitTypes CvCityAI::AI_bestUnit(bool bAsync, AdvisorTypes eIgnoreAdvisor, UnitAI
 		aiUnitAIVal[UNITAI_ATTACK] *= 3;
 		aiUnitAIVal[UNITAI_SETTLE] *= 3;
 		aiUnitAIVal[UNITAI_SETTLE] /= 2;
+		aiUnitAIVal[UNITAI_WORKER] *= 2;
 		aiUnitAIVal[UNITAI_MISSIONARY] /= 5;
 		break;
 	case INDIA:
@@ -2531,6 +2532,7 @@ UnitTypes CvCityAI::AI_bestUnit(bool bAsync, AdvisorTypes eIgnoreAdvisor, UnitAI
 		//aiUnitAIVal[UNITAI_ASSAULT_SEA] *= 2;
 		//aiUnitAIVal[UNITAI_SETTLER_SEA] *= 2;
 		aiUnitAIVal[UNITAI_PIRATE_SEA] *= 2;
+		aiUnitAIVal[UNITAI_CITY_DEFENSE] /= 2;
 		break;
 	case SPAIN:
 		aiUnitAIVal[UNITAI_EXPLORE_SEA] *= 5;
@@ -2716,6 +2718,22 @@ UnitTypes CvCityAI::AI_bestUnit(bool bAsync, AdvisorTypes eIgnoreAdvisor, UnitAI
 		break;
 	default:
 		break;
+	}
+
+	if (GET_PLAYER(getOwnerINLINE()).AI_getNumAIUnits(UNITAI_EXPLORE_SEA) == 0)
+	{
+		switch (getCivilizationType())
+		{
+		case FRANCE:
+		case SPAIN:
+		case ENGLAND:
+		case PORTUGAL:
+		case NETHERLANDS:
+			aiUnitAIVal[UNITAI_EXPLORE_SEA] *= 10;
+			break;
+		default:
+			break;
+		}
 	}
 
 	//Rhye - end

@@ -11335,6 +11335,18 @@ bool CvUnitAI::AI_targetCity(int iFlags)
 								}
 							}
 
+							// Leoreth: make sure Asian barbarians focus on China
+							if (isBarbarian())
+							{
+								if (plot()->getRegionGroup() == REGION_GROUP_EAST_ASIA || plot()->getRegionGroup() == REGION_GROUP_NORTH_ASIA)
+								{
+									if (pLoopCity->getRegionGroup() == REGION_GROUP_EAST_ASIA)
+									{
+										iValue *= 5;
+									}
+								}
+							}
+
 							iValue /= (4 + iPathTurns*iPathTurns); //Rhye  (iPathTurns + 5) in vanilla and warlords (1 in standard game)
 
 							if (iValue > iBestValue)
@@ -17289,28 +17301,31 @@ int CvUnitAI::AI_pillageValue(CvPlot* pPlot, int iBonusValueThreshold)
 	{
 		if (pPlot->isRoute())
 		{
-			iValue++;
+			//iValue++;
 			if (eNonObsoleteBonus != NO_BONUS)
 			{
 				iValue += iBonusValue * 4;
 			}
 
-			for (iI = 0; iI < NUM_DIRECTION_TYPES; iI++)
+			if (isBarbarian())
 			{
-				pAdjacentPlot = plotDirection(getX_INLINE(), getY_INLINE(), ((DirectionTypes)iI));
-
-				if (pAdjacentPlot != NULL && pAdjacentPlot->getTeam() == pPlot->getTeam())
+				for (iI = 0; iI < NUM_DIRECTION_TYPES; iI++)
 				{
-					if (pAdjacentPlot->isCity())
-					{
-						iValue += 10;
-					}
+					pAdjacentPlot = plotDirection(getX_INLINE(), getY_INLINE(), ((DirectionTypes)iI));
 
-					if (!(pAdjacentPlot->isRoute()))
+					if (pAdjacentPlot != NULL && pAdjacentPlot->getTeam() == pPlot->getTeam())
 					{
-						if (!(pAdjacentPlot->isWater()) && !(pAdjacentPlot->isImpassable()))
+						if (pAdjacentPlot->isCity())
 						{
-							iValue += 2;
+							iValue += 10;
+						}
+
+						if (!(pAdjacentPlot->isRoute()))
+						{
+							if (!(pAdjacentPlot->isWater()) && !(pAdjacentPlot->isImpassable()))
+							{
+								iValue += 2;
+							}
 						}
 					}
 				}
@@ -17329,30 +17344,33 @@ int CvUnitAI::AI_pillageValue(CvPlot* pPlot, int iBonusValueThreshold)
 
 	if (eImprovement != NO_IMPROVEMENT)
 	{
-		if (pPlot->getWorkingCity() != NULL)
+		if (pPlot->getFeatureType() == NO_FEATURE || !m_pUnitInfo->getFeatureImpassable(pPlot->getFeatureType()))
 		{
-			iValue += (pPlot->calculateImprovementYieldChange(eImprovement, YIELD_FOOD, pPlot->getOwnerINLINE()) * 5);
-			iValue += (pPlot->calculateImprovementYieldChange(eImprovement, YIELD_PRODUCTION, pPlot->getOwnerINLINE()) * 4);
-			iValue += (pPlot->calculateImprovementYieldChange(eImprovement, YIELD_COMMERCE, pPlot->getOwnerINLINE()) * 3);
-		}
-
-		if (getDomainType() != DOMAIN_AIR)
-		{
-			iValue += GC.getImprovementInfo(eImprovement).getPillageGold();
-		}
-
-		if (eNonObsoleteBonus != NO_BONUS)
-		{
-			if (GC.getImprovementInfo(eImprovement).isImprovementBonusTrade(eNonObsoleteBonus))
+			if (pPlot->getWorkingCity() != NULL)
 			{
-				iTempValue = iBonusValue * 4;
+				iValue += (pPlot->calculateImprovementYieldChange(eImprovement, YIELD_FOOD, pPlot->getOwnerINLINE()) * 5);
+				iValue += (pPlot->calculateImprovementYieldChange(eImprovement, YIELD_PRODUCTION, pPlot->getOwnerINLINE()) * 4);
+				iValue += (pPlot->calculateImprovementYieldChange(eImprovement, YIELD_COMMERCE, pPlot->getOwnerINLINE()) * 3);
+			}
 
-				if (pPlot->isConnectedToCapital() && (pPlot->getPlotGroupConnectedBonus(pPlot->getOwnerINLINE(), eNonObsoleteBonus) == 1))
+			if (getDomainType() != DOMAIN_AIR)
+			{
+				iValue += GC.getImprovementInfo(eImprovement).getPillageGold();
+			}
+
+			if (eNonObsoleteBonus != NO_BONUS)
+			{
+				if (GC.getImprovementInfo(eImprovement).isImprovementBonusTrade(eNonObsoleteBonus))
 				{
-					iTempValue *= 2;
-				}
+					iTempValue = iBonusValue * 4;
 
-				iValue += iTempValue;
+					if (pPlot->isConnectedToCapital() && (pPlot->getPlotGroupConnectedBonus(pPlot->getOwnerINLINE(), eNonObsoleteBonus) == 1))
+					{
+						iTempValue *= 2;
+					}
+
+					iValue += iTempValue;
+				}
 			}
 		}
 	}

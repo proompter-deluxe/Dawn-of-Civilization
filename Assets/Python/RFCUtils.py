@@ -567,7 +567,7 @@ def canCreateUnit(iPlayer, iUnit):
 
 # used: RFCUtils, Rise
 def getUnitForRole(iPlayer, iRole, bUnique=True):
-	roleMetric = lambda unit: (infos.unit(unit).getCombat(), bUnique == (base_unit(unit) != unit))
+	roleMetric = lambda unit: (infos.unit(unit).getCombat(), infos.unit(unit).getCityAttackModifier(), bUnique == (base_unit(unit) != unit))
 	possibleUnits = infos.units().where(lambda unit: canCreateUnit(iPlayer, unit)).where(lambda unit: isUnitOfRole(unit, iRole))
 	
 	if not bUnique:
@@ -1128,6 +1128,16 @@ def endObserverMode():
 			data.iBeforeObserverSlot = -1
 		else:
 			makeUnit(active(), iCatapult, (0, 0))
+
+def breakObserverMode(message = None):
+	if data.iBeforeObserverSlot == -1:
+		return
+	
+	game.setAIAutoPlay(0)
+	events.fireEvent("autoplayEnded")
+	
+	if message:
+		show(message)
 
 # used: Congresses
 def isIsland(tile):

@@ -3090,7 +3090,7 @@ class CvMainInterface:
 						screen.show( szString )
 
 						if not CyInterface().isCityScreenUp():
-							szOutText = u"<font=2>" + localText.getText("TXT_KEY_MISC_POS_GOLD_PER_TURN", (gc.getPlayer(ePlayer).getCommerceRate(CommerceTypes(eCommerce)), )) + u"</font>"
+							szOutText = u"<font=2>" + localText.getText("TXT_KEY_MISC_POS_GOLD_PER_TURN", (gc.getPlayer(ePlayer).getModifiedCommerceRate(CommerceTypes(eCommerce)), )) + u"</font>"
 							szString = "RateText" + str(iI)
 # BUG - Min/Max Sliders - start
 							if MainOpt.isShowMinMaxCommerceButtons():

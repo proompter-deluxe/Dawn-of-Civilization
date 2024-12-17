@@ -1730,7 +1730,7 @@ void CvUnit::updateCombat(bool bQuick)
 			// to the square that they came from, before advancing.
 			getGroup()->clearMissionQueue();
 		}
-		else if (GET_PLAYER(pDefender->getOwnerINLINE()).isHasBuildingEffect((BuildingTypes)KRAK_DES_CHEVALIERS) && pDefender->maxHitPoints() - pDefender->getDamage() < maxHitPoints() - getDamage())
+		else if (GET_PLAYER(pDefender->getOwnerINLINE()).isHasBuildingEffect((BuildingTypes)KRAK_DES_CHEVALIERS) && pDefender->plot()->isCity() && pDefender->getDomainType() == DOMAIN_LAND && pDefender->maxHitPoints() - pDefender->getDamage() < maxHitPoints() - getDamage())
 		{
 			if (!GET_PLAYER(pDefender->getOwnerINLINE()).isMinorCiv() && !GET_PLAYER(pDefender->getOwnerINLINE()).isBarbarian())
 			{

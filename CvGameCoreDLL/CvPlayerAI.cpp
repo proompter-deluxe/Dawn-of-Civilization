@@ -3089,6 +3089,13 @@ int CvPlayerAI::AI_getPlotDanger(CvPlot* pPlot, int iRange, bool bTestMoves) con
 				            iBorderDanger++;
 				        }
 				    }
+					else
+					{
+						if (pPlot->isCity() && pLoopPlot->isCity())
+						{
+							continue;
+						}
+					}
 
 
 					pUnitNode = pLoopPlot->headUnitNode();
@@ -8313,6 +8320,11 @@ int CvPlayerAI::AI_unitValue(UnitTypes eUnit, UnitAITypes eUnitAI, CvArea* pArea
 		return 0;
 	}
 
+	if (getCivilizationType() == FRANCE && GC.getUnitInfo(eUnit).isFound() && GC.getGameINLINE().getGameTurnYear() < 840)
+	{
+		return 0;
+	}
+
 	bValid = GC.getUnitInfo(eUnit).getUnitAIType(eUnitAI);
 
 	if (!bValid)
@@ -10322,7 +10334,7 @@ int CvPlayerAI::AI_civicValue(CivicTypes eCivic) const
 /* orginal bts code
 		iValue += (getNumCities() * 6 * AI_getHealthWeight(isCivic(eCivic) ? -kCivic.getExtraHealth() : kCivic.getExtraHealth(), 1)) / 100;
 */
-		iValue += (getNumCities() * 6 * AI_getHealthWeight(kCivic.getExtraHealth(), 1)) / 100;
+		iValue += (getNumCities() * 3 * AI_getHealthWeight(kCivic.getExtraHealth(), 1)) / 100;
 /************************************************************************************************/
 /* UNOFFICIAL_PATCH                        END                                                  */
 /************************************************************************************************/
@@ -10402,20 +10414,24 @@ int CvPlayerAI::AI_civicValue(CivicTypes eCivic) const
 
 	iValue += (kCivic.getNonStateReligionHappiness() * (iTotalReligonCount - iHighestReligionCount) * 5);
 
-	if (kCivic.isStateReligion())
+	if (iHighestReligionCount > 0)
 	{
-		if (iHighestReligionCount > 0)
+		if (kCivic.isStateReligion())
 		{
 			iValue += iHighestReligionCount;
-
-			iValue += ((kCivic.isNoNonStateReligionSpread()) ? ((getNumCities() - iHighestReligionCount) * 2) : 0);
-			iValue += (kCivic.getStateReligionHappiness() * iHighestReligionCount * 4);
-			iValue += ((kCivic.getStateReligionGreatPeopleRateModifier() * iHighestReligionCount) / 20);
-			iValue += (kCivic.getStateReligionGreatPeopleRateModifier() / 4);
-			iValue += ((kCivic.getStateReligionUnitProductionModifier() * iHighestReligionCount) / 4);
-			iValue += ((kCivic.getStateReligionBuildingProductionModifier() * iHighestReligionCount) / 3);
-			iValue += (kCivic.getStateReligionFreeExperience() * iHighestReligionCount * ((bWarPlan) ? 6 : 2));
 		}
+
+		iValue += ((kCivic.isNoNonStateReligionSpread()) ? ((getNumCities() - iHighestReligionCount) * 2) : 0);
+		//iValue += (kCivic.getStateReligionHappiness() * iHighestReligionCount * 4);
+		if (kCivic.getStateReligionHappiness() != 0)
+		{
+			iValue += AI_getHappinessWeight(kCivic.getStateReligionHappiness(), 1) * iHighestReligionCount / getNumCities() / 30;
+		}
+		iValue += ((kCivic.getStateReligionGreatPeopleRateModifier() * iHighestReligionCount) / 20);
+		iValue += (kCivic.getStateReligionGreatPeopleRateModifier() / 4);
+		iValue += ((kCivic.getStateReligionUnitProductionModifier() * iHighestReligionCount) / 4);
+		iValue += ((kCivic.getStateReligionBuildingProductionModifier() * iHighestReligionCount) / 3);
+		iValue += (kCivic.getStateReligionFreeExperience() * iHighestReligionCount * ((bWarPlan) ? 6 : 2));
 	}
 
 	// Leoreth: no state religion change anarchy
@@ -10448,19 +10464,23 @@ int CvPlayerAI::AI_civicValue(CivicTypes eCivic) const
 		//iTempValue += ((kCivic.getTradeYieldModifier(iI) * getNumCities()) / 11);
 
 		// Leoreth: more accurate trade yield modifier
-		if (kCivic.getTradeYieldModifier(iI) != 0)
+		int iTradeYield = 0;
+		if (kCivic.getTradeYieldModifier(iI) != 0 || kCivic.getVassalTradeModifier() != 0)
 		{
 			CvCity* pLoopCity;
 			int iLoop;
 			for (pLoopCity = firstCity(&iLoop); pLoopCity != NULL; pLoopCity = nextCity(&iLoop))
 			{
-				iTempValue += pLoopCity->getTradeYield(YIELD_COMMERCE) * kCivic.getTradeYieldModifier(iI) / 100;
+				iTradeYield += pLoopCity->getTradeYield((YieldTypes)iI);
 			}
 		}
 
+		iTempValue += iTradeYield * kCivic.getTradeYieldModifier(iI) / 100;
+		iTempValue += iTradeYield * kCivic.getVassalTradeModifier() * GET_TEAM(getTeam()).getVassalCount() / 10 / 100;
+
 		for (iJ = 0; iJ < GC.getNumImprovementInfos(); iJ++)
 		{
-			iTempValue += (AI_averageYieldMultiplier((YieldTypes)iI) * (kCivic.getImprovementYieldChanges(iJ, iI) * (getImprovementCount((ImprovementTypes)iJ) /*+ getNumCities() * 2*/))) / 100;
+			iTempValue += ((GC.getImprovementInfo((ImprovementTypes)iJ).getYieldChange(YIELD_FOOD) > 0 ? 2 : 1) * AI_averageYieldMultiplier((YieldTypes)iI) * (kCivic.getImprovementYieldChanges(iJ, iI) * (getImprovementCount((ImprovementTypes)iJ) /*+ getNumCities() * 2*/))) / 100;
 		}
 
 		// Leoreth: specialist specific yield changes
@@ -10492,14 +10512,16 @@ int CvPlayerAI::AI_civicValue(CivicTypes eCivic) const
 		{
 			if (getStateReligion() != NO_RELIGION)
 			{
-				int iStateReligionBuildingValue = 0;
+				/*int iStateReligionBuildingValue = 0;
 				for (iJ = 0; iJ < GC.getNumBuildingClassInfos(); iJ++)
 				{
 					if (GC.getBuildingInfo((BuildingTypes)GC.getCivilizationInfo(getCivilizationType()).getCivilizationBuildings(iJ)).getStateReligion() == getStateReligion())
 					{
 						iStateReligionBuildingValue += AI_averageYieldMultiplier((YieldTypes)iI) * kCivic.getStateReligionBuildingYield(iI) * getBuildingClassCount((BuildingClassTypes)iJ);
 					}
-				}
+				}*/
+
+				int iStateReligionBuildingValue = kCivic.getStateReligionBuildingYield(iI) * AI_averageYieldMultiplier((YieldTypes)iI) * iHighestReligionCount / 2;
 
 				iTempValue += iStateReligionBuildingValue / 100;
 			}
@@ -10507,7 +10529,7 @@ int CvPlayerAI::AI_civicValue(CivicTypes eCivic) const
 
 		if (iI == YIELD_FOOD)
 		{
-			iTempValue *= 3;
+			iTempValue *= 4;
 		}
 		else if (iI == YIELD_PRODUCTION)
 		{
@@ -10572,6 +10594,8 @@ int CvPlayerAI::AI_civicValue(CivicTypes eCivic) const
 			continue;
 		}
 
+		CvBuildingInfo& kBuilding = GC.getBuildingInfo(eBuilding);
+
 		if (kCivic.getBuildingHappinessChanges(iI) != 0)
 		{
 			iValue += (kCivic.getBuildingHappinessChanges(iI) * getBuildingClassCount((BuildingClassTypes)iI) * 3);
@@ -10581,16 +10605,16 @@ int CvPlayerAI::AI_civicValue(CivicTypes eCivic) const
 		{
 			if (getNumCities() > 0 && canConstruct(eBuilding))
 			{
-				iValue += 2 * kCivic.getBuildingProductionModifier(iI) * (getNumCities() - getBuildingClassCountPlusMaking((BuildingClassTypes)iI)) / (100 * getNumCities());
+				iValue += (kBuilding.getAdvisorType() == ADVISOR_ECONOMY || kBuilding.getAdvisorType() == ADVISOR_SCIENCE ? 2 : 1) * kBuilding.getProductionCost() * kCivic.getBuildingProductionModifier(iI) * (getNumCities() - getBuildingClassCount((BuildingClassTypes)iI)) / (getNumCities()) / 100 / 120;
 			}
 		}
 
 		// Leoreth: shrine income income limit changes
 		if (kCivic.getShrineIncomeLimitChange() != 0)
 		{
-			if (GC.getBuildingInfo(eBuilding).getGlobalReligionCommerce() != NO_RELIGION && isHasBuilding(eBuilding))
+			if (kBuilding.getGlobalReligionCommerce() != NO_RELIGION && isHasBuilding(eBuilding))
 			{
-				iValue += std::max(0, std::min(kCivic.getShrineIncomeLimitChange(), GC.getGameINLINE().countReligionLevels((ReligionTypes)GC.getBuildingInfo(eBuilding).getGlobalReligionCommerce()) - MAX_COM_SHRINE)) * AI_commerceWeight(COMMERCE_GOLD);
+				iValue += std::max(0, std::min(kCivic.getShrineIncomeLimitChange(), GC.getGameINLINE().countReligionLevels((ReligionTypes)kBuilding.getGlobalReligionCommerce()) - MAX_COM_SHRINE)) * AI_commerceWeight(COMMERCE_GOLD);
 			}
 		}
 	}
@@ -10609,15 +10633,22 @@ int CvPlayerAI::AI_civicValue(CivicTypes eCivic) const
 	{
 		if (kCivic.isHurry(iI))
 		{
+			int iGoldRate = calculateGoldRate();
 			iTempValue = 0;
 
 			if (GC.getHurryInfo((HurryTypes)iI).getGoldPerProduction() > 0)
 			{
 				// Leoreth: down from 50 : 25
-				iTempValue += ((((AI_avoidScience()) ? 30 : 15) * getNumCities()) / GC.getHurryInfo((HurryTypes)iI).getGoldPerProduction());
+				//iTempValue += ((((AI_avoidScience()) ? 30 : 15) * getNumCities()) / GC.getHurryInfo((HurryTypes)iI).getGoldPerProduction());
+
+				if (iGoldRate > 0)
+				{
+					iTempValue += AI_yieldWeight(YIELD_PRODUCTION) * (GC.getHurryInfo((HurryTypes)iI).isUnits() && bWarPlan ? 2 : 1) * iGoldRate / GC.getHurryInfo((HurryTypes)iI).getGoldPerProduction() / 100;
+				}
 			}
 			iTempValue += (GC.getHurryInfo((HurryTypes)iI).getProductionPerPopulation() * getNumCities() * (bWarPlan ? 2 : 1)) / 5;
 			iValue += iTempValue;
+			
 		}
 	}
 
@@ -10634,7 +10665,8 @@ int CvPlayerAI::AI_civicValue(CivicTypes eCivic) const
 		iTempValue = 0;
 		if (kCivic.isSpecialistValid(iI))
 		{
-			iTempValue += ((getNumCities() *  (bCultureVictory3 ? 10 : 1)) + 6);
+			//iTempValue += ((getNumCities() *  (bCultureVictory3 ? 10 : 1)) + 6);
+			iTempValue += std::max(0, 2 * countSpecialists((SpecialistTypes)iI) - countSpecialistSlots((SpecialistTypes)iI));
 		}
 		iValue += (iTempValue / 2);
 	}
@@ -10952,7 +10984,7 @@ int CvPlayerAI::AI_religionValue(ReligionTypes eReligion) const
 		return 0;
 	}
 
-	CvCity* pHolyCity = GC.getGameINLINE().getHolyCity(eReligion);
+	/*CvCity* pHolyCity = GC.getGameINLINE().getHolyCity(eReligion);
 	if (pHolyCity != NULL)
 	{
 		bool bOurHolyCity = pHolyCity->getOwnerINLINE() == getID();
@@ -10987,7 +11019,7 @@ int CvPlayerAI::AI_religionValue(ReligionTypes eReligion) const
 				iValue /= 3;
 			}
 		}
-	}
+	}*/
 
 	return iValue;
 }
@@ -19143,10 +19175,10 @@ int CvPlayerAI::AI_getHealthWeight(int iHealth, int iExtraPop) const
 /************************************************************************************************/
 		}
 		iCount++;
-		if (iCount > 6)
+		/*if (iCount > 6)
 		{
 			break;
-		}
+		}*/
 	}
 	
 /************************************************************************************************/

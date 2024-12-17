@@ -5531,6 +5531,11 @@ void CvGameTextMgr::setCityBarHelp(CvWStringBuffer &szString, CvCity* pCity)
 		{
 			iRate = pCity->getBaseCommerceRateTimes100((CommerceTypes)iI);
 		}
+		else if (iI == COMMERCE_CULTURE)
+		{
+			// Leoreth: include civilization culture modifier
+			iRate = pCity->getModifiedCultureRateTimes100();
+		}
 		else
 		{
 			// unchanged
@@ -7862,10 +7867,22 @@ void CvGameTextMgr::parseCivicInfo(CvWStringBuffer &szHelpText, CivicTypes eCivi
 	for (iI = 0; iI < NUM_YIELD_TYPES; ++iI)
 	{
 		iLast = 0;
-
 		for (iJ = 0; iJ < GC.getNumImprovementInfos(); iJ++)
 		{
-			if (GC.getCivicInfo(eCivic).getImprovementYieldChanges(iJ, iI) != 0)
+			if (GC.getCivicInfo(eCivic).getImprovementYieldChanges(iJ, iI) > 0)
+			{
+				szFirstBuffer.Format(L"%s%s", NEWLINE, gDLL->getText("TXT_KEY_CIVIC_IMPROVEMENT_YIELD_CHANGE", GC.getCivicInfo(eCivic).getImprovementYieldChanges(iJ, iI), GC.getYieldInfo((YieldTypes)iI).getChar()).c_str());
+				CvWString szImprovement;
+				szImprovement.Format(L"<link=literal>%s</link>", GC.getImprovementInfo((ImprovementTypes)iJ).getDescription());
+				setListHelp(szHelpText, szFirstBuffer, szImprovement, L", ", (GC.getCivicInfo(eCivic).getImprovementYieldChanges(iJ, iI) != iLast));
+				iLast = GC.getCivicInfo(eCivic).getImprovementYieldChanges(iJ, iI);
+			}
+		}
+
+		iLast = 0;
+		for (iJ = 0; iJ < GC.getNumImprovementInfos(); iJ++)
+		{
+			if (GC.getCivicInfo(eCivic).getImprovementYieldChanges(iJ, iI) < 0)
 			{
 				szFirstBuffer.Format(L"%s%s", NEWLINE, gDLL->getText("TXT_KEY_CIVIC_IMPROVEMENT_YIELD_CHANGE", GC.getCivicInfo(eCivic).getImprovementYieldChanges(iJ, iI), GC.getYieldInfo((YieldTypes)iI).getChar()).c_str());
 				CvWString szImprovement;
@@ -18772,9 +18789,12 @@ void CvGameTextMgr::parseGreatPeopleHelp(CvWStringBuffer &szBuffer, CvCity& city
 	// Leoreth: Shwedagon Paya effect
 	if (GET_PLAYER(city.getOwner()).isHasBuildingEffect((BuildingTypes)SHWEDAGON_PAYA))
 	{
-		szBuffer.append(gDLL->getText("TXT_KEY_MISC_HELP_GREATPEOPLE_FROM_GOLD_RATE", GET_PLAYER(city.getOwner()).getCommercePercent(COMMERCE_GOLD)));
-		szBuffer.append(NEWLINE);
-		iModifier += GET_PLAYER(city.getOwner()).getCommercePercent(COMMERCE_GOLD);
+		if (GET_PLAYER(city.getOwner()).getCommercePercent(COMMERCE_GOLD) > 0)
+		{
+			szBuffer.append(gDLL->getText("TXT_KEY_MISC_HELP_GREATPEOPLE_FROM_GOLD_RATE", GET_PLAYER(city.getOwner()).getCommercePercent(COMMERCE_GOLD)));
+			szBuffer.append(NEWLINE);
+			iModifier += GET_PLAYER(city.getOwner()).getCommercePercent(COMMERCE_GOLD);
+		}
 	}
 
 	// Leoreth: Minoan UP

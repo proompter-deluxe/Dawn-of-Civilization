@@ -61,9 +61,7 @@ iNumModifiers = 14
 iModifierCitiesMaintenance, iModifierCivicUpkeep, iModifierHealth, iModifierUnitCost, iModifierWonderCost, 
 iModifierBuildingCost, iModifierInflationRate, iModifierGreatPeopleThreshold, iModifierGrowthThreshold) = range(iNumModifiers)
 
-### Modifiers (by civilization!) ###
-
-
+### Modifiers ###
 
 dCultureMods = CivDict({
 	iEgypt: 90,

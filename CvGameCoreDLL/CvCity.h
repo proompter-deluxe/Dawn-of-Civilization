@@ -923,7 +923,7 @@ public:
 	void changeSpecialistCount(SpecialistTypes eIndex, int iChange);
 	void alterSpecialistCount(SpecialistTypes eIndex, int iChange);					// Exposed to Python
 
-	int getMaxSpecialistCount(SpecialistTypes eIndex) const;						// Exposed to Python
+	int getMaxSpecialistCount(SpecialistTypes eIndex, bool bIgnoreCivic = false) const;						// Exposed to Python
 	bool isSpecialistValid(SpecialistTypes eIndex, int iExtra = 0) const;					// Exposed to Python
 	void changeMaxSpecialistCount(SpecialistTypes eIndex, int iChange);
 

@@ -313,6 +313,9 @@ def conquistadors(iTeamX, iHasMetTeamY):
 						elif iNewWorldCiv == iAztecs:
 							makeUnits(iOldWorldPlayer, iJaguar, arrivalPlot, 2, UnitAITypes.UNITAI_ATTACK_CITY)
 							makeUnit(iOldWorldPlayer, iHolkan, arrivalPlot, UnitAITypes.UNITAI_ATTACK_CITY)
+						elif iNewWorldCiv == iToltecs:
+							makeUnits(iOldWorldPlayer, iAtlAtl, arrivalPlot, 2, UnitAITypes.UNITAI_ATTACK_CITY)
+							makeUnit(iOldWorldPlayer, iHolkan, arrivalPlot, UnitAITypes.UNITAI_ATTACK_CITY)
 						elif iNewWorldCiv == iMaya:
 							makeUnits(iOldWorldPlayer, iHolkan, arrivalPlot, 2, UnitAITypes.UNITAI_ATTACK_CITY)
 							makeUnit(iOldWorldPlayer, iJaguar, arrivalPlot, UnitAITypes.UNITAI_ATTACK_CITY)
@@ -344,10 +347,10 @@ def mongolConquerors(iTargetTeam):
 
 			teamTarget = team(iTargetTeam)
 			
-			mongol_area = plots.rectangle((70, 39), (86, 58))
+			lMongolRegions = [rLevant, rMesopotamia, rAnatolia, rCaucasus, rPersia, rKhorasan, rPonticSteppe, rRuthenia]
 			
 			mongol_cities = cities.owner(iMongols)
-			target_cities = mongol_area.cities().owner(iTargetCiv)
+			target_cities = cities.regions(*lMongolRegions).owner(iTargetCiv)
 			lTargetCities = [(mongol_cities.closest(target_city), target_city) for target_city in target_cities]
 			lSelectedTargets = sorted(lTargetCities, key=lambda (mongol_city, target_city): distance(mongol_city, target_city))[:3]
 			
@@ -437,6 +440,9 @@ def russianSiberianSettlement(iTech, iTeam, iPlayer):
 def earlyTradingCompany(iTech, iTeam, iPlayer):
 	if turn() == scenarioStartTurn():
 		return
+	
+	if data.civs[iPlayer].iResurrections > 0:
+		return
 
 	lCivs = [iSpain, iPortugal]
 	lTechs = [iExploration, iFirearms]
@@ -450,6 +456,9 @@ def earlyTradingCompany(iTech, iTeam, iPlayer):
 @handler("techAcquired")
 def lateTradingCompany(iTech, iTeam, iPlayer):
 	if turn() == scenarioStartTurn():
+		return
+	
+	if data.civs[iPlayer].iResurrections > 0:
 		return
 
 	lCivs = [iFrance, iEngland, iNetherlands]
@@ -520,6 +529,26 @@ def stabilizeRomeAfterByzantium(iPlayer):
 	if civ(iPlayer) == iByzantium:
 		if player(iRome).isExisting():
 			data.players[iRome].iNumPreviousCities = player(iRome).getNumCities()
+
+
+@handler("flip")
+def westernMongolExplorers(iPlayer):
+	if civ(iPlayer) == iMongols:
+		if not player(iPlayer).isHuman():
+			city = cities.owner(iPlayer).minimum(CyCity.getX)
+			if city:
+				createRoleUnit(iPlayer, city, iExplore)
+
+
+@handler("flip")
+def removeBarbariansForMongols(iPlayer):
+	if civ(iPlayer) == iMongols:
+		lRegions = [rManchuria, rMongolia, rSiberia]
+		if not player(iPlayer).isHuman():
+			lRegions += [rCentralAsianSteppe, rUrals, rPonticSteppe]
+		
+		for unit in plots.regions(*lRegions).notowned().units().owner(iBarbarian):
+			unit.kill(False, -1)
 
 
 ### PERIOD CHANGE ###

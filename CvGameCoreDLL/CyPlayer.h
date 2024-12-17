@@ -613,6 +613,7 @@ public:
 
 	void AI_unitUpdate();
 	void separateAttackCitySelectionGroups();
+	int getModifiedCommerceRate(CommerceTypes eCommerce);
 
 private:
 	CvPlayer* m_pPlayer;

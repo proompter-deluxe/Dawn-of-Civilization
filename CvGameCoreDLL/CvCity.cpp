@@ -2389,6 +2389,24 @@ bool CvCity::canConstruct(BuildingTypes eBuilding, bool bContinue, bool bTestVis
 		if (iNumWaterTiles < 20) return false;
 	}
 
+	// Leoreth: Prambanan requires islands in city radius
+	if (eBuilding == PRAMBANAN)
+	{
+		bool bFound = false;
+		for (iI = 0; iI < NUM_CITY_PLOTS; iI++)
+		{
+			if (getCityIndexPlot(iI)->getFeatureType() == FEATURE_ISLANDS)
+			{
+				bFound = true;
+			}
+		}
+
+		if (!bFound)
+		{
+			return false;
+		}
+	}
+
 	// Leoreth: Guadalupe Basilica needs to be on different continent than Catholic holy city
 	if (eBuilding == GUADALUPE_BASILICA)
 	{
@@ -4699,12 +4717,6 @@ void CvCity::processBuilding(BuildingTypes eBuilding, int iChange, bool bObsolet
 			}
 		}
 
-		// Shwedagon Paya
-		if (eBuilding == SHWEDAGON_PAYA)
-		{
-			changeGreatPeopleRateModifier(GET_PLAYER(getOwnerINLINE()).getCommercePercent(COMMERCE_GOLD) * iChange);
-		}
-
 		// Louvre
 		if (eBuilding == LOUVRE)
 		{
@@ -6813,6 +6825,11 @@ void CvCity::changeBaseGreatPeopleRate(int iChange)
 
 int CvCity::getGreatPeopleRateModifier() const
 {
+	if (isHasBuildingEffect((BuildingTypes)SHWEDAGON_PAYA))
+	{
+		return m_iGreatPeopleRateModifier + GET_PLAYER(getOwnerINLINE()).getCommercePercent(COMMERCE_GOLD);
+	}
+
 	return m_iGreatPeopleRateModifier;
 }
 
@@ -12994,7 +13011,7 @@ void CvCity::alterSpecialistCount(SpecialistTypes eIndex, int iChange)
 }
 
 
-int CvCity::getMaxSpecialistCount(SpecialistTypes eIndex) const
+int CvCity::getMaxSpecialistCount(SpecialistTypes eIndex, bool bIgnoreCivic) const
 {
 	FAssertMsg(eIndex >= 0, "eIndex expected to be >= 0");
 	FAssertMsg(eIndex < GC.getNumSpecialistInfos(), "eIndex expected to be < GC.getNumSpecialistInfos()");
@@ -13002,7 +13019,7 @@ int CvCity::getMaxSpecialistCount(SpecialistTypes eIndex) const
 	int iMaxSpecialistCount = m_paiMaxSpecialistCount[eIndex];
 
 	// Leoreth: unlimited specialist effects now only double available specialists
-	if (GET_PLAYER(getOwnerINLINE()).isSpecialistValid(eIndex))
+	if (!bIgnoreCivic && GET_PLAYER(getOwnerINLINE()).isSpecialistValid(eIndex))
 	{
 		iMaxSpecialistCount *= 2;
 	}

@@ -583,7 +583,7 @@ iTibet : 1500,
 iMoors : 1150,
 iJava: 1645, # the decline of Sultanate of Mataram started then, even if the end was in 1755
 iBurma : 1885,
-iRus : 1240,
+iRus : 1300,
 iSwahili : 1513,
 iPoland : 1650,
 iInca : 1533,
@@ -1291,10 +1291,10 @@ dResurrectionLeaders = CivDict({
 })
 
 # update DLL constants when this changes
-iNumPeriods = 25
+iNumPeriods = 26
 (iPeriodMing, iPeriodMaratha, iPeriodModernGreece, iPeriodCarthage, iPeriodInsularCelts,
 iPeriodVijayanagara, iPeriodByzantineConstantinople, iPeriodSeljuks, iPeriodMeiji, iPeriodDenmark, 
-iPeriodNorway, iPeriodUzbeks, iPeriodSaudi, iPeriodMorocco, iPeriodAustria, 
+iPeriodNorway, iPeriodUzbeks, iPeriodSaudi, iPeriodMorocco, iPeriodSpain, iPeriodAustria, 
 iPeriodYuan, iPeriodPeru, iPeriodLateInca, iPeriodModernItaly, iPeriodPakistan, 
 iPeriodOttomanConstantinople, iPeriodModernGermany, iPeriodTunisia, iPeriodMughals, iPeriodModernIndia) = range(iNumPeriods)
 

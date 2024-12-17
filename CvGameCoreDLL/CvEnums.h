@@ -759,7 +759,14 @@ enum CommerceTypes					// Exposed to Python
 
 enum AdvisorTypes						// Exposed to Python
 {
-	NO_ADVISOR = -1
+	NO_ADVISOR = -1,
+
+	ADVISOR_MILITARY,
+	ADVISOR_RELIGION,
+	ADVISOR_ECONOMY,
+	ADVISOR_SCIENCE,
+	ADVISOR_CULTURE,
+	ADVISOR_GROWTH,
 };
 
 enum FlavorTypes						// Exposed to Python

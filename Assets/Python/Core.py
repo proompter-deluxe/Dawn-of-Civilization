@@ -173,8 +173,7 @@ def itemize(iterable, format_func = lambda x: x, item_char = bullet):
 
 
 def autoplay():
-	return year() < year(dBirth[civ(active())])
-
+	return data.iBeforeObserverSlot == -1 and year() < year(dBirth[active()])
 
 def spread(iterable, size, offset=0):
 	if len(iterable) <= size:
@@ -1402,6 +1401,9 @@ class Plots(Locations):
 	
 	def edge(self):
 		return self.where(lambda p: plots.surrounding(p).any(lambda sp: sp not in self))
+	
+	def notowned(self):
+		return self.where(lambda p: not p.isOwned())
 
 
 class CitiesCorner:

@@ -1,6 +1,7 @@
 # coding: utf-8
 
 from Core import *
+from Core import periodic as core_periodic
 from RFCUtils import *
 from Events import handler
 from Locations import *
@@ -91,17 +92,21 @@ class MinorCity(object):
 		return True
 		
 	def get_tech_civ(self):
-		if self.iCiv is not None:
-			if player(self.iCiv).isAlive():
-				return self.iCiv
-			
-			iTechGroup = next(iTechGroup for iTechGroup, lTechGroupCivs in dTechGroups.items() if self.iCiv in lTechGroupCivs)
-			if iTechGroup is not None:
-				iTechCiv = best_civ_of_group(iTechGroup)
-				if iTechCiv >= 0:
-					return iTechCiv
+		if self.iCiv is None or since(year(dBirth[self.iCiv])) < 0:
+			return self.iOwner
 		
-		return self.iOwner
+		if slot(self.iCiv) >= 0:
+			return self.iCiv
+		
+		lNeighbours = dNeighbours[self.iCiv]
+		lTechGroup = next(lTechGroupCivs for iTechGroup, lTechGroupCivs in dTechGroups.items() if self.iCiv in lTechGroupCivs)
+		
+		lValidCivs = [iCiv for iCiv in set(lNeighbours) & set(lTechGroup) if self.iCiv != iCiv and since(year(dBirth[self.iCiv])) >= 0 and slot(iCiv) >= 0 and infos.civ(iCiv).getImpact() >= infos.civ(self.iCiv).getImpact()]
+
+		if not lValidCivs:
+			return self.iOwner
+		
+		return sorted(lValidCivs, key=lambda iCiv: abs(year(dBirth[iCiv]) - year(dBirth[self.iCiv])))[0]
 	
 	def found(self):
 		iOwnerPlayer = slot(self.iOwner)
@@ -145,14 +150,21 @@ class MinorCity(object):
 	def make_units(self, iUnit, iUnitAI, iNumUnits=1):
 		for unit in units.at(self.tile).where(lambda unit: unit.upgradeAvailable(unit.getUnitType(), infos.unit(iUnit).getUnitClassType(), 0)).limit(iNumUnits):
 			unit.kill(False, -1)
+		
+		city = city_(self.tile)
+		if not city:
+			return
 	
-		created_units = makeUnits(self.iOwner, iUnit, self.tile, iNumUnits, iUnitAI)
+		created_units = makeUnits(city.getOwner(), iUnit, self.tile, iNumUnits, iUnitAI)
 		
 		if self.adjective:
 			created_units.adjective(self.adjective)
 	
 	def create_units(self):
 		for iUnit, iNumUnits, iUnitAI in self.get_units():
+			if self.is_human_proximity():
+				iNumUnits += 1
+			
 			self.make_units(iUnit, iUnitAI, iNumUnits)
 	
 	def add_unit(self):
@@ -171,6 +183,9 @@ class MinorCity(object):
 		
 		for iBuilding in self.buildings:
 			city(self.tile).setHasRealBuilding(iBuilding, True)
+	
+	def is_human_proximity(self):
+		return plot(self.tile).getRegionID() == plot(dCapitals[active()]).getRegionID() or plot(self.tile).getPlayerWarValue(active()) >= 5
 
 
 NUM_BARBARIAN_TYPES = 8
@@ -363,9 +378,6 @@ class Barbarians(object):
 		if self.pattern == PIRATES:
 			return UnitAITypes.UNITAI_PIRATE_SEA
 		
-		elif self.pattern == NATIVES:
-			return UnitAITypes.UNITAI_PILLAGE
-		
 		elif self.pattern == ANIMALS:
 			return UnitAITypes.UNITAI_ANIMAL
 		
@@ -504,7 +516,7 @@ minor_cities = [
 	MinorCity(900, iNative, (28, 25), "Chan Chan", iPopulation=2, iCiv=iInca, units={iDefend: 1}, adjective="TXT_KEY_ADJECTIVE_CHIMU"),
 	MinorCity(900, iIndependent, (87, 29), "Muqdisho", iPopulation=3, iCiv=iSwahili, units={iDefend: 2}, adjective="TXT_KEY_ADJECTIVE_SOMALI"),
 	MinorCity(900, iNative, (79, 18), "Zimbabwe", iPopulation=2, units={iDefend: 1}, adjective="TXT_KEY_ADJECTIVE_SHONA"),
-	MinorCity(1000, iBarbarian, (92, 66), "Qazan", iPopulation=2, iCiv=iTurks, units={iHarass: 3}, adjective="TXT_KEY_ADJECTIVE_BULGAR"),
+	MinorCity(1000, iBarbarian, (92, 66), "Qazan", iPopulation=2, iCiv=iTurks, units={iHarass: 2}, adjective="TXT_KEY_ADJECTIVE_BULGAR"),
 	MinorCity(1000, iBarbarian, (78, 65), "Vil'na", iPopulation=2, iCiv=iPoland, units={iHarass: 3, iDefend: 1}, adjective="TXT_KEY_ADJECTIVE_LITHUANIAN"),
 	MinorCity(1000, iNative, (67, 34), "Kano", iPopulation=2, iCiv=iMali, units={iDefend: 2}, adjective="TXT_KEY_ADJECTIVE_HAUSA"),
 	MinorCity(1100, iIndependent, (144, 33), "Nan Madol", iPopulation=1),
@@ -513,6 +525,7 @@ minor_cities = [
 	MinorCity(1350, iIndependent2, (81, 32), "Bonga", iPopulation=3, iCiv=iEthiopia, units={iDefend: 3}),
 	MinorCity(1585, iNative, (74, 23), "Mwimbele", iPopulation=1, units={iSkirmish: 2}, adjective="TXT_KEY_ADJECTIVE_LUBA"),
 	MinorCity(1610, iNative, (89, 18), "Antananarivo", iPopulation=1, units={iDefend: 2}, adjective="TXT_KEY_ADJECTIVE_MALAGASY"),
+	MinorCity(1635, iBarbarian, (109, 58), "Ghulja", iPopulation=3, iCiv=iTurks, units={iDefend: 2, iHarass: 3}, condition=lambda: not player(iMongols).isExisting(), adjective="TXT_KEY_ADJECTIVE_DZUNGAR"),
 ]
 
 barbarians = [
@@ -535,6 +548,7 @@ barbarians = [
 	# Barbarians(-1100, -300, {iAxeman: 2}, ((120, 42), (129, 50)), 12, MINORS, adjective="TXT_KEY_ADJECTIVE_SHU"),
 	Barbarians(-1500, -500, {iArcher: 1}, ((105, 39), (111, 43)), 10, NATIVES, iOwner=iNative, adjective="TXT_KEY_ADJECTIVE_GIRIJAN"),
 	Barbarians(-1600, -1100, {iChariot: 4}, ((98, 49), (102, 52)), 4, INVADERS, target_area=((99, 41), (105, 48)), adjective="TXT_KEY_ADJECTIVE_VEDIC", promotions=(iMobility, iDesertAdaptation)),
+	Barbarians(-1400, -800, {iChariot: 2}, ((115, 54), (129, 59)), 12, INVADERS, target_area=((117, 46), (129, 59)), adjective="TXT_KEY_ADJECTIVE_HU", promotions=(iDesertAdaptation, iSteppeAdaptation,)),
 	Barbarians(-1270, -1180, {iGalley: 2, iSpearman: 1, iAxeman: 1, iSacredBand: 1, iMycenaeanMyrmidon: 1}, ((68, 45), (73, 53)), 1, SEA_INVADERS, target_area=((75, 44), (85, 54)), adjective="TXT_KEY_ADJECTIVE_SEA_PEOPLES"),
 	Barbarians(-1270, -1160, {iVulture: 2}, ((90, 47), (93, 51)), 7, INVADERS, adjective="TXT_KEY_ADJECTIVE_KASSITE"),
 	Barbarians(-1000, -100, {iSkirmisher: 1, iAxeman: 1}, ((120, 42), (129, 50)), 7, MINORS, adjective="TXT_KEY_ADJECTIVE_YUE"),
@@ -542,6 +556,7 @@ barbarians = [
 	Barbarians(-1250, -950, {iLightSwordsman: 1, iAxeman: 1, iSpearman: 1}, ((79, 51), (82, 54)), 5, INVADERS, target_area=((79, 51), (84, 55)), adjective="TXT_KEY_ADJECTIVE_PHRYGIAN"),
 	Barbarians(-1100, -780, {iHorseman: 2, iAxeman: 1}, ((85, 54), (92, 60)), 9, INVADERS, target_area=((79, 51), (84, 55)), adjective="TXT_KEY_ADJECTIVE_CIMMERIAN"),
 	Barbarians(-1000, 400, {iMedjay: 1}, ((78, 35),	(82, 40)), 8, MINORS, iAlternativeCiv=iNubia, adjective="TXT_KEY_ADJECTIVE_NUBIAN"),
+	Barbarians(-800, -300, {iHorseman: 2}, ((115, 54), (129, 59)), 12, INVADERS, target_area=((117, 46), (129, 59)), adjective="TXT_KEY_ADJECTIVE_HU", promotions=(iDesertAdaptation, iSteppeAdaptation,)),
 	Barbarians(-400, -100, {iHorseman: 2}, ((78, 57), (102, 63)), 8, NOMADS, target_area=((79, 51), (83, 55)), adjective="TXT_KEY_ADJECTIVE_SCYTHIAN"),
 	# Barbarians(-650, -50, {iGallicWarrior: 1}, ((56, 55), (75, 61)), 6, INVADERS, target_area=((64, 49), (79, 57))),
 	# Barbarians(-650, -50, {iAxeman: 1}, ((69, 56), (78, 61)), 8, INVADERS, target_area=((73, 49), (84, 55)), adjective="TXT_KEY_ADJECTIVE_GALATIAN"),
@@ -554,6 +569,7 @@ barbarians = [
 	Barbarians(-400, -150, {iHorseArcher: 3}, ((96, 42), (105, 49)), 9, INVADERS, target_area=((98, 42), (112, 49)), adjective="TXT_KEY_ADJECTIVE_INDO_SCYTHIAN"),
 	Barbarians(-350, 200, {iLightSwordsman: 1}, ((113, 47), (117, 54)), 10, MINORS, adjective="TPXT_KEY_ADJECTIVE_TIBETAN"),
 	Barbarians(-300, 90, {iHorseArcher: 3}, ((113, 55), (128, 62)), 8, INVADERS, target_area=((117, 46), (129, 59)), adjective="TXT_KEY_ADJECTIVE_XIONGNU", promotions=(iDesertAdaptation, iSteppeAdaptation)),
+	Barbarians(-350, 200, {iLightSwordsman: 1}, ((113, 47), (117, 54)), 10, MINORS, adjective="TXT_KEY_ADJECTIVE_XIRONG"),
 	Barbarians(-300, 300, {iCamelRider: 1}, ((86, 38), (91, 45)), 10, NOMADS, target_area=((77, 39), (91, 50)), adjective="TXT_KEY_ADJECTIVE_BEDOUIN"),
 	Barbarians(-250, 300, {iAxeman: 1}, ((64, 59), (75, 65)), 8, INVADERS, target_area=((58, 52), (71, 62)), adjective="TXT_KEY_ADJECTIVE_GERMANIC"),
 	Barbarians(-250, 300, {iAxeman: 1}, ((64, 59), (75, 65)), 10, INVADERS, target_area=((58, 52), (71, 62)), adjective="TXT_KEY_ADJECTIVE_GERMANIC"),
@@ -620,20 +636,21 @@ barbarians = [
 	Barbarians(900, 1150, {iOghuz: 3}, ((92, 53), (112, 65)), 6, NOMADS, target_area=((91, 45), (102, 58)), adjective="TXT_KEY_ADJECTIVE_TURKIC", promotions=(iSteppeAdaptation,)),
 	Barbarians(900, 1150, {iSkirmisher: 1}, ((25, 24), (29, 29)), 8, MINORS, adjective="TXT_KEY_ADJECTIVE_CHIMU"),
 	Barbarians(900, 1100, {iJaguar: 4}, ((11, 44), (19, 51)), 5, INVADERS, iOwner=iNative, target_area=((14, 40), (23, 45)), adjective="TXT_KEY_ADJECTIVE_NAHUA"),
-	Barbarians(900, 1200, {iKeshik: 2, iHorseArcher: 2}, ((105, 53), (119, 59)), 8, INVADERS, target_area=((117, 46), (129, 59)), adjective="TXT_KEY_ADJECTIVE_KHITAN", promotions=(iDesertAdaptation, iSteppeAdaptation), condition=is_free_of_civ(iTibet)),
+	Barbarians(900, 1200, {iKeshik: 2, iHorseArcher: 2}, ((105, 53), (119, 59)), 6, INVADERS, target_area=((117, 46), (129, 59)), adjective="TXT_KEY_ADJECTIVE_KHITAN", promotions=(iDesertAdaptation, iSteppeAdaptation), condition=is_free_of_civ(iTibet)),
 	Barbarians(950, 1100, {iLongship: 1, iHuscarl: 2}, ((53, 48), (63, 72)), 8, SEA_INVADERS, adjective="TXT_KEY_ADJECTIVE_VIKING"),
 	Barbarians(1000, 1200, {iHorseArcher: 2}, ((101, 41), (105, 46)), 8, MINORS, adjective="TXT_KEY_ADJECTIVE_RAJPUT"),
-	Barbarians(1000, 1300, {iAxeman: 2}, ((74, 64), (80, 69)), 10, MINORS, adjective="TXT_KEY_ADJECTIVE_BALTIC"),
+	Barbarians(1000, 1280, {iAxeman: 2}, ((74, 64), (80, 69)), 10, MINORS, adjective="TXT_KEY_ADJECTIVE_BALTIC"),
 	Barbarians(1050, 1400, {iAxeman: 1}, ((75, 17), (80, 23)), 10, MINORS, iOwner=iNative, adjective="TXT_KEY_ADJECTIVE_SHONA"),
 	Barbarians(1050, 1180, {iCamelArcher: 3, iHeavySwordsman: 3}, ((56, 39), (58, 49)), 2, CLOSE_INVADERS, target_area=((56, 44), (58, 49)), adjective="TXT_KEY_ADJECTIVE_ALMORAVID", promotions=(iDesertAdaptation,)),
 	Barbarians(1100, 1350, {iHorseArcher: 2}, ((115, 38), (120, 45)), 12, INVADERS, adjective="TXT_KEY_ADJECTIVE_SHAN"),
 	Barbarians(1100, 1250, {iHorseArcher: 3}, ((79, 58), (105, 63)), 9, NOMADS, target_area=((73, 49), (84, 66)), adjective="TXT_KEY_ADJECTIVE_CUMAN"),
 	Barbarians(1150, 1400, {iAucac: 1}, ((25, 24), (29, 29)), 8, MINORS, adjective="TXT_KEY_ADJECTIVE_CHIMU"),
 	Barbarians(1200, 1500, {iLancer: 3}, ((101, 41), (105, 46)), 8, MINORS, adjective="TXT_KEY_ADJECTIVE_RAJPUT"),
-	Barbarians(1200, 1500, {iKeshik: 2}, ((85, 57), (95, 67)), 8, INVADERS, target_area=((80, 59), (95, 70)), adjective="TXT_KEY_ADJECTIVE_TATAR"),
-	Barbarians(1200, 1500, {iLongbowman: 1}, ((87, 69), (96, 74)), 12, NATIVES, adjective="TXT_KEY_ADJECTIVE_KOMI"),
+	Barbarians(1200, 1500, {iHorseArcher: 1}, ((85, 57), (95, 67)), 10, INVADERS, target_area=((80, 59), (95, 70)), adjective="TXT_KEY_ADJECTIVE_TATAR"),
+	Barbarians(1200, 1500, {iLongbowman: 1}, ((87, 69), (96, 74)), 15, NATIVES, adjective="TXT_KEY_ADJECTIVE_KOMI"),
 	Barbarians(1200, 1550, {iLongbowman: 2}, ((58, 31), (64, 35)), 12, NATIVES, iOwner=iNative, adjective="TXT_KEY_ADJECTIVE_AKAN"),
 	Barbarians(1200, 1500, {iKeshik: 2}, ((92, 58), (103, 65)), 10, NOMADS, target_area=((80, 59), (95, 70)), adjective="TXT_KEY_ADJECTIVE_NOGAI", iAlternativeCiv=iMongols, promotions=(iSteppeAdaptation,)),
+	Barbarians(1200, 1500, {iKeshik: 3}, ((116, 57), (127, 66)), 8, INVADERS, target_area=((117, 46), (129, 59)), adjective="TXT_KEY_ADJECTIVE_MONGOL", iAlternativeCiv=iMongols, promotions=(iDesertAdaptation, iSteppeAdaptation,)),
 	Barbarians(1200, 1700, {iFarari: 1}, ((61, 34), (66, 38)), 16, INVADERS, iOwner=iNative, target_area=((54, 33), (66, 39)), adjective="TXT_KEY_ADJECTIVE_SONGHAI"),
 	Barbarians(1250, 1450, {iHeavyGalley: 2}, ((125, 44), (134, 57)), 18, PIRATES, adjective="TXT_KEY_ADJECTIVE_WOKOU"),
 	Barbarians(1300, 1550, {iJaguar: 2}, ((13, 41), (17, 46)), 12, MINORS, iOwner=iNative, adjective="TXT_KEY_ADJECTIVE_PUREPECHA"),
@@ -644,6 +661,7 @@ barbarians = [
 	Barbarians(1400, 1800, {iNativeRaider: 1}, ((71, 11), (81, 17)), 12, NATIVES, iOwner=iNative, adjective="TXT_KEY_ADJECTIVE_NGUNI"),
 	Barbarians(1400, 1550, {iArcher: 2}, ((21, 49), (27, 54)), 12, NATIVES, iOwner=iNative, adjective="TXT_KEY_ADJECTIVE_MUSCOGEE"),
 	Barbarians(1415, 1550, {iGhazi: 2, iBombard: 1, iMobileGuard: 1}, ((86, 31), (88, 33)), 5, CLOSE_INVADERS, target_area=((82, 33), (85, 36)), iAlternativeCiv=iArabia, adjective="TXT_KEY_ADJECTIVE_ADAL", promotions=(iDesertAdaptation,)),
+	Barbarians(1400, 1650, {iKeshik: 2}, ((105, 58), (115, 64)), 8, INVADERS, target_area=((117, 46), (129, 59)), adjective="TXT_KEY_ADJECTIVE_OIRAT", iAlternativeCiv=iMongols, promotions=(iDesertAdaptation,)),
 	Barbarians(1450, 1600, {iSkirmisher: 1}, ((33, 12), (34, 16)), 15, NATIVES, iOwner=iNative, adjective="TXT_KEY_ADJECTIVE_MAPUCHE"),
 	Barbarians(1450, 1700, {iGalleass: 2}, ((125, 44), (134, 57)), 12, PIRATES, adjective="TXT_KEY_ADJECTIVE_WOKOU"),
 	Barbarians(1450, 1600, {iArcher: 2}, ((29, 58), (33, 62)), 8, NATIVES, iOwner=iNative, adjective="TXT_KEY_ADJECTIVE_ALGONQUIN"),
@@ -651,6 +669,7 @@ barbarians = [
 	Barbarians(1500, 1650, {iLongbowman: 1}, ((29, 58), (33, 62)), 8, NATIVES, iOwner=iNative, adjective="TXT_KEY_ADJECTIVE_ALGONQUIN", condition=is_new_world_discovered),
 	Barbarians(1500, 1650, {iGalleass: 1}, ((114, 27), (128, 35)), 8, PIRATES),
 	Barbarians(1480, 1650, {iOromoWarrior: 2}, ((80, 29), (88, 32)), 6, CLOSE_INVADERS, iOwner=iNative, target_area=((80, 32), (85, 36)), promotions=(iDesertAdaptation,)),
+	Barbarians(1500, 1650, {iCuirassier: 3}, ((116, 57), (127, 66)), 8, INVADERS, target_area=((117, 46), (129, 59)), adjective="TXT_KEY_ADJECTIVE_MONGOL", iAlternativeCiv=iMongols, promotions=(iDesertAdaptation, iSteppeAdaptation,)),
 	Barbarians(1500, 1750, {iCuirassier: 2}, ((85, 57), (95, 67)), 12, NOMADS, target_area=((80, 59), (95, 70)), adjective="TXT_KEY_ADJECTIVE_TATAR", promotions=(iSteppeAdaptation,)),
 	Barbarians(1500, 1750, {iArcher: 1}, ((40, 17), (47, 26)), 12, NATIVES, iOwner=iNative, adjective="TXT_KEY_ADJECTIVE_TUPI"),
 	Barbarians(1500, 1800, {iCamelGunner: 1}, ((56, 39), (76, 44)), 9, NOMADS, target_area=((54, 34), (76, 48)), adjective="TXT_KEY_ADJECTIVE_BERBER"),
@@ -668,8 +687,10 @@ Barbarians(1500, 1650, {iLongbowman: 2}, ((21, 49), (27, 54)), 12, NATIVES, iOwn
 	# Barbarians(1600, 1850, {iMohawk: 1}, ((23, 55), (32, 61)), 8, NATIVES, iOwner=iNative, adjective="TXT_KEY_ADJECTIVE_IROQUOIS", condition=is_new_world_discovered),
 	Barbarians(1650, 1900, {iPrivateer: 1}, ((114, 27), (128, 35)), 8, PIRATES),
 	Barbarians(1650, 1850, {iArquebusier: 2}, ((21, 49), (27, 54)), 12, NATIVES, iOwner=iNative, adjective="TXT_KEY_ADJECTIVE_MUSCOGEE", condition=is_new_world_discovered),
+	Barbarians(1650, 1740, {iCuirassier: 4}, ((105, 53), (116, 62)), 10, INVADERS, target_area=((117, 46), (129, 59)), adjective="TXT_KEY_ADJECTIVE_DZUNGAR", iAlternativeCiv=iMongols, promotions=(iDesertAdaptation, iSteppeAdaptation,)),
 	Barbarians(1700, 1900, {iMountedBrave: 1}, ((14, 56), (23, 62)), 12, NOMADS, iOwner=iNative, target_area=((15, 51), (26, 62)), adjective="TXT_KEY_ADJECTIVE_SIOUX", condition=is_new_world_discovered),
 	Barbarians(1720, 1850, {iCuirassier: 2}, ((58, 33), (69, 38)), 8, INVADERS, adjective="TXT_KEY_ADJECTIVE_FULA"),
+	Barbarians(1740, 1800, {iHussar: 4}, ((105, 53), (116, 62)), 10, INVADERS, target_area=((117, 46), (129, 59)), adjective="TXT_KEY_ADJECTIVE_DZUNGAR", iAlternativeCiv=iMongols, promotions=(iDesertAdaptation, iSteppeAdaptation,)),
 	Barbarians(1800, 1900, {iPikeman: 2}, ((71, 11), (81, 17)), 10, NATIVES, iOwner=iNative, adjective="TXT_KEY_ADJECTIVE_ZULU"),
 	Barbarians(1800, 1900, {iMountedBrave: 1}, ((12, 62), (22, 65)), 12, NOMADS, iOwner=iNative, target_area=((15, 57), (26, 66)), adjective="TXT_KEY_ADJECTIVE_CREE"),
 	Barbarians(1800, 1900, {iMountedBrave: 1}, ((13, 50), (20, 56)), 9, NOMADS, iOwner=iNative, target_area=((15, 51), (26, 62)), adjective="TXT_KEY_ADJECTIVE_COMANCHE"),
@@ -695,6 +716,23 @@ def assignMinorUnitAdjective(city, unit):
 	minor_city_adjective = next(minor_city.adjective for minor_city in minor_cities if at(city, minor_city.tile))
 	if minor_city_adjective:
 		set_unit_adjective(unit, minor_city_adjective)
+	
+
+@handler("BeginGameTurn")
+def fragmentIndependents():
+	if year() >= year(50) and core_periodic(15):
+		iLargestMinor = players.independent().maximum(lambda p: player(p).getNumCities())
+		iSmallestMinor = players.independent().minimum(lambda p: player(p).getNumCities())
+		if player(iLargestMinor).getNumCities() > 2 * player(iSmallestMinor).getNumCities():
+			for city in cities.owner(iLargestMinor).sample(3):
+				completeCityFlip(city, iSmallestMinor, iLargestMinor, 50, bBarbarianDecay=False, bBarbarianConversion=True, bAlwaysOwnPlots=True, bFlipUnits=True)
+
+
+@handler("BeginGameTurn")
+def checkMinorTechs():
+	iMinor = players.civs(iIndependent, iIndependent2, iNative).existing().periodic(8)
+	if iMinor:
+		updateMinorTechs(iMinor, barbarian())
 
 
 def maintainFallenCivilizations():
