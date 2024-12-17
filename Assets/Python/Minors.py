@@ -92,17 +92,21 @@ class MinorCity(object):
 		return True
 		
 	def get_tech_civ(self):
-		if self.iCiv is not None:
-			if player(self.iCiv).isAlive():
-				return self.iCiv
-			
-			iTechGroup = next(iTechGroup for iTechGroup, lTechGroupCivs in dTechGroups.items() if self.iCiv in lTechGroupCivs)
-			if iTechGroup is not None:
-				iTechCiv = best_civ_of_group(iTechGroup)
-				if iTechCiv >= 0:
-					return iTechCiv
+		if self.iCiv is None or since(year(dBirth[self.iCiv])) < 0:
+			return self.iOwner
 		
-		return self.iOwner
+		if slot(self.iCiv) >= 0:
+			return self.iCiv
+		
+		lNeighbours = dNeighbours[self.iCiv]
+		lTechGroup = next(lTechGroupCivs for iTechGroup, lTechGroupCivs in dTechGroups.items() if self.iCiv in lTechGroupCivs)
+		
+		lValidCivs = [iCiv for iCiv in set(lNeighbours) & set(lTechGroup) if self.iCiv != iCiv and since(year(dBirth[self.iCiv])) >= 0 and slot(iCiv) >= 0 and infos.civ(iCiv).getImpact() >= infos.civ(self.iCiv).getImpact()]
+
+		if not lValidCivs:
+			return self.iOwner
+		
+		return sorted(lValidCivs, key=lambda iCiv: abs(year(dBirth[iCiv]) - year(dBirth[self.iCiv])))[0]
 	
 	def found(self):
 		iOwnerPlayer = slot(self.iOwner)
@@ -158,6 +162,9 @@ class MinorCity(object):
 	
 	def create_units(self):
 		for iUnit, iNumUnits, iUnitAI in self.get_units():
+			if self.is_human_proximity():
+				iNumUnits += 1
+			
 			self.make_units(iUnit, iUnitAI, iNumUnits)
 	
 	def add_unit(self):
@@ -176,6 +183,9 @@ class MinorCity(object):
 		
 		for iBuilding in self.buildings:
 			city(self.tile).setHasRealBuilding(iBuilding, True)
+	
+	def is_human_proximity(self):
+		return plot(self.tile).getRegionID() == plot(dCapitals[active()]).getRegionID() or plot(self.tile).getPlayerWarValue(active()) >= 5
 
 
 NUM_BARBARIAN_TYPES = 8
@@ -459,7 +469,7 @@ minor_cities = [
 	MinorCity(-200, iIndependent, (125, 43), "Panyu", iPopulation=2, iCiv=iChina, units={iDefend: 2}, adjective="TXT_KEY_ADJECTIVE_NANYUE"),
 	MinorCity(-150, iIndependent2, (112, 57), "Jiaohe", iPopulation=1, iCiv=iChina, units={iHarass: 1}, adjective="TXT_KEY_ADJECTIVE_TOCHARIAN"),
 	MinorCity(-75, iIndependent, (105, 55), "Kash", iPopulation=2, iCiv=iKushans, units={iDefend: 1}, adjective="TXT_KEY_ADJECTIVE_UIGHUR"),
-	MinorCity(190, iIndependent2, (123, 39), "Indrapura", iPopulation=3, iCiv=iChina, units={iDefend: 3}, bUnique=False, adjective="TXT_KEY_ADJECTIVE_CHAM"),
+	MinorCity(190, iIndependent2, (123, 39), "Indrapura", iPopulation=3, iCiv=iVietnam, units={iDefend: 3}, bUnique=False, adjective="TXT_KEY_ADJECTIVE_CHAM"),
 	MinorCity(300, iIndependent2, (89, 37), "Sana'a", iPopulation=2, iCiv=iEthiopia, units={iDefend: 2}, adjective="TXT_KEY_ADJECTIVE_YEMENI"),
 	MinorCity(400, iIndependent2, (118, 45), "Dali", iPopulation=4, iCiv=iChina, units={iDefend: 3, iShock: 1}, adjective="TXT_KEY_ADJECTIVE_BAI"),
 	MinorCity(500, iIndependent2, (123, 25), "Sunda Kelapa", iPopulation=3, iCiv=iMalays, units={iDefend: 2}, adjective="TXT_KEY_ADJECTIVE_SUNDANESE"),
@@ -483,7 +493,7 @@ minor_cities = [
 	MinorCity(1350, iIndependent2, (81, 32), "Bonga", iPopulation=3, iCiv=iEthiopia, units={iDefend: 3}),
 	MinorCity(1585, iNative, (74, 23), "Mwimbele", iPopulation=1, units={iSkirmish: 2}, adjective="TXT_KEY_ADJECTIVE_LUBA"),
 	MinorCity(1610, iNative, (89, 18), "Antananarivo", iPopulation=1, units={iDefend: 2}, adjective="TXT_KEY_ADJECTIVE_MALAGASY"),
-	MinorCity(1635, iBarbarian, (109, 58), "Ghulja", iPopulation=3, units={iDefend: 2, iHarass: 3}, condition=lambda: not player(iMongols).isExisting(), adjective="TXT_KEY_ADJECTIVE_DZUNGAR"),
+	MinorCity(1635, iBarbarian, (109, 58), "Ghulja", iPopulation=3, iCiv=iTurks, units={iDefend: 2, iHarass: 3}, condition=lambda: not player(iMongols).isExisting(), adjective="TXT_KEY_ADJECTIVE_DZUNGAR"),
 ]
 
 barbarians = [
