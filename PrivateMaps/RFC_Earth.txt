@@ -49757,7 +49757,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=110,y=49
-	TerrainType=TERRAIN_TUNDRA
+	TerrainType=TERRAIN_PLAINS
 	PlotType=1
 EndPlot
 BeginPlot

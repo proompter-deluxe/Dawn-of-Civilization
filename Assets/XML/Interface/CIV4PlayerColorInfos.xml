@@ -565,9 +565,9 @@
 			<TextColorType>COLOR_PLAYER_BRIGHT_RED_TEXT</TextColorType>
 		</PlayerColorInfo>
 		<PlayerColorInfo>
-			<Type>PLAYERCOLOR_SKY_BLUE</Type> <!-- Khazars -->
-			<ColorTypePrimary>COLOR_PLAYER_SKY_BLUE</ColorTypePrimary>
-			<ColorTypeSecondary>COLOR_PLAYER_WHITE</ColorTypeSecondary>
+			<Type>PLAYERCOLOR_KHAZARS</Type> <!-- Khazars -->
+			<ColorTypePrimary>COLOR_PLAYER_WHITE</ColorTypePrimary>
+			<ColorTypeSecondary>COLOR_PLAYER_SKY_BLUE_TEXT</ColorTypeSecondary>
 			<TextColorType>COLOR_PLAYER_SKY_BLUE_TEXT</TextColorType>
 		</PlayerColorInfo>
 	</PlayerColorInfos>
