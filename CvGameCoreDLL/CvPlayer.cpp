@@ -6445,6 +6445,9 @@ bool CvPlayer::canConstruct(BuildingTypes eBuilding, bool bContinue, bool bTestV
 		else if (isHumanVictoryWonder(eBuilding, HARMANDIR_SAHIB, MUGHALS)) return false;
 
 		else if (isHumanVictoryWonder(eBuilding, SHWEDAGON_PAYA, BURMA)) return false;
+
+		else if (isHumanVictoryWonder(eBuilding, BOROBUDUR, JAVA)) return false;
+		else if (isHumanVictoryWonder(eBuilding, PRAMBANAN, JAVA)) return false;
 	}
 
 	return true;
