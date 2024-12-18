@@ -518,7 +518,7 @@ lCivilizations = [
 		iGold=100,
 		iStateReligion=iIslam,
 		lCivics=[iDespotism, iVassalage, iSlavery, iMerchantTrade, iFanaticism, iHegemony],
-		techs=techs.column(6).including(iFeudalism, iFortification, iTheology, iDoctrine)
+		techs=techs.column(6).including(iFeudalism, iTheology, iDoctrine).without(iShipbuilding, iNavigation)
 	),
 	Civilization(
 		iPoland,
