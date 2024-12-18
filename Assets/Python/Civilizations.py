@@ -2023,6 +2023,8 @@ dTechPreferences = {
 	iMamluks : {
 		iFinance: -50,
 		iCompanies: -50,
+		iCartography: -30,
+		iExploration: -30,
 	},
 	iTibet : {
 		iPhilosophy: 30,
@@ -2096,6 +2098,18 @@ dTechPreferences = {
 	},
 	iBulgaria : {
 		iOptics: -5,
+	},
+	iGhorids : {
+		iScholarship: 30,
+		iAlchemy: 30,
+		iHeritage: 20,
+		iFinance: -50,
+		iFirearms: -30,
+		iCompanies: -50,
+		iPaper: -20,
+		iCompass: -30,
+		iCartography: -30,
+		iExploration: -30,
 	},
 	iVietnam : {
 		iPrinting: 20,
