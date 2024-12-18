@@ -515,7 +515,7 @@ lCivilizations = [
 	),
 	Civilization(
 		iGhorids,
-		iGold=150,
+		iGold=100,
 		iStateReligion=iIslam,
 		lCivics=[iDespotism, iVassalage, iSlavery, iMerchantTrade, iFanaticism, iHegemony],
 		techs=techs.column(6).including(iFeudalism, iFortification, iTheology, iDoctrine)
