@@ -640,7 +640,7 @@ iSpain : [(1150, 1300), (1700, 2020)],
 iEngland : [(1700, 2020)],
 iHolyRome : [(1800, 2020)],
 iBurma : [(850, 1885), (1950, 2020)],
-iRus : [(1650, 2020)],
+iRus : [(1970, 2020)],
 iVietnam : [(950, 2020)],
 iSwahili : [(1960, 2020)],
 iPoland : [(1920, 2020)],
@@ -1291,12 +1291,12 @@ dResurrectionLeaders = CivDict({
 })
 
 # update DLL constants when this changes
-iNumPeriods = 26
+iNumPeriods = 27
 (iPeriodMing, iPeriodMaratha, iPeriodModernGreece, iPeriodCarthage, iPeriodInsularCelts,
 iPeriodVijayanagara, iPeriodByzantineConstantinople, iPeriodSeljuks, iPeriodMeiji, iPeriodDenmark, 
 iPeriodNorway, iPeriodUzbeks, iPeriodSaudi, iPeriodMorocco, iPeriodSpain, iPeriodAustria, 
 iPeriodYuan, iPeriodPeru, iPeriodLateInca, iPeriodModernItaly, iPeriodPakistan, 
-iPeriodOttomanConstantinople, iPeriodModernGermany, iPeriodTunisia, iPeriodMughals, iPeriodModernIndia) = range(iNumPeriods)
+iPeriodOttomanConstantinople, iPeriodModernGermany, iPeriodTunisia, iPeriodMughals, iPeriodModernIndia, iPeriodUkraine) = range(iNumPeriods)
 
 iNumImpacts = 5
 (iImpactMarginal, iImpactLimited, iImpactSignificant, iImpactCritical, iImpactPlayer) = range(iNumImpacts)

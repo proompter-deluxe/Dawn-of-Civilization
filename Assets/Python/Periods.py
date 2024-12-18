@@ -139,6 +139,10 @@ def onResurrection(iPlayer):
 		if game.isReligionFounded(iIslam):
 			setPeriod(iPhoenicia, iPeriodTunisia)
 
+	elif iCiv == iRus:
+		# Ukraine needs a modern leader too
+		setPeriod(iCiv, iPeriodUkraine)
+
 
 @handler("cityAcquired")
 def onCityAcquired(iOwner, iPlayer, city, bConquest):

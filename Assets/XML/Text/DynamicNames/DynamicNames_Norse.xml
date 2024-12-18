@@ -126,6 +126,18 @@
 		<Spanish>Kingdom of %s1</Spanish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_CIV_SWEDEN_REPUBLIC</Tag>
+		<English>Republic of %s1</English>
+		<French>
+			<Text>R&#233;publique de la %s1</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>Republic of %s1</German>
+		<Italian>Republic of %s1</Italian>
+		<Spanish>Republic of %s1</Spanish>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_CIV_SWEDEN_FASCIST</Tag>
 		<English>National Gathering of %s1</English>
 		<French>

@@ -41,4 +41,20 @@
 		<Italian>Kievan Rus</Italian>
 		<Spanish>Kievan Rus</Spanish>
 	</TEXT>
+		<TEXT>
+		<Tag>TXT_KEY_CIV_UKRAINE_ADJECTIVE</Tag>
+		<English>Ukrainian</English>
+		<French>Ukrainian</French>
+		<German>Ukrainian</German>
+		<Italian>Ukrainian</Italian>
+		<Spanish>Ukrainian</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_UKRAINE_SHORT_DESC</Tag>
+		<English>Ukraine</English>
+		<French>Ukraine</French>
+		<German>Ukraine</German>
+		<Italian>Ukraine</Italian>
+		<Spanish>Ukraine</Spanish>
+	</TEXT>
 </Civ4GameText>

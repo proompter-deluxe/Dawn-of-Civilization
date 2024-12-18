@@ -8,7 +8,7 @@ from DynamicCivs import getColumn
 
 ### CONSTANTS ###
 
-iNumLanguages = 49
+iNumLanguages = 50
 (iLangAmerican, iLangArabic, iLangBabylonian, iLangBurmese, iLangByzantine, 
 iLangCeltic, iLangChinese, iLangCongolese, iLangDutch, iLangEgyptian, 
 iLangEgyptianArabic, iLangEnglish, iLangEthiopian, iLangFrench, iLangGerman, 
@@ -18,7 +18,7 @@ iLangMayan, iLangMongolian, iLangNahuatl, iLangNorse, iLangNubian,
 iLangPersian, iLangPhoenician, iLangPolish, iLangPolynesian, iLangPortuguese, 
 iLangQuechua, iLangRussian, iLangSpanish, iLangSwedish, iLangThai, 
 iLangTibetan, iLangTurkish, iLangVietnamese, iLangFarsi, iLangRuthenian, 
-iLangArmenian, iLangDanish, iLangParthian, iLangVedic) = range(iNumLanguages)
+iLangArmenian, iLangDanish, iLangParthian, iLangVedic, iLangUkrainian) = range(iNumLanguages)
 
 dLanguages = CivDict({
 	iEgypt:	[iLangEgyptian],
@@ -151,6 +151,7 @@ dLanguageNames = {
 	iLangDanish: "Danish",
 	iLangParthian: "Parthian",
 	iLangVedic: "Vedic",
+	iLangUkrainian: "Ukrainian",
 }
 
 dTranslations = dict((iLanguage, FileDict("Translations/%s.csv" % dLanguageNames[iLanguage])) for iLanguage in range(iNumLanguages))
@@ -284,7 +285,8 @@ def getSpecialLanguages(identifier):
 		return [iLangArabic, iLangByzantine]
 	elif iCiv == iIndia and (data.civs[iCiv].iResurrections > 0 or year() > year(dBirth[iArabia])):
 		return [iLangIndian, iLangFarsi, iLangTurkish, iLangVedic]
-	
+	elif iCiv == iRus and player(iCiv).getPeriod() == iPeriodUkraine:
+		return [iLangUkrainian, iLangRussian, iLangRuthenian]
 	return None
 
 

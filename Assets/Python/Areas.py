@@ -86,7 +86,8 @@ iPeriodCarthage : 		(67, 48),	# Carthage
 iPeriodInsularCelts :	(54, 65),	# Dublin
 iPeriodVijayanagara :	(106, 37),	# Vijayanagara
 iPeriodAustria :		(72, 59),	# Vienna
-iPeriodMughals : 		tDelhi,  # Delhi
+iPeriodMughals :		tDelhi,  # Delhi
+iPeriodUkraine :		(81, 62), # Kyiv
 }
 
 # new capital locations if changed during the game
@@ -346,6 +347,7 @@ iPeriodModernGermany : 				((65, 61),	(69, 65)),
 iPeriodMughals :		            ((100, 45),	(107, 49)),
 iPeriodModernIndia :                ((103, 37),	(110, 46)),
 #iPeriodPakistan:                    something
+iPeriodUkraine :		 			((80, 58),	(84, 62)),
 }
 
 dPeriodCoreAreaExceptions = appenddict({
@@ -375,12 +377,14 @@ iTurks :	((94, 53),	(101, 58)),
 iMoors :	((56, 43),	(61, 47)),
 iInca :		((27, 21),	(32, 28)),
 iTimurids :	((99, 42),	(104, 50)), # Pakistan
-iOttomans : ((78, 51),	(87, 55)),
-iPhoenicia: ((63, 43),  (70, 48)), # Tunisia, Hafsids
-iPersia :   ((92, 43),	(95, 50)),
-iParthia :  ((92, 43),	(95, 50)),
-iGreece :   ((74, 49),	(80, 53)), # doesn't flip Crete on respawn
+iOttomans :	((78, 51),	(87, 55)),
+iPhoenicia:	((63, 43),  (70, 48)), # Tunisia, Hafsids
+iPersia :	((92, 43),	(95, 50)),
+iParthia :	((92, 43),	(95, 50)),
+iGreece :	((74, 48),	(79, 53)),
 iGhorids :	((100, 45),	(106, 48)), # North-West India, Northern Pakistan
+iRus :		((80, 58),	(84, 63)), # Ukraine
+
 })
 
 dRespawnAreaExceptions = CivDict({
@@ -390,4 +394,5 @@ iTimurids :	[(102, 42), (102, 43), (102, 44), (102, 45), (103, 42), (103, 43), (
 iPhoenicia: [(70, 48)],
 iPersia :	[(94, 48), (94, 49), (94, 50), (95, 46), (95, 47), (95, 48), (95, 49), (95, 50)],
 iParthia :	[(94, 48), (94, 49), (94, 50), (95, 46), (95, 47), (95, 48), (95, 49), (95, 50)],
+iGreece :	[(79, 51), (79, 52), (79, 53)],
 }, [])

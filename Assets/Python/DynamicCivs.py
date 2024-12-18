@@ -748,7 +748,12 @@ def onPeriodChange(iPlayer, iPeriod):
 		if iPeriod == iPeriodMughals:
 			setShort(iPlayer, text("TXT_KEY_CIV_MUGHALS_SHORT_DESC"))
 			setAdjective(iPlayer, text("TXT_KEY_CIV_MUGHALS_ADJECTIVE"))
-	
+
+	if iCiv == iRus:
+		if iPeriod == iPeriodUkraine:
+			setShort(iPlayer, text("TXT_KEY_CIV_UKRAINE_SHORT_DESC"))
+			setAdjective(iPlayer, text("TXT_KEY_CIV_UKRAINE_ADJECTIVE"))
+
 	if iPeriod == -1:
 		revertNameChange(iPlayer)
 		revertAdjectiveChange(iPlayer)
