@@ -937,7 +937,7 @@ dStartingUnits = CivDict({
 		iMissionary: 1,
 	},
 	iKhazars: {
-		iSettle: 3,
+		iSettle: 2,
 		iWork: 2,
 		iDefend: 4,
 		iCounter: 2,
@@ -1595,7 +1595,8 @@ dAdditionalUnits = CivDict({
 
 dSpecificAIStartingUnits = CivDict({
 	iByzantium: {
-		iTagmata: 4,
+		iTagmata: 6,
+		iLegion: 2,
 	},
 	iTimurids: {
 		iKeshik: 5,
@@ -1693,6 +1694,8 @@ def createSpecificUnits(iPlayer, tile):
 		makeUnits(iPlayer, iAxeman, tile, 5)
 	elif iCiv == iTimurids:
 		makeUnits(iPlayer, iKeshik, tile, 12)
+	elif iCiv == iRus:
+		makeUnits(iPlayer, iHuscarl, tile, 2)
 
 dSpecificAdditionalUnits = CivDict({
 	iEthiopia: {

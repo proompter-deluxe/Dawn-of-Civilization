@@ -19,7 +19,7 @@ MainOpt = BugCore.game.MainInterface
 
 
 lExpandedFlipCivs = [
-	iByzantium
+	#iByzantium
 ]
 
 lExpansionCivs = [
@@ -52,6 +52,7 @@ lIndependenceCivs = [
 	iSpain,
 	iGreece,
 	iGhorids,
+	iByzantium,
 ]
 
 lDynamicReligionCivs = [
@@ -332,10 +333,11 @@ def restorePreservedWonders(city):
 
 @handler("playerDestroyed")
 def preserveCivilizationAttributes(iPlayer):
-	data.civs[iPlayer].iGreatGeneralsCreated = player(iPlayer).getGreatGeneralsCreated()
-	data.civs[iPlayer].iGreatPeopleCreated = player(iPlayer).getGreatPeopleCreated()
-	data.civs[iPlayer].iGreatSpiesCreated = player(iPlayer).getGreatSpiesCreated()
-	data.civs[iPlayer].iNumUnitGoldenAges = player(iPlayer).getNumUnitGoldenAges()
+	iCiv = civ(iPlayer)
+	data.civs[iCiv].iGreatGeneralsCreated = player(iPlayer).getGreatGeneralsCreated()
+	data.civs[iCiv].iGreatPeopleCreated = player(iPlayer).getGreatPeopleCreated()
+	data.civs[iCiv].iGreatSpiesCreated = player(iPlayer).getGreatSpiesCreated()
+	data.civs[iCiv].iNumUnitGoldenAges = player(iPlayer).getNumUnitGoldenAges()
 
 
 def getBirth(iCiv):
@@ -465,7 +467,9 @@ class Birth(object):
 		if self.player.getNumCities() == 0:
 			setDesc(self.iPlayer, peoplesName(self.iPlayer))
 		
+	# does this only apply to independence civs?
 	def updateArea(self):
+		# unused for now, but could be handy later
 		if self.iCiv in lExpandedFlipCivs:
 			owners = self.area.cities().owners().major()
 			ownerCities = cities.all().area(self.location).where(lambda city: city.getOwner() in owners).where(lambda city: not plot(city).isPlayerCore(city.getOwner()))
@@ -476,6 +480,16 @@ class Birth(object):
 			self.area += additionalPlots
 			self.area = self.area.unique()
 		
+		# simplified version of the above that only applies to Rome
+		# also consider the "capital" to be Rome even if that isn't the case
+		if self.iCiv == iByzantium:
+			closerCities = cities.owner(iRome).where(lambda city: real_distance(city, self.location) <= real_distance(city, tRome))
+			additionalPlots = closerCities.plots().expand(2).where(lambda p: p.getOwner() == player(iRome).getID())
+
+			self.area += additionalPlots
+			self.area = self.area.unique()
+
+		# I'm not sure this does anything? It has a duplicate in flip()
 		if self.iCiv == iRussia:
 			if player(iRussia).isHuman() or player(iRus).isHuman():
 				self.area = self.area.without(plots.rectangle(tNovgorod))
@@ -745,9 +759,12 @@ class Birth(object):
 		if self.iCiv == iByzantium:
 			if not player(iRome).isExisting():
 				return False
-			elif player(iGreece).isExisting() and player(iGreece).isHuman() or stability(iGreece) == iStabilitySolid:
+			# Rome has to own some cities in the region
+			elif cities.regions(rGreece, rAnatolia).owner(iRome).count() == 0:
 				return False
-			elif player(iMacedon).isExisting() and player(iMacedon).isHuman() or stability(iMacedon) == iStabilitySolid:
+			elif player(iGreece).isExisting() and (player(iGreece).isHuman() or stability(iGreece) == iStabilitySolid):
+				return False
+			elif player(iMacedon).isExisting() and (player(iMacedon).isHuman() or stability(iMacedon) == iStabilitySolid):
 				return False
 			elif player(iRome).isHuman() and stability(iRome) == iStabilitySolid:
 				return False
