@@ -629,7 +629,7 @@ lCivilizations = [
 		iGold=600,
 		iAdvancedStartPoints=200,
 		iStateReligion=iProtestantism,
-		lCivics=[iRepublic, iBureaucracy, iManorialism, iMerchantTrade, iClergy],
+		lCivics=[iRepublic, iBureaucracy, iManorialism, iRegulatedTrade, iClergy, iColonialism],
 		techs=techs.column(10)
 	),
 	Civilization(
