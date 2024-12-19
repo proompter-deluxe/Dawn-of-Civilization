@@ -65,7 +65,7 @@ tConquestMacedonPersia = (7, iMacedon, iPersia, tGreecePersiaTL, tGreecePersiaBR
 
 tConquestRomeCarthageInSpain = (22, iRome, iPhoenicia, tRomeSpainTL, tRomeSpainBR, 3, iRomeCarthageYear, 10)
 tConquestRomeCarthage = (0, iRome, iPhoenicia, tRomeCarthageTL, tRomeCarthageBR, 3, iRomeCarthageYear + 20, 30)
-tConquestRomeGreece = (1, iRome, iGreece, tRomeGreeceTL, tRomeGreeceBR, 2, iRomeGreeceYear, 10)
+tConquestRomeGreece = (1, iRome, iGreece, tRomeGreeceTL, tRomeGreeceBR, 3, iRomeGreeceYear, 10)
 tConquestRomeAnatolia = (2, iRome, iMacedon, tRomeAnatoliaTL, tRomeAnatoliaBR, 2, iRomeAnatoliaYear, 15)
 tConquestRomeLevant = (28, iRome, iMacedon, tLevantTL, tLevantBR, 2, iRomeLevantYear, 10)
 tConquestRomeCelts = (3, iRome, iCelts, tRomeCeltiaTL, tRomeCeltiaBR, 2, iRomeCeltiaYear, 10)
