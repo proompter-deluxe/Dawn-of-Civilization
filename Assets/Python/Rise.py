@@ -76,12 +76,14 @@ dClearedForBirth = {
 	iMexico: iAztecs,
 	iGreece: iMinoans,
 	iIndia: iHarappa,
+	iAssyria: iBabylonia,
 }
 
 lAlwaysClear = [
 	iToltecs,
 	iMinoans,
 	iHarappa,
+	iBabylonia,
 ]
 
 lBirthWars = [
@@ -942,6 +944,10 @@ class Birth(object):
 			return
 		
 		if player(iClearedCiv).isHuman():
+			return
+
+		# only collapse Babylonia to prepare Assyrian Empire if player is not around
+		if self.iCiv == iBabylonia and not autoplay():
 			return
 		
 		if turn() >= year(dFall[iClearedCiv]).deviate(5, data.iSeed):

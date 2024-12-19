@@ -474,6 +474,7 @@ minor_cities = [
 	MinorCity(-1200, iBarbarian, (72, 55), "Daorson", iPopulation=2, iCiv=iMinoans, units={iDefend: 2, iAttack: 1}, adjective="TXT_KEY_ADJECTIVE_ILLYRIAN"),
 	MinorCity(-1100, iBarbarian, (119, 55), "Qiang", iPopulation=1, iCiv=iChina, units={iDefend: 1, iAttack: 1}, adjective="TXT_KEY_ADJECTIVE_QIANG"),
 	MinorCity(-1200, iIndependent2, (89, 53), "Tushpa", iPopulation=2, iCiv=iHittites, units={iDefend: 3, iCounter: 2}, adjective="TXT_KEY_ADJECTIVE_ARMENIAN"),
+	MinorCity(-1000, iBarbarian, (85, 50), "Kinalua", iPopulation=1, iCiv=iHittites, units={iDefend: 1, iCounter: 1}, iCulture=15, adjective="TXT_KEY_ADJECTIVE_NEO_HITTITE"),
 	MinorCity(-910, iIndependent2, (80, 52), "Sfard", iPopulation=2, iCiv=iHittites, units={iDefend: 1, iCounter: 1}, condition=lambda: not player(iHittites).isHuman(), adjective="TXT_KEY_ADJECTIVE_LYDIAN"),
 	MinorCity(-810, iIndependent2, tCarthage, "Qart-Hadasht", iPopulation=3, iCiv=iPhoenicia, units={iDefend: 2, iCounter: 2, iWork: 2}, condition=lambda: not player(iPhoenicia).isExisting(), adjective="TXT_KEY_CIV_PHOENICIA_ADJECTIVE"),
 	MinorCity(-800, iIndependent, (100, 55), u"Smárkath", iPopulation=1, iCiv=iAssyria, units={iDefend: 1}, adjective="TXT_KEY_ADJECTIVE_SOGDIAN"),

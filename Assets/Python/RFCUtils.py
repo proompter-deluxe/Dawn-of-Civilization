@@ -482,7 +482,7 @@ def getRoleLocation(iRole, location):
 	return location
 
 # used: RFCUtils
-def getRoleAI(iRole):
+def getRoleAI(iRole, iPlayer):
 	if iRole == iDefend:
 		return UnitAITypes.UNITAI_CITY_DEFENSE
 	elif iRole in [iAttack, iShock]:
@@ -490,7 +490,12 @@ def getRoleAI(iRole):
 	elif iRole in [iCityAttack, iShockCity, iCitySiege]:
 		return UnitAITypes.UNITAI_ATTACK_CITY
 	elif iRole == iCounter:
-		return UnitAITypes.UNITAI_COUNTER
+		iCiv = civ(iPlayer)
+		# specific civs are offensive with their spear units
+		if iCiv in [iAssyria, iGreece, iMacedon, iPersia, iPhoenicia, iGhorids]:
+			return UnitAITypes.UNITAI_ATTACK_CITY
+		else:
+			return UnitAITypes.UNITAI_COUNTER
 	elif iRole == iWorkerSea:
 		return UnitAITypes.UNITAI_WORKER_SEA
 	elif iRole == iSettle:
@@ -574,7 +579,7 @@ def getUnitForRole(iPlayer, iRole, bUnique=True):
 		possibleUnits = possibleUnits.map(base_unit)
 	
 	iBestUnit = possibleUnits.maximum(roleMetric)
-	return (iBestUnit, getRoleAI(iRole))
+	return (iBestUnit, getRoleAI(iRole, iPlayer))
 
 # used: RFCUtils, Rise
 def getUnitsForRole(iPlayer, iRole, bUnique=True):

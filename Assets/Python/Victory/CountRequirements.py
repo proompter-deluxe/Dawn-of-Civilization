@@ -114,7 +114,8 @@ class BuildingCount(ThresholdRequirement):
 	DESC_KEY = "TXT_KEY_VICTORY_DESC_COUNT"
 	
 	SUBJECT_DESC_KEYS = {
-		WORLD: "TXT_KEY_VICTORY_DESC_MAKE_SURE_IN_THE_WORLD"
+		WORLD: "TXT_KEY_VICTORY_DESC_MAKE_SURE_IN_THE_WORLD",
+		VASSALS: "TXT_KEY_VICTORY_DESC_CONTROL_DIRECTLY_OR_THROUGH_VASSALS"
 	}
 	
 	def __init__(self, iBuilding, *args, **options):
@@ -123,7 +124,8 @@ class BuildingCount(ThresholdRequirement):
 		self.iBuilding = iBuilding
 		
 		self.handle("cityAcquired", self.check)
-		self.handle("buildingBuilt", self.check_building_built)
+		self.handle_any("buildingBuilt", self.check_building_built)
+		self.handle_any("vassalState", self.check)
 	
 	def check_building_built(self, goal, city, iBuilding):
 		if base_building(iBuilding) == base_building(self.iBuilding):

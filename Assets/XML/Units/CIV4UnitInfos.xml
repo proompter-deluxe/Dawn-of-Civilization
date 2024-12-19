@@ -4604,6 +4604,14 @@
 			</UnitClassUpgrades>
 			<UnitAIs>
 				<UnitAI>
+					<UnitAIType>UNITAI_ATTACK_CITY</UnitAIType>
+					<bUnitAI>1</bUnitAI>
+				</UnitAI>
+				<UnitAI>
+					<UnitAIType>UNITAI_ATTACK</UnitAIType>
+					<bUnitAI>1</bUnitAI>
+				</UnitAI>
+				<UnitAI>
 					<UnitAIType>UNITAI_COUNTER</UnitAIType>
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
@@ -4718,6 +4726,14 @@
 			</UnitClassUpgrades>
 			<UnitAIs>
 				<UnitAI>
+					<UnitAIType>UNITAI_ATTACK_CITY</UnitAIType>
+					<bUnitAI>1</bUnitAI>
+				</UnitAI>
+				<UnitAI>
+					<UnitAIType>UNITAI_ATTACK</UnitAIType>
+					<bUnitAI>1</bUnitAI>
+				</UnitAI>
+				<UnitAI>
 					<UnitAIType>UNITAI_COUNTER</UnitAIType>
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
@@ -4821,6 +4837,10 @@
 			<UnitAIs>
 				<UnitAI>
 					<UnitAIType>UNITAI_ATTACK</UnitAIType>
+					<bUnitAI>1</bUnitAI>
+				</UnitAI>
+				<UnitAI>
+					<UnitAIType>UNITAI_ATTACK_CITY</UnitAIType>
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 				<UnitAI>
@@ -4933,6 +4953,10 @@
 				</UnitClassUpgrade>
 			</UnitClassUpgrades>
 			<UnitAIs>
+				<UnitAI>
+					<UnitAIType>UNITAI_ATTACK</UnitAIType>
+					<bUnitAI>1</bUnitAI>
+				</UnitAI>
 				<UnitAI>
 					<UnitAIType>UNITAI_COUNTER</UnitAIType>
 					<bUnitAI>1</bUnitAI>

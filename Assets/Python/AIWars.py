@@ -215,7 +215,10 @@ tTimuridsPunjabBR = (104, 51)
 tConquestTimuridsPunjab = (41, iTimurids, iGhorids, tTimuridsPunjabTL, tTimuridsPunjabBR, 3, iTimuridsPunjabYear, 5)
 
 
-tConquestMacedonPunjab = (7, iMacedon, iIndia, tTimuridsPunjabTL, tTimuridsPunjabBR, 1, iAlexanderYear, 20)
+tConquestMacedonPunjab = (42, iMacedon, iIndia, tTimuridsPunjabTL, tTimuridsPunjabBR, 1, iAlexanderYear, 20)
+
+iAssyriaEgyptConquestYear = -680
+tConquestAssyriaEgypt = (43, iAssyria, iEgypt, tEgyptTL, tEgyptBR, 2, iAssyriaEgyptConquestYear, 5)
 
 lConquests = [
 	tConquestRomeCarthageInSpain,
@@ -259,6 +262,7 @@ lConquests = [
 	#tConquestMongolsKiev, # shouldn't need this since the Mongols will conquer the Khazars and then attack the Rus
 	tConquestTimuridsPunjab,
 	tConquestMacedonPunjab,
+	tConquestAssyriaEgypt,
 ]
 
 dConquestChecker = {
@@ -281,6 +285,7 @@ dConquestChecker = {
 	tConquestRomeCelts[0]: lambda tConquest: checkConquest(tConquest, tDummyConquestRomeHoldingRome),
 	tConquestMongolsBaghdad[0]: lambda tConquest: checkConquest(tConquest, tConquestMongolsPersia),
 	tConquestMacedonPunjab[0]: lambda tConquest: checkConquest(tConquest, tConquestMacedonPersia),
+	tConquestAssyriaEgypt: lambda tConquest: checkConquest(tConquest, tConquestAssyriaLevant),
 }
 
 def checkByzantiumConquestOfCarthage(tConquest):
