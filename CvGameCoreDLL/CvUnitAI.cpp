@@ -2705,8 +2705,8 @@ void CvUnitAI::AI_pillageMove()
 
 	if (isBarbarian() || getCivilizationType() == NATIVE)
 	{
-		AI_setUnitAIType(UNITAI_ATTACK_CITY);
-		AI_attackCityMove();
+		AI_setUnitAIType(UNITAI_ATTACK);
+		AI_barbAttackMove();
 		return;
 	}
 
