@@ -641,7 +641,7 @@ barbarians = [
 	Barbarians(1000, 1200, {iHorseArcher: 2}, ((101, 41), (105, 46)), 8, MINORS, adjective="TXT_KEY_ADJECTIVE_RAJPUT"),
 	Barbarians(1000, 1280, {iAxeman: 2}, ((74, 64), (80, 69)), 10, MINORS, adjective="TXT_KEY_ADJECTIVE_BALTIC"),
 	Barbarians(1050, 1400, {iAxeman: 1}, ((75, 17), (80, 23)), 10, MINORS, iOwner=iNative, adjective="TXT_KEY_ADJECTIVE_SHONA"),
-	Barbarians(1050, 1180, {iCamelArcher: 3, iHeavySwordsman: 3}, ((56, 39), (58, 49)), 2, CLOSE_INVADERS, target_area=((56, 44), (58, 49)), adjective="TXT_KEY_ADJECTIVE_ALMORAVID", promotions=(iDesertAdaptation,)),
+	Barbarians(1050, 1180, {iCamelArcher: 3, iHeavySwordsman: 3, iTrebuchet: 1}, ((56, 39), (58, 49)), 2, CLOSE_INVADERS, target_area=((56, 44), (58, 49)), adjective="TXT_KEY_ADJECTIVE_ALMORAVID", promotions=(iDesertAdaptation,)),
 	Barbarians(1100, 1350, {iHorseArcher: 2}, ((115, 38), (120, 45)), 12, INVADERS, adjective="TXT_KEY_ADJECTIVE_SHAN"),
 	Barbarians(1100, 1250, {iMamlukCavalry: 1, iHorseArcher: 2}, ((82, 60), (105, 63)), 9, NOMADS, target_area=((73, 49), (84, 66)), adjective="TXT_KEY_ADJECTIVE_CUMAN"),
 	Barbarians(1150, 1400, {iAucac: 1}, ((25, 24), (29, 29)), 8, MINORS, adjective="TXT_KEY_ADJECTIVE_CHIMU"),
