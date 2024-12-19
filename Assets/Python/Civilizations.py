@@ -1775,7 +1775,11 @@ dTechPreferences = {
 		iMedicine: 20,
 		iGeneralship: 15,
 		iStatecraft: 15,
+		iLabourUnions: 20,
 		
+		iMachineTools: -20,
+		iReplaceableParts: -20,
+		iBallistics: -30,
 		iCivilLiberties: -100,
 		iHumanities: -100,
 		iAcademia: -100,
@@ -1803,7 +1807,12 @@ dTechPreferences = {
 		iConstruction: 20,
 		iCivilService: 15,
 		iStatecraft: 15,
-		
+		iLabourUnions: 15,
+		iNationalism: 15,
+
+		iMachineTools: -20,
+		iReplaceableParts: -20,
+		iBallistics: -30,
 		iCivilLiberties: -100,
 		iHumanities: -100,
 		iAcademia: -100,
@@ -1820,6 +1829,14 @@ dTechPreferences = {
 		iSailing: -20,
 		iCartography: -40,
 		iEconomics: -20,
+	},
+	iTurks: {
+		iMachineTools: -20,
+		iReplaceableParts: -20,
+		iBallistics: -30,
+		iExploration: -40,
+		iOptics: -40,
+		iGeography: -40,
 	},
 	iHittites: {
 		iBloomery: 50,

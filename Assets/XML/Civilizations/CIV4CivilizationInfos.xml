@@ -5460,7 +5460,7 @@
 			<ArtStyleType>ARTSTYLE_MIDDLE_EAST</ArtStyleType>
 			<UnitArtStyleType>UNIT_ARTSTYLE_AFRICAN</UnitArtStyleType>
 			<PaganReligion>PAGAN_RELIGION_PESEDJET</PaganReligion>
-			<Impact>IMPACT_LIMITED</Impact>
+			<Impact>IMPACT_SIGNIFICANT</Impact>
 			<Identifier>NUB</Identifier>
 			<StartingYear>-1650</StartingYear>
 			<LoadingTimes>
@@ -7036,7 +7036,7 @@
 			<ArtStyleType>ARTSTYLE_ASIAN</ArtStyleType>
 			<UnitArtStyleType>UNIT_ARTSTYLE_ASIAN</UnitArtStyleType>
 			<PaganReligion>PAGAN_RELIGION_BON</PaganReligion>
-			<Impact>IMPACT_LIMITED</Impact>
+			<Impact>IMPACT_SIGNIFICANT</Impact>
 			<Identifier>TIB</Identifier>
 			<StartingYear>630</StartingYear>
 			<LoadingTimes>
