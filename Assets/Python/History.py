@@ -376,6 +376,15 @@ def mongolConquerors(iTargetTeam):
 
 
 ### TECH ACQUIRED ###
+@handler("techAcquired")
+def upgradeRomanLegionsToComitatenses(iTech, iTeam, iPlayer):
+	if iTech == iPolitics and civ(iPlayer) == iRome and not player(iPlayer).isHuman():
+		for unit in units.owner(iPlayer).where(lambda unit: base_unit(unit) == iSwordsman):
+			x = unit.getX()
+			y = unit.getY()
+			# replace with a 0 XP version, representing institutional knowledge loss
+			unit.kill(False, -1)
+			makeUnits(iRome, iComitatus, (x, y), 1, UnitAITypes.UNITAI_RESERVE)
 
 @handler("techAcquired")
 def recordExplorationTurn(iTech, iTeam, iPlayer):

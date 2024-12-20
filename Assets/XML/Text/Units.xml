@@ -3037,6 +3037,19 @@
 		<Italian>The [COLOR_UNIT_TEXT]Ballista[COLOR_REVERT], the Roman replacement for the [COLOR_UNIT_TEXT]Catapult[COLOR_REVERT], has two additional strength points and doesn't have a bonus when attacking cities.</Italian>
 		<Spanish>The [COLOR_UNIT_TEXT]Ballista[COLOR_REVERT], the Roman replacement for the [COLOR_UNIT_TEXT]Catapult[COLOR_REVERT], has two additional strength points and doesn't have a bonus when attacking cities.</Spanish>
 	</TEXT>
+		<TEXT>
+		<Tag>TXT_KEY_UNIT_ROMAN_COMITATUS</Tag>
+		<English>Comitatus</English>
+		<French>
+			<Text>Comitatus</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>Comitatus</German>
+		<Italian>Comitatus</Italian>
+		<Spanish>Comitatus</Spanish>
+	</TEXT>
+	
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_JAPANESE_ZERO</Tag>
 		<English>Zero</English>

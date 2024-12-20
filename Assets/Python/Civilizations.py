@@ -1308,6 +1308,9 @@ dExtraAIUnits = CivDict({
 		iCounter: 2,
 		iDefend: 2,
 	},
+	iByzantium: {
+		iAttack: 2,
+	},
 	iMalays: {
 		iDefend: 2,
 	},
@@ -1596,7 +1599,6 @@ dAdditionalUnits = CivDict({
 dSpecificAIStartingUnits = CivDict({
 	iByzantium: {
 		iTagmata: 6,
-		iLegion: 2,
 	},
 	iTimurids: {
 		iKeshik: 5,
@@ -1646,7 +1648,6 @@ dAlwaysTrain = CivDict({
 	iMacedon: [iPhalanx],
 	iPhoenicia: [iNumidianCavalry],
 	iDravidia: [iWarElephant],
-	iByzantium: [iLegion],
 	iArabia: [iMobileGuard, iGhazi],
 	iVietnam: [iRattanArcher],
 	iAztecs: [iJaguar],
@@ -1924,12 +1925,15 @@ dTechPreferences = {
 		iBloomery: 20,
 	},
 	iRome : {	
-		iCurrency: 20,
+		iCurrency: 30,
 		iLaw: 20,
-		iPolitics: 20,
-		iConstruction: 15,
+		iPolitics: 40,
 		iEngineering: 15,
-		
+		iArchitecture: 15,
+		iAlchemy: 15,
+
+		iFeudalism: -10,
+		iSteel: -10,
 		iTheology: -30,
 	},
 	iMaya : {
@@ -1977,6 +1981,9 @@ dTechPreferences = {
 		iExploration: -30,
 	},
 	iByzantium : {
+		iNobility: 10,
+		iAlchemy: 10,
+
 		iFinance: -50,
 		iOptics: -20,
 		iFirearms: -20,

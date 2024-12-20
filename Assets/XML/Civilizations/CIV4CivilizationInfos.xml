@@ -1026,6 +1026,10 @@
 					<UnitType>UNIT_BYZANTINE_CATAPHRACT</UnitType>
 				</Unit>
 				<Unit>
+					<UnitClassType>UNITCLASS_HEAVY_SWORDSMAN</UnitClassType>
+					<UnitType>UNIT_ROMAN_COMITATUS</UnitType>
+				</Unit>
+				<Unit>
 					<UnitClassType>UNITCLASS_HEAVY_GALLEY</UnitClassType>
 					<UnitType>UNIT_BYZANTINE_DROMON</UnitType>
 				</Unit>
@@ -6323,6 +6327,10 @@
 				<Unit>
 					<UnitClassType>UNITCLASS_SWORDSMAN</UnitClassType>
 					<UnitType>UNIT_ROMAN_LEGION</UnitType>
+				</Unit>
+				<Unit>
+					<UnitClassType>UNITCLASS_HEAVY_SWORDSMAN</UnitClassType>
+					<UnitType>UNIT_ROMAN_COMITATUS</UnitType>
 				</Unit>
 				<Unit>
 					<UnitClassType>UNITCLASS_CATAPULT</UnitClassType>
