@@ -2344,6 +2344,9 @@
 			<Description>TXT_KEY_IMPROVEMENT_VILLAGE</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_VILLAGE_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_VILLAGE</ArtDefineTag>
+			<PrereqNatureYields>
+				<iYield>1</iYield>
+			</PrereqNatureYields>
 			<YieldChanges>
 				<iYieldChange>0</iYieldChange>
 				<iYieldChange>0</iYieldChange>
@@ -2351,7 +2354,7 @@
 			</YieldChanges>
 			<bActsAsCity>0</bActsAsCity>
 			<bHillsMakesValid>0</bHillsMakesValid>
-			<bFreshWaterMakesValid>0</bFreshWaterMakesValid>
+			<bFreshWaterMakesValid>1</bFreshWaterMakesValid>
 			<bRiverSideMakesValid>0</bRiverSideMakesValid>
 			<bNoFreshWater>0</bNoFreshWater>
 			<bRequiresFlatlands>0</bRequiresFlatlands>
@@ -2375,8 +2378,26 @@
 			<iHealthPercent>0</iHealthPercent>
 			<iPillageGold>20</iPillageGold>
 			<bOutsideBorders>0</bOutsideBorders>
-			<TerrainMakesValids/>
-			<FeatureMakesValids/>
+			<TerrainMakesValids>
+				<TerrainMakesValid>
+					<TerrainType>TERRAIN_GRASS</TerrainType>
+					<bMakesValid>1</bMakesValid>
+				</TerrainMakesValid>
+				<TerrainMakesValid>
+					<TerrainType>TERRAIN_PLAINS</TerrainType>
+					<bMakesValid>1</bMakesValid>
+				</TerrainMakesValid>
+				<TerrainMakesValid>
+					<TerrainType>TERRAIN_SAVANNA</TerrainType>
+					<bMakesValid>1</bMakesValid>
+				</TerrainMakesValid>
+			</TerrainMakesValids>
+			<FeatureMakesValids>
+				<FeatureMakesValid>
+					<FeatureType>FEATURE_OASIS</FeatureType>
+					<bMakesValid>1</bMakesValid>
+				</FeatureMakesValid>
+			</FeatureMakesValids>
 			<ImprovementPillage>IMPROVEMENT_HAMLET</ImprovementPillage>
 			<ImprovementUpgrade>IMPROVEMENT_TOWN</ImprovementUpgrade>
 			<TechYieldChanges>

@@ -632,7 +632,7 @@ iJapan : [(1800, 2020)],
 iNorse : [(1520, 2020)],
 iTurks : [(870, 980), (1505, 1700), (1980, 2020)],
 iArabia : [(1900, 2020)],
-iBulgaria: [(1200, 1400), (1800,2020)],
+iBulgaria: [(1200, 1400), (1848,2020)],
 iKhazars: [(1300, 1550)],
 iMoors : [(1220, 1750), (1940, 2020)], # Marinids / Ziyanids
 iJava : [(720, 1650), (1940, 2020)],
@@ -989,8 +989,8 @@ iPaganVictory = iNumReligions
 iSecularVictory = iNumReligions + 1
 
 # corporations
-iNumCorporations = 9
-(iSilkRoute, iTradingCompany, iCerealIndustry, iFishingIndustry, iTextileIndustry, iSteelIndustry, iOilIndustry, iLuxuryIndustry, iComputerIndustry) = range(iNumCorporations)
+iNumCorporations = 11
+(iSilkRoute, iTradingCompany, iCerealIndustry, iFishingIndustry, iTextileIndustry, iSteelIndustry, iOilIndustry, iLuxuryIndustry, iComputerIndustry, iHanseaticLeague, iKnightsTemplar) = range(iNumCorporations)
 
 # initialise tech variables to unit indices from XML
 

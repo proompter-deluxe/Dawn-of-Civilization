@@ -81,6 +81,9 @@ def norseUP(winningUnit, losingUnit):
 def GreekUP(city, unit):
 	if civ(city) == iGreece and unit.isFound():	
 		makeUnit(iGreece, iSettler, city.plot())
+	# give AI Russia this benefit as well
+	elif civ(city) == iRussia and not player(iRussia).isHuman() and unit.isFound():
+		makeUnit(iRussia, iSettler, city.plot())
 
 # Mughal UP: receives 50% of building cost as culture when building is completed
 @handler("buildingBuilt")

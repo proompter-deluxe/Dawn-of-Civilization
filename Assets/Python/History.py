@@ -347,7 +347,7 @@ def mongolConquerors(iTargetTeam):
 
 			teamTarget = team(iTargetTeam)
 			
-			lMongolRegions = [rLevant, rMesopotamia, rAnatolia, rCaucasus, rPersia, rKhorasan, rPonticSteppe, rRuthenia]
+			lMongolRegions = [rLevant, rMesopotamia, rAnatolia, rCaucasus, rPersia, rKhorasan, rPonticSteppe, rRuthenia, rSindh]
 			
 			mongol_cities = cities.owner(iMongols)
 			target_cities = cities.regions(*lMongolRegions).owner(iTargetCiv)

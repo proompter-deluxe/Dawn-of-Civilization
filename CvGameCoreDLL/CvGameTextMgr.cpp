@@ -7749,7 +7749,12 @@ void CvGameTextMgr::parseCivicInfo(CvWStringBuffer &szHelpText, CivicTypes eCivi
 					bFormatByYield = false;
 				}
 
-				szYields.append(CvWString::format(L"+%d%c", iSpecialistTypeExtraYield, GC.getYieldInfo((YieldTypes)iJ).getChar()));
+				if (iSpecialistTypeExtraYield > 0)
+				{
+					szYields.append(L"+");
+				}
+
+				szYields.append(CvWString::format(L"%d%c", iSpecialistTypeExtraYield, GC.getYieldInfo((YieldTypes)iJ).getChar()));
 				bFound = true;
 
 				if (bFormatByYield)
@@ -7798,7 +7803,12 @@ void CvGameTextMgr::parseCivicInfo(CvWStringBuffer &szHelpText, CivicTypes eCivi
 					}
 					else
 					{
-						szYield.Format(L"+%d%c", iSpecialistTypeExtraYield, GC.getYieldInfo((YieldTypes)iI).getChar());
+						if (iSpecialistTypeExtraYield > 0)
+						{
+							szYield.append(L"+");
+						}
+
+						szYield.Format(L"%d%c", iSpecialistTypeExtraYield, GC.getYieldInfo((YieldTypes)iI).getChar());
 					}
 
 					szSpecialists.append(CvWString::format(L"<link=literal>%s</link>", GC.getSpecialistInfo((SpecialistTypes)iJ).getDescription()));

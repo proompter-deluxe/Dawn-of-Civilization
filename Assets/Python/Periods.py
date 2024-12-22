@@ -269,6 +269,11 @@ def onTechAcquired(iTech, iTeam, iPlayer):
 		if iEra == iIndustrial:
 			setPeriod(iIndia, iPeriodModernIndia)
 
+	# if not already the case, China gets settler map values for the peripheral regions (west & north)
+	elif iCiv == iChina:
+		if player(iCiv).getPeriod() == -1 and year() >= year(dBirth[iIran]):
+			setPeriod(iChina, iPeriodMing)
+
 def getNorsePeriod(iPlayer):
 	capital = player(iPlayer).getCapitalCity()
 	

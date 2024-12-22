@@ -118,6 +118,14 @@
 		<Spanish>Build a [LINK=IMPROVEMENT_HAMLET]Hamlet[\LINK]</Spanish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_BUILD_VILLAGE</Tag>
+		<English>Build a [LINK=IMPROVEMENT_VILLAGE]Village[\LINK]</English>
+		<French>construire un [LINK=IMPROVEMENT_VILLAGE]village[\LINK]</French>
+		<German>[LINK=IMPROVEMENT_VILLAGE]Dorf[\LINK] errichten</German>
+		<Italian>Costruire una [LINK=IMPROVEMENT_VILLAGE]villaggio[\LINK]</Italian>
+		<Spanish>Construir una [LINK=IMPROVEMENT_VILLAGE]aldea[\LINK]</Spanish>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BUILD_HARVEST_BOATS</Tag>
 		<English>Create [LINK=IMPROVEMENT_HARVEST_BOATS]Harvest Boats[\LINK]</English>
 		<French>Create [LINK=IMPROVEMENT_HARVEST_BOATS]Harvest Boats[\LINK]</French>

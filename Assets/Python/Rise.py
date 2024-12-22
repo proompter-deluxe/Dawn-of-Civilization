@@ -794,8 +794,9 @@ class Birth(object):
 
 		# Moors & Fatimids cannot spawn if Arabia has never conquered one of the cities of the Maghreb
 		# OR Carthage, Romans and Byzantines don't hold any cities in the Maghreb
+		# if autoplay, spawn them anyway, as not having them around does more damage to the timeline
 		if self.iCiv == iMoors or self.iCiv == iMamluks:
-			if cities.regions(rMaghreb).none(lambda city: iArabia in [city.getCivilizationType(), city.getPreviousCiv()]):
+			if not autoplay() and cities.regions(rMaghreb).none(lambda city: iArabia in [city.getCivilizationType(), city.getPreviousCiv()]):
 				for iBlockerCiv in [iPhoenicia, iRome, iByzantium]:
 					if len(cities.region(rMaghreb).owner(iBlockerCiv)) != 0:
 						return False

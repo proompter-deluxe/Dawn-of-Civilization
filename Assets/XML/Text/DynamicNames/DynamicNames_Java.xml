@@ -41,4 +41,20 @@
 		<Italian>%s2 Kingdom</Italian>
 		<Spanish>%s2 Kingdom</Spanish>
 	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_INDONESIA_MATARAM</Tag>
+		<English>Mataram</English>
+		<French>Mataram</French>
+		<German>Mataram</German>
+		<Italian>Mataram</Italian>
+		<Spanish>Mataram</Spanish>
+	</TEXT>
+		<TEXT>
+		<Tag>TXT_KEY_CIV_INDONESIA_MAJAPAHIT</Tag>
+		<English>Majapahit</English>
+		<French>Majapahit</French>
+		<German>Majapahit</German>
+		<Italian>Majapahit</Italian>
+		<Spanish>Majapahit</Spanish>
+	</TEXT>	
 </Civ4GameText>

@@ -351,6 +351,7 @@ lCivilizations = [
 		iChinaS,
 		iGold=150,
 		iAdvancedStartPoints=60,
+		iStateReligion=iTaoism,
 		lCivics=[iMonarchy, iCasteSystem, iRedistribution, iSyncretism, iHegemony],
 		lEnemies=[iChina, iIndependent, iIndependent2],
 		techs=techs.column(5).including(iArtisanry, iScholarship, iAlchemy)
@@ -373,13 +374,13 @@ lCivilizations = [
 		iSpain,
 		iGold=100,
 		lCivics=[iMonarchy, iManorialism, iMerchantTrade, iClergy, iHegemony],
-		techs=techs.column(5).including(iNobility, iPolitics).without(iMedicine, iPhilosophy)
+		techs=techs.column(6).without(iScholarship, iArchitecture)
 	),
 	Civilization(
 		iFrance,
 		iGold=100,
 		lCivics=[iMonarchy, iManorialism, iMerchantTrade, iClergy, iHegemony],
-		techs=techs.column(5).including(iNobility, iPolitics).without(iMedicine, iPhilosophy)
+		techs=techs.column(6).without(iScholarship, iArchitecture)
 	),
 	Civilization(
 		iMalays,
@@ -432,7 +433,7 @@ lCivilizations = [
 		iGold=100,
 		iStateReligion=iJudaism,
 		lCivics=[iElective, iSlavery, iMerchantTrade],
-		techs=techs.column(5).including(iNobility).without(iEngineering, iAesthetics, iLaw, iPhilosophy, iShipbuilding, iNavigation)
+		techs=techs.column(5).including(iNobility, iSteel).without(iEngineering, iAesthetics, iLaw, iPhilosophy, iShipbuilding, iNavigation)
 	),
 	Civilization(
 		iBulgaria,
@@ -440,7 +441,7 @@ lCivilizations = [
 		iAdvancedStartPoints=25,
 		lEnemies=[iByzantium],
 		lCivics=[iDespotism, iSlavery, iMerchantTrade, iHegemony],
-		techs=techs.column(5).including(iNobility).without(iWriting, iLiterature, iPriesthood, iEngineering, iAesthetics, iLaw, iPhilosophy, iShipbuilding, iNavigation)
+		techs=techs.column(5).including(iNobility, iSteel).without(iWriting, iLiterature, iPriesthood, iEngineering, iAesthetics, iLaw, iPhilosophy, iShipbuilding, iNavigation)
 	),
 	Civilization(
 		iMoors,
@@ -480,7 +481,7 @@ lCivilizations = [
 		iAdvancedStartPoints=80,
 		iStateReligion=iBuddhism,
 		lCivics=[iMonarchy, iVassalage, iCasteSystem, iRedistribution, iMonasticism, iHegemony],
-		techs=techs.column(6).including(iFeudalism, iTheology)
+		techs=techs.column(6).including(iTheology)
 	),
 	Civilization(
 		iRus,
@@ -511,7 +512,7 @@ lCivilizations = [
 		iAdvancedStartPoints=50,
 		iStateReligion=iShia,
 		lCivics=[iElective, iCitizenship, iSlavery, iMerchantTrade, iClergy, iThalassocracy],
-		techs=techs.column(6).including(iGuilds, iAlchemy)
+		techs=techs.column(6).including(iAlchemy)
 	),
 	Civilization(
 		iGhorids,
@@ -534,7 +535,7 @@ lCivilizations = [
 		iAdvancedStartPoints=60,
 		iStateReligion=iCatholicism,
 		lCivics=[iMonarchy, iVassalage, iManorialism, iMerchantTrade, iClergy, iThalassocracy],
-		techs=techs.column(7).including(iPatronage)
+		techs=techs.column(7).including(iCommune, iPatronage)
 	),
 	Civilization(
 		iInca,
@@ -604,10 +605,10 @@ lCivilizations = [
 	),
 	Civilization(
 		iTimurids,
-		iGold=300,
+		iGold=800,
 		iStateReligion=iIslam,
 		lCivics=[iDespotism, iVassalage, iSlavery, iRegulatedTrade, iSyncretism, iHegemony],
-		lEnemies=[iPersia, iGhorids, iArmenia, iMongols, iParthia, iTurks],
+		lEnemies=[iPersia, iGhorids, iArmenia, iMongols, iParthia, iTurks, iOttomans, iKhazars],
 		techs=techs.column(7).including(iCommune, iCropRotation, iPaper, iDoctrine, iGunpowder)
 	),
 	Civilization(
@@ -622,7 +623,7 @@ lCivilizations = [
 		iStateReligion=iShia,
 		lEnemies=[iTimurids],
 		lCivics=[iMonarchy, iTheocracy, iManorialism, iMerchantTrade, iFanaticism, iHegemony],
-		techs=techs.column(9).including(iHeritage, iFirearms)
+		techs=techs.column(9).including(iFirearms).without(iCartography, iFinance, iHumanities, iPrinting, iJudiciary)
 	),
 	Civilization(
 		iNetherlands,
@@ -878,13 +879,14 @@ dStartingUnits = CivDict({
 		iEscort: 2,
 	},
 	iFrance: {
-		iSettle: 2,
+		iSettle: 3,
 		iWork: 2,
 		iDefend: 4,
-		iCounter: 2,
-		iAttack: 2,
+		iCounter: 3,
+		iAttack: 3,
+		iSiege: 1,
 		iShock: 1,
-		iMissionary: 1,
+		iMissionary: 2,
 	},
 	iMalays: {
 		iSettle: 1,
@@ -1108,7 +1110,7 @@ dStartingUnits = CivDict({
 		iSettle: 3,
 		iWork: 2,
 		iDefend: 6,
-		iAttack: 4,
+		iCityAttack: 6,
 		iHarass: 6,
 		iSiege: 8,
 		iMissionary: 2,
@@ -1375,7 +1377,7 @@ dExtraAIUnits = CivDict({
 	},
 	iTimurids: {
 		iWork: 1,
-		iAttack: 4,
+		iCityAttack: 4,
 		iHarass: 4,
 		iSiege: 7,
 		iMissionary: 1,
@@ -1393,6 +1395,8 @@ dExtraAIUnits = CivDict({
 	},
 	iAmerica: {
 		iDefend: 1,
+		iWork: 4,
+		iSettle: 1,
 	},
 	iArgentina: {
 		iDefend: 3,
@@ -1421,18 +1425,8 @@ dHumanStartingUnits = CivDict({
 }, {})
 
 dAdditionalUnits = CivDict({
-	iIndia: {
-		iDefend: 2,
-		iAttack: 1,
-	},
 	iGreece: {
-		iDefend: 2,
-	},
-	iPersia: {
-		iCounter: 4,
-	},
-	iPolynesia: {
-		iBase: 2,
+		iCounter: 2,
 	},
 	iRome: {
 		iAttack: 4,
@@ -1440,10 +1434,6 @@ dAdditionalUnits = CivDict({
 	iJapan: {
 		iDefend: 2,
 		iAttack: 2,
-	},
-	iDravidia: {
-		iAttack: 2,
-		iShock: 1,
 	},
 	iEthiopia: {
 		iDefend: 2,
@@ -1471,10 +1461,6 @@ dAdditionalUnits = CivDict({
 	iTurks: {
 		iHarass: 4,
 	},
-	iArabia: {
-		iAttack: 2,
-		iShock: 1,
-	},
 	iTibet: {
 		iHarass: 2,
 	},
@@ -1483,15 +1469,7 @@ dAdditionalUnits = CivDict({
 	},
 	iBulgaria: {
 		iDefend: 2,
-		iHarass: 3,
-	},
-	iKhmer: {
-		iAttack: 3,
-		iShockCity: 2,
-	},
-	iMali: {
-		iSkirmish: 2,
-		iAttack: 2,
+		iHarass: 2,
 	},
 	iSpain: {
 		iDefend: 3,
@@ -1513,10 +1491,6 @@ dAdditionalUnits = CivDict({
 		iDefend: 3,
 		iCounter: 3,
 	},
-	iInca: {
-		iAttack: 5,
-		iDefend: 3,
-	},
 	iItaly: {
 		iDefend: 2,
 		iCounter: 2,
@@ -1526,17 +1500,9 @@ dAdditionalUnits = CivDict({
 		iHarass: 2,
 		iShock: 4,
 	},
-	iAztecs: {
-		iAttack: 2,
-		iDefend: 2,
-	},
 	iTimurids: {
-		iShockCity: 2,
+		iShock: 2,
 		iHarass: 4,
-	},
-	iGhorids: {
-		iShockCity: 2,
-		iCounter: 2,
 	},
 	iThailand: {
 		iCounter: 2,
@@ -1549,9 +1515,6 @@ dAdditionalUnits = CivDict({
 	iOttomans: {
 		iDefend: 3,
 		iHarass: 3,
-	},
-	iCongo: {
-		iAttack: 3,
 	},
 	iIran: {
 		iAttack: 2,
@@ -1601,7 +1564,7 @@ dSpecificAIStartingUnits = CivDict({
 		iTagmata: 6,
 	},
 	iTimurids: {
-		iKeshik: 5,
+		iKeshik: 10,
 	}
 }, {})
 
@@ -1615,8 +1578,8 @@ dStartingExperience = CivDict({
 		iCitySiege: 2,
 	},
 	iTimurids: {
-		iAttack: 2,
-		iShock: 2,
+		iCityAttack: 2,
+		iShockCity: 2,
 		iSiege: 2,
 	},
 	iGermany: {
@@ -1927,7 +1890,7 @@ dTechPreferences = {
 	iRome : {	
 		iCurrency: 30,
 		iLaw: 20,
-		iPolitics: 40,
+		iPolitics: 20,
 		iEngineering: 15,
 		iArchitecture: 15,
 		iAlchemy: 15,
@@ -1995,7 +1958,6 @@ dTechPreferences = {
 	},
 	iFrance : {
 		iReplaceableParts: 15,
-		iFirearms: 20,
 		iExploration: 20,
 		iGeography: 30,
 		iLogistics: 15,
@@ -2080,19 +2042,22 @@ dTechPreferences = {
 		iPrinting: -20,
 	},
 	iSpain : {
+		iFeudalism: 100,
 		iMachinery: 100,
-		iCartography: 100,
-		iExploration: 100,
+		iCartography: 30,
+		iExploration: 30,
 		iCompass: 50,
-		iFirearms: 25,
+		iFirearms: 15,
 		iPatronage: 30,
-		iReplaceableParts: 20,
 		iGuilds: 15,
 		iGunpowder: 15,
+		iPrinting: 15,
+		iEconomics: -10,
+		iHeritage: 15,
 	},
 	iEngland : {
-		iExploration: 30,
-		iGeography: 40,
+		iExploration: 20,
+		iGeography: 20,
 		iFirearms: 20,
 		iReplaceableParts: 30,
 		iLogistics: 15,
@@ -2101,6 +2066,7 @@ dTechPreferences = {
 		iEducation: 15,
 		iGuilds: 15,
 		iChemistry: 15,
+		iPrinting: 15,
 	},
 	iHolyRome : {
 		iPrinting: 40,

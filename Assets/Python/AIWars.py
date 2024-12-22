@@ -79,9 +79,10 @@ tCholaSumatraBR = (121, 31)
 # currently inactive
 tConquestCholaSumatra = (8, iDravidia, iMalays, tCholaSumatraTL, tCholaSumatraBR, 1, iCholaSumatraYear, 10)
 
-iSpainMoorsYear = 1200
-tSpainMoorsTL = (55, 48)
-tSpainMoorsBR = (60, 51)
+# Don't conquer the south of Al-Andalus, focus on the east coast
+iSpainMoorsYear = 1250
+tSpainMoorsTL = (58, 49)
+tSpainMoorsBR = (62, 53)
 
 tConquestSpainMoors = (9, iSpain, iMoors, tSpainMoorsTL, tSpainMoorsBR, 1, iSpainMoorsYear, 10)
 
@@ -234,7 +235,7 @@ lConquests = [
 	tConquestMacedonMesopotamia, 
 	tConquestMacedonEgypt, 
 	tConquestMacedonPersia, 
-	#tConquestSpainMoors, # --> now that Moors have Almoravid barbarians to contend with, we don't need this
+	tConquestSpainMoors,
 	tConquestTurksPersia, 
 	tConquestTurksAnatolia, 
 	tConquestEnglandIreland,
@@ -286,6 +287,7 @@ dConquestChecker = {
 	tConquestMongolsBaghdad[0]: lambda tConquest: checkConquest(tConquest, tConquestMongolsPersia),
 	tConquestMacedonPunjab[0]: lambda tConquest: checkConquest(tConquest, tConquestMacedonPersia),
 	tConquestAssyriaEgypt: lambda tConquest: checkConquest(tConquest, tConquestAssyriaLevant),
+	tConquestSpainMoors[0]: lambda tConquest: checkConquest(tConquest, bOnlyPreferred=True),
 }
 
 def checkByzantiumConquestOfCarthage(tConquest):
@@ -378,7 +380,7 @@ def resetAggressionLevel(bWar, iTeam, iOtherTeam):
 		data.players[iOtherTeam].iAggressionLevel = 0
 
 		
-def checkConquest(tConquest, tPrereqConquest = (), bInvertPrereqConquestCondition = False, iWarPlan = WarPlanTypes.WARPLAN_TOTAL):
+def checkConquest(tConquest, tPrereqConquest = (), bInvertPrereqConquestCondition = False, iWarPlan = WarPlanTypes.WARPLAN_TOTAL, bOnlyPreferred = False):
 	iID, iCiv, iPreferredTargetCiv, tTL, tBR, iNumTargets, iYear, iIntervalTurns = tConquest
 	
 	if not iID in data.dHasConquestHappened:
@@ -414,6 +416,9 @@ def checkConquest(tConquest, tPrereqConquest = (), bInvertPrereqConquestConditio
 		
 	iPreferredTarget = slot(iPreferredTargetCiv)
 
+	if iPreferredTarget < 0 and bOnlyPreferred:
+		return
+
 	if iPreferredTarget >= 0 and player(iPreferredTarget).isExisting() and team(iPreferredTarget).isVassal(iPlayer):
 		return
 	
@@ -425,8 +430,6 @@ def checkConquest(tConquest, tPrereqConquest = (), bInvertPrereqConquestConditio
 		#message(active(), 'INVERTED CONQUEST CONDITION: Failing to start conquest from %s1 because prereq conquest is met.', name(iPlayer))
 		return
 	
-	#if iCiv == iSpain and (iPreferredTarget < 0 or player(iPreferredTarget).isHuman()):
-	#	return
 	
 	spawnConquerors(iPlayer, iPreferredTarget, tTL, tBR, iNumTargets, iWarPlan)
 	data.dHasConquestHappened[iID] = True

@@ -70,6 +70,14 @@
 		<Spanish>Celts</Spanish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_CIV_CELTS_COMMUNIST</Tag>
+		<English>%s2 Commune</English>
+		<French>%s2 Commune</French>
+		<German>%s2 Commune</German>
+		<Italian>%s2 Commune</Italian>
+		<Spanish>%s2 Commune</Spanish>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_CIV_CELTS_DEFAULT</Tag>
 		<English>%s2 Chiefdoms</English>
 		<French>%s2 Chiefdoms</French>

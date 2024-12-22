@@ -30,7 +30,7 @@
 			<iGoldenAgePercent>300</iGoldenAgePercent> <!-- Default: 200 -->
 			<iHurryPercent>33</iHurryPercent>
 			<iHurryConscriptAngerPercent>300</iHurryConscriptAngerPercent>
-			<iInflationPercent>18</iInflationPercent>
+			<iInflationPercent>20</iInflationPercent>
 			<iInflationOffset>-500</iInflationOffset>
 			<iVictoryDelayPercent>300</iVictoryDelayPercent>
 			<GameTurnInfos>
@@ -79,13 +79,13 @@
 				<!-- 25 x 4 years = 100 years -> 500 AD -->
 				<GameTurnInfo>
 					<iMonthIncrement>48</iMonthIncrement>
-					<iTurnsPerIncrement>100</iTurnsPerIncrement>
+					<iTurnsPerIncrement>25</iTurnsPerIncrement>
 				</GameTurnInfo>
 				
 				<!-- 300 x 3 years = 900 years -> 1400 AD -->
 				<GameTurnInfo>
 					<iMonthIncrement>36</iMonthIncrement>
-					<iTurnsPerIncrement>200</iTurnsPerIncrement>
+					<iTurnsPerIncrement>300</iTurnsPerIncrement>
 				</GameTurnInfo>
 				
 				<!-- Renaissance Era -->
@@ -148,12 +148,12 @@
 				
 				<!-- Ancient: 330 turns -->
 				<!-- Classical: 290 turns -->
-				<!-- Medieval: 300 turns -->
+				<!-- Medieval: 325 turns -->
 				<!-- Renaissance: 300 turns -->
 				<!-- Industrial: 210 turns -->
 				<!-- Global: 140 turns -->
 				<!-- Digital: 160 turns -->
-				<!-- TOTAL: 1730 turns -->
+				<!-- TOTAL: 1755 turns -->
 			</GameTurnInfos>
 		</GameSpeedInfo>
 		<GameSpeedInfo>
@@ -223,7 +223,7 @@
 				
 				<!-- Medieval Era -->
 				<!-- 400 AD to 1400 AD -->
-				<!-- 170 turns -->
+				<!-- 180 turns -->
 				
 				<!-- 75 x 7 years = 525 years -> 925 AD -->
 				<GameTurnInfo>
@@ -231,10 +231,16 @@
 					<iTurnsPerIncrement>75</iTurnsPerIncrement>
 				</GameTurnInfo>
 				
-				<!-- 95 x 5 years = 475 years -> 1400 AD -->
+				<!-- 80 x 5 years = 400 years -> 1325 AD -->
 				<GameTurnInfo>
 					<iMonthIncrement>60</iMonthIncrement>
 					<iTurnsPerIncrement>80</iTurnsPerIncrement>
+				</GameTurnInfo>
+
+				<!-- 25 x 3 years = 75 years -> 1400 AD -->
+				<GameTurnInfo>
+					<iMonthIncrement>36</iMonthIncrement>
+					<iTurnsPerIncrement>25</iTurnsPerIncrement>
 				</GameTurnInfo>
 				
 				<!-- Renaissance Era -->
@@ -297,12 +303,12 @@
 				
 				<!-- Ancient: 165 turns -->
 				<!-- Classical: 150 turns -->
-				<!-- Medieval: 155 turns -->
+				<!-- Medieval: 180 turns -->
 				<!-- Renaissance: 150 turns -->
 				<!-- Industrial: 105 turns -->
 				<!-- Global: 70 turns -->
 				<!-- Digital: 80 turns -->
-				<!-- TOTAL: 875 turns -->
+				<!-- TOTAL: 900 turns -->
 			</GameTurnInfos>
 		</GameSpeedInfo>
 		<GameSpeedInfo>

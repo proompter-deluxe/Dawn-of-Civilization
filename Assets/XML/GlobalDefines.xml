@@ -67,15 +67,15 @@
 	</Define>
 	<Define>
 		<DefineName>STANDARD_HANDICAP</DefineName>
-		<DefineTextVal>HANDICAP_REGENT</DefineTextVal>
+		<DefineTextVal>HANDICAP_MONARCH</DefineTextVal>
 	</Define>
 	<Define>
 		<DefineName>STANDARD_HANDICAP_QUICK</DefineName>
-		<DefineTextVal>HANDICAP_REGENT</DefineTextVal>
+		<DefineTextVal>HANDICAP_MONARCH</DefineTextVal>
 	</Define>
 	<Define>
 		<DefineName>STANDARD_GAMESPEED</DefineName>
-		<DefineTextVal>GAMESPEED_NORMAL</DefineTextVal>
+		<DefineTextVal>GAMESPEED_EPIC</DefineTextVal>
 	</Define>
 	<Define>
 		<DefineName>STANDARD_TURNTIMER</DefineName>
@@ -99,11 +99,11 @@
 	</Define>
 	<Define>
 		<DefineName>AI_HANDICAP</DefineName>
-		<DefineTextVal>HANDICAP_REGENT</DefineTextVal>
+		<DefineTextVal>HANDICAP_MONARCH</DefineTextVal>
 	</Define>
 	<Define>
 		<DefineName>BARBARIAN_HANDICAP</DefineName>
-		<DefineTextVal>HANDICAP_REGENT</DefineTextVal>
+		<DefineTextVal>HANDICAP_MONARCH</DefineTextVal>
 	</Define>
 	<Define>
 		<DefineName>BARBARIAN_CIVILIZATION</DefineName>

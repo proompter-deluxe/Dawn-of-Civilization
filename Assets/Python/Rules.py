@@ -70,6 +70,13 @@ def downgradeCottages(iOwner, iPlayer, city, bConquest, bTrade):
 	if bConquest and player(iPlayer).getCurrentEra() <= iRenaissance:
 		downgradeCityCottages(city)
 
+# purge Great People when a city falls to independents, barbarians or natives, prior to Renaissance era
+@handler("cityAcquired")
+def purgeGreatPeople(iOwner, iPlayer, city, bConquest, bTrade):
+	if bConquest and civ(iPlayer) in [iBarbarian, iIndependent, iIndependent2, iNative] and player(iOwner).getCurrentEra() >= iRenaissance:
+		for iGreatPerson in lGreatSpecialists:
+			city.setFreeSpecialistCount(iGreatPerson, 0)
+
 
 ### CITY ACQUIRED AND KEPT ###
 	

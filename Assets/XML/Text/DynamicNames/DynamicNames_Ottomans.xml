@@ -318,6 +318,18 @@
 		<Spanish>Eyalet of Yedisan</Spanish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_CIV_OTTOMAN_KHAZARS</Tag>
+		<English>Kefe Eyalet</English>
+		<French>
+			<Text>Eyalet de Kefe</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>Kefe Eyalet</German>
+		<Italian>Kefe Eyalet</Italian>
+		<Spanish>Kefe Eyalet</Spanish>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_CIV_OTTOMAN_MALAYS</Tag>
 		<English>Eyalet of Aceh</English>
 		<French>

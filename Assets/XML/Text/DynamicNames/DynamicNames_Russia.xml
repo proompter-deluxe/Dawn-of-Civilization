@@ -210,6 +210,18 @@
 		<Spanish>Congress %s1</Spanish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_CIV_RUSSIAN_KHAZARS</Tag>
+		<English>Taurida Oblast</English>
+		<French>
+			<Text>Oblast de Taurida</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>Taurida Oblast</German>
+		<Italian>Taurida Oblast</Italian>
+		<Spanish>Taurida Oblast</Spanish>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_CIV_RUSSIA_SOVIET</Tag>
 		<English>Soviet %s1</English>
 		<French>

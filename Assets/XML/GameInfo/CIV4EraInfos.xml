@@ -156,9 +156,9 @@
 			<iConstructPercent>100</iConstructPercent>
 			<iCreatePercent>100</iCreatePercent>
 			<iResearchPercent>100</iResearchPercent>
-			<iBuildPercent>100</iBuildPercent>
+			<iBuildPercent>110</iBuildPercent>
 			<iImprovementPercent>100</iImprovementPercent>
-			<iGreatPeoplePercent>100</iGreatPeoplePercent>
+			<iGreatPeoplePercent>120</iGreatPeoplePercent>
 			<iCulturePercent>100</iCulturePercent>
 			<iAnarchyPercent>40</iAnarchyPercent>
 			<iMaintenanceRangePercent>75</iMaintenanceRangePercent>

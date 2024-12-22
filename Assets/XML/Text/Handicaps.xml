@@ -26,6 +26,14 @@
 		<Spanish>The Heir difficulty is the right level for beginners. Your cities receive additional happiness and your research, unit production and upkeep costs are lower than those of your AI opponents.</Spanish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_HANDICAP_MONARCH</Tag>
+		<English>Monarch (Intended Difficulty)</English>
+		<French>Monarch (Intended Difficulty)</French>
+		<German>Monarch (Intended Difficulty)</German>
+		<Italian>Monarch (Intended Difficulty)</Italian>
+		<Spanish>Monarch (Intended Difficulty)</Spanish>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_HANDICAP_MONARCH_HELP</Tag>
 		<English>Monarch players play under the same conditions as Regents, but will face more formidable AI opponents.</English>
 		<French>Les joueurs Monarques sont soumis aux m&#234;mes conditions que les R&#233;gents, mais feront face &#224; des adversaires IA plus redoutables.</French>

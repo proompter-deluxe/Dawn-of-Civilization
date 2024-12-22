@@ -834,7 +834,7 @@
 			<Type>BUILD_COTTAGE</Type>
 			<Description>TXT_KEY_BUILD_COTTAGE</Description>
 			<PrereqTech>TECH_PROPERTY</PrereqTech>
-			<iTime>700</iTime>
+			<iTime>600</iTime>
 			<ImprovementType>IMPROVEMENT_COTTAGE</ImprovementType>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
 			<FeatureStructs>
@@ -891,9 +891,68 @@
 		<BuildInfo>
 			<Type>BUILD_HAMLET</Type>
 			<Description>TXT_KEY_BUILD_HAMLET</Description>
-			<PrereqTech>TECH_PROPERTY</PrereqTech>
-			<iTime>700</iTime>
+			<PrereqTech>TECH_URBAN_PLANNING</PrereqTech>
+			<iTime>600</iTime>
 			<ImprovementType>IMPROVEMENT_HAMLET</ImprovementType>
+			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
+			<FeatureStructs>
+				<FeatureStruct>
+					<FeatureType>FEATURE_TAIGA</FeatureType>
+					<PrereqTech>TECH_ECOLOGY</PrereqTech>
+					<iTime>600</iTime>
+					<iProduction>20</iProduction>
+					<bRemove>1</bRemove>
+				</FeatureStruct>
+				<FeatureStruct>
+					<FeatureType>FEATURE_JUNGLE</FeatureType>
+					<PrereqTech>TECH_MICROBIOLOGY</PrereqTech>
+					<iTime>600</iTime>
+					<iProduction>0</iProduction>
+					<bRemove>1</bRemove>
+				</FeatureStruct>
+				<FeatureStruct>
+					<FeatureType>FEATURE_RAINFOREST</FeatureType>
+					<PrereqTech>TECH_ALLOYS</PrereqTech>
+					<iTime>600</iTime>
+					<iProduction>0</iProduction>
+					<bRemove>0</bRemove>
+				</FeatureStruct>
+				<FeatureStruct>
+					<FeatureType>FEATURE_FOREST</FeatureType>
+					<PrereqTech>TECH_ALLOYS</PrereqTech>
+					<iTime>400</iTime>
+					<iProduction>30</iProduction>
+					<bRemove>1</bRemove>
+				</FeatureStruct>
+				<FeatureStruct>
+					<FeatureType>FEATURE_SAVANNA</FeatureType>
+					<PrereqTech>TECH_ALLOYS</PrereqTech>
+					<iTime>200</iTime>
+					<iProduction>0</iProduction>
+					<bRemove>1</bRemove>
+				</FeatureStruct>
+				<FeatureStruct>
+					<FeatureType>FEATURE_FLOOD_PLAINS</FeatureType>
+					<PrereqTech>NONE</PrereqTech>
+					<iTime>400</iTime>
+					<iProduction>0</iProduction>
+					<bRemove>0</bRemove>
+				</FeatureStruct>
+			</FeatureStructs>
+			<HotKey>KB_T</HotKey>
+			<bAltDown>0</bAltDown>
+			<bShiftDown>1</bShiftDown>
+			<bCtrlDown>0</bCtrlDown>
+			<iHotKeyPriority>0</iHotKeyPriority>
+			<Button>,Art/Interface/Buttons/Builds/BuildHamlet.dds,Art/Interface/Buttons/Actions_Builds_LeaderHeads_Specialists_Atlas.dds,2,10</Button>
+			<bGraphicalOnly>1</bGraphicalOnly>
+		</BuildInfo>
+		<BuildInfo>
+			<Type>BUILD_VILLAGE</Type>
+			<Description>TXT_KEY_BUILD_VILLAGE</Description>
+			<PrereqTech>TECH_PROPERTY</PrereqTech>
+			<iTime>600</iTime>
+			<ImprovementType>IMPROVEMENT_VILLAGE</ImprovementType>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
 			<FeatureStructs>
 				<FeatureStruct>
@@ -944,7 +1003,7 @@
 			<bShiftDown>0</bShiftDown>
 			<bCtrlDown>0</bCtrlDown>
 			<iHotKeyPriority>0</iHotKeyPriority>
-			<Button>,Art/Interface/Buttons/Builds/BuildHamlet.dds,Art/Interface/Buttons/Actions_Builds_LeaderHeads_Specialists_Atlas.dds,2,10</Button>
+			<Button>,Art/Interface/Buttons/Builds/BuildVillage.dds,Art/Interface/Buttons/Actions_Builds_LeaderHeads_Specialists_Atlas.dds,5,9</Button>
 			<bGraphicalOnly>1</bGraphicalOnly>
 		</BuildInfo>
 		<BuildInfo>
@@ -1824,11 +1883,11 @@
 			<bGraphicalOnly>1</bGraphicalOnly>
 		</BuildInfo>
 		<BuildInfo>
-			<Type>BUILD_HAMLET_DEFORESTATION</Type>
-			<Description>TXT_KEY_BUILD_HAMLET</Description>
+			<Type>BUILD_VILLAGE_DEFORESTATION</Type>
+			<Description>TXT_KEY_BUILD_VILLAGE</Description>
 			<PrereqTech>TECH_PROPERTY</PrereqTech>
-			<iTime>700</iTime>
-			<ImprovementType>IMPROVEMENT_HAMLET</ImprovementType>
+			<iTime>600</iTime>
+			<ImprovementType>IMPROVEMENT_VILLAGE</ImprovementType>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
 			<FeatureStructs>
 				<FeatureStruct>
@@ -1879,7 +1938,7 @@
 			<bShiftDown>0</bShiftDown>
 			<bCtrlDown>0</bCtrlDown>
 			<iHotKeyPriority>0</iHotKeyPriority>
-			<Button>,Art/Interface/Buttons/Builds/BuildHamlet.dds,Art/Interface/Buttons/Actions_Builds_LeaderHeads_Specialists_Atlas.dds,2,10</Button>
+			<Button>,Art/Interface/Buttons/Builds/BuildVillage.dds,Art/Interface/Buttons/Actions_Builds_LeaderHeads_Specialists_Atlas.dds,5,9</Button>
 			<bGraphicalOnly>1</bGraphicalOnly>
 		</BuildInfo>
 	</BuildInfos>

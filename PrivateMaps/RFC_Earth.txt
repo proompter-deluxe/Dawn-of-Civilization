@@ -25016,12 +25016,13 @@ BeginPlot
 	x=56,y=49
 	isNOfRiver
 	RiverWEDirection=3
+	BonusType=BONUS_COPPER
 	TerrainType=TERRAIN_PLAINS
 	PlotType=2
 EndPlot
 BeginPlot
 	x=56,y=50
-	BonusType=BONUS_COPPER
+	BonusType=BONUS_SILVER
 	TerrainType=TERRAIN_PLAINS
 	PlotType=1
 EndPlot
@@ -25921,6 +25922,7 @@ BeginPlot
 	x=58,y=51
 	isNOfRiver
 	RiverWEDirection=3
+	BonusType=BONUS_WINE
 	TerrainType=TERRAIN_PLAINS
 	PlotType=2
 EndPlot

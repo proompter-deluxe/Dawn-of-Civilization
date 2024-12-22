@@ -482,6 +482,7 @@ minor_cities = [
 	MinorCity(-680, iIndependent, (92, 50), "Hagmatana", iPopulation=3, iCiv=iAssyria, units={iDefend: 2, iShock: 2}, iCulture=15, adjective="TXT_KEY_ADJECTIVE_MEDIAN"),
 	MinorCity(-600, iIndependent, (97, 53), "Margu", iPopulation=1, iCiv=iPersia, units={iDefend: 1}, adjective="TXT_KEY_ADJECTIVE_SOGDIAN"),
 	MinorCity(-650, iIndependent2, tGades, "Gadir", iPopulation=2, iCiv=iPhoenicia, units={iDefend: 1, iCounter:1, iWork: 1}, condition=lambda: not player(iPhoenicia).isHuman(), adjective="TXT_KEY_CIV_PHOENICIA_ADJECTIVE"),
+	MinorCity(-650, iIndependent, tPella, "Aigai", iPopulation=2, iCiv=iGreece, units={iDefend: 1, iCounter:1, iWork: 1}, adjective="TXT_KEY_CIV_MACEDON_ADJECTIVE"), 
 	MinorCity(-600, iBarbarian, (60, 50), "Mastia", iPopulation=2, iCiv=iCelts, units={iDefend: 1, iCounter:1}, adjective="TXT_KEY_ADJECTIVE_CELTIBERIAN"),
 	MinorCity(-500, iIndependent2, (68, 53), "Roma", iPopulation=3, iCiv=iGreece, units={iDefend: 1, iCounter: 2, iWork: 1}, adjective="TXT_KEY_CIV_ROME_ADJECTIVE"),
 	MinorCity(-500, iNative, (19, 41), "Danibaan", iPopulation=2, iCiv=iMaya, units={iSkirmish: 1}, adjective="TXT_KEY_ADJECTIVE_ZAPOTEC"),
@@ -499,7 +500,7 @@ minor_cities = [
 	MinorCity(470, iBarbarian, (65, 62), "Eresburg", iPopulation=2, iCiv=iCelts, units={iDefend: 2, iAttack: 4}, adjective="TXT_KEY_ADJECTIVE_GERMANIC"),
 	MinorCity(500, iIndependent2, (123, 25), "Sunda Kelapa", iPopulation=3, iCiv=iMalays, units={iDefend: 2}, adjective="TXT_KEY_ADJECTIVE_SUNDANESE"),
 	MinorCity(500, iBarbarian, (69, 56), "Venexia", iPopulation=5, iCiv=iRome, units={iDefend: 3}, adjective="TXT_KEY_ADJECTIVE_VENETIAN"),
-	MinorCity(500, iBarbarian, (54, 53), "Bracara", iPopulation=2, iCiv=iRome, units={iDefend: 3}, adjective="TXT_KEY_ADJECTIVE_GERMANIC"),
+	MinorCity(500, iBarbarian, (54, 54), "Bracara", iPopulation=2, iCiv=iRome, units={iDefend: 3}, adjective="TXT_KEY_ADJECTIVE_GERMANIC"),
 	MinorCity(550, iIndependent, tMecca, "Yathrib", iPopulation=2, iCiv=iPersia, units={iDefend: 1, iHarass: 2}, adjective="TXT_KEY_CIV_ARABIA_ADJECTIVE"),
 	MinorCity(570, iBarbarian, (72, 59), "Vienna", iPopulation=2, iCiv=iRome, units={iHarass: 5}, adjective="TXT_KEY_ADJECTIVE_AVAR"),
 	MinorCity(610, iIndependent, (95, 39), "Nizwa", iPopulation=2, iCiv=iPersia, units={iDefend: 2}, adjective="TXT_KEY_CIV_ARABIA_ADJECTIVE"),
@@ -527,6 +528,7 @@ minor_cities = [
 	MinorCity(1585, iNative, (74, 23), "Mwimbele", iPopulation=1, units={iSkirmish: 2}, adjective="TXT_KEY_ADJECTIVE_LUBA"),
 	MinorCity(1610, iNative, (89, 18), "Antananarivo", iPopulation=1, units={iDefend: 2}, adjective="TXT_KEY_ADJECTIVE_MALAGASY"),
 	MinorCity(1635, iBarbarian, (109, 58), "Ghulja", iPopulation=3, iCiv=iTurks, units={iDefend: 2, iHarass: 3}, condition=lambda: not player(iMongols).isExisting(), adjective="TXT_KEY_ADJECTIVE_DZUNGAR"),
+	MinorCity(1635, iBarbarian, (119, 61), "Qara Qorum", iPopulation=2, iCiv=iMongols, units={iDefend: 2, iHarass: 3}, condition=lambda: not player(iMongols).isExisting(), adjective="TXT_KEY_ADJECTIVE_MONGOL"),
 ]
 
 barbarians = [
@@ -599,10 +601,10 @@ barbarians = [
 	Barbarians(300, 600, {iCamelArcher: 3}, ((56, 39), (73, 44)), 6, INVADERS, target_area=((60, 45), (69, 45)), adjective="TXT_KEY_ADJECTIVE_BERBER"),
 	Barbarians(300, 600, {iCamelArcher: 2}, ((71, 39), (76, 44)), 6, INVADERS, target_area=((77, 40), (81, 44)), adjective="TXT_KEY_ADJECTIVE_BERBER"),
 	Barbarians(300, 1500, {iCamelArcher: 1}, ((86, 38), (91, 45)), 10, NOMADS, target_area=((77, 39), (91, 50)), adjective="TXT_KEY_ADJECTIVE_BEDOUIN"),
-	Barbarians(340, 460, {iSwordsman: 3, iAxeman: 4, iCatapult: 1}, ((59, 59), (65, 65)), 3, INVADERS, target_area=((59, 55), (66, 63)), iAlternativeCiv=iFrance, adjective="TXT_KEY_ADJECTIVE_FRANKISH"),
-	Barbarians(330, 450, {iSwordsman: 3, iSavaran: 2, iCatapult: 1}, ((64, 59), (75, 65)), 3, INVADERS, target_area=((58, 52), (71, 62)), adjective="TXT_KEY_ADJECTIVE_VANDAL"),
-	Barbarians(350, 550, {iSwordsman: 2, iHorseArcher: 1, iAxeman: 2, iCatapult: 1}, ((66, 53), (73, 66)), 3, INVADERS, target_area=((65, 51), (70, 57)), adjective="TXT_KEY_ADJECTIVE_OSTROGOTHIC"),
-	Barbarians(340, 520, {iSwordsman: 3, iAxeman: 2, iCatapult: 1}, ((65, 60), (70, 64)), 3, INVADERS, target_area=((54, 49), (62, 58)), iAlternativeCiv=iSpain, adjective="TXT_KEY_ADJECTIVE_VISIGOTHIC"),
+	Barbarians(340, 440, {iSwordsman: 3, iAxeman: 4, iCatapult: 1}, ((59, 59), (65, 65)), 3, INVADERS, target_area=((59, 55), (66, 63)), iAlternativeCiv=iFrance, adjective="TXT_KEY_ADJECTIVE_FRANKISH"),
+	Barbarians(330, 430, {iSwordsman: 3, iSavaran: 2, iCatapult: 1}, ((64, 59), (75, 65)), 3, INVADERS, target_area=((58, 52), (71, 62)), adjective="TXT_KEY_ADJECTIVE_VANDAL"),
+	Barbarians(350, 540, {iSwordsman: 2, iHorseArcher: 1, iAxeman: 2, iCatapult: 1}, ((66, 53), (73, 66)), 3, INVADERS, target_area=((65, 51), (70, 57)), adjective="TXT_KEY_ADJECTIVE_OSTROGOTHIC"),
+	Barbarians(340, 420, {iSwordsman: 3, iAxeman: 2, iCatapult: 1}, ((65, 60), (70, 64)), 3, INVADERS, target_area=((54, 49), (62, 58)), iAlternativeCiv=iSpain, adjective="TXT_KEY_ADJECTIVE_VISIGOTHIC"),
 	Barbarians(350, 460, {iOghuz: 5, iCatapult: 1, iSwordsman: 1}, ((61, 57), (77, 62)), 2, INVADERS, target_area=((57, 51), (71, 61)), adjective="TXT_KEY_ADJECTIVE_HUNNIC", promotions=(iMobility,)),
 	Barbarians(350, 540, {iOghuz: 5}, ((93, 53), (100, 60)), 1, INVADERS, target_area=((92, 44), (102, 52)), adjective="TXT_KEY_ADJECTIVE_HUNA", iAlternativeCiv=iTurks, promotions=(iMobility, iDesertAdaptation, iSteppeAdaptation)), # Hephtalites
 	Barbarians(350, 600, {iDogSoldier: 1}, ((11, 44), (19, 51)), 10, NOMADS, iOwner=iNative, target_area=((14, 40), (23, 45)), adjective="TXT_KEY_ADJECTIVE_NAHUA"),

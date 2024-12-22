@@ -198,6 +198,7 @@ dSpecificVassalTitles = deepdict({
 		iTurks : "TXT_KEY_ADJECTIVE_TITLE",
 		iPoland : "TXT_KEY_CIV_RUSSIAN_POLAND",
 		iAmerica : "TXT_KEY_ADJECTIVE_TITLE",
+		iKhazars: "TXT_KEY_CIV_RUSSIAN_KHAZARS"
 	},
 	iOttomans : {
 		iEgypt : "TXT_KEY_CIV_OTTOMAN_EGYPT",
@@ -209,7 +210,8 @@ dSpecificVassalTitles = deepdict({
 		iByzantium : "TXT_KEY_CIV_OTTOMAN_BYZANTIUM",
 		iArabia : "TXT_KEY_CIV_OTTOMAN_ARABIA",
 		iRussia : "TXT_KEY_CIV_OTTOMAN_RUSSIA",
-		iBulgaria: "TXT_KEY_CIV_OTTOMAN_BULGARIA_RUMELIA"
+		iBulgaria: "TXT_KEY_CIV_OTTOMAN_BULGARIA_RUMELIA",
+		iKhazars: "TXT_KEY_CIV_OTTOMAN_KHAZARS"
 	},
 	iNetherlands : {
 		iMali : "TXT_KEY_CIV_DUTCH_MALI",

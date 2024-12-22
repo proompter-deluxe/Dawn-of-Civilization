@@ -275,8 +275,7 @@ dRemovedResourcesDict = {
 	(75, 51)  :  -50, # Silver in Greece
 	(74, 44)  :  200, # Spices (silphium) in Cyrenaica
 	(87, 49)  :  200, # Horses in Syria
-	(55, 53)  :  400, # Gold in Spain
-	(59, 51)  :  400, # Silver in Spain
+	(59, 51)  :  400, # Silver near Cartagena
 	(84, 48)  :  500, # Clams in Phoenicia
 	(83, 47)  :  500, # Dye (murex) in Phoenicia
 	(73, 46)  :  500, # Dye (murex) in Cyrenaica
@@ -292,6 +291,8 @@ dRemovedResourcesDict = {
 	(79, 39)  : 1200, # Cotton in Nubia
 	(78, 56)  : 1300, # Silk in Thrace
 	(75, 58)  : 1400, # Gold in Transylvania
+	(55, 53)  : 1550, # Gold in Spain
+	(56, 50)  : 1550, # Silver in Andalusia
 	(92, 60)  : 1600, # Silk in the Volga Delta
 	(32, 42)  : 1650, # Gold in Hispaniola
 	(47, 24)  : 1650, # Dye (brazilwood) in Brazil

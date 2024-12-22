@@ -644,6 +644,10 @@
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
+					<BuildType>BUILD_HAMLET</BuildType>
+					<bBuild>1</bBuild>
+				</Build>
+				<Build>
 					<BuildType>BUILD_FORT</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
@@ -811,6 +815,10 @@
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
+					<BuildType>BUILD_HAMLET</BuildType>
+					<bBuild>1</bBuild>
+				</Build>
+				<Build>
 					<BuildType>BUILD_FORT</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
@@ -970,6 +978,10 @@
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
+					<BuildType>BUILD_HAMLET</BuildType>
+					<bBuild>1</bBuild>
+				</Build>
+				<Build>
 					<BuildType>BUILD_FORT</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
@@ -1117,7 +1129,7 @@
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_HAMLET</BuildType>
+					<BuildType>BUILD_VILLAGE</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -1276,7 +1288,7 @@
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_HAMLET_DEFORESTATION</BuildType>
+					<BuildType>BUILD_VILLAGE_DEFORESTATION</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -22628,6 +22640,58 @@
 					<BuildType>BUILD_SLAVE_PLANTATION</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
+				<Build>
+					<BuildType>BUILD_ROAD</BuildType>
+					<bBuild>1</bBuild>
+				</Build>
+				<Build>
+					<BuildType>BUILD_RAILROAD</BuildType>
+					<bBuild>1</bBuild>
+				</Build>
+				<Build>
+					<BuildType>BUILD_HIGHWAY</BuildType>
+					<bBuild>1</bBuild>
+				</Build>
+				<Build>
+					<BuildType>BUILD_FARM</BuildType>
+					<bBuild>1</bBuild>
+				</Build>
+				<Build>
+					<BuildType>BUILD_PADDY_FIELD</BuildType>
+					<bBuild>1</bBuild>
+				</Build>
+				<Build>
+					<BuildType>BUILD_PASTURE</BuildType>
+					<bBuild>1</bBuild>
+				</Build>
+				<Build>
+					<BuildType>BUILD_CAMP</BuildType>
+					<bBuild>1</bBuild>
+				</Build>
+				<Build>
+					<BuildType>BUILD_ORCHARD</BuildType>
+					<bBuild>1</bBuild>
+				</Build>
+				<Build>
+					<BuildType>BUILD_REMOVE_TAIGA</BuildType>
+					<bBuild>1</bBuild>
+				</Build>
+				<Build>
+					<BuildType>BUILD_REMOVE_JUNGLE</BuildType>
+					<bBuild>1</bBuild>
+				</Build>
+				<Build>
+					<BuildType>BUILD_REMOVE_RAINFOREST</BuildType>
+					<bBuild>1</bBuild>
+				</Build>
+				<Build>
+					<BuildType>BUILD_REMOVE_FOREST</BuildType>
+					<bBuild>1</bBuild>
+				</Build>
+				<Build>
+					<BuildType>BUILD_REMOVE_SAVANNA</BuildType>
+					<bBuild>1</bBuild>
+				</Build>
 			</Builds>
 			<GreatPeoples>
 				<GreatPeople>
@@ -22654,7 +22718,7 @@
 					<bTerrainImpassable>1</bTerrainImpassable>
 				</TerrainImpassable>
 			</TerrainImpassables>
-			<iWorkRate>100</iWorkRate>
+			<iWorkRate>50</iWorkRate>
 			<iAsset>2</iAsset>
 			<UnitMeshGroups>
 				<iGroupSize>2</iGroupSize>
@@ -22697,6 +22761,58 @@
 					<BuildType>BUILD_SLAVE_PLANTATION</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
+				<Build>
+					<BuildType>BUILD_ROAD</BuildType>
+					<bBuild>1</bBuild>
+				</Build>
+				<Build>
+					<BuildType>BUILD_RAILROAD</BuildType>
+					<bBuild>1</bBuild>
+				</Build>
+				<Build>
+					<BuildType>BUILD_HIGHWAY</BuildType>
+					<bBuild>1</bBuild>
+				</Build>
+				<Build>
+					<BuildType>BUILD_FARM</BuildType>
+					<bBuild>1</bBuild>
+				</Build>
+				<Build>
+					<BuildType>BUILD_PADDY_FIELD</BuildType>
+					<bBuild>1</bBuild>
+				</Build>
+				<Build>
+					<BuildType>BUILD_PASTURE</BuildType>
+					<bBuild>1</bBuild>
+				</Build>
+				<Build>
+					<BuildType>BUILD_CAMP</BuildType>
+					<bBuild>1</bBuild>
+				</Build>
+				<Build>
+					<BuildType>BUILD_ORCHARD</BuildType>
+					<bBuild>1</bBuild>
+				</Build>
+				<Build>
+					<BuildType>BUILD_REMOVE_TAIGA</BuildType>
+					<bBuild>1</bBuild>
+				</Build>
+				<Build>
+					<BuildType>BUILD_REMOVE_JUNGLE</BuildType>
+					<bBuild>1</bBuild>
+				</Build>
+				<Build>
+					<BuildType>BUILD_REMOVE_RAINFOREST</BuildType>
+					<bBuild>1</bBuild>
+				</Build>
+				<Build>
+					<BuildType>BUILD_REMOVE_FOREST</BuildType>
+					<bBuild>1</bBuild>
+				</Build>
+				<Build>
+					<BuildType>BUILD_REMOVE_SAVANNA</BuildType>
+					<bBuild>1</bBuild>
+				</Build>
 			</Builds>
 			<GreatPeoples>
 				<GreatPeople>
@@ -22723,7 +22839,7 @@
 					<bTerrainImpassable>1</bTerrainImpassable>
 				</TerrainImpassable>
 			</TerrainImpassables>
-			<iWorkRate>100</iWorkRate>
+			<iWorkRate>50</iWorkRate>
 			<iAsset>2</iAsset>
 			<UnitMeshGroups>
 				<iGroupSize>2</iGroupSize>

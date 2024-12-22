@@ -125,7 +125,7 @@ def checkSchism(iGameTurn):
 		orthodoxCapital = game.getHolyCity(iOrthodoxy)
 		
 	# many different levels of fallbacks
-	catholicCapital = futureCatholicCities.where(lambda city: city.getOwner() != orthodoxCapital.getOwner()).maximum(lambda city: player(city).getScoreHistory(iGameTurn))
+	catholicCapital = futureCatholicCities.where(lambda city: city.getOwner() != orthodoxCapital.getOwner()).highest(5, metric=lambda city: city.countTotalCultureTimes100()).random()
 	if not catholicCapital:
 		catholicCapital = nonAlignedOrthodoxCities.maximum(lambda city: player(city).getScoreHistory(iGameTurn))
 	if not catholicCapital:
@@ -277,6 +277,10 @@ def spreadReligionToRegion(iReligion, lRegions, iStartDate, iEndDate, iInterval)
 
 
 def schism(orthodoxCapital, catholicCapital, replace, distant, message):
+
+	# create shrine in the Catholic holy city
+	catholicCapital.setNumRealBuilding(iCatholicShrine, 1)
+
 	replace += distant.where(lambda city: distance(city, catholicCapital) <= distance(city, orthodoxCapital))
 	for city in replace:
 		city.replaceReligion(iOrthodoxy, iCatholicism)

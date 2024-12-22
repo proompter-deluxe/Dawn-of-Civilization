@@ -240,6 +240,7 @@ class GameData:
 		
 		self.dFirstContactConquerors = dict((iCiv, False) for iCiv in lBioNewWorld)
 		self.dFirstContactMongols = dict((iCiv, True) for iCiv in lMongolCivs)
+		self.dFirstContactTimurids = dict((iCiv, True) for iCiv in lMongolCivs)
 		self.lTradingCompanyConquerorsTargets = appenddict()
 		
 		self.iBeforeObserverSlot = -1

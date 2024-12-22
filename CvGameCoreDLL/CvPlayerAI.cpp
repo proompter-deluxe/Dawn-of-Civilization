@@ -10786,6 +10786,29 @@ int CvPlayerAI::AI_civicValue(CivicTypes eCivic) const
 		}
 	}
 
+	if (getLastStateReligion() == CATHOLICISM || getLastStateReligion() == PROTESTANTISM)
+	{
+		// non-Orthodox Christian states have an aversion to despotism, slavery and caste system
+		if (eCivic == CIVIC_DESPOTISM || eCivic == CIVIC_SLAVERY || eCivic == CIVIC_CASTE_SYSTEM)
+		{
+			iValue /= 2;
+		}
+
+		if (eCivic == CIVIC_MONARCHY && getCurrentEra() <= ERA_RENAISSANCE)
+		{
+			iValue *= 2;
+		}
+	}
+
+	if (getLastStateReligion() == ORTHODOXY)
+	{
+		// Orthodox Christian states have an aversion to caste system
+		if (eCivic == CIVIC_CASTE_SYSTEM)
+		{
+			iValue /= 2;
+		}
+	}
+
 	// Leoreth: boost some modern civics as soon as available
 	switch (eCivic)
 	{
@@ -10796,12 +10819,12 @@ int CvPlayerAI::AI_civicValue(CivicTypes eCivic) const
 	case CIVIC_EGALITARIANISM:
 	case CIVIC_FREE_ENTERPRISE:
 	case CIVIC_CENTRAL_PLANNING:
-	case CIVIC_PUBLIC_WELFARE:
 	case CIVIC_NATIONHOOD:
-	case CIVIC_MULTILATERALISM:
 		iValue *= 6;
 		iValue /= 5;
 		break;
+	case CIVIC_PUBLIC_WELFARE:
+	case CIVIC_MULTILATERALISM:
 	case CIVIC_SYNCRETISM:
 	case CIVIC_SECULARISM:
 		if (getCurrentEra() >= ERA_GLOBAL)
@@ -10822,6 +10845,9 @@ int CvPlayerAI::AI_civicValue(CivicTypes eCivic) const
 			iValue += 6 * getNumCities();
 			iValue += 20;
 		}
+
+		// almost always prefer favourite civic
+		iValue *= 100;
 	}
 
 	// Leoreth: prefer deification if no state religion
