@@ -191,7 +191,7 @@ tDummyConquestRomeHoldingRome= (36, iRome, iBarbarian, tRome, tRome, 1, -3000, 1
 
 
 iParthiaMesopotamiaYear = 220
-tConquestParthiaMesopotamia = (37, iParthia, iRome, tLevantTL, tGreeceMesopotamiaBR, 3, iParthiaMesopotamiaYear, 10)
+tConquestParthiaMesopotamia = (37, iParthia, iRome, tLevantTL, tGreeceMesopotamiaBR, 2, iParthiaMesopotamiaYear, 10)
 
 
 iMongolsBaghdadYear = 1260

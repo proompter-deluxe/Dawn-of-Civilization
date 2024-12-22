@@ -464,8 +464,8 @@ lCivilizations = [
 		iGold=200,
 		iAdvancedStartPoints=100,
 		iStateReligion=iCatholicism,
-		lCivics=[iMonarchy, iVassalage, iManorialism, iMerchantTrade, iClergy],
-		techs=techs.column(6).including(iFeudalism, iTheology, iCivilService)
+		lCivics=[iMonarchy, iManorialism, iMerchantTrade, iClergy],
+		techs=techs.column(6).including(iTheology, iCivilService)
 	),
 	Civilization(
 		iHolyRome,
@@ -579,7 +579,7 @@ lCivilizations = [
 		iAdvancedStartPoints=100,
 		iStateReligion=iProtestantism,
 		lCivics=[iElective, iVassalage, iManorialism, iRegulatedTrade, iClergy, iHegemony],
-		techs=techs.column(8).including(iCompanies)
+		techs=techs.column(8)
 	),
 	Civilization(
 		iRussia,
@@ -1621,13 +1621,7 @@ dAlwaysTrain = CivDict({
 }, [])
 
 dAIAlwaysTrain = CivDict({
-	iNorse: [iCrossbowman],
 	iMoors: [iCrossbowman],
-	iSpain: [iCrossbowman],
-	iFrance: [iCrossbowman],
-	iEngland: [iCrossbowman],
-	iHolyRome: [iCrossbowman],
-	iPoland: [iCrossbowman],
 	iTurks: [iMamlukCavalry],
 }, [])
 

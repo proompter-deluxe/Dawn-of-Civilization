@@ -172,7 +172,7 @@ def getCityValue(city, iCompany):
 	
 	elif iCompany == iHanseaticLeague:
 		if city.getRegionID() in [rLowerGermany, rDenmark, rSweden, rPoland, rBaltics]:
-			iValue += 3
+			iValue += 5
 		elif city.getRegionID() not in [rNorway, rBritain, rFrance, rRuthenia]:
 			return -1
 	elif iCompany == iKnightsTemplar:
