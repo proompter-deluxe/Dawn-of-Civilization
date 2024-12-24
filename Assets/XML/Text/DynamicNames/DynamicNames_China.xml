@@ -3,26 +3,26 @@
 <Civ4GameText xmlns="http://www.firaxis.com">
 	<TEXT>
 		<Tag>TXT_KEY_CIV_CHINA_DESC</Tag>
-		<English>The Han Chinese</English>
+		<English>The Qin</English>
 		<French>
-			<Text>Les Chinois Hans</Text>
+			<Text>Les Qins</Text>
 			<Gender>Male</Gender>
 			<Plural>1</Plural>
 		</French>
 		<German>
-			<Text>Chinesen:Die Chinesesen:Chinesen</Text>
-			<Gender>Male:Male:Male</Gender>
-			<Plural>1:1:1</Plural>
+			<Text>The Qin</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
 		</German>
 		<Italian>
-			<Text>I Cinesi</Text>
+			<Text>The Qin</Text>
 			<Gender>Male</Gender>
-			<Plural>1</Plural>
+			<Plural>0</Plural>
 		</Italian>
 		<Spanish>
-			<Text>Los Chinos</Text>
+			<Text>The Qin</Text>
 			<Gender>Male</Gender>
-			<Plural>1</Plural>
+			<Plural>0</Plural>
 		</Spanish>
 	</TEXT>
 	<TEXT>
@@ -84,14 +84,6 @@
 		<German>Nation of %s1</German>
 		<Italian>Nation of %s1</Italian>
 		<Spanish>Nation of %s1</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CIV_CHINA_ZHOU</Tag>
-		<English>Zhou</English>
-		<French>Zhou</French>
-		<German>Zhou</German>
-		<Italian>Zhou</Italian>
-		<Spanish>Zhou</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIV_CHINA_HAN</Tag>

@@ -34176,7 +34176,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=76,y=58
-	BonusType=BONUS_DEER
 	FeatureType=FEATURE_FOREST, FeatureVariety=1
 	TerrainType=TERRAIN_GRASS
 	PlotType=1
@@ -34665,6 +34664,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=77,y=59
+	BonusType=BONUS_DEER
 	FeatureType=FEATURE_FOREST, FeatureVariety=1
 	TerrainType=TERRAIN_GRASS
 	PlotType=1
@@ -52906,6 +52906,7 @@ BeginPlot
 	isWOfRiver
 	FeatureType=FEATURE_FOREST, FeatureVariety=1
 	TerrainType=TERRAIN_GRASS
+	BonusType=BONUS_COPPER
 	PlotType=1
 EndPlot
 BeginPlot
@@ -52919,6 +52920,7 @@ BeginPlot
 	x=117,y=50
 	isNOfRiver
 	RiverWEDirection=1
+	BonusType=BONUS_RARE_EARTHS
 	TerrainType=TERRAIN_PLAINS
 	PlotType=1
 EndPlot
@@ -53388,15 +53390,15 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=118,y=48
-	BonusType=BONUS_RARE_EARTHS
+	FeatureType=FEATURE_FOREST, FeatureVariety=3
 	TerrainType=TERRAIN_GRASS
-	PlotType=1
+	PlotType=2
 EndPlot
 BeginPlot
 	x=118,y=49
 	FeatureType=FEATURE_FOREST, FeatureVariety=1
 	TerrainType=TERRAIN_GRASS
-	PlotType=1
+	PlotType=2
 EndPlot
 BeginPlot
 	x=118,y=50
@@ -53874,6 +53876,8 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=119,y=50
+	RiverNSDirection=2
+	isWOfRiver
 	BonusType=BONUS_COAL
 	FeatureType=FEATURE_FOREST, FeatureVariety=1
 	TerrainType=TERRAIN_GRASS
@@ -53886,10 +53890,8 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=119,y=52
-	BonusType=BONUS_COPPER
-	FeatureType=FEATURE_FOREST, FeatureVariety=1
 	TerrainType=TERRAIN_PLAINS
-	PlotType=1
+	PlotType=0
 EndPlot
 BeginPlot
 	x=119,y=53
@@ -54357,8 +54359,9 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=120,y=52
+	FeatureType=FEATURE_FOREST, FeatureVariety=1
 	TerrainType=TERRAIN_PLAINS
-	PlotType=0
+	PlotType=1
 EndPlot
 BeginPlot
 	x=120,y=53
@@ -54371,7 +54374,7 @@ EndPlot
 BeginPlot
 	x=120,y=54
 	TerrainType=TERRAIN_STEPPE
-	PlotType=1
+	PlotType=2
 EndPlot
 BeginPlot
 	x=120,y=55
@@ -54834,8 +54837,9 @@ BeginPlot
 	x=121,y=53
 	isNOfRiver
 	RiverWEDirection=1
-	FeatureType=FEATURE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_PLAINS
+	TerrainType=TERRAIN_GRASS
+	BonusType=BONUS_PIG
+	BonusVarietyType=BONUS_PIG_FURRY
 	PlotType=2
 EndPlot
 BeginPlot
@@ -55309,10 +55313,9 @@ BeginPlot
 	isNOfRiver
 	RiverWEDirection=1
 	isWOfRiver
-	BonusType=BONUS_PIG
-	BonusVarietyType=BONUS_PIG_FURRY
+	FeatureType=FEATURE_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
-	PlotType=2
+	PlotType=1
 EndPlot
 BeginPlot
 	x=122,y=54

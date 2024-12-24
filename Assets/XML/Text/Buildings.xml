@@ -1866,6 +1866,14 @@
 		<Spanish>Confucian Academy</Spanish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_BUILDING_CONFUCIAN_MONASTERY_SHU</Tag>
+		<English>Patronized Confucian Academy</English>
+		<French>Patronized Confucian Academy</French>
+		<German>Patronized Confucian Academy</German>
+		<Italian>Patronized Confucian Academy</Italian>
+		<Spanish>Patronized Confucian Academy</Spanish>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CONFUCIAN_MONASTERY_STRATEGY</Tag>
 		<English>[COLOR_BUILDING_TEXT]Academies[COLOR_REVERT] ([COLOR_BUILDING_TEXT]Confucian Monasteries[COLOR_REVERT]) allow you to create [COLOR_UNIT_TEXT]Confucian Scholars[COLOR_REVERT], who can spread [COLOR_HIGHLIGHT_TEXT]Confucianism[COLOR_REVERT] in other cities. They also provide culture and a slight boost to research.</English>
 		<French>[COLOR_BUILDING_TEXT]Academies[COLOR_REVERT] ([COLOR_BUILDING_TEXT]Confucian Monasteries[COLOR_REVERT]) allow you to create [COLOR_UNIT_TEXT]Confucian Scholars[COLOR_REVERT], who can spread [COLOR_HIGHLIGHT_TEXT]Confucianism[COLOR_REVERT] in other cities. They also provide culture and a slight boost to research.</French>
@@ -3328,6 +3336,14 @@
 		<German>[TAB]Shahabuddin Muhammad Ghori had no offspring, but he treated his Turkic slaves as his sons, who were trained both as soldiers and administrators and provided with the best possible education. Many of his competent and loyal slaves rose to positions of importance in Shahabuddin Ghori's army and government.[PARAGRAPH:1]When a courtier lamented that the Sultan had no male heirs, Shahabuddin Ghori retorted:[PARAGRAPH:1]"Other monarchs may have one son, or two sons; I have thousands of sons, my Turkish slaves who will be the heirs of my dominions, and who, after me, will take care to preserve my name in the Khutbah throughout these territories."[PARAGRAPH:1]Shahabuddin Ghori's prediction proved true. After his assassination, his Empire was divided amongst his slaves. It was one of those slaves, Qutbuddin Aibak, who founded the Delhi-based dynasty that would rule India for the next 300 years.</German>
 		<Italian>[TAB]Shahabuddin Muhammad Ghori had no offspring, but he treated his Turkic slaves as his sons, who were trained both as soldiers and administrators and provided with the best possible education. Many of his competent and loyal slaves rose to positions of importance in Shahabuddin Ghori's army and government.[PARAGRAPH:1]When a courtier lamented that the Sultan had no male heirs, Shahabuddin Ghori retorted:[PARAGRAPH:1]"Other monarchs may have one son, or two sons; I have thousands of sons, my Turkish slaves who will be the heirs of my dominions, and who, after me, will take care to preserve my name in the Khutbah throughout these territories."[PARAGRAPH:1]Shahabuddin Ghori's prediction proved true. After his assassination, his Empire was divided amongst his slaves. It was one of those slaves, Qutbuddin Aibak, who founded the Delhi-based dynasty that would rule India for the next 300 years.</Italian>
 		<Spanish>[TAB]Shahabuddin Muhammad Ghori had no offspring, but he treated his Turkic slaves as his sons, who were trained both as soldiers and administrators and provided with the best possible education. Many of his competent and loyal slaves rose to positions of importance in Shahabuddin Ghori's army and government.[PARAGRAPH:1]When a courtier lamented that the Sultan had no male heirs, Shahabuddin Ghori retorted:[PARAGRAPH:1]"Other monarchs may have one son, or two sons; I have thousands of sons, my Turkish slaves who will be the heirs of my dominions, and who, after me, will take care to preserve my name in the Khutbah throughout these territories."[PARAGRAPH:1]Shahabuddin Ghori's prediction proved true. After his assassination, his Empire was divided amongst his slaves. It was one of those slaves, Qutbuddin Aibak, who founded the Delhi-based dynasty that would rule India for the next 300 years.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_SHU_BRONZEWORKS</Tag>
+		<English>Bronzeworks</English>
+		<French>Bronzeworks</French>
+		<German>Bronzeworks</German>
+		<Italian>Bronzeworks</Italian>
+		<Spanish>Bronzeworks</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_</Tag>

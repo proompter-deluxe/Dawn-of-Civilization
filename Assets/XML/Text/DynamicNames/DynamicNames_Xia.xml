@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--  -->
+<Civ4GameText xmlns="http://www.firaxis.com">
+	<TEXT>
+		<Tag>TXT_KEY_CIV_XIA_DESC</Tag>
+		<English>The Xia</English>
+		<French>The Xia</French>
+		<German>The Xia</German>
+		<Italian>The Xia</Italian>
+		<Spanish>The Xia</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_XIA_PEOPLES</Tag>
+		<English>Xia Peoples</English>
+		<French>Xia Peoples</French>
+		<German>Xia Peoples</German>
+		<Italian>Xia Peoples</Italian>
+		<Spanish>Xia Peoples</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_XIA_ADJECTIVE</Tag>
+		<English>Xia</English>
+		<French>Xia</French>
+		<German>Xia</German>
+		<Italian>Xia</Italian>
+		<Spanish>Xia</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_CHINA_SHANG</Tag>
+		<English>Shang</English>
+		<French>Shang</French>
+		<German>Shang</German>
+		<Italian>Shang</Italian>
+		<Spanish>Shang</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_CHINA_ZHOU</Tag>
+		<English>Zhou</English>
+		<French>Zhou</French>
+		<German>Zhou</German>
+		<Italian>Zhou</Italian>
+		<Spanish>Zhou</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_XIA_SHORT_DESC</Tag>
+		<English>Xia</English>
+		<French>Xia</French>
+		<German>Xia</German>
+		<Italian>Xia</Italian>
+		<Spanish>Xia</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_XIA_DEFAULT</Tag>
+		<English>Kingdom of %s2</English>
+		<French>Kingdom of %s2</French>
+		<German>Kingdom of %s2</German>
+		<Italian>Kingdom of %s2</Italian>
+		<Spanish>Kingdom of %s2</Spanish>
+	</TEXT>
+</Civ4GameText>

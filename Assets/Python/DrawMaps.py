@@ -8,14 +8,14 @@ from pathlib import Path
 iWorldX = 150
 iWorldY = 80
 
-iNumCivs = 76
+iNumCivs = 78
 (iAmerica, iArabia, iArgentina, iArmenia, iAssyria, iAztecs, iBabylonia, iBrazil, iBulgaria, iBurma, iByzantium, iCanada, 
 iPhoenicia, iCelts, iChina, iChinaS, iColombia, iDravidia, iEgypt, iEngland, iEthiopia, iFrance, iGermany, iGhorids,
 iGreece, iHarappa, iHittites, iHolyRome, iInca, iIndia, iIran, iIroquois, iItaly, iJapan, iJava, iKhazars,
 iKhmer, iCongo, iKorea, iKushans, iMacedon, iMalays, iMali, iMamluks, iMaya, iMexico, iMinoans, iMongols, iMoors, 
 iTimurids, iNetherlands, iNorse, iNubia, iOttomans, iParthia, iPersia, iPoland, iPolynesia, iPortugal, 
-iRome, iRus, iRussia, iSpain, iSwahili, iSweden, iThailand, iTibet, iToltecs, 
-iTurks, iVietnam, iZulu, iIndependent, iIndependent2, iNative, iMinor, iBarbarian) = range(iNumCivs)
+iRome, iRus, iRussia, iShu, iSpain, iSwahili, iSweden, iThailand, iTibet, iToltecs, 
+iTurks, iVietnam, iXia, iZulu, iIndependent, iIndependent2, iNative, iMinor, iBarbarian) = range(iNumCivs)
 
 iNumRegions = 87
 (rBritain, rIreland, rFrance, rIberia, rItaly, rLowerGermany, rCentralEurope, rBalkans, rGreece, rPoland,
@@ -47,6 +47,8 @@ dCivNames = {
 	iPhoenicia: "Phoenicia",
 	iChina: "China",
 	iChinaS: "Wu",
+	iShu: "Shu",
+	iXia: "Xia",
 	iColombia: "Colombia",
 	iEgypt: "Egypt",
 	iEngland: "England",
@@ -131,6 +133,8 @@ iBabylonia :	((88, 45),	(90, 48)),
 iHarappa :		((99, 45),	(102, 47)),
 iChina :		((120, 51),	(126, 56)),
 iChinaS :		((117, 42),	(131, 50)),
+iShu :			((117, 46),	(122, 49)),
+iXia:			((120, 51), (125, 54)),
 iGreece :		((74, 49),	(80, 53)),
 iIndia :		((107, 44),	(111, 46)),
 iPhoenicia :	((84, 47),	(85, 49)),

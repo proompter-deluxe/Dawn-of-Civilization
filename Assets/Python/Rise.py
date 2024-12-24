@@ -39,6 +39,8 @@ lExpansionCivs = [
 	iParthia,
 	iAztecs,
 	iGhorids,
+	iChina,
+	iAssyria,
 ]
 
 lIndependenceCivs = [
@@ -77,6 +79,7 @@ dClearedForBirth = {
 	iGreece: iMinoans,
 	iIndia: iHarappa,
 	iAssyria: iBabylonia,
+	iChina: iShu,
 }
 
 lAlwaysClear = [
@@ -84,6 +87,7 @@ lAlwaysClear = [
 	iMinoans,
 	iHarappa,
 	iBabylonia,
+	iShu,
 ]
 
 lBirthWars = [
@@ -95,6 +99,8 @@ lBirthWars = [
 	(iArabia, iParthia),
 	(iMongols, iChina),
 	(iMongols, iChinaS),
+	(iMongols, iShu),
+	(iMongols, iXia),
 	(iOttomans, iByzantium),
 	(iOttomans, iBulgaria),
 	(iMoors, iSpain),
@@ -937,7 +943,11 @@ class Birth(object):
 			return
 		
 		iClearedCiv = dClearedForBirth[self.iCiv]
-		
+
+		# resurrected civs are considered a different entity, and these don't need to be cleared for birth
+		if data.civs[iClearedCiv].iResurrections > 0:
+			return
+
 		if not self.isHuman() and iClearedCiv not in lAlwaysClear:
 			return
 			
@@ -948,7 +958,11 @@ class Birth(object):
 			return
 
 		# only collapse Babylonia to prepare Assyrian Empire if player is not around
-		if self.iCiv == iBabylonia and not autoplay():
+		if iClearedCiv == iBabylonia and not autoplay():
+			return
+		
+		# only collapse Shu if player is not Xia, China or Vietnam (Nanyue)
+		if iClearedCiv == iShu and (player(iChina).isHuman() or player(iVietnam).isHuman() or player(iXia).isHuman()):
 			return
 		
 		if turn() >= year(dFall[iClearedCiv]).deviate(5, data.iSeed):

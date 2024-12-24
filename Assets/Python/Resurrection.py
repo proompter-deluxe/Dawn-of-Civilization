@@ -19,35 +19,31 @@ RESURRECTION_POPUP = (
 		.build()
 )
 
-
+# check every turn but only resurrect maximum one civ per turn
 @handler("BeginGameTurn")
 def checkResurrection():
-	if every(10):
+	if not isResurrectionPossible():
+		return
+
+	iNationalismModifier = min(20, 4 * game.countKnownTechNumTeams(iNationalism))
+	possibleResurrections = civs.major().where(canRespawn).sort(lambda c: (-getImpact(c), data.civs[c].iLastTurnAlive))
+	
+	for iCiv in possibleResurrections:
 		if not isResurrectionPossible():
 			return
-	
-		iNationalismModifier = min(20, 4 * game.countKnownTechNumTeams(iNationalism))
-		possibleResurrections = civs.major().where(canRespawn).sort(lambda c: (-getImpact(c), data.civs[c].iLastTurnAlive))
-		
+
 		# civs entirely controlled by minors will always respawn
-		for iCiv in possibleResurrections:
-			if not isResurrectionPossible():
+		if cities.respawn(iCiv).all(is_minor):
+			resurrectionCities = getResurrectionCities(iCiv)
+			if canResurrectFromCities(iCiv, resurrectionCities):
+				doResurrection(iCiv, resurrectionCities)
 				return
-			if cities.respawn(iCiv).all(is_minor):
-				resurrectionCities = getResurrectionCities(iCiv)
-				if canResurrectFromCities(iCiv, resurrectionCities):
-					doResurrection(iCiv, resurrectionCities)
-					# return # let's not limit it to 1. If it's possible, it's possible!
-					
-		# otherwise minimum amount of cities and random chance are required
-		for iCiv in possibleResurrections:
-			if not isResurrectionPossible():
+				
+		elif rand(100) - iNationalismModifier < dResurrectionProbability[iCiv]:
+			resurrectionCities = getResurrectionCities(iCiv)
+			if canResurrectFromCities(iCiv, resurrectionCities):
+				doResurrection(iCiv, resurrectionCities)
 				return
-			if rand(100) - iNationalismModifier + 10 < dResurrectionProbability[iCiv]:
-				resurrectionCities = getResurrectionCities(iCiv)
-				if canResurrectFromCities(iCiv, resurrectionCities):
-					doResurrection(iCiv, resurrectionCities)
-					# return # let's not limit it to 1. If it's possible, it's possible!
 
 
 @handler("releasedCivilization")
@@ -110,15 +106,14 @@ def isPartOfResurrection(iCiv, city, bOnlyOne):
 	iOwnerStability = stability(iOwner)
 	bCapital = city.atPlot(plots.respawnCapital(iCiv))
 	
-	# flips are less likely before Nationalism
-	if game.countKnownTechNumTeams(iNationalism) == 0:
+	# flips are less likely before Nationalism for the human player
+	if player(iOwner).isHuman() and game.countKnownTechNumTeams(iNationalism) == 0:
 		iOwnerStability += 1
 	
-	# flips are more likely between AIs to make the world more dynamic
-	# TODO: maybe restore this during autoplay?
-	#if not player(iOwner).isHuman() and not player(iPlayer).isHuman():
-	#	iOwnerStability -= 1
-	
+	# China gets a stability malus prior to 300
+	if civ(iOwner) == iChina and year() < 300:
+		iOwnerStability = iStabilityUnstable
+
 	# if unstable or worse, all cities flip
 	if iOwnerStability <= iStabilityUnstable:
 		return True

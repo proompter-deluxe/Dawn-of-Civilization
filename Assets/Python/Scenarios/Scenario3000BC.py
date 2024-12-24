@@ -42,6 +42,9 @@ lTribalVillages = [
 def createStartingUnits():
 	makeUnit(iBabylonia, iWorker, plots.capital(iBabylonia))
 
+	if not player(iBabylonia).isHuman():
+		makeUnit(iBabylonia, iSettler, plots.capital(iBabylonia))
+		makeUnit(iBabylonia, iMilitia, plots.capital(iBabylonia))
 
 scenario3000BC = Scenario(
 	iStartYear = -3000,

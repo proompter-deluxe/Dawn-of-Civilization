@@ -1425,7 +1425,30 @@
 		<Italian>Haci I Giray</Italian>
 		<Spanish>Haci I Giray</Spanish>
 	</TEXT>
-	
+	<TEXT>
+		<Tag>TXT_KEY_LEADER_LIU_BEI</Tag>
+		<English>Liu Bei</English>
+		<French>Liu Bei</French>
+		<German>Liu Bei</German>
+		<Italian>Liu Bei</Italian>
+		<Spanish>Liu Bei</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_LEADER_CANCONG</Tag>
+		<English>Cancong</English>
+		<French>Cancong</French>
+		<German>Cancong</German>
+		<Italian>Cancong</Italian>
+		<Spanish>Cancong</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_LEADER_CHENG_TANG</Tag>
+		<English>Cheng Tang</English>
+		<French>Cheng Tang</French>
+		<German>Cheng Tang</German>
+		<Italian>Cheng Tang</Italian>
+		<Spanish>Cheng Tang</Spanish>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_LEADER_</Tag>
 		<English></English>

@@ -51,12 +51,23 @@ dSpecificVassalTitles = deepdict({
 		iTurks : "TXT_KEY_CIV_CHINESE_TURKS",
 		iMongols : "TXT_KEY_CIV_CHINESE_MONGOLIA",
 		iChinaS: "TXT_KEY_CIV_CHINA_SOUTH_VASSAL_OF_NORTH",
+		iShu : "TXT_KEY_CIV_SHU_VASSAL_OF_CHINA"
 	},
 	iChinaS : {
 		iKorea : "TXT_KEY_CIV_CHINESE_KOREA",
 		iTurks : "TXT_KEY_CIV_CHINESE_TURKS",
 		iMongols : "TXT_KEY_CIV_CHINESE_MONGOLIA",
 		iChina: "TXT_KEY_CIV_CHINA_NORTH_VASSAL_OF_SOUTH",
+		iShu : "TXT_KEY_CIV_SHU_VASSAL_OF_CHINA"
+	},
+	iShu: {
+		iChina: "TXT_KEY_CIV_CHINA_NORTH_VASSAL_OF_SOUTH",
+		iChinaS: "TXT_KEY_CIV_CHINA_SOUTH_VASSAL_OF_NORTH",
+	},
+	iXia: {
+		iChina: "TXT_KEY_CIV_CHINA_NORTH_VASSAL_OF_SOUTH",
+		iChinaS: "TXT_KEY_CIV_CHINA_SOUTH_VASSAL_OF_NORTH",
+		iShu : "TXT_KEY_CIV_SHU_VASSAL_OF_CHINA"
 	},
 	iMacedon : {
 		iIndia : "TXT_KEY_CIV_MACEDON_INDIA",
@@ -339,6 +350,21 @@ dForeignAdjectives = deepdict({
 		iOttomans : "TXT_KEY_CIV_CHINESE_ADJECTIVE_OTTOMANS",
 		iTibet : "TXT_KEY_CIV_CHINESE_ADJECTIVE_TIBET",
 	},
+	iShu : {
+		iEgypt : "TXT_KEY_CIV_CHINESE_ADJECTIVE_EGYPT",
+		iIndia : "TXT_KEY_CIV_CHINESE_ADJECTIVE_INDIA",
+		iBabylonia : "TXT_KEY_CIV_CHINESE_ADJECTIVE_BABYLONIA",
+		iPersia : "TXT_KEY_CIV_CHINESE_ADJECTIVE_PERSIA",
+		iRome : "TXT_KEY_CIV_CHINESE_ADJECTIVE_ROME",
+		iJapan : "TXT_KEY_CIV_CHINESE_ADJECTIVE_JAPAN",
+		iKorea : "TXT_KEY_CIV_CHINESE_ADJECTIVE_KOREA",
+		iByzantium : "TXT_KEY_CIV_CHINESE_ADJECTIVE_BYZANTIUM",
+		iArabia : "TXT_KEY_CIV_CHINESE_ADJECTIVE_ARABIA",
+		iKhmer : "TXT_KEY_CIV_CHINESE_ADJECTIVE_KHMER",
+		iMongols : "TXT_KEY_CIV_CHINESE_ADJECTIVE_MONGOLIA",
+		iOttomans : "TXT_KEY_CIV_CHINESE_ADJECTIVE_OTTOMANS",
+		iTibet : "TXT_KEY_CIV_CHINESE_ADJECTIVE_TIBET",
+	},
 })
 
 dForeignNames = deepdict({
@@ -355,6 +381,7 @@ dForeignNames = deepdict({
 		iEgypt : "TXT_KEY_CIV_ROMAN_NAME_EGYPT",
 		iChina : "TXT_KEY_CIV_ROMAN_NAME_CHINA",
 		iChinaS : "TXT_KEY_CIV_ROMAN_NAME_CHINA",
+		iShu : "TXT_KEY_CIV_ROMAN_NAME_CHINA",
 		iBabylonia : "TXT_KEY_CIV_ROMAN_NAME_BABYLONIA",
 		iGreece : "TXT_KEY_CIV_ROMAN_NAME_GREECE",
 		iPersia : "TXT_KEY_CIV_ROMAN_NAME_PERSIA",
@@ -443,13 +470,13 @@ dForeignNames = deepdict({
 	},
 })
 
-lRepublicOf = [iEgypt, iIndia, iChina, iChinaS, iPersia, iJapan, iEthiopia, iKorea, iNorse, iTurks, iTibet, iKhmer, iHolyRome, iMali, iPoland, iTimurids, iOttomans, iThailand, iIran]
+lRepublicOf = [iEgypt, iIndia, iChina, iChinaS, iShu, iXia, iPersia, iJapan, iEthiopia, iKorea, iNorse, iTurks, iTibet, iKhmer, iHolyRome, iMali, iPoland, iTimurids, iOttomans, iThailand, iIran]
 lRepublicAdj = [iBabylonia, iRome, iMoors, iSpain, iFrance, iPortugal, iInca, iItaly, iAztecs, iArgentina]
 
 lSocialistRepublicOf = [iEgypt, iMamluks, iMoors, iHolyRome, iBrazil, iNorse, iColombia]
 lSocialistRepublicAdj = [iPersia, iTurks, iItaly, iAztecs, iIran, iArgentina]
 
-lPeoplesRepublicOf = [iIndia, iChina, iChinaS, iPolynesia, iJapan, iTibet, iMali, iPoland, iTimurids, iThailand, iCongo]
+lPeoplesRepublicOf = [iIndia, iChina, iChinaS, iShu, iXia, iPolynesia, iJapan, iTibet, iMali, iPoland, iTimurids, iThailand, iCongo]
 lPeoplesRepublicAdj = [iDravidia, iByzantium, iMongols]
 
 # prefer all islamic republics to use the "islamic republic" name; if some names don't fit, add them as exceptions
@@ -463,6 +490,8 @@ dEmpireThreshold = {
 	iKorea : 4,
 	iChina: 5,
 	iChinaS: 9,
+	iShu: 7,
+	iXia: 5,
 	iTibet : 2,
 	iMoors : 4,
 	iHolyRome : 3,
@@ -517,6 +546,8 @@ dStartingLeaders = [
 	iAssyria : iAshurbanipal,
 	iChina : iQinShiHuang,
 	iChinaS : iSunQuan,
+	iShu : iLiuBei,
+	iXia: iChengTang,
 	iHittites : iMursili,
 	iNubia : iTaharqa,
 	iGreece : iPericles,
@@ -1006,6 +1037,15 @@ def specificName(iPlayer):
 			if iEra >= iRenaissance:
 				return "TXT_KEY_CIV_CHINA_MING"
 
+	elif iCiv == iShu:
+		if bResurrected:
+			if not (bEmpire and not player(iChina).isExisting()):
+				return "TXT_KEY_CIV_SHU_HAN"
+			
+	elif iCiv == iVietnam:
+		if year() < year(dBirth[iChinaS]):
+			return "TXT_KEY_KINGDOM_OF_ADJECTIVE"
+
 	elif iCiv == iAssyria:
 		if bResurrected: # and (iReligion == iOrthodoxy or iReligion == iCatholicism):
 			return capitalName(iPlayer)
@@ -1334,9 +1374,7 @@ def specificAdjective(iPlayer):
 				if year() >= year(-200):
 					return "TXT_KEY_CIV_CHINA_HAN"
 				
-				return "TXT_KEY_CIV_CHINA_QIN"
-			
-			return "TXT_KEY_CIV_CHINA_ZHOU"
+				return "TXT_KEY_CIV_CHINA_QIN"			
 
 	elif iCiv == iChinaS:
 		if bMonarchy:
@@ -1347,7 +1385,23 @@ def specificAdjective(iPlayer):
 				return "TXT_KEY_CIV_WU_MING"
 
 			return "TXT_KEY_CIV_WU_WU"
-			
+
+	elif iCiv == iShu:	
+		if bResurrected and bEmpire and not player(iChina).isExisting():
+			return "TXT_KEY_CIV_CHINA_HAN"
+
+	elif iCiv == iXia:
+		if getColumn(iPlayer) >= 3:
+			return "TXT_KEY_CIV_CHINA_ZHOU"
+		if player(iCiv).getNumCities() >= 3:
+			return "TXT_KEY_CIV_CHINA_SHANG"			
+
+	elif iCiv == iVietnam:
+		if year() >= year(dBirth[iChinaS]):
+			return "TXT_KEY_CIV_VIETNAM_ADJECTIVE"
+		else:
+			return "TXT_KEY_ADJECTIVE_NANYUE"
+
 	elif iCiv == iBabylonia:
 		if bCityStates and not bEmpire:
 			return "TXT_KEY_CIV_BABYLONIA_MESOPOTAMIAN"
@@ -1862,7 +1916,16 @@ def specificTitle(iPlayer, lPreviousOwners=[]):
 			if iEra <= iMedieval and not (tPlayer.isHasTech(iPaper) and tPlayer.isHasTech(iGunpowder)):
 				return "TXT_KEY_KINGDOM_OF_ADJECTIVE" # "Kingdom of Wu", using adjective aka %s2
 			return "TXT_KEY_KINGDOM_ADJECTIVE"
-			
+
+	elif iCiv == iShu:
+		if bResurrected:
+			if bEmpire:
+				if not player(iChina).isExisting():
+					return "TXT_KEY_EMPIRE_ADJECTIVE" # Han
+				else:
+					return "TXT_KEY_EMPIRE_OF" # Shu-Han
+
+			return "TXT_KEY_KINGDOM_OF"	# Shu-Han
 
 	elif iCiv == iBabylonia:
 		if bCityStates and not bEmpire:
@@ -2546,6 +2609,12 @@ def leaderName(iPlayer):
 		if iLeader == iHongwu:
 			if year() >= year(1700):
 				return "TXT_KEY_LEADER_KANGXI"
+	
+	elif iCiv == iShu:
+		if not bResurrected:
+			return "TXT_KEY_LEADER_CANCONG"
+		else:
+			return "TXT_KEY_LEADER_LIU_BEI"
 				
 	elif iCiv == iDravidia:
 		if iLeader == iKrishnaDevaRaya:

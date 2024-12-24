@@ -3749,6 +3749,22 @@
 		<Spanish>Siege Engineer</Spanish>
 	</TEXT>	
 	<TEXT>
+		<Tag>TXT_KEY_UNIT_SHU_NANMAN_ARCHER</Tag>
+		<English>Nanman Archer</English>
+		<French>Nanman Archer</French>
+		<German>Nanman Archer</German>
+		<Italian>Nanman Archer</Italian>
+		<Spanish>Nanman Archer</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_XIA_LEVY</Tag>
+		<English>Levy Spearman</English>
+		<French>Levy Spearman</French>
+		<German>Levy Spearman</German>
+		<Italian>Levy Spearman</Italian>
+		<Spanish>Levy Spearman</Spanish>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_UNIT_</Tag>
 		<English></English>
 		<French></French>

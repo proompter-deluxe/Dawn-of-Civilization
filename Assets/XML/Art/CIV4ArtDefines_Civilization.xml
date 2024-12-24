@@ -462,5 +462,17 @@
 			<Path>Art/Interface/TeamColor/FlagDECAL_Khazars.dds</Path>
 			<bWhiteFlag>0</bWhiteFlag>
 		</CivilizationArtInfo>
+		<CivilizationArtInfo>
+			<Type>ART_DEF_CIVILIZATION_SHU</Type>
+			<Button>Art/Interface/Buttons/Civilizations/shu.dds</Button>
+			<Path>Art/Interface/TeamColor/FlagDECAL_Shu.dds</Path>
+			<bWhiteFlag>0</bWhiteFlag>
+		</CivilizationArtInfo>
+		<CivilizationArtInfo>
+			<Type>ART_DEF_CIVILIZATION_XIA</Type>
+			<Button>Art/Interface/Buttons/Civilizations/xia.dds</Button>
+			<Path>Art/Interface/TeamColor/FlagDECAL_Xia.dds</Path>
+			<bWhiteFlag>0</bWhiteFlag>
+		</CivilizationArtInfo>
 	</CivilizationArtInfos>
 </Civ4ArtDefines>

@@ -7023,6 +7023,15 @@ int CvPlot::calculateImprovementYieldChange(ImprovementTypes eImprovement, Yield
 		}
 	}
 
+	// Leoreth: Shu UP: +1 commerce from Mines
+	if (ePlayer != NO_PLAYER && GET_PLAYER(ePlayer).getCivilizationType() == SHU)
+	{
+		if (eYield == YIELD_COMMERCE && eImprovement == IMPROVEMENT_MINE)
+		{
+			iYield += 1;
+		}
+	}
+
 	// Leoreth: Javanese UP: double yield from food improvements on islands
 	if (ePlayer != NO_PLAYER && GET_PLAYER(ePlayer).getCivilizationType() == JAVA && area()->getNumTiles() <= 30)
 	{

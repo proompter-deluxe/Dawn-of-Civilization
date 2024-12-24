@@ -132,7 +132,13 @@ def createColonialWorker(city):
 			if plots.city_radius(city).any(lambda p: p.getBonusType(-1) >= 0 and p.getImprovementType() == -1):
 				if plot(city).area().getNumAIUnits(city.getOwner(), UnitAITypes.UNITAI_WORKER) < plot(city).area().getCitiesPerPlayer(city.getOwner()):
 					createRoleUnit(city.getOwner(), city, iWork)
-			
+
+# Xia UP : ancestral shine on city foundation
+@handler("cityBuilt")
+def xiaUniquePower(city):
+	if civ(city) == iXia:
+		city.setHasRealBuilding(unique_building(iXia, iPaganTemple), True)
+
 			
 ### UNIT BUILT ###
 
@@ -504,9 +510,13 @@ def romanRelations(iPlayer):
 
 # Northern China is upset at the south for rejecting imperial rule in Chang'an / Luoyang
 # This is to prevent the two Chinas from getting friendly and tech trading etc
+# Idem for Shu / Shu-Han
 @handler("birth")
 def chineseRelations(iPlayer):
 	if civ(iPlayer) == iChinaS and player(iChina).isExisting():
+		iChinaPlayer = slot(iChina)
+		player(iChinaPlayer).AI_changeMemoryCount(iPlayer, MemoryTypes.MEMORY_EVENT_BAD_TO_US, 4)
+	if civ(iPlayer) == iChina and player(iShu).isExisting():
 		iChinaPlayer = slot(iChina)
 		player(iChinaPlayer).AI_changeMemoryCount(iPlayer, MemoryTypes.MEMORY_EVENT_BAD_TO_US, 4)
 
@@ -623,8 +633,8 @@ def buildCapitalInfrastructure(iPlayer, city):
 			
 			iStateReligion = player(iPlayer).getStateReligion()
 			if iStateReligion >= 0:
-				for religiosBuilding in lReligiousBuildings:
-					city.setHasRealBuilding(religiosBuilding(iStateReligion), True)
+				for religiousBuilding in lReligiousBuildings:
+					city.setHasRealBuilding(religiousBuilding(iStateReligion), True)
 					
 					
 def giveEarlyColonists(iCiv, overridePlot = None):

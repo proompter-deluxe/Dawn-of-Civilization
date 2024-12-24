@@ -216,7 +216,7 @@ dGoals = {
 	),
 	iChina: (
 		All(
-			DefeatedUnits(civs(iBarbarian, iIndependent, iIndependent2), 30),
+			DefeatedUnits(civs(iBarbarian, iIndependent, iIndependent2, iShu), 30),
 			AttitudeCount(AttitudeTypes.ATTITUDE_PLEASED, 1, civs=group(iCivGroupEurope).named(EUROPE)),
 			NoCityLost(),
 			by=200,
@@ -246,6 +246,26 @@ dGoals = {
 			by=1550,
 		),
 		GoldenAges(4, by=1900),
+	),
+	iShu : (
+		ResourceCount(sum(lHappinessResources).named(HAPPINESS_RESOURCES), 8, by=-300),
+		Control(
+			plots.region(rNorthChina).named(CHINA_NORTH),
+			plots.region(rSouthChina).named(CHINA_SOUTH),
+			by=450,
+		),
+		HappiestTurns(50, by=600),
+	),
+	iXia : (
+		CultureAmount(300, by=-480),
+		Control(
+			plots.region(rNorthChina).named(CHINA_NORTH),
+			by=-360,
+		),
+		All (
+			Found(iConfucianism),
+			Found(iTaoism),
+		),
 	),
 	iHittites: (
 		ResourceCount(sum(iCopper, iIron), 4, by=-900),

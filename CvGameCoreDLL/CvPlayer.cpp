@@ -24393,6 +24393,8 @@ EraTypes CvPlayer::getSoundtrackEra()
 			{
 			case CHINA:
 			case YANGTZE_CHINA:
+			case SHU:
+			case XIA:
 			case MONGOLS:
 			case JAPAN:
 			case KOREA:

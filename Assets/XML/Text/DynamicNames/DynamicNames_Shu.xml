@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--  -->
+<Civ4GameText xmlns="http://www.firaxis.com">
+	<TEXT>
+		<Tag>TXT_KEY_CIV_SHU_DESC</Tag>
+		<English>The Shu</English>
+		<French>The Shu</French>
+		<German>The Shu</German>
+		<Italian>The Shu</Italian>
+		<Spanish>The Shu</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_SHU_PEOPLES</Tag>
+		<English>Nanman Peoples</English>
+		<French>Nanman Peoples</French>
+		<German>Nanman Peoples</German>
+		<Italian>Nanman Peoples</Italian>
+		<Spanish>Nanman Peoples</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_SHU_ADJECTIVE</Tag>
+		<English>Shu</English>
+		<French>Shu</French>
+		<German>Shu</German>
+		<Italian>Shu</Italian>
+		<Spanish>Shu</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_SHU_SHORT_DESC</Tag>
+		<English>Shu</English>
+		<French>Shu</French>
+		<German>Shu</German>
+		<Italian>Shu</Italian>
+		<Spanish>Shu</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_SHU_DEFAULT</Tag>
+		<English>Kingdom of Shu</English>
+		<French>Kingdom of Shu</French>
+		<German>Kingdom of Shu</German>
+		<Italian>Kingdom of Shu</Italian>
+		<Spanish>Kingdom of Shu</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_SHU_ADJECTIVE</Tag>
+		<English>Shu</English>
+		<French>Shu</French>
+		<German>Shu</German>
+		<Italian>Shu</Italian>
+		<Spanish>Shu</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_SHU_HAN</Tag>
+		<English>Shu-Han</English>
+		<French>Shu-Han</French>
+		<German>Shu-Han</German>
+		<Italian>Shu-Han</Italian>
+		<Spanish>Shu-Han</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_SHU_VASSAL_OF_CHINA</Tag>
+		<English>Commandery of Shu</English>
+		<French>Commandery of Shu</French>
+		<German>Commandery of Shu</German>
+		<Italian>Commandery of Shu</Italian>
+		<Spanish>Commandery of Shu</Spanish>
+	</TEXT>
+</Civ4GameText>

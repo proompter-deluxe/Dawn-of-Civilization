@@ -207,11 +207,10 @@ lCivilizations = [
 		techs=techs.of(iPastoralism, iPottery, iAgriculture, iSailing, iTanning)
 	),
 	Civilization(
-		iChina,
+		iXia,
 		iGold=50,
 		lCivics=[iDespotism],
-		lEnemies=[iIndependent, iIndependent2],
-		techs=techs.column(1).without(iSailing).including(iSmelting, iProperty, iCeremony)
+		techs=techs.column(1).without(iSailing).including(iProperty, iCeremony)
 	),
 	Civilization(
 		iHittites,
@@ -228,9 +227,14 @@ lCivilizations = [
 	),
 	Civilization(
 		iAssyria,
-		lEnemies=[iBabylonia],
 		lCivics=[iDespotism, iSlavery, iDeification],
 		techs=techs.column(2).without(iRiding, iSeafaring).including(iWriting)
+	),
+	Civilization(
+		iShu,
+		iGold=50,
+		lCivics=[iDespotism, iSlavery, iDeification],
+		techs=techs.column(2).including(iAlloys).without(iRiding, iSeafaring)
 	),
 	Civilization(
 		iPhoenicia,
@@ -255,7 +259,6 @@ lCivilizations = [
 		iAdvancedStartPoints=200,
 		iStateReligion=iZoroastrianism,
 		lCivics=[iMonarchy, iManorialism, iRedistribution, iClergy],
-		lEnemies=[iAssyria],
 		techs=techs.column(3).including(iBloomery, iPriesthood, iMathematics, iContract).without(iSeafaring, iShipbuilding)
 	),
 	Civilization(
@@ -266,6 +269,17 @@ lCivilizations = [
 		techs=techs.column(3).including(iBloomery, iPriesthood, iMathematics).without(iSeafaring, iShipbuilding)
 	),
 	Civilization(
+		iCelts,
+		techs=techs.column(2).including(iAlloys),
+		lCivics=[iMonarchy],
+	),
+	Civilization(
+		iVietnam,
+		iGold=50,
+		lCivics=[iMonarchy, iSlavery, iDeification],
+		techs=techs.column(2).including(iAlloys),
+	),
+	Civilization(
 		iMacedon,
 		iGold=50,
 		iAdvancedStartPoints=100,
@@ -273,9 +287,11 @@ lCivilizations = [
 		techs=techs.column(3).including(iBloomery, iMathematics).without(iShipbuilding)
 	),
 	Civilization(
-		iCelts,
-		techs=techs.column(2).including(iAlloys),
-		lCivics=[iMonarchy],
+		iChina,
+		iGold=250,
+		iAdvancedStartPoints=100,
+		lCivics=[iDespotism, iSlavery, iRedistribution, iHegemony],
+		techs=techs.column(4).including(iGeneralship).without(iShipbuilding, iNavigation)
 	),
 	Civilization(
 		iRome,
@@ -295,8 +311,8 @@ lCivilizations = [
 		iParthia,
 		iGold=100,
 		iAdvancedStartPoints=120,
-		lCivics=[iDespotism, iSlavery, iHegemony],
-		techs=techs.column(4).including(iGeneralship).without(iShipbuilding, iNavigation, iCement)
+		lCivics=[iMonarchy, iSlavery, iMerchantTrade, iHegemony],
+		techs=techs.column(4).including(iGeneralship, iCurrency).without(iShipbuilding, iNavigation)
 	),
 	Civilization(
 		iMaya,
@@ -408,7 +424,6 @@ lCivilizations = [
 		iTurks,
 		iGold=100,
 		lCivics=[iDespotism, iSlavery, iMerchantTrade, iHegemony],
-		lEnemies=[iKushans],
 		techs=techs.column(5).including(iNobility, iSteel).without(iNavigation, iMedicine, iPhilosophy)
 	),
 	Civilization(
@@ -417,7 +432,6 @@ lCivilizations = [
 		iAdvancedStartPoints=150,
 		iStateReligion=iIslam,
 		lCivics=[iDespotism, iTheocracy, iSlavery, iMerchantTrade, iClergy, iHegemony],
-		lEnemies=[iIndependent, iIndependent2],
 		techs=techs.column(6).including(iAlchemy, iTheology).without(iPolitics)
 	),
 	Civilization(
@@ -495,16 +509,8 @@ lCivilizations = [
 		iGold=300,
 		iAdvancedStartPoints=60,
 		iStateReligion=iShia,
-		lEnemies=[iArabia, iIndependent, iIndependent2],
 		lCivics=[iMonarchy, iSlavery, iMerchantTrade, iClergy, iTheocracy, iHegemony],
 		techs=techs.column(6).including(iTheology, iDoctrine)
-	),
-	Civilization(
-		iVietnam,
-		iGold=200,
-		iStateReligion=iConfucianism,
-		lCivics=[iMonarchy, iCasteSystem, iRedistribution, iMonasticism, iThalassocracy],
-		techs=techs.column(6).including(iCivilService, iAlchemy, iFortification)
 	),
 	Civilization(
 		iSwahili,
@@ -563,7 +569,6 @@ lCivilizations = [
 		iGold=200,
 		iAdvancedStartPoints=30,
 		lCivics=[iMonarchy, iCitizenship, iSlavery, iRedistribution, iDeification, iHegemony],
-		lEnemies=[iIndependent, iIndependent2],
 		techs=techs.column(4).including(iGeneralship, iAesthetics, iCurrency, iLaw).without(iSeafaring, iRiding, iShipbuilding, iCement, iNavigation)
 	),
 	Civilization(
@@ -608,7 +613,6 @@ lCivilizations = [
 		iGold=800,
 		iStateReligion=iIslam,
 		lCivics=[iDespotism, iVassalage, iSlavery, iRegulatedTrade, iSyncretism, iHegemony],
-		lEnemies=[iPersia, iGhorids, iArmenia, iMongols, iParthia, iTurks, iOttomans, iKhazars],
 		techs=techs.column(7).including(iCommune, iCropRotation, iPaper, iDoctrine, iGunpowder)
 	),
 	Civilization(
@@ -702,12 +706,16 @@ dStartingUnits = CivDict({
 		iCounter: 4,
 		iSiege: 4,
 	},
-	iChina: {
+	iXia: {
 		iSettle: 1,
 		iWork: 1,
 		iBase: 2,
-		iDefend: 2,
-		iAttack: 1,
+	},
+	iShu: {
+		iSettle: 1,
+		iShock: 1,
+		iDefend: 1,
+		iBase: 1,
 	},
 	iHittites: {
 		iSettle: 1,
@@ -773,6 +781,15 @@ dStartingUnits = CivDict({
 		iDefend: 3,
 		iAttack: 4,
 		iExplore: 1,
+	},
+	iChina: {
+		iSettle: 3,
+		iWork: 2,
+		iDefend: 4,
+		iSiege: 5,
+		iCityAttack: 8,
+		iCounter: 4,
+		iShockCity: 4,
 	},
 	iRome: {
 		iSettle: 1,
@@ -863,6 +880,7 @@ dStartingUnits = CivDict({
 		iAttack: 3,
 		iCounter: 2,
 		iMissionary: 1,
+		iSiege: 2,
 	},
 	iMali: {
 		iSettle: 1,
@@ -1010,13 +1028,8 @@ dStartingUnits = CivDict({
 		iMissionary: 1,
 	},
 	iVietnam: {
-		iSettle: 1,
-		iWork: 2,
+		iSettle: 2,
 		iDefend: 1,
-		iSkirmish: 4,
-		iMissionary: 1,
-		iWorkerSea: 1,
-		iEscort: 1,
 	},
 	iRus: {
 		iSettle: 3,
@@ -1271,9 +1284,10 @@ dExtraAIUnits = CivDict({
 		iBase: 1,
 	},
 	iChina : {
-		iDefend: 1,
+		iSiege: 4,
+		iCityAttack: 6,
+		iShockCity: 3,
 		iCounter: 1,
-		iWork: 1,
 	},
 	iPhoenicia: {
 		iSettleSea: 2,
@@ -1612,7 +1626,6 @@ dAlwaysTrain = CivDict({
 	iPhoenicia: [iNumidianCavalry],
 	iDravidia: [iWarElephant],
 	iArabia: [iMobileGuard, iGhazi],
-	iVietnam: [iRattanArcher],
 	iAztecs: [iJaguar],
 	iOttomans: [iJanissary, iGreatBombard],
 	iMexico: [iGrenadier],
@@ -1756,6 +1769,72 @@ dTechPreferences = {
 		iEconomics: -20,
 	},
 	iChinaS : {
+		iAesthetics: 40,
+		iContract: 40,
+		iGunpowder: 20,
+		iPrinting: 20,
+		iPaper: 20,
+		iCompass: 20,
+		iConstruction: 20,
+		iCivilService: 15,
+		iStatecraft: 15,
+		iLabourUnions: 15,
+		iNationalism: 15,
+
+		iMachineTools: -20,
+		iReplaceableParts: -20,
+		iBallistics: -30,
+		iCivilLiberties: -100,
+		iHumanities: -100,
+		iAcademia: -100,
+		iFirearms: -50,
+		iCompanies: -40,
+		iExploration: -40,
+		iOptics: -40,
+		iGeography: -40,
+		iTheology: -40,
+		iEducation: -40,
+		iLogistics: -40,
+		iCombinedArms: -40,
+		iDivination: -20,
+		iSailing: -20,
+		iCartography: -40,
+		iEconomics: -20,
+	},
+	iShu : {
+		iAesthetics: 40,
+		iContract: 40,
+		iGunpowder: 20,
+		iPrinting: 20,
+		iPaper: 20,
+		iCompass: 20,
+		iConstruction: 20,
+		iCivilService: 15,
+		iStatecraft: 15,
+		iLabourUnions: 15,
+		iNationalism: 15,
+
+		iMachineTools: -20,
+		iReplaceableParts: -20,
+		iBallistics: -30,
+		iCivilLiberties: -100,
+		iHumanities: -100,
+		iAcademia: -100,
+		iFirearms: -50,
+		iCompanies: -40,
+		iExploration: -40,
+		iOptics: -40,
+		iGeography: -40,
+		iTheology: -40,
+		iEducation: -40,
+		iLogistics: -40,
+		iCombinedArms: -40,
+		iDivination: -20,
+		iSailing: -20,
+		iCartography: -40,
+		iEconomics: -20,
+	},
+	iXia : {
 		iAesthetics: 40,
 		iContract: 40,
 		iGunpowder: 20,
@@ -2108,6 +2187,7 @@ dTechPreferences = {
 		iCartography: -40,
 	},
 	iPoland : {
+		iGeography: -15,
 		iCombinedArms: 15,
 		iCivilLiberties: 30,
 		iSocialContract: 20,
@@ -2338,10 +2418,40 @@ dBuildingPreferences = {
 		iDujiangyan: 50,
 		iTerracottaArmy: 30,
 		iPorcelainTower: 50,
+		iGreatWall: -30,
 		iHangingGardens: -30,
 		iHimejiCastle: -30,
 		iBorobudur: -30,
 		iBrandenburgGate: -30,
+	},
+	iShu : {
+		iForbiddenPalace: 20,
+		iGrandCanal: 40,
+		iOrientalPearlTower: 40,
+		iDujiangyan: 50,
+		iTerracottaArmy: 30,
+		iPorcelainTower: 50,
+		iGreatWall: -30,
+		iHangingGardens: -30,
+		iHimejiCastle: -30,
+		iBorobudur: -30,
+		iBrandenburgGate: -30,
+	},
+	iXia : {
+		iForbiddenPalace: 20,
+		iGrandCanal: 40,
+		iOrientalPearlTower: 40,
+		iDujiangyan: 50,
+		iTerracottaArmy: 30,
+		iPorcelainTower: 50,
+		iGreatWall: -30,
+		iHangingGardens: -30,
+		iHimejiCastle: -30,
+		iBorobudur: -30,
+		iBrandenburgGate: -30,
+	},
+	iVietnam: {
+		iGreatWall: -30,	
 	},
 	iNubia: {
 		iPalaceOfMinos: -20,

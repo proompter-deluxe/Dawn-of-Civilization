@@ -1241,6 +1241,7 @@ enum CivilizationTypes		// Exposed to Python
 	ROME,
 	RUS,
 	RUSSIA,
+	SHU,
 	SPAIN,
 	SWAHILI,
 	SWEDEN,
@@ -1251,6 +1252,7 @@ enum CivilizationTypes		// Exposed to Python
 
 	TURKS,
 	VIETNAM,
+	XIA,
 	ZULU,
 	INDEPENDENT,
 	INDEPENDENT2,

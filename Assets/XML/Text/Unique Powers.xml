@@ -1265,4 +1265,36 @@
 		<Italian>Removes all non-state religions on city capture and grants gold per religion removed</Italian>
 		<Spanish>Removes all non-state religions on city capture and grants gold per religion removed</Spanish>
 	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UP_SHU_TITLE</Tag>
+		<English>The Power of Metal Craftsmanship:</English>
+		<French>The Power of Metal Craftsmanship:</French>
+		<German>The Power of Metal Craftsmanship:</German>
+		<Italian>The Power of Metal Craftsmanship:</Italian>
+		<Spanish>The Power of Metal Craftsmanship:</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UP_SHU</Tag>
+		<English>+1 [ICON_COMMERCE] from mines</English>
+		<French>+1 [ICON_COMMERCE] from mines</French>
+		<German>+1 [ICON_COMMERCE] from mines</German>
+		<Italian>+1 [ICON_COMMERCE] from mines</Italian>
+		<Spanish>+1 [ICON_COMMERCE] from mines</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UP_XIA_TITLE</Tag>
+		<English>The Mandate of Heaven:</English>
+		<French>The Mandate of Heaven:</French>
+		<German>The Mandate of Heaven:</German>
+		<Italian>The Mandate of Heaven:</Italian>
+		<Spanish>The Mandate of Heaven:</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UP_XIA</Tag>
+		<English>Free ancestral shine on city foundation</English>
+		<French>Free ancestral shine on city foundation</French>
+		<German>Free ancestral shine on city foundation</German>
+		<Italian>Free ancestral shine on city foundation</Italian>
+		<Spanish>Free ancestral shine on city foundation</Spanish>
+	</TEXT>
 </Civ4GameText>

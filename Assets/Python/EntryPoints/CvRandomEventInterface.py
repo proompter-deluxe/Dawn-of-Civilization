@@ -2878,7 +2878,7 @@ def canApplySportsLeagueDone3(argsList):
 ######## Cross' Crusade Variant ########
 
 # If Catholic nation between the discovery of Feudalism and the founding of Protestantism, discovery of Humanities or birth of Timurids, whichever comes first
-# Choice 1 randomly selects a Muslim or indy city in the Levant, Spain, Maghreb, Egypt, Balkans, Greece, Anatolia or Baltics and spawns conquerors
+# Choice 1 randomly selects a Muslim or indy city in the Levant, Spain, Maghreb, Egypt, Balkans, Greece, Anatolia and spawns conquerors
 # Choice 2 randomly selects an Orthodox city in those regions and spawns conquerors
 # Choice 3 declines, auto-selecting choice 1 for another Catholic civ
 
@@ -2905,13 +2905,13 @@ def canTriggerGenericCrusade(argsList):
 	if pPlayer.getStateReligion() != iCatholicism:
 		return false
 
-	return cities.regions(rLevant, rIberia, rMaghreb, rEgypt, rBalkans, rGreece, rAnatolia, rBaltics).any(lambda city: isCityIslamic(city) and not team(city).isVassal(iPlayer))
+	return cities.regions(rLevant, rIberia, rMaghreb, rEgypt, rBalkans, rGreece, rAnatolia).any(lambda city: isCityIslamic(city) and not team(city).isVassal(iPlayer))
 
 def doTriggerCrusadeAgainstAgainstHeathens(argsList):
 	kTriggeredData = argsList[1]
 	iPlayer = kTriggeredData.ePlayer
 
-	targetCity = cities.regions(rLevant, rMaghreb, rEgypt, rBalkans, rGreece, rBaltics).where(lambda city: (gc.getPlayer(city.getOwner()).isMinorCiv() and not city.isHasReligion(iCatholicism) and not city.isHasReligion(iOrthodoxy)) or (isCityIslamic(city) and not team(city).isVassal(iPlayer))).random()
+	targetCity = cities.regions(rLevant, rMaghreb, rEgypt, rBalkans, rGreece).where(lambda city: (gc.getPlayer(city.getOwner()).isMinorCiv() and not city.isHasReligion(iCatholicism) and not city.isHasReligion(iOrthodoxy)) or (isCityIslamic(city) and not team(city).isVassal(iPlayer))).random()
 	targetLocation = location(targetCity)
 
 	spawnConquerors(iPlayer, -1, targetLocation, targetLocation, 1, WarPlanTypes.WARPLAN_TOTAL)
@@ -2950,7 +2950,7 @@ def doTriggerCrusadeAgainstAgainstHeathensWithAnotherCatholic(argsList):
 	if len(lValidPlayers) > 0:
 		iNewCrusadeLeader = random_entry(lValidPlayers)
 
-		targetCity = cities.regions(rLevant, rIberia, rMaghreb, rEgypt, rBalkans, rGreece, rAnatolia, rBaltics).where(lambda city: (gc.getPlayer(city.getOwner()).isMinorCiv() and not city.isHasReligion(iCatholicism) and not city.isHasReligion(iOrthodoxy)) or (isCityIslamic(city) and not team(city).isVassal(iPlayer))).random()
+		targetCity = cities.regions(rLevant, rIberia, rMaghreb, rEgypt, rBalkans, rGreece, rAnatolia).where(lambda city: (gc.getPlayer(city.getOwner()).isMinorCiv() and not city.isHasReligion(iCatholicism) and not city.isHasReligion(iOrthodoxy)) or (isCityIslamic(city) and not team(city).isVassal(iPlayer))).random()
 		targetLocation = location(targetCity)
 
 		spawnConquerors(iNewCrusadeLeader, -1, targetLocation, targetLocation, 1, WarPlanTypes.WARPLAN_TOTAL)

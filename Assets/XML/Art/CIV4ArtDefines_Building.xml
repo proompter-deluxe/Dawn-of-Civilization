@@ -1948,6 +1948,26 @@
 			<Button>Art/Structures/Buildings/china_commandery/china_commandery.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_SHU_BRONZEWORKS</Type>
+			<LSystem>LSYSTEM_2x4</LSystem>
+			<bAnimated>0</bAnimated>
+			<fScale>0.7</fScale>
+			<fInterfaceScale>0.5</fInterfaceScale>
+			<NIF>Art/Structures/Buildings/EU3_FarEast_Workshop/asian_workshop.nif</NIF>
+			<KFM/>
+			<Button>Art/Structures/Buildings/EU3_FarEast_Workshop/bronze_workshop_btn.dds</Button>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_CONFUCIAN_MONASTERY_WU</Type>
+			<LSystem>LSYSTEM_2x4</LSystem>
+			<bAnimated>0</bAnimated>
+			<fScale>0.7</fScale>
+			<fInterfaceScale>0.5</fInterfaceScale>
+			<NIF>Art/Structures/Buildings/EU3_FarEast_Courthouse/asian_courthouse.nif</NIF>
+			<KFM/>
+			<Button>,Art/Interface/Buttons/Buildings/Monastery_Confuscianist.dds,Art/Interface/Buttons/Buildings_Atlas.dds,2,12</Button>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_INDIAN_STEPWELL</Type>
 			<LSystem>LSYSTEM_3x3</LSystem>
 			<bAnimated>0</bAnimated>

@@ -906,6 +906,14 @@
 		<Spanish>Uighur</Spanish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_ADJECTIVE_DACIAN</Tag>
+		<English>Dacian</English>
+		<French>Dacian</French>
+		<German>Dacian</German>
+		<Italian>Dacian</Italian>
+		<Spanish>Dacian</Spanish>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_ADJECTIVE_VANDAL</Tag>
 		<English>Vandal</English>
 		<French>Vandal</French>

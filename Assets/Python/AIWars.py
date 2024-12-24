@@ -110,10 +110,10 @@ tMongolsPersiaBR = (98, 52)
 tConquestMongolsPersia = (13, iMongols, iTurks, tMongolsPersiaTL, tMongolsPersiaBR, 7, iMongolsPersiaYear, 10)
 
 iChinaIndiesYear = -240
-tChinaIndiesTL = (118, 49)
-tChinaIndiesBR = (128, 56)
+tChinaIndiesTL = (120, 51)
+tChinaIndiesBR = (128, 57)
 
-tConquestChinaIndependents = (14, iChina, iIndependent, tChinaIndiesTL, tChinaIndiesBR, 3, iChinaIndiesYear, 20)
+tConquestChinaUnification = (14, iChina, iIndependent, tChinaIndiesTL, tChinaIndiesBR, 3, iChinaIndiesYear, 10)
 
 iFranceCrusadesYear = 1090
 iHolyRomeCrusadesYear = 1190
@@ -191,7 +191,7 @@ tDummyConquestRomeHoldingRome= (36, iRome, iBarbarian, tRome, tRome, 1, -3000, 1
 
 
 iParthiaMesopotamiaYear = 220
-tConquestParthiaMesopotamia = (37, iParthia, iRome, tLevantTL, tGreeceMesopotamiaBR, 2, iParthiaMesopotamiaYear, 10)
+tConquestParthiaMesopotamia = (37, iParthia, iRome, tGreeceMesopotamiaTL, tGreeceMesopotamiaBR, 2, iParthiaMesopotamiaYear, 10)
 
 
 iMongolsBaghdadYear = 1260
@@ -221,6 +221,18 @@ tConquestMacedonPunjab = (42, iMacedon, iIndia, tTimuridsPunjabTL, tTimuridsPunj
 iAssyriaEgyptConquestYear = -680
 tConquestAssyriaEgypt = (43, iAssyria, iEgypt, tEgyptTL, tEgyptBR, 2, iAssyriaEgyptConquestYear, 5)
 
+iChinaShuYear = -320
+tChinaShuTL = (117, 45)
+tChinaShuBR = (123, 50)
+
+tConquestChinaShu = (44, iChina, iShu, tChinaShuTL, tChinaShuBR, 2, iChinaShuYear, 10)
+
+iRomeDaciaYear = 100
+tDaciaTL = (74, 57)
+tDaciaBR = (77, 59)
+
+tConquestRomeDacia = (45, iRome, iBarbarian, tDaciaTL, tDaciaBR, 1, iRomeDaciaYear, 10)
+
 lConquests = [
 	tConquestRomeCarthageInSpain,
 	tConquestRomeCarthage, 
@@ -240,7 +252,7 @@ lConquests = [
 	tConquestTurksAnatolia, 
 	tConquestEnglandIreland,
 	tConquestMongolsPersia,
-	tConquestChinaIndependents,
+	#tConquestChinaUnification,
 	#tConquestFranceCrusades, # if re-enabled make sure to not trigger on top of Catholic lands
 	#tConquestHolyRomeCrusades, # if re-enabled make sure to not trigger on top of Catholic lands
 	#tConquestEnglandCrusades, # if re-enabled make sure to not trigger on top of Catholic lands
@@ -264,6 +276,8 @@ lConquests = [
 	tConquestTimuridsPunjab,
 	tConquestMacedonPunjab,
 	tConquestAssyriaEgypt,
+	#tConquestChinaShu,
+	tConquestRomeDacia,
 ]
 
 dConquestChecker = {
@@ -288,6 +302,7 @@ dConquestChecker = {
 	tConquestMacedonPunjab[0]: lambda tConquest: checkConquest(tConquest, tConquestMacedonPersia),
 	tConquestAssyriaEgypt: lambda tConquest: checkConquest(tConquest, tConquestAssyriaLevant),
 	tConquestSpainMoors[0]: lambda tConquest: checkConquest(tConquest, bOnlyPreferred=True),
+	tConquestRomeDacia[0]: lambda tConquest: checkConquest(tConquest, bOnlyPreferred=True),
 }
 
 def checkByzantiumConquestOfCarthage(tConquest):

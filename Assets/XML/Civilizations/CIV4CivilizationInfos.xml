@@ -1418,7 +1418,7 @@
 			<PaganReligion>PAGAN_RELIGION_SHENDAO</PaganReligion>
 			<Impact>IMPACT_CRITICAL</Impact>
 			<Identifier>CHI</Identifier>
-			<StartingYear>-2070</StartingYear>
+			<StartingYear>-384</StartingYear>
 			<LoadingTimes>
 				<LoadingTime>1</LoadingTime>
 				<LoadingTime>0</LoadingTime>
@@ -6564,6 +6564,112 @@
 			<CivilizationActionSound>AS3D_RUSSIA_ORDER</CivilizationActionSound>
 		</CivilizationInfo>
 		<CivilizationInfo>
+			<Type>CIVILIZATION_SHU</Type>
+			<Description>TXT_KEY_CIV_SHU_DESC</Description>
+			<ShortDescription>TXT_KEY_CIV_SHU_SHORT_DESC</ShortDescription>
+			<Adjective>TXT_KEY_CIV_SHU_ADJECTIVE</Adjective>
+			<Civilopedia>TXT_KEY_CIV_SHU_PEDIA</Civilopedia>
+			<DefaultPlayerColor>PLAYERCOLOR_DARK_PURPLE_WHITE</DefaultPlayerColor>
+			<ArtDefineTag>ART_DEF_CIVILIZATION_SHU</ArtDefineTag>
+			<ArtStyleType>ARTSTYLE_ASIAN</ArtStyleType>
+			<UnitArtStyleType>UNIT_ARTSTYLE_ASIAN</UnitArtStyleType>
+			<PaganReligion>PAGAN_RELIGION_SHENDAO</PaganReligion>
+			<Impact>IMPACT_SIGNIFICANT</Impact>
+			<Identifier>SHU</Identifier>
+			<StartingYear>-1600</StartingYear>
+			<LoadingTimes>
+				<LoadingTime>3</LoadingTime>
+				<LoadingTime>0</LoadingTime>
+				<LoadingTime>0</LoadingTime>
+			</LoadingTimes>
+			<Rating>
+				<Trade>3</Trade>
+				<Production>4</Production>
+				<Culture>4</Culture>
+				<Growth>3</Growth>
+				<Start>3</Start>
+			</Rating>
+			<bPlayable>1</bPlayable>
+			<bAIPlayable>1</bAIPlayable>
+			<Cities>
+				<City>Tianjin</City>
+				<City>Shandong</City>
+				<City>Baoding</City>
+				<City>Yangzhou</City>
+				<City>Loyang</City>
+				<City>Taiyuan</City>
+				<City>Tainan</City>
+				<City>Lijiang</City>
+				<City>Wuxi</City>
+				<City>Suzhou</City>
+				<City>Maoming</City>
+				<City>Shaoguan</City>
+				<City>Yangjiang</City>
+				<City>Heyuan</City>
+				<City>Liaoning</City>
+				<City>Hubei</City>
+				<City>Gansu</City>
+				<City>Huangshi</City>
+				<City>Yichang</City>
+				<City>Yingtan</City>
+				<City>Xinyu</City>
+				<City>Xinzheng</City>
+				<City>Handan</City>
+				<City>Dunhuang</City>
+				<City>Gaoyu</City>
+				<City>Nantong</City>
+				<City>Weifang</City>
+				<City>Xikang</City>
+			</Cities>
+			<Buildings>
+				<Building>
+					<BuildingClassType>BUILDINGCLASS_PAGAN_TEMPLE</BuildingClassType>
+					<BuildingType>BUILDING_ANCESTOR_SHRINE</BuildingType>
+				</Building>
+				<Building>
+					<BuildingClassType>BUILDINGCLASS_CONFUCIAN_MONASTERY</BuildingClassType>
+					<BuildingType>BUILDING_WU_CONFUCIAN_MONASTERY</BuildingType>
+				</Building>
+			</Buildings>
+			<Units>
+				<Unit>
+					<UnitClassType>UNITCLASS_ARCHER</UnitClassType>
+					<UnitType>UNIT_SHU_NANMAN_ARCHER</UnitType>
+				</Unit>
+			</Units>
+			<FreeUnitClasses>
+				<FreeUnitClass>
+					<UnitClassType>UNITCLASS_SETTLER</UnitClassType>
+					<iFreeUnits>1</iFreeUnits>
+				</FreeUnitClass>
+			</FreeUnitClasses>
+			<FreeBuildingClasses>
+				<FreeBuildingClass>
+					<BuildingClassType>BUILDINGCLASS_PALACE</BuildingClassType>
+					<bFreeBuildingClass>1</bFreeBuildingClass>
+				</FreeBuildingClass>
+			</FreeBuildingClasses>
+			<FreeTechs/>
+			<DisableTechs/>
+			<InitialCivics>
+				<CivicType>CIVIC_CHIEFDOM</CivicType>
+				<CivicType>CIVIC_PERSONALISM</CivicType>
+				<CivicType>CIVIC_TRADITIONALISM</CivicType>
+				<CivicType>CIVIC_RECIPROCITY</CivicType>
+				<CivicType>CIVIC_ANIMISM</CivicType>
+				<CivicType>CIVIC_KINSHIP</CivicType>
+			</InitialCivics>
+			<Leaders>
+				<Leader>
+					<LeaderName>LEADER_LIU_BEI</LeaderName>
+					<bLeaderAvailability>1</bLeaderAvailability>
+				</Leader>
+			</Leaders>
+			<DerivativeCiv>CIVILIZATION_CHINA</DerivativeCiv>
+			<CivilizationSelectionSound>AS3D_CHINA_SELECT</CivilizationSelectionSound>
+			<CivilizationActionSound>AS3D_CHINA_ORDER</CivilizationActionSound>
+		</CivilizationInfo>
+		<CivilizationInfo>
 			<Type>CIVILIZATION_SPAIN</Type>
 			<Description>TXT_KEY_CIV_SPAIN_DESC</Description>
 			<ShortDescription>TXT_KEY_CIV_SPAIN_SHORT_DESC</ShortDescription>
@@ -7474,9 +7580,9 @@
 			<PaganReligion>PAGAN_RELIGION_SHENDAO</PaganReligion>
 			<Impact>IMPACT_LIMITED</Impact>
 			<Identifier>VIE</Identifier>
-			<StartingYear>938</StartingYear>
+			<StartingYear>-520</StartingYear>
 			<LoadingTimes>
-				<LoadingTime>15</LoadingTime>
+				<LoadingTime>7</LoadingTime>
 				<LoadingTime>0</LoadingTime>
 				<LoadingTime>0</LoadingTime>
 			</LoadingTimes>
@@ -7537,6 +7643,112 @@
 				</Leader>
 			</Leaders>
 			<DerivativeCiv>CIVILIZATION_CHINA</DerivativeCiv>
+			<CivilizationSelectionSound>AS3D_CHINA_SELECT</CivilizationSelectionSound>
+			<CivilizationActionSound>AS3D_CHINA_ORDER</CivilizationActionSound>
+		</CivilizationInfo>
+		<CivilizationInfo>
+			<Type>CIVILIZATION_XIA</Type>
+			<Description>TXT_KEY_CIV_XIA_DESC</Description>
+			<ShortDescription>TXT_KEY_CIV_XIA_SHORT_DESC</ShortDescription>
+			<Adjective>TXT_KEY_CIV_XIA_ADJECTIVE</Adjective>
+			<Civilopedia>TXT_KEY_CIV_XIA_PEDIA</Civilopedia>
+			<DefaultPlayerColor>PLAYERCOLOR_LIGHT_OCHRE_BLACK</DefaultPlayerColor>
+			<ArtDefineTag>ART_DEF_CIVILIZATION_XIA</ArtDefineTag>
+			<ArtStyleType>ARTSTYLE_ASIAN</ArtStyleType>
+			<UnitArtStyleType>UNIT_ARTSTYLE_ASIAN</UnitArtStyleType>
+			<PaganReligion>PAGAN_RELIGION_SHENDAO</PaganReligion>
+			<Impact>IMPACT_CRITICAL</Impact>
+			<Identifier>XIA</Identifier>
+			<StartingYear>-2070</StartingYear>
+			<LoadingTimes>
+				<LoadingTime>1</LoadingTime>
+				<LoadingTime>0</LoadingTime>
+				<LoadingTime>0</LoadingTime>
+			</LoadingTimes>
+			<Rating>
+				<Trade>3</Trade>
+				<Production>4</Production>
+				<Culture>5</Culture>
+				<Growth>2</Growth>
+				<Start>3</Start>
+			</Rating>
+			<bPlayable>1</bPlayable>
+			<bAIPlayable>1</bAIPlayable>
+			<Cities>
+				<City>Tianjin</City>
+				<City>Shandong</City>
+				<City>Baoding</City>
+				<City>Yangzhou</City>
+				<City>Loyang</City>
+				<City>Taiyuan</City>
+				<City>Tainan</City>
+				<City>Lijiang</City>
+				<City>Wuxi</City>
+				<City>Suzhou</City>
+				<City>Maoming</City>
+				<City>Shaoguan</City>
+				<City>Yangjiang</City>
+				<City>Heyuan</City>
+				<City>Liaoning</City>
+				<City>Hubei</City>
+				<City>Gansu</City>
+				<City>Huangshi</City>
+				<City>Yichang</City>
+				<City>Yingtan</City>
+				<City>Xinyu</City>
+				<City>Xinzheng</City>
+				<City>Handan</City>
+				<City>Dunhuang</City>
+				<City>Gaoyu</City>
+				<City>Nantong</City>
+				<City>Weifang</City>
+				<City>Xikang</City>
+			</Cities>
+			<Buildings>
+				<Building>
+					<BuildingClassType>BUILDINGCLASS_PAGAN_TEMPLE</BuildingClassType>
+					<BuildingType>BUILDING_ANCESTOR_SHRINE</BuildingType>
+				</Building>
+				<Building>
+					<BuildingClassType>BUILDINGCLASS_FORGE</BuildingClassType>
+					<BuildingType>BUILDING_SHU_BRONZEWORKS</BuildingType>
+				</Building>
+			</Buildings>
+			<Units>
+				<Unit>
+					<UnitClassType>UNITCLASS_MILITIA</UnitClassType>
+					<UnitType>UNIT_XIA_LEVY</UnitType>
+				</Unit>
+			</Units>
+			<FreeUnitClasses>
+				<FreeUnitClass>
+					<UnitClassType>UNITCLASS_SETTLER</UnitClassType>
+					<iFreeUnits>1</iFreeUnits>
+				</FreeUnitClass>
+			</FreeUnitClasses>
+			<FreeBuildingClasses>
+				<FreeBuildingClass>
+					<BuildingClassType>BUILDINGCLASS_PALACE</BuildingClassType>
+					<bFreeBuildingClass>1</bFreeBuildingClass>
+				</FreeBuildingClass>
+			</FreeBuildingClasses>
+			<FreeTechs/>
+			<DisableTechs/>
+			<InitialCivics>
+				<CivicType>CIVIC_CHIEFDOM</CivicType>
+				<CivicType>CIVIC_PERSONALISM</CivicType>
+				<CivicType>CIVIC_TRADITIONALISM</CivicType>
+				<CivicType>CIVIC_RECIPROCITY</CivicType>
+				<CivicType>CIVIC_ANIMISM</CivicType>
+				<CivicType>CIVIC_KINSHIP</CivicType>
+			</InitialCivics>
+			<Leaders>
+				<Leader>
+					<LeaderName>LEADER_CHENG_TANG</LeaderName>
+					<bLeaderAvailability>1</bLeaderAvailability>
+				</Leader>
+			</Leaders>
+			<DerivativeCiv>CIVILIZATION_MONGOL</DerivativeCiv>
 			<CivilizationSelectionSound>AS3D_CHINA_SELECT</CivilizationSelectionSound>
 			<CivilizationActionSound>AS3D_CHINA_ORDER</CivilizationActionSound>
 		</CivilizationInfo>

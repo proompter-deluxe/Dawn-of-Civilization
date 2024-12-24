@@ -2404,6 +2404,7 @@ UnitTypes CvCityAI::AI_bestUnit(bool bAsync, AdvisorTypes eIgnoreAdvisor, UnitAI
 		break;
 	case CHINA:
 	case YANGTZE_CHINA:
+	case SHU:
 		aiUnitAIVal[UNITAI_EXPLORE] /= 4;
 		aiUnitAIVal[UNITAI_EXPLORE_SEA] /= 5;
 		aiUnitAIVal[UNITAI_COUNTER] /= 2;
@@ -4029,7 +4030,7 @@ int CvCityAI::AI_buildingValueThreshold(BuildingTypes eBuilding, int iFocusFlags
 					}
 					if (kBuilding.getRiverPlotYieldChange(iI) > 0)
 					{
-						if (iI == 2 && getCivilizationType() == CHINA || getCivilizationType() == YANGTZE_CHINA)
+						if (iI == 2 && getCivilizationType() == CHINA || getCivilizationType() == YANGTZE_CHINA || getCivilizationType() == SHU)
 						{
 							iTempValue += 100;
 						}

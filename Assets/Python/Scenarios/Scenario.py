@@ -147,6 +147,8 @@ LEADER_DATES = {
 	iMithridates: -140,
 	iAgamemnon: -1200,
 	iBulan: 740,
+	iLiuBei: 220,
+	iChengTang: -1600,
 }
 
 RELIGION_FOUNDING_DATES = {
