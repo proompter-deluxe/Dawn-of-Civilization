@@ -137,7 +137,7 @@ def onCityRazed(city, iPlayer):
 	if player(iOwner).isBarbarian():
 		return
 
-	if player(iPlayer).isHuman() and civ(iPlayer) != iMongols:
+	if player(iPlayer).isHuman() and civ(iPlayer) not in [iMongols, iNorse]:
 		iRazePenalty = -10
 		if city.getHighestPopulation() < 5 and not city.isCapital():
 			iRazePenalty = -2 * city.getHighestPopulation()

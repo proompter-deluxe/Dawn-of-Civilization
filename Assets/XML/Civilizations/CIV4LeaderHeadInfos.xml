@@ -1331,7 +1331,7 @@
 			<iDeclareWarTradeRand>40</iDeclareWarTradeRand>
 			<iDemandRebukedSneakProb>40</iDemandRebukedSneakProb>
 			<iDemandRebukedWarProb>20</iDemandRebukedWarProb>
-			<iRazeCityProb>40</iRazeCityProb>
+			<iRazeCityProb>10</iRazeCityProb>
 			<iBuildUnitProb>20</iBuildUnitProb>
 			<iBaseAttackOddsChange>2</iBaseAttackOddsChange>
 			<iAttackOddsChangeRand>8</iAttackOddsChangeRand>
