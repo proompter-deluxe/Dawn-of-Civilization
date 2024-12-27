@@ -776,6 +776,10 @@ class Birth(object):
 				return False
 			elif player(iRome).isHuman() and stability(iRome) == iStabilitySolid:
 				return False
+
+		elif self.iCiv == iChina:
+			if player(iXia).isHuman() and stability(iXia) == iStabilitySolid:
+				return False
 		
 		# Italy requires Rome to be dead
 		if self.iCiv == iItaly:

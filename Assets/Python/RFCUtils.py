@@ -788,6 +788,10 @@ def canRespawn(iCiv):
 			iMongols in [city.getCivilizationType(), city.getPreviousCiv()] or
 			iTimurids in [city.getCivilizationType(), city.getPreviousCiv()]):
 			return False
+		
+	# Qin (China) cannot respawn if Xia (Zhou) is alive and vice-versa
+	if exclusive(iCiv, iChina, iXia):
+		return False
 			
 	return True
 	
