@@ -287,12 +287,15 @@ dRemovedResourcesDict = {
 	(66, 46)  :  550, # Ivory in Tunisia
 	(58, 45)  :  550, # Ivory in Morocco
 	(94, 43)  :  550, # Ivory in Persia
+	(67, 49)  :  600, # Fish in Tunis
+	(66, 48)  :  600, # Wine in Tunis
+	(68, 45)  :  600, # Wheat in Tripoli
 	(100, 50) : 1100, # Silver in Bactria
 	(79, 39)  : 1200, # Cotton in Nubia
 	(78, 56)  : 1300, # Silk in Thrace
 	(75, 58)  : 1400, # Gold in Transylvania
-	(55, 53)  : 1550, # Gold in Spain
-	(56, 50)  : 1550, # Silver in Andalusia
+	(55, 53)  : 1450, # Gold in Spain
+	(56, 50)  : 1450, # Silver in Andalusia
 	(92, 60)  : 1600, # Silk in the Volga Delta
 	(32, 42)  : 1650, # Gold in Hispaniola
 	(47, 24)  : 1650, # Dye (brazilwood) in Brazil

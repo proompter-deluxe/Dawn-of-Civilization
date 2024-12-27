@@ -268,7 +268,7 @@ dResearchCostMods = CivDict({
 	iHolyRome: 85,
 	iBurma: 130,
 	iRus: 100,
-	iVietnam: 100,
+	iVietnam: 115,
 	iSwahili: 110,
 	iPoland: 80,
 	iPortugal: 70,
