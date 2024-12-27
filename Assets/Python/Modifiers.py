@@ -414,7 +414,7 @@ dColonyMaintenanceMods = CivDict({
 	iFrance: 65,
 	iMalays: 100,
 	iJapan: 80,
-	iSpain: 70,
+	iSpain: 80,
 	iNorse: 80,
 	iTurks: 100,
 	iArabia: 150,
