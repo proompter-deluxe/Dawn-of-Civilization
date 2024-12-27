@@ -134,6 +134,14 @@
 		<Spanish>%s2 Kingdom</Spanish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_ADJECTIVE_CHIEFDOMS</Tag>
+		<English>%s2 Chiefdoms</English>
+		<French>%s2 Chiefdoms</French>
+		<German>%s2 Chiefdoms</German>
+		<Italian>%s2 Chiefdoms</Italian>
+		<Spanish>%s2 Chiefdoms</Spanish>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_REPUBLIC_OF</Tag>
 		<English>Republic of %s1</English>
 		<French>

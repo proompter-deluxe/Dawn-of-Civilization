@@ -260,7 +260,7 @@ dGoals = {
 		HappiestTurns(50, by=600),
 	),
 	iXia : (
-		CultureAmount(300, by=-480),
+		CultureAmount(600, by=-480),
 		All(
             Control(plots.region(rNorthChina).named(CHINA_NORTH),at=-400),
 			BuildingCount(iBronzeworks, 4, by=-400),

@@ -210,7 +210,7 @@ lCivilizations = [
 		iXia,
 		iGold=50,
 		lCivics=[iDespotism],
-		techs=techs.column(1).without(iSailing).including(iProperty, iCeremony)
+		techs=techs.column(2).without(iSailing, iSeafaring, iSmelting, ).including(iProperty, iCeremony)
 	),
 	Civilization(
 		iHittites,
@@ -1734,7 +1734,7 @@ dTechPreferences = {
 		iSeafaring: -20,
 	},
 	iChina : {
-		iAesthetics: 40,
+		iAesthetics: 20,
 		iContract: 40,
 		iGunpowder: 20,
 		iPrinting: 20,
@@ -1742,8 +1742,8 @@ dTechPreferences = {
 		iCompass: 20,
 		iConstruction: 20,
 		iCivilService: 15,
-		iLaw: 20,
-		iMedicine: 20,
+		iLaw: 25,
+		iMedicine: 25,
 		iGeneralship: 15,
 		iStatecraft: 15,
 		iLabourUnions: 20,
@@ -1802,8 +1802,8 @@ dTechPreferences = {
 		iEconomics: -20,
 	},
 	iShu : {
-		iAesthetics: 40,
-		iContract: 40,
+		iAesthetics: 20,
+		iContract: 20,
 		iGunpowder: 20,
 		iPrinting: 20,
 		iPaper: 20,

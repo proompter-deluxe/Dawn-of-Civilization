@@ -253,6 +253,9 @@ dSpecificVassalTitles = deepdict({
 dMasterTitles = {
 	iEgypt : "TXT_KEY_CIV_EGYPTIAN_VASSAL",
 	iChina : "TXT_KEY_CIV_CHINESE_VASSAL",
+	iChinaS : "TXT_KEY_CIV_CHINESE_VASSAL",
+	iShu : "TXT_KEY_CIV_CHINESE_VASSAL",
+	iXia : "TXT_KEY_CIV_CHINESE_VASSAL",
 	iIndia : "TXT_KEY_CIV_INDIAN_VASSAL",
 	iPersia : "TXT_KEY_CIV_PERSIAN_VASSAL",
 	iParthia:  "TXT_KEY_CIV_PERSIAN_VASSAL",
@@ -1041,10 +1044,6 @@ def specificName(iPlayer):
 		if bResurrected:
 			if not (bEmpire and not player(iChina).isExisting()):
 				return "TXT_KEY_CIV_SHU_HAN"
-			
-	elif iCiv == iVietnam:
-		if year() < year(dBirth[iChinaS]):
-			return "TXT_KEY_KINGDOM_OF_ADJECTIVE"
 
 	elif iCiv == iAssyria:
 		if bResurrected: # and (iReligion == iOrthodoxy or iReligion == iCatholicism):
@@ -1926,6 +1925,10 @@ def specificTitle(iPlayer, lPreviousOwners=[]):
 					return "TXT_KEY_EMPIRE_OF" # Shu-Han
 
 			return "TXT_KEY_KINGDOM_OF"	# Shu-Han
+
+	elif iCiv == iVietnam:
+		if year() < year(dBirth[iChinaS]):
+			return "TXT_KEY_ADJECTIVE_CHIEFDOMS"
 
 	elif iCiv == iBabylonia:
 		if bCityStates and not bEmpire:

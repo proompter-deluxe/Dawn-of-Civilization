@@ -903,7 +903,7 @@
 				</Flavor>
 			</Flavors>
 			<OrPreReqs>
-				<PrereqTech>TECH_CONSTRUCTION</PrereqTech>
+				<PrereqTech>TECH_WRITING</PrereqTech>
 			</OrPreReqs>
 			<AndPreReqs>
 				<PrereqTech>TECH_ARITHMETICS</PrereqTech>
