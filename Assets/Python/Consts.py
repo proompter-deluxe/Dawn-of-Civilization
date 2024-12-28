@@ -1085,9 +1085,10 @@ lNewWorld = lAmerica + lOceania
 
 #Projects
 
-iNumProjects = 21
-(iManhattanProject, iTheInternet, iHumanGenome, iSDI, iGPS, iISS, iBallisticMissile, iFirstSatellite, iManInSpace, iLunarLanding,
-iGoldenRecord, iMarsMission, iLunarColony, iInterstellarProbe, iMarsFraming, iMarsPowerSource, iMarsExtractor, iMarsHabitat, iMarsHydroponics, iMarsLaboratory, iMarsControlCenter) = range(iNumProjects)
+iNumProjects = 22
+(iManhattanProject, iTheInternet, iHumanGenome, iSDI, iGPS, iGreatFirewall, iISS, iBallisticMissile, iFirstSatellite, iManInSpace, 
+iLunarLanding, iGoldenRecord, iMarsMission, iLunarColony, iInterstellarProbe, iMarsFraming, iMarsPowerSource, iMarsExtractor, iMarsHabitat, iMarsHydroponics, 
+iMarsLaboratory, iMarsControlCenter) = range(iNumProjects)
 
 lMarsBaseComponents = [iMarsFraming, iMarsPowerSource, iMarsExtractor, iMarsHabitat, iMarsHydroponics, iMarsLaboratory, iMarsControlCenter]
 
