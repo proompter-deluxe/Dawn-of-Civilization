@@ -894,7 +894,7 @@ iMamluks : 7,
 iMacedon : 7,
 iIroquois : 0,
 iArmenia : 6,
-iParthia : 8,
+iParthia : 10,
 iMinoans : 5,
 iGhorids : 6,
 })

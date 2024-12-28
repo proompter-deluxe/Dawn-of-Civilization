@@ -648,7 +648,7 @@ lCivilizations = [
 	Civilization(
 		iAmerica,
 		iGold=1500,
-		iAdvancedStartPoints=200,
+		iAdvancedStartPoints=250,
 		iStateReligion=iProtestantism,
 		lCivics=[iDemocracy, iConstitution, iIndividualism, iFreeEnterprise, iSecularism, iIsolationism],
 		techs=techs.column(12).including(iRepresentation, iChemistry)
@@ -1407,9 +1407,9 @@ dExtraAIUnits = CivDict({
 		iSiege: 5,
 	},
 	iAmerica: {
-		iDefend: 1,
-		iWork: 4,
-		iSettle: 1,
+		iDefend: 4,
+		iWork: 8,
+		iSettle: 4,
 	},
 	iArgentina: {
 		iDefend: 3,
