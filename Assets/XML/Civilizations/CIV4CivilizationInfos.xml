@@ -6318,7 +6318,7 @@
 			<ArtDefineTag>ART_DEF_CIVILIZATION_TOLTECS</ArtDefineTag>
 			<ArtStyleType>ARTSTYLE_SOUTH_AMERICA</ArtStyleType>
 			<UnitArtStyleType>UNIT_ARTSTYLE_SOUTH_AMERICAN</UnitArtStyleType>
-			<PaganReligion>PAGAN_RELIGION_TEOTL_AZTEC</PaganReligion>
+			<PaganReligion>PAGAN_RELIGION_TEOTL_TOLTEC</PaganReligion>
 			<Impact>IMPACT_LIMITED</Impact>
 			<Identifier>TOL</Identifier>
 			<StartingYear>-200</StartingYear>
