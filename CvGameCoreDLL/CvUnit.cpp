@@ -14161,7 +14161,6 @@ const CvArtInfoUnit* CvUnit::getArtInfo(int i, EraTypes eEra) const
 {
 	if (GET_PLAYER(getOwnerINLINE()).isIndependent() || isBarbarian())
 	{
-		log(CvWString::format(L"original art style is %d, original region is %d", getOriginalArtStyle(), getOriginalRegion()));
 		return m_pUnitInfo->getArtInfo(i, eEra, (UnitArtStyleTypes)getOriginalArtStyle());
 	}
 
@@ -14401,8 +14400,6 @@ int CvUnit::getSelectionSoundScript() const
 
 int CvUnit::getOriginalArtStyle() const
 {
-	log(CvWString::format(L"%s get original art style for region: %d", getName().c_str(), getOriginalRegion()));
-
 	switch (getOriginalRegion())
 	{
 	case REGION_BRITAIN:
