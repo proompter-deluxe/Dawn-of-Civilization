@@ -2661,4 +2661,13 @@ def leaderName(iPlayer):
 		
 			if year() >= year(dBirth[iMongols]): 
 				return "TXT_KEY_LEADER_OZBEG_KHAN"
+			
+	elif iCiv == iNigeria:
+		#if iEra >= iIndustrial:
+		#	modern era Nigerian leader here, probably with leaderhead
+		if iEra >= iRenaissance or bResurrected:
+			return "TXT_KEY_LEADER_USMAN_DAN_FODIO"
+		elif iEra >= iMedieval:
+			return "TXT_KEY_LEADER_IDRIS_ALOOMA"
+		
 	return None
