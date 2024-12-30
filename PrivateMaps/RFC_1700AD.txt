@@ -8712,14 +8712,14 @@ BeginPlot
 	RouteType=ROUTE_ROAD
 	BeginUnit
 		UnitType=UNIT_ARQUEBUSIER
-		UnitOwner=CIVILIZATION_MUGHALS
+		UnitOwner=CIVILIZATION_TIMURIDS
 	EndUnit
 	BeginUnit
 		UnitType=UNIT_ARQUEBUSIER
-		UnitOwner=CIVILIZATION_MUGHALS
+		UnitOwner=CIVILIZATION_TIMURIDS
 	EndUnit
 	BeginCity
-		CityOwner=CIVILIZATION_MUGHALS
+		CityOwner=CIVILIZATION_TIMURIDS
 		CityName=Thatta
 		CityPopulation=6
 		BuildingType=BUILDING_GRANARY
@@ -8730,7 +8730,7 @@ BeginPlot
 		BuildingType=BUILDING_ISLAMIC_MONASTERY
 		ReligionType=RELIGION_ISLAM
 		BeginCulture
-			Civilization=CIVILIZATION_MUGHALS, Culture=50
+			Civilization=CIVILIZATION_TIMURIDS, Culture=50
 		EndCulture
 		YearFounded=-300
 		YearAcquired=1590
@@ -8868,14 +8868,14 @@ BeginPlot
 	RouteType=ROUTE_ROAD
 	BeginUnit
 		UnitType=UNIT_ARQUEBUSIER
-		UnitOwner=CIVILIZATION_MUGHALS
+		UnitOwner=CIVILIZATION_TIMURIDS
 	EndUnit
 	BeginUnit
 		UnitType=UNIT_ARQUEBUSIER
-		UnitOwner=CIVILIZATION_MUGHALS
+		UnitOwner=CIVILIZATION_TIMURIDS
 	EndUnit
 	BeginCity
-		CityOwner=CIVILIZATION_MUGHALS
+		CityOwner=CIVILIZATION_TIMURIDS
 		CityName=Peshawar
 		CityPopulation=6
 		BuildingType=BUILDING_BARRACKS
@@ -8886,7 +8886,7 @@ BeginPlot
 		ReligionType=RELIGION_ISLAM
 		ReligionType=RELIGION_HINDUISM
 		BeginCulture
-			Civilization=CIVILIZATION_MUGHALS, Culture=50
+			Civilization=CIVILIZATION_TIMURIDS, Culture=50
 		EndCulture
 		YearFounded=100
 		YearAcquired=1525
@@ -8976,14 +8976,14 @@ BeginPlot
 	RouteType=ROUTE_ROAD
 	BeginUnit
 		UnitType=UNIT_ARQUEBUSIER
-		UnitOwner=CIVILIZATION_MUGHALS
+		UnitOwner=CIVILIZATION_TIMURIDS
 	EndUnit
 	BeginUnit
 		UnitType=UNIT_ARQUEBUSIER
-		UnitOwner=CIVILIZATION_MUGHALS
+		UnitOwner=CIVILIZATION_TIMURIDS
 	EndUnit
 	BeginCity
-		CityOwner=CIVILIZATION_MUGHALS
+		CityOwner=CIVILIZATION_TIMURIDS
 		CityName=Lahore
 		CityPopulation=8
 		BuildingType=BUILDING_GRANARY
@@ -8999,7 +8999,7 @@ BeginPlot
 		ReligionType=RELIGION_ISLAM
 		ReligionType=RELIGION_HINDUISM
 		BeginCulture
-			Civilization=CIVILIZATION_MUGHALS, Culture=100
+			Civilization=CIVILIZATION_TIMURIDS, Culture=100
 		EndCulture
 		YearFounded=980
 		PreviousOwner=CIVILIZATION_INDIA
@@ -9242,7 +9242,7 @@ BeginPlot
 		EndCulture
 		YearFounded=460
 		YearAcquired=1716
-		PreviousOwner=CIVILIZATION_MUGHALS
+		PreviousOwner=CIVILIZATION_TIMURIDS
 	EndCity
 EndPlot
 BeginPlot
@@ -9397,50 +9397,50 @@ BeginPlot
 	RouteType=ROUTE_ROAD
 	BeginUnit
 		UnitType=UNIT_ARQUEBUSIER
-		UnitOwner=CIVILIZATION_MUGHALS
+		UnitOwner=CIVILIZATION_TIMURIDS
 	EndUnit
 	BeginUnit
 		UnitType=UNIT_ARQUEBUSIER
-		UnitOwner=CIVILIZATION_MUGHALS
+		UnitOwner=CIVILIZATION_TIMURIDS
 	EndUnit
 	BeginUnit
 		UnitType=UNIT_ARQUEBUSIER
-		UnitOwner=CIVILIZATION_MUGHALS
+		UnitOwner=CIVILIZATION_TIMURIDS
 	EndUnit
 	BeginUnit
 		UnitType=UNIT_ARQUEBUSIER
-		UnitOwner=CIVILIZATION_MUGHALS
+		UnitOwner=CIVILIZATION_TIMURIDS
 	EndUnit
 	BeginUnit
 		UnitType=UNIT_ARQUEBUSIER
-		UnitOwner=CIVILIZATION_MUGHALS
+		UnitOwner=CIVILIZATION_TIMURIDS
 	EndUnit
 	BeginUnit
 		UnitType=UNIT_ARQUEBUSIER
-		UnitOwner=CIVILIZATION_MUGHALS
+		UnitOwner=CIVILIZATION_TIMURIDS
 	EndUnit
 	BeginUnit
 		UnitType=UNIT_PIKEMAN
-		UnitOwner=CIVILIZATION_MUGHALS
+		UnitOwner=CIVILIZATION_TIMURIDS
 	EndUnit
 	BeginUnit
 		UnitType=UNIT_PIKEMAN
-		UnitOwner=CIVILIZATION_MUGHALS
+		UnitOwner=CIVILIZATION_TIMURIDS
 	EndUnit
 	BeginUnit
 		UnitType=UNIT_MUGHAL_SIEGE_ELEPHANT
-		UnitOwner=CIVILIZATION_MUGHALS
+		UnitOwner=CIVILIZATION_TIMURIDS
 	EndUnit
 	BeginUnit
 		UnitType=UNIT_MUGHAL_SIEGE_ELEPHANT
-		UnitOwner=CIVILIZATION_MUGHALS
+		UnitOwner=CIVILIZATION_TIMURIDS
 	EndUnit
 	BeginUnit
 		UnitType=UNIT_WORKER
-		UnitOwner=CIVILIZATION_MUGHALS
+		UnitOwner=CIVILIZATION_TIMURIDS
 	EndUnit
 	BeginCity
-		CityOwner=CIVILIZATION_MUGHALS
+		CityOwner=CIVILIZATION_TIMURIDS
 		CityName=Delhi
 		CityPopulation=12
 		BuildingType=BUILDING_PALACE
@@ -9460,7 +9460,7 @@ BeginPlot
 		ReligionType=RELIGION_ISLAM
 		ReligionType=RELIGION_HINDUISM
 		BeginCulture
-			Civilization=CIVILIZATION_MUGHALS, Culture=250
+			Civilization=CIVILIZATION_TIMURIDS, Culture=250
 		EndCulture
 		YearFounded=-400
 		YearAcquired=1200
@@ -9569,7 +9569,7 @@ BeginPlot
 		EndCulture
 		YearFounded=1590
 		YearAcquired=1590
-		PreviousOwner=CIVILIZATION_MUGHALS
+		PreviousOwner=CIVILIZATION_TIMURIDS
 	EndCity
 EndPlot
 BeginPlot
@@ -9786,7 +9786,7 @@ BeginPlot
 			Civilization=CIVILIZATION_INDIA, Culture=100
 		EndCulture
 		YearFounded=-795
-		PreviousOwner=CIVILIZATION_MUGHALS
+		PreviousOwner=CIVILIZATION_TIMURIDS
 	EndCity
 EndPlot
 BeginPlot
@@ -9806,14 +9806,14 @@ BeginPlot
 	RouteType=ROUTE_ROAD
 	BeginUnit
 		UnitType=UNIT_ARQUEBUSIER
-		UnitOwner=CIVILIZATION_MUGHALS
+		UnitOwner=CIVILIZATION_TIMURIDS
 	EndUnit
 	BeginUnit
 		UnitType=UNIT_ARQUEBUSIER
-		UnitOwner=CIVILIZATION_MUGHALS
+		UnitOwner=CIVILIZATION_TIMURIDS
 	EndUnit
 	BeginCity
-		CityOwner=CIVILIZATION_MUGHALS
+		CityOwner=CIVILIZATION_TIMURIDS
 		CityName=Varanasi
 		CityPopulation=4
 		BuildingType=BUILDING_GRANARY
@@ -9835,7 +9835,7 @@ BeginPlot
 		HolyCityReligionType=RELIGION_HINDUISM
 		ReligionType=RELIGION_BUDDHISM
 		BeginCulture
-			Civilization=CIVILIZATION_MUGHALS, Culture=100
+			Civilization=CIVILIZATION_TIMURIDS, Culture=100
 		EndCulture
 		YearFounded=-795
 		YearAcquired=1190
@@ -9963,14 +9963,14 @@ BeginPlot
 	RouteType=ROUTE_ROAD
 	BeginUnit
 		UnitType=UNIT_ARQUEBUSIER
-		UnitOwner=CIVILIZATION_MUGHALS
+		UnitOwner=CIVILIZATION_TIMURIDS
 	EndUnit
 	BeginUnit
 		UnitType=UNIT_ARQUEBUSIER
-		UnitOwner=CIVILIZATION_MUGHALS
+		UnitOwner=CIVILIZATION_TIMURIDS
 	EndUnit
 	BeginCity
-		CityOwner=CIVILIZATION_MUGHALS
+		CityOwner=CIVILIZATION_TIMURIDS
 		CityName=Azimabad
 		CityPopulation=10
 		BuildingType=BUILDING_GRANARY
@@ -9990,7 +9990,7 @@ BeginPlot
 		FreeSpecialistType=SPECIALIST_GREAT_PRIEST
 		FreeSpecialistType=SPECIALIST_GREAT_PRIEST
 		BeginCulture
-			Civilization=CIVILIZATION_MUGHALS, Culture=200
+			Civilization=CIVILIZATION_TIMURIDS, Culture=200
 		EndCulture
 		YearFounded=-490
 		YearAcquired=1545
@@ -10167,14 +10167,14 @@ BeginPlot
 	RouteType=ROUTE_ROAD
 	BeginUnit
 		UnitType=UNIT_ARQUEBUSIER
-		UnitOwner=CIVILIZATION_MUGHALS
+		UnitOwner=CIVILIZATION_TIMURIDS
 	EndUnit
 	BeginUnit
 		UnitType=UNIT_ARQUEBUSIER
-		UnitOwner=CIVILIZATION_MUGHALS
+		UnitOwner=CIVILIZATION_TIMURIDS
 	EndUnit
 	BeginCity
-		CityOwner=CIVILIZATION_MUGHALS
+		CityOwner=CIVILIZATION_TIMURIDS
 		CityName=Dhaka
 		CityPopulation=7
 		BuildingType=BUILDING_GRANARY
@@ -10194,7 +10194,7 @@ BeginPlot
 		BuildingType=BUILDING_ISLAMIC_MONASTERY
 		ReligionType=RELIGION_ISLAM
 		BeginCulture
-			Civilization=CIVILIZATION_MUGHALS, Culture=50
+			Civilization=CIVILIZATION_TIMURIDS, Culture=50
 		EndCulture
 		YearFounded=1605
 	EndCity

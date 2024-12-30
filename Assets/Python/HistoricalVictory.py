@@ -442,7 +442,7 @@ dGoals = {
 		),
 		All(
 			AllowOnly(plots.regions(*lAfrica).named(AFRICA), group(iCivGroupAfrica).named(AFRICAN)),
-			AllAttitude(AttitudeTypes.ATTITUDE_FRIENDLY, civs=group(iCivGroupAfrica).named(AFRICAN)),
+			AttitudeCount(AttitudeTypes.ATTITUDE_FRIENDLY, 3, civs=group(iCivGroupAfrica).named(AFRICAN)),
 			at=1930,
 		),
 	),
@@ -515,6 +515,11 @@ dGoals = {
 		TradeRouteCount(6, by=1300),
 		BuildingCount(iWalls, 4, by=1450),
 		SlaveTradeGold(1200, by=1900),
+	),
+	iZulu: (
+		PillageCount(15, by=1880),
+		DefeatedUnits(civs(iEngland, iNetherlands), 30, by=1920),
+		AllowOnly(plots.regions(rHornOfAfrica, rSwahiliCoast, rGreatLakes, rZambezi, rCape).named(SOUTH_AFRICA), group(iCivGroupAfrica).named(AFRICAN), at=1950),
 	),
 	iByzantium: (
 		GoldAmount(5000, by=1000),

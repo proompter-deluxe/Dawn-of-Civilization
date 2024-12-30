@@ -1492,6 +1492,8 @@ enum LeaderHeadTypes			// Exposed to Python
 
 	HUMMAY,
 
+	SHAKA,
+
 	NUM_LEADERHEADS
 };
 

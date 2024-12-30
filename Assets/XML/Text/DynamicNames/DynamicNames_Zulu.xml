@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--  -->
+<Civ4GameText xmlns="http://www.firaxis.com">
+	<TEXT>
+		<Tag>TXT_KEY_CIV_ZULU_DESC</Tag>
+		<English>The Zulu</English>
+		<French>Les Zulus</French>
+		<German>The Zulu</German>
+		<Italian>The Zulu</Italian>
+		<Spanish>The Zulu</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_ZULU_PEOPLES</Tag>
+		<English>Zulu Peoples</English>
+		<French>Zulu Peoples</French>
+		<German>Zulu Peoples</German>
+		<Italian>Zulu Peoples</Italian>
+		<Spanish>Zulu Peoples</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_ZULU_ADJECTIVE</Tag>
+		<English>Zulu</English>
+		<French>Zulu</French>
+		<German>Zulu</German>
+		<Italian>Zulu</Italian>
+		<Spanish>Zulu</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_ZULU_SHORT_DESC</Tag>
+		<English>Zulu</English>
+		<French>Zulu</French>
+		<German>Zulu</German>
+		<Italian>Zulu</Italian>
+		<Spanish>Zulu</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_ZULU_DEFAULT</Tag>
+		<English>Zulu Kingdom</English>
+		<French>Zulu Kingdom</French>
+		<German>Zulu Kingdom</German>
+		<Italian>Zulu Kingdom</Italian>
+		<Spanish>Zulu Kingdom</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_ZULU_SOUTH_AFRICA</Tag>
+		<English>South Africa</English>
+		<French>South Africa</French>
+		<German>South Africa</German>
+		<Italian>South Africa</Italian>
+		<Spanish>South Africa</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_ZULU_SOUTH_AFRICA_ADJECTIVE</Tag>
+		<English>South African</English>
+		<French>South African</French>
+		<German>South African</German>
+		<Italian>South African</Italian>
+		<Spanish>South African</Spanish>
+	</TEXT>
+</Civ4GameText>

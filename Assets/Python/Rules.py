@@ -163,6 +163,12 @@ def captureSlaves(winningUnit, losingUnit):
 		return
 
 @handler("combatResult")
+def zuluUniquePower(winningUnit, losingUnit):
+	# Zulu UP: 25% chance to create a friendly copy of a defeated unit
+	if civ(winningUnit) == iZulu:
+		captureUnit(losingUnit, winningUnit, losingUnit.getUnitType(), 25)
+
+@handler("combatResult")
 def mayanHolkanAbility(winningUnit, losingUnit):
 	if winningUnit.getUnitType() == iHolkan:
 		iWinner = winningUnit.getOwner()

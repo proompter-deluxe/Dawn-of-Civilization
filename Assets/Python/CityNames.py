@@ -93,7 +93,8 @@ dLanguages = CivDict({
 	iMinoans: [iLangGreek],
 	iGhorids: [iLangFarsi, iLangTurkish, iLangArabic, iLangIndian],
 	iKhazars: [iLangTurkish, iLangRussian, iLangMongolian],
-	iNigeria: [iLangMande],
+	iNigeria: [iLangMande, iLangArabic],
+	iZulu: [iLangMande, iLangEnglish],
 
 }, [])
 

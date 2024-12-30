@@ -80,6 +80,7 @@ iMinoans:		(78, 48), # Knossos
 iGhorids:		(99, 49), # Ghazni
 iKhazars:		(91, 60), # Atil / Itil
 iNigeria:		(71, 36), # Njimi
+iZulu:			(79, 14), # Ulundi
 })
 
 dPeriodCapitals = {
@@ -169,6 +170,7 @@ iMamluks :		((63, 43),  (70, 48)), # Tunisia
 iGhorids :		((97, 46),  (100, 51)),
 iTimurids :		((96, 52),	(102, 58)),
 iVietnam :		((120, 41), (129, 48)),
+iZulu:			((78, 13),  (80, 15)),
 })
 
 dBirthAreaExceptions = CivDict({
@@ -296,6 +298,7 @@ iMinoans:		((77, 48),  (79, 48)),
 iGhorids:		((98, 45),  (105, 49)), # north-west india, pakistan, afghanistan
 iKhazars:		((86, 57),  (92, 61)),
 iNigeria:		((70, 32),  (72, 37)),
+iZulu:			((78, 11),  (81, 17)),
 })
 
 dCoreAreaExceptions = CivDict({
@@ -395,7 +398,7 @@ iGreece :	((74, 48),	(79, 53)),
 iGhorids :	((100, 45),	(106, 48)), # North-West India, Northern Pakistan
 iRus :		((80, 58),	(84, 63)), # Ukraine
 iMongols :	((108, 55),	(125, 64)),
-
+iZulu :		((71, 11),  (81, 17)),
 })
 
 dRespawnAreaExceptions = CivDict({

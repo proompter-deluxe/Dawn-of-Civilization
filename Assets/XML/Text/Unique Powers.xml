@@ -1313,4 +1313,20 @@
 		<Italian>Can capture slaves from any civ at a 25% rate. Natives are still captured at the default 50% rate</Italian>
 		<Spanish>Can capture slaves from any civ at a 25% rate. Natives are still captured at the default 50% rate</Spanish>
 	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UP_ZUL_TITLE</Tag>
+		<English>The Power of Captured Equipment:</English>
+		<French>The Power of Captured Equipment:</French>
+		<German>The Power of Captured Equipment:</German>
+		<Italian>The Power of Captured Equipment:</Italian>
+		<Spanish>The Power of Captured Equipment:</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UP_ZUL</Tag>
+		<English>25% chance to create a friendly copy of a defeated unit</English>
+		<French>25% chance to create a friendly copy of a defeated unit</French>
+		<German>25% chance to create a friendly copy of a defeated unit</German>
+		<Italian>25% chance to create a friendly copy of a defeated unit</Italian>
+		<Spanish>25% chance to create a friendly copy of a defeated unit</Spanish>
+	</TEXT>
 </Civ4GameText>

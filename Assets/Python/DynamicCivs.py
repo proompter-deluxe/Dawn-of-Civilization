@@ -618,6 +618,7 @@ dStartingLeaders = [
 	iMinoans : iAriadne,
 	iGhorids: iTughluq,
 	iNigeria: iHummay,
+	iZulu : iShaka,
 },
 # 600 AD
 {
@@ -1062,6 +1063,10 @@ def specificName(iPlayer):
 		else:
 			return "TXT_KEY_CIV_NIGERIA_KANEM"
 
+	elif iCiv == iZulu:
+		if bResurrected:
+			return "TXT_KEY_CIV_ZULU_SOUTH_AFRICA"
+
 	elif iCiv == iAssyria:
 		if bResurrected: # and (iReligion == iOrthodoxy or iReligion == iCatholicism):
 			return capitalName(iPlayer)
@@ -1411,6 +1416,10 @@ def specificAdjective(iPlayer):
 			return "TXT_KEY_CIV_CHINA_ZHOU"
 		if player(iCiv).getNumCities() >= 3:
 			return "TXT_KEY_CIV_CHINA_SHANG"			
+
+	elif iCiv == iZulu:
+		if bResurrected:
+			return "TXT_KEY_CIV_ZULU_SOUTH_AFRICA_ADJECTIVE"
 
 	elif iCiv == iVietnam:
 		if year() >= year(dBirth[iChinaS]):

@@ -95,6 +95,7 @@ dCivNames = {
 	iMinoans: "Minoans",
 	iGhorids: "Ghorids",
 	iNigeria: "Nigeria",
+	iZulu: "Zulu",
 }
 
 dReligionNames = {
@@ -184,6 +185,7 @@ iMacedon:		((73, 53),  (79, 55)),
 iIroquois:		((27, 58),  (30, 59)),
 iArmenia:		((88, 52),  (90, 55)),
 iNigeria:		((70, 32),  (72, 37)),
+iZulu:			((78, 11),  (81, 17)),
 }
 
 dCoreAreaExceptions = {

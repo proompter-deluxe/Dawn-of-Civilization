@@ -967,7 +967,11 @@ def captureUnit(pLosingUnit, pWinningUnit, iUnit, iChance):
 	iPlayer = pWinningUnit.getOwner()
 	
 	if rand(100) < iChance:
-		makeUnit(iPlayer, iUnit, pWinningUnit, UnitAITypes.UNITAI_WORKER)
+		unitAI = UnitAITypes.UNITAI_WORKER
+		if iUnit not in [iSlave, iWorker, iAztecSlave]:
+			unitAI = UnitAITypes.UNITAI_ATTACK
+
+		makeUnit(iPlayer, iUnit, pWinningUnit, unitAI)
 		message(pWinningUnit.getOwner(), 'TXT_KEY_UP_ENSLAVE_WIN', sound='SND_REVOLTEND', event=1, button=infos.unit(iUnit).getButton(), color=8, location=pWinningUnit)
 		message(pLosingUnit.getOwner(), 'TXT_KEY_UP_ENSLAVE_LOSE', sound='SND_REVOLTEND', event=1, button=infos.unit(iUnit).getButton(), color=7, location=pWinningUnit)
 		

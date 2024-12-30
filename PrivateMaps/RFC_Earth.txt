@@ -35369,7 +35369,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=79,y=14
-	BonusType=BONUS_ALUMINUM
 	TerrainType=TERRAIN_PLAINS
 	PlotType=2
 EndPlot
@@ -35385,6 +35384,7 @@ BeginPlot
 	isWOfRiver
 	FeatureType=FEATURE_FOREST, FeatureVariety=5
 	TerrainType=TERRAIN_PLAINS
+	BonusType=BONUS_ALUMINUM
 	PlotType=1
 EndPlot
 BeginPlot

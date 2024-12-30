@@ -150,6 +150,7 @@ LEADER_DATES = {
 	iLiuBei: 220,
 	iChengTang: -1600,
 	iHummay: 1085,
+	iShaka: 1816,
 }
 
 RELIGION_FOUNDING_DATES = {

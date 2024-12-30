@@ -7872,26 +7872,28 @@
 			<ShortDescription>TXT_KEY_CIV_ZULU_SHORT_DESC</ShortDescription>
 			<Adjective>TXT_KEY_CIV_ZULU_ADJECTIVE</Adjective>
 			<Civilopedia>TXT_KEY_CIV_ZULU_PEDIA</Civilopedia>
-			<DefaultPlayerColor>PLAYERCOLOR_LIGHT_YELLOW</DefaultPlayerColor>
+			<DefaultPlayerColor>PLAYERCOLOR_LIGHT_YELLOW_GREY</DefaultPlayerColor>
 			<ArtDefineTag>ART_DEF_CIVILIZATION_ZULU</ArtDefineTag>
 			<ArtStyleType>ARTSTYLE_AFRICAN</ArtStyleType>
 			<UnitArtStyleType>UNIT_ARTSTYLE_AFRICAN</UnitArtStyleType>
+			<PaganReligion>PAGAN_RELIGION_YORUBA</PaganReligion>
+			<Impact>IMPACT_SIGNIFICANT</Impact>
 			<Identifier>ZUL</Identifier>
-			<StartingYear>0</StartingYear>
+			<StartingYear>1816</StartingYear>
 			<LoadingTimes>
-				<LoadingTime>0</LoadingTime>
-				<LoadingTime>0</LoadingTime>
-				<LoadingTime>0</LoadingTime>
+				<LoadingTime>50</LoadingTime>
+				<LoadingTime>40</LoadingTime>
+				<LoadingTime>15</LoadingTime>
 			</LoadingTimes>
 			<Rating>
-				<Trade>0</Trade>
-				<Production>0</Production>
-				<Culture>0</Culture>
-				<Growth>0</Growth>
-				<Start>0</Start>
+				<Trade>2</Trade>
+				<Production>2</Production>
+				<Culture>2</Culture>
+				<Growth>2</Growth>
+				<Start>1</Start>
 			</Rating>
-			<bPlayable>0</bPlayable>
-			<bAIPlayable>0</bAIPlayable>
+			<bPlayable>1</bPlayable>
+			<bAIPlayable>1</bAIPlayable>
 			<Cities>
 				<City>Ulundi</City>
 				<City>uMgungundlovu</City>
@@ -7930,8 +7932,22 @@
 				<City>Lobamba</City>
 				<City>Qunu</City>
 			</Cities>
-			<Buildings/>
-			<Units/>
+			<Buildings>
+				<Building>
+					<BuildingClassType>BUILDINGCLASS_BARRACKS</BuildingClassType>
+					<BuildingType>BUILDING_ZULU_IKHANDA</BuildingType>
+				</Building>
+				<Building>
+					<BuildingClassType>BUILDINGCLASS_PAGAN_TEMPLE</BuildingClassType>
+					<BuildingType>BUILDING_YORUBA_TEMPLE</BuildingType>
+				</Building>
+			</Buildings>
+			<Units>
+				<Unit>
+					<UnitClassType>UNITCLASS_SPEARMAN</UnitClassType>
+					<UnitType>UNIT_NATIVE_RAIDER</UnitType>
+				</Unit>
+			</Units>
 			<FreeUnitClasses>
 				<FreeUnitClass>
 					<UnitClassType>UNITCLASS_SETTLER</UnitClassType>
@@ -7956,7 +7972,7 @@
 			</InitialCivics>
 			<Leaders>
 				<Leader>
-					<LeaderName>LEADER_BARBARIAN</LeaderName>
+					<LeaderName>LEADER_SHAKA</LeaderName>
 					<bLeaderAvailability>1</bLeaderAvailability>
 				</Leader>
 			</Leaders>

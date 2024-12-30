@@ -96,6 +96,7 @@ lBirthOrder = [
 	iArgentina,
 	iMexico,
 	iColombia,
+	iZulu,
 	iBrazil,
 	iCanada
 ]
@@ -115,22 +116,23 @@ iNumCivGroups = 6
 dCivGroups = {
 iCivGroupEurope : [iGreece, iRome, iCelts, iByzantium, iFrance, iNorse, iSpain, iEngland, iHolyRome, iRus, iItaly, iPoland, iPortugal, iSweden, iRussia, iNetherlands, iGermany, iBulgaria, iMacedon, iArmenia],
 iCivGroupAsia : [iIndia, iChina, iChinaS, iShu, iXia, iHarappa, iPolynesia, iPersia, iJapan, iDravidia, iKushans, iKorea, iKhmer, iMalays, iJava, iTibet, iBurma, iVietnam, iMongols, iTimurids, iThailand, iRussia, iTurks, iGhorids, iKhazars],
-iCivGroupMiddleEast : [iEgypt, iBabylonia, iAssyria, iHittites, iPersia, iKushans, iByzantium, iArabia, iMoors, iSwahili, iOttomans, iPhoenicia, iTurks, iIran, iMamluks, iParthia],
+iCivGroupMiddleEast : [iEgypt, iBabylonia, iAssyria, iHittites, iPersia, iKushans, iByzantium, iArabia, iMoors, iOttomans, iPhoenicia, iTurks, iIran, iMamluks, iParthia],
 iCivGroupMediterranean : [iEgypt, iGreece, iPhoenicia, iRome, iByzantium, iFrance, iArabia, iMoors, iSpain, iPortugal, iItaly, iOttomans, iMamluks, iMacedon, iMinoans],
-iCivGroupAfrica : [iEgypt, iNubia, iPhoenicia, iEthiopia, iMali, iNigeria, iMoors, iSwahili, iCongo, iMamluks],
+iCivGroupAfrica : [iEgypt, iNubia, iPhoenicia, iEthiopia, iMali, iNigeria, iMoors, iSwahili, iCongo, iMamluks, iZulu],
 iCivGroupAmerica : [iMaya, iToltecs, iInca, iAztecs, iAmerica, iArgentina, iMexico, iColombia, iBrazil, iCanada, iIroquois],
 }
 
 # used in: Stability
 # tech groups share techs within each other on respawn
-iNumTechGroups = 4
-(iTechGroupWestern, iTechGroupMiddleEast, iTechGroupFarEast, iTechGroupNativeAmerica) = range(iNumTechGroups)
+iNumTechGroups = 5
+(iTechGroupWestern, iTechGroupMiddleEast, iTechGroupFarEast, iTechGroupNativeAmerica, iTechGroupAfrica) = range(iNumTechGroups)
 
 dTechGroups = {
 iTechGroupWestern : [iRome, iGreece, iCelts, iByzantium, iFrance, iNorse, iSpain, iEngland, iHolyRome, iRus, iPoland, iPortugal, iItaly, iSweden, iRussia, iNetherlands, iGermany, iAmerica, iArgentina, iMexico, iColombia, iBrazil, iCanada, iBulgaria, iMacedon],
-iTechGroupMiddleEast : [iEgypt, iBabylonia, iHarappa, iAssyria, iHittites, iNubia, iIndia, iPhoenicia, iPersia, iEthiopia, iKushans, iMali, iNigeria, iArabia, iMoors, iSwahili, iOttomans, iTimurids, iDravidia, iCongo, iTurks, iIran, iMamluks, iArmenia, iParthia, iMinoans, iGhorids],
-iTechGroupFarEast : [iChina, iChinaS, iShu, iXia, iKorea, iKhmer, iMalays, iJapan, iJava, iTibet, iBurma, iVietnam, iMongols, iThailand, iKhazars],
+iTechGroupMiddleEast : [iEgypt, iBabylonia, iHarappa, iAssyria, iHittites, iIndia, iPhoenicia, iPersia, iKushans, iArabia, iMoors, iOttomans, iTimurids, iDravidia, iTurks, iIran, iMamluks, iArmenia, iParthia, iMinoans, iGhorids, iKhazars],
+iTechGroupFarEast : [iChina, iChinaS, iShu, iXia, iKorea, iKhmer, iMalays, iJapan, iJava, iTibet, iBurma, iVietnam, iMongols, iThailand],
 iTechGroupNativeAmerica : [iPolynesia, iMaya, iToltecs, iInca, iAztecs, iIroquois],
+iTechGroupAfrica : [iZulu, iNigeria, iMali, iCongo, iEthiopia, iNubia, iSwahili],
 }
 
 lBioNewWorld = [iMaya, iToltecs, iInca, iAztecs, iIroquois]
@@ -426,6 +428,7 @@ lNeighbours = [
 	(iKhazars, iRussia),
 	(iKhazars, iArmenia),
 	(iKhazars, iTurks),
+	(iZulu, iSwahili),
 ]
 
 lInfluences = [
@@ -492,6 +495,8 @@ lInfluences = [
 	(iKhazars, iParthia),
 	(iKhazars, iKushans),
 	(iNigeria, iMoors),
+	(iZulu, iEngland),
+	(iZulu, iNetherlands),
 ]
 
 dBirth = CivDict({
@@ -566,6 +571,7 @@ iAmerica : 1776,
 iArgentina : 1810,
 iMexico : 1810,
 iColombia : 1814,
+iZulu: 1816,
 iBrazil : 1822,
 iCanada : 1867,
 }, -3000)
@@ -696,7 +702,8 @@ iMacedon : [(-400, -150)],
 iArmenia : [(50, 1050), (1870, 2020)],
 iMinoans : [(-3000, -1300)],
 iParthia : [(200, 550)],
-iGhorids : [(1220, 1400)]
+iGhorids : [(1220, 1400)],
+iZulu : [(1950, 2020)],
 }, [])
 
 dAggressionLevel = CivDict({
@@ -830,6 +837,7 @@ iArmenia: 50,
 iMinoans: 30,
 iParthia: 60,
 iGhorids: 50,
+iZulu: 50,
 }, 0)
 
 # the probability out of 100 (and other factors like "Nationalism")
@@ -906,6 +914,7 @@ iArmenia : 6,
 iParthia : 10,
 iMinoans : 5,
 iGhorids : 6,
+iZulu : 4,
 })
 
 dPatienceThreshold = CivDict({
@@ -982,6 +991,7 @@ iArmenia: 30,
 iParthia: 30,
 iMinoans: 30,
 iGhorids: 35,
+iZulu: 35,
 }, 100)
 
 dMaxColonistsPreIndustrial = CivDict({
@@ -1308,7 +1318,7 @@ iVictorySecularism = 11
 
 
 #leaders
-iNumLeaders = 154
+iNumLeaders = 155
 (iLeaderBarbarian, iNativeLeader, iIndependentLeader, iRamesses, iCleopatra, iSargon, iHammurabi, iWentAntu,
 iAshurbanipal, iNasirAlDawla, iQinShiHuang, iTaizong, iHongwu, iMao, iSunQuan, iGaozong, iChiangKaishek, iMursili, iPericles, iAlexanderTheGreat, iGeorge, iAsoka, 
 iChandragupta, iShivaji, iGandhi, iHiram, iHannibal, iAbuFaris, iTaharqa, iAhoeitu, iCyrus, iDarius, iMithridates, iKhosrow, 
@@ -1322,7 +1332,7 @@ iJoao, iMaria, iHuaynaCapac, iCastilla, iLorenzo, iCavour, iMussolini, iGenghisK
 iTughluq, iAkbar, iBhutto, iNaresuan, iMongkut, iGustav, iIvan, iPeter, iCatherine, iAlexanderI, 
 iStalin, iMehmed, iSuleiman, iAtaturk, iMbemba, iAbbas, iKhomeini, iWillemVanOranje, iWilliam, iFrederick, 
 iBismarck, iHitler, iWashington, iLincoln, iRoosevelt, iSanMartin, iPeron, iJuarez, iSantaAnna, iCardenas, 
-iBolivar, iPedro, iVargas, iMacDonald, iTrudeau, iBoudica, iHiawatha, iTigranes, iAshot, iAndranik, iAriadne, iAgamemnon, iBulan, iLiuBei, iChengTang, iHummay) = range(iNumLeaders)
+iBolivar, iPedro, iVargas, iMacDonald, iTrudeau, iBoudica, iHiawatha, iTigranes, iAshot, iAndranik, iAriadne, iAgamemnon, iBulan, iLiuBei, iChengTang, iHummay, iShaka) = range(iNumLeaders)
 
 dResurrectionLeaders = CivDict({
 	iChina : iHongwu,

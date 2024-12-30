@@ -676,6 +676,11 @@ lCivilizations = [
 		techs=techs.column(12).including(iRepresentation, iNationalism)
 	),
 	Civilization(
+		iZulu,
+		iGold=60,
+		techs=techs.column(2)
+	),
+	Civilization(
 		iColombia,
 		iGold=750,
 		iAdvancedStartPoints=150,
@@ -1251,6 +1256,12 @@ dStartingUnits = CivDict({
 		iSkirmish: 2,
 		iMissionary: 1,
 	},
+	iZulu: {
+		iSettle: 1,
+		iWork: 2,
+		iDefend: 3,
+		iCounter: 10,
+	},
 	iColombia: {
 		iSettle: 1,
 		iWork: 2,
@@ -1634,6 +1645,9 @@ dStartingExperience = CivDict({
 		iSkirmish: 2,
 		iSiege: 2,
 	},
+	iZulu: {
+		iCounter: 3,
+	}
 }, {})
 
 dAlwaysTrain = CivDict({
