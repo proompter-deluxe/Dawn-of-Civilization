@@ -1229,6 +1229,7 @@ enum CivilizationTypes		// Exposed to Python
 	MOORS,
 
 	NETHERLANDS,
+	NIGERIA,
 	NORSE,
 	NUBIA,
 	OTTOMANS,
@@ -1484,6 +1485,12 @@ enum LeaderHeadTypes			// Exposed to Python
 	AGAMEMNON,
 
 	BULAN,
+
+	LIU_BEI,
+
+	CHENG_TANG,
+
+	HUMMAY,
 
 	NUM_LEADERHEADS
 };

@@ -3774,6 +3774,51 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<BuildingClass>BUILDINGCLASS_POST_OFFICE</BuildingClass>
+			<Type>BUILDING_NIGERIA_RIBAT</Type>
+			<Description>TXT_KEY_BUILDING_NIGERIA_RIBAT</Description>
+			<Civilopedia>TXT_KEY_BUILDING_NIGERIA_RIBAT_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_NIGERIA_RIBAT_STRATEGY</Strategy>
+			<Advisor>ADVISOR_ECONOMY</Advisor>
+			<ArtDefineTag>ART_DEF_BUILDING_NIGERIA_RIBAT</ArtDefineTag>
+			<PrereqTech>TECH_CURRENCY</PrereqTech>
+			<iCost>80</iCost>
+			<iAdvancedStartCost>100</iAdvancedStartCost>
+			<iMinAreaSize>-1</iMinAreaSize>
+			<iConquestProb>60</iConquestProb>
+			<iMaxLatitude>90</iMaxLatitude>
+			<iTradeRoutes>1</iTradeRoutes>
+			<iAsset>3</iAsset>
+			<fVisibilityPriority>1.0</fVisibilityPriority>
+			<CommerceChanges>
+				<iCommerce>1</iCommerce>
+				<iCommerce>0</iCommerce>
+				<iCommerce>1</iCommerce>
+				<iCommerce>2</iCommerce>
+			</CommerceChanges>
+			<SpecialistCounts>
+				<SpecialistCount>
+					<SpecialistType>SPECIALIST_MERCHANT</SpecialistType>
+					<iSpecialistCount>1</iSpecialistCount>
+				</SpecialistCount>
+				<SpecialistCount>
+					<SpecialistType>SPECIALIST_PRIEST</SpecialistType>
+					<iSpecialistCount>1</iSpecialistCount>
+				</SpecialistCount>
+			</SpecialistCounts>
+			<ConstructSound>AS2D_BUILD_MARKETPLACE</ConstructSound>
+			<Flavors>
+				<Flavor>
+					<FlavorType>FLAVOR_GOLD</FlavorType>
+					<iFlavor>3</iFlavor>
+				</Flavor>
+				<Flavor>
+					<FlavorType>FLAVOR_RELIGION</FlavorType>
+					<iFlavor>2</iFlavor>
+				</Flavor>
+			</Flavors>
+		</BuildingInfo>
+		<BuildingInfo>
+			<BuildingClass>BUILDINGCLASS_POST_OFFICE</BuildingClass>
 			<Type>BUILDING_INCAN_TAMBO</Type>
 			<Description>TXT_KEY_BUILDING_INCAN_TAMBO</Description>
 			<Civilopedia>TXT_KEY_BUILDING_INCAN_TAMBO_PEDIA</Civilopedia>

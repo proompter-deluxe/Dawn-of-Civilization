@@ -511,6 +511,11 @@ dGoals = {
 			by=1350,
 		),
 	),
+	iNigeria: (
+		TradeRouteCount(6, by=1300),
+		BuildingCount(iWalls, 4, by=1450),
+		SlaveTradeGold(1200, by=1900),
+	),
 	iByzantium: (
 		GoldAmount(5000, by=1000),
 		All(

@@ -18143,7 +18143,7 @@
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>1000</iAIValue>
 		</EventInfo>
-		<EventInfo>
+		<!--<EventInfo>
 			<Type>EVENT_CRUSADE_1</Type>
 			<Description>TXT_KEY_EVENT_CRUSADE_1</Description>
 			<LocalInfoText/>
@@ -18481,7 +18481,7 @@
 			<PythonHelp>getHelpCrusadeDone3</PythonHelp>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>1000</iAIValue>
-		</EventInfo>
+		</EventInfo> -->
 		<EventInfo>
 			<Type>EVENT_MIRACLE_1</Type>
 			<Description>TXT_KEY_EVENT_MIRACLE_1</Description>

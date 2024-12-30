@@ -1297,4 +1297,20 @@
 		<Italian>Free ancestral shine on city foundation</Italian>
 		<Spanish>Free ancestral shine on city foundation</Spanish>
 	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UP_NIG_TITLE</Tag>
+		<English>The Power of the Slave Trade:</English>
+		<French>The Power of the Slave Trade:</French>
+		<German>The Power of the Slave Trade:</German>
+		<Italian>The Power of the Slave Trade:</Italian>
+		<Spanish>The Power of the Slave Trade:</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UP_NIG</Tag>
+		<English>Can capture slaves from any civ at a 25% rate. Natives are still captured at the default 50% rate</English>
+		<French>Can capture slaves from any civ at a 25% rate. Natives are still captured at the default 50% rate</French>
+		<German>Can capture slaves from any civ at a 25% rate. Natives are still captured at the default 50% rate</German>
+		<Italian>Can capture slaves from any civ at a 25% rate. Natives are still captured at the default 50% rate</Italian>
+		<Spanish>Can capture slaves from any civ at a 25% rate. Natives are still captured at the default 50% rate</Spanish>
+	</TEXT>
 </Civ4GameText>

@@ -153,6 +153,7 @@ dSpecificVassalTitles = deepdict({
 		iRussia : "TXT_KEY_CIV_FRANCE_DEPARTEMENTS_OF",
 		iOttomans : "TXT_KEY_MANDATE_OF",
 		iAmerica : "TXT_KEY_CIV_FRENCH_AMERICA",
+		iNigeria: "TXT_KEY_CIV_FRENCH_NIGERIA",
 	},
 	iEngland : {
 		iEgypt : "TXT_KEY_MANDATE_OF",
@@ -172,6 +173,7 @@ dSpecificVassalTitles = deepdict({
 		iMali : "TXT_KEY_CIV_ENGLISH_MALI",
 		iOttomans : "TXT_KEY_MANDATE_OF",
 		iAmerica : "TXT_KEY_CIV_ENGLISH_AMERICA",
+		iNigeria: "TXT_KEY_CIV_ENGLISH_NIGERIA",
 	},
 	iHolyRome : {
 		iItaly : "TXT_KEY_CIV_HOLY_ROMAN_ITALY",
@@ -236,6 +238,7 @@ dSpecificVassalTitles = deepdict({
 		iMali : "TXT_KEY_CIV_GERMAN_MALI",
 		iEthiopia : "TXT_KEY_CIV_GERMAN_ETHIOPIA",
 		iPoland : "TXT_KEY_CIV_GERMAN_POLAND",
+		iNigeria: "TXT_KEY_CIV_GERMAN_NIGERIA",
 	},
 	iAmerica : {
 		iEngland : "TXT_KEY_CIV_AMERICAN_ENGLAND",
@@ -473,13 +476,13 @@ dForeignNames = deepdict({
 	},
 })
 
-lRepublicOf = [iEgypt, iIndia, iChina, iChinaS, iShu, iXia, iPersia, iJapan, iEthiopia, iKorea, iNorse, iTurks, iTibet, iKhmer, iHolyRome, iMali, iPoland, iTimurids, iOttomans, iThailand, iIran]
+lRepublicOf = [iEgypt, iIndia, iChina, iChinaS, iShu, iXia, iPersia, iJapan, iEthiopia, iKorea, iNorse, iTurks, iTibet, iKhmer, iHolyRome, iMali, iPoland, iTimurids, iOttomans, iThailand, iIran, iNigeria]
 lRepublicAdj = [iBabylonia, iRome, iMoors, iSpain, iFrance, iPortugal, iInca, iItaly, iAztecs, iArgentina]
 
 lSocialistRepublicOf = [iEgypt, iMamluks, iMoors, iHolyRome, iBrazil, iNorse, iColombia]
 lSocialistRepublicAdj = [iPersia, iTurks, iItaly, iAztecs, iIran, iArgentina]
 
-lPeoplesRepublicOf = [iIndia, iChina, iChinaS, iShu, iXia, iPolynesia, iJapan, iTibet, iMali, iPoland, iTimurids, iThailand, iCongo]
+lPeoplesRepublicOf = [iIndia, iChina, iChinaS, iShu, iXia, iPolynesia, iJapan, iTibet, iMali, iPoland, iTimurids, iThailand, iCongo, iNigeria]
 lPeoplesRepublicAdj = [iDravidia, iByzantium, iMongols]
 
 # prefer all islamic republics to use the "islamic republic" name; if some names don't fit, add them as exceptions
@@ -614,6 +617,7 @@ dStartingLeaders = [
 	iParthia : iMithridates,
 	iMinoans : iAriadne,
 	iGhorids: iTughluq,
+	iNigeria: iHummay,
 },
 # 600 AD
 {
@@ -1044,6 +1048,19 @@ def specificName(iPlayer):
 		if bResurrected:
 			if not (bEmpire and not player(iChina).isExisting()):
 				return "TXT_KEY_CIV_SHU_HAN"
+
+	elif iCiv == iNigeria:
+		if isCurrentCapital(iPlayer, "Benin", "Edo"):
+			return "TXT_KEY_CIV_NIGERIA_BENIN"
+
+		if iEra >= iIndustrial:
+			return "TXT_KEY_CIV_NIGERIA_NIGERIA"
+		elif iEra >= iRenaissance or bResurrected:
+			return "TXT_KEY_CIV_NIGERIA_SOKOTO"
+		elif iEra >= iMedieval:
+			return "TXT_KEY_CIV_NIGERIA_BORNU"
+		else:
+			return "TXT_KEY_CIV_NIGERIA_KANEM"
 
 	elif iCiv == iAssyria:
 		if bResurrected: # and (iReligion == iOrthodoxy or iReligion == iCatholicism):

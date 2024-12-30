@@ -2608,6 +2608,7 @@ UnitTypes CvCityAI::AI_bestUnit(bool bAsync, AdvisorTypes eIgnoreAdvisor, UnitAI
 		aiUnitAIVal[UNITAI_SETTLER_SEA] *= 2;
 		break;
 	case MALI:
+	case NIGERIA:
 		break;
 	case POLAND:
 		aiUnitAIVal[UNITAI_ASSAULT_SEA] /= 3;

@@ -3765,6 +3765,14 @@
 		<Spanish>Levy Spearman</Spanish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_UNIT_HAUSA_CAVALRY</Tag>
+		<English>Hausa Horseman</English>
+		<French>Hausa Horseman</French>
+		<German>Hausa Horseman</German>
+		<Italian>Hausa Horseman</Italian>
+		<Spanish>Hausa Horseman</Spanish>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_UNIT_</Tag>
 		<English></English>
 		<French></French>

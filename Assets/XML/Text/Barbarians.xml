@@ -1042,6 +1042,30 @@
 		<Spanish>Zulu</Spanish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_ADJECTIVE_SAO</Tag>
+		<English>Sao</English>
+		<French>Sao</French>
+		<German>Sao</German>
+		<Italian>Sao</Italian>
+		<Spanish>Sao</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_ADJECTIVE_BILALA</Tag>
+		<English>Bilala</English>
+		<French>Bilala</French>
+		<German>Bilala</German>
+		<Italian>Bilala</Italian>
+		<Spanish>Bilala</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_ADJECTIVE_OYO</Tag>
+		<English>Oyo</English>
+		<French>Oyo</French>
+		<German>Oyo</German>
+		<Italian>Oyo</Italian>
+		<Spanish>Oyo</Spanish>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_ADJECTIVE_</Tag>
 		<English></English>
 		<French></French>

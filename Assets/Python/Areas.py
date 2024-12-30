@@ -71,14 +71,15 @@ iColombia :		(30, 34), # Bogota
 iBrazil :		(44, 20), # Rio de Janeiro
 iCanada :		(31, 61), # Montreal
 iBulgaria:      (77, 56), # Tarnovo
-iMamluks :	    (67, 48), # Tunis
-iMacedon:       (75, 54), # Pella
-iIroquois:      (30, 59), # "Mohawk"
-iArmenia:       (89, 53), # Dvin
-iParthia:       (94, 51), # Hekatompylos / Komis
-iMinoans:       (78, 48), # Knossos
-iGhorids:       (99, 49), # Ghazni
-iKhazars:       (91, 60), # Atil / Itil
+iMamluks :		(67, 48), # Tunis
+iMacedon:		(75, 54), # Pella
+iIroquois:		(30, 59), # "Mohawk"
+iArmenia:		(89, 53), # Dvin
+iParthia:		(94, 51), # Hekatompylos / Komis
+iMinoans:		(78, 48), # Knossos
+iGhorids:		(99, 49), # Ghazni
+iKhazars:		(91, 60), # Atil / Itil
+iNigeria:		(71, 36), # Njimi
 })
 
 dPeriodCapitals = {
@@ -223,7 +224,7 @@ iArgentina :	[(33, 17), (34, 17), (35, 17), (36, 17), (37, 17), (38, 17), (39, 1
 
 dCoreArea = CivDict({
 iEgypt :		((78, 41),	(80, 44)),
-iMamluks :	    ((74, 39),	(83, 45)), 
+iMamluks :		((74, 39),	(83, 45)), 
 iBabylonia :	((88, 45),	(90, 48)),
 iHarappa :		((99, 45),	(102, 47)),
 iAssyria :		((88, 49),	(90, 51)),
@@ -286,14 +287,15 @@ iMexico :		((14, 41),	(19, 44)),
 iColombia :		((28, 34),	(30, 38)),
 iBrazil :		((42, 19),	(47, 25)),
 iCanada :		((26, 59),	(37, 62)),
-iBulgaria:      ((73, 55),  (78, 58)),
-iMacedon:       ((73, 53),  (78, 55)), # Byzantium not part of core
-iIroquois:      ((27, 58),  (30, 59)),
-iArmenia:       ((88, 52),  (90, 55)),
-iParthia:       ((89, 45),  (95, 52)),
-iMinoans:       ((77, 48),  (79, 48)),
-iGhorids:       ((98, 45),  (105, 49)), # north-west india, pakistan, afghanistan
-iKhazars:       ((86, 57),  (92, 61)),
+iBulgaria:		((73, 55),  (78, 58)),
+iMacedon:		((73, 53),  (78, 55)), # Byzantium not part of core
+iIroquois:		((27, 58),  (30, 59)),
+iArmenia:		((88, 52),  (90, 55)),
+iParthia:		((89, 45),  (95, 52)),
+iMinoans:		((77, 48),  (79, 48)),
+iGhorids:		((98, 45),  (105, 49)), # north-west india, pakistan, afghanistan
+iKhazars:		((86, 57),  (92, 61)),
+iNigeria:		((70, 32),  (72, 37)),
 })
 
 dCoreAreaExceptions = CivDict({

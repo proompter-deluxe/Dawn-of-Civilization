@@ -8,12 +8,12 @@ from pathlib import Path
 iWorldX = 150
 iWorldY = 80
 
-iNumCivs = 78
+iNumCivs = 79
 (iAmerica, iArabia, iArgentina, iArmenia, iAssyria, iAztecs, iBabylonia, iBrazil, iBulgaria, iBurma, iByzantium, iCanada, 
 iPhoenicia, iCelts, iChina, iChinaS, iColombia, iDravidia, iEgypt, iEngland, iEthiopia, iFrance, iGermany, iGhorids,
 iGreece, iHarappa, iHittites, iHolyRome, iInca, iIndia, iIran, iIroquois, iItaly, iJapan, iJava, iKhazars,
 iKhmer, iCongo, iKorea, iKushans, iMacedon, iMalays, iMali, iMamluks, iMaya, iMexico, iMinoans, iMongols, iMoors, 
-iTimurids, iNetherlands, iNorse, iNubia, iOttomans, iParthia, iPersia, iPoland, iPolynesia, iPortugal, 
+iTimurids, iNetherlands, iNigeria, iNorse, iNubia, iOttomans, iParthia, iPersia, iPoland, iPolynesia, iPortugal, 
 iRome, iRus, iRussia, iShu, iSpain, iSwahili, iSweden, iThailand, iTibet, iToltecs, 
 iTurks, iVietnam, iXia, iZulu, iIndependent, iIndependent2, iNative, iMinor, iBarbarian) = range(iNumCivs)
 
@@ -93,7 +93,8 @@ dCivNames = {
 	iArmenia: "Armenia",
 	iParthia: "Parthia",
 	iMinoans: "Minoans",
-	iGhorids: "Ghorids"
+	iGhorids: "Ghorids",
+	iNigeria: "Nigeria",
 }
 
 dReligionNames = {
@@ -128,7 +129,7 @@ plot_colors = {
 
 dCoreArea = {
 iEgypt :		((78, 41),	(80, 44)),
-iMamluks :	    ((74, 39),	(83, 45)), 
+iMamluks :		((74, 39),	(83, 45)), 
 iBabylonia :	((88, 45),	(90, 48)),
 iHarappa :		((99, 45),	(102, 47)),
 iChina :		((120, 51),	(126, 56)),
@@ -179,9 +180,10 @@ iMexico :		((14, 41),	(19, 44)),
 iColombia :		((28, 34),	(30, 38)),
 iBrazil :		((42, 19),	(47, 25)),
 iCanada :		((26, 59),	(37, 62)),
-iMacedon:       ((73, 53),  (79, 55)),
-iIroquois:      ((27, 58),  (30, 59)),
-iArmenia:       ((88, 52),  (90, 55)),
+iMacedon:		((73, 53),  (79, 55)),
+iIroquois:		((27, 58),  (30, 59)),
+iArmenia:		((88, 52),  (90, 55)),
+iNigeria:		((70, 32),  (72, 37)),
 }
 
 dCoreAreaExceptions = {

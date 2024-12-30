@@ -149,6 +149,7 @@ LEADER_DATES = {
 	iBulan: 740,
 	iLiuBei: 220,
 	iChengTang: -1600,
+	iHummay: 1085,
 }
 
 RELIGION_FOUNDING_DATES = {

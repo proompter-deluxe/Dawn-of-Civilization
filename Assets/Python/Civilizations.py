@@ -458,20 +458,20 @@ lCivilizations = [
 		techs=techs.column(5).including(iNobility, iSteel).without(iWriting, iLiterature, iPriesthood, iEngineering, iAesthetics, iLaw, iPhilosophy, iShipbuilding, iNavigation)
 	),
 	Civilization(
-		iMoors,
-		iGold=200,
-		iAdvancedStartPoints=100,
-		iStateReligion=iIslam,
-		lCivics=[iDespotism, iTheocracy, iSlavery, iMerchantTrade, iClergy, iHegemony],
-		techs=techs.column(6).including(iMachinery, iAlchemy, iTheology)
-	),
-	Civilization(
 		iJava,
 		iGold=300,
 		iAdvancedStartPoints=100,
 		iStateReligion=iHinduism,
 		lCivics=[iDespotism, iCitizenship, iCasteSystem, iMerchantTrade, iDeification, iThalassocracy],
 		techs=techs.column(6).without(iNobility, iPolitics, iScholarship)
+	),
+	Civilization(
+		iMoors,
+		iGold=200,
+		iAdvancedStartPoints=100,
+		iStateReligion=iIslam,
+		lCivics=[iDespotism, iTheocracy, iSlavery, iMerchantTrade, iClergy, iHegemony],
+		techs=techs.column(6).including(iMachinery, iAlchemy, iTheology)
 	),
 	Civilization(
 		iEngland,
@@ -496,6 +496,12 @@ lCivilizations = [
 		iStateReligion=iBuddhism,
 		lCivics=[iMonarchy, iVassalage, iCasteSystem, iRedistribution, iMonasticism, iHegemony],
 		techs=techs.column(6).including(iTheology)
+	),
+	Civilization(
+		iNigeria,
+		iGold=100,
+		lCivics=[iMonarchy, iSlavery, iMerchantTrade],
+		techs=techs.column(4).including(iCurrency).without(iShipbuilding, iNavigation)
 	),
 	Civilization(
 		iRus,
@@ -887,6 +893,13 @@ dStartingUnits = CivDict({
 		iWork: 1,
 		iSkirmish: 3,
 	},
+	iNigeria: {
+		iSettle: 1,
+		iDefend: 1,
+		iCounter: 1,
+		iShock: 2,
+		iWork: 1,
+	},
 	iByzantium: {
 		iSettle: 4,
 		iWork: 2,
@@ -994,7 +1007,7 @@ dStartingUnits = CivDict({
 		iMissionary: 1,
 	},
 	iBulgaria: {
-		iSettle: 2,
+		iSettle: 3,
 		iWork: 2,
 		iDefend: 4,
 		iAttack: 1,
@@ -1327,6 +1340,10 @@ dExtraAIUnits = CivDict({
 	iByzantium: {
 		iAttack: 2,
 	},
+	iFrance: {
+		iAttack: 1,
+		iDefend: 3,
+	},
 	iMalays: {
 		iDefend: 2,
 	},
@@ -1630,6 +1647,7 @@ dAlwaysTrain = CivDict({
 	iMexico: [iGrenadier],
 	iColombia: [iAlbionLegion],
 	iBrazil: [iGrenadier],
+	iNigeria: [iHausaCavalry],
 }, [])
 
 dAIAlwaysTrain = CivDict({
@@ -1639,6 +1657,7 @@ dAIAlwaysTrain = CivDict({
 
 dNeverTrain = CivDict({
 	iCongo: [iCrossbowman],
+	iNigeria: [iCrossbowman],
 }, [])
 
 def createSpecificUnits(iPlayer, tile):
@@ -1661,7 +1680,7 @@ def createSpecificUnits(iPlayer, tile):
 	elif iCiv == iParthia:
 		makeUnits(iPlayer, iHorseArcher, tile, 5)
 	elif iCiv == iFrance:
-		makeUnits(iPlayer, iAxeman, tile, 5)
+		makeUnits(iPlayer, iAxeman, tile, 6)
 	elif iCiv == iTimurids:
 		makeUnits(iPlayer, iKeshik, tile, 12)
 	elif iCiv == iRus:
@@ -2027,6 +2046,9 @@ dTechPreferences = {
 	iMali : {
 		iScholarship: 40,
 		iDoctrine: 30,
+	},
+	iNigeria : {
+		iDoctrine: 10,
 	},
 	iFrance : {
 		iReplaceableParts: 15,

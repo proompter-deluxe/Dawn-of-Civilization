@@ -148,12 +148,19 @@ def captureSlaves(winningUnit, losingUnit):
 	if civ(losingUnit) == iNative:
 		if player(winningUnit).isSlavery() or player(winningUnit).isColonialSlavery():
 			captureUnit(losingUnit, winningUnit, iSlave, 50)
+			return
 	
+	# Nigeria UP: can always capture slaves from any civ at 25% rate (natives still at 50%)
+	if civ(winningUnit) == iNigeria:
+		if player(winningUnit).isSlavery() or player(winningUnit).isColonialSlavery():
+			captureUnit(losingUnit, winningUnit, iSlave, 25)
+			return
+
 	# also enslave barbarians but at a lesser rate
 	if civ(losingUnit) == iBarbarian:
 		if player(winningUnit).isSlavery() or player(winningUnit).isColonialSlavery():
 			captureUnit(losingUnit, winningUnit, iSlave, 15)
-
+			return
 
 @handler("combatResult")
 def mayanHolkanAbility(winningUnit, losingUnit):

@@ -2960,290 +2960,290 @@ def getHelpCrusadeAgainstAgainstHeathensWithAnotherCatholic(argsList):
 
 ######## CRUSADE ###########
 
-def canTriggerCrusade(argsList):
-	kTriggeredData = argsList[0]
-	trigger = gc.getEventTriggerInfo(kTriggeredData.eTrigger)
-	player = gc.getPlayer(kTriggeredData.ePlayer)
-	otherPlayer = gc.getPlayer(kTriggeredData.eOtherPlayer)
+# def canTriggerCrusade(argsList):
+# 	kTriggeredData = argsList[0]
+# 	trigger = gc.getEventTriggerInfo(kTriggeredData.eTrigger)
+# 	player = gc.getPlayer(kTriggeredData.ePlayer)
+# 	otherPlayer = gc.getPlayer(kTriggeredData.eOtherPlayer)
 	
-	iReligion = kTriggeredData.eReligion
-	if iReligion == iCatholicism:
-		iReligion = iOrthodoxy
+# 	iReligion = kTriggeredData.eReligion
+# 	if iReligion == iCatholicism:
+# 		iReligion = iOrthodoxy
 	
-	if iReligion != iOrthodoxy:
-		return false
+# 	if iReligion != iOrthodoxy:
+# 		return false
 	
-	holyCity = gc.getGame().getHolyCity(iReligion)
+# 	holyCity = gc.getGame().getHolyCity(iReligion)
 	
-	if holyCity.isNone():
-		return false
+# 	if holyCity.isNone():
+# 		return false
 	
-	if gc.getGame().isOption(GameOptionTypes.GAMEOPTION_ONE_CITY_CHALLENGE) and gc.getPlayer(kTriggeredData.ePlayer).isHuman():
-		return false
+# 	if gc.getGame().isOption(GameOptionTypes.GAMEOPTION_ONE_CITY_CHALLENGE) and gc.getPlayer(kTriggeredData.ePlayer).isHuman():
+# 		return false
 	
-	if player.isHuman() and not gc.getTeam(player.getTeam()).isAtWar(holyCity.getTeam()):
-		return false
+# 	if player.isHuman() and not gc.getTeam(player.getTeam()).isAtWar(holyCity.getTeam()):
+# 		return false
 		
-	if gc.getPlayer(holyCity.getOwner()).getStateReligion() not in [iOrthodoxy, iCatholicism, iProtestantism]:
-		return true
+# 	if gc.getPlayer(holyCity.getOwner()).getStateReligion() not in [iOrthodoxy, iCatholicism, iProtestantism]:
+# 		return true
 			
-	return false
+# 	return false
 
-def doTriggerCrusade(argsList):
-	kTriggeredData = argsList[0]
+# def doTriggerCrusade(argsList):
+# 	kTriggeredData = argsList[0]
 	
-	iPlayer = kTriggeredData.ePlayer
-	iReligion = kTriggeredData.eReligion
+# 	iPlayer = kTriggeredData.ePlayer
+# 	iReligion = kTriggeredData.eReligion
 	
-	if iReligion == iCatholicism:
-		iReligion = iOrthodoxy
+# 	if iReligion == iCatholicism:
+# 		iReligion = iOrthodoxy
 	
-	holyCity = gc.getGame().getHolyCity(iReligion)
+# 	holyCity = gc.getGame().getHolyCity(iReligion)
 	
-	if not gc.getPlayer(iPlayer).isHuman():
-		createRoleUnit(iPlayer, capital(iPlayer), iShockCity, 3)
-		createRoleUnit(iPlayer, capital(iPlayer), iSiege, 2)
+# 	if not gc.getPlayer(iPlayer).isHuman():
+# 		createRoleUnit(iPlayer, capital(iPlayer), iShockCity, 3)
+# 		createRoleUnit(iPlayer, capital(iPlayer), iSiege, 2)
 	
-	gc.getTeam(gc.getPlayer(iPlayer).getTeam()).declareWar(holyCity.getTeam(), True, WarPlanTypes.WARPLAN_LIMITED)
+# 	gc.getTeam(gc.getPlayer(iPlayer).getTeam()).declareWar(holyCity.getTeam(), True, WarPlanTypes.WARPLAN_LIMITED)
 
-def getHelpCrusade1(argsList):
-	iEvent = argsList[0]
-	kTriggeredData = argsList[1]
+# def getHelpCrusade1(argsList):
+# 	iEvent = argsList[0]
+# 	kTriggeredData = argsList[1]
 	
-	iReligion = kTriggeredData.ePlayer
-	if iReligion == iCatholicism:
-		iReligion = iOrthodoxy
+# 	iReligion = kTriggeredData.ePlayer
+# 	if iReligion == iCatholicism:
+# 		iReligion = iOrthodoxy
 	
-	player = gc.getPlayer(kTriggeredData.ePlayer)
+# 	player = gc.getPlayer(kTriggeredData.ePlayer)
 
-	holyCity = gc.getGame().getHolyCity(iReligion)
+# 	holyCity = gc.getGame().getHolyCity(iReligion)
 	
-	szHelp = localText.getText("TXT_KEY_EVENT_CRUSADE_HELP_1", (holyCity.getNameKey(), ))
+# 	szHelp = localText.getText("TXT_KEY_EVENT_CRUSADE_HELP_1", (holyCity.getNameKey(), ))
 
-	return szHelp
+# 	return szHelp
 
-def expireCrusade1(argsList):
-	iEvent = argsList[0]
-	kTriggeredData = argsList[1]
-	player = gc.getPlayer(kTriggeredData.ePlayer)
-	otherPlayer = gc.getPlayer(kTriggeredData.eOtherPlayer)
+# def expireCrusade1(argsList):
+# 	iEvent = argsList[0]
+# 	kTriggeredData = argsList[1]
+# 	player = gc.getPlayer(kTriggeredData.ePlayer)
+# 	otherPlayer = gc.getPlayer(kTriggeredData.eOtherPlayer)
 	
-	iReligion = kTriggeredData.eReligion
-	if iReligion == iCatholicism:
-		iReligion = iOrthodoxy
+# 	iReligion = kTriggeredData.eReligion
+# 	if iReligion == iCatholicism:
+# 		iReligion = iOrthodoxy
 	
-	holyCity = gc.getGame().getHolyCity(iReligion)
+# 	holyCity = gc.getGame().getHolyCity(iReligion)
 
-	if holyCity.getOwner() == kTriggeredData.ePlayer:
-		return false
+# 	if holyCity.getOwner() == kTriggeredData.ePlayer:
+# 		return false
 
-	if player.getStateReligion() != kTriggeredData.eReligion:
-		return true
+# 	if player.getStateReligion() != kTriggeredData.eReligion:
+# 		return true
 
-	if holyCity.getOwner() != kTriggeredData.eOtherPlayer:
-		return true
+# 	if holyCity.getOwner() != kTriggeredData.eOtherPlayer:
+# 		return true
 
-	if not gc.getTeam(player.getTeam()).isAtWar(otherPlayer.getTeam()):
-		return true	
+# 	if not gc.getTeam(player.getTeam()).isAtWar(otherPlayer.getTeam()):
+# 		return true	
 					
-	return false
+# 	return false
 
-def canTriggerCrusadeDone(argsList):
-	kTriggeredData = argsList[0]
-	player = gc.getPlayer(kTriggeredData.ePlayer)
-	trigger = gc.getEventTriggerInfo(kTriggeredData.eTrigger)
+# def canTriggerCrusadeDone(argsList):
+# 	kTriggeredData = argsList[0]
+# 	player = gc.getPlayer(kTriggeredData.ePlayer)
+# 	trigger = gc.getEventTriggerInfo(kTriggeredData.eTrigger)
 
-	kOrigTriggeredData = player.getEventOccured(trigger.getPrereqEvent(0))
+# 	kOrigTriggeredData = player.getEventOccured(trigger.getPrereqEvent(0))
 	
-	iReligion = kOrigTriggeredData.eReligion
-	if iReligion == iCatholicism:
-		iReligion = iOrthodoxy
+# 	iReligion = kOrigTriggeredData.eReligion
+# 	if iReligion == iCatholicism:
+# 		iReligion = iOrthodoxy
 	
-	holyCity = gc.getGame().getHolyCity(iReligion)
+# 	holyCity = gc.getGame().getHolyCity(iReligion)
 
-	if holyCity.getOwner() != kTriggeredData.ePlayer:
-		return false
+# 	if holyCity.getOwner() != kTriggeredData.ePlayer:
+# 		return false
 					
-	kActualTriggeredDataObject = player.getEventTriggered(kTriggeredData.iId)
-	kActualTriggeredDataObject.iCityId = holyCity.getID()
-	kActualTriggeredDataObject.eOtherPlayer = kOrigTriggeredData.eOtherPlayer
-	kActualTriggeredDataObject.eReligion = kOrigTriggeredData.eReligion
+# 	kActualTriggeredDataObject = player.getEventTriggered(kTriggeredData.iId)
+# 	kActualTriggeredDataObject.iCityId = holyCity.getID()
+# 	kActualTriggeredDataObject.eOtherPlayer = kOrigTriggeredData.eOtherPlayer
+# 	kActualTriggeredDataObject.eReligion = kOrigTriggeredData.eReligion
 	
-	for iBuilding in range(gc.getNumBuildingInfos()):
-		if gc.getBuildingInfo(iBuilding).getHolyCity() == iReligion:
-			kActualTriggeredDataObject.eBuilding = BuildingTypes(iBuilding)
-			break	
+# 	for iBuilding in range(gc.getNumBuildingInfos()):
+# 		if gc.getBuildingInfo(iBuilding).getHolyCity() == iReligion:
+# 			kActualTriggeredDataObject.eBuilding = BuildingTypes(iBuilding)
+# 			break	
 			
-	return true
+# 	return true
 
-def getHelpCrusadeDone1(argsList):
-	iEvent = argsList[0]
-	kTriggeredData = argsList[1]
+# def getHelpCrusadeDone1(argsList):
+# 	iEvent = argsList[0]
+# 	kTriggeredData = argsList[1]
 	
-	iReligion = kTriggeredData.eReligion
-	if iReligion == iCatholicism:
-		iReligion = iOrthodoxy
+# 	iReligion = kTriggeredData.eReligion
+# 	if iReligion == iCatholicism:
+# 		iReligion = iOrthodoxy
 	
-	holyCity = gc.getGame().getHolyCity(iReligion)
-	szUnit = gc.getUnitInfo(holyCity.getConscriptUnit()).getTextKey()
+# 	holyCity = gc.getGame().getHolyCity(iReligion)
+# 	szUnit = gc.getUnitInfo(holyCity.getConscriptUnit()).getTextKey()
 
-	#Rhye - start
-	#iNumUnits = gc.getWorldInfo(gc.getMap().getWorldSize()).getDefaultPlayers() / 2 + 1
-	iNumUnits = 5
-	#Rhye - end
+# 	#Rhye - start
+# 	#iNumUnits = gc.getWorldInfo(gc.getMap().getWorldSize()).getDefaultPlayers() / 2 + 1
+# 	iNumUnits = 5
+# 	#Rhye - end
 
-	szHelp = localText.getText("TXT_KEY_EVENT_CRUSADE_DONE_HELP_1", (iNumUnits, szUnit, holyCity.getNameKey()))	
+# 	szHelp = localText.getText("TXT_KEY_EVENT_CRUSADE_DONE_HELP_1", (iNumUnits, szUnit, holyCity.getNameKey()))	
 
-	return szHelp
+# 	return szHelp
 
-def canApplyCrusadeDone1(argsList):
-	iEvent = argsList[0]
-	kTriggeredData = argsList[1]
+# def canApplyCrusadeDone1(argsList):
+# 	iEvent = argsList[0]
+# 	kTriggeredData = argsList[1]
 	
-	iReligion = kTriggeredData.eReligion
-	if iReligion == iCatholicism:
-		iReligion = iOrthodoxy
+# 	iReligion = kTriggeredData.eReligion
+# 	if iReligion == iCatholicism:
+# 		iReligion = iOrthodoxy
 	
-	holyCity = gc.getGame().getHolyCity(iReligion)
-	if -1 == holyCity.getConscriptUnit():
-		return false
+# 	holyCity = gc.getGame().getHolyCity(iReligion)
+# 	if -1 == holyCity.getConscriptUnit():
+# 		return false
 	
-	return true
+# 	return true
 
-def applyCrusadeDone1(argsList):
-	iEvent = argsList[0]
-	kTriggeredData = argsList[1]
-	player = gc.getPlayer(kTriggeredData.ePlayer)
+# def applyCrusadeDone1(argsList):
+# 	iEvent = argsList[0]
+# 	kTriggeredData = argsList[1]
+# 	player = gc.getPlayer(kTriggeredData.ePlayer)
 	
-	iReligion = kTriggeredData.eReligion
-	if iReligion == iCatholicism:
-		iReligion = iOrthodoxy
+# 	iReligion = kTriggeredData.eReligion
+# 	if iReligion == iCatholicism:
+# 		iReligion = iOrthodoxy
 	
-	holyCity = gc.getGame().getHolyCity(iReligion)						
-	iUnitType = holyCity.getConscriptUnit()
-	#Rhye - start
-	#iNumUnits = gc.getWorldInfo(gc.getMap().getWorldSize()).getDefaultPlayers() / 2 + 1
-	iNumUnits = 5
-	#Rhye - end
+# 	holyCity = gc.getGame().getHolyCity(iReligion)						
+# 	iUnitType = holyCity.getConscriptUnit()
+# 	#Rhye - start
+# 	#iNumUnits = gc.getWorldInfo(gc.getMap().getWorldSize()).getDefaultPlayers() / 2 + 1
+# 	iNumUnits = 5
+# 	#Rhye - end
 	
-	if iUnitType != -1:
-		for i in range(iNumUnits):
-			player.initUnit(iUnitType, holyCity.getX(), holyCity.getY(), UnitAITypes.UNITAI_CITY_DEFENSE, DirectionTypes.DIRECTION_SOUTH)
+# 	if iUnitType != -1:
+# 		for i in range(iNumUnits):
+# 			player.initUnit(iUnitType, holyCity.getX(), holyCity.getY(), UnitAITypes.UNITAI_CITY_DEFENSE, DirectionTypes.DIRECTION_SOUTH)
 
-def getHelpCrusadeDone2(argsList):
-	iEvent = argsList[0]
-	kTriggeredData = argsList[1]
+# def getHelpCrusadeDone2(argsList):
+# 	iEvent = argsList[0]
+# 	kTriggeredData = argsList[1]
 	
-	iReligion = kTriggeredData.eReligion
-	if iReligion == iCatholicism:
-		iReligion = iOrthodoxy
+# 	iReligion = kTriggeredData.eReligion
+# 	if iReligion == iCatholicism:
+# 		iReligion = iOrthodoxy
 	
-	holyCity = gc.getGame().getHolyCity(iReligion)
+# 	holyCity = gc.getGame().getHolyCity(iReligion)
 	
-	szHelp = localText.getText("TXT_KEY_EVENT_CRUSADE_DONE_HELP_2", (gc.getBuildingInfo(kTriggeredData.eBuilding).getTextKey(), holyCity.getNameKey()))	
+# 	szHelp = localText.getText("TXT_KEY_EVENT_CRUSADE_DONE_HELP_2", (gc.getBuildingInfo(kTriggeredData.eBuilding).getTextKey(), holyCity.getNameKey()))	
 
-	return szHelp
+# 	return szHelp
 
-def canApplyCrusadeDone2(argsList):
-	iEvent = argsList[0]
-	kTriggeredData = argsList[1]
+# def canApplyCrusadeDone2(argsList):
+# 	iEvent = argsList[0]
+# 	kTriggeredData = argsList[1]
 	
-	iReligion = kTriggeredData.eReligion
-	if iReligion == iCatholicism:
-		iReligion = iOrthodoxy
+# 	iReligion = kTriggeredData.eReligion
+# 	if iReligion == iCatholicism:
+# 		iReligion = iOrthodoxy
 	
-	holyCity = gc.getGame().getHolyCity(iReligion)
+# 	holyCity = gc.getGame().getHolyCity(iReligion)
 	
-	if -1 == kTriggeredData.eBuilding or holyCity.isHasBuilding(kTriggeredData.eBuilding):
-		return False			
+# 	if -1 == kTriggeredData.eBuilding or holyCity.isHasBuilding(kTriggeredData.eBuilding):
+# 		return False			
 	
-	return True
+# 	return True
 
-def applyCrusadeDone2(argsList):
-	iEvent = argsList[0]
-	kTriggeredData = argsList[1]
+# def applyCrusadeDone2(argsList):
+# 	iEvent = argsList[0]
+# 	kTriggeredData = argsList[1]
 	
-	iReligion = kTriggeredData.eReligion
-	if iReligion == iCatholicism:
-		iReligion = iOrthodoxy
+# 	iReligion = kTriggeredData.eReligion
+# 	if iReligion == iCatholicism:
+# 		iReligion = iOrthodoxy
 	
-	holyCity = gc.getGame().getHolyCity(iReligion)
-	holyCity.setNumRealBuilding(kTriggeredData.eBuilding, 1)
+# 	holyCity = gc.getGame().getHolyCity(iReligion)
+# 	holyCity.setNumRealBuilding(kTriggeredData.eBuilding, 1)
 						
-	if (not gc.getGame().isNetworkMultiPlayer() and kTriggeredData.ePlayer == gc.getGame().getActivePlayer()):
-		popupInfo = CyPopupInfo()
-		popupInfo.setButtonPopupType(ButtonPopupTypes.BUTTONPOPUP_PYTHON_SCREEN)
-		popupInfo.setData1(kTriggeredData.eBuilding)
-		popupInfo.setData2(holyCity.getID())
-		popupInfo.setData3(0)
-		popupInfo.setText(u"showWonderMovie")
-		popupInfo.addPopup(kTriggeredData.ePlayer)
+# 	if (not gc.getGame().isNetworkMultiPlayer() and kTriggeredData.ePlayer == gc.getGame().getActivePlayer()):
+# 		popupInfo = CyPopupInfo()
+# 		popupInfo.setButtonPopupType(ButtonPopupTypes.BUTTONPOPUP_PYTHON_SCREEN)
+# 		popupInfo.setData1(kTriggeredData.eBuilding)
+# 		popupInfo.setData2(holyCity.getID())
+# 		popupInfo.setData3(0)
+# 		popupInfo.setText(u"showWonderMovie")
+# 		popupInfo.addPopup(kTriggeredData.ePlayer)
 
-def getHelpCrusadeDone3(argsList):
-	iEvent = argsList[0]
-	kTriggeredData = argsList[1]
+# def getHelpCrusadeDone3(argsList):
+# 	iEvent = argsList[0]
+# 	kTriggeredData = argsList[1]
 	
-	iHolyCityReligion = kTriggeredData.eReligion
-	if iHolyCityReligion == iCatholicism:
-		iHolyCityReligion = iOrthodoxy
+# 	iHolyCityReligion = kTriggeredData.eReligion
+# 	if iHolyCityReligion == iCatholicism:
+# 		iHolyCityReligion = iOrthodoxy
 	
-	#Rhye - start
-	#iNumCities = gc.getWorldInfo(gc.getMap().getWorldSize()).getDefaultPlayers()
-	iNumCities = 7
-	#Rhye - end
-	holyCity = gc.getGame().getHolyCity(iHolyCityReligion)
+# 	#Rhye - start
+# 	#iNumCities = gc.getWorldInfo(gc.getMap().getWorldSize()).getDefaultPlayers()
+# 	iNumCities = 7
+# 	#Rhye - end
+# 	holyCity = gc.getGame().getHolyCity(iHolyCityReligion)
 	
-	szHelp = localText.getText("TXT_KEY_EVENT_CRUSADE_DONE_HELP_3", (gc.getReligionInfo(kTriggeredData.eReligion).getTextKey(), iNumCities))	
+# 	szHelp = localText.getText("TXT_KEY_EVENT_CRUSADE_DONE_HELP_3", (gc.getReligionInfo(kTriggeredData.eReligion).getTextKey(), iNumCities))	
 
-	return szHelp
+# 	return szHelp
 
-def canApplyCrusadeDone3(argsList):
-	iEvent = argsList[0]
-	kTriggeredData = argsList[1]
+# def canApplyCrusadeDone3(argsList):
+# 	iEvent = argsList[0]
+# 	kTriggeredData = argsList[1]
 	
-	#Rhye - start
-	#iNumCities = gc.getWorldInfo(gc.getMap().getWorldSize()).getDefaultPlayers()
-	iNumCities = 7
-	#Rhye - end
+# 	#Rhye - start
+# 	#iNumCities = gc.getWorldInfo(gc.getMap().getWorldSize()).getDefaultPlayers()
+# 	iNumCities = 7
+# 	#Rhye - end
 
-	if gc.getGame().getNumCities() == gc.getGame().countReligionLevels(kTriggeredData.eReligion):
-		return false
+# 	if gc.getGame().getNumCities() == gc.getGame().countReligionLevels(kTriggeredData.eReligion):
+# 		return false
 		
-	return true
+# 	return true
 
-def applyCrusadeDone3(argsList):
-	iEvent = argsList[0]
-	kTriggeredData = argsList[1]
+# def applyCrusadeDone3(argsList):
+# 	iEvent = argsList[0]
+# 	kTriggeredData = argsList[1]
 	
-	iHolyCityReligion = kTriggeredData.eReligion
-	if iHolyCityReligion == iCatholicism:
-		iHolyCityReligion = iOrthodoxy
+# 	iHolyCityReligion = kTriggeredData.eReligion
+# 	if iHolyCityReligion == iCatholicism:
+# 		iHolyCityReligion = iOrthodoxy
 	
-	holyCity = gc.getGame().getHolyCity(iHolyCityReligion)
+# 	holyCity = gc.getGame().getHolyCity(iHolyCityReligion)
 
-	listCities = []	
-	for iPlayer in range(gc.getMAX_CIV_PLAYERS()):			
-		loopPlayer = gc.getPlayer(iPlayer)
-		if loopPlayer.isAlive():			
-			(loopCity, iter) = loopPlayer.firstCity(false)
+# 	listCities = []	
+# 	for iPlayer in range(gc.getMAX_CIV_PLAYERS()):			
+# 		loopPlayer = gc.getPlayer(iPlayer)
+# 		if loopPlayer.isAlive():			
+# 			(loopCity, iter) = loopPlayer.firstCity(false)
 
-			while(loopCity):
-				if (not loopCity.isHasReligion(kTriggeredData.eReligion)):
-					iDistance = plotDistance(holyCity.getX(), holyCity.getY(), loopCity.getX(), loopCity.getY())
-					listCities.append((iDistance, loopCity))
+# 			while(loopCity):
+# 				if (not loopCity.isHasReligion(kTriggeredData.eReligion)):
+# 					iDistance = plotDistance(holyCity.getX(), holyCity.getY(), loopCity.getX(), loopCity.getY())
+# 					listCities.append((iDistance, loopCity))
 						
-				(loopCity, iter) = loopPlayer.nextCity(iter, false)
+# 				(loopCity, iter) = loopPlayer.nextCity(iter, false)
 	
-	listCities.sort()
+# 	listCities.sort()
 	
-	#Rhye - start
-	#iNumCities = min(gc.getWorldInfo(gc.getMap().getWorldSize()).getDefaultPlayers(), len(listCities))
-	iNumCities = min(7, len(listCities))
-	#Rhye - end
+# 	#Rhye - start
+# 	#iNumCities = min(gc.getWorldInfo(gc.getMap().getWorldSize()).getDefaultPlayers(), len(listCities))
+# 	iNumCities = min(7, len(listCities))
+# 	#Rhye - end
 	
-	for i in range(iNumCities):
-		iDistance, loopCity = listCities[i]
-		loopCity.setHasReligion(kTriggeredData.eReligion, true, true, true)	
+# 	for i in range(iNumCities):
+# 		iDistance, loopCity = listCities[i]
+# 		loopCity.setHasReligion(kTriggeredData.eReligion, true, true, true)	
 
 ######## ESTEEMEED_PLAYWRIGHT ###########
 

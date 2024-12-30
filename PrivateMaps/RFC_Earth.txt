@@ -29368,7 +29368,7 @@ BeginPlot
 	x=66,y=32
 	RiverNSDirection=2
 	isWOfRiver
-	FeatureType=FEATURE_JUNGLE, FeatureVariety=0
+	FeatureType=FEATURE_RAINFOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
@@ -31193,7 +31193,7 @@ BeginPlot
 	x=70,y=34
 	RiverNSDirection=0
 	isWOfRiver
-	FeatureType=FEATURE_MARSH, FeatureVariety=0
+	FeatureType=FEATURE_SAVANNA, FeatureVariety=0
 	TerrainType=TERRAIN_PLAINS
 	PlotType=2
 EndPlot
@@ -32609,6 +32609,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=73,y=34
+	BonusType=BONUS_COW
 	TerrainType=TERRAIN_SEMIDESERT
 	PlotType=2
 EndPlot
@@ -33082,7 +33083,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=74,y=34
-	BonusType=BONUS_COW
 	BonusVarietyType=BONUS_COW_BROWN
 	TerrainType=TERRAIN_SEMIDESERT
 	PlotType=2

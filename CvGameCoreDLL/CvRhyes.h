@@ -11,10 +11,10 @@ typedef list<char*> LISTCHAR;
 
 #define MAX_COM_SHRINE			(20)
 
-#define BEGIN_WONDERS				(203) // increment if normal building (not for wonders) is added
+#define BEGIN_WONDERS				(204) // increment if normal building (not for wonders) is added
 #define BEGIN_GREAT_WONDERS			(BEGIN_WONDERS+13) // increment if a national wonder is added
 
-#define NUM_CIVS				(73)
+#define NUM_CIVS				(74)
 
 #define NUM_ERAS				(ERA_DIGITAL+1)
 

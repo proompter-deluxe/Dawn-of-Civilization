@@ -84,4 +84,5 @@ iNetherlands : 4,
 iAmerica : 4,
 iCanada : 4,
 iMamluks: 2,
+iNigeria: 2,
 }, default=3)

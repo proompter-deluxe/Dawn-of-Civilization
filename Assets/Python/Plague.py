@@ -209,9 +209,9 @@ def startPlague(iPlague):
 
 
 def isVulnerable(iPlayer):
-	# protect some civs from Plague for more predictable UHVs
-	if civ(iPlayer) == iCongo and year() <= year(1650): return
-	elif civ(iPlayer) == iMali and year() <= year(1500): return
+	# protect some civs from Plague for more predictable UHVs --> disabled for now
+	# if civ(iPlayer) == iCongo and year() <= year(1650): return
+	# elif civ(iPlayer) == iMali and year() <= year(1500): return
 	
 	if is_minor(iPlayer) and -10 < data.players[iPlayer].iPlagueCountdown <= 0: #more vulnerable
 		return True

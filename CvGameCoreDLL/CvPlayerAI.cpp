@@ -19363,7 +19363,7 @@ int CvPlayerAI::AI_slaveTradeVal(CvUnit* pUnit) const
 
 	if (getCivilizationType() != GC.getGame().getActiveCivilizationType())
 	{
-		if (getCivilizationType() == MALI || getCivilizationType() == CONGO || getCivilizationType() == ETHIOPIA)
+		if (getCivilizationType() == MALI || getCivilizationType() == CONGO || getCivilizationType() == ETHIOPIA || getCivilizationType() == NIGERIA)
 		{
 			return 0;
 		}

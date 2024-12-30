@@ -12239,7 +12239,7 @@
 			<PythonCanDoUnit/>
 			<PythonCallback/>
 		</EventTriggerInfo>
-		<EventTriggerInfo>
+		<!--<EventTriggerInfo>
 			<Type>EVENTTRIGGER_CRUSADE</Type>
 			<WorldNewsTexts/>
 			<TriggerTexts>
@@ -12402,7 +12402,7 @@
 			<PythonCanDoCity/>
 			<PythonCanDoUnit/>
 			<PythonCallback/>
-		</EventTriggerInfo>
+		</EventTriggerInfo> -->
 		<EventTriggerInfo>
 			<Type>EVENTTRIGGER_MIRACLE</Type>
 			<WorldNewsTexts>
