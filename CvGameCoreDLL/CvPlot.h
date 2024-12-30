@@ -581,6 +581,8 @@ public:
 	int getContinentID() const;
 	int getRegionGroup() const;
 
+	static int getRegionGroupForRegion(int iRegion);
+
 	bool isSlaveImprovement() const;
 
 	// Leoreth: graphics paging

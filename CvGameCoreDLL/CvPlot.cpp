@@ -12090,7 +12090,12 @@ int CvPlot::getContinentID() const
 
 int CvPlot::getRegionGroup() const
 {
-	switch (getRegionID())
+	return getRegionGroupForRegion(getRegionID());
+}
+
+int CvPlot::getRegionGroupForRegion(int iRegion)
+{
+	switch (iRegion)
 	{
 	case REGION_ATLANTIC_SEABOARD:
 	case REGION_DEEP_SOUTH:

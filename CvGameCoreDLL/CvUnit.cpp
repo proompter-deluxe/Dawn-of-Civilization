@@ -111,6 +111,9 @@ void CvUnit::init(int iID, UnitTypes eUnit, UnitAITypes eUnitAI, PlayerTypes eOw
 	// Init pre-setup() data
 	setXY(iX, iY, false, false);
 
+	//Leoreth: region dependent art and AI for independent units
+	m_iOriginalRegion = plot()->getRegionID();
+
 	//--------------------------------
 	// Init non-saved data
 	setupGraphical();
@@ -270,9 +273,6 @@ void CvUnit::init(int iID, UnitTypes eUnit, UnitAITypes eUnitAI, PlayerTypes eOw
 		GC.getGameINLINE().addReplayMessage(REPLAY_MESSAGE_MAJOR_EVENT, getOwnerINLINE(), szBuffer, getX_INLINE(), getY_INLINE(), (ColorTypes)GC.getInfoTypeForString("COLOR_UNIT_TEXT"));
 	}
 
-	//Leoreth: region dependent art for independent units
-	m_originalArtStyle = (UnitArtStyleTypes)getOriginalArtStyle(plot());
-
 	AI_init(eUnitAI);
 
 /*************************************************************************************************/
@@ -371,6 +371,7 @@ void CvUnit::reset(int iID, UnitTypes eUnit, PlayerTypes eOwner, bool bConstruct
 	m_iExtraUpkeep = 0;
 	m_eFacingDirection = DIRECTION_SOUTH;
 	m_iImmobileTimer = 0;
+	m_iOriginalRegion = -1; // Leoreth
 
 	m_iStuckLoopCount = 0; // Leoreth
 
@@ -387,7 +388,6 @@ void CvUnit::reset(int iID, UnitTypes eUnit, PlayerTypes eOwner, bool bConstruct
 	m_eCapturingPlayer = NO_PLAYER;
 	m_eUnitType = eUnit;
 	m_pUnitInfo = (NO_UNIT != m_eUnitType) ? &GC.getUnitInfo(m_eUnitType) : NULL;
-	m_originalArtStyle = (UnitArtStyleTypes)-1;
 	m_iBaseCombat = (NO_UNIT != m_eUnitType) ? m_pUnitInfo->getCombat() : 0;
 	m_eLeaderUnitType = NO_UNIT;
 	m_iCargoCapacity = (NO_UNIT != m_eUnitType) ? m_pUnitInfo->getCargoSpace() : 0;
@@ -12868,10 +12868,11 @@ void CvUnit::read(FDataStreamBase* pStream)
 	pStream->Read(&m_iUpgradeDiscount);
 	pStream->Read(&m_iExperiencePercent);
 	pStream->Read(&m_iKamikazePercent);
-	pStream->Read(&m_iExtraUpkeep);
+	pStream->Read(&m_iExtraUpkeep); // Leoreth
 	pStream->Read(&m_iBaseCombat);
 	pStream->Read((int*)&m_eFacingDirection);
 	pStream->Read(&m_iImmobileTimer);
+	pStream->Read(&m_iOriginalRegion); // Leoreth
 
 	pStream->Read(&m_bMadeAttack);
 	pStream->Read(&m_bMadeInterception);
@@ -12981,6 +12982,7 @@ void CvUnit::write(FDataStreamBase* pStream)
 	pStream->Write(m_iBaseCombat);
 	pStream->Write(m_eFacingDirection);
 	pStream->Write(m_iImmobileTimer);
+	pStream->Write(m_iOriginalRegion); // Leoreth
 
 	pStream->Write(m_bMadeAttack);
 	pStream->Write(m_bMadeInterception);
@@ -14159,7 +14161,8 @@ const CvArtInfoUnit* CvUnit::getArtInfo(int i, EraTypes eEra) const
 {
 	if (GET_PLAYER(getOwnerINLINE()).isIndependent() || isBarbarian())
 	{
-		return m_pUnitInfo->getArtInfo(i, eEra, m_originalArtStyle);
+		log(CvWString::format(L"original art style is %d, original region is %d", getOriginalArtStyle(), getOriginalRegion()));
+		return m_pUnitInfo->getArtInfo(i, eEra, (UnitArtStyleTypes)getOriginalArtStyle());
 	}
 
 	return m_pUnitInfo->getArtInfo(i, eEra, (UnitArtStyleTypes) GC.getCivilizationInfo(getCivilizationType()).getUnitArtStyleType());
@@ -14396,9 +14399,11 @@ int CvUnit::getSelectionSoundScript() const
 	return iScriptId;
 }
 
-int CvUnit::getOriginalArtStyle(const CvPlot* pPlot) const
+int CvUnit::getOriginalArtStyle() const
 {
-	switch (pPlot->getRegionID())
+	log(CvWString::format(L"%s get original art style for region: %d", getName().c_str(), getOriginalRegion()));
+
+	switch (getOriginalRegion())
 	{
 	case REGION_BRITAIN:
 	case REGION_IRELAND:
@@ -14490,7 +14495,7 @@ int CvUnit::getOriginalArtStyle(const CvPlot* pPlot) const
 		return GC.getCivilizationInfo(MONGOLS).getUnitArtStyleType();
 	}
 
-	switch (pPlot->getRegionGroup())
+	switch (CvPlot::getRegionGroupForRegion(getOriginalRegion()))
 	{
 	case REGION_GROUP_NORTH_AMERICA:
 		return GC.getCivilizationInfo(ENGLAND).getUnitArtStyleType();
@@ -15046,4 +15051,9 @@ bool CvUnit::rebuild()
 	}
 
 	return false;
+}
+
+int CvUnit::getOriginalRegion() const
+{
+	return m_iOriginalRegion;
 }
