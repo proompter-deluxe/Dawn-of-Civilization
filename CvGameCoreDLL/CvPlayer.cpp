@@ -11820,6 +11820,7 @@ void CvPlayer::verifyAlive()
 		if ((getNumCities() > 0) || (getNumUnits() > 0))
 		{
 			setAlive(true);
+			m_bTurnPlayed = true;
 		}
 	}
 }
@@ -12004,7 +12005,7 @@ void CvPlayer::setTurnActive(bool bNewValue, bool bDoTurn)
 					{
 						for (iI = (getID() + 1); iI < MAX_PLAYERS; iI++)
 						{
-							if (GET_PLAYER((PlayerTypes)iI).isAlive())
+							if (GET_PLAYER((PlayerTypes)iI).isAlive() && !GET_PLAYER((PlayerTypes)iI).m_bTurnPlayed)
 							{
 								if (GC.getGameINLINE().isPbem() && GET_PLAYER((PlayerTypes)iI).isHuman())
 								{
