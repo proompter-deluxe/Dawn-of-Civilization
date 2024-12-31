@@ -549,6 +549,11 @@ def stabilizeRomeAfterByzantium(iPlayer):
 		if player(iRome).isExisting():
 			data.players[iRome].iNumPreviousCities = player(iRome).getNumCities()
 
+@handler("flip")
+def stabilizeByzantiumAfterArabs(iPlayer):
+	if civ(iPlayer) == iArabia:
+		if player(iByzantium).isExisting():
+			data.players[iByzantium].iNumPreviousCities = player(iByzantium).getNumCities()
 
 @handler("flip")
 def westernMongolExplorers(iPlayer):
