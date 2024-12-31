@@ -2861,6 +2861,10 @@
 					<UnitClassType>UNITCLASS_ARQUEBUSIER</UnitClassType>
 					<UnitType>UNIT_IRANIAN_QIZILBASH</UnitType>
 				</Unit>
+				<Unit>
+					<UnitClassType>UNITCLASS_CAMEL_GUNNER</UnitClassType>
+					<UnitType>UNIT_IRANIAN_ZAMBURAK</UnitType>
+				</Unit>
 			</Units>
 			<FreeUnitClasses>
 				<FreeUnitClass>
