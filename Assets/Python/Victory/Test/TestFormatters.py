@@ -169,25 +169,25 @@ class TestDescription(ExtendedTestCase):
 		self.description = Description()
 	
 	def test_single_requirement(self):
-		requirements = [(BuildingCount(iGranary, 3), BuildingCount.GOAL_DESC_KEY, [], None)]
+		requirements = [(BuildingCount(iGranary, 3), BuildingCount.GOAL_DESC_KEY, [], [], None)]
 		
-		self.assertEqual(self.description.format(requirements, [], [], [], None), "control three Granaries")
+		self.assertEqual(self.description.format(requirements, [], [], None), "control three Granaries")
 	
 	def test_single_requirement_suffix(self):
-		requirements = [(BuildingCount(iGranary, 3), BuildingCount.GOAL_DESC_KEY, [], None)]
+		requirements = [(BuildingCount(iGranary, 3), BuildingCount.GOAL_DESC_KEY, [], [], None)]
 		suffixes = ["by 1000 AD"]
 		
-		self.assertEqual(self.description.format(requirements, [], [], suffixes, None), "control three Granaries by 1000 AD")
+		self.assertEqual(self.description.format(requirements, [], suffixes, None), "control three Granaries by 1000 AD")
 	
 	def test_single_requirement_required(self):
-		requirements = [(BuildingCount(iGranary, 3), BuildingCount.GOAL_DESC_KEY, [], None)]
+		requirements = [(BuildingCount(iGranary, 3), BuildingCount.GOAL_DESC_KEY, [], [], None)]
 		
-		self.assertEqual(self.description.format(requirements, [], [], [], 2), "control two out of three Granaries")
+		self.assertEqual(self.description.format(requirements, [], [], 2), "control two out of three Granaries")
 	
 	def test_multiple_requirements(self):
-		requirements = [(BuildingCount(iGranary, 3), BuildingCount.GOAL_DESC_KEY, [], None), (BuildingCount(iLibrary, 4), BuildingCount.GOAL_DESC_KEY, [], [], None), (BuildingCount(iWalls, 5), BuildingCount.GOAL_DESC_KEY, [], [], None)]
+		requirements = [(BuildingCount(iGranary, 3), BuildingCount.GOAL_DESC_KEY, [], [], None), (BuildingCount(iLibrary, 4), BuildingCount.GOAL_DESC_KEY, [], [], None), (BuildingCount(iWalls, 5), BuildingCount.GOAL_DESC_KEY, [], [], None)]
 		
-		self.assertEqual(self.description.format(requirements, [], [], [], None), "control three Granaries, four Libraries and five Walls")
+		self.assertEqual(self.description.format(requirements, [], [], None), "control three Granaries, four Libraries and five Walls")
 	
 	def test_multiple_requirements_suffix(self):
 		requirements = [(BuildingCount(iGranary, 3), BuildingCount.GOAL_DESC_KEY, [], [], None), (BuildingCount(iLibrary, 4), BuildingCount.GOAL_DESC_KEY, [], [], None), (BuildingCount(iWalls, 5), BuildingCount.GOAL_DESC_KEY, [], [], None)]
