@@ -573,7 +573,7 @@ barbarians = [
 	Barbarians(-400, 700, {iSkirmisher: 1}, ((80, 36), (84, 41)), 12, INVADERS, adjective="TXT_KEY_ADJECTIVE_BLEMMYES"),
 	Barbarians(-400, 300, {iCamelRider: 1}, ((73, 37), (77, 43)), 9, NOMADS, target_area=((77, 37), (82, 45)), adjective="TXT_KEY_ADJECTIVE_LIBYAN"),
 	Barbarians(-400, -150, {iHorseArcher: 3}, ((96, 42), (105, 49)), 9, INVADERS, target_area=((98, 42), (112, 49)), adjective="TXT_KEY_ADJECTIVE_INDO_SCYTHIAN"),
-	Barbarians(-350, 200, {iLightSwordsman: 1}, ((113, 47), (117, 54)), 10, MINORS, adjective="TPXT_KEY_ADJECTIVE_TIBETAN"),
+	Barbarians(-350, 200, {iLightSwordsman: 1}, ((113, 47), (117, 54)), 10, MINORS, adjective="TXT_KEY_ADJECTIVE_TIBETAN"),
 	Barbarians(-300, 90, {iHorseArcher: 3}, ((113, 55), (128, 62)), 8, INVADERS, target_area=((117, 46), (129, 59)), adjective="TXT_KEY_ADJECTIVE_XIONGNU", promotions=(iDesertAdaptation, iSteppeAdaptation)),
 	Barbarians(-350, 200, {iLightSwordsman: 1}, ((113, 47), (117, 54)), 10, MINORS, adjective="TXT_KEY_ADJECTIVE_XIRONG"),
 	Barbarians(-300, 300, {iCamelRider: 1}, ((86, 38), (91, 45)), 10, NOMADS, target_area=((77, 39), (91, 50)), adjective="TXT_KEY_ADJECTIVE_BEDOUIN"),

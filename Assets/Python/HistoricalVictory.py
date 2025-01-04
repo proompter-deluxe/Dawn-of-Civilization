@@ -218,11 +218,8 @@ dGoals = {
 		All(
 			DefeatedUnits(civs(iBarbarian, iShu, iVietnam), 30, by=200),
 			AttitudeCount(AttitudeTypes.ATTITUDE_PLEASED, 1, civs=group(iCivGroupEurope).named(EUROPE), at=200),
-			Control(plots.region(rNorthChina).named(CHINA_NORTH), at=-200),
-			Control(plots.region(rNorthChina).named(CHINA_NORTH), at=0),
-			Control(plots.region(rNorthChina).named(CHINA_NORTH), at=190),
+			Control(plots.region(rNorthChina).named(CHINA_NORTH), by=-200),
 			Control(plots.region(rNorthChina).named(CHINA_NORTH), at=250),
-			by=200,
 		),
 		Control(
 			plots.region(rNorthChina).named(CHINA_NORTH),
