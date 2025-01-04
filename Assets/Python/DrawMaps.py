@@ -245,7 +245,7 @@ tSpreadFactors = (
 {
 	iCore :			[rBritain, rLowerGermany, rDenmark, rNorway, rSweden, rAtlanticSeaboard, rMidwest, rOntario, rGreatPlains, rDeepSouth, rMaritimes],
 	iHistorical :	[rCalifornia, rCascadia, rAmericanArctic, rAustralia],
-	iPeriphery :	[rFrance, rOceania, rCape, rZambezi],
+	iPeriphery :	[rFrance, rOceania, rCape, rZambezi, rSahel, rSwahiliCoast, rBaltics],
 	iMinority : 	[rPoland, rCentralEurope, rBrazil, rKorea]
 },
 # Islam
