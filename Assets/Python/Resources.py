@@ -276,7 +276,7 @@ dRemovedResourcesDict = {
 	(74, 44)  :  200, # Spices (silphium) in Cyrenaica
 	(87, 49)  :  200, # Horses in Syria
 	(59, 51)  :  400, # Silver near Cartagena
-	(55, 53)  :  400, # Gold in Spain
+	(55, 53)  :  1500, # Gold in Spain
 	(56, 50)  :  400, # Silver in Andalusia
 	(84, 48)  :  500, # Clams in Phoenicia
 	(83, 47)  :  500, # Dye (murex) in Phoenicia

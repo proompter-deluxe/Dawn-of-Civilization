@@ -262,7 +262,7 @@ dResearchCostMods = CivDict({
 	iFrance: 85,
 	iMalays: 120,
 	iJapan: 120,
-	iSpain: 95,
+	iSpain: 90,
 	iNorse: 85,
 	iTurks: 120,
 	iArabia: 140,
