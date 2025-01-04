@@ -359,15 +359,11 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIV_ENGLISH_NORSE</Tag>
-		<English>Duchy of Scandinavia</English>
-		<French>
-			<Text>Duch&#233; de Scandinavie</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<German>Duchy of Scandinavia</German>
-		<Italian>Duchy of Scandinavia</Italian>
-		<Spanish>Duchy of Scandinavia</Spanish>
+		<English>Duchy of Denmark-Norway</English>
+		<French>Duchy of Denmark-Norway</French>
+		<German>Duchy of Denmark-Norway</German>
+		<Italian>Duchy of Denmark-Norway</Italian>
+		<Spanish>Duchy of Denmark-Norway</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIV_ENGLISH_MALAYS</Tag>

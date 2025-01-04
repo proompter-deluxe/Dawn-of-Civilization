@@ -394,7 +394,7 @@ lCivilizations = [
 	),
 	Civilization(
 		iFrance,
-		iGold=100,
+		iGold=200,
 		lCivics=[iMonarchy, iManorialism, iMerchantTrade, iClergy, iHegemony],
 		techs=techs.column(6).without(iScholarship, iArchitecture)
 	),
@@ -641,7 +641,7 @@ lCivilizations = [
 		iAdvancedStartPoints=200,
 		iStateReligion=iProtestantism,
 		lCivics=[iRepublic, iBureaucracy, iManorialism, iRegulatedTrade, iClergy, iColonialism],
-		techs=techs.column(10)
+		techs=techs.column(10).including(iCombinedArms, iUrbanPlanning)
 	),
 	Civilization(
 		iGermany,
@@ -649,15 +649,15 @@ lCivilizations = [
 		iAdvancedStartPoints=200,
 		iStateReligion=iProtestantism,
 		lCivics=[iMonarchy, iBureaucracy, iManorialism, iRegulatedTrade, iClergy, iHegemony],
-		techs=techs.column(11).without(iGeography, iCivilLiberties, iHorticulture, iUrbanPlanning)
+		techs=techs.column(11).without(iGeography, iCivilLiberties)
 	),
 	Civilization(
 		iAmerica,
-		iGold=1500,
-		iAdvancedStartPoints=250,
+		iGold=2000,
+		iAdvancedStartPoints=300,
 		iStateReligion=iProtestantism,
 		lCivics=[iDemocracy, iConstitution, iIndividualism, iFreeEnterprise, iSecularism, iIsolationism],
-		techs=techs.column(12).including(iRepresentation, iChemistry)
+		techs=techs.column(12).including(iRepresentation, iChemistry, iBiology)
 	),
 	Civilization(
 		iArgentina,
@@ -1352,8 +1352,10 @@ dExtraAIUnits = CivDict({
 		iAttack: 2,
 	},
 	iFrance: {
-		iAttack: 1,
+		iAttack: 7,
 		iDefend: 3,
+		iSiege: 1,
+		iShock: 2,
 	},
 	iMalays: {
 		iDefend: 2,
@@ -2067,7 +2069,6 @@ dTechPreferences = {
 	iFrance : {
 		iReplaceableParts: 15,
 		iExploration: 20,
-		iGeography: 30,
 		iLogistics: 15,
 		iPatronage: 20,
 		iMeasurement: 20,
@@ -2165,7 +2166,6 @@ dTechPreferences = {
 	},
 	iEngland : {
 		iExploration: 20,
-		iGeography: 20,
 		iFirearms: 20,
 		iReplaceableParts: 30,
 		iLogistics: 15,
@@ -2185,6 +2185,7 @@ dTechPreferences = {
 		iGuilds: 15,
 		iOptics: 15,
 		iFission: 12,
+		iEconomics: -10,
 	},
 	iBurma : {
 		iLogistics: 20,
@@ -2223,15 +2224,13 @@ dTechPreferences = {
 	},
 	iPoland : {
 		iGeography: -15,
-		iCombinedArms: 15,
-		iCivilLiberties: 30,
-		iSocialContract: 20,
-		iOptics: 20,
+		iCombinedArms: 45,
+		iCivilLiberties: 15,
+		iSocialContract: 15,
 	},
 	iPortugal : {
 		iCartography: 100,
 		iExploration: 100,
-		iGeography: 100,
 		iCompass: 100,
 		iFirearms: 25,
 		iCompanies: 30,

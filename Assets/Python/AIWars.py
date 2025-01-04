@@ -247,7 +247,7 @@ lConquests = [
 	tConquestMacedonMesopotamia, 
 	tConquestMacedonEgypt, 
 	tConquestMacedonPersia, 
-	tConquestSpainMoors,
+	#tConquestSpainMoors,
 	tConquestTurksPersia, 
 	tConquestTurksAnatolia, 
 	tConquestEnglandIreland,

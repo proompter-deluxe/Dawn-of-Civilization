@@ -19,12 +19,12 @@ dCompanyTechs = {
 	iKnightsTemplar   : [iFeudalism],
 }
 
-tCompaniesLimit = (16, 20, 24, 16, 20, 20, 10, 16, 20, 12, 12) # kind of arbitrary currently, see how this plays out
+tCompaniesLimit = (16, 20, 24, 16, 20, 20, 10, 16, 20, 12, 9) # kind of arbitrary currently, see how this plays out
 
 dCompanyExpiry = defaultdict({
-	iSilkRoute : 1500,
-	iKnightsTemplar: 1450,
-	iHanseaticLeague: 1660,
+	iSilkRoute : 1450,
+	iKnightsTemplar: 1350,
+	iHanseaticLeague: 1600,
 	iTradingCompany : 1800,
 	iTextileIndustry : 1920,
 }, 2020)
@@ -129,8 +129,9 @@ def getCityValue(city, iCompany):
 		iValue += 2
 
 	# Free Enterprise increases likeliness for all companies
-	if has_civic(owner, iFreeEnterprise):
-		iValue += 1
+	if iCompany not in [iKnightsTemplar]:
+		if has_civic(owner, iFreeEnterprise):
+			iValue += 1
 
 	if iCompany == iKnightsTemplar:
 		if has_civic(owner, iVassalage):
@@ -141,6 +142,8 @@ def getCityValue(city, iCompany):
 			iValue += 1	
 		if has_civic(owner, iMonasticism):
 			iValue += 1	
+		if has_civic(owner, iFanaticism):
+			iValue += 2
 
 	# civilization requirements
 	if iCompany == iTradingCompany:
@@ -176,7 +179,7 @@ def getCityValue(city, iCompany):
 		elif city.getRegionID() not in [rNorway, rBritain, rFrance, rRuthenia]:
 			return -1
 	elif iCompany == iKnightsTemplar:
-		if city.getRegionID() in [rFrance, rIberia, rItaly, rGreece, rAnatolia, rLevant, rEgypt, rMaghreb]:
+		if city.getRegionID() in [rBritain, rFrance, rIberia, rItaly, rGreece, rAnatolia, rLevant, rEgypt, rMaghreb]:
 			iValue += 4
 	
 	# fishing industry - coastal cities only

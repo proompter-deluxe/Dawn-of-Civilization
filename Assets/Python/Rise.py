@@ -31,7 +31,6 @@ lExpansionCivs = [
 	iNorse,
 	iTurks,
 	iArabia,
-	iSpain,
 	iMamluks,
 	iMongols,
 	iTimurids,
@@ -41,6 +40,7 @@ lExpansionCivs = [
 	iGhorids,
 	iChina,
 	iAssyria,
+	iFrance,
 ]
 
 lIndependenceCivs = [

@@ -78,6 +78,14 @@
 		<Spanish>%s2 Commune</Spanish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_CIV_CELTS_REPUBLIC</Tag>
+		<English>%s2 Republic</English>
+		<French>%s2 Republic</French>
+		<German>%s2 Republic</German>
+		<Italian>%s2 Republic</Italian>
+		<Spanish>%s2 Republic</Spanish>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_CIV_CELTS_DEFAULT</Tag>
 		<English>%s2 Chiefdoms</English>
 		<French>%s2 Chiefdoms</French>

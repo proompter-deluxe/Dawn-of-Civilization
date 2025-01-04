@@ -245,18 +245,18 @@
 				
 				<!-- Renaissance Era -->
 				<!-- 1400 AD to 1800 AD -->
-				<!-- 150 turns -->
+				<!-- 160 turns -->
 				
-				<!-- 50 x 4 years = 200 years -> 1600 AD -->
+				<!-- 80 x 3 years = 240 years -> 1640 AD -->
 				<GameTurnInfo>
-					<iMonthIncrement>48</iMonthIncrement>
-					<iTurnsPerIncrement>50</iTurnsPerIncrement>
+					<iMonthIncrement>36</iMonthIncrement>
+					<iTurnsPerIncrement>80</iTurnsPerIncrement>
 				</GameTurnInfo>
 				
-				<!-- 100 x 2 years = 200 years -> 1800 AD -->
+				<!-- 80 x 2 years = 160 years -> 1800 AD -->
 				<GameTurnInfo>
 					<iMonthIncrement>24</iMonthIncrement>
-					<iTurnsPerIncrement>100</iTurnsPerIncrement>
+					<iTurnsPerIncrement>80</iTurnsPerIncrement>
 				</GameTurnInfo>
 				
 				<!-- Industrial Era -->
@@ -304,11 +304,11 @@
 				<!-- Ancient: 165 turns -->
 				<!-- Classical: 150 turns -->
 				<!-- Medieval: 180 turns -->
-				<!-- Renaissance: 150 turns -->
+				<!-- Renaissance: 160 turns -->
 				<!-- Industrial: 105 turns -->
 				<!-- Global: 70 turns -->
 				<!-- Digital: 80 turns -->
-				<!-- TOTAL: 900 turns -->
+				<!-- TOTAL: 910 turns -->
 			</GameTurnInfos>
 		</GameSpeedInfo>
 		<GameSpeedInfo>

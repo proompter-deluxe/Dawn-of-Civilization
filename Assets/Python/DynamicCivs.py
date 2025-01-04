@@ -251,6 +251,9 @@ dSpecificVassalTitles = deepdict({
 	iBrazil : {
 		iArgentina : "TXT_KEY_CIV_BRAZILIAN_ARGENTINA",
 	},
+	iSweden : {
+		iNorse: "TXT_KEY_CIV_SWEDISH_NORSE"
+	}
 })
 
 dMasterTitles = {
@@ -1901,6 +1904,15 @@ def specificTitle(iPlayer, lPreviousOwners=[]):
 	elif iCiv == iAssyria:
 		if bResurrected and (iReligion == iOrthodoxy or iReligion == iCatholicism):
 			return "TXT_KEY_CIV_ASSYRIA_PRINCIPALITY_OF"
+
+	elif iCiv == iSweden:
+		if team(iNorse).isAVassal() and civ(master(iNorse)) == iSweden:
+			bNorseOwnDenmark = 1 <= len(cities.region(rDenmark)) == len(cities.region(rDenmark).owner(iNorse))
+
+			if bNorseOwnDenmark:
+				return "TXT_KEY_CIV_NORSE_KALMAR_UNION"
+			else:
+				return "TXT_KEY_CIV_SWEDEN_UNITED_KINGDOMS"
 
 	elif iCiv == iIndia:	
 		if bEmpire:

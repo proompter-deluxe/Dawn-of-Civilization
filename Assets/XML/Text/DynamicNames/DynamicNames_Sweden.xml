@@ -41,4 +41,20 @@
 		<Italian>Kingdom of %s1</Italian>
 		<Spanish>Kingdom of %s1</Spanish>
 	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_SWEDISH_NORSE</Tag>
+		<English>Crown of Norway</English>
+		<French>Crown of Norway</French>
+		<German>Crown of Norway</German>
+		<Italian>Crown of Norway</Italian>
+		<Spanish>Crown of Norway</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_SWEDEN_UNITED_KINGDOMS</Tag>
+		<English>United Kingdoms of Sweden and Norway</English>
+		<French>United Kingdoms of Sweden and Norway</French>
+		<German>United Kingdoms of Sweden and Norway</German>
+		<Italian>United Kingdoms of Sweden and Norway</Italian>
+		<Spanish>United Kingdoms of Sweden and Norway</Spanish>
+	</TEXT>
 </Civ4GameText>
