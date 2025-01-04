@@ -11335,10 +11335,18 @@ bool CvUnitAI::AI_targetCity(int iFlags)
 								}
 							}
 
-							// Leoreth: make sure Asian barbarians focus on China
+							// Leoreth: make sure barbarians focus on their own region group
 							if (isBarbarian())
 							{
-								if (plot()->getRegionGroup() == REGION_GROUP_EAST_ASIA || plot()->getRegionGroup() == REGION_GROUP_NORTH_ASIA)
+								int iRegionGroup = CvPlot::getRegionGroupForRegion(getOriginalRegion());
+								if (pLoopCity->getRegionGroup() == iRegionGroup)
+								{
+									iValue *= 2;
+								}
+
+
+								// Leoreth: make sure Asian barbarians focus on China
+								if (iRegionGroup == REGION_GROUP_EAST_ASIA || iRegionGroup == REGION_GROUP_NORTH_ASIA)
 								{
 									if (pLoopCity->getRegionGroup() == REGION_GROUP_EAST_ASIA)
 									{

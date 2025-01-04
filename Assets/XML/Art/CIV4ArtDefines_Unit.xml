@@ -10179,6 +10179,27 @@
 			<AudioRunSounds/>
 		</UnitArtInfo>
 		<UnitArtInfo>
+			<Type>ART_DEF_UNIT_IRANIAN_ZAMBURAK</Type>
+			<Button>Art/Units/Zamburak/Zamburak.dds</Button>
+			<fScale>0.39</fScale>
+			<fInterfaceScale>0.8</fInterfaceScale>
+			<bActAsLand>0</bActAsLand>
+			<bActAsAir>0</bActAsAir>
+			<NIF>Art/Units/Zamburak/ArabiaCamelArcher.nif</NIF>
+			<KFM>Art/Units/Zamburak/ArabiaCamelArcher.kfm</KFM>
+			<SHADERNIF>Art/Units/Zamburak/ArabiaCamelArcher.nif</SHADERNIF>
+			<ShadowDef>
+				<ShadowNIF>Art/Units/01_UnitShadows/HorseShadow.nif</ShadowNIF>
+				<ShadowAttachNode>BIP Pelvis</ShadowAttachNode>
+				<fShadowScale>1.0</fShadowScale>
+			</ShadowDef>
+			<fBattleDistance>0.35</fBattleDistance>
+			<fRangedDeathTime>0.31</fRangedDeathTime>
+			<bActAsRanged>1</bActAsRanged>
+			<TrainSound>AS2D_UNIT_BUILD_UNIQUE_UNIT</TrainSound>
+			<AudioRunSounds/>
+		</UnitArtInfo>
+		<UnitArtInfo>
 			<Type>ART_DEF_UNIT_NAFFATUN</Type>
 			<Button>Art/Units/Naffatun_aka_Mamluk_Grenadier/India_Grenadier2.dds</Button>
 			<fScale>0.44</fScale>

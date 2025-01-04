@@ -1977,6 +1977,7 @@ class TestOpenBorderCount(ExtendedTestCase):
 		self.assertEqual(self.requirement.progress(self.evaluator), self.FAILURE + "Open border agreements: 0 / 2")
 	
 	def test_insufficient(self):
+		team(0).meet(1, False)
 		team(0).setOpenBorders(1, True)
 		
 		try:
@@ -1984,11 +1985,13 @@ class TestOpenBorderCount(ExtendedTestCase):
 			self.assertEqual(self.requirement.fulfilled(self.evaluator), False)
 			self.assertEqual(self.requirement.progress(self.evaluator), self.FAILURE + "Open border agreements: 1 / 2")
 		finally:
+			team(0).cutContact(1)
 			team(0).setOpenBorders(1, False)
 	
 	def test_sufficient(self):
 		players = [1, 2]
 		for iPlayer in players:
+			team(0).meet(iPlayer, False)
 			team(0).setOpenBorders(iPlayer, True)
 		
 		try:
@@ -1997,6 +2000,7 @@ class TestOpenBorderCount(ExtendedTestCase):
 			self.assertEqual(self.requirement.progress(self.evaluator), self.SUCCESS + "Open border agreements: 2 / 2")
 		finally:
 			for iPlayer in players:
+				team(0).cutContact(iPlayer)
 				team(0).setOpenBorders(iPlayer, False)
 	
 	def test_other_evaluator(self):
@@ -2005,7 +2009,8 @@ class TestOpenBorderCount(ExtendedTestCase):
 		
 		players = [7, 8]
 		for iPlayer in players:
-			team(0).setOpenBorders(iPlayer, True)
+			team(1).meet(iPlayer, False)
+			team(1).setOpenBorders(iPlayer, True)
 		
 		try:
 			self.assertEqual(self.requirement.evaluate(evaluator), 2)
@@ -2013,7 +2018,8 @@ class TestOpenBorderCount(ExtendedTestCase):
 			self.assertEqual(self.requirement.progress(evaluator), self.SUCCESS + "Open border agreements: 2 / 2")
 		finally:
 			for iPlayer in players:
-				team(0).setOpenBorders(iPlayer, False)
+				team(1).cutContact(iPlayer)
+				team(1).setOpenBorders(iPlayer, False)
 			team(1).setVassal(0, False, False)
 	
 	def test_check_turnly(self):
@@ -2045,6 +2051,7 @@ class TestOpenBorderCountCivs(ExtendedTestCase):
 	def test_with_civs(self):
 		players = [1, 2]
 		for iPlayer in players:
+			team(0).meet(iPlayer, False)
 			team(0).setOpenBorders(iPlayer, True)
 		
 		try:
@@ -2053,11 +2060,13 @@ class TestOpenBorderCountCivs(ExtendedTestCase):
 			self.assertEqual(self.requirement.progress(self.evaluator), self.SUCCESS + "Open border agreements: 2 / 2")
 		finally:
 			for iPlayer in players:
+				team(0).cutContact(iPlayer)
 				team(0).setOpenBorders(iPlayer, False)
 	
 	def test_with_other_civs(self):
 		players = [7, 8]
 		for iPlayer in players:
+			team(0).meet(iPlayer, False)
 			team(0).setOpenBorders(iPlayer, True)
 		
 		try:
@@ -2066,6 +2075,7 @@ class TestOpenBorderCountCivs(ExtendedTestCase):
 			self.assertEqual(self.requirement.progress(self.evaluator), self.FAILURE + "Open border agreements: 0 / 2")
 		finally:
 			for iPlayer in players:
+				team(0).cutContact(iPlayer)
 				team(0).setOpenBorders(iPlayer, False)
 
 

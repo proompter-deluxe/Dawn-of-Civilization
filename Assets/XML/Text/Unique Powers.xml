@@ -51,11 +51,11 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UP_ARA</Tag>
-		<English>State religion spreads with temples to conquered cities</English>
-		<French>La religion d'&#201;tat se propage dans les villes conquises et un lieu de culte y est automatiquement construit</French>
+		<English>State [ICON_RELIGION] spreads with temples to conquered cities</English>
+		<French>La [ICON_RELIGION] d'&#201;tat se propage dans les villes conquises et un lieu de culte y est automatiquement construit</French>
 		<German>Ausbreitung der Staatsreligion inklusive Tempeln in eroberten St&#228;dten</German>
-		<Italian>La religione di stato si diffonde con templi e cattedrali nelle citt&#224; conquistate</Italian>
-		<Spanish>La religi&#243;n oficial se propaga con los templos y catedrales a las ciudades conquistadas</Spanish>
+		<Italian>La [ICON_RELIGION] di stato si diffonde con templi e cattedrali nelle citt&#224; conquistate</Italian>
+		<Spanish>La [ICON_RELIGION] oficial se propaga con los templos y catedrales a las ciudades conquistadas</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UP_ARG_TITLE</Tag>
@@ -283,11 +283,11 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UP_KHA</Tag>
-		<English>No penalities with other leaders for different religions</English>
-		<French>No penalities with other leaders for different religions</French>
-		<German>No penalities with other leaders for different religions</German>
-		<Italian>No penalities with other leaders for different religions</Italian>
-		<Spanish>No penalities with other leaders for different religions</Spanish>
+		<English>No negative attitude from different state [ICON_RELIGION]</English>
+		<French>No negative attitude from different state [ICON_RELIGION]</French>
+		<German>No negative attitude from different state [ICON_RELIGION]</German>
+		<Italian>No negative attitude from different state [ICON_RELIGION]</Italian>
+		<Spanish>No negative attitude from different state [ICON_RELIGION]</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UP_ARM_TITLE</Tag>
@@ -347,11 +347,11 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UP_DRA</Tag>
-		<English>+10% foreign trade route yield for every traded resource</English>
-		<French>+10% foreign trade route yield for every traded resource</French>
-		<German>+10% foreign trade route yield for every traded resource</German>
-		<Italian>+10% foreign trade route yield for every traded resource</Italian>
-		<Spanish>+10% foreign trade route yield for every traded resource</Spanish>
+		<English>+10% foreign [ICON_TRADE] yield for every traded resource</English>
+		<French>+10% foreign [ICON_TRADE] yield for every traded resource</French>
+		<German>+10% foreign [ICON_TRADE] yield for every traded resource</German>
+		<Italian>+10% foreign [ICON_TRADE] yield for every traded resource</Italian>
+		<Spanish>+10% foreign [ICON_TRADE] yield for every traded resource</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UP_EGY_TITLE</Tag>
@@ -363,7 +363,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UP_EGY</Tag>
-		<English>Monarchy, Redistribution and Deification are enabled at start</English>
+		<English>Monarchy, Redistribution and Deification enabled at start</English>
 		<French>La monarchie, la redistribution et la d&#233;ification sont activ&#233;es au d&#233;part</French>
 		<German>Aktivierung von Monarchie, Umverteilung und Verg&#246;tterung beim Spielstart</German>
 		<Italian>All'avvio sono abilitati governo ereditario e schiavit&#249;</Italian>
@@ -395,11 +395,11 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UP_ETH</Tag>
-		<English>+1 [ICON_FOOD] on hill tiles that yield at least one [ICON_FOOD]</English>
-		<French>+1 [ICON_FOOD] on hill tiles that yield at least one [ICON_FOOD]</French>
-		<German>+1 [ICON_FOOD] on hill tiles that yield at least one [ICON_FOOD]</German>
-		<Italian>+1 [ICON_FOOD] on hill tiles that yield at least one [ICON_FOOD]</Italian>
-		<Spanish>+1 [ICON_FOOD] on hill tiles that yield at least one [ICON_FOOD]</Spanish>
+		<English>+1[ICON_FOOD] on hill tiles that yield at least one [ICON_FOOD]</English>
+		<French>+1[ICON_FOOD] on hill tiles that yield at least one [ICON_FOOD]</French>
+		<German>+1[ICON_FOOD] on hill tiles that yield at least one [ICON_FOOD]</German>
+		<Italian>+1[ICON_FOOD] on hill tiles that yield at least one [ICON_FOOD]</Italian>
+		<Spanish>+1[ICON_FOOD] on hill tiles that yield at least one [ICON_FOOD]</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UP_FRA_TITLE</Tag>
@@ -443,9 +443,9 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UP_MNO</Tag>
-		<English>+150% Great People birth rate until the end of the Classical Era</English>
+		<English>+150%  [ICON_GREATPEOPLE] birth rate until the end of the Classical Era</English>
 		<French>Le taux de natalit&#233; des personnages illustres est augment&#233; de 150 % jusqu'&#224; la fin de l'&#200;re classique</French>
-		<German>+150% Geburtenrate von Gro&#223;en Pers&#246;nlichkeiten bis zum Ende des klassischen Zeitalters</German>
+		<German>+150% [ICON_GREATPEOPLE] Geburtsrate bis zum Ende des klassischen Zeitalters</German>
 		<Italian>+150% tasso di natalit&#224; dei Grandi Personaggi fino alla fine del Medioevo</Italian>
 		<Spanish>+100% a la tasa de natalidad de grandes personajes hasta el final de la Edad Media</Spanish>
 	</TEXT>
@@ -467,11 +467,11 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UP_HAR</Tag>
-		<English>Positive health contributes to city growth during the Ancient era</English>
+		<English>Positive [ICON_HEALTHY] contributes to city growth during the Ancient era</English>
 		<French>Les points de sant&#233; en exc&#232;s contribuent &#224; la croissance des villes pendant l'&#200;re antique</French>
-		<German>Positive health contributes to city growth during the Ancient era</German>
-		<Italian>Positive health contributes to city growth during the Ancient era</Italian>
-		<Spanish>Positive health contributes to city growth during the Ancient era</Spanish>
+		<German>Positive [ICON_HEALTHY] contributes to city growth during the Ancient era</German>
+		<Italian>Positive [ICON_HEALTHY] contributes to city growth during the Ancient era</Italian>
+		<Spanish>Positive [ICON_HEALTHY] contributes to city growth during the Ancient era</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UP_HIT_TITLE</Tag>
@@ -499,7 +499,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UP_HOL</Tag>
-		<English>Doubled yield and commerce from the trading company corporation</English>
+		<English>Double yield and commerce from the trading company corporation</English>
 		<French>Les rendements de la Compagnie commerciale sont doubl&#233;s</French>
 		<German>Doppeltes Einkommen durch Handelsgesellschaften</German>
 		<Italian>Tutte le unit&#224; marittime possono entrare in territorio nemico</Italian>
@@ -515,11 +515,11 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UP_HRE</Tag>
-		<English>Double construction speed of state religion buildings</English>
+		<English>Double construction speed of state [ICON_RELIGION] buildings</English>
 		<French>La vistesse de construction des b&#226;timents li&#233;s &#224; la religion d'&#201;tat est doubl&#233;e</French>
 		<German>Doppelte Baugeschwindigkeit f&#252;r Geb&#228;ude der Staatsreligion</German>
-		<Italian>Double construction speed of state religion buildings</Italian>
-		<Spanish>Double construction speed of state religion buildings</Spanish>
+		<Italian>Double construction speed of state [ICON_RELIGION] buildings</Italian>
+		<Spanish>Double construction speed of state [ICON_RELIGION] buildings</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UP_IMMIGRATION</Tag>
@@ -539,9 +539,9 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UP_INC</Tag>
-		<English>Mountains produce 2 food and 1 hammer</English>
+		<English>Mountains yield extra [ICON_FOOD] and [ICON_PRODUCTION]</English>
 		<French>Les montagnes produisent 2 nourritures et 1 marteau</French>
-		<German>Berge gew&#228;hren 2 Nahrung und 1 Hammer</German>
+		<German>Berge gew&#228;hren zus&#228;tzliche [ICON_FOOD] und [ICON_PRODUCTION]</German>
 		<Italian>Le montagne producono 2 cibo e 1 scudo</Italian>
 		<Spanish>Las monta&#241;as producen 2 alimentos y 1 martillo</Spanish>
 	</TEXT>
@@ -619,11 +619,11 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UP_JAV</Tag>
-		<English>Improvements that provide food have twice the effect on islands</English>
-		<French>Improvements that provide food have twice the effect on islands</French>
-		<German>Improvements that provide food have twice the effect on islands</German>
-		<Italian>Improvements that provide food have twice the effect on islands</Italian>
-		<Spanish>Improvements that provide food have twice the effect on islands</Spanish>
+		<English>Improvements that provide [ICON_FOOD] have twice the effect on islands</English>
+		<French>Improvements that provide [ICON_FOOD] have twice the effect on islands</French>
+		<German>Improvements that provide [ICON_FOOD] have twice the effect on islands</German>
+		<Italian>Improvements that provide [ICON_FOOD] have twice the effect on islands</Italian>
+		<Spanish>Improvements that provide [ICON_FOOD] have twice the effect on islands</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UP_KHM_TITLE</Tag>
@@ -635,11 +635,11 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UP_KHM</Tag>
-		<English>Can convert production into food in your capital</English>
-		<French>Can convert production into food in your capital</French>
-		<German>Can convert production into food in your capital</German>
-		<Italian>Can convert production into food in your capital</Italian>
-		<Spanish>Can convert production into food in your capital</Spanish>
+		<English>Can convert [ICON_PRODUCTION] into [ICON_FOOD] in the capital</English>
+		<French>Can convert [ICON_PRODUCTION] into [ICON_FOOD] in the capital</French>
+		<German>Can convert [ICON_PRODUCTION] into [ICON_FOOD] in the capital</German>
+		<Italian>Can convert [ICON_PRODUCTION] into [ICON_FOOD] in the capital</Italian>
+		<Spanish>Can convert [ICON_PRODUCTION] into [ICON_FOOD] in the capital</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UP_CON_TITLE</Tag>
@@ -651,11 +651,11 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UP_CON</Tag>
-		<English>Jungles, rainforests and marshes yield extra food and production and cause no unhealthiness</English>
+		<English>Jungles, rainforests, and marshes yield [ICON_FOOD] and [ICON_PRODUCTION] and cause no [ICON_UNHEALTHY]</English>
 		<French>Les jungles, les for&#234;ts tropicales et les mar&#233;cages rapportent de la nourriture et de la production, et ne causent pas de maladie</French>
-		<German>Dschungel, Regenw&#228;lder und Marschen geben zus&#228;tzliche Nahrung und Produktion und verursachen keine Krankheit</German>
-		<Italian>Jungles, rainforests and marshes yield extra food and production and cause no unhealthiness</Italian>
-		<Spanish>Jungles, rainforests and marshes yield extra food and production and cause no unhealthiness</Spanish>
+		<German>Dschungel, Regenw&#228;lder und Marschen geben zus&#228;tzliche [ICON_FOOD] und [ICON_PRODUCTION] und verursachen keine [ICON_UNHEALTHY]</German>
+		<Italian>Jungles, rainforests, and marshes yield [ICON_FOOD] and [ICON_PRODUCTION] and cause no [ICON_UNHEALTHY]</Italian>
+		<Spanish>Jungles, rainforests, and marshes yield [ICON_FOOD] and [ICON_PRODUCTION] and cause no [ICON_UNHEALTHY]</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UP_KOR_TITLE</Tag>
@@ -683,11 +683,11 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UP_KUS</Tag>
-		<English>Spreading a religion that is not the owner's state religion grants additional gold</English>
-		<French>Spreading a religion that is not the owner's state religion grants additional gold</French>
-		<German>Spreading a religion that is not the owner's state religion grants additional gold</German>
-		<Italian>Spreading a religion that is not the owner's state religion grants additional gold</Italian>
-		<Spanish>Spreading a religion that is not the owner's state religion grants additional gold</Spanish>
+		<English>Spreading a [ICON_RELIGION] that is not the owner's state [ICON_RELIGION] grants additional [ICON_GOLD]</English>
+		<French>Spreading a [ICON_RELIGION] that is not the owner's state [ICON_RELIGION] grants additional [ICON_GOLD]</French>
+		<German>Spreading a [ICON_RELIGION] that is not the owner's state [ICON_RELIGION] grants additional [ICON_GOLD]</German>
+		<Italian>Spreading a [ICON_RELIGION] that is not the owner's state [ICON_RELIGION] grants additional [ICON_GOLD]</Italian>
+		<Spanish>Spreading a [ICON_RELIGION] that is not the owner's state [ICON_RELIGION] grants additional [ICON_GOLD]</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UP_SYNCRETISM_EFFECT</Tag>
@@ -723,11 +723,11 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UP_MAL</Tag>
-		<English>Double trade yield from distance for inland cities and desert provides trade connections</English>
-		<French>Double trade yield from distance for inland cities and desert provides trade connections</French>
-		<German>Double trade yield from distance for inland cities and desert provides trade connections</German>
-		<Italian>Double trade yield from distance for inland cities and desert provides trade connections</Italian>
-		<Spanish>Double trade yield from distance for inland cities and desert provides trade connections</Spanish>
+		<English>Double [ICON_TRADE] yield from distance for inland cities, desert provides trade connections</English>
+		<French>Double [ICON_TRADE] yield from distance for inland cities, desert provides trade connections</French>
+		<German>Double [ICON_TRADE] yield from distance for inland cities, desert provides trade connections</German>
+		<Italian>Double [ICON_TRADE] yield from distance for inland cities, desert provides trade connections</Italian>
+		<Spanish>Double [ICON_TRADE] yield from distance for inland cities, desert provides trade connections</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UP_MAY_TITLE</Tag>
@@ -739,11 +739,11 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UP_MAY</Tag>
-		<English>Cities receive additional food whenever a technology is discovered before the Middle Ages</English>
+		<English>Cities receive additional [ICON_FOOD] whenever a technology is discovered before the Middle Ages</English>
 		<French>Les villes re&#231;oivent de la nourriture lors de la d&#233;couverte de technologies avant le Moyen &#194;ge</French>
 		<German>St&#228;dte erhalten zus&#228;tzliche Nahrung f&#252;r jede Technologie, die vor dem Mittelalter entdeckt wird</German>
-		<Italian>Cities receive additional food whenever a technology is discovered before the Middle Ages</Italian>
-		<Spanish>Cities receive additional food whenever a technology is discovered before the Middle Ages</Spanish>
+		<Italian>Cities receive additional [ICON_FOOD] whenever a technology is discovered before the Middle Ages</Italian>
+		<Spanish>Cities receive additional [ICON_FOOD] whenever a technology is discovered before the Middle Ages</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UP_MEX_TITLE</Tag>
@@ -827,11 +827,11 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UP_MOO</Tag>
-		<English>+1 [ICON_FOOD] from Orchard</English>
-		<French>+1 [ICON_FOOD] from Orchard</French>
-		<German>+1 [ICON_FOOD] from Orchard</German>
-		<Italian>+1 [ICON_FOOD] from Orchard</Italian>
-		<Spanish>+1 [ICON_FOOD] from Orchard</Spanish>
+		<English>+1[ICON_FOOD] from Orchard</English>
+		<French>+1[ICON_FOOD] from Orchard</French>
+		<German>+1[ICON_FOOD] from Orchard</German>
+		<Italian>+1[ICON_FOOD] from Orchard</Italian>
+		<Spanish>+1[ICON_FOOD] from Orchard</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UP_MUG_TITLE</Tag>
@@ -843,11 +843,27 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UP_MUG</Tag>
-		<English>Cities receive half the construction cost as culture after a building is completed</English>
-		<French>Au moment de compl&#233;ter un b&#226;timent, les villes re&#231;oivent en culture la moiti&#233; du co&#251;t de construction</French>
-		<German>St&#228;dte erhalten die H&#228;lfte der Baukosten als Kultur, wenn ein Geb&#228;ude errichtet wird</German>
-		<Italian>Cities receive half the construction cost as culture after a building is completed</Italian>
-		<Spanish>Cities receive half the construction cost as culture after a building is completed</Spanish>
+		<English>Completing a building grants half its [ICON_PRODUCTION] cost as [ICON_CULTURE]</English>
+		<French>Completing a building grants half its [ICON_PRODUCTION] cost as [ICON_CULTURE]</French>
+		<German>Completing a building grants half its [ICON_PRODUCTION] cost as [ICON_CULTURE]</German>
+		<Italian>Completing a building grants half its [ICON_PRODUCTION] cost as [ICON_CULTURE]</Italian>
+		<Spanish>Completing a building grants half its [ICON_PRODUCTION] cost as [ICON_CULTURE]</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UP_NOR_TITLE</Tag>
+		<English>The Power of Raids:</English>
+		<French>Le pouvoir des raids :</French>
+		<German>Die Macht des Raubens:</German>
+		<Italian>Il potere dell'incursione:</Italian>
+		<Spanish>El poder del pillaje:</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UP_NOR</Tag>
+		<English>Additional [ICON_GOLD] from pillaging, sacking cities and sinking ships during the Middle Ages</English>
+		<French>Piller, saccager des villes et couler des navires vous rapporte de l'or suppl&#233;mentaire pendant le Moyen &#194;ge</French>
+		<German>Zus&#228;tzliches [ICON_GOLD] durch Pl&#252;nderung von St&#228;dten und Verbesserungen und das Versenken von Schiffen w&#228;hrend des Mittelalters</German>
+		<Italian>Additional [ICON_GOLD] from pillaging, sacking cities and sinking ships during the Middle Ages</Italian>
+		<Spanish>Additional [ICON_GOLD] from pillaging, sacking cities and sinking ships during the Middle Ages</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UP_NUB_TITLE</Tag>
@@ -923,11 +939,11 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UP_POR</Tag>
-		<English>+1 trade route in overseas colonies until the Industrial era</English>
-		<French>+1 trade route in overseas colonies until the Industrial era</French>
+		<English>+1 [ICON_TRADE] route in overseas colonies until the Industrial era</English>
+		<French>+1 [ICON_TRADE] route in overseas colonies until the Industrial era</French>
 		<German>+1 Handelsroute in Kolonien vor dem Industriezeitalter</German>
-		<Italian>+1 trade route in overseas colonies until the Industrial era</Italian>
-		<Spanish>+1 trade route in overseas colonies until the Industrial era</Spanish>
+		<Italian>+1 [ICON_TRADE] route in overseas colonies until the Industrial era</Italian>
+		<Spanish>+1 [ICON_TRADE] route in overseas colonies until the Industrial era</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UP_ROM_TITLE</Tag>
@@ -939,35 +955,11 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UP_ROM</Tag>
-		<English>Buildings that already exist in your capital receive +30% construction speed.</English>
+		<English>+30% [ICON_PRODUCTION] for buildings already in the capital</English>
 		<French>Les b&#226;timents d&#233;j&#224; pr&#233;sents dans votre capitale sont construits 30 % plus vite</French>
-		<German>Geb&#228;ude, die bereits in der Hauptstadt errichtet wurden, erhalten +30% Baugeschwindigkeit.</German>
+		<German>+30% [ICON_PRODUCTION] f&#252;r Geb&#228;ude, die bereits in der Hauptstadt sind</German>
 		<Italian>Le strade all'interno dei confini romani permettono movimento delle unit&#224; 4X invece di 2X</Italian>
 		<Spanish>Las carreteras dentro de las fronteras romanas permiten un movimiento de unidades multiplicado x4 en lugar de x2</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UP_ROMAN_CONQUESTS</Tag>
-		<English>An army has been fielded to attack %s1_civ_adjective!</English>
-		<French>Une arm&#233;e a &#233;t&#233; lev&#233;e pour attaquer %s1_civ_adjective !</French>
-		<German>Eine Armee wurde zusammengestellt zum Angriff auf %s1_civ_adjective!</German>
-		<Italian>An army has been fielded to attack %s1_civ_adjective!</Italian>
-		<Spanish>An army has been fielded to attack %s1_civ_adjective!</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UP_ROMAN_CONQUESTS_TARGET</Tag>
-		<English>The Romans have fielded an army to conquer our civilization!</English>
-		<French>Les Romains ont lev&#233; une arm&#233;e pour conqu&#233;rir notre civilisation !</French>
-		<German>Die R&#246;mer haben eine Armee zum Angriff auf unsere Zivilisation zusammengestellt!</German>
-		<Italian>The Romans have fielded an army to conquer our civilization!</Italian>
-		<Spanish>The Romans have fielded an army to conquer our civilization!</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UP_ROMAN_TRIUMPH</Tag>
-		<English>Your triumphant victories have enabled you to field another legion!</English>
-		<French>Vos victoires triomphantes vous ont permis de lever une autre l&#233;gion !</French>
-		<German>Eure triumphalen Siege haben Euch erm&#246;glicht, eine weitere Legion auszuheben!</German>
-		<Italian>Your triumphant victories have enabled you to field another legion!</Italian>
-		<Spanish>Your triumphant victories have enabled you to field another legion!</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UP_RUS_TITLE</Tag>
@@ -1115,7 +1107,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UP_OTT</Tag>
-		<English>Can Conscript two extra Units in Cities with Non-State Religions</English>
+		<English>Can conscript two extra units in cities with non-state [ICON_RELIGION]</English>
 		<French>Vous pouvez enr&#244;ler deux unit&#233;s suppl&#233;mentaires dans les villes adeptes de religions non officielles</French>
 		<German>Kann zwei zus&#228;tzliche Einheiten in St&#228;dten mit Nicht-Staatsreligionen rekrutieren</German>
 		<Italian>La maggioranza di cultura straniera nelle citt&#224; turche &#232; convertita in cultura turca</Italian>
@@ -1131,11 +1123,11 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UP_UKR</Tag>
-		<English>+1 [ICON_COMMERCE] for unimproved land tiles in your trade network</English>
-		<French>+1 [ICON_COMMERCE] for unimproved land tiles in your trade network</French>
-		<German>+1 [ICON_COMMERCE] for unimproved land tiles in your trade network</German>
-		<Italian>+1 [ICON_COMMERCE] for unimproved land tiles in your trade network</Italian>
-		<Spanish>+1 [ICON_COMMERCE] for unimproved land tiles in your trade network</Spanish>
+		<English>+1[ICON_COMMERCE] for unimproved land tiles in your [ICON_TRADE] network</English>
+		<French>+1[ICON_COMMERCE] for unimproved land tiles in your [ICON_TRADE] network</French>
+		<German>+1[ICON_COMMERCE] for unimproved land tiles in your [ICON_TRADE] network</German>
+		<Italian>+1[ICON_COMMERCE] for unimproved land tiles in your [ICON_TRADE] network</Italian>
+		<Spanish>+1[ICON_COMMERCE] for unimproved land tiles in your [ICON_TRADE] network</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UP_VIE_TITLE</Tag>
@@ -1152,22 +1144,6 @@
 		<German>When attacking within their own territory, units receive the defensive bonus of their current tile</German>
 		<Italian>When attacking within their own territory, units receive the defensive bonus of their current tile</Italian>
 		<Spanish>When attacking within their own territory, units receive the defensive bonus of their current tile</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UP_NOR_TITLE</Tag>
-		<English>The Power of Raids:</English>
-		<French>Le pouvoir des raids :</French>
-		<German>Die Macht des Raubens:</German>
-		<Italian>Il potere dell'incursione:</Italian>
-		<Spanish>El poder del pillaje:</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UP_NOR</Tag>
-		<English>Additional gold from pillaging, sacking cities and sinking ships during the Middle Ages</English>
-		<French>Piller, saccager des villes et couler des navires vous rapporte de l'or suppl&#233;mentaire pendant le Moyen &#194;ge</French>
-		<German>Zus&#228;tzliches gold durch Pl&#252;nderung von St&#228;dten und Verbesserungen und das Versenken von Schiffen w&#228;hrend des Mittelalters</German>
-		<Italian>5X oro ottenuto dai saccheggi</Italian>
-		<Spanish>Se obtiene oro x5 del pillaje</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UP_MAM_TITLE</Tag>

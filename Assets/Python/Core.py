@@ -131,6 +131,10 @@ def log_with_trace(context):
 	stacktrace()
 
 
+def log_named(statement, **kwargs):
+	print "%s: %s" % (statement, ", ".join("%s=%s" % (key, value) for key, value in kwargs.items()))
+
+
 # TODO: is there a right equal or right not equal to add to Civ so we can do iPlayer == iEgypt and convert iPlayer to Civ implicitly?
 
 

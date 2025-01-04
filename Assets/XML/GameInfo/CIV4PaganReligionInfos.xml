@@ -103,6 +103,12 @@
 			<Button>Art/Interface/Buttons/Religions/Teotl.dds</Button>
 		</PaganReligionInfo>
 		<PaganReligionInfo>
+			<Type>PAGAN_RELIGION_TEOTL_TOLTEC</Type>
+			<Description>TXT_KEY_PAGAN_RELIGION_TEOTL</Description>
+			<Civilopedia>TXT_KEY_PAGAN_RELIGION_TEOTL_PEDIA</Civilopedia>
+			<Button>Art/Interface/Buttons/Religions/Teotl.dds</Button>
+		</PaganReligionInfo>
+		<PaganReligionInfo>
 			<Type>PAGAN_RELIGION_TEOTL_AZTEC</Type>
 			<Description>TXT_KEY_PAGAN_RELIGION_TEOTL</Description>
 			<Civilopedia>TXT_KEY_PAGAN_RELIGION_TEOTL_PEDIA</Civilopedia>

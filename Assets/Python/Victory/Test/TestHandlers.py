@@ -449,13 +449,14 @@ class TestEventHandlerRegistryFunctions(ExtendedTestCase):
 		onPlotFeatureRemoved = self.get("plotFeatureRemoved", self.capture)
 		
 		our_city, their_city = cities = TestCities.owners(0, 1)
+		our_plot, their_plot = plot(our_city), plot(their_city)
 		
 		try:
-			onPlotFeatureRemoved((plot(their_city), iForest, their_city))
+			onPlotFeatureRemoved((their_plot, their_city, iForest))
 			self.assertEqual(self.argument, None)
 			
-			onPlotFeatureRemoved((plot(our_city), iForest, our_city))
-			self.assertEqual(self.argument, (self.goal, iForest))
+			onPlotFeatureRemoved((our_plot, our_city, iForest))
+			self.assertEqual(self.argument, (self.goal, our_plot, our_city, iForest))
 		finally:
 			cities.kill()
 

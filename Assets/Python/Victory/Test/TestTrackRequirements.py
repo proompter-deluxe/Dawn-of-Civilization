@@ -641,10 +641,10 @@ class TestConqueredCitiesOutside(ExtendedTestCase):
 		self.assertEqual(self.requirement.description(), "two cities outside of Test Area")
 	
 	def test_areas(self):
-		self.assertEqual(self.requirement.areas(), {"Test Area": plots.of([(57, 35), (59, 35)])})
+		self.assertEqual(self.requirement.areas(), {"outside of Test Area": plots.of([(57, 35), (59, 35)])})
 	
 	def test_area_name(self):
-		self.assertEqual(self.requirement.area_name((57, 35)), "Test Area")
+		self.assertEqual(self.requirement.area_name((57, 35)), "outside of Test Area")
 		self.assertEqual(self.requirement.area_name((10, 10)), "")
 	
 	def test_conquer_outside_area(self):
@@ -1924,22 +1924,30 @@ class TestProduction(ExtendedTestCase):
 	
 	def test_removed_forest(self):
 		city = TestCities.one()
-		plot = plot_(city)
+		plot = direction(city, DirectionTypes.DIRECTION_NORTH)
 		
-		events.fireEvent("plotFeatureRemoved", plot, iForest, city)
+		plot.setFeatureType(iForest, 0)
+		plot.setOwner(city.getOwner())
+		
+		events.fireEvent("plotFeatureRemoved", plot, city, iForest)
 		
 		try:
-			self.assertEqual(self.requirement.evaluate(self.evaluator), 30)
+			self.assertEqual(self.requirement.evaluate(self.evaluator), 20)
 			self.assertEqual(self.requirement.fulfilled(self.evaluator), True)
-			self.assertEqual(self.requirement.progress(self.evaluator), self.SUCCESS + "Generated production: 30 / 10")
+			self.assertEqual(self.requirement.progress(self.evaluator), self.SUCCESS + "Generated production: 20 / 10")
 		finally:
 			city.kill()
+			plot.setFeatureType(-1, -1)
+			plot.setOwner(-1)
 	
 	def test_removed_savanna(self):
 		city = TestCities.one()
-		plot = plot_(city)
+		plot = direction(city, DirectionTypes.DIRECTION_NORTH)
 		
-		events.fireEvent("plotFeatureRemoved", plot, iSavanna, city)
+		plot.setFeatureType(iSavanna, 0)
+		plot.setOwner(city.getOwner())
+		
+		events.fireEvent("plotFeatureRemoved", plot, city, iSavanna)
 		
 		try:
 			self.assertEqual(self.requirement.evaluate(self.evaluator), 0)
@@ -1947,6 +1955,8 @@ class TestProduction(ExtendedTestCase):
 			self.assertEqual(self.requirement.progress(self.evaluator), self.FAILURE + "Generated production: 0 / 10")
 		finally:
 			city.kill()
+			plot.setFeatureType(-1, -1)
+			plot.setOwner(-1)
 
 
 class TestRaidGold(ExtendedTestCase):
