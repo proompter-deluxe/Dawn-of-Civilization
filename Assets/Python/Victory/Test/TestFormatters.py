@@ -115,7 +115,7 @@ class ListProgress(object):
 class TestProgress(ExtendedTestCase):
 
 	def setUp(self):
-		self.progress = Progress()
+		self.progress = ProgressFormatter()
 		
 		self.string_progress = StringProgress()
 		self.list_progress = ListProgress()
@@ -166,7 +166,7 @@ class TestProgress(ExtendedTestCase):
 class TestDescription(ExtendedTestCase):
 	
 	def setUp(self):
-		self.description = Description()
+		self.description = DescriptionFormatter()
 	
 	def test_single_requirement(self):
 		requirements = [(BuildingCount(iGranary, 3), BuildingCount.GOAL_DESC_KEY, [], [], None)]

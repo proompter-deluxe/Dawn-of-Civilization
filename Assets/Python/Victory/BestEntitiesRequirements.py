@@ -117,8 +117,8 @@ class BestTechPlayers(BestPlayersRequirement):
 	
 		self.checked("techAcquired")
 	
-	def description(self):
-		return text(self.DESC_KEY, COUNT.format(self.iRequired))
+	def get_description(self):
+		return Description(self.DESC_KEY, COUNT.format(self.iRequired))
 	
 	def metric(self, iPlayer):
 		return infos.techs().where(team(iPlayer).isHasTech).sum(lambda iTech: infos.tech(iTech).getResearchCost())

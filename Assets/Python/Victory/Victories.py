@@ -29,6 +29,39 @@ def loadVictories():
 	dHistoricalGoals = Historical.dGoals
 	dReligiousGoals = Religious.dGoals
 	dAdditionalPaganGoal = Religious.dAdditionalPaganGoal
+	
+	#printVictories(dHistoricalGoals, dReligiousGoals, dAdditionalPaganGoal)
+
+
+def printVictories(dHistoricalGoals, dReligiousGoals, dAdditionalPaganGoal):
+	from Files import getPath
+	
+	lines = []
+	
+	for iCiv in range(iNumCivs):
+		lines.append(infos.civ(iCiv).getDescription())
+		
+		for goal in dHistoricalGoals.get(iCiv, []):
+			lines.append("%s: %s" %  (text(goal.options["title_key"]), goal.description()))
+	
+	for iReligion in dReligiousGoals:
+		if iReligion < iNumReligions:
+			lines.append(infos.religion(iReligion).getDescription())
+		else:
+			lines.append(str(iReligion))
+		
+		for goal in dReligiousGoals[iReligion]:
+			lines.append("%s: %s" % (text(goal.options.get("title_key", "")), goal.description()))
+	
+	for iPaganReligion, goal in dAdditionalPaganGoal.items():
+		lines.append(str(goal.description()))
+	
+	file = open(getPath("UHV Descriptions.txt"), "w")
+	
+	try:
+		file.write("\n".join([line.encode("latin-1", "xmlcharrefreplace") for line in lines]))
+	finally:
+		file.close()
 
 
 @handler("playerCivAssigned")
