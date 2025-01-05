@@ -2640,6 +2640,8 @@ dBuildingPreferences = {
 		iLargeHadronCollider: 20,
 		iITER: 20,
 		iSaintPeters: 20,
+		iMountAthos: -20,
+		iHagiaSophia: -20,
 	},
 	iMalays : {
 		iGardensByTheBay: 40,
@@ -2668,6 +2670,8 @@ dBuildingPreferences = {
 		iNobelPrize: 20,
 		iGlobalSeedVault: 30,
 		iCERN: 15,
+		iMountAthos: -20,
+		iHagiaSophia: -20,
 	},
 	iArabia: {
 		iSpiralMinaret: 40,
@@ -2717,6 +2721,8 @@ dBuildingPreferences = {
 		iTorreDeBelem: 15,
 		iNotreDame: 15,
 		iMezquita: 15,
+		iMountAthos: -20,
+		iHagiaSophia: -20,
 	},
 	iEngland : {
 		iTradingCompanyBuilding: 50,
@@ -2733,6 +2739,8 @@ dBuildingPreferences = {
 		iNationalGallery: 20,
 		iKrakDesChevaliers: 20,
 		iHarbourOpera: 20,
+		iMountAthos: -20,
+		iHagiaSophia: -20,
 	},
 	iHolyRome : {
 		iSaintThomasChurch: 30,
@@ -2741,6 +2749,8 @@ dBuildingPreferences = {
 		iNeuschwanstein: 20,
 		iPalaceOfNations: 20,
 		iNotreDame: 15,
+		iMountAthos: -20,
+		iHagiaSophia: -20,
 	},
 	iBurma : {
 		iShwedagonPaya: 50,
@@ -2755,6 +2765,8 @@ dBuildingPreferences = {
 	iPoland : {
 		iSaltCathedral: 30,
 		iOldSynagogue: 30,
+		iMountAthos: -20,
+		iHagiaSophia: -20,
 	},
 	iPortugal : {
 		iCristoRedentor: 40,
@@ -2763,6 +2775,8 @@ dBuildingPreferences = {
 		iWembley: 20,
 		iEscorial: 20,
 		iNotreDame: 15,
+		iMountAthos: -20,
+		iHagiaSophia: -20,
 	},
 	iInca : {
 		iMachuPicchu: 40,
@@ -2775,6 +2789,7 @@ dBuildingPreferences = {
 		iSistineChapel: 30,
 		iSanMarcoBasilica: 30,
 		iMoleAntonelliana: 30,
+		iMountAthos: -20,
 	},
 	iMongols : {
 		iSilverTreeFountain: 40,

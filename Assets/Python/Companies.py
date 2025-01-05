@@ -179,7 +179,7 @@ def getCityValue(city, iCompany):
 		elif city.getRegionID() not in [rNorway, rBritain, rFrance, rRuthenia]:
 			return -1
 	elif iCompany == iKnightsTemplar:
-		if city.getRegionID() in [rBritain, rFrance, rIberia, rItaly, rGreece, rAnatolia, rLevant, rEgypt, rMaghreb]:
+		if city.getRegionID() in [rBritain, rFrance, rIberia, rItaly, rGreece, rAnatolia, rLevant, rEgypt, rMaghreb, rBalkans]:
 			iValue += 4
 	
 	# fishing industry - coastal cities only
