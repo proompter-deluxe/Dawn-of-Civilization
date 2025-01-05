@@ -65,6 +65,14 @@
 		<Spanish></Spanish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_VICTORY_DESC_HAVE_IN_CITY</Tag>
+		<English>have %s1 in %s2</English>
+		<French></French>
+		<German></German>
+		<Italian></Italian>
+		<Spanish></Spanish>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_VICTORY_DESC_DISCOVER</Tag>
 		<English>discover %s1</English>
 		<French></French>
@@ -541,7 +549,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_VICTORY_DESC_CULTURE_AMOUNT</Tag>
-		<English>more than %s1 culture</English>
+		<English>%s1 culture</English>
 		<French></French>
 		<German></German>
 		<Italian></Italian>
@@ -773,7 +781,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_VICTORY_DESC_CITY_CULTURE</Tag>
-		<English>%s2 culture in %s1</English>
+		<English>%s2 culture</English>
 		<French></French>
 		<German></German>
 		<Italian></Italian>
@@ -781,7 +789,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_VICTORY_DESC_CITY_CULTURE_LEVEL</Tag>
-		<English>%s2 culture in %s1</English>
+		<English>%s2 culture</English>
 		<French></French>
 		<German></German>
 		<Italian></Italian>
@@ -1101,7 +1109,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_VICTORY_DESC_CITY_POPULATION</Tag>
-		<English>a population of %s2 in %s1</English>
+		<English>a population of %s2</English>
 		<French></French>
 		<German></German>
 		<Italian></Italian>
@@ -1349,7 +1357,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_VICTORY_DESC_POPULATION_CITY</Tag>
-		<English>a city of size %s1 or larger</English>
+		<English>a city of size %s1</English>
 		<French></French>
 		<German></German>
 		<Italian></Italian>
@@ -1365,7 +1373,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_VICTORY_DESC_FOUNDED_CULTURE_AMOUNT</Tag>
-		<English>more than %s1 culture in founded cities</English>
+		<English>%s1 culture in founded cities</English>
 		<French></French>
 		<German></German>
 		<Italian></Italian>
@@ -2529,7 +2537,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_VICTORY_REQUIRED_OUT_OF</Tag>
-		<English>%s1 out of %s2</English>
+		<English>%s2 out of %s1</English>
 		<French></French>
 		<German></German>
 		<Italian></Italian>
@@ -2575,6 +2583,15 @@
 		<Italian></Italian>
 		<Spanish></Spanish>
 	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_VICTORY_SUFFIX</Tag>
+		<English>%s1 %s2</English>
+		<French></French>
+		<German></German>
+		<Italian></Italian>
+		<Spanish></Spanish>
+	</TEXT>
+	
 	
 <!-- Names of arguments -->
 
@@ -2798,7 +2815,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_VICTORY_NAME_ANDES</Tag>
-		<English>Andes</English>
+		<English>the Andes</English>
 		<French></French>
 		<German></German>
 		<Italian></Italian>

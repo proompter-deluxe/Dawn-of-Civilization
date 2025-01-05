@@ -532,7 +532,7 @@ class PopulationCity(ThresholdRequirement):
 # First Polish UHV goal
 class PopulationCityCount(ThresholdRequirement):
 
-	TYPES = (COUNT, COUNT)
+	TYPES = (NUMBER, COUNT)
 	
 	DESC_KEY = "TXT_KEY_VICTORY_DESC_POPULATION_CITY_COUNT"
 	PROGR_KEY = "TXT_KEY_VICTORY_PROGR_POPULATION_CITY_COUNT"
