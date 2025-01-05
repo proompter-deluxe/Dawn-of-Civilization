@@ -140,6 +140,9 @@ class Describable(object):
 		if iReligion is not None:
 			self.desc_args.append(RELIGION_ADJECTIVE.format(iReligion))
 	
+	def get_description_arguments(self):
+		return self.desc_args
+	
 	def create_date_suffixes(self):
 		for key, iYear in self.date_suffix_keys.items():
 			yield text(key, format_date_turn(iYear, self.show_date_turn()))
@@ -152,6 +155,12 @@ class Describable(object):
 	
 	def by(self, by):
 		pass
+		
+	def get_description(self):
+		return generate_description(self.requirements, self.desc_key, self.get_description_arguments(), self.create_date_suffixes(), self.get_required())
+		
+	def description(self):
+		return capitalize(self.get_description().format())
 
 
 class GoalDescription(Describable):
@@ -178,16 +187,12 @@ class GoalDescription(Describable):
 			return False
 			
 		return (self.requirements, self.desc_key, self.options) == (other.requirements, other.desc_key, other.options)
-		
-	def get_description(self):
-		arguments = self.requirements[0].format_global_parameters() + self.desc_args
-		return generate_description(self.requirements, self.desc_key, arguments, self.create_date_suffixes(), self.options.get("required"))
-		
-	def format_description(self):
-		return self.get_description().format()
 	
-	def description(self):
-		return capitalize(self.format_description())
+	def get_description_arguments(self):
+		return self.requirements[0].get_description_arguments() + Describable.get_description_arguments(self)
+	
+	def get_required(self):
+		return self.options.get("required")
 		
 
 class Goal(Describable):
@@ -311,18 +316,13 @@ class Goal(Describable):
 	
 	def show_date_turn(self):
 		return not team(self.iPlayer).isHasTech(iCalendar) or not AdvisorOpt.isUHVFinishDateNone()
-		
-	def get_description(self):
-		arguments = self.requirements[0].format_global_parameters() + self.desc_args
-		required = self.required < len(self.requirements) and self.required or None
-		return generate_description(self.requirements, self.desc_key, arguments, self.create_date_suffixes(), required)
-		
-	def format_description(self):
-		return self.get_description().format()
 	
-	def description(self):
-		return capitalize(self.format_description())
+	def get_description_arguments(self):
+		return self.requirements[0].get_description_arguments() + Describable.get_description_arguments(self)
 	
+	def get_required(self):
+		return self.required < len(self.requirements) and self.required or None
+		
 	def title(self):
 		return text(self.title_key)
 		
@@ -343,7 +343,7 @@ class Goal(Describable):
 	
 	def announce(self, key, condition=True):
 		if condition and player(self.iPlayer).isHuman() and not scenarioStart():
-			show(text(key, self.format_description()))
+			show(text(key, self.get_description().format()))
 	
 	def announce_success(self):
 		self.announce("TXT_KEY_VICTORY_ANNOUNCE_SUCCESS", AlertsOpt.isShowUHVSuccessPopup())
@@ -441,12 +441,11 @@ class AllGoal(Goal):
 	def format_progress(self):
 		return sum(([progress.replace(indicator(False), indicator(goal.succeeded())) for progress in goal.format_progress()] for goal in self.requirements), [])
 	
-	def get_description(self):
-		required = self.required < len(self.requirements) and self.required or None
-		return generate_description(self.requirements, self.desc_key, self.desc_args, [], required)
-	
-	def format_description(self):
-		return self.get_description().format()
+	def create_date_suffixes(self):
+		return []
+
+	def get_description_arguments(self):
+		return []
 	
 
 class DifferentCitiesGoal(Goal):
@@ -512,13 +511,12 @@ class DifferentCitiesGoal(Goal):
 	def fulfilled(self):
 		return all(goal.succeeded() for goal in self.requirements) and self.unique_records()
 	
-	def get_description(self):
-		required = self.required < len(self.requirements) and self.required or None
-		return generate_description(self.requirements, self.desc_key, self.desc_args, [], required)
+	def create_date_suffixes(self):
+		return []
+
+	def get_description_arguments(self):
+		return []
 	
-	def format_description(self):
-		return self.get_description().format()
-		
 	def progress_entries(self):
 		for subgoal in self.requirements:
 			if subgoal.succeeded():
@@ -564,15 +562,12 @@ class Combined(Describable):
 		
 		return self.descriptions == other.descriptions
 	
+	def get_required(self):
+		return self.options.get("required")
+		
 	def get_description(self):
-		return generate_description(self.descriptions, self.desc_key, self.desc_args, self.create_date_suffixes(), self.options.get("required"))
+		return generate_description(self.descriptions, self.desc_key, self.get_description_arguments(), self.create_date_suffixes(), self.get_required())
 	
-	def format_description(self):
-		return self.get_description().format()
-	
-	def description(self):
-		return capitalize(self.format_description())
-
 
 class All(Combined):
 

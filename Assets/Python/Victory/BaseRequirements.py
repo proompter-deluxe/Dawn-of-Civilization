@@ -82,11 +82,14 @@ class Requirement(object):
 	def additional_formats(self):
 		return []
 	
-	def format_global_parameters(self, **options):
-		return [type.format(type.scale(parameter), **options) for type, parameter in self.get_global_types_and_parameters()]
-	
 	def format_parameters(self, **options):
 		return [type.format(type.scale(parameter), **options) for type, parameter in self.get_types_and_parameters()] + self.additional_formats()
+	
+	def get_description_arguments(self, **options):
+		return self.format_global_parameters(**options)
+	
+	def format_global_parameters(self, **options):
+		return [type.format(type.scale(parameter), **options) for type, parameter in self.get_global_types_and_parameters()]
 	
 	def get_description(self, **options):
 		return Description(self.DESC_KEY, *self.format_parameters(**options))
@@ -99,9 +102,6 @@ class Requirement(object):
 		
 	def area_name(self, tile):
 		return "\n".join(name for name, area in self.areas().items() if tile in area)
-	
-	def format_description(self, **options):
-		return self.description(**options)
 	
 	def progress_text(self, **options):
 		if self.PROGR_KEY == "TXT_KEY_VICTORY_PROGR_SIMPLE" and not self.parameters:
