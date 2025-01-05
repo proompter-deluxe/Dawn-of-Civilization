@@ -102,11 +102,11 @@
 	
 	<TEXT>
 		<Tag>TXT_KEY_VICTORY_TITLE_BAB1</Tag>
-		<English>Hammurabi's Code</English>
+		<English>Code of Hammurabi</English>
 		<French>Le Code de Hammurabi </French>
 		<German>Der Kodex von Hammurabi</German>
-		<Italian>Hammurabi's Code</Italian>
-		<Spanish>Hammurabi's Code</Spanish>
+		<Italian>Code of Hammurabi</Italian>
+		<Spanish>Code of Hammurabi</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_VICTORY_TITLE_BAB2</Tag>
@@ -226,6 +226,31 @@
 	</TEXT>
 	
 	<TEXT>
+		<Tag>TXT_KEY_VICTORY_TITLE_CEL1</Tag>
+		<English>Vae Victis</English>
+		<French>Vae Victis</French>
+		<German>Vae Victis</German>
+		<Italian>Vae Victis</Italian>
+		<Spanish>Vae Victis</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_VICTORY_TITLE_CEL2</Tag>
+		<English>Celtic Migrations</English>
+		<French>Celtic Migrations</French>
+		<German>Celtic Migrations</German>
+		<Italian>Celtic Migrations</Italian>
+		<Spanish>Celtic Migrations</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_VICTORY_TITLE_CEL3</Tag>
+		<English>Insular Christianity</English>
+		<French>Insular Christianity</French>
+		<German>Insular Christianity</German>
+		<Italian>Insular Christianity</Italian>
+		<Spanish>Insular Christianity</Spanish>
+	</TEXT>
+	
+	<TEXT>
 		<Tag>TXT_KEY_VICTORY_TITLE_CHI1</Tag>
 		<English>Mandate of Heaven</English>
 		<French>Le mandat du Ciel </French>
@@ -276,6 +301,31 @@
 	</TEXT>
 	
 	<TEXT>
+		<Tag>TXT_KEY_VICTORY_TITLE_DRA1</Tag>
+		<English>Indian Ocean Trade</English>
+		<French>Indian Ocean Trade</French>
+		<German>Indian Ocean Trade</German>
+		<Italian>Indian Ocean Trade</Italian>
+		<Spanish>Indian Ocean Trade</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_VICTORY_TITLE_DRA2</Tag>
+		<English>The Chola Empire</English>
+		<French>L'empire Chola </French>
+		<German>Das Chola-Reich</German>
+		<Italian>The Chola Empire</Italian>
+		<Spanish>The Chola Empire</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_VICTORY_TITLE_DRA3</Tag>
+		<English>City of Victory</English>
+		<French>City of Victory</French>
+		<German>Stadt des Sieges</German>
+		<Italian>City of Victory</Italian>
+		<Spanish>City of Victory</Spanish>
+	</TEXT>
+	
+	<TEXT>
 		<Tag>TXT_KEY_VICTORY_TITLE_EGY1</Tag>
 		<English>The Old Kingdom</English>
 		<French>The Old Kingdom</French>
@@ -302,19 +352,19 @@
 	
 	<TEXT>
 		<Tag>TXT_KEY_VICTORY_TITLE_ENG1</Tag>
-		<English>The Sun Never Sets</English>
-		<French>Le soleil ne se couche jamais </French>
-		<German>Die Sonne geht niemals unter</German>
-		<Italian>The Sun Never Sets</Italian>
-		<Spanish>The Sun Never Sets</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_VICTORY_TITLE_ENG2</Tag>
 		<English>Britannia Rule the Waves</English>
 		<French>Grande-Bretagne, r&#232;gne sur les flots </French>
 		<German>Britannia Rule the Waves</German>
 		<Italian>Britannia Rule the Waves</Italian>
 		<Spanish>Britannia Rule the Waves</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_VICTORY_TITLE_ENG2</Tag>
+		<English>The Sun Never Sets</English>
+		<French>Le soleil ne se couche jamais </French>
+		<German>Die Sonne geht niemals unter</German>
+		<Italian>The Sun Never Sets</Italian>
+		<Spanish>The Sun Never Sets</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_VICTORY_TITLE_ENG3</Tag>
@@ -335,19 +385,19 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_VICTORY_TITLE_ETH2</Tag>
-		<English>Nine Saints</English>
-		<French>Les Neuf Saints </French>
-		<German>Neun Heilige</German>
-		<Italian>Nine Saints</Italian>
-		<Spanish>Nine Saints</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_VICTORY_TITLE_ETH3</Tag>
 		<English>Prester John</English>
 		<French>Le royaume du pr&#234;tre Jean </French>
 		<German>Priesterk&#246;nig Johannes</German>
 		<Italian>Prester John</Italian>
 		<Spanish>Prester John</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_VICTORY_TITLE_ETH3</Tag>
+		<English>African Union</English>
+		<French>African Union</French>
+		<German>African Union</German>
+		<Italian>African Union</Italian>
+		<Spanish>African Union</Spanish>
 	</TEXT>
 	
 	<TEXT>
@@ -1027,14 +1077,14 @@
 	
 	<TEXT>
 		<Tag>TXT_KEY_VICTORY_TITLE_RUS1</Tag>
-		<English>Eastward Expansion</English>
-		<French>Expansion vers l'est </French>
-		<German>Expansion nach Osten</German>
-		<Italian>Eastward Expansion</Italian>
-		<Spanish>Eastward Expansion</Spanish>
+		<English>Third Rome</English>
+		<French>Third Rome</French>
+		<German>Third Rome</German>
+		<Italian>Third Rome</Italian>
+		<Spanish>Third Rome</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_VICTORY_TITLE_RUS2</Tag>
+		<Tag>TXT_KEY_VICTORY_TITLE_RUS3</Tag>
 		<English>The Cold War</English>
 		<French>La Guerre froide </French>
 		<German>Der Kalte Krieg</German>
@@ -1042,12 +1092,12 @@
 		<Spanish>The Cold War</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_VICTORY_TITLE_RUS3</Tag>
-		<English>The Iron Curtain</English>
-		<French>Le rideau de fer </French>
-		<German>Der Eiserne Vorhang</German>
-		<Italian>The Iron Curtain</Italian>
-		<Spanish>The Iron Curtain</Spanish>
+		<Tag>TXT_KEY_VICTORY_TITLE_RUS2</Tag>
+		<English>Siberian Frontier</English>
+		<French>Siberian Frontier</French>
+		<German>Siberian Frontier</German>
+		<Italian>Siberian Frontier</Italian>
+		<Spanish>Siberian Frontier</Spanish>
 	</TEXT>
 	
 	<TEXT>
@@ -1073,31 +1123,6 @@
 		<German>Soldaten Gottes</German>
 		<Italian>Soldiers of God</Italian>
 		<Spanish>Soldiers of God</Spanish>
-	</TEXT>
-	
-	<TEXT>
-		<Tag>TXT_KEY_VICTORY_TITLE_DRA1</Tag>
-		<English>Indian Ocean Trade</English>
-		<French>Indian Ocean Trade</French>
-		<German>Indian Ocean Trade</German>
-		<Italian>Indian Ocean Trade</Italian>
-		<Spanish>Indian Ocean Trade</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_VICTORY_TITLE_DRA2</Tag>
-		<English>The Chola Empire</English>
-		<French>L'empire Chola </French>
-		<German>Das Chola-Reich</German>
-		<Italian>The Chola Empire</Italian>
-		<Spanish>The Chola Empire</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_VICTORY_TITLE_DRA3</Tag>
-		<English>City of Victory</English>
-		<French>City of Victory</French>
-		<German>Stadt des Sieges</German>
-		<Italian>City of Victory</Italian>
-		<Spanish>City of Victory</Spanish>
 	</TEXT>
 	
 	<TEXT>
