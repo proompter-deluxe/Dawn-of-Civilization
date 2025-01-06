@@ -5351,7 +5351,7 @@
 			<ShortDescription>TXT_KEY_CIV_NIGERIA_SHORT_DESC</ShortDescription>
 			<Adjective>TXT_KEY_CIV_NIGERIA_ADJECTIVE</Adjective>
 			<Civilopedia>TXT_KEY_CIV_NIGERIA_PEDIA</Civilopedia>
-			<DefaultPlayerColor>PLAYERCOLOR_GREYISH_GREEN_GOLD</DefaultPlayerColor>
+			<DefaultPlayerColor>PLAYERCOLOR_NIGERIA</DefaultPlayerColor>
 			<ArtDefineTag>ART_DEF_CIVILIZATION_NIGERIA</ArtDefineTag>
 			<ArtStyleType>ARTSTYLE_AFRICAN</ArtStyleType>
 			<UnitArtStyleType>UNIT_ARTSTYLE_AFRICAN</UnitArtStyleType>
