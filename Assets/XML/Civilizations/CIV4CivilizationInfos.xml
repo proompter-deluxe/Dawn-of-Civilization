@@ -7949,7 +7949,7 @@
 			<Units>
 				<Unit>
 					<UnitClassType>UNITCLASS_SPEARMAN</UnitClassType>
-					<UnitType>UNIT_NATIVE_RAIDER</UnitType>
+					<UnitType>UNIT_ZULU_IMPI</UnitType>
 				</Unit>
 			</Units>
 			<FreeUnitClasses>
