@@ -960,17 +960,17 @@
 			<fAlpha>1.00</fAlpha>
 		</ColorVal>
 		<ColorVal>
-			<Type>COLOR_PLAYER_PURPLE_IROQUOIS</Type>
+			<Type>COLOR_PLAYER_PURPLE_IROQUOIS_TEXT</Type>
 			<fRed>0.267</fRed>
 			<fGreen>0.186</fGreen>
 			<fBlue>0.547</fBlue>
 			<fAlpha>1.00</fAlpha>
 		</ColorVal>
 		<ColorVal>
-			<Type>COLOR_PLAYER_PURPLE_IROQUOIS_TEXT</Type>
-			<fRed>0.268</fRed>
-			<fGreen>0.187</fGreen>
-			<fBlue>0.545</fBlue>
+			<Type>COLOR_PLAYER_PURPLE_IROQUOIS</Type>
+			<fRed>0.384</fRed>
+			<fGreen>0.275</fGreen>
+			<fBlue>0.753</fBlue>
 			<fAlpha>1.00</fAlpha>
 		</ColorVal>
 		<ColorVal>
