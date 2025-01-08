@@ -681,7 +681,7 @@ def onRespawn(iPlayer):
 		checkNameChange(iPlayer)
 		checkAdjectiveChange(iPlayer)
 		
-	setDesc(iPlayer, defaultTitle(iPlayer))
+	setDesc(iPlayer, desc(iPlayer, defaultTitle(iPlayer)))
 	checkName(iPlayer)
 	checkLeader(iPlayer)
 
@@ -1068,7 +1068,12 @@ def specificName(iPlayer):
 
 	elif iCiv == iZulu:
 		if bResurrected:
-			return "TXT_KEY_CIV_ZULU_SOUTH_AFRICA"
+			if year() >= year(1950):
+				return "TXT_KEY_CIV_ZULU_SOUTH_AFRICA"
+			else:
+				return "TXT_KEY_CIV_ZULU_SHORT_DESC"
+		else:
+			return "TXT_KEY_CIV_ZULU_ZIMBABWE"
 
 	elif iCiv == iAssyria:
 		if bResurrected: # and (iReligion == iOrthodoxy or iReligion == iCatholicism):
@@ -1422,7 +1427,12 @@ def specificAdjective(iPlayer):
 
 	elif iCiv == iZulu:
 		if bResurrected:
-			return "TXT_KEY_CIV_ZULU_SOUTH_AFRICA_ADJECTIVE"
+			if year() >= year(1950):
+				return "TXT_KEY_CIV_ZULU_SOUTH_AFRICA_ADJECTIVE"
+			else:
+				return "TXT_KEY_CIV_ZULU_ADJECTIVE"
+		else:
+			return "TXT_KEY_CIV_ZULU_SHONA"
 
 	elif iCiv == iVietnam:
 		if year() >= year(dBirth[iChinaS]):
@@ -1848,7 +1858,7 @@ def republicTitle(iPlayer):
 	return key(iPlayer, "REPUBLIC")
 
 def defaultTitle(iPlayer):
-	return desc(iPlayer, key(iPlayer, "DEFAULT"))
+	return key(iPlayer, "DEFAULT")
 	
 def specificTitle(iPlayer, lPreviousOwners=[]):
 	pPlayer = player(iPlayer)
@@ -1900,6 +1910,24 @@ def specificTitle(iPlayer, lPreviousOwners=[]):
 		
 			if year() >= year(dBirth[iMongols]): 
 				return "TXT_KEY_CIV_GOLDEN_HORDE"
+			
+	elif iCiv == iZulu:
+		if bEmpire:
+			if bResurrected:
+				if year() >= year(1950):
+					return "TXT_KEY_EMPIRE_OF"
+				else:
+					return "TXT_KEY_EMPIRE_ADJECTIVE"
+			else:
+				return "TXT_KEY_EMPIRE_OF"
+		else:
+			if bResurrected:
+				if year() >= year(1950):
+					return "TXT_KEY_KINGDOM_OF"
+				else:
+					return "TXT_KEY_KINGDOM_ADJECTIVE"
+			else:
+				return "TXT_KEY_KINGDOM_OF"
 
 	elif iCiv == iAssyria:
 		if bResurrected and (iReligion == iOrthodoxy or iReligion == iCatholicism):
@@ -2634,6 +2662,10 @@ def leader(iPlayer):
 		
 	elif iCiv == iCanada:
 		if iEra >= iGlobal: return iTrudeau
+
+	elif iCiv == iZulu:
+		if bResurrected and year() >= year(1950):
+			return iNelsonMandela
 		
 	return startingLeader(iPlayer)
 		
@@ -2681,5 +2713,12 @@ def leaderName(iPlayer):
 			return "TXT_KEY_LEADER_USMAN_DAN_FODIO"
 		elif iEra >= iMedieval:
 			return "TXT_KEY_LEADER_IDRIS_ALOOMA"
+	
+	elif iCiv == iZulu:
+		if iLeader == iShaka:
+			if bResurrected:
+				return "TXT_KEY_LEADER_SHAKA"
+			else:
+				return "TXT_KEY_LEADER_MUTOTA"
 		
 	return None

@@ -1310,6 +1310,9 @@ class Locations(EntityCollection):
 	def notowner(self, iPlayer):
 		return self.where(lambda loc: not owner(loc, iPlayer))
 	
+	def notowners(self, players):
+		return self.where(lambda loc: not players.any(lambda p: owner(loc, p)))
+
 	def regions(self, *regions):
 		return self.where(lambda loc: loc.getRegionID() in regions)
 	

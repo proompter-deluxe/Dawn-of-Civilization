@@ -25,7 +25,7 @@ def checkResurrection():
 	if not isResurrectionPossible():
 		return
 
-	iNationalismModifier = min(20, 4 * game.countKnownTechNumTeams(iNationalism))
+	iNationalismModifier = min(2, 0.4 * game.countKnownTechNumTeams(iNationalism))
 	possibleResurrections = civs.major().where(canRespawn).sort(lambda c: (-getImpact(c), data.civs[c].iLastTurnAlive))
 	
 	for iCiv in possibleResurrections:

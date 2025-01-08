@@ -452,37 +452,29 @@ def russianSiberianSettlement(iTech, iTeam, iPlayer):
 
 
 @handler("techAcquired")
-def earlyTradingCompany(iTech, iTeam, iPlayer):
+def tradingCompany(iTech, iTeam, iPlayer):
 	if turn() == scenarioStartTurn():
 		return
 	
+	if player(iPlayer).isHuman() or team(iTeam).isAVassal():
+		return
+
 	if data.civs[iPlayer].iResurrections > 0:
 		return
 
-	lCivs = [iSpain, iPortugal]
-	lTechs = [iExploration, iFirearms]
-	
-	if civ(iPlayer) in lCivs:
-		if iTech in lTechs and all(team(iTeam).isHasTech(iTech) for iTech in lTechs):
-			if not player(iPlayer).isHuman() and not team(iTeam).isAVassal():
-				handleColonialAcquisition(iPlayer)
+	iCiv = civ(iPlayer)
 
-
-@handler("techAcquired")
-def lateTradingCompany(iTech, iTeam, iPlayer):
-	if turn() == scenarioStartTurn():
-		return
+	dCivTechMappings = CivDict({
+		iSpain: [iFirearms, iOptics],
+		iPortugal: [iFirearms, iOptics, iEconomics, iGeography],
+		iFrance: [iGeography, iReplaceableParts, iMeasurement, iEngine],
+		iEngland: [iGeography, iReplaceableParts, iMeasurement, iMicrobiology, iEngine, iPneumatics],
+		iNetherlands: [iEconomics, iGeography, iReplaceableParts, iHorticulture],
+	})
 	
-	if data.civs[iPlayer].iResurrections > 0:
-		return
-
-	lCivs = [iFrance, iEngland, iNetherlands]
-	lTechs = [iEconomics, iReplaceableParts]
-	
-	if civ(iPlayer) in lCivs:
-		if iTech in lTechs and all(team(iTeam).isHasTech(iTech) for iTech in lTechs):
-			if not player(iPlayer).isHuman() and not team(iTeam).isAVassal():
-				handleColonialConquest(iPlayer)
+	if iCiv in dCivTechMappings.keys() and iTech in dCivTechMappings[iCiv]:
+		# always prefer conquest to peaceful settling; after all, these civs also get free settlers!
+		handleColonialConquest(iPlayer)
 
 
 ### COLLAPSE ###
@@ -698,7 +690,7 @@ def giveColonists(iPlayer):
 
 			# help England with settling Canada and Australia
 			if iCiv == iEngland:
-				colonialCities = cities.regions(rOntario, rMaritimes, rAustralia).owner(iPlayer)
+				colonialCities = cities.regions(rAtlanticSeaboard, rOntario, rMaritimes, rAustralia).owner(iPlayer)
 				if colonialCities:
 					sourceCities = colonialCities
 					

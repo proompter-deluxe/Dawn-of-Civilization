@@ -144,6 +144,10 @@ def onResurrection(iPlayer):
 		# Ukraine needs a modern leader too
 		setPeriod(iCiv, iPeriodUkraine)
 
+	elif iCiv == iZulu:
+		if year() >= year(1950):
+			setPeriod(iCiv, iPeriodSouthAfrica)
+
 
 @handler("cityAcquired")
 def onCityAcquired(iOwner, iPlayer, city, bConquest):

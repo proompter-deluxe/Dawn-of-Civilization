@@ -6931,6 +6931,22 @@
 		<Spanish>Citizens of the %s1 civilization are leaving their home city to seek a better life in a new colony.</Spanish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_EVENT_COLONIAL_CONQUEST</Tag>
+		<English>%s1 colonial interests are targetting plot (%d2, %d3) of %s4 for conquest.</English>
+		<English>%s1 colonial interests are targetting plot (%d2, %d3) of %s4 for conquest.</English>
+		<English>%s1 colonial interests are targetting plot (%d2, %d3) of %s4 for conquest.</English>
+		<English>%s1 colonial interests are targetting plot (%d2, %d3) of %s4 for conquest.</English>
+		<English>%s1 colonial interests are targetting plot (%d2, %d3) of %s4 for conquest.</English>
+	</TEXT>
+		<TEXT>
+		<Tag>TXT_KEY_EVENT_COLONIAL_ACQUISITION</Tag>
+		<English>%s1 colonial interests are targetting plot (%d2, %d3) for acquisition.</English>
+		<English>%s1 colonial interests are targetting plot (%d2, %d3) for acquisition.</English>
+		<English>%s1 colonial interests are targetting plot (%d2, %d3) for acquisition.</English>
+		<English>%s1 colonial interests are targetting plot (%d2, %d3) for acquisition.</English>
+		<English>%s1 colonial interests are targetting plot (%d2, %d3) for acquisition.</English>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_EVENT_TRIGGER_CRUSADE_GENERIC</Tag>
 		<English>A Crusade has been called, and you have been chosen to lead it. Do you accept?</English>
 		<French></French>

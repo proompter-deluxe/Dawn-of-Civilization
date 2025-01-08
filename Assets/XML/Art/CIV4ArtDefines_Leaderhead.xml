@@ -1262,5 +1262,13 @@
 			<NoShaderNIF>art/LeaderHeads/Shaka/shaka_noshader.nif</NoShaderNIF>
 			<BackgroundKFM>art/LeaderHeads/Shaka/shaka_BG.kfm</BackgroundKFM>
 		</LeaderheadArtInfo>
+		<LeaderheadArtInfo>
+			<Type>ART_DEF_LEADER_NELSON_MANDELA</Type>
+			<Button>Art/LeaderHeads/Mandela/btn_mandela.dds</Button>
+			<NIF>Art/LeaderHeads/Mandela/Nmandela.nif</NIF>
+			<KFM>Art/LeaderHeads/Mandela/gandhi.kfm</KFM>
+			<NoShaderNIF>Art/LeaderHeads/Mandela/Nmandela.nif</NoShaderNIF>
+			<BackgroundKFM>Art/LeaderHeads/Mandela/gandhi_bg.kfm</BackgroundKFM>
+		</LeaderheadArtInfo>
 	</LeaderheadArtInfos>
 </Civ4ArtDefines>

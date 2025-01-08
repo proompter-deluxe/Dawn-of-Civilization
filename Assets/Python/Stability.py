@@ -1006,7 +1006,7 @@ def getCivicStability(iPlayer, civics=None):
 		if iVassalage in civics: iStability += 2
 		
 	if iElective in civics:
-		if iBureaucracy in civics: iStability -= 5
+		if (iBureaucracy, iRedistribution) in civics: iStability -= 5
 		if iMerchantTrade in civics: iStability += 2
 		
 	if iConstitution in civics:
@@ -1035,6 +1035,9 @@ def getCivicStability(iPlayer, civics=None):
 
 	if iMonasticism in civics:
 		if iBureaucracy in civics: iStability -= 2
+
+	if iFreeEnterprise in civics:
+		if (iManorialism, iCasteSystem, iMonasticism) in civics: iStability -= 3
 		
 	return iStability
 

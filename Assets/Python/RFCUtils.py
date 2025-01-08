@@ -290,6 +290,9 @@ def colonialConquest(iPlayer, tPlot):
 	iCiv = civ(iPlayer)
 	city = city_(tPlot)
 	target = player(city.getOwner())
+	plot = plot_(tPlot)
+
+	message(active(), 'TXT_KEY_EVENT_COLONIAL_CONQUEST', adjective(iPlayer), plot.getX(), plot.getY(), name(target), color=iYellow, force=True)
 	
 	if player and not team(target).isAtWar(iPlayer):
 		team(iPlayer).declareWar(target.getID(), True, WarPlanTypes.WARPLAN_TOTAL)
@@ -315,13 +318,15 @@ def colonialConquest(iPlayer, tPlot):
 # this shouldn't be here
 def colonialAcquisition(iPlayer, tPlot):
 	iCiv = civ(iPlayer)
+	plot = plot_(tPlot)
+
+	message(active(), 'TXT_KEY_EVENT_COLONIAL_ACQUISITION', adjective(iPlayer), plot.getX(), plot.getY(), color=iYellow, force=True)
 
 	if iCiv in [iSpain, iPortugal]:
 		iNumUnits = 1
 	elif iCiv in [iFrance, iEngland, iNetherlands]:
 		iNumUnits = 2
 		
-	plot = plot_(tPlot)
 	if plot.isCity():
 		flipCity(plot, False, True, iPlayer)
 	else:
@@ -351,26 +356,33 @@ def colonialAcquisition(iPlayer, tPlot):
 def getColonialTargets(iPlayer, bEmpty=False):
 	iCiv = civ(iPlayer)
 	
+	# per "event"
 	dNumCities = {
 		iFrance: 2,
-		iSpain: 1,
-		iEngland: 4,
-		iPortugal: 5,
-		iNetherlands: 4,
+		iSpain: 2,
+		iEngland: 2,
+		iPortugal: 2,
+		iNetherlands: 2,
 	}
 	
 	iNumCities = dNumCities[iCiv]
+
+	# human player only gets this event once as opposed to several times
 	if player(iPlayer).isHuman():
-		iNumCities = min(3, iNumCities)
+		iNumCities = 3
 		
 	lColonialRegions = [iRegion for iRegion in lAsia if iRegion != rLevant]
-	if iCiv == iPortugal:
+	if iCiv == iFrance:
+		lColonialRegions += [rMadagascar]
+	elif iCiv == iSpain:
+		lColonialRegions += lCentralAmerica
+	else:
 		lColonialRegions += lSubSaharanAfrica
 		
 	targetPlots = plots.all().coastal().regions(*lColonialRegions)
 	
 	cityPlots, emptyPlots = targetPlots.split(CyPlot.isCity)
-	targetCities = cityPlots.notowner(iPlayer).where(lambda p: p.getWarValue(iCiv) > 1).highest(iNumCities, metric=lambda p: p.getWarValue(iCiv))
+	targetCities = cityPlots.notowners(players.group(iCivGroupEurope)).where(lambda p: p.getWarValue(iCiv) > 1).highest(iNumCities, metric=lambda p: p.getWarValue(iCiv))
 	
 	if bEmpty:
 		nearbyCityPlots, settlePlots = emptyPlots.split(lambda p: plots.surrounding(p).any(CyPlot.isCity))

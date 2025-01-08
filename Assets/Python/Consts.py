@@ -82,6 +82,7 @@ lBirthOrder = [
 	iItaly,
 	iMongols,
 	iAztecs,
+	iZulu,
 	iThailand,
 	iSweden,
 	iRussia,
@@ -96,7 +97,6 @@ lBirthOrder = [
 	iArgentina,
 	iMexico,
 	iColombia,
-	iZulu,
 	iBrazil,
 	iCanada
 ]
@@ -497,6 +497,8 @@ lInfluences = [
 	(iNigeria, iMoors),
 	(iZulu, iEngland),
 	(iZulu, iNetherlands),
+	(iZulu, iPortugal),
+	(iZulu, iCongo),
 ]
 
 dBirth = CivDict({
@@ -557,6 +559,7 @@ iInca : 1150,
 iItaly : 1167,
 iMongols : 1190,
 iAztecs : 1195,
+iZulu: 1200,
 iThailand : 1238,
 iSweden : 1252,
 iRussia : 1263,
@@ -571,7 +574,6 @@ iAmerica : 1776,
 iArgentina : 1810,
 iMexico : 1810,
 iColombia : 1814,
-iZulu: 1816,
 iBrazil : 1822,
 iCanada : 1867,
 }, -3000)
@@ -607,6 +609,7 @@ iKorea : 1255,
 iKhmer : 1200,
 iMali : 1600,
 iNigeria: 1380,
+iZulu: 1620,
 iByzantium : 1200,
 iTurks : 1150,
 iArabia : 1000,
@@ -703,7 +706,7 @@ iArmenia : [(50, 1050), (1870, 2020)],
 iMinoans : [(-3000, -1300)],
 iParthia : [(200, 550)],
 iGhorids : [(1220, 1400)],
-iZulu : [(1950, 2020)],
+iZulu : [(1815, 1880), (1950, 2020)],
 }, [])
 
 dAggressionLevel = CivDict({
@@ -1319,7 +1322,7 @@ iVictorySecularism = 11
 
 
 #leaders
-iNumLeaders = 155
+iNumLeaders = 156
 (iLeaderBarbarian, iNativeLeader, iIndependentLeader, iRamesses, iCleopatra, iSargon, iHammurabi, iWentAntu,
 iAshurbanipal, iNasirAlDawla, iQinShiHuang, iTaizong, iHongwu, iMao, iSunQuan, iGaozong, iChiangKaishek, iMursili, iPericles, iAlexanderTheGreat, iGeorge, iAsoka, 
 iChandragupta, iShivaji, iGandhi, iHiram, iHannibal, iAbuFaris, iTaharqa, iAhoeitu, iCyrus, iDarius, iMithridates, iKhosrow, 
@@ -1333,7 +1336,7 @@ iJoao, iMaria, iHuaynaCapac, iCastilla, iLorenzo, iCavour, iMussolini, iGenghisK
 iTughluq, iAkbar, iBhutto, iNaresuan, iMongkut, iGustav, iIvan, iPeter, iCatherine, iAlexanderI, 
 iStalin, iMehmed, iSuleiman, iAtaturk, iMbemba, iAbbas, iKhomeini, iWillemVanOranje, iWilliam, iFrederick, 
 iBismarck, iHitler, iWashington, iLincoln, iRoosevelt, iSanMartin, iPeron, iJuarez, iSantaAnna, iCardenas, 
-iBolivar, iPedro, iVargas, iMacDonald, iTrudeau, iBoudica, iHiawatha, iTigranes, iAshot, iAndranik, iAriadne, iAgamemnon, iBulan, iLiuBei, iChengTang, iHummay, iShaka) = range(iNumLeaders)
+iBolivar, iPedro, iVargas, iMacDonald, iTrudeau, iBoudica, iHiawatha, iTigranes, iAshot, iAndranik, iAriadne, iAgamemnon, iBulan, iLiuBei, iChengTang, iHummay, iShaka, iNelsonMandela) = range(iNumLeaders)
 
 dResurrectionLeaders = CivDict({
 	iChina : iHongwu,
@@ -1342,12 +1345,12 @@ dResurrectionLeaders = CivDict({
 })
 
 # update DLL constants when this changes
-iNumPeriods = 27
+iNumPeriods = 28
 (iPeriodMing, iPeriodMaratha, iPeriodModernGreece, iPeriodCarthage, iPeriodInsularCelts,
 iPeriodVijayanagara, iPeriodByzantineConstantinople, iPeriodSeljuks, iPeriodMeiji, iPeriodDenmark, 
 iPeriodNorway, iPeriodUzbeks, iPeriodSaudi, iPeriodMorocco, iPeriodSpain, iPeriodAustria, 
 iPeriodYuan, iPeriodPeru, iPeriodLateInca, iPeriodModernItaly, iPeriodPakistan, 
-iPeriodOttomanConstantinople, iPeriodModernGermany, iPeriodTunisia, iPeriodMughals, iPeriodModernIndia, iPeriodUkraine) = range(iNumPeriods)
+iPeriodOttomanConstantinople, iPeriodModernGermany, iPeriodTunisia, iPeriodMughals, iPeriodModernIndia, iPeriodUkraine, iPeriodSouthAfrica) = range(iNumPeriods)
 
 iNumImpacts = 5
 (iImpactMarginal, iImpactLimited, iImpactSignificant, iImpactCritical, iImpactPlayer) = range(iNumImpacts)

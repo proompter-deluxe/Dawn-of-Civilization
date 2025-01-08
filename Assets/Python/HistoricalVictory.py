@@ -514,8 +514,12 @@ dGoals = {
 		SlaveTradeGold(1200, by=1900),
 	),
 	iZulu: (
-		PillageCount(15, by=1880),
-		DefeatedUnits(civs(iEngland, iNetherlands), 30, by=1920),
+		CultureAmount(2500, at=1500),
+		All(
+            DefeatedUnits(civs(iEngland, iNetherlands, iPortugal), 30),
+			LandPercent(2),
+			by=1880
+		),
 		AllowOnly(plots.regions(rHornOfAfrica, rSwahiliCoast, rGreatLakes, rZambezi, rCape).named(SOUTH_AFRICA), group(iCivGroupAfrica).named(AFRICAN), at=1950),
 	),
 	iByzantium: (

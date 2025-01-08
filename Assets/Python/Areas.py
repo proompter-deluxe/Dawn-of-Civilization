@@ -80,7 +80,7 @@ iMinoans:		(78, 48), # Knossos
 iGhorids:		(99, 49), # Ghazni
 iKhazars:		(91, 60), # Atil / Itil
 iNigeria:		(71, 36), # Njimi
-iZulu:			(79, 14), # Ulundi
+iZulu:			(79, 17), # Great Zimbabwe
 })
 
 dPeriodCapitals = {
@@ -170,7 +170,6 @@ iMamluks :		((63, 43),  (70, 48)), # Tunisia
 iGhorids :		((97, 46),  (100, 51)),
 iTimurids :		((96, 52),	(102, 58)),
 iVietnam :		((120, 41), (129, 48)),
-iZulu:			((78, 13),  (80, 15)),
 })
 
 dBirthAreaExceptions = CivDict({
@@ -214,12 +213,10 @@ iEngland :		((55, 62),	(59, 71)),
 iJava :			((122, 24), (128, 25)),
 iInca : 		((29, 20),	(35, 25)),
 iOttomans : 	((78, 51),	(87, 56)),
-iGermany :		((64, 59),	(76, 66)),
 iArgentina :	((32, 9),	(39, 17)),
 })
 
 dExtendedBirthAreaExceptions = CivDict({
-iGermany :		[(64, 59), (64, 60), (64, 64), (64, 65), (69, 59), (69, 60), (69, 61), (70, 59), (70, 60), (70, 61), (71, 59), (71, 60), (71, 61), (72, 59), (72, 60), (72, 61), (72, 64), (73, 59), (73, 60), (73, 61), (73, 62), (73, 63), (73, 64), (74, 59), (74, 60), (74, 61), (74, 62), (74, 63), (74, 64), (75, 59), (75, 60), (75, 61), (75, 62), (75, 63), (75, 64), (76, 59), (76, 60), (76, 61), (76, 62), (76, 63), (76, 64)],
 iArgentina :	[(33, 17), (34, 17), (35, 17), (36, 17), (37, 17), (38, 17), (39, 14), (39, 15)],
 }, [])
 
@@ -299,7 +296,7 @@ iMinoans:		((77, 48),  (79, 48)),
 iGhorids:		((98, 45),  (105, 49)), # north-west india, pakistan, afghanistan
 iKhazars:		((86, 57),  (92, 61)),
 iNigeria:		((70, 32),  (72, 37)),
-iZulu:			((78, 11),  (81, 17)),
+iZulu:			((78, 13),  (81, 19)),
 })
 
 dCoreAreaExceptions = CivDict({
@@ -357,10 +354,11 @@ iPeriodYuan : 						((117, 56),	(127, 62)),
 iPeriodPakistan : 					((100, 46),	(103, 49)),
 iPeriodOttomanConstantinople : 		((77, 50),	(87, 55)),
 iPeriodModernGermany : 				((65, 61),	(69, 65)),
-iPeriodMughals :		            ((100, 45),	(107, 49)),
-iPeriodModernIndia :                ((103, 37),	(110, 46)),
-#iPeriodPakistan:                    something
-iPeriodUkraine :		 			((80, 58),	(84, 62)),
+iPeriodMughals : 					((100, 45),	(107, 49)),
+iPeriodModernIndia : 				((103, 37),	(110, 46)),
+#iPeriodPakistan: 					something
+iPeriodUkraine : 					((80, 58),	(84, 62)),
+iPeriodSouthAfrica : 				((71, 11),  (81, 17)),
 }
 
 dPeriodCoreAreaExceptions = appenddict({
@@ -399,7 +397,6 @@ iGreece :	((74, 48),	(79, 53)),
 iGhorids :	((100, 45),	(106, 48)), # North-West India, Northern Pakistan
 iRus :		((80, 58),	(84, 63)), # Ukraine
 iMongols :	((108, 55),	(125, 64)),
-iZulu :		((71, 11),  (81, 17)),
 })
 
 dRespawnAreaExceptions = CivDict({

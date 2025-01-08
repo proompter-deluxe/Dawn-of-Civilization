@@ -677,8 +677,9 @@ lCivilizations = [
 	),
 	Civilization(
 		iZulu,
-		iGold=60,
-		techs=techs.column(2)
+		iGold=100,
+		techs=techs.column(2).including(iAlloys),
+		lCivics=[iMonarchy, iSlavery, iDeification],
 	),
 	Civilization(
 		iColombia,
@@ -1258,9 +1259,8 @@ dStartingUnits = CivDict({
 	},
 	iZulu: {
 		iSettle: 1,
-		iWork: 2,
-		iDefend: 3,
-		iCounter: 10,
+		iDefend: 1,
+		iCounter: 3,
 	},
 	iColombia: {
 		iSettle: 1,
@@ -1417,8 +1417,8 @@ dExtraAIUnits = CivDict({
 		iSiege: 3,
 	},
 	iRussia: {
-		iWork: 4,
-		iShock: 1,
+		iWork: 6,
+		iShock: 2,
 	},
 	iTimurids: {
 		iWork: 1,
@@ -1649,9 +1649,6 @@ dStartingExperience = CivDict({
 		iSkirmish: 2,
 		iSiege: 2,
 	},
-	iZulu: {
-		iCounter: 3,
-	}
 }, {})
 
 dAlwaysTrain = CivDict({
@@ -1666,6 +1663,7 @@ dAlwaysTrain = CivDict({
 	iColombia: [iAlbionLegion],
 	iBrazil: [iGrenadier],
 	iNigeria: [iHausaCavalry],
+	iZulu: [iImpi],
 }, [])
 
 dAIAlwaysTrain = CivDict({
@@ -2329,9 +2327,9 @@ dTechPreferences = {
 		iExploration: 50,
 		iFirearms: 20,
 		iOptics: 50,
-		iGeography: 50,
-		iHydraulics: 50,
-		iReplaceableParts: 15,
+		iGeography: 25,
+		iHydraulics: 20,
+		iReplaceableParts: 30,
 		iLogistics: 25,
 		iEconomics: 30,
 		iCivilLiberties: 30,

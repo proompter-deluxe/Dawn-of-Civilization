@@ -3,27 +3,47 @@
 <Civ4GameText xmlns="http://www.firaxis.com">
 	<TEXT>
 		<Tag>TXT_KEY_CIV_ZULU_DESC</Tag>
-		<English>The Zulu</English>
-		<French>Les Zulus</French>
-		<German>The Zulu</German>
-		<Italian>The Zulu</Italian>
-		<Spanish>The Zulu</Spanish>
+		<English>The South Africans</English>
+		<French>The South Africans</French>
+		<German>The South Africans</German>
+		<Italian>The South Africans</Italian>
+		<Spanish>The South Africans</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIV_ZULU_PEOPLES</Tag>
-		<English>Zulu Peoples</English>
-		<French>Zulu Peoples</French>
-		<German>Zulu Peoples</German>
-		<Italian>Zulu Peoples</Italian>
-		<Spanish>Zulu Peoples</Spanish>
+		<English>Shona Peoples</English>
+		<French>Shona Peoples</French>
+		<German>Shona Peoples</German>
+		<Italian>Shona Peoples</Italian>
+		<Spanish>Shona Peoples</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIV_ZULU_ADJECTIVE</Tag>
-		<English>Zulu</English>
-		<French>Zulu</French>
-		<German>Zulu</German>
-		<Italian>Zulu</Italian>
-		<Spanish>Zulu</Spanish>
+		<English>
+			<Text>Zulu:Zulu</Text>
+			<Gender>Male</Gender>
+			<Plural>0:1</Plural>
+		</English>
+		<French>
+			<Text>zoulou:zouloue:zoulous:zouloues</Text>
+			<Gender>Male:Female:Male:Female</Gender>
+			<Plural>0:0:1:1</Plural>
+		</French>
+		<German>
+			<Text>Zulul&#228;ndisch:zulul&#228;ndischen:zulul&#228;ndische</Text>
+			<Gender>Neuter:Neuter:Neuter</Gender>
+			<Plural>0:0:0</Plural>
+		</German>
+		<Italian>
+			<Text>zulu</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>zul&#250;.zul&#250;:zul&#250;es:zul&#250;es</Text>
+			<Gender>Male:Female:Male:Female</Gender>
+			<Plural>0:0:1:1</Plural>
+		</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIV_ZULU_SHORT_DESC</Tag>
@@ -56,5 +76,21 @@
 		<German>South African</German>
 		<Italian>South African</Italian>
 		<Spanish>South African</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_ZULU_SHONA</Tag>
+		<English>Shona</English>
+		<French>Shona</French>
+		<German>Shona</German>
+		<Italian>Shona</Italian>
+		<Spanish>Shona</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_ZULU_ZIMBABWE</Tag>
+		<English>Zimbabwe</English>
+		<French>Zimbabwe</French>
+		<German>Zimbabwe</German>
+		<Italian>Zimbabwe</Italian>
+		<Spanish>Zimbabwe</Spanish>
 	</TEXT>
 </Civ4GameText>

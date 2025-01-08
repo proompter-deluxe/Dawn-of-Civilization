@@ -1482,6 +1482,22 @@
 		<Spanish>Usman dan Fodio</Spanish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_LEADER_NELSON_MANDELA</Tag>
+		<English>Nelson Mandela</English>
+		<French>Nelson Mandela</French>
+		<German>Nelson Mandela</German>
+		<Italian>Nelson Mandela</Italian>
+		<Spanish>Nelson Mandela</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_LEADER_MUTOTA</Tag>
+		<English>Nyatsimba Mutota</English>
+		<French>Nyatsimba Mutota</French>
+		<German>Nyatsimba Mutota</German>
+		<Italian>Nyatsimba Mutota</Italian>
+		<Spanish>Nyatsimba Mutota</Spanish>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_LEADER_</Tag>
 		<English></English>
 		<French></French>

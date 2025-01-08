@@ -151,6 +151,7 @@ LEADER_DATES = {
 	iChengTang: -1600,
 	iHummay: 1085,
 	iShaka: 1816,
+	iNelsonMandela: 1994,
 }
 
 RELIGION_FOUNDING_DATES = {
