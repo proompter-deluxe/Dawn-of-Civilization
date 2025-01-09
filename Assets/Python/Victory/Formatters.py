@@ -35,6 +35,12 @@ class Description(object):
 	def __repr__(self):
 		return "Description(key=%s, arguments=%s)" % (self.key, self.arguments)
 	
+	def __eq__(self, other):
+		if not isinstance(other, Description):
+			return False
+		
+		return self.key == other.key and self.arguments == other.arguments
+	
 	def format(self):
 		return text(self.key, *self.arguments)
 	
@@ -55,6 +61,12 @@ class WrappedDescription(Description):
 	def __repr__(self):
 		return "WrappedDescription(key=%s, description=%s, arguments=%s)" % (self.key, self.description, self.arguments)
 	
+	def __eq__(self, other):
+		if not isinstance(other, WrappedDescription):
+			return False
+		
+		return Description.__eq__(self, other) and self.description == other.description
+	
 	def format(self):
 		return text(self.key, self.description.format(), *self.arguments)
 	
@@ -72,6 +84,12 @@ class CombinedDescription(Description):
 	
 	def __repr__(self):
 		return "CombinedDescription(%s)" % (self.descriptions,)
+	
+	def __eq__(self, other):
+		if not isinstance(other, CombinedDescription):
+			return False
+		
+		return self.descriptions == other.descriptions
 	
 	def format(self):
 		return format_separators(self.descriptions, ", ", text("TXT_KEY_AND"), format=lambda desc: desc.format())

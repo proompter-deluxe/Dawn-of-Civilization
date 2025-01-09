@@ -500,7 +500,7 @@ class PeakCount(ThresholdRequirement):
 # Third Dravidian UHV goal
 class PopulationCity(ThresholdRequirement):
 
-	TYPES = (COUNT,)
+	TYPES = (NUMBER,)
 	
 	DESC_KEY = "TXT_KEY_VICTORY_DESC_POPULATION_CITY"
 	PROGR_KEY = "TXT_KEY_VICTORY_PROGR_POPULATION_CITY"

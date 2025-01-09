@@ -451,7 +451,7 @@ class AllGoal(Goal):
 class DifferentCitiesGoal(Goal):
 
 	def __init__(self, goals, iPlayer, **options):
-		Goal.__init__(self, goals, goals[0].desc_key, iPlayer, **options)
+		Goal.__init__(self, goals, "TXT_KEY_VICTORY_DESC_SIMPLE", iPlayer, **options)
 		
 		self.recorded = {}
 	

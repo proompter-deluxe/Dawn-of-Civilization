@@ -2172,7 +2172,7 @@ class TestPopulationCity(ExtendedTestCase):
 		self.assertEqual(repr(self.requirement), "PopulationCity(10)")
 	
 	def test_description(self):
-		self.assertEqual(self.requirement.description(), "a city of size ten or larger")
+		self.assertEqual(self.requirement.description(), "a city of size 10")
 	
 	def test_areas(self):
 		self.assertEqual(self.requirement.areas(), {})
@@ -2251,7 +2251,7 @@ class TestPopulationCityCount(ExtendedTestCase):
 		self.assertEqual(repr(self.requirement), "PopulationCityCount(10, 3)")
 	
 	def test_description(self):
-		self.assertEqual(self.requirement.description(), "three cities with a population of ten")
+		self.assertEqual(self.requirement.description(), "three cities with a population of 10")
 	
 	def test_areas(self):
 		self.assertEqual(self.requirement.areas(), {})

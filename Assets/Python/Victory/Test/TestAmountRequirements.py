@@ -95,7 +95,7 @@ class TestCultureAmount(ExtendedTestCase):
 		self.assertEqual(repr(self.requirement), "CultureAmount(500)")
 	
 	def test_description(self):
-		self.assertEqual(self.requirement.description(), "more than 500 culture")
+		self.assertEqual(self.requirement.description(), "500 culture")
 	
 	def test_areas(self):
 		self.assertEqual(self.requirement.areas(), {})
@@ -149,7 +149,7 @@ class TestFoundedCultureAmount(ExtendedTestCase):
 		self.assertEqual(repr(self.requirement), "FoundedCultureAmount(500)")
 	
 	def test_description(self):
-		self.assertEqual(self.requirement.description(), "more than 500 culture in founded cities")
+		self.assertEqual(self.requirement.description(), "500 culture in founded cities")
 	
 	def test_areas(self):
 		self.assertEqual(self.requirement.areas(), {})
