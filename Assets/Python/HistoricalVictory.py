@@ -520,7 +520,7 @@ dGoals = {
 			LandPercent(2),
 			by=1880
 		),
-		AllowOnly(plots.regions(rHornOfAfrica, rSwahiliCoast, rGreatLakes, rZambezi, rCape).named(SOUTH_AFRICA), group(iCivGroupAfrica).named(AFRICAN), at=1950),
+		AllowOnly(plots.regions(rKalahari, rSwahiliCoast, rGreatLakes, rZambezi, rCape).named(SOUTH_AFRICA), group(iCivGroupAfrica).named(AFRICAN), at=1950),
 	),
 	iByzantium: (
 		GoldAmount(5000, by=1000),
