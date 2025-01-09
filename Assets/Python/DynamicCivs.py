@@ -1157,11 +1157,15 @@ def specificName(iPlayer):
 		
 		if bOwnDenmark and bOwnSweden and bOwnNorway:
 			return "TXT_KEY_CIV_NORSE_SCANDINAVIA"
-		if bOwnDenmark and bOwnNorway:
+		elif bOwnDenmark and bOwnNorway:
 			return "TXT_KEY_CIV_NORSE_DENMARK_NORWAY"
-		if bOwnDenmark:
+		elif bOwnDenmark:
 			return "TXT_KEY_CIV_NORSE_DENMARK"
-		if bOwnNorway:
+		elif bOwnNorway:
+			return "TXT_KEY_CIV_NORSE_NORWAY"
+		else:
+			# if it doesn't own Denmark nor all of Norway, odds are that it at least owns a little bit of it
+			# or is in exile
 			return "TXT_KEY_CIV_NORSE_NORWAY"
 		
 	elif iCiv == iTurks:

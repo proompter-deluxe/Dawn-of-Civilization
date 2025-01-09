@@ -459,9 +459,6 @@ def tradingCompany(iTech, iTeam, iPlayer):
 	if player(iPlayer).isHuman() or team(iTeam).isAVassal():
 		return
 
-	if data.civs[iPlayer].iResurrections > 0:
-		return
-
 	iCiv = civ(iPlayer)
 
 	dCivTechMappings = CivDict({
