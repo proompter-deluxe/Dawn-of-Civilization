@@ -1193,6 +1193,10 @@
 					<UnitClassType>UNITCLASS_LIGHT_SWORDSMAN</UnitClassType>
 					<UnitType>UNIT_CELTIC_OATHSWORN</UnitType>
 				</Unit>
+				<Unit>
+					<UnitClassType>UNITCLASS_HEAVY_SWORDSMAN</UnitClassType>
+					<UnitType>UNIT_CELTIC_GALLOWGLASS</UnitType>
+				</Unit>
 			</Units>
 			<FreeUnitClasses>
 				<FreeUnitClass>
