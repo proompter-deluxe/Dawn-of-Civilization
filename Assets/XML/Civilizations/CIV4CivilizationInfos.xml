@@ -3795,6 +3795,10 @@
 					<UnitClassType>UNITCLASS_HORSE_ARCHER</UnitClassType>
 					<UnitType>UNIT_TURKIC_OGHUZ</UnitType>
 				</Unit>
+				<Unit>
+					<UnitClassType>UNITCLASS_HUSSAR</UnitClassType>
+					<UnitType>UNIT_RUSSIAN_COSSACK</UnitType>
+				</Unit>
 			</Units>
 			<FreeUnitClasses>
 				<FreeUnitClass>
