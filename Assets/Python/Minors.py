@@ -620,7 +620,7 @@ barbarians = [
 	Barbarians(500, 1000, {iSkirmisher: 1}, ((137, 56), (140, 62)), 16, NATIVES, target_area=((134, 49), (140, 55)), adjective="TXT_KEY_ADJECTIVE_EMISHI"),
 	Barbarians(500, 1800, {iNativeRaider: 2, iNativeArcher: 1, iNativeWarrior: 2}, ((62, 24), (77, 33)), 16, NATIVES, iOwner=iNative, adjective="TXT_KEY_ADJECTIVE_BANTU"),
 	Barbarians(500, 1900, {iNativeRaider: 2}, ((69, 19), (78, 32)), 10, NATIVES, iOwner=iNative, adjective="TXT_KEY_ADJECTIVE_BANTU"),
-	Barbarians(540, 660, {iSwordsman: 3, iAxeman: 2}, ((69, 57), (72, 60)), 2, INVADERS, target_area=((67, 50), (71, 53)), adjective="TXT_KEY_CIV_ITALY_LOMBARD"),	
+	Barbarians(540, 600, {iSwordsman: 3, iAxeman: 2}, ((69, 57), (72, 60)), 2, INVADERS, target_area=((67, 50), (71, 53)), adjective="TXT_KEY_CIV_ITALY_LOMBARD"),	
 	Barbarians(530, 630, {iHorseArcher: 4, iSwordsman: 2}, ((70, 57), (80, 62)), 4, INVADERS, target_area=((65, 52), (72, 59)), adjective="TXT_KEY_ADJECTIVE_AVAR", promotions=(iMobility,)),
 	Barbarians(480, 610, {iSwordsman: 3, iAxeman: 2}, ((68, 60), (77, 65)), 6, INVADERS, target_area=((74, 49), (76, 52)), iAlternativeCiv=iBulgaria, adjective="TXT_KEY_ADJECTIVE_SLAVIC"),
 	Barbarians(550, 850, {iSwordsman: 3, iAxeman: 2}, ((71, 61), (77, 65)), 7, INVADERS, target_area=((62, 55), (64, 70)), adjective="TXT_KEY_ADJECTIVE_SLAVIC"),

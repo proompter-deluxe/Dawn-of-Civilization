@@ -1035,7 +1035,7 @@
 				</Unit>
 				<Unit>
 					<UnitClassType>UNITCLASS_HEAVY_SPEARMAN</UnitClassType>
-					<UnitType>UNIT_TAGMATA</UnitType>
+					<UnitType>UNIT_THEMATIC_SPEARMAN</UnitType>
 				</Unit>
 			</Units>
 			<FreeUnitClasses>

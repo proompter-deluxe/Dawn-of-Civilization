@@ -3730,7 +3730,14 @@
 		<German>Tagmata</German>
 		<Italian>Tagmata</Italian>
 		<Spanish>Tagmata</Spanish>
-		<Portuguese>Tagmata</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>UNIT_THEMATIC_SPEARMAN</Tag>
+		<English>Thematic Spearman</English>
+		<French>Thematic Spearman</French>
+		<German>Thematic Spearman</German>
+		<Italian>Thematic Spearman</Italian>
+		<Spanish>Thematic Spearman</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_MYCENAEAN_MYRMIDON</Tag>

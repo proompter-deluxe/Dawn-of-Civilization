@@ -297,8 +297,8 @@ lCivilizations = [
 		iRome,
 		iGold=200,
 		iAdvancedStartPoints=300,
-		lCivics=[iRepublic, iSlavery, iRedistribution, iHegemony],
-		techs=techs.column(4).including(iGeneralship, iCurrency).without(iRiding, iShipbuilding, iNavigation)
+		lCivics=[iRepublic, iSlavery, iCitizenship, iRedistribution, iHegemony],
+		techs=techs.column(4).including(iGeneralship, iLaw).without(iRiding, iShipbuilding, iNavigation)
 	),
 	Civilization(
 		iArmenia,
@@ -383,7 +383,7 @@ lCivilizations = [
 		iGold=400,
 		iAdvancedStartPoints=100,
 		iStateReligion=iOrthodoxy,
-		lCivics=[iDespotism, iCitizenship, iSlavery, iMerchantTrade, iClergy, iHegemony],
+		lCivics=[iDespotism, iCitizenship, iSlavery, iRedistribution, iClergy, iThalassocracy],
 		techs=techs.column(5).including(iArchitecture, iPolitics, iEthics)
 	),
 	Civilization(
@@ -1351,7 +1351,8 @@ dExtraAIUnits = CivDict({
 		iDefend: 2,
 	},
 	iByzantium: {
-		iAttack: 2,
+		iAttack: 3,
+		iSiege: 1,
 	},
 	iFrance: {
 		iAttack: 7,
@@ -1606,7 +1607,7 @@ dAdditionalUnits = CivDict({
 
 dSpecificAIStartingUnits = CivDict({
 	iByzantium: {
-		iTagmata: 6,
+		iTagmata: 4,
 	},
 	iTimurids: {
 		iKeshik: 10,
