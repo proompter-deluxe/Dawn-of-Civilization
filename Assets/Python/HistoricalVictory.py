@@ -276,8 +276,16 @@ dGoals = {
 	),
 	iPersia: (
 		RouteConnection([iRouteRoad], city(tPersepolis).named(PERSEPOLIS), plots.region(rAnatolia), by=-500),
-		BuildingCount(wonders(), 10, by=-300),
-		PopulationPercent(35, at=-300),
+		All(
+			BuildingCount(wonders(), 10),
+			PopulationPercent(35),
+			at=-300,
+		),
+		All(
+			BuildingCount(iZoroastrianCathedral, 2),
+			CultureLevelCityCount(iCultureLevelRefined, 8),
+			by=600,
+		),
 	),
 	iCelts: (
 		ConqueredCities(2, bControl=False, by=-150),

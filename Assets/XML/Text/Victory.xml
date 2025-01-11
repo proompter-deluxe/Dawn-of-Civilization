@@ -2388,6 +2388,30 @@
 		<Spanish></Spanish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_VICTORY_ORDINAL_6</Tag>
+		<English>sixth</English>
+		<French></French>
+		<German></German>
+		<Italian></Italian>
+		<Spanish></Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_VICTORY_ORDINAL_7</Tag>
+		<English>seventh</English>
+		<French></French>
+		<German></German>
+		<Italian></Italian>
+		<Spanish></Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_VICTORY_ORDINAL_8</Tag>
+		<English>eighth</English>
+		<French></French>
+		<German></German>
+		<Italian></Italian>
+		<Spanish></Spanish>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_VICTORY_ORDINAL_DEFAULT_SUFFIX</Tag>
 		<English>th</English>
 		<French></French>
