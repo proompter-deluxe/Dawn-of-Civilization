@@ -1270,6 +1270,7 @@
 			<NoShaderNIF>Art/LeaderHeads/Mandela/Nmandela.nif</NoShaderNIF>
 			<BackgroundKFM>Art/LeaderHeads/Mandela/gandhi_bg.kfm</BackgroundKFM>
 		</LeaderheadArtInfo>
+		<LeaderheadArtInfo>
 			<Type>ART_DEF_LEADER_BRIAN_BORU</Type>
 			<Button>Art/Leaderheads/Boru/Boru.dds</Button>
 			<NIF>Art/Leaderheads/Boru/brennus.nif</NIF>

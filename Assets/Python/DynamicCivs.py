@@ -2671,6 +2671,14 @@ def leader(iPlayer):
 		if bResurrected and year() >= year(1950):
 			return iNelsonMandela
 		
+	elif iCiv == iCelts:
+		if bResurrected or iEra >= iMedieval:
+			return iBrianBoru
+		
+	elif iCiv == iVietnam:
+		if iEra >= iIndustrial:
+			return iHoChiMinh
+		
 	return startingLeader(iPlayer)
 		
 	
