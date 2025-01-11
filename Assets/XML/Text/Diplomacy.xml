@@ -626,6 +626,70 @@
 		<Spanish>Dadnos esto o sentiréis la cólera de nuestra &quot;terrible y veloz espada&quot;. </Spanish>
 	</TEXT>
 	<TEXT>
+		<Tag>AI_DIPLO_FIRST_CONTACT_LEADER_HO_CHI_MINH_1</Tag>
+		<English>Welcome, [CT_NAME], to the [OUR_CIV_SHORT]. I am [OUR_NAME]. The [OUR_CIV_ADJ] people deeply love independence, freedom and peace. But in the face of aggression they will rise up, united as one man.</English>
+		<French>Welcome, [CT_NAME], to the [OUR_CIV_SHORT]. I am [OUR_NAME]. The [OUR_CIV_ADJ] people deeply love independence, freedom and peace. But in the face of aggression they will rise up, united as one man.</French>
+		<German>Welcome, [CT_NAME], to the [OUR_CIV_SHORT]. I am [OUR_NAME]. The [OUR_CIV_ADJ] people deeply love independence, freedom and peace. But in the face of aggression they will rise up, united as one man.</German>
+		<Italian>Welcome, [CT_NAME], to the [OUR_CIV_SHORT]. I am [OUR_NAME]. The [OUR_CIV_ADJ] people deeply love independence, freedom and peace. But in the face of aggression they will rise up, united as one man.</Italian>
+		<Spanish>Welcome, [CT_NAME], to the [OUR_CIV_SHORT]. I am [OUR_NAME]. The [OUR_CIV_ADJ] people deeply love independence, freedom and peace. But in the face of aggression they will rise up, united as one man.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_REFUSE_TO_TALK_LEADER_HO_CHI_MINH_1</Tag>
+		<English>One must have faith in the best in men and distrust the worst. And I do not trust you, [CT_NAME]. Begone!</English>
+		<French>One must have faith in the best in men and distrust the worst. And I do not trust you, [CT_NAME]. Begone!</French>
+		<German>One must have faith in the best in men and distrust the worst. And I do not trust you, [CT_NAME]. Begone!</German>
+		<Italian>One must have faith in the best in men and distrust the worst. And I do not trust you, [CT_NAME]. Begone!</Italian>
+		<Spanish>One must have faith in the best in men and distrust the worst. And I do not trust you, [CT_NAME]. Begone!</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_NO_PEACE_LEADER_HO_CHI_MINH_1</Tag>
+		<English>Nonsense. We must win the war even if the mountains of [OUR_CIV_SHORT] burn!</English>
+		<French>Nonsense. We must win the war even if the mountains of [OUR_CIV_SHORT] burn!</French>
+		<German>Nonsense. We must win the war even if the mountains of [OUR_CIV_SHORT] burn!</German>
+		<Italian>Nonsense. We must win the war even if the mountains of [OUR_CIV_SHORT] burn!</Italian>
+		<Spanish>Nonsense. We must win the war even if the mountains of [OUR_CIV_SHORT] burn!</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_GREETINGS_ATT_FR_LEADER_HO_CHI_MINH_1</Tag>
+		<English>I'm very moved to be here, [CT_NAME]. Let us improve the lives of our people.</English>
+		<French>I'm very moved to be here, [CT_NAME]. Let us improve the lives of our people.</French>
+		<German>I'm very moved to be here, [CT_NAME]. Let us improve the lives of our people.</German>
+		<Italian>I'm very moved to be here, [CT_NAME]. Let us improve the lives of our people.</Italian>
+		<Spanish>I'm very moved to be here, [CT_NAME]. Let us improve the lives of our people.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_GREETINGS_ATT_FUR_LEADER_HO_CHI_MINH_1</Tag>
+		<English>If it isn't the worst oppressor in the entire world! Do you want anything [CT_CIV_SHORT] before we triumph over your brutality and tyranny?</English>
+		<French>If it isn't the worst oppressor in the entire world! Do you want anything [CT_CIV_SHORT] before we triumph over your brutality and tyranny?</French>
+		<German>If it isn't the worst oppressor in the entire world! Do you want anything [CT_CIV_SHORT] before we triumph over your brutality and tyranny?</German>
+		<Italian>If it isn't the worst oppressor in the entire world! Do you want anything [CT_CIV_SHORT] before we triumph over your brutality and tyranny?</Italian>
+		<Spanish>If it isn't the worst oppressor in the entire world! Do you want anything [CT_CIV_SHORT] before we triumph over your brutality and tyranny?</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_DEMAND_TRIBUTE_POWER_WEAKER_LEADER_HO_CHI_MINH_1</Tag>
+		<English>Our lives are much better after the revolution, but [OUR_CIV_SHORT] remains a very poor country. Surely someone of your part can help?</English>
+		<French>Our lives are much better after the revolution, but [OUR_CIV_SHORT] remains a very poor country. Surely someone of your part can help?</French>
+		<German>Our lives are much better after the revolution, but [OUR_CIV_SHORT] remains a very poor country. Surely someone of your part can help?</German>
+		<Italian>Our lives are much better after the revolution, but [OUR_CIV_SHORT] remains a very poor country. Surely someone of your part can help?</Italian>
+		<Spanish>Our lives are much better after the revolution, but [OUR_CIV_SHORT] remains a very poor country. Surely someone of your part can help?</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_DEMAND_TRIBUTE_POWER_EQUAL_LEADER_HO_CHI_MINH_1</Tag>
+		<English>You can kill ten of our men for every one we kill of yours. But even at those odds, you will lose and we will win. So it would be good to avoid such a war, wouldn't it?</English>
+		<French>You can kill ten of our men for every one we kill of yours. But even at those odds, you will lose and we will win. So it would be good to avoid such a war, wouldn't it?</French>
+		<German>You can kill ten of our men for every one we kill of yours. But even at those odds, you will lose and we will win. So it would be good to avoid such a war, wouldn't it?</German>
+		<Italian>You can kill ten of our men for every one we kill of yours. But even at those odds, you will lose and we will win. So it would be good to avoid such a war, wouldn't it?</Italian>
+		<Spanish>You can kill ten of our men for every one we kill of yours. But even at those odds, you will lose and we will win. So it would be good to avoid such a war, wouldn't it?</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_DEMAND_TRIBUTE_POWER_STRONGER_LEADER_HO_CHI_MINH_1</Tag>
+		<English>When the prison doors are opened, the real dragon will fly out. So don't make us angry!</English>
+		<French>When the prison doors are opened, the real dragon will fly out. So don't make us angry!</French>
+		<German>When the prison doors are opened, the real dragon will fly out. So don't make us angry!</German>
+		<Italian>When the prison doors are opened, the real dragon will fly out. So don't make us angry!</Italian>
+		<Spanish>When the prison doors are opened, the real dragon will fly out. So don't make us angry!</Spanish>
+	</TEXT>
+	<TEXT>
 		<Tag>AI_DIPLO_FIRST_CONTACT_LEADER_</Tag>
 		<English></English>
 		<French></French>

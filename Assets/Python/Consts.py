@@ -1133,7 +1133,7 @@ iVictorySecularism = 11
 
 
 #leaders
-iNumLeaders = 138
+iNumLeaders = 139
 (iLeaderBarbarian, iNativeLeader, iIndependentLeader, iRamesses, iCleopatra, iBaibars, iNasser, iSargon, iHammurabi, iWentAntu,
 iAshurbanipal, iQinShiHuang, iTaizong, iHongwu, iMao, iMursili, iPericles, iAlexanderTheGreat, iGeorge, iAsoka, 
 iChandragupta, iShivaji, iGandhi, iHiram, iHannibal, iTaharqa, iAhoeitu, iCyrus, iDarius, iKhosrow, 
@@ -1142,12 +1142,12 @@ iTopiltzin, iKanishka, iWangKon, iSejong, iSuryavarman, iMansaMusa, iJustinian, 
 iNapoleon, iDeGaulle, iSriJayanasa, iTunPerak, iKammu, iOdaNobunaga, iMeiji, iRagnar, iChristian, iGerhardsen, 
 iBumin, iAlpArslan, iTamerlane, iHarun, iSaladin, iSongtsen, iLobsangGyatso, iRahman, iYaqub, iHayamWuruk, 
 iSuharto, iIsabella, iPhilip, iFranco, iAlfred, iElizabeth, iVictoria, iChurchill, iBarbarossa, iCharles, 
-iFrancis, iAnawrahta, iBayinnaung, iYaroslav, iLeLoi, iDawud, iCasimir, iSobieski, iPilsudski, iWalesa, 
-iAfonso, iJoao, iMaria, iHuaynaCapac, iCastilla, iLorenzo, iCavour, iMussolini, iGenghisKhan, iKublaiKhan, 
-iMontezuma, iTughluq, iAkbar, iBhutto, iNaresuan, iMongkut, iGustav, iIvan, iPeter, iCatherine, 
-iAlexanderI, iStalin, iMehmed, iSuleiman, iAtaturk, iMbemba, iAbbas, iKhomeini, iWillemVanOranje, iWilliam, 
-iFrederick, iBismarck, iHitler, iWashington, iLincoln, iRoosevelt, iSanMartin, iPeron, iJuarez, iSantaAnna, 
-iCardenas, iBolivar, iPedro, iVargas, iMacDonald, iTrudeau, iBoudica, iSittingBull) = range(iNumLeaders)
+iFrancis, iAnawrahta, iBayinnaung, iYaroslav, iLeLoi, iHoChiMinh, iDawud, iCasimir, iSobieski, iPilsudski, 
+iWalesa, iAfonso, iJoao, iMaria, iHuaynaCapac, iCastilla, iLorenzo, iCavour, iMussolini, iGenghisKhan, 
+iKublaiKhan, iMontezuma, iTughluq, iAkbar, iBhutto, iNaresuan, iMongkut, iGustav, iIvan, iPeter, 
+iCatherine, iAlexanderI, iStalin, iMehmed, iSuleiman, iAtaturk, iMbemba, iAbbas, iKhomeini, iWillemVanOranje, 
+iWilliam, iFrederick, iBismarck, iHitler, iWashington, iLincoln, iRoosevelt, iSanMartin, iPeron, iJuarez, 
+iSantaAnna, iCardenas, iBolivar, iPedro, iVargas, iMacDonald, iTrudeau, iBoudica, iSittingBull) = range(iNumLeaders)
 
 dResurrectionLeaders = CivDict({
 	iChina : iHongwu,

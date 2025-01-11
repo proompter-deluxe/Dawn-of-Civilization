@@ -1126,5 +1126,13 @@
 			<NoShaderNIF>Art/Leaderheads/Boru/brennus.nif</NoShaderNIF>
 			<BackgroundKFM>Art/Leaderheads/Boru/washington_BG.kfm</BackgroundKFM>
 		</LeaderheadArtInfo>
+		<LeaderheadArtInfo>
+			<Type>ART_DEF_LEADER_HO_CHI_MINH</Type>
+			<Button>Art/Leaderheads/Ho Chi Minh/HoChi_Button.dds</Button>
+			<NIF>Art/Leaderheads/Ho Chi Minh/HoChiMinh.nif</NIF>
+			<KFM>Art/Leaderheads/Ho Chi Minh/genghis_khan.kfm</KFM>
+			<NoShaderNIF>Art/Leaderheads/Ho Chi Minh/HoChiMinh.nif</NoShaderNIF>
+			<BackgroundKFM>Art/Leaderheads/Ho Chi Minh/genghis_khan_bg.kfm</BackgroundKFM>
+		</LeaderheadArtInfo>
 	</LeaderheadArtInfos>
 </Civ4ArtDefines>
