@@ -2689,6 +2689,7 @@ dBuildingPreferences = {
 	},
 	iTibet : {
 		iPotalaPalace: 40,
+		iLouvre: -10,
 	},
 	iMoors : {
 		iMezquita: 100,
