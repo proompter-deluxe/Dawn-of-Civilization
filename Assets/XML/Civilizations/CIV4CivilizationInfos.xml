@@ -6543,6 +6543,10 @@
 					<UnitClassType>UNITCLASS_LONGBOWMAN</UnitClassType>
 					<UnitType>UNIT_VIETNAMESE_RATTAN_ARCHER</UnitType>
 				</Unit>
+				<Unit>
+					<UnitClassType>UNITCLASS_INFANTRY</UnitClassType>
+					<UnitType>UNIT_VIETNAMESE_VIET_CONG</UnitType>
+				</Unit>
 			</Units>
 			<FreeUnitClasses>
 				<FreeUnitClass>
