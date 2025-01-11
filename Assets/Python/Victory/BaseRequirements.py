@@ -58,6 +58,10 @@ class Requirement(object):
 	def deregister_handlers(self):
 		event_handler_registry.deregister(self)
 	
+	def get_global_types_and_parameters(self):
+		for parameter_type, parameter in zip(self.GLOBAL_TYPES, self.parameters):
+			yield parameter_type, parameter
+	
 	def get_types_and_parameters(self):
 		for parameter_type, parameter in zip(self.GLOBAL_TYPES + self.TYPES, self.parameters):
 			yield parameter_type, parameter
@@ -80,18 +84,24 @@ class Requirement(object):
 	
 	def format_parameters(self, **options):
 		return [type.format(type.scale(parameter), **options) for type, parameter in self.get_types_and_parameters()] + self.additional_formats()
+	
+	def get_description_arguments(self, **options):
+		return self.format_global_parameters(**options)
+	
+	def format_global_parameters(self, **options):
+		return [type.format(type.scale(parameter), **options) for type, parameter in self.get_global_types_and_parameters()]
+	
+	def get_description(self, **options):
+		return Description(self.DESC_KEY, *self.format_parameters(**options))
 		
 	def description(self, **options):
-		return text(self.DESC_KEY, *self.format_parameters(**options))
+		return self.get_description(**options).format()
 	
 	def areas(self, **options):
 		return dict((type.format_area(parameter, **options), type.area(parameter)) for type, parameter in self.get_types_and_parameters() if type.area(parameter) is not None)
 		
 	def area_name(self, tile):
 		return "\n".join(name for name, area in self.areas().items() if tile in area)
-	
-	def format_description(self, **options):
-		return self.description(**options)
 	
 	def progress_text(self, **options):
 		if self.PROGR_KEY == "TXT_KEY_VICTORY_PROGR_SIMPLE" and not self.parameters:

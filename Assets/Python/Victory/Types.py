@@ -290,6 +290,16 @@ class UnitCombatType(Type):
 	
 	def format_repr_func(self, argument):
 		return infos.unitCombat(argument).getDescription().split(" ")[0]
+	
+	def format_unit_combat_short(self, iUnitCombatType, **options):
+		return " ".join(self.format_func(iUnitCombatType, **options).split(" ")[:-1])
+	
+	def format(self, argument, **options):
+		if isinstance(argument, Aggregate) and not argument.name():
+			formatted = argument.format(self.format_unit_combat_short, **options)
+			return formatted + " " + self.format_func(argument[0]).split(" ")[-1]
+		
+		return Type.format(self, argument, **options)
 
 
 class AreaOrCityType(Type):

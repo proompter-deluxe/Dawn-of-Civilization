@@ -26,7 +26,130 @@ def with_religion_in_cities(string, iReligion):
 	return string
 
 
-class Progress(object):
+class Description(object):
+	
+	def __init__(self, key, *arguments):
+		self.key = key
+		self.arguments = arguments
+	
+	def __repr__(self):
+		return "Description(key=%s, arguments=%s)" % (self.key, self.arguments)
+	
+	def __eq__(self, other):
+		if not isinstance(other, Description):
+			return False
+		
+		return self.key == other.key and self.arguments == other.arguments
+	
+	def format(self):
+		return text(self.key, *self.arguments)
+	
+	def matches(self, desc):
+		return False
+	
+	def unwrap(self):
+		return [self]
+
+
+class WrappedDescription(Description):
+	
+	def __init__(self, key, description, *arguments):
+		Description.__init__(self, key, *arguments)
+		
+		self.description = description
+	
+	def __repr__(self):
+		return "WrappedDescription(key=%s, description=%s, arguments=%s)" % (self.key, self.description, self.arguments)
+	
+	def __eq__(self, other):
+		if not isinstance(other, WrappedDescription):
+			return False
+		
+		return Description.__eq__(self, other) and self.description == other.description
+	
+	def format(self):
+		return text(self.key, self.description.format(), *self.arguments)
+	
+	def matches(self, desc):
+		if not isinstance(desc, WrappedDescription):
+			return False
+		
+		return self.key == desc.key and self.arguments == desc.arguments
+	
+
+class CombinedDescription(Description):
+	
+	def __init__(self, descriptions):
+		self.descriptions = descriptions
+	
+	def __repr__(self):
+		return "CombinedDescription(%s)" % (self.descriptions,)
+	
+	def __eq__(self, other):
+		if not isinstance(other, CombinedDescription):
+			return False
+		
+		return self.descriptions == other.descriptions
+	
+	def format(self):
+		return format_separators(self.descriptions, ", ", text("TXT_KEY_AND"), format=lambda desc: desc.format())
+	
+	def matches(self, desc):
+		return False
+	
+	def unwrap(self):
+		return self.descriptions
+		
+
+def generate_description(entries, key, arguments, suffixes, required):
+	description = combine_entries(entries)
+	
+	if required:
+		description = WrappedDescription("TXT_KEY_VICTORY_REQUIRED_OUT_OF", description, COUNT.format(required))
+	
+	if key:
+		description = WrappedDescription(key, description, *arguments)
+	
+	for suffix in suffixes:
+		description = WrappedDescription("TXT_KEY_VICTORY_SUFFIX", description, suffix)
+	
+	return description
+
+
+def combine_entries(entries):
+	return combine_descriptions([entry.get_description() for entry in entries])
+
+
+def combine_descriptions(descs):
+	if len(descs) == 1:
+		return descs[0]
+	
+	combined = []
+	groups = []
+	previous_desc = None
+	
+	for desc in descs:
+		if previous_desc and desc.matches(previous_desc):
+			groups[-1].append(desc)
+		else:
+			groups.append([desc])
+		
+		previous_desc = desc
+	
+	for group in groups:
+		if len(group) == 1:
+			combined.append(group[0])
+		else:
+			combined.append(WrappedDescription(group[0].key, combine_descriptions(sum((desc.description.unwrap() for desc in group), [])), *group[0].arguments))
+	
+	if len(combined) == 1:
+		return combined[0]
+	
+	return CombinedDescription(combined)
+	
+
+
+class ProgressFormatter(object):
 		
 	def format(self, requirements, evaluator):
 		list_progress = self.format_list(requirements, evaluator)
@@ -63,47 +186,6 @@ class Progress(object):
 			return 3
 
 
-class Description(object):
 
-	def format(self, requirements, desc_args, global_suffixes, desc_required=None):
-		grouped_descriptions = self.grouped_descriptions(requirements)
-		description_entries = [self.format_entry(key, typed_parameters, descriptions, desc_args + list(req_args), suffixes, req_required and req_required or desc_required) for key, typed_parameters, req_args, descriptions, suffixes, req_required in grouped_descriptions]
-		
-		description = format_separators(description_entries, ",", text("TXT_KEY_AND"))
-		
-		return " ".join([description] + list(global_suffixes))
-	
-	def grouped_descriptions(self, requirements):
-		arguments = self.arguments(requirements)
-		
-		grouped_descriptions = appenddict()
-		for key, typed_parameters, desc_args, description, suffixes, required in arguments:
-			grouped_descriptions[(key, typed_parameters, desc_args, suffixes, required)].append(description)
-		
-		for key, typed_parameters, desc_args, _, suffixes, required in arguments:
-			if (key, typed_parameters, desc_args, suffixes, required) in grouped_descriptions:
-				yield (key, typed_parameters, desc_args, grouped_descriptions.pop((key, typed_parameters, desc_args, suffixes, required)), suffixes, required)
-	
-	def arguments(self, requirements):
-		return [(req_key, tuple(zip(req.GLOBAL_TYPES, self.convert_parameters(req.parameters))), tuple(req_args), req.description(), tuple(req_suffixes), req_required) for req, req_key, req_args, req_suffixes, req_required in requirements]
-	
-	def convert_parameters(self, parameters):
-		for parameter in parameters:
-			if isinstance(parameter, list):
-				parameter = tuple(parameter)
-			yield parameter
-	
-	def format_entry(self, key, typed_parameters, descriptions, desc_args, suffixes, required):
-		descriptions = format_separators(descriptions, ",", text("TXT_KEY_AND"))
-		parameters = [type.format(parameter) for type, parameter in typed_parameters]
-		
-		if required is not None:
-			descriptions = text("TXT_KEY_VICTORY_REQUIRED_OUT_OF", COUNT.format(required), descriptions)
-		
-		combined_desc_args = [descriptions] + desc_args + parameters
-		return " ".join([text(key, *combined_desc_args)] + list(suffixes))
-
-
-PROGRESS = Progress()
-DESCRIPTION = Description()
+PROGRESS = ProgressFormatter()
 

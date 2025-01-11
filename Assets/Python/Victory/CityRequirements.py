@@ -8,6 +8,7 @@ class CityCulture(CityRequirement):
 	GLOBAL_TYPES = (CITY,)
 	TYPES = (AMOUNT,)
 	
+	GOAL_DESC_KEY = "TXT_KEY_VICTORY_DESC_HAVE_IN_CITY"
 	DESC_KEY = "TXT_KEY_VICTORY_DESC_CITY_CULTURE"
 	PROGR_KEY = "TXT_KEY_VICTORY_PROGR_CITY_CULTURE"
 	
@@ -35,6 +36,7 @@ class CityCultureLevel(CityRequirement):
 	GLOBAL_TYPES = (CITY,)
 	TYPES = (CULTURELEVEL,)
 	
+	GOAL_DESC_KEY = "TXT_KEY_VICTORY_DESC_HAVE_IN_CITY"
 	DESC_KEY = "TXT_KEY_VICTORY_DESC_CITY_CULTURE_LEVEL"
 	PROGR_KEY = "TXT_KEY_VICTORY_PROGR_CITY_CULTURE_LEVEL"
 	
@@ -88,8 +90,10 @@ class CityDifferentGreatPeopleCount(CityRequirement):
 # Third Babylonian UHV goal
 class CityPopulation(CityRequirement):
 
-	TYPES = (CITY, NUMBER)
+	GLOBAL_TYPES = (CITY,)
+	TYPES = (NUMBER,)
 	
+	GOAL_DESC_KEY = "TXT_KEY_VICTORY_DESC_HAVE_IN_CITY"
 	DESC_KEY = "TXT_KEY_VICTORY_DESC_CITY_POPULATION"
 	PROGR_KEY = "TXT_KEY_VICTORY_PROGR_CITY_POPULATION"
 	
@@ -138,8 +142,8 @@ class CitySpecialistCount(CityRequirement):
 	def fulfilled_city(self, city):
 		return self.get_specialist_count(city) >= self.iRequired
 	
-	def description(self):
-		return CityRequirement.description(self, bPlural=self.bPlural)
+	def get_description(self):
+		return CityRequirement.get_description(self, bPlural=self.bPlural)
 	
 	def progress_city(self, city):
 		return "%d / %d" % (self.get_specialist_count(city), self.iRequired)

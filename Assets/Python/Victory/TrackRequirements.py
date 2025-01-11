@@ -173,8 +173,8 @@ class Constructed(TrackRequirement):
 			self.increment()
 			goal.check()
 	
-	def description(self):
-		return Requirement.description(self, bPlural=self.bPlural)
+	def get_description(self):
+		return Requirement.get_description(self, bPlural=self.bPlural)
 		
 	def progress(self, evaluator):
 		if not self.bPlural:

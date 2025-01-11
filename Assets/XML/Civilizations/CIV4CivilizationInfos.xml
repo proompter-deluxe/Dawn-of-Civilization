@@ -1372,6 +1372,10 @@
 					<UnitClassType>UNITCLASS_LIGHT_SWORDSMAN</UnitClassType>
 					<UnitType>UNIT_CELTIC_OATHSWORN</UnitType>
 				</Unit>
+				<Unit>
+					<UnitClassType>UNITCLASS_HEAVY_SWORDSMAN</UnitClassType>
+					<UnitType>UNIT_CELTIC_GALLOWGLASS</UnitType>
+				</Unit>
 			</Units>
 			<FreeUnitClasses>
 				<FreeUnitClass>
@@ -1398,6 +1402,10 @@
 			<Leaders>
 				<Leader>
 					<LeaderName>LEADER_BRENNUS</LeaderName>
+					<bLeaderAvailability>1</bLeaderAvailability>
+				</Leader>
+				<Leader>
+					<LeaderName>LEADER_BRIAN_BORU</LeaderName>
 					<bLeaderAvailability>1</bLeaderAvailability>
 				</Leader>
 			</Leaders>
@@ -7451,7 +7459,7 @@
 			<Buildings>
 				<Building>
 					<BuildingClassType>BUILDINGCLASS_ESTATE</BuildingClassType>
-					<BuildingType>BUILDING_MUGHAL_MAUSOLEUM</BuildingType>
+					<BuildingType>BUILDING_MUGHAL_DURBAR</BuildingType>
 				</Building>
 				<Building>
 					<BuildingClassType>BUILDINGCLASS_PAGAN_TEMPLE</BuildingClassType>
@@ -7735,6 +7743,10 @@
 					<UnitClassType>UNITCLASS_LONGBOWMAN</UnitClassType>
 					<UnitType>UNIT_VIETNAMESE_RATTAN_ARCHER</UnitType>
 				</Unit>
+				<Unit>
+					<UnitClassType>UNITCLASS_INFANTRY</UnitClassType>
+					<UnitType>UNIT_VIETNAMESE_VIET_CONG</UnitType>
+				</Unit>
 			</Units>
 			<FreeUnitClasses>
 				<FreeUnitClass>
@@ -7761,6 +7773,10 @@
 			<Leaders>
 				<Leader>
 					<LeaderName>LEADER_LE_LOI</LeaderName>
+					<bLeaderAvailability>1</bLeaderAvailability>
+				</Leader>
+				<Leader>
+					<LeaderName>LEADER_HO_CHI_MINH</LeaderName>
 					<bLeaderAvailability>1</bLeaderAvailability>
 				</Leader>
 			</Leaders>

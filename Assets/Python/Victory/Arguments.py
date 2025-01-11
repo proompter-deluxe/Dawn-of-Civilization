@@ -81,6 +81,9 @@ class Aggregate(NamedArgument):
 	def __contains__(self, item):
 		return item in self.items
 	
+	def __getitem__(self, index):
+		return self.items[index]
+	
 	def __eq__(self, other):
 		if isinstance(other, Aggregate):
 			return self.items == other.items

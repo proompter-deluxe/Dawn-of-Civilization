@@ -21,7 +21,7 @@ class TestCityCulture(ExtendedTestCase):
 		self.assertEqual(repr(self.requirement), "CityCulture(Test City, 100)")
 	
 	def test_description(self):
-		self.assertEqual(self.requirement.description(), "100 culture in Test City")
+		self.assertEqual(self.requirement.description(), "100 culture")
 	
 	def test_areas(self):
 		self.assertEqual(self.requirement.areas(), {"Test City": plots.of([(57, 35)])})
@@ -109,7 +109,7 @@ class TestCityCultureLevel(ExtendedTestCase):
 		self.assertEqual(repr(self.requirement), "CityCultureLevel(Test City, Refined)")
 	
 	def test_description(self):
-		self.assertEqual(self.requirement.description(), "refined culture in Test City")
+		self.assertEqual(self.requirement.description(), "refined culture")
 	
 	def test_areas(self):
 		self.assertEqual(self.requirement.areas(), {"Test City": plots.of([(57, 35)])})
@@ -321,7 +321,7 @@ class TestCityPopulation(ExtendedTestCase):
 		self.assertEqual(repr(self.requirement), "CityPopulation(Test City, 5)")
 	
 	def test_description(self):
-		self.assertEqual(self.requirement.description(), "a population of 5 in Test City")
+		self.assertEqual(self.requirement.description(), "a population of 5")
 	
 	def test_areas(self):
 		self.assertEqual(self.requirement.areas(), {"Test City": plots.of([(57, 35)])})
