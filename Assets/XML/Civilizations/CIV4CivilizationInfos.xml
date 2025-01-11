@@ -4331,7 +4331,7 @@
 			<Buildings>
 				<Building>
 					<BuildingClassType>BUILDINGCLASS_ESTATE</BuildingClassType>
-					<BuildingType>BUILDING_MUGHAL_MAUSOLEUM</BuildingType>
+					<BuildingType>BUILDING_MUGHAL_DURBAR</BuildingType>
 				</Building>
 				<Building>
 					<BuildingClassType>BUILDINGCLASS_PAGAN_TEMPLE</BuildingClassType>

@@ -4058,12 +4058,12 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<BuildingClass>BUILDINGCLASS_ESTATE</BuildingClass>
-			<Type>BUILDING_MUGHAL_MAUSOLEUM</Type>
-			<Description>TXT_KEY_BUILDING_MUGHAL_MAUSOLEUM</Description>
-			<Civilopedia>TXT_KEY_BUILDING_MUGHAL_MAUSOLEUM_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_MUGHAL_MAUSOLEUM_STRATEGY</Strategy>
+			<Type>BUILDING_MUGHAL_DURBAR</Type>
+			<Description>TXT_KEY_BUILDING_MUGHAL_DURBAR</Description>
+			<Civilopedia>TXT_KEY_BUILDING_MUGHAL_DURBAR_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_MUGHAL_DURBAR_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_MUGHAL_MAUSOLEUM</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_MUGHAL_DURBAR</ArtDefineTag>
 			<FreeStartEra>ERA_GLOBAL</FreeStartEra>
 			<PrereqTech>TECH_HERITAGE</PrereqTech>
 			<iCost>150</iCost>
