@@ -999,7 +999,7 @@ dInflationRateMods = CivDict({
 	iTibet: 100,
 	iMoors: 100,
 	iJava: 100, 
-	iEngland: 70,
+	iEngland: 75,
 	iHolyRome: 75,
 	iBurma: 130,
 	iRus: 100,
