@@ -121,7 +121,7 @@ def getCityClaim(city):
 	
 	# claim based on war targets: needs to be winning the war based on war success, not available to human player
 	closest = closestCity(city, same_continent=True)
-	warClaims = possibleClaims.without(active()).where(lambda p: team(p).isAtWar(team(iOwner).getID()) and plot(city).getPlayerWarValue(p) >= 4)
+	warClaims = possibleClaims.without(active()).where(lambda p: team(p).isAtWar(team(iOwner).getID()) and (plot(city).getPlayerWarValue(p) >= 4 or (city.getCivilizationType() in lBioNewWorld and data.civs[iOwner].iResurrections == 0)))
 	warClaims = warClaims.where(lambda p: team(p).AI_getAtWarCounter(player(iOwner).getTeam()) >= turns(10) and team(p).AI_getWarSuccess(player(iOwner).getTeam()) >= scale(20) and team(p).AI_getWarSuccess(team(iOwner).getID()) > team(iOwner).AI_getWarSuccess(team(p).getID()))
 	warClaims = warClaims.where(lambda p: not closest or closest.getOwner() == p or not team(iOwner).isAtWar(closest.getOwner()))
 	warClaims = warClaims.where(lambda p: closestCity(city, owner=p, same_continent=True) and distance(city, closestCity(city, owner=p, same_continent=True)) <= 12)

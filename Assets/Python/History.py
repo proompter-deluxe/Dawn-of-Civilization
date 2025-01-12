@@ -240,7 +240,7 @@ def conquistadors(iTeamX, iHasMetTeamY):
 					
 					newWorldPlots = plots.start(tContactZoneTL).end(tContactZoneBR).without(lArrivalExceptions)
 					contactPlots = newWorldPlots.where(lambda p: p.isVisible(iNewWorldPlayer, False) and p.isVisible(iOldWorldPlayer, False))
-					arrivalPlots = newWorldPlots.owner(iNewWorldPlayer).where(lambda p: not p.isCity() and isFree(iOldWorldPlayer, p, bCanEnter=True) and map.getArea(p.getArea()).getCitiesPerPlayer(iNewWorldPlayer) > 0)
+					arrivalPlots = plots.core(iNewWorldPlayer).expand(1).coastal().where(lambda p: not p.isCity() and isFree(iOldWorldPlayer, p, bCanEnter=True) and map.getArea(p.getArea()).getCitiesPerPlayer(iNewWorldPlayer) > 0)
 					
 					if contactPlots and arrivalPlots:
 						contactPlot = contactPlots.random()
@@ -263,11 +263,14 @@ def conquistadors(iTeamX, iHasMetTeamY):
 							
 						team(iOldWorldPlayer).declareWar(iNewWorldPlayer, True, WarPlanTypes.WARPLAN_TOTAL)
 						
+						if not player(iOldWorldPlayer).isHuman():
+							player(iOldWorldPlayer).AI_changeMemoryCount(iNewWorldPlayer, MemoryTypes.MEMORY_STOPPED_TRADING_RECENT, turns(10))
+						
 						dConquerorUnits = {
-							iAttack: 1 + iModifier2,
+							iAttack: 2 + iModifier2,
 							iCounter: 2,
-							iSiege: 1 + iModifier1 + iModifier2,
-							iShockCity: 2 + iModifier1,
+							iSiege: 2 + iModifier1 + iModifier2,
+							iShockCity: 3 + iModifier1,
 						}
 						units = createRoleUnits(iOldWorldPlayer, arrivalPlot, dConquerorUnits.items())
 						units.promotion(infos.type("PROMOTION_MERCENARY"))
