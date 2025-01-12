@@ -233,6 +233,12 @@ tDaciaBR = (77, 59)
 
 tConquestRomeDacia = (45, iRome, iBarbarian, tDaciaTL, tDaciaBR, 1, iRomeDaciaYear, 10)
 
+iItalyCreteYear = 1205
+tCreteTL = (77, 48)
+tCreteBR = (79, 48)
+
+tConquestItalyCrete = (46, iItaly, iByzantium, tCreteTL, tCreteBR, 1, iItalyCreteYear, 10)
+
 lConquests = [
 	tConquestRomeCarthageInSpain,
 	tConquestRomeCarthage, 
@@ -278,6 +284,7 @@ lConquests = [
 	tConquestAssyriaEgypt,
 	#tConquestChinaShu,
 	tConquestRomeDacia,
+	tConquestItalyCrete,
 ]
 
 dConquestChecker = {
