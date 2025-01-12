@@ -8007,7 +8007,15 @@ void CvUnit::upgrade(UnitTypes eUnit)
 	GET_PLAYER(getOwnerINLINE()).changeGold(-iPrice);
 // BUG - Upgrade Unit Event - end
 
-	pUpgradeUnit = GET_PLAYER(getOwnerINLINE()).initUnit(eUnit, getX_INLINE(), getY_INLINE(), AI_getUnitAIType());
+	UnitAITypes eUnitAIType = AI_getUnitAIType();
+
+	// Leoreth: make sure that upgrading to sea explore units actually makes a sea explore unit
+	if (GC.getUnitInfo(eUnit).getDefaultUnitAIType() == UNITAI_EXPLORE_SEA)
+	{
+		eUnitAIType = UNITAI_EXPLORE_SEA;
+	}
+
+	pUpgradeUnit = GET_PLAYER(getOwnerINLINE()).initUnit(eUnit, getX_INLINE(), getY_INLINE(), eUnitAIType);
 
 	FAssertMsg(pUpgradeUnit != NULL, "UpgradeUnit is not assigned a valid value");
 
