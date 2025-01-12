@@ -2887,6 +2887,18 @@ int CvPlayerAI::AI_targetCityValue(CvCity* pCity, bool bRandomize, bool bIgnoreA
 		return 0;
 	}
 
+	// Leoreth: help target natives in the new world
+	if (pCity->getCivilizationType() == NATIVE)
+	{
+		if (pCity->getRegionGroup() == REGION_GROUP_NORTH_AMERICA || pCity->getRegionGroup() == REGION_GROUP_SOUTH_AMERICA)
+		{
+			if (getNumCities() > 0 && getCapitalCity()->getRegionGroup() != REGION_GROUP_NORTH_AMERICA && getCapitalCity()->getRegionGroup() != REGION_GROUP_SOUTH_AMERICA)
+			{
+				iWarMapValue = std::max(iWarMapValue, 10);
+			}
+		}
+	}
+
 	if (iSettlerMapValue == 0)
 	{
 		iValue -= 2;
