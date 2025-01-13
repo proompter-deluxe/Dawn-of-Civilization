@@ -357,6 +357,15 @@ def recordExplorationTurn(iTech, iTeam, iPlayer):
 
 
 @handler("techAcquired")
+def spanishExplorers(iTech, iTeam, iPlayer):
+	if iTech == iCartography:
+		if civ(iPlayer) == iSpain and not player(iPlayer).isHuman():
+			city = cities.owner(iPlayer).coastal().minimum(CyCity.getX)
+			if city:
+				caravel = makeUnit(iPlayer, iCaravel, city, UnitAITypes.UNITAI_EXPLORE_SEA)
+
+
+@handler("techAcquired")
 def americanWestCoastSettlement(iTech, iTeam, iPlayer):
 	if iTech == iRailroad and civ(iPlayer) == iAmerica and not player(iPlayer).isHuman():
 		enemyCities = cities.region(rCalifornia).notowner(iAmerica).where(lambda city: team(iTeam).canDeclareWar(city.getTeam()))
