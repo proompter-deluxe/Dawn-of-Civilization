@@ -1249,8 +1249,8 @@ dStartingUnits = CivDict({
 		iEscort: 2,
 	},
 	iMexico: {
-		iSettle: 5,
-		iWork: 2,
+		iSettle: 7,
+		iWork: 3,
 		iShock: 4,
 		iDefend: 4,
 		iAttack: 2,
@@ -2236,6 +2236,7 @@ dTechPreferences = {
 		iFirearms: 25,
 		iCompanies: 30,
 		iPatronage: 30,
+		iAssemblyLine: -5,
 	},
 	iInca : {
 		iConstruction: 40,

@@ -398,6 +398,7 @@ iGreece :	((74, 48),	(79, 53)),
 iGhorids :	((100, 45),	(106, 48)), # North-West India, Northern Pakistan
 iRus :		((80, 58),	(84, 63)), # Ukraine
 iMongols :	((108, 55),	(125, 64)),
+iVietnam :	((120, 39),	(123, 42)),
 })
 
 dRespawnAreaExceptions = CivDict({
