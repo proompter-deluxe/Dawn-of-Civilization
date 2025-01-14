@@ -11018,6 +11018,36 @@ bool CvUnitAI::AI_explore()
 
 	bool bNoContact = (GC.getGameINLINE().countCivTeamsAlive() > GET_TEAM(getTeam()).getHasMetCivCount(true));
 
+	if (getCivilizationType() == SPAIN)
+	{
+		pBestPlot = GC.getMap().plot(20, 44);
+		if (!pBestPlot->isRevealed(getTeam(), false))
+		{
+			if (GET_PLAYER(getOwnerINLINE()).AI_plotTargetMissionAIs(pBestPlot, MISSIONAI_EXPLORE, getGroup(), 3) == 0)
+			{
+				getGroup()->pushMission(MISSION_MOVE_TO, pBestPlot->getX_INLINE(), pBestPlot->getY_INLINE(), MOVE_NO_ENEMY_TERRITORY, false, false, MISSIONAI_EXPLORE, pBestPlot);
+				return true;
+			}
+		}
+
+		pBestPlot = GC.getMap().plot(29, 21);
+		if (!pBestPlot->isRevealed(getTeam(), false))
+		{
+			if (GET_PLAYER(getOwnerINLINE()).AI_plotTargetMissionAIs(pBestPlot, MISSIONAI_EXPLORE, getGroup(), 3) == 0)
+			{
+				getGroup()->pushMission(MISSION_MOVE_TO, pBestPlot->getX_INLINE(), pBestPlot->getY_INLINE(), MOVE_NO_ENEMY_TERRITORY, false, false, MISSIONAI_EXPLORE, pBestPlot);
+				return true;
+			}
+		}
+	}
+
+	if ((pBestPlot != NULL) && (pBestExplorePlot != NULL))
+	{
+		FAssert(!atPlot(pBestPlot));
+		getGroup()->pushMission(MISSION_MOVE_TO, pBestPlot->getX_INLINE(), pBestPlot->getY_INLINE(), MOVE_NO_ENEMY_TERRITORY, false, false, MISSIONAI_EXPLORE, pBestExplorePlot);
+		return true;
+	}
+
 	for (iI = 0; iI < GC.getMapINLINE().numPlotsINLINE(); iI++)
 	{
 		PROFILE("AI_explore 1");
