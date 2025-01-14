@@ -251,7 +251,7 @@ def setupGoals(iCiv, goals):
 
 
 def updateData():
-	data.dFirstContactConquerors = {iMaya: True, iAztecs: True, iInca: True}
+	data.dFirstContactConquerors = {iMaya: True, iToltecs: True, iAztecs: True, iInca: True}
 
 
 scenario1700AD = Scenario(

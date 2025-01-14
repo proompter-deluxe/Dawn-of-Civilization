@@ -174,7 +174,7 @@ def checkEarlyColonists():
 		
 @handler("BeginGameTurn")
 def checkLateColonists():
-	if year().between(1350, 1918):
+	if year().between(1350, 1918) and any(data.dFirstContactConquerors.values()):
 		for iCiv in lLateColonyCivs:
 			if player(iCiv).isExisting():
 				iPlayer = slot(iCiv)
