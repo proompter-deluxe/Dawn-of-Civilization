@@ -55,6 +55,10 @@ class CommercePercent(PercentRequirement):
 	DESC_KEY = "TXT_KEY_VICTORY_DESC_COMMERCE_PERCENT"
 	PROGR_KEY = "TXT_KEY_VICTORY_PROGR_COMMERCE_PERCENT"
 	
+	SUBJECT_DESC_KEYS = {
+		ALLIES: "TXT_KEY_VICTORY_DESC_CONTROL_DIRECTLY_OR_THROUGH_ALLIES",
+	}
+	
 	def value(self, iPlayer):
 		return max(0, player(iPlayer).calculateTotalCommerce())
 
@@ -127,6 +131,10 @@ class PowerPercent(PercentRequirement):
 	GOAL_DESC_KEY = "TXT_KEY_VICTORY_DESC_CONTROL"
 	DESC_KEY = "TXT_KEY_VICTORY_DESC_POWER_PERCENT"
 	PROGR_KEY = "TXT_KEY_VICTORY_PROGR_POWER_PERCENT"
+	
+	SUBJECT_DESC_KEYS = {
+		ALLIES: "TXT_KEY_VICTORY_DESC_CONTROL_DIRECTLY_OR_THROUGH_ALLIES",
+	}
 	
 	def value(self, iPlayer):
 		return player(iPlayer).getPower()
