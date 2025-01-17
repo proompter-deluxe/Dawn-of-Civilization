@@ -5006,6 +5006,17 @@ void CvUnitAI::AI_exploreSeaMove()
 		}
 	}
 
+	// Leoreth: more proactively explore coasts and oceans
+	if (AI_exploreCoasts())
+	{
+		return;
+	}
+
+	if (AI_exploreCircumnavigate())
+	{
+		return;
+	}
+
 	if (AI_exploreRange(4))
 	{
 		return;
@@ -11295,6 +11306,123 @@ bool CvUnitAI::AI_exploreRange(int iRange)
 		FAssert(!atPlot(pBestPlot));
 		getGroup()->pushMission(MISSION_MOVE_TO, pBestPlot->getX_INLINE(), pBestPlot->getY_INLINE(), MOVE_NO_ENEMY_TERRITORY, false, false, MISSIONAI_EXPLORE, pBestExplorePlot);
 		return true;
+	}
+
+	return false;
+}
+
+
+bool CvUnitAI::AI_exploreCoasts()
+{
+	CvPlot* pLoopPlot;
+	CvPlot* pBestPlot;
+	int iDX, iDY;
+	int iValue, iBestValue;
+	int iSearchRange;
+
+	if (!plot()->isAdjacentToLand())
+	{
+		return false;
+	}
+
+	iSearchRange = 4;
+	iBestValue = MAX_INT;
+	pBestPlot = NULL;
+
+	for (iDX = -(iSearchRange); iDX <= iSearchRange; iDX++)
+	{
+		for (iDY = -(iSearchRange); iDY <= iSearchRange; iDY++)
+		{
+			pLoopPlot = plotXY(getX_INLINE(), getY_INLINE(), iDX, iDY);
+
+			if (pLoopPlot != NULL && !atPlot(pLoopPlot) && !pLoopPlot->isRevealed(getTeam(), false) && generatePath(pLoopPlot, MOVE_NO_ENEMY_TERRITORY, false, &iValue))
+			{
+				if (iValue < iBestValue)
+				{
+					if (GET_PLAYER(getOwnerINLINE()).AI_plotTargetMissionAIs(pLoopPlot, MISSIONAI_EXPLORE, getGroup(), 3) == 0)
+					{
+						iBestValue = iValue;
+						pBestPlot = pLoopPlot;
+					}
+				}
+			}
+		}
+	}
+
+	if (pBestPlot != NULL)
+	{
+		getGroup()->pushMission(MISSION_MOVE_TO, pBestPlot->getX_INLINE(), pBestPlot->getY_INLINE(), MOVE_NO_ENEMY_TERRITORY, false, false, MISSIONAI_EXPLORE);
+		return true;
+	}
+
+	return false;
+}
+
+
+bool CvUnitAI::AI_exploreCircumnavigate()
+{
+	int iDX;
+	int iX, iY;
+	int iValue, iBestValue;
+	bool bAnyRevealed;
+	CvPlot* pLoopPlot;
+	CvPlot* pBestPlot;
+
+	if (!GC.getGameINLINE().circumnavigationAvailable())
+	{
+		return false;
+	}
+
+	if (m_pUnitInfo->getTerrainImpassable(TERRAIN_OCEAN))
+	{
+		return false;
+	}
+
+	for (iDX = 0; iDX < GC.getMapINLINE().getGridWidthINLINE(); iDX++)
+	{
+		iX = dxWrap(getX_INLINE() - iDX); // westward bias
+		bAnyRevealed = false;
+
+		for (iY = 0; iY < GC.getMapINLINE().getGridHeightINLINE(); iY++)
+		{
+			pLoopPlot = GC.getMap().plot(iX, iY);
+			if (pLoopPlot->isRevealed(getTeam(), false))
+			{
+				bAnyRevealed = true;
+				break;
+			}
+		}
+
+		if (!bAnyRevealed)
+		{
+			iBestValue = MAX_INT;
+			pBestPlot = NULL;
+
+			for (iY = 0; iY < GC.getMapINLINE().getGridHeightINLINE(); iY++)
+			{
+				pLoopPlot = GC.getMap().plot(iX, iY);
+
+				if (!atPlot(pLoopPlot) && !pLoopPlot->isRevealed(getTeam(), false) && generatePath(pLoopPlot, MOVE_NO_ENEMY_TERRITORY, false, &iValue))
+				{
+					if (iValue < iBestValue)
+					{
+						if (GET_PLAYER(getOwnerINLINE()).AI_plotTargetMissionAIs(pLoopPlot, MISSIONAI_EXPLORE, getGroup(), 3) == 0)
+						{
+							iBestValue = iValue;
+							pBestPlot = pLoopPlot;
+						}
+					}
+				}
+			}
+
+			if (pBestPlot != NULL)
+			{
+				getGroup()->pushMission(MISSION_MOVE_TO, pBestPlot->getX_INLINE(), pBestPlot->getY_INLINE(), MOVE_NO_ENEMY_TERRITORY, false, false, MISSIONAI_EXPLORE);
+				return true;
+			}
+
+			return false;
+		}
 	}
 
 	return false;
