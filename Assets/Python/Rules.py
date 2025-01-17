@@ -114,7 +114,8 @@ def updateFoundValues(city):
 @handler("cityBuilt")
 def createColonialDefenders(city):
 	iPlayer = city.getOwner()
-	if not player(iPlayer).isHuman():
+	# only grant extras in the colonial era
+	if not player(iPlayer).isHuman() and player(iPlayer).getCurrentEra() >= iRenaissance:
 		if civ(iPlayer) in dCivGroups[iCivGroupEurope] and city.getRegionID() not in lEurope:
 			createGarrisons(city, iPlayer, 1)
 			createRoleUnit(iPlayer, city, iWork, 1)

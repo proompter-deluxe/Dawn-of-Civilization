@@ -114,9 +114,9 @@ iNumCivGroups = 6
 (iCivGroupEurope, iCivGroupAsia, iCivGroupMiddleEast, iCivGroupMediterranean, iCivGroupAfrica, iCivGroupAmerica) = range(iNumCivGroups)
 
 dCivGroups = {
-iCivGroupEurope : [iGreece, iRome, iCelts, iByzantium, iFrance, iNorse, iSpain, iEngland, iHolyRome, iRus, iItaly, iPoland, iPortugal, iSweden, iRussia, iNetherlands, iGermany, iBulgaria, iMacedon, iArmenia],
+iCivGroupEurope : [iGreece, iRome, iCelts, iByzantium, iFrance, iNorse, iSpain, iEngland, iHolyRome, iRus, iItaly, iPoland, iPortugal, iSweden, iRussia, iNetherlands, iGermany, iBulgaria, iMacedon, iArmenia, iByzantium],
 iCivGroupAsia : [iIndia, iChina, iChinaS, iShu, iXia, iHarappa, iPolynesia, iPersia, iJapan, iDravidia, iKushans, iKorea, iKhmer, iMalays, iJava, iTibet, iBurma, iVietnam, iMongols, iTimurids, iThailand, iRussia, iTurks, iGhorids, iKhazars],
-iCivGroupMiddleEast : [iEgypt, iBabylonia, iAssyria, iHittites, iPersia, iKushans, iByzantium, iArabia, iMoors, iOttomans, iPhoenicia, iTurks, iIran, iMamluks, iParthia],
+iCivGroupMiddleEast : [iEgypt, iBabylonia, iAssyria, iHittites, iPersia, iKushans, iArabia, iMoors, iOttomans, iPhoenicia, iTurks, iIran, iMamluks, iParthia],
 iCivGroupMediterranean : [iEgypt, iGreece, iPhoenicia, iRome, iByzantium, iFrance, iArabia, iMoors, iSpain, iPortugal, iItaly, iOttomans, iMamluks, iMacedon, iMinoans],
 iCivGroupAfrica : [iEgypt, iNubia, iPhoenicia, iEthiopia, iMali, iNigeria, iMoors, iSwahili, iCongo, iMamluks, iZulu],
 iCivGroupAmerica : [iMaya, iToltecs, iInca, iAztecs, iAmerica, iArgentina, iMexico, iColombia, iBrazil, iCanada, iIroquois],

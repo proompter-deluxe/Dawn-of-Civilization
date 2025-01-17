@@ -695,7 +695,7 @@ dGoals = {
 	iKhazars: (
 		All(
 			AttitudeCount(AttitudeTypes.ATTITUDE_PLEASED, 1, civs=group(iCivGroupEurope).named(EUROPE)),
-			AttitudeCount(AttitudeTypes.ATTITUDE_PLEASED, 1, civs=civs(iChina, iChinaS).named(CHINA)),
+			AttitudeCount(AttitudeTypes.ATTITUDE_PLEASED, 1, civs=civs(iChina, iChinaS, iXia, iShu).named(CHINA)),
 			AttitudeCount(AttitudeTypes.ATTITUDE_PLEASED, 1, civs=group(iCivGroupMiddleEast).named(MIDDLE_EAST)),
 			at=970,
 		),
