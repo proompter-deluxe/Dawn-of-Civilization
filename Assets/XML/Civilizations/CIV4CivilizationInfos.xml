@@ -3800,7 +3800,7 @@
 			</Buildings>
 			<Units>
 				<Unit>
-					<UnitClassType>UNITCLASS_HORSEMAN</UnitClassType>
+					<UnitClassType>UNITCLASS_LANCER</UnitClassType>
 					<UnitType>UNIT_KHAZAR_NOBLE_LANCER</UnitType>
 				</Unit>
 				<Unit>
