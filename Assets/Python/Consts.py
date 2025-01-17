@@ -1073,7 +1073,7 @@ iTranshumanism) = range(iNumTechs)
 
 # initialise unit variables to unit indices from XML
 
-iNumUnits = 247
+iNumUnits = 248
 (iLion, iBear, iPanther, iWolf, iSettler, iCityBuilder, iPioneer, iWorker, iRomanWorker, iPunjabiWorker, iLabourer, 
 iMadeireiro, iScout, iExplorer, iBandeirante, iSpy, iReligiousPersecutor, iJewishMissionary, iOrthodoxMissionary, iCatholicMissionary, iProtestantMissionary, 
 iIslamicMissionary, iShiaMissionary, iHinduMissionary, iBuddhistMissionary, iConfucianMissionary, iTaoistMissionary, iZoroastrianMissionary, iWarrior, iNativeWarrior, iMilitia, iXiaLevy, iAxeman, 
@@ -1085,7 +1085,7 @@ iMehalSefari, iGrenadier, iRocketeer, iGrenzer, iAlbionLegion, iAntiTank, iInfan
 iNavySeal, iParatrooper, iMechanizedInfantry, iArcher, iNanmanArcher, iAsharittuBowman, iMedjay, iNativeArcher, iSkirmisher, iVishap, iHolkan, iAtlatl, 
 iKelebolo, iLongbowman, iPatiyodha, iRattanArcher, iCrossbowman, iNaffatun, iChokonu, iBalestriere, iChariot, iWarChariot, iHuluganni, 
 iCidainh, iHorseman, iHausaCavalry, iCompanion, iNumidianCavalry, iAsvaka, iCamelRider, iHorseArcher, iKonnik, iMangudai, iKhampa, iOghuz, 
-iCamelArcher, iLancer, iMamlukCavalry, iVaru, iSavaran, iFarari, iMobileGuard, iKeshik, iCataphract, iChangSuek, iPistolier, 
+iCamelArcher, iLancer, iKhazarNobleLancer, iMamlukCavalry, iVaru, iSavaran, iFarari, iMobileGuard, iKeshik, iCataphract, iChangSuek, iPistolier, 
 iHakkapeliitta, iMountedBrave, iCamelGunner, iZamburak, iCuirassier, iGendarme, iConquistador, iWingedHussar, iSowar, iHussar, iCossack, 
 iLlanero, iDragoon, iCassay, iGrenadierCavalry, iCavalry, iRural, iWarElephant, iBallistaElephant, iTank, iPanzer, 
 iMainBattleTank, iGunship, iCatapult, iSiegeRam, iBallista, iTrebuchet, iBombard, iSiegeEngineer, iHwacha, iLantaka, iSiegeElephant, 

@@ -10712,6 +10712,9 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqTech>TECH_MACHINERY</PrereqTech>
+			<TechTypes>
+				<PrereqTech>TECH_GUILDS</PrereqTech>
+			</TechTypes>
 			<BonusType>BONUS_IRON</BonusType>
 			<iCost>50</iCost>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
@@ -10751,10 +10754,6 @@
 			<iXPValueAttack>4</iXPValueAttack>
 			<iXPValueDefense>2</iXPValueDefense>
 			<UnitCombatMods>
-				<UnitCombatMod>
-					<UnitCombatType>UNITCOMBAT_MELEE</UnitCombatType>
-					<iUnitCombatMod>25</iUnitCombatMod>
-				</UnitCombatMod>
 				<UnitCombatMod>
 					<UnitCombatType>UNITCOMBAT_LIGHT_CAVALRY</UnitCombatType>
 					<iUnitCombatMod>25</iUnitCombatMod>
@@ -11031,6 +11030,9 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqTech>TECH_MACHINERY</PrereqTech>
+			<TechTypes>
+				<PrereqTech>TECH_GUILDS</PrereqTech>
+			</TechTypes>
 			<BonusType>BONUS_IRON</BonusType>
 			<iCost>50</iCost>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
@@ -13078,6 +13080,120 @@
 		</UnitInfo>
 		<UnitInfo>
 			<Class>UNITCLASS_LANCER</Class>
+			<Type>UNIT_KHAZAR_NOBLE_LANCER</Type>
+			<Combat>UNITCOMBAT_HEAVY_CAVALRY</Combat>
+			<Domain>DOMAIN_LAND</Domain> 
+			<DefaultUnitAI>UNITAI_ATTACK</DefaultUnitAI>
+			<Description>UNIT_KHAZAR_NOBLE_LANCER</Description>
+			<Civilopedia>UNIT_KHAZAR_NOBLE_LANCER_PEDIA</Civilopedia>
+			<Strategy>UNIT_KHAZAR_NOBLE_LANCER_STRATEGY</Strategy>
+			<Advisor>ADVISOR_MILITARY</Advisor>
+			<bMilitaryHappiness>1</bMilitaryHappiness>
+			<bMilitarySupport>1</bMilitarySupport>
+			<bMilitaryProduction>1</bMilitaryProduction>
+			<bPillage>1</bPillage>
+			<bFirstStrikeImmune>1</bFirstStrikeImmune>
+			<bNoDefensiveBonus>1</bNoDefensiveBonus>
+			<UnitClassUpgrades>
+				<UnitClassUpgrade>
+					<UnitClassUpgradeType>UNITCLASS_CUIRASSIER</UnitClassUpgradeType>
+					<bUnitClassUpgrade>1</bUnitClassUpgrade>
+				</UnitClassUpgrade>
+			</UnitClassUpgrades>
+			<FlankingStrikes>
+				<FlankingStrike>
+					<FlankingStrikeUnitClass>UNITCLASS_CATAPULT</FlankingStrikeUnitClass>
+					<iFlankingStrength>100</iFlankingStrength>
+				</FlankingStrike>
+				<FlankingStrike>
+					<FlankingStrikeUnitClass>UNITCLASS_TREBUCHET</FlankingStrikeUnitClass>
+					<iFlankingStrength>100</iFlankingStrength>
+				</FlankingStrike>
+			</FlankingStrikes>
+			<UnitAIs>
+				<UnitAI>
+					<UnitAIType>UNITAI_ATTACK</UnitAIType>
+					<bUnitAI>1</bUnitAI>
+				</UnitAI>
+				<UnitAI>
+					<UnitAIType>UNITAI_COUNTER</UnitAIType>
+					<bUnitAI>1</bUnitAI>
+				</UnitAI>
+				<UnitAI>
+					<UnitAIType>UNITAI_PILLAGE</UnitAIType>
+					<bUnitAI>1</bUnitAI>
+				</UnitAI>
+			</UnitAIs>
+			<PrereqTech>TECH_NOBILITY</PrereqTech>
+			<BonusType>BONUS_HORSE</BonusType>
+			<PrereqBonuses>
+				<BonusType>BONUS_IRON</BonusType>
+				<BonusType>BONUS_COPPER</BonusType>
+			</PrereqBonuses>
+			<iCost>90</iCost>
+			<iAdvancedStartCost>100</iAdvancedStartCost>
+			<iMinAreaSize>-1</iMinAreaSize>
+			<iMoves>2</iMoves>
+			<iNukeRange>-1</iNukeRange>
+			<TerrainImpassables>
+				<TerrainImpassable>
+					<TerrainType>TERRAIN_DESERT</TerrainType>
+					<bTerrainImpassable>1</bTerrainImpassable>
+				</TerrainImpassable>
+				<TerrainImpassable>
+					<TerrainType>TERRAIN_TUNDRA</TerrainType>
+					<bTerrainImpassable>1</bTerrainImpassable>
+				</TerrainImpassable>
+				<TerrainImpassable>
+					<TerrainType>TERRAIN_SNOW</TerrainType>
+					<bTerrainImpassable>1</bTerrainImpassable>
+				</TerrainImpassable>
+			</TerrainImpassables>
+			<FeatureImpassables>
+				<FeatureImpassable>
+					<FeatureType>FEATURE_JUNGLE</FeatureType>
+					<bFeatureImpassable>1</bFeatureImpassable>
+				</FeatureImpassable>
+				<FeatureImpassable>
+					<FeatureType>FEATURE_RAINFOREST</FeatureType>
+					<bFeatureImpassable>1</bFeatureImpassable>
+				</FeatureImpassable>
+				<FeatureImpassable>
+					<FeatureType>FEATURE_MARSH</FeatureType>
+					<bFeatureImpassable>1</bFeatureImpassable>
+				</FeatureImpassable>
+			</FeatureImpassables>
+			<iCombat>9</iCombat>
+			<iCombatLimit>100</iCombatLimit>
+			<iXPValueAttack>4</iXPValueAttack>
+			<iXPValueDefense>2</iXPValueDefense>
+			<iCollateralDamageLimit>100</iCollateralDamageLimit>
+			<iCollateralDamageMaxUnits>4</iCollateralDamageMaxUnits>
+			<iCultureGarrison>6</iCultureGarrison>
+			<iAsset>3</iAsset>
+			<iPower>9</iPower>
+			<iWithdrawalProb>20</iWithdrawalProb>
+			<FreePromotions>
+				<FreePromotion>
+					<PromotionType>PROMOTION_STEPPE_ADAPTATION</PromotionType>
+					<bFreePromotion>1</bFreePromotion>
+				</FreePromotion>
+			</FreePromotions>
+			<UnitMeshGroups>
+				<iGroupSize>3</iGroupSize>
+				<fMaxSpeed>1.75</fMaxSpeed>
+				<fPadTime>1</fPadTime>
+				<iMeleeWaveSize>3</iMeleeWaveSize>
+				<iRangedWaveSize>3</iRangedWaveSize>
+				<UnitMeshGroup>
+					<iRequired>3</iRequired>
+					<EarlyArtDefineTag>ART_DEF_UNIT_KHAZAR_NOBLE_LANCER</EarlyArtDefineTag>
+				</UnitMeshGroup>
+			</UnitMeshGroups>
+			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
+		</UnitInfo>
+		<UnitInfo>
+			<Class>UNITCLASS_LANCER</Class>
 			<Type>UNIT_MAMLUK_CAVALRY</Type>
 			<Combat>UNITCOMBAT_LIGHT_CAVALRY</Combat>
 			<Domain>DOMAIN_LAND</Domain>
@@ -13381,7 +13497,7 @@
 			<iCollateralDamageMaxUnits>4</iCollateralDamageMaxUnits>
 			<iCultureGarrison>6</iCultureGarrison>
 			<iAsset>3</iAsset>
-			<iPower>8</iPower>
+			<iPower>9</iPower>
 			<UnitMeshGroups>
 				<iGroupSize>3</iGroupSize>
 				<fMaxSpeed>1.75</fMaxSpeed>

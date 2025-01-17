@@ -3688,6 +3688,14 @@
 		<Portuguese>Konnik</Portuguese>
 	</TEXT>
 	<TEXT>
+		<Tag>UNIT_KHAZAR_NOBLE_LANCER</Tag>
+		<English>Tarkhan</English>
+		<French>Tarkhan</French>
+		<German>Tarkhan</German>
+		<Italian>Tarkhan</Italian>
+		<Spanish>Tarkhan</Spanish>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_UNIT_MAMLUK_CAVALRY</Tag>
 		<English>Ghulam Cavalry</English>
 		<French>

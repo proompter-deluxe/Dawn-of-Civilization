@@ -3800,8 +3800,8 @@
 			</Buildings>
 			<Units>
 				<Unit>
-					<UnitClassType>UNITCLASS_HORSE_ARCHER</UnitClassType>
-					<UnitType>UNIT_TURKIC_OGHUZ</UnitType>
+					<UnitClassType>UNITCLASS_HORSEMAN</UnitClassType>
+					<UnitType>UNIT_KHAZAR_NOBLE_LANCER</UnitType>
 				</Unit>
 				<Unit>
 					<UnitClassType>UNITCLASS_HUSSAR</UnitClassType>

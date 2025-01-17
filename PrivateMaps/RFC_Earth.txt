@@ -38912,6 +38912,7 @@ BeginPlot
 	x=86,y=58
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
+	BonusType=BONUS_COPPER
 	PlotType=1
 EndPlot
 BeginPlot
@@ -39868,6 +39869,7 @@ BeginPlot
 	x=88,y=62
 	isNOfRiver
 	RiverWEDirection=1
+	BonusType=BONUS_SHEEP
 	TerrainType=TERRAIN_STEPPE
 	PlotType=2
 EndPlot
@@ -40331,7 +40333,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=89,y=62
-	BonusType=BONUS_HORSE
 	TerrainType=TERRAIN_PLAINS
 	PlotType=2
 EndPlot
@@ -40795,6 +40796,7 @@ BeginPlot
 	x=90,y=61
 	isNOfRiver
 	RiverWEDirection=1
+	BonusType=BONUS_HORSE
 	TerrainType=TERRAIN_STEPPE
 	PlotType=2
 EndPlot

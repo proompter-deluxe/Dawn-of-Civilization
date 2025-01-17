@@ -446,6 +446,7 @@ lCivilizations = [
 		iKhazars,
 		iGold=100,
 		iStateReligion=iJudaism,
+		iAdvancedStartPoints=25,
 		lCivics=[iElective, iSlavery, iMerchantTrade],
 		techs=techs.column(5).including(iNobility, iSteel).without(iEngineering, iAesthetics, iLaw, iPhilosophy, iShipbuilding, iNavigation)
 	),
@@ -976,11 +977,12 @@ dStartingUnits = CivDict({
 		iMissionary: 1,
 	},
 	iKhazars: {
-		iSettle: 2,
+		iSettle: 3,
 		iWork: 2,
-		iDefend: 4,
-		iCounter: 2,
-		iHarass: 6,
+		iDefend: 3,
+		iCounter: 1,
+		iHarass: 2,
+		iShock: 4,
 		iMissionary: 2,
 	},
 	iMoors: {
@@ -1054,7 +1056,7 @@ dStartingUnits = CivDict({
 		iSettle: 3,
 		iWork: 2,
 		iDefend: 3,
-		iAttack: 2,
+		iAttack: 3,
 		iCounter: 1,
 	},
 	iSwahili: {
@@ -1511,7 +1513,7 @@ dAdditionalUnits = CivDict({
 		iHarass: 2,
 	},
 	iKhazars: {
-		iHarass: 2,
+		iShock: 2,
 	},
 	iBulgaria: {
 		iDefend: 2,
@@ -1701,7 +1703,7 @@ def createSpecificUnits(iPlayer, tile):
 	elif iCiv == iTimurids:
 		makeUnits(iPlayer, iKeshik, tile, 12)
 	elif iCiv == iRus:
-		makeUnits(iPlayer, iHuscarl, tile, 2)
+		makeUnits(iPlayer, iHuscarl, tile, 3)
 
 dSpecificAdditionalUnits = CivDict({
 	iEthiopia: {
