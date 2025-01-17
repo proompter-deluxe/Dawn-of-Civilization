@@ -369,11 +369,11 @@ def createResourcesBeforeBirth(iCiv):
 		createResource(x, y, iResource)
 
 
-@handler("playerDestroyed")
-def removeResourcesOnCollapse(iPlayer):
-	iCiv = civ(iPlayer)
-	for (x, y), iResource in dSpawnResources[iCiv]:
-		removeResource(x, y)
+#@handler("playerDestroyed")
+#def removeResourcesOnCollapse(iPlayer):
+#	iCiv = civ(iPlayer)
+#	for (x, y), iResource in dSpawnResources[iCiv]:
+#		removeResource(x, y)
 
 
 @handler("birth")

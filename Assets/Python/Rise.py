@@ -823,10 +823,9 @@ class Birth(object):
 				return False
 		
 		# Timurid spawn can be avoided if player is Mongols and Stable, 
-		# or Turks and Mongols are not current or previous owners of the Timurid birth zone
-		#
+		# or Mongols are not current or previous owners of the Timurid birth zone
 		if self.iCiv == iTimurids:
-			if player(iMongols).isHuman() and stability(iMongols) == iStabilitySolid:
+			if player(iMongols).isHuman() and stability(iMongols) >= iStabilityStable:
 				return False
 			elif cities.regions(rKhorasan, rTransoxiana, rHinduKush).none(lambda city: iMongols in [city.getCivilizationType(), city.getPreviousCiv()]):
 				return False

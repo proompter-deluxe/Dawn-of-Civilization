@@ -73,4 +73,20 @@
 			<Plural>0</Plural>
 		</Spanish>
 	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_ARMENIA_GEORGIA</Tag>
+		<English>Georgia</English>
+		<French>Georgia</French>
+		<German>Georgia</German>
+		<Italian>Georgia</Italian>
+		<Spanish>Georgia</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_ARMENIA_GEORGIAN</Tag>
+		<English>Georgian</English>
+		<French>Georgian</French>
+		<German>Georgian</German>
+		<Italian>Georgian</Italian>
+		<Spanish>Georgian</Spanish>
+	</TEXT>
 </Civ4GameText>

@@ -415,7 +415,7 @@ lCivilizations = [
 		techs=techs.column(5).including(iNobility, iSteel, iArchitecture, iArtisanry)
 	),
 	Civilization(
-		iNorse,
+		iNorse, 
 		iGold=150,
 		lCivics=[iElective, iSlavery, iMerchantTrade, iThalassocracy],
 		techs=techs.column(6).without(iScholarship, iEthics)
@@ -424,7 +424,7 @@ lCivilizations = [
 		iTurks,
 		iGold=100,
 		lCivics=[iDespotism, iSlavery, iMerchantTrade, iHegemony],
-		techs=techs.column(5).including(iNobility, iSteel).without(iNavigation, iMedicine, iPhilosophy)
+		techs=techs.column(5).including(iNobility, iSteel).without(iEngineering, iPhilosophy, iShipbuilding, iNavigation)
 	),
 	Civilization(
 		iArabia,
@@ -448,7 +448,7 @@ lCivilizations = [
 		iStateReligion=iJudaism,
 		iAdvancedStartPoints=25,
 		lCivics=[iElective, iSlavery, iMerchantTrade],
-		techs=techs.column(5).including(iNobility, iSteel).without(iEngineering, iAesthetics, iLaw, iPhilosophy, iShipbuilding, iNavigation)
+		techs=techs.column(5).including(iNobility, iSteel).without(iEngineering, iPhilosophy, iNavigation)
 	),
 	Civilization(
 		iBulgaria,
@@ -456,7 +456,7 @@ lCivilizations = [
 		iAdvancedStartPoints=25,
 		lEnemies=[iByzantium],
 		lCivics=[iDespotism, iSlavery, iMerchantTrade, iHegemony],
-		techs=techs.column(5).including(iNobility, iSteel).without(iWriting, iLiterature, iPriesthood, iEngineering, iAesthetics, iLaw, iPhilosophy, iShipbuilding, iNavigation)
+		techs=techs.column(5).including(iNobility, iSteel).without(iWriting, iLiterature, iPriesthood, iEngineering, iAesthetics, iLaw, iPhilosophy, iNavigation)
 	),
 	Civilization(
 		iJava,

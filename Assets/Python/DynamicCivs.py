@@ -1075,6 +1075,12 @@ def specificName(iPlayer):
 		else:
 			return "TXT_KEY_CIV_ZULU_ZIMBABWE"
 
+	elif iCiv == iArmenia:
+		if bResurrected and iEra == iMedieval:
+			return "TXT_KEY_CIV_ARMENIA_GEORGIA"
+		else:
+			return "TXT_KEY_CIV_ARMENIA_SHORT_DESC"
+
 	elif iCiv == iAssyria:
 		if bResurrected: # and (iReligion == iOrthodoxy or iReligion == iCatholicism):
 			return capitalName(iPlayer)
@@ -1437,6 +1443,12 @@ def specificAdjective(iPlayer):
 				return "TXT_KEY_CIV_ZULU_ADJECTIVE"
 		else:
 			return "TXT_KEY_CIV_ZULU_SHONA"
+
+	elif iCiv == iArmenia:
+		if bResurrected and iEra == iMedieval:
+			return "TXT_KEY_CIV_ARMENIA_GEORGIAN"
+		else:
+			return "TXT_KEY_CIV_ARMENIA_ADJECTIVE"
 
 	elif iCiv == iVietnam:
 		if year() >= year(dBirth[iChinaS]):
@@ -2733,4 +2745,11 @@ def leaderName(iPlayer):
 			else:
 				return "TXT_KEY_LEADER_MUTOTA"
 		
+	elif iCiv == iArmenia:
+		if iLeader == iAshot:
+			if bResurrected and iEra == iMedieval:
+				return "TXT_KEY_LEADER_DAVID_IV"
+			else:
+				return "TXT_KEY_LEADER_ASHOT"
+
 	return None
