@@ -7890,10 +7890,16 @@ bool CvUnitAI::AI_guardCity(bool bLeave, bool bSearch, int iMaxPath)
 			{
 				//This unit is not suited for defense, skip the mission
 				//to protect this city but encourage others to defend instead.
-				getGroup()->pushMission(MISSION_SKIP);
+				// Leoreth: skipping the entire group is too drastic - if this is UNITAI_ATTACK_CITY we curb our ability to ever move out
+				/*getGroup()->pushMission(MISSION_SKIP);
 				if (!isHurt())
 				{
 					finishMoves();
+				}*/
+
+				if (pPlot->plotCount(PUF_isCityAIType, -1, -1, getOwnerINLINE()) == 0)
+				{
+					return AI_guardCityBestDefender();
 				}
 			}
 			return true;
