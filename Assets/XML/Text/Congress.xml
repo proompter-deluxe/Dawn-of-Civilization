@@ -178,7 +178,7 @@
 		<Spanish>The congress has decided to hand over our city of %s2 to %s1. Shall we comply with their demand? Refusal may lead to war against the supporters of this decision. The following civilizations voted against us:[NEWLINE]%s3</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CONGRESS_DEMAND_TERRITORY</Tag>
+		<Tag>TXT_KEY_CONGRESS_DEMAND_PLOT</Tag>
 		<English>The congress has decided to allow %s1 to colonize our territory near %s2. Shall we comply with their demand? Refusal may lead to war against the supporters of this decision. The following civilizations voted against us:[NEWLINE]%s3</English>
 		<French>Le congr&#232;s a d&#233;cider de permettre &#224; [NUM1:le:la] %s1 de coloniser notre territoire &#224; proximit&#233; de %s2. Devons-nous accepter ? Un refus pourra causer une guerre contre les partisans de cette d&#233;cision. Les civilisations suivantes ont vot&#233; contre nous :[NEWLINE]%s3</French>
 		<German>Der Kongress hat entschieden, %s1 die Erlaubnis zu gew&#228;hren, unser Territorium nahe %s2 zu kolonisieren. Sollen wir dieser Forderung nachkommen? Eine Weigerung kann zum Krieg geegn die Unterst&#252;tzer dieser Entscheidung f&#252;hren. Die folgenden Zivilisationen stimmten gegen uns:[NEWLINE]%s3</German>
