@@ -249,10 +249,12 @@ def conquistadors(iTeamX, iHasMetTeamY):
 						iModifier1 = 0
 						iModifier2 = 0
 						
-						if player(iNewWorldPlayer).isHuman() and player(iNewWorldPlayer).getNumCities() > 6:
+						iTargetCities = player(iNewWorldPlayer).getNumCities()
+						
+						if player(iNewWorldPlayer).isHuman() and iTargetCities > 6:
 							iModifier1 = 1
 						else:
-							if iNewWorldCiv == iInca or player(iNewWorldPlayer).getNumCities() > 4:
+							if iNewWorldCiv == iInca or iTargetCities > 4:
 								iModifier1 = 1
 							if not player(iNewWorldPlayer).isHuman():
 								iModifier2 = 1
@@ -267,10 +269,10 @@ def conquistadors(iTeamX, iHasMetTeamY):
 							player(iOldWorldPlayer).AI_changeMemoryCount(iNewWorldPlayer, MemoryTypes.MEMORY_STOPPED_TRADING_RECENT, turns(10))
 						
 						dConquerorUnits = {
-							iAttack: 2 + iModifier2,
-							iCounter: 2,
-							iSiege: 2 + iModifier1 + iModifier2,
-							iShockCity: 3 + iModifier1,
+							iCityAttack: 3 + iModifier2,
+							iDefend: max(1, iTargetCities-2),
+							iCitySiege: 2 + iModifier1 + iModifier2,
+							iShockCity: 1 + iModifier1,
 						}
 						units = createRoleUnits(iOldWorldPlayer, arrivalPlot, dConquerorUnits.items())
 						units.promotion(infos.type("PROMOTION_MERCENARY"))
