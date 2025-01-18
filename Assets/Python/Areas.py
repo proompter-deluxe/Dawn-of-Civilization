@@ -37,7 +37,7 @@ iArabia :		(87, 39), # Mecca
 iTibet :		(113, 48), # Lhasa
 iMoors :		(57, 49), # Cordoba
 iJava :			(126, 25), # Trowulan
-iSpain :		(57, 51), # Madrid
+iSpain :		(57, 52), # Madrid
 iFrance :		(61, 60), # Paris
 iEngland :		(58, 64), # London
 iHolyRome :		(65, 62), # Cologne
