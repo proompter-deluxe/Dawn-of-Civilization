@@ -6193,11 +6193,6 @@ bool CvUnit::canJoin(const CvPlot* pPlot, SpecialistTypes eSpecialist) const
 	//Leoreth: no slavery in the motherland or with egalitarianism
 	if (GC.getUnitInfo(getUnitType()).isSlave())
 	{
-		if (!GET_PLAYER(getOwnerINLINE()).canUseSlaves())
-		{
-			return false;
-		}
-
 		if (!pCity->canSlaveJoin())
 		{
 			return false;

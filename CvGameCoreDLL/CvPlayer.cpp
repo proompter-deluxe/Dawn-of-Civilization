@@ -24420,43 +24420,16 @@ DenialTypes CvPlayer::AI_slaveTrade(PlayerTypes ePlayer) const
 		return NO_DENIAL;
 	}
 
-	bool bColonialism = GET_PLAYER(ePlayer).getCivics(CIVICOPTION_TERRITORY) == CIVIC_COLONIALISM;
-	bool bNewWorld = false;
-
-	CvCity* pCapital = GET_PLAYER(ePlayer).getCapitalCity();
-	if (pCapital != NULL)
-	{
-		switch (pCapital->getRegionGroup())
-		{
-		case REGION_GROUP_NORTH_AMERICA:
-		case REGION_GROUP_SOUTH_AMERICA:
-			bNewWorld = true;
-			break;
-		default:
-			bNewWorld = false;
-		}
-	}
-
-	// don't buy when not running Colonialism
-	if (!bColonialism && !bNewWorld)
+	if (!GET_PLAYER(ePlayer).canBuySlaves())
 	{
 		return DENIAL_NO_GAIN;
 	}
 
-	/*if (getCivics((CivicOptionTypes)2) != CIVIC_SLAVERY)
+	// AI needs to be able to use slaves
+	if (!GET_PLAYER(ePlayer).isHuman() && !GET_PLAYER(ePlayer).canUseSlaves())
 	{
-		return DENIAL_UNKNOWN;
-	}*/
-	
-	/*if ((GC.getUnitInfo(pUnit->getUnitType()).getStateReligion() != GET_PLAYER(ePlayer).getStateReligion()) && (GC.getUnitInfo(pUnit->getUnitType()).getOrStateReligion() != GET_PLAYER(ePlayer).getStateReligion()))
-	{
-		return DENIAL_UNKNOWN;
+		return DENIAL_NO_GAIN;
 	}
-
-	if ((GC.getUnitInfo(pUnit->getUnitType()).getStateReligion() == getStateReligion()) || (GC.getUnitInfo(pUnit->getUnitType()).getOrStateReligion() == getStateReligion()))
-	{
-		return DENIAL_UNKNOWN;
-	}*/
 
 	if (GET_TEAM(getTeam()).AI_getWorstEnemy() == GET_PLAYER(ePlayer).getTeam())
 	{
@@ -25218,6 +25191,8 @@ void CvPlayer::resetGreatPeopleCreated()
 bool CvPlayer::canUseSlaves() const
 {
 	if (isSlavery()) return true;
+
+	if (isColonialSlavery()) return true;
 
 	if (isNoSlavery()) return false;
 

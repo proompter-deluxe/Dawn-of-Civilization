@@ -11874,6 +11874,11 @@ bool CvPlot::canUseSlave(PlayerTypes ePlayer) const
 		return false;
 	}
 
+	if (!GET_PLAYER(ePlayer).canUseSlaves())
+	{
+		return false;
+	}
+
 	switch (getRegionGroup())
 	{
 	case REGION_GROUP_NORTH_AMERICA:
