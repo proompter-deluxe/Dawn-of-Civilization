@@ -3067,82 +3067,83 @@ int CvPlayerAI::AI_getPlotDanger(CvPlot* pPlot, int iRange, bool bTestMoves) con
 	}
 	else
 	{
-	CLLNode<IDInfo>* pUnitNode;
-	CvUnit* pLoopUnit;
-	CvPlot* pLoopPlot;
-	int iCount;
-	int iDistance;
-	int iBorderDanger;
-	int iDX, iDY;
-	CvArea *pPlotArea = pPlot->area();
+		CLLNode<IDInfo>* pUnitNode;
+		CvUnit* pLoopUnit;
+		CvPlot* pLoopPlot;
+		int iCount;
+		int iDistance;
+		int iBorderDanger;
+		int iDX, iDY;
+		CvArea *pPlotArea = pPlot->area();
 
-	iCount = 0;
-	iBorderDanger = 0;
+		iCount = 0;
+		iBorderDanger = 0;
 
-		/*if (iRange == -1)
-	{
-		iRange = DANGER_RANGE;
-		}*/
-
-	for (iDX = -(iRange); iDX <= iRange; iDX++)
-	{
-		for (iDY = -(iRange); iDY <= iRange; iDY++)
+			/*if (iRange == -1)
 		{
-			pLoopPlot	= plotXY(pPlot->getX_INLINE(), pPlot->getY_INLINE(), iDX, iDY);
+			iRange = DANGER_RANGE;
+			}*/
 
-			if (pLoopPlot != NULL)
+		for (iDX = -(iRange); iDX <= iRange; iDX++)
+		{
+			for (iDY = -(iRange); iDY <= iRange; iDY++)
 			{
-				if (pLoopPlot->area() == pPlotArea)
+				pLoopPlot	= plotXY(pPlot->getX_INLINE(), pPlot->getY_INLINE(), iDX, iDY);
+
+				if (pLoopPlot != NULL)
 				{
-				    iDistance = stepDistance(pPlot->getX_INLINE(), pPlot->getY_INLINE(), pLoopPlot->getX_INLINE(), pLoopPlot->getY_INLINE());
-				    if (atWar(pLoopPlot->getTeam(), getTeam()))
-				    {
-				        if (iDistance == 1)
-				        {
-				            iBorderDanger++;
-				        }
-				        else if ((iDistance == 2) && (pLoopPlot->isRoute()))
-				        {
-				            iBorderDanger++;
-				        }
-				    }
-					else
+					if (pLoopPlot->area() == pPlotArea)
 					{
-						if (pPlot->isCity() && pLoopPlot->isCity())
+						iDistance = stepDistance(pPlot->getX_INLINE(), pPlot->getY_INLINE(), pLoopPlot->getX_INLINE(), pLoopPlot->getY_INLINE());
+						if (atWar(pLoopPlot->getTeam(), getTeam()))
 						{
-							continue;
-						}
-					}
-
-
-					pUnitNode = pLoopPlot->headUnitNode();
-
-					while (pUnitNode != NULL)
-					{
-						pLoopUnit = ::getUnit(pUnitNode->m_data);
-						pUnitNode = pLoopPlot->nextUnitNode(pUnitNode);
-
-						if (pLoopUnit->isEnemy(getTeam()))
-						{
-							if (pLoopUnit->canAttack())
+							if (iDistance == 1)
 							{
-								if (!(pLoopUnit->isInvisible(getTeam(), false)))
+								iBorderDanger++;
+							}
+							else if ((iDistance == 2) && (pLoopPlot->isRoute()))
+							{
+								iBorderDanger++;
+							}
+						}
+						else
+						{
+							if (pPlot->isCity() && pLoopPlot->isCity())
+							{
+								continue;
+							}
+						}
+
+
+						pUnitNode = pLoopPlot->headUnitNode();
+
+						while (pUnitNode != NULL)
+						{
+							pLoopUnit = ::getUnit(pUnitNode->m_data);
+							pUnitNode = pLoopPlot->nextUnitNode(pUnitNode);
+
+							if (pLoopUnit->isEnemy(getTeam()))
+							{
+								if (pLoopUnit->canAttack())
 								{
-								    if (pLoopUnit->canMoveOrAttackInto(pPlot))
-								    {
-											//if (!bTestMoves)
-											//{
-												//iCount++;
-											//}
-											//else
-											//{
-                                            int iDangerRange = pLoopUnit->baseMoves();
-                                            iDangerRange += ((pLoopPlot->isValidRoute(pLoopUnit)) ? 1 : 0);
-                                            if (iDangerRange >= iDistance)
-											{
-												iCount++;
-											}
-											//}
+									if (!(pLoopUnit->isInvisible(getTeam(), false)))
+									{
+										if (pLoopUnit->canMoveOrAttackInto(pPlot))
+										{
+												//if (!bTestMoves)
+												//{
+													//iCount++;
+												//}
+												//else
+												//{
+												int iDangerRange = pLoopUnit->baseMoves();
+												iDangerRange += ((pLoopPlot->isValidRoute(pLoopUnit)) ? 1 : 0);
+												if (iDangerRange >= iDistance)
+												{
+													iCount++;
+												}
+												//}
+										}
 									}
 								}
 							}
@@ -3151,15 +3152,20 @@ int CvPlayerAI::AI_getPlotDanger(CvPlot* pPlot, int iRange, bool bTestMoves) con
 				}
 			}
 		}
-	}
 
-	if (iBorderDanger > 0)
-	{
-	    if (!isHuman() && !pPlot->isCity())
-	    {
-            iCount += iBorderDanger;
-	    }
-	}
+		if (iBorderDanger > 0)
+		{
+			if (!isHuman() && !pPlot->isCity())
+			{
+				iCount += iBorderDanger;
+			}
+		}
+
+		// Leoreth: if plot is a city, reflect that its danger is reduced by the need to defend the city
+		if (pPlot->isCity())
+		{
+			iCount = std::max(0, iCount - pPlot->getPlotCity()->AI_minDefenders());
+		}
 
 		pPlot->setPlayerDangerCache(getID(), iRange, std::min(iCount, MAX_SHORT));
 
