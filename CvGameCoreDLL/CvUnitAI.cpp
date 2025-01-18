@@ -11323,6 +11323,7 @@ bool CvUnitAI::AI_exploreCoasts()
 	CvPlot* pLoopPlot;
 	CvPlot* pBestPlot;
 	int iDX, iDY;
+	int iPathLength;
 	int iValue, iBestValue;
 	int iSearchRange;
 
@@ -11341,8 +11342,11 @@ bool CvUnitAI::AI_exploreCoasts()
 		{
 			pLoopPlot = plotXY(getX_INLINE(), getY_INLINE(), iDX, iDY);
 
-			if (pLoopPlot != NULL && !atPlot(pLoopPlot) && !pLoopPlot->isRevealed(getTeam(), false) && generatePath(pLoopPlot, MOVE_NO_ENEMY_TERRITORY, false, &iValue))
+			if (pLoopPlot != NULL && !atPlot(pLoopPlot) && !pLoopPlot->isRevealed(getTeam(), false) && generatePath(pLoopPlot, MOVE_NO_ENEMY_TERRITORY, false, &iPathLength))
 			{
+				//iValue = 10 * iPathLength + ((iDX > 0) - (iDX < 0) + AI_getBirthmark() % 3) + ((iDY > 0) - (iDY < 0) + AI_getBirthmark() % 3);
+				iValue = iPathLength;
+
 				if (iValue < iBestValue)
 				{
 					if (GET_PLAYER(getOwnerINLINE()).AI_plotTargetMissionAIs(pLoopPlot, MISSIONAI_EXPLORE, getGroup(), 3) == 0)
@@ -11367,8 +11371,9 @@ bool CvUnitAI::AI_exploreCoasts()
 
 bool CvUnitAI::AI_exploreCircumnavigate()
 {
-	int iDX;
+	int iDX, iDY;
 	int iX, iY;
+	int iPathLength;
 	int iValue, iBestValue;
 	bool bAnyRevealed;
 	CvPlot* pLoopPlot;
@@ -11408,8 +11413,11 @@ bool CvUnitAI::AI_exploreCircumnavigate()
 			{
 				pLoopPlot = GC.getMap().plot(iX, iY);
 
-				if (!atPlot(pLoopPlot) && !pLoopPlot->isRevealed(getTeam(), false) && generatePath(pLoopPlot, MOVE_NO_ENEMY_TERRITORY, false, &iValue))
+				if (!atPlot(pLoopPlot) && !pLoopPlot->isRevealed(getTeam(), false) && generatePath(pLoopPlot, MOVE_NO_ENEMY_TERRITORY, false, &iPathLength))
 				{
+					//iValue = 3 * iPathLength + (pLoopPlot->getY() + AI_getBirthmark() % 3);
+					iValue = 2 * iPathLength - (getY_INLINE() == iY ? 1 : 0);
+
 					if (iValue < iBestValue)
 					{
 						if (GET_PLAYER(getOwnerINLINE()).AI_plotTargetMissionAIs(pLoopPlot, MISSIONAI_EXPLORE, getGroup(), 3) == 0)
