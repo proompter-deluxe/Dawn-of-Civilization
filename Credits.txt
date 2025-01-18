@@ -7,9 +7,10 @@ BASE MODS
 * Reformation modmod by Panopticon for the basis of the Reformation event
 * Project Synthesis by Linkman for the Seljuks and Middle Eastern Mongol conquerors
 * The History Rewritten mod by Xyth:
-	* Tamil, Tibetan, Moorish, Polish, Congolese and Polynesian civilizations including units, buildings and leaders
+	* Tamil, Tibetan, Moorish, Polish, Congolese, Polynesian, Assyrian, Celtic, Kushan, Malay, Nubian, Swahili, Vietnamese civilizations including units, buildings and leaders
 	* Civics advisor screen
 	* Civilopedia design
+	* Tech tree layout and tech ideas
 * Realism Invictus by Walter Hawkwood: unique units and civilization specific unit art
 * Rhye's and Fall of the Classical World by srpt for the idea behind the stability mechanic
 * SuperSpies by Trojan Sheep, glider1 and Lord Tirian
@@ -21,12 +22,12 @@ LEADERHEADS
 * melcher kürzer: Catherine the Great, Isabella, Barbarossa
 * veBear: Baibars, Hayam Wuruk, Suharto
 * saibotlieh: Nicholas II, Maria II, Cleopatra
-* The Capo: Cavour, Charles V, Nasser, Yaroslav, Mongkut, Afonso, Hitler, Chandragupta, George I (Stambolov)
-* IgorS: Charles V, Nasser, Yaroslav, Mongkut, Afonso
+* The Capo: Cavour, Charles V, Nasser, Yaroslav, Mongkut, Afonso, Hitler, Chandragupta, George I (Stambolov), Tun Perak (Askia)
+* IgorS: Charles V, Nasser, Yaroslav, Mongkut, Afonso, Brian Boru, Tun Perak (Askia)
 * Amra: Naresuan (Ramkhamhaeng), Hiram, Akbar, Basil, Francis
 * Ekmek: Meiji, Ataturk, Khomeini, Mussolini, Akbar, Basil, Hitler, Pilsudski, Castilla (O'Higgins)
-* cfkane: Afonso
-* Methyl Orange: Jimmu
+* cfkane: Afonso, Le Loi (Liu Bei)
+* Methyl Orange: Kammu (Jimmu), Ashurbanipal
 * mechaerik: Franco
 * Flintlock1415: Alfred
 * PW90: Philipp
@@ -35,18 +36,22 @@ LEADERHEADS
 * mourndraken: Mussolini
 * C.Roland: Mussolini
 * Wyz_sub10: Basil
-* Farsight: Shahuji
-* embryodead: Shahuji (Bhoja)
-* Triver: Dharmasetu (Gajah Mada)
+* Farsight: Shivaji
+* embryodead: Shivaji (Bhoja)
+* Triver: Sri Jayanasa (Gajah Mada)
 * Bernie14: Hitler, Haile Selassie, Walesa
 * The Coyote: Hitler
 * Smeagolheart: Hitler
 * Chuggi: Hitler
 * Firaxis: Qin Shi Huang, Taizong (Chinese release)
-* Novator: Lorenzo de' Medici (Simone Boccanegra), Casimir III, Gerhardsen, Vargas
+* Novator: Lorenzo de' Medici (Simone Boccanegra), Casimir III, Gerhardsen, Vargas, Murshili (Mursilis), Taharqa
 * Xyth: Aho'eitu (Tu'itatui)
-* cybrxkhan: Krishna Deva Raya (Mihirakula)
+* cybrxkhan: Kanishka, Bayinnaung, Suleiman ibn Dawud (Abd el-Krim)
 * ramzay1945: Casimir III, Gustavus Adolphus, MacDonald
+* Civciv5: Krishna Deva Raya (Dharmapala)
+* AbsintheRed: Topiltzin
+* il marchese: Anawrahta (Ramkhamhaeng)
+* Refar: Ho Chi Minh
 * Bautos42: texture and background changes for various included leaders
 
 From mods, without explicit mention of the original creators
@@ -54,10 +59,18 @@ From mods, without explicit mention of the original creators
 * RFC Asia: Hongwu
 
 UNITS
-* History Rewritten mod (Xyth): Cidainh, Huluganni, Medjay, Asvaka, Farari, Mohawk, Mounted Brave, Huscarl and Waka graphics
+* History Rewritten mod (Xyth): Cidainh, Huluganni, Medjay, Asvaka, Farari, Mohawk, Mounted Brave, Huscarl, Waka, Azmaru, Siege Ram, Oathsworn, Pendekar graphics
 * Bakuel: Patiyodha (Gupta Longbowman)
 * RFC Classical World (srpt): Patiyodha name and button
 * MightyToad: Galleass, Hwacha, Kobukson, Lanternas (Civ5 imports)
+* embryodead: Gallowglass
+* Realism Invictus: Lantaka, Druzhina, Carolean, Hakkapeliitta, Atlatl, Rattan Archer
+
+BUILDINGS:
+* The Ancient Mediterranean mod: Menhir
+* Walter Hawkwood: Gopuram (EU3 building pack)
+* Realism Invictus: Forge
+* History Rewritten: Caravanserai, Kalliu
 
 WONDERS
 * merijn_v1: Dujiangyan, Channel Tunnel, Prambanan, Metropolitain, Gardens by the Bay, Silver Tree Fountain, Old Synagogue
@@ -71,7 +84,6 @@ WONDER MOVIES:
 
 OTHER GRAPHICS
 * Slave unit, Indian Edict: RFC Classical World by srpt
-* Smokehouse building: History Rewritten by Xyth
 
 MODULES
 * Empire State Building: Voyhkah
