@@ -976,6 +976,24 @@ class EntityCollection(object):
 		iSampleSize = min(iSampleSize, len(self))
 		if iSampleSize <= 0: return self.empty()
 		return self.copy(random.sample(self._keys, iSampleSize))
+	
+	def sample_priority(self, iSampleSize, priority_func):
+		if not self:
+			return self.empty()
+		
+		iSampleSize = min(iSampleSize, len(self))
+		result = self.empty()
+		
+		for key, group in self.grouped(priority_func):
+			if iSampleSize <= 0:
+				return result
+			
+			sampled = group.sample(iSampleSize)
+			
+			iSampleSize -= len(sampled)
+			result += sampled
+		
+		return result		
 		
 	def buckets(self, *conditions):
 		rest = lambda e: not any(condition(e) for condition in conditions)
@@ -991,7 +1009,7 @@ class EntityCollection(object):
 		return self.copy(self._keys[:iSplit]), self.copy(self._keys[iSplit:])
 	
 	def grouped(self, func):
-		return [(key, self.copy(group)) for key, group in groupby(self.sort(func)._keys, lambda key: func(self._factory(key)))]
+		return [(key, self.copy(group)) for key, group in groupby(self.sort(func, reverse=True)._keys, lambda key: func(self._factory(key)))]
 		
 	def sort(self, metric, reverse=False):
 		return self.copy(sort(self._keys, key=lambda k: metric(self._factory(k)), reverse=reverse))
