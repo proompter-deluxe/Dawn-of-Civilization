@@ -11035,29 +11035,6 @@ bool CvUnitAI::AI_explore()
 
 	bool bNoContact = (GC.getGameINLINE().countCivTeamsAlive() > GET_TEAM(getTeam()).getHasMetCivCount(true));
 
-	if (getCivilizationType() == SPAIN)
-	{
-		pBestPlot = GC.getMap().plot(20, 44);
-		if (!pBestPlot->isRevealed(getTeam(), false))
-		{
-			if (GET_PLAYER(getOwnerINLINE()).AI_plotTargetMissionAIs(pBestPlot, MISSIONAI_EXPLORE, getGroup(), 3) == 0)
-			{
-				getGroup()->pushMission(MISSION_MOVE_TO, pBestPlot->getX_INLINE(), pBestPlot->getY_INLINE(), MOVE_NO_ENEMY_TERRITORY, false, false, MISSIONAI_EXPLORE, pBestPlot);
-				return true;
-			}
-		}
-
-		pBestPlot = GC.getMap().plot(29, 21);
-		if (!pBestPlot->isRevealed(getTeam(), false))
-		{
-			if (GET_PLAYER(getOwnerINLINE()).AI_plotTargetMissionAIs(pBestPlot, MISSIONAI_EXPLORE, getGroup(), 3) == 0)
-			{
-				getGroup()->pushMission(MISSION_MOVE_TO, pBestPlot->getX_INLINE(), pBestPlot->getY_INLINE(), MOVE_NO_ENEMY_TERRITORY, false, false, MISSIONAI_EXPLORE, pBestPlot);
-				return true;
-			}
-		}
-	}
-
 	if ((pBestPlot != NULL) && (pBestExplorePlot != NULL))
 	{
 		FAssert(!atPlot(pBestPlot));
@@ -11342,10 +11319,10 @@ bool CvUnitAI::AI_exploreCoasts()
 		{
 			pLoopPlot = plotXY(getX_INLINE(), getY_INLINE(), iDX, iDY);
 
-			if (pLoopPlot != NULL && !atPlot(pLoopPlot) && !pLoopPlot->isRevealed(getTeam(), false) && generatePath(pLoopPlot, MOVE_NO_ENEMY_TERRITORY, false, &iPathLength))
+			if (pLoopPlot != NULL && !atPlot(pLoopPlot) && pLoopPlot->isAdjacentToLand() && !pLoopPlot->isRevealed(getTeam(), false) && generatePath(pLoopPlot, MOVE_NO_ENEMY_TERRITORY, false, &iPathLength))
 			{
 				//iValue = 10 * iPathLength + ((iDX > 0) - (iDX < 0) + AI_getBirthmark() % 3) + ((iDY > 0) - (iDY < 0) + AI_getBirthmark() % 3);
-				iValue = iPathLength;
+				iValue = 2 * iPathLength - (plot()->shareAdjacentArea(pLoopPlot) ? 1 : 0);
 
 				if (iValue < iBestValue)
 				{
@@ -11371,7 +11348,7 @@ bool CvUnitAI::AI_exploreCoasts()
 
 bool CvUnitAI::AI_exploreCircumnavigate()
 {
-	int iDX, iDY;
+	int iDX;
 	int iX, iY;
 	int iPathLength;
 	int iValue, iBestValue;
@@ -11385,6 +11362,11 @@ bool CvUnitAI::AI_exploreCircumnavigate()
 	}
 
 	if (m_pUnitInfo->getTerrainImpassable(TERRAIN_OCEAN))
+	{
+		return false;
+	}
+
+	if (GET_PLAYER(getOwnerINLINE()).AI_totalMissionAIs(MISSIONAI_CIRCUMNAVIGATE) > 1)
 	{
 		return false;
 	}
@@ -11416,7 +11398,7 @@ bool CvUnitAI::AI_exploreCircumnavigate()
 				if (!atPlot(pLoopPlot) && !pLoopPlot->isRevealed(getTeam(), false) && generatePath(pLoopPlot, MOVE_NO_ENEMY_TERRITORY, false, &iPathLength))
 				{
 					//iValue = 3 * iPathLength + (pLoopPlot->getY() + AI_getBirthmark() % 3);
-					iValue = 2 * iPathLength - (getY_INLINE() == iY ? 1 : 0);
+					iValue = GC.getMapINLINE().getGridHeightINLINE() * iPathLength + abs(getY_INLINE() - iY);
 
 					if (iValue < iBestValue)
 					{
@@ -11431,7 +11413,7 @@ bool CvUnitAI::AI_exploreCircumnavigate()
 
 			if (pBestPlot != NULL)
 			{
-				getGroup()->pushMission(MISSION_MOVE_TO, pBestPlot->getX_INLINE(), pBestPlot->getY_INLINE(), MOVE_NO_ENEMY_TERRITORY, false, false, MISSIONAI_EXPLORE);
+				getGroup()->pushMission(MISSION_MOVE_TO, pBestPlot->getX_INLINE(), pBestPlot->getY_INLINE(), MOVE_NO_ENEMY_TERRITORY, false, false, MISSIONAI_CIRCUMNAVIGATE);
 				return true;
 			}
 
