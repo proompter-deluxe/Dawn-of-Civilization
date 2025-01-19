@@ -14173,7 +14173,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=32,y=2
-	FeatureType=FEATURE_ICE, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN
 	PlotType=3
 EndPlot
@@ -14642,7 +14641,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=33,y=1
-	FeatureType=FEATURE_ICE, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN
 	PlotType=3
 EndPlot
@@ -15118,7 +15116,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=34,y=1
-	FeatureType=FEATURE_ICE, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN
 	PlotType=3
 EndPlot
@@ -15594,7 +15591,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=35,y=1
-	FeatureType=FEATURE_ICE, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN
 	PlotType=3
 EndPlot
