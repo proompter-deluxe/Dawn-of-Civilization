@@ -96,6 +96,10 @@ def updateMinorTechs(iMinorCiv, iMajorCiv):
 	
 	if civ(iMinorCiv) == iNative:
 		techs = techs.where(lambda iTech: all(iEnabledTech in techs for iEnabledTech in getEnabledTechs(iTech)))
+		
+		nativePlayers = players.of(*lBioNewWorld)
+		if nativePlayers:
+			techs = techs.where(lambda iTech: nativePlayers.all(lambda p: team(p).isHasTech(iTech)))
 
 	for iTech in techs:
 		team(iMinorCiv).setHasTech(iTech, True, iMinorCiv, False, False)
