@@ -2307,10 +2307,6 @@ BeginPlot
 	EndCity
 EndPlot
 BeginPlot
-	x=58,y=56
-	ImprovementType=IMPROVEMENT_FISHING_BOATS
-EndPlot
-BeginPlot
 	x=58,y=59
 	RouteType=ROUTE_ROAD
 	BeginUnit
