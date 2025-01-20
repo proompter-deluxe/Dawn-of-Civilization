@@ -47,7 +47,7 @@ iEngland :		(58, 64), # London
 iHolyRome :		(65, 62), # Cologne
 iBurma :		(117, 42), # Bagan
 iRus :			(81, 62), # Kyiv
-iVietnam : 		(121, 42), # Hanoi
+iVietnam : 		(128, 48), # Kuaiji --> in south-eastern China, initially
 iSwahili :		(84, 23), # Kilwa
 iPoland :		(74, 61), # Krakow
 iPortugal :		(54, 50), # Lisboa

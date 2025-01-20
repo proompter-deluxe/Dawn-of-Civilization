@@ -462,8 +462,8 @@ lCivilizations = [
 	),
 	Civilization(
 		iJava,
-		iGold=300,
-		iAdvancedStartPoints=100,
+		iGold=150,
+		iAdvancedStartPoints=50,
 		iStateReligion=iHinduism,
 		lCivics=[iDespotism, iCitizenship, iCasteSystem, iMerchantTrade, iDeification, iThalassocracy],
 		techs=techs.column(6).without(iNobility, iPolitics, iScholarship)
@@ -875,7 +875,7 @@ dStartingUnits = CivDict({
 		iWork: 3,
 		iDefend: 2,
 		iShockCity: 5,
-		iCityAttack: 3,
+		iCityAttack: 2,
 		iSkirmish: 2,
 		iCitySiege: 2,
 	},
@@ -1353,7 +1353,7 @@ dExtraAIUnits = CivDict({
 		iMissionary: 1,
 	},
 	iKushans: {
-		iShockCity: 4,
+		iShockCity: 3,
 		iCityAttack: 2,
 		iSiege: 3,
 	},
@@ -1479,6 +1479,11 @@ dHumanStartingUnits = CivDict({
 		iShock: 1,
 		iSiege: 1,
 	},
+	iVietnam: {
+		iSettler: 1,
+		iDefend: 1,
+		iCounter: 2,
+	}
 }, {})
 
 dAdditionalUnits = CivDict({
@@ -2004,6 +2009,9 @@ dTechPreferences = {
 		iLaw: 10,
 	},
 	iParthia : {
+		iCurrency: 15,
+		iLaw: 15,
+		iNobility: 5,
 		iTheology: -40,
 	},
 	iCelts : {
@@ -2014,7 +2022,8 @@ dTechPreferences = {
 		iCurrency: 30,
 		iLaw: 20,
 		iPhilosophy: 10,
-		iPolitics: 15,
+		iPolitics: 5,
+		iAesthetics: 5,
 		iEngineering: 15,
 		iArchitecture: 15,
 		iAlchemy: 15,
@@ -2047,6 +2056,7 @@ dTechPreferences = {
 		iEngineering: 20,
 		iArchitecture: 20,
 		iMedicine: 20,
+		iCompass: -5,
 	},
 	iKorea : {
 		iPrinting: 30,
@@ -2085,6 +2095,7 @@ dTechPreferences = {
 	},
 	iFrance : {
 		iReplaceableParts: 15,
+		iFirearms: 20,
 		iExploration: 20,
 		iLogistics: 15,
 		iPatronage: 20,
@@ -2121,6 +2132,8 @@ dTechPreferences = {
 		iCivilService: 30,
 		iCompass: 20,
 		iCombinedArms: 20,
+		iExploration: -10,
+		iFirearms: 5,
 	},
 	iArabia : {
 		iScholarship: 30,
@@ -2171,14 +2184,18 @@ dTechPreferences = {
 		iFeudalism: 100,
 		iMachinery: 100,
 		iCartography: 30,
-		iExploration: 30,
+		iExploration: 10,
 		iCompass: 50,
 		iFirearms: 15,
 		iPatronage: 30,
 		iGuilds: 15,
+		iGunpowder: 15,
+		iPrinting: 15,
+		iEconomics: -10,
+		iHeritage: 15,
 	},
 	iEngland : {
-		iExploration: 20,
+		iExploration: 10,
 		iFirearms: 20,
 		iReplaceableParts: 30,
 		iLogistics: 15,
@@ -2242,8 +2259,8 @@ dTechPreferences = {
 		iSocialContract: 15,
 	},
 	iPortugal : {
-		iCartography: 50,
-		iExploration: 50,
+		iCartography: 30,
+		iExploration: 15,
 		iGeography: 50,
 		iCompass: 50,
 		iGunpowder: 40,
