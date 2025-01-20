@@ -807,11 +807,11 @@ dGoals = {
 		# the first naval empire
 		All(
 			TradeRouteCount(4, by=-1250),
-			UnitCombatLevelCount(UnitCombatTypes.UNITCOMBAT_NAVAL, 1, 6, by=-1000),
+			UnitCombatLevelCount(UnitCombatTypes.UNITCOMBAT_NAVAL, 2, 3, by=-1000),
 		),
 		# the Illiad
 		All(
-			RazeCount(1, by=-1150),
+			RazeCount(1, by=-1100),
 			CitySpecialistCount(city(tMycenae).named(MYCENAE), great_people(), 2, by=-900),
 		),
 		# the Odyssey

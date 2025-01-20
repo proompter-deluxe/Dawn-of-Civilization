@@ -201,16 +201,18 @@ lCivilizations = [
 		iHarappa,
 		techs=techs.of(iMining, iPottery, iAgriculture, iPastoralism, iTanning)
 	),
-	# this doesn't do anything because it is set in Scenario3000BC
 	Civilization(
 		iMinoans,
-		techs=techs.of(iPastoralism, iPottery, iAgriculture, iSailing, iTanning)
+		iGold=40,
+		iAdvancedStartPoints=110,
+		lCivics=[iDespotism],
+		techs=techs.column(1).including(iSeafaring, iProperty)
 	),
 	Civilization(
 		iXia,
 		iGold=50,
 		lCivics=[iDespotism],
-		techs=techs.column(2).without(iSailing, iSeafaring, iSmelting, ).including(iProperty, iCeremony)
+		techs=techs.column(2).without(iSailing, iSeafaring, iSmelting).including(iProperty, iCeremony)
 	),
 	Civilization(
 		iHittites,
@@ -352,7 +354,7 @@ lCivilizations = [
 		iKorea,
 		iGold=200,
 		iAdvancedStartPoints=60,
-		iStateReligion=iBuddhism,
+		iStateReligion=iConfucianism,
 		lCivics=[iDespotism, iCasteSystem, iRedistribution, iSyncretism],
 		techs=techs.column(4).without(iNavigation).including(iPhilosophy)
 	),
@@ -711,6 +713,13 @@ lCivilizations = [
 ### Starting units ###
 
 dStartingUnits = CivDict({
+	iMinoans: {
+		iSettle: 1,
+		iWork: 1,
+		iBase: 1,
+		iDefend: 1,
+		iWorkerSea: 1,
+	},
 	iAssyria: {
 		iSettle: 1,
 		iWork: 2,
@@ -731,9 +740,9 @@ dStartingUnits = CivDict({
 		iBase: 1,
 	},
 	iHittites: {
-		iSettle: 1,
+		iSettle: 2,
 		iWork: 1,
-		iBase: 1,
+		iBase: 2,
 		iAttack: 1,
 		iShock: 2,
 	},
@@ -865,8 +874,8 @@ dStartingUnits = CivDict({
 		iSettle: 3,
 		iWork: 3,
 		iDefend: 2,
-		iShockCity: 4,
-		iCityAttack: 2,
+		iShockCity: 5,
+		iCityAttack: 3,
 		iSkirmish: 2,
 		iCitySiege: 2,
 	},
@@ -1683,7 +1692,7 @@ def createSpecificUnits(iPlayer, tile):
 	iCiv = civ(iPlayer)
 	
 	if iCiv == iKorea:
-		makeUnit(iPlayer, iConfucianMissionary, tile)
+		makeUnit(iPlayer, iBuddhistMissionary, tile)
 	elif iCiv == iPersia:
 		makeUnits(iPlayer, iZoroastrianMissionary, tile, 2)
 	elif iCiv == iDravidia:
@@ -1990,6 +1999,10 @@ dTechPreferences = {
 	iPersia : {
 		iTheology: -40,
 	},
+	iArmenia: {
+		iCurrency: 10,
+		iLaw: 10,
+	},
 	iParthia : {
 		iTheology: -40,
 	},
@@ -2000,7 +2013,8 @@ dTechPreferences = {
 	iRome : {	
 		iCurrency: 30,
 		iLaw: 20,
-		iPolitics: 20,
+		iPhilosophy: 10,
+		iPolitics: 15,
 		iEngineering: 15,
 		iArchitecture: 15,
 		iAlchemy: 15,
