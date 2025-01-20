@@ -2307,10 +2307,6 @@ BeginPlot
 	EndCity
 EndPlot
 BeginPlot
-	x=58,y=56
-	ImprovementType=IMPROVEMENT_FISHING_BOATS
-EndPlot
-BeginPlot
 	x=58,y=59
 	RouteType=ROUTE_ROAD
 	BeginUnit
@@ -3430,29 +3426,6 @@ BeginPlot
 	ImprovementType=IMPROVEMENT_HAMLET
 EndPlot
 BeginPlot
-	x=65,y=32
-	RouteType=ROUTE_ROAD
-	BeginUnit
-		UnitType=UNIT_ARQUEBUSIER
-		UnitOwner=CIVILIZATION_PORTUGAL
-	EndUnit
-	BeginCity
-		CityOwner=CIVILIZATION_PORTUGAL
-		CityName=Lagos
-		CityPopulation=4
-		BuildingType=BUILDING_GRANARY
-		BuildingType=BUILDING_TANNERY
-		BuildingType=BUILDING_HARBOR
-		BuildingType=BUILDING_CATHOLIC_TEMPLE
-		ReligionType=RELIGION_CATHOLICISM
-		BeginCulture
-			Civilization=CIVILIZATION_PORTUGAL, Culture=50
-		EndCulture
-		YearFounded=1400
-		PreviousOwner=CIVILIZATION_INDEPENDENT
-	EndCity
-EndPlot
-BeginPlot
 	x=65,y=33
 	ImprovementType=IMPROVEMENT_PLANTATION
 EndPlot
@@ -3581,6 +3554,35 @@ EndPlot
 BeginPlot
 	x=66,y=30
 	ImprovementType=IMPROVEMENT_FISHING_BOATS
+EndPlot
+BeginPlot
+	x=66,y=32
+	RouteType=ROUTE_ROAD
+	BeginUnit
+		UnitType=UNIT_ARQUEBUSIER
+		UnitOwner=CIVILIZATION_NATIVE
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_ARQUEBUSIER
+		UnitOwner=CIVILIZATION_NATIVE
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_ARQUEBUSIER
+		UnitOwner=CIVILIZATION_NATIVE
+	EndUnit
+	BeginCity
+		CityOwner=CIVILIZATION_NATIVE
+		CityName=Edo
+		CityPopulation=4
+		BuildingType=BUILDING_GRANARY
+		BuildingType=BUILDING_TANNERY
+		BuildingType=BUILDING_HARBOR
+		BuildingType=BUILDING_WALLS
+		BeginCulture
+			Civilization=CIVILIZATION_NATIVE, Culture=50
+		EndCulture
+		YearFounded=1300
+	EndCity
 EndPlot
 BeginPlot
 	x=66,y=47
@@ -3743,6 +3745,28 @@ EndPlot
 BeginPlot
 	x=66,y=74
 	ImprovementType=IMPROVEMENT_MINE
+EndPlot
+BeginPlot
+	x=67,y=29
+	RouteType=ROUTE_ROAD
+	BeginUnit
+		UnitType=UNIT_ARQUEBUSIER
+		UnitOwner=CIVILIZATION_PORTUGAL
+	EndUnit
+	BeginCity
+		CityOwner=CIVILIZATION_PORTUGAL
+		CityName=São Tomé
+		CityPopulation=2
+		BuildingType=BUILDING_GRANARY
+		BuildingType=BUILDING_TANNERY
+		BuildingType=BUILDING_HARBOR
+		BuildingType=BUILDING_CATHOLIC_TEMPLE
+		ReligionType=RELIGION_CATHOLICISM
+		BeginCulture
+			Civilization=CIVILIZATION_PORTUGAL, Culture=50
+		EndCulture
+		YearFounded=1493
+	EndCity
 EndPlot
 BeginPlot
 	x=67,y=46

@@ -149,6 +149,8 @@ protected:
 	bool AI_goody(int iRange);
 	bool AI_explore();
 	bool AI_exploreRange(int iRange);
+	bool AI_exploreCoasts(); // Leoreth
+	bool AI_exploreCircumnavigate(); // Leoreth
 	bool AI_targetCity(int iFlags = 0);
 	bool AI_targetBarbCity();
 	bool AI_targetMinorCity(int iMinorCiv); //Rhye

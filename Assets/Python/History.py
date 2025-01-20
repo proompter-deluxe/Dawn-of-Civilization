@@ -204,7 +204,7 @@ def checkEarlyColonists():
 		
 @handler("BeginGameTurn")
 def checkLateColonists():
-	if year().between(1350, 1918):
+	if year().between(1350, 1918) and any(data.dFirstContactConquerors.values()):
 		for iCiv in lLateColonyCivs:
 			if player(iCiv).isExisting():
 				iPlayer = slot(iCiv)
@@ -276,7 +276,7 @@ def conquistadors(iTeamX, iHasMetTeamY):
 					
 					newWorldPlots = plots.start(tContactZoneTL).end(tContactZoneBR).without(lArrivalExceptions)
 					contactPlots = newWorldPlots.where(lambda p: p.isVisible(iNewWorldPlayer, False) and p.isVisible(iOldWorldPlayer, False))
-					arrivalPlots = newWorldPlots.owner(iNewWorldPlayer).where(lambda p: not p.isCity() and isFree(iOldWorldPlayer, p, bCanEnter=True) and map.getArea(p.getArea()).getCitiesPerPlayer(iNewWorldPlayer) > 0)
+					arrivalPlots = plots.core(iNewWorldPlayer).expand(1).coastal().where(lambda p: not p.isCity() and isFree(iOldWorldPlayer, p, bCanEnter=True) and map.getArea(p.getArea()).getCitiesPerPlayer(iNewWorldPlayer) > 0)
 					
 					if contactPlots and arrivalPlots:
 						contactPlot = contactPlots.random()
@@ -285,10 +285,12 @@ def conquistadors(iTeamX, iHasMetTeamY):
 						iModifier1 = 0
 						iModifier2 = 0
 						
-						if player(iNewWorldPlayer).isHuman() and player(iNewWorldPlayer).getNumCities() > 6:
+						iTargetCities = player(iNewWorldPlayer).getNumCities()
+						
+						if player(iNewWorldPlayer).isHuman() and iTargetCities > 6:
 							iModifier1 = 1
 						else:
-							if iNewWorldCiv == iInca or player(iNewWorldPlayer).getNumCities() > 4:
+							if iNewWorldCiv == iInca or iTargetCities > 4:
 								iModifier1 = 1
 							if not player(iNewWorldPlayer).isHuman():
 								iModifier2 = 1
@@ -299,11 +301,14 @@ def conquistadors(iTeamX, iHasMetTeamY):
 							
 						team(iOldWorldPlayer).declareWar(iNewWorldPlayer, True, WarPlanTypes.WARPLAN_TOTAL)
 						
+						if not player(iOldWorldPlayer).isHuman():
+							player(iOldWorldPlayer).AI_changeMemoryCount(iNewWorldPlayer, MemoryTypes.MEMORY_STOPPED_TRADING_RECENT, turns(10))
+						
 						dConquerorUnits = {
-							iAttack: 1 + iModifier2,
-							iCounter: 2,
-							iSiege: 1 + iModifier1 + iModifier2,
-							iShockCity: 2 + iModifier1,
+							iCityAttack: 3 + iModifier2,
+							iDefend: max(1, iTargetCities-2),
+							iCitySiege: 2 + iModifier1 + iModifier2,
+							iShockCity: 1 + iModifier1,
 						}
 						units = createRoleUnits(iOldWorldPlayer, arrivalPlot, dConquerorUnits.items())
 						units.promotion(infos.type("PROMOTION_MERCENARY"))
@@ -403,6 +408,15 @@ def recordExplorationTurn(iTech, iTeam, iPlayer):
 			for plot in plots.all().land().where(lambda p: p.getSettlerValue(civ(iPlayer)) >= 10).expand(2):
 				plot.setRevealed(iTeam, True, False, -1)
 			player(iPlayer).AI_updateFoundValues(False)
+
+@handler("techAcquired")
+def spanishExplorers(iTech, iTeam, iPlayer):
+	if iTech == iCartography:
+		if civ(iPlayer) == iSpain and not player(iPlayer).isHuman():
+			city = cities.owner(iPlayer).coastal().minimum(CyCity.getX)
+			if city:
+				caravel = makeUnit(iPlayer, iCaravel, city, UnitAITypes.UNITAI_EXPLORE_SEA)
+
 
 @handler("techAcquired")
 def americanWestCoastSettlement(iTech, iTeam, iPlayer):

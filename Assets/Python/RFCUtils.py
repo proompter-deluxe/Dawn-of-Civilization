@@ -96,6 +96,10 @@ def updateMinorTechs(iMinorCiv, iMajorCiv):
 	
 	if civ(iMinorCiv) == iNative:
 		techs = techs.where(lambda iTech: all(iEnabledTech in techs for iEnabledTech in getEnabledTechs(iTech)))
+		
+		nativePlayers = players.of(*lBioNewWorld)
+		if nativePlayers:
+			techs = techs.where(lambda iTech: nativePlayers.all(lambda p: team(p).isHasTech(iTech)))
 
 	for iTech in techs:
 		team(iMinorCiv).setHasTech(iTech, True, iMinorCiv, False, False)
@@ -387,8 +391,8 @@ def getColonialTargets(iPlayer, bEmpty=False):
 	if bEmpty:
 		nearbyCityPlots, settlePlots = emptyPlots.split(lambda p: plots.surrounding(p).any(CyPlot.isCity))
 		
-		targetPlots = settlePlots.where(lambda p: p.getSettlerValue(iCiv) > 0).sample(iNumCities - len(targetCities))
-		targetPlots += nearbyCityPlots.expand(1).where(lambda p: p.isCity() and p.getOwner() != iPlayer).sample(iNumCities - len(targetCities) - len(targetPlots))
+		targetPlots = settlePlots.where(lambda p: p.getSettlerValue(iCiv) > 0).sample_priority(iNumCities - len(targetCities), lambda p: p.getSettlerValue(iCiv))
+		targetPlots += nearbyCityPlots.expand(1).where(lambda p: p.isCity() and p.getOwner() != iPlayer).sample_priority(iNumCities - len(targetCities) - len(targetPlots), lambda p: p.getSettlerValue(iCiv))
 		
 		return targetCities + targetPlots
 	

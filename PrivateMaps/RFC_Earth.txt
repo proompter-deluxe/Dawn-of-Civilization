@@ -9846,6 +9846,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=22,y=34
+	FeatureType=FEATURE_CAPE, FeatureVariety=0
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -11185,6 +11186,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=25,y=35
+	FeatureType=FEATURE_CAPE, FeatureVariety=0
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -11634,6 +11636,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=26,y=35
+	FeatureType=FEATURE_CAPE, FeatureVariety=0
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot

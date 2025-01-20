@@ -2643,7 +2643,11 @@ UnitTypes CvCityAI::AI_bestUnit(bool bAsync, AdvisorTypes eIgnoreAdvisor, UnitAI
 		break;
 	case INCA:
 		aiUnitAIVal[UNITAI_EXPLORE] *= 2;
-		aiUnitAIVal[UNITAI_EXPLORE_SEA] /= 2;
+		aiUnitAIVal[UNITAI_EXPLORE_SEA] /= 4;
+		aiUnitAIVal[UNITAI_ATTACK_SEA] /= 4;
+		aiUnitAIVal[UNITAI_ESCORT_SEA] /= 4;
+		aiUnitAIVal[UNITAI_SETTLER_SEA] /= 4;
+		aiUnitAIVal[UNITAI_RESERVE_SEA] /= 4;
 		break;
 	case ITALY:
         aiUnitAIVal[UNITAI_SETTLE] *= 2;

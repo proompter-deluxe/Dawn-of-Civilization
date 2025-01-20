@@ -1027,7 +1027,6 @@ def getCivicStability(iPlayer, civics=None):
 		if iSlavery in civics: iStability -= 2
 	
 	if iMerchantTrade in civics:
-		if iManorialism in civics: iStability -= 2
 		if iThalassocracy in civics: iStability += 2
 	
 	if iHegemony in civics:

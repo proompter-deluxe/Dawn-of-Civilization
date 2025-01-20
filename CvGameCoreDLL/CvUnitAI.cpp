@@ -5006,6 +5006,17 @@ void CvUnitAI::AI_exploreSeaMove()
 		}
 	}
 
+	// Leoreth: more proactively explore coasts and oceans
+	if (AI_exploreCoasts())
+	{
+		return;
+	}
+
+	if (AI_exploreCircumnavigate())
+	{
+		return;
+	}
+
 	if (AI_exploreRange(4))
 	{
 		return;
@@ -7879,10 +7890,16 @@ bool CvUnitAI::AI_guardCity(bool bLeave, bool bSearch, int iMaxPath)
 			{
 				//This unit is not suited for defense, skip the mission
 				//to protect this city but encourage others to defend instead.
-				getGroup()->pushMission(MISSION_SKIP);
+				// Leoreth: skipping the entire group is too drastic - if this is UNITAI_ATTACK_CITY we curb our ability to ever move out
+				/*getGroup()->pushMission(MISSION_SKIP);
 				if (!isHurt())
 				{
 					finishMoves();
+				}*/
+
+				if (pPlot->plotCount(PUF_isCityAIType, -1, -1, getOwnerINLINE()) == 0)
+				{
+					return AI_guardCityBestDefender();
 				}
 			}
 			return true;
@@ -11018,6 +11035,13 @@ bool CvUnitAI::AI_explore()
 
 	bool bNoContact = (GC.getGameINLINE().countCivTeamsAlive() > GET_TEAM(getTeam()).getHasMetCivCount(true));
 
+	if ((pBestPlot != NULL) && (pBestExplorePlot != NULL))
+	{
+		FAssert(!atPlot(pBestPlot));
+		getGroup()->pushMission(MISSION_MOVE_TO, pBestPlot->getX_INLINE(), pBestPlot->getY_INLINE(), MOVE_NO_ENEMY_TERRITORY, false, false, MISSIONAI_EXPLORE, pBestExplorePlot);
+		return true;
+	}
+
 	for (iI = 0; iI < GC.getMapINLINE().numPlotsINLINE(); iI++)
 	{
 		PROFILE("AI_explore 1");
@@ -11265,6 +11289,136 @@ bool CvUnitAI::AI_exploreRange(int iRange)
 		FAssert(!atPlot(pBestPlot));
 		getGroup()->pushMission(MISSION_MOVE_TO, pBestPlot->getX_INLINE(), pBestPlot->getY_INLINE(), MOVE_NO_ENEMY_TERRITORY, false, false, MISSIONAI_EXPLORE, pBestExplorePlot);
 		return true;
+	}
+
+	return false;
+}
+
+
+bool CvUnitAI::AI_exploreCoasts()
+{
+	CvPlot* pLoopPlot;
+	CvPlot* pBestPlot;
+	int iDX, iDY;
+	int iPathLength;
+	int iValue, iBestValue;
+	int iSearchRange;
+
+	if (!plot()->isAdjacentToLand())
+	{
+		return false;
+	}
+
+	iSearchRange = 4;
+	iBestValue = MAX_INT;
+	pBestPlot = NULL;
+
+	for (iDX = -(iSearchRange); iDX <= iSearchRange; iDX++)
+	{
+		for (iDY = -(iSearchRange); iDY <= iSearchRange; iDY++)
+		{
+			pLoopPlot = plotXY(getX_INLINE(), getY_INLINE(), iDX, iDY);
+
+			if (pLoopPlot != NULL && !atPlot(pLoopPlot) && pLoopPlot->isAdjacentToLand() && !pLoopPlot->isRevealed(getTeam(), false) && generatePath(pLoopPlot, MOVE_NO_ENEMY_TERRITORY, false, &iPathLength))
+			{
+				//iValue = 10 * iPathLength + ((iDX > 0) - (iDX < 0) + AI_getBirthmark() % 3) + ((iDY > 0) - (iDY < 0) + AI_getBirthmark() % 3);
+				iValue = 2 * iPathLength - (plot()->shareAdjacentArea(pLoopPlot) ? 1 : 0);
+
+				if (iValue < iBestValue)
+				{
+					if (GET_PLAYER(getOwnerINLINE()).AI_plotTargetMissionAIs(pLoopPlot, MISSIONAI_EXPLORE, getGroup(), 3) == 0)
+					{
+						iBestValue = iValue;
+						pBestPlot = pLoopPlot;
+					}
+				}
+			}
+		}
+	}
+
+	if (pBestPlot != NULL)
+	{
+		getGroup()->pushMission(MISSION_MOVE_TO, pBestPlot->getX_INLINE(), pBestPlot->getY_INLINE(), MOVE_NO_ENEMY_TERRITORY, false, false, MISSIONAI_EXPLORE);
+		return true;
+	}
+
+	return false;
+}
+
+
+bool CvUnitAI::AI_exploreCircumnavigate()
+{
+	int iDX;
+	int iX, iY;
+	int iPathLength;
+	int iValue, iBestValue;
+	bool bAnyRevealed;
+	CvPlot* pLoopPlot;
+	CvPlot* pBestPlot;
+
+	if (!GC.getGameINLINE().circumnavigationAvailable())
+	{
+		return false;
+	}
+
+	if (m_pUnitInfo->getTerrainImpassable(TERRAIN_OCEAN))
+	{
+		return false;
+	}
+
+	if (GET_PLAYER(getOwnerINLINE()).AI_totalMissionAIs(MISSIONAI_CIRCUMNAVIGATE) > 1)
+	{
+		return false;
+	}
+
+	for (iDX = 0; iDX < GC.getMapINLINE().getGridWidthINLINE(); iDX++)
+	{
+		iX = dxWrap(getX_INLINE() - iDX); // westward bias
+		bAnyRevealed = false;
+
+		for (iY = 0; iY < GC.getMapINLINE().getGridHeightINLINE(); iY++)
+		{
+			pLoopPlot = GC.getMap().plot(iX, iY);
+			if (pLoopPlot->isRevealed(getTeam(), false))
+			{
+				bAnyRevealed = true;
+				break;
+			}
+		}
+
+		if (!bAnyRevealed)
+		{
+			iBestValue = MAX_INT;
+			pBestPlot = NULL;
+
+			for (iY = 0; iY < GC.getMapINLINE().getGridHeightINLINE(); iY++)
+			{
+				pLoopPlot = GC.getMap().plot(iX, iY);
+
+				if (!atPlot(pLoopPlot) && !pLoopPlot->isRevealed(getTeam(), false) && generatePath(pLoopPlot, MOVE_NO_ENEMY_TERRITORY, false, &iPathLength))
+				{
+					//iValue = 3 * iPathLength + (pLoopPlot->getY() + AI_getBirthmark() % 3);
+					iValue = GC.getMapINLINE().getGridHeightINLINE() * iPathLength + abs(getY_INLINE() - iY);
+
+					if (iValue < iBestValue)
+					{
+						if (GET_PLAYER(getOwnerINLINE()).AI_plotTargetMissionAIs(pLoopPlot, MISSIONAI_EXPLORE, getGroup(), 3) == 0)
+						{
+							iBestValue = iValue;
+							pBestPlot = pLoopPlot;
+						}
+					}
+				}
+			}
+
+			if (pBestPlot != NULL)
+			{
+				getGroup()->pushMission(MISSION_MOVE_TO, pBestPlot->getX_INLINE(), pBestPlot->getY_INLINE(), MOVE_NO_ENEMY_TERRITORY, false, false, MISSIONAI_CIRCUMNAVIGATE);
+				return true;
+			}
+
+			return false;
+		}
 	}
 
 	return false;

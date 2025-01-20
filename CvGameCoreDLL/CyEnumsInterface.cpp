@@ -1166,6 +1166,7 @@ void CyEnumsPythonInterface()
 		.value("MISSIONAI_ASSAULT", MISSIONAI_ASSAULT)
 		.value("MISSIONAI_CARRIER", MISSIONAI_CARRIER)
 		.value("MISSIONAI_PICKUP", MISSIONAI_PICKUP)
+		.value("MISSIONAI_CIRCUMNAVIGATE", MISSIONAI_CIRCUMNAVIGATE)
 		;
 
 	// any additions need to be reflected in GlobalTypes.xml
